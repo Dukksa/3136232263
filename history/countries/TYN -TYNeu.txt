@@ -1,0 +1,21 @@
+government = monarchy
+add_government_reform = autocracy_reform
+technology_group = western
+historical_friend = AAU
+historical_friend = AGB
+historical_friend = ANE
+historical_friend = ARU
+historical_friend = AIT
+historical_friend = AHA
+historical_friend = APR
+historical_friend = AFR
+historical_friend = ASP
+historical_friend = ASW
+historical_friend = APL
+historical_friend = ABA
+capital = 4717
+1716.1.1 = {
+	monarch = { birth_date = 1716.1.1 death_date = 1776.1.1 claim = 95 adm = 0 dip = 0 mil = 0 }
+	clear_scripted_personalities = yes
+	add_ruler_personality = immortal_personality
+}

@@ -1,0 +1,38 @@
+court_and_country = {
+	potential = {
+		always = no
+	}
+
+
+	can_start = {
+	}
+	
+	
+	can_stop = {
+	}
+	
+	progress = {
+	}
+
+
+
+
+	
+	can_end = {
+	}
+	
+
+
+
+	modifier = {
+	}
+	
+	on_start = court_and_country_events.1
+	on_end = court_and_country_events.100
+	
+	on_monthly = {
+		events = {
+		}
+	}
+}
+

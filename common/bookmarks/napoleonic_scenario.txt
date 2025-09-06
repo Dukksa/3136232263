@@ -1,0 +1,1 @@
+bookmark = { name = "napoleonic_wars" desc = "napoleonic_wars_desc" date = 1799.1.1 center = 4760 default = yes country = NFR country = NSP country = NRH country = NIT country = NRU country = NGB country = NPR country = NAU easy_country = NFR easy_country = NRU }

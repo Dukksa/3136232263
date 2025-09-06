@@ -1,0 +1,84 @@
+graphical_culture = easterngfx
+color = { 36  132  247 }
+revolutionary_colors = { 1 0 4 }
+historical_idea_groups = {}
+historical_units = {
+	eastern_medieval_infantry
+	eastern_knights
+	slavic_stradioti
+	eastern_militia
+	muscovite_musketeer
+	muscovite_caracolle
+	muscovite_soldaty
+	muscovite_cossack
+	russian_petrine
+	russian_lancer
+	russian_green_coat
+	russian_cuirassier
+	eastern_skirmisher
+	eastern_uhlan
+	eastern_carabinier
+	russian_mass
+}
+
+monarch_names = {
+	"Bidzina #0" = 0
+	"Nikoloz #0" = 0
+	"Garsevan #0" = 0
+	"Ioane #0" = 0
+#QUEENS
+	"Tamar #1" = -20
+	"Rusudan #1" = -10
+	"Nestan-Darejan #0" = -10
+	"Darejan #0" = -5
+	"Ketevan #0" = -5
+	"Tinatin #0" = -5
+	"Nino #0" = -1
+	"Elene #0" = -1
+	"Ana #0" = -1
+	"Mariam #0" = -1
+	"Khoreshan #0" = -1
+	"Dedisimedi #0" = -1
+}
+leader_names = {
+	Abashidze
+	Abkhazi
+	Andronikashvili
+	Babadishvili
+	Chavchavadze
+	Cherkezeshvili
+	Cholokashvili
+	Guramishvili
+	Gurgenidze
+	Jandieri
+	Jorjadze
+	Kobulashvili
+	Lionidze
+	Robatishvili
+	Rusishvili
+	Shaburidze
+	Tumanisdze
+	Tusishvili
+	Vachnadze
+}
+ship_names = {
+	Abo Amirani Aragvi Armazi Anakopia Artaani Argo Abkhazeti Apsaros "Ateni Sioni" Avtandil
+	Bichvinta Batomi Bodbe
+	Colchis
+	Dmanisi "Demetre Tavdadebuli" "Davit Gareja" Didgori "Davit Aghmashenebeli" Dioscurias
+	Geguti Gelati "Giorgi V Brtskinvale" Gori Gremi
+	Hereti
+	Iberia
+	Jvari "Jvari Vazisa"
+	Kartlos Kutaisi Khornabuji
+	Lasharisjvari Lore
+	Mtkvari Mtskheta
+	Narikala Ninotsminda
+	"Okros Satsmisi"
+	Parnavaz Phasis Pityus "Petre Iberi"
+	Ruisi Racha Rioni
+	Seti Skhalta Svaneti Svetitskhoveli "Shota Rustaveli"
+	Tamar Tbilisi Telavi Tashiri "Tsminda Giorgi" "Tsotne Dadiani" "Tetri Giorgi"
+	Urbnisi Ushba Uplistsikhe
+	"Vakhtang Gorgasali" Vardzia Venakhi
+}

@@ -1,0 +1,29 @@
+government = monarchy
+add_government_reform = autocracy_reform
+government_rank = 3
+technology_group = western
+religion = catholic
+primary_culture = lombard
+capital = 118
+historical_friend = WWF
+historical_friend = WWB
+historical_friend = WWR
+historical_rival = WWG
+historical_rival = WWA
+historical_rival = WWO
+historical_rival = WWL
+historical_rival = WWN
+historical_rival = MWG
+add_army_professionalism = 1
+add_adm_tech = 3
+add_dip_tech = 3
+add_mil_tech = 3
+1774.1.1 = {
+	monarch = { name = "Victor Emmanuel III" dynasty = "di Savoia" birth_date = 1774.1.1 death_date = 1834.1.1 adm = 6 dip = 6 mil = 6 }
+	clear_scripted_personalities = yes
+	add_ruler_personality = immortal_personality
+	add_ruler_personality = just_personality
+	add_ruler_personality = kind_hearted_personality
+}
+1807.1.1 = { add_country_modifier = { name = one_v_one_manpower_fl_ww duration = -1 hidden = yes } add_country_modifier = { name = mwg_braindead_general duration = 730 } }
+1807.1.3 = { remove_country_modifier = one_v_one_manpower_fl_ww }

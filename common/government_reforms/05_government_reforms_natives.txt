@@ -1,0 +1,23 @@
+native_basic_reform = {
+	basic_reform = yes
+	valid_for_new_country = no
+	valid_for_nation_designer = no
+}
+native_chiefdom_reform = {}
+native_federation_reform = {}
+native_clan_council_reform = {}
+native_hereditary_reform = {}
+native_martial_tradition_reform = {}
+native_oral_tradition_reform = {}
+native_land_tradition_reform = {}
+native_war_band_reform = {}
+native_seasonal_travel_reform = {}
+native_settle_down_reform = {}
+native_codified_power_reform = {}
+native_diplomatic_cermonies_reform = {}
+native_trading_with_foreigners_reform = {}
+native_becomes_monarchy_reform = {}
+native_becomes_republic_reform = {}
+native_becomes_theocracy_reform = {}
+native_becomes_horde_reform = {}
+native_remain_being_native_reform = {}

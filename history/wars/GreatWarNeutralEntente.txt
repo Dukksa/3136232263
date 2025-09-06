@@ -1,0 +1,19 @@
+name = "Act of Neutrality"
+war_goal = {
+	type = superiority_insult_mutual
+	casus_belli = cb_insult
+}
+1806.12.1 = {
+	add_attacker = WWF
+	add_attacker = WWB
+	add_attacker = WWR
+	add_attacker = WWI
+	add_defender = WWN
+}
+1818.12.1 = {
+	rem_attacker = WWF
+	rem_attacker = WWB
+	rem_attacker = WWR
+	rem_attacker = WWI
+	rem_defender = WWN
+}

@@ -1,0 +1,1 @@
+bookmark = { name = "great_turkish_war_alt" desc = "great_turkish_war_alt_desc" date = 1676.1.2 center = 159 default = yes country = GTO country = GEB country = GEC country = GAU country = GPL country = GRU easy_country = GTO }

@@ -1,0 +1,12 @@
+one_v_one_jap_por_5_decision_opinion = {
+	opinion = 100
+}
+one_v_one_in_union = {
+	opinion = 100
+}
+one_v_one_colonial_relation = {
+	opinion = 100
+}
+one_v_one_roman_extend = {
+	opinion = 100
+}

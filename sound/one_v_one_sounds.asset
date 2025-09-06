@@ -1,0 +1,16 @@
+sound = {
+	name = re_banzai
+	file = "re_banzai.wav"
+}
+sound = {
+	name = re_hell
+	file = "re_hell.wav"
+}
+sound = {
+	name = re_rigged
+	file = "re_rigged.wav"
+}
+sound = {
+	name = re_creeping
+	file = "re_creeping.wav"
+}

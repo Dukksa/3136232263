@@ -1,0 +1,1 @@
+bookmark = { name = "great_war" desc = "great_war_desc" date = 1807.1.1 center = 4760 default = yes country = WWG country = WWA country = WWO country = WWL country = WWF country = WWB country = WWR country = WWI easy_country = WWG }

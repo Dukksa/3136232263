@@ -1,0 +1,17 @@
+government = monarchy
+add_government_reform = autocracy_reform
+technology_group = western
+religion = catholic
+primary_culture = burgundian
+capital = 192
+add_army_professionalism = 0.4
+1602.1.1 = {
+	monarch = { birth_date = 1602.1.1 death_date = 1662.1.1 adm = 4 dip = 4 mil = 4 }
+	clear_scripted_personalities = yes
+	add_ruler_personality = immortal_personality
+	add_ruler_personality = just_personality
+	add_ruler_personality = kind_hearted_personality
+}
+1635.1.1 = { add_country_modifier = { name = one_v_one_manpower_fl_wfr duration = -1 hidden = yes } }
+1635.1.2 = { remove_country_modifier = one_v_one_manpower_fl_wfr add_country_modifier = { name = one_v_one_manpower_fl_alt_wfr duration = -1 hidden = yes } }
+1635.1.3 = { remove_country_modifier = one_v_one_manpower_fl_alt_wfr }

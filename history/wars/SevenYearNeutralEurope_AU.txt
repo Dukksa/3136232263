@@ -1,0 +1,13 @@
+name = "Germans Support"
+war_goal = {
+	type = superiority_insult_mutual
+	casus_belli = cb_insult
+}
+1749.1.1 = {
+	add_attacker = SAU
+	add_defender = TYN
+}
+1749.1.2 = {
+	rem_attacker = SAU
+	rem_defender = TYN
+}

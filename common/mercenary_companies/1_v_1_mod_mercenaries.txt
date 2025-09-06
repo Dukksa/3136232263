@@ -1,0 +1,353 @@
+##########################
+# Italy and Otto scenario:
+one_v_one_ita_ott_mercs_i_s = {
+	max_size = 8 min_size = 8
+	trigger = { OR = { one_v_one_italy_nations = yes one_v_one_otto_nations = yes one_v_one_jap_nations = yes one_v_one_india_nations = yes } }
+}
+one_v_one_ita_ott_mercs_c_s = {
+	max_size = 8 min_size = 8 cavalry_weight = 1
+	trigger = { OR = { one_v_one_italy_nations = yes one_v_one_otto_nations = yes one_v_one_jap_nations = yes one_v_one_india_nations = yes } }
+}
+one_v_one_ita_ott_mercs_i_m = {
+	max_size = 14 min_size = 14
+	trigger = { OR = { one_v_one_italy_nations = yes one_v_one_otto_nations = yes } }
+}
+one_v_one_ita_ott_mercs_c_m = {
+	max_size = 14 min_size = 14 cavalry_weight = 1
+	cost_modifier = 0.8
+	trigger = { OR = { one_v_one_italy_nations = yes one_v_one_otto_nations = yes } }
+}
+one_v_one_ita_ott_mercs_i_b = {
+	max_size = 27 min_size = 27
+	trigger = { OR = { one_v_one_italy_nations = yes one_v_one_otto_nations = yes } }
+}
+one_v_one_ita_ott_mercs_c_b = {
+	max_size = 27 min_size = 27 cavalry_weight = 1
+	cost_modifier = 0.8
+	trigger = { OR = { one_v_one_italy_nations = yes one_v_one_otto_nations = yes } }
+}
+one_v_one_ita_ott_mercs_merc = {
+	max_size = 91 min_size = 91 artillery_weight = 0.53
+	cost_modifier = 0.8
+	trigger = { has_idea = organised_mercenary_recruitment OR = { one_v_one_italy_nations = yes one_v_one_otto_nations = yes } }
+}
+one_v_one_ita_ott_mercs_merc_2 = {
+	max_size = 27 min_size = 27
+	trigger = { has_idea = organised_mercenary_payment OR = { one_v_one_italy_nations = yes one_v_one_otto_nations = yes } }
+}
+one_v_one_ita_ott_mercs_merc_4 = {
+	max_size = 27 min_size = 27
+	trigger = { has_idea = nation_of_war OR = { one_v_one_italy_nations = yes one_v_one_otto_nations = yes } }
+}
+one_v_one_ita_ott_mercs_merc_6 = {
+	max_size = 27 min_size = 27	trigger = { has_idea = benefits_for_mercenaries OR = { one_v_one_italy_nations = yes one_v_one_otto_nations = yes } }
+}
+# Japan and India scenario:
+one_v_one_jap_ind_mercs_i_m = {
+	max_size = 15 min_size = 15
+	trigger = { OR = { one_v_one_jap_nations = yes one_v_one_india_nations = yes } }
+}
+one_v_one_jap_ind_mercs_c_m = {
+	max_size = 15 min_size = 15 cavalry_weight = 1
+	cost_modifier = 0.8
+	trigger = { OR = { one_v_one_jap_nations = yes one_v_one_india_nations = yes } }
+}
+one_v_one_jap_ind_mercs_i_b = {
+	max_size = 30 min_size = 30
+	trigger = { OR = { one_v_one_jap_nations = yes one_v_one_india_nations = yes } }
+}
+one_v_one_jap_ind_mercs_c_b = {
+	max_size = 30 min_size = 30 cavalry_weight = 1
+	cost_modifier = 0.8
+	trigger = { OR = { one_v_one_jap_nations = yes one_v_one_india_nations = yes } }
+}
+one_v_one_jap_ind_mercs_merc = {
+	max_size = 100 min_size = 100 artillery_weight = 0.53
+	cost_modifier = 0.8
+	trigger = { has_idea = organised_mercenary_recruitment OR = { one_v_one_jap_nations = yes one_v_one_india_nations = yes } }
+}
+one_v_one_jap_ind_mercs_merc_2 = {
+	max_size = 30 min_size = 30
+	trigger = { has_idea = organised_mercenary_payment OR = { one_v_one_jap_nations = yes one_v_one_india_nations = yes } }
+}
+one_v_one_jap_ind_mercs_merc_4 = {
+	max_size = 30 min_size = 30
+	trigger = { has_idea = nation_of_war OR = { one_v_one_jap_nations = yes one_v_one_india_nations = yes } }
+}
+one_v_one_jap_ind_mercs_merc_6 = {
+	max_size = 30 min_size = 30
+	trigger = { has_idea = benefits_for_mercenaries OR = { one_v_one_jap_nations = yes one_v_one_india_nations = yes } }
+}
+one_v_one_jap_ind_mercs_age_1 = {
+	max_size = 15 min_size = 15
+	cost_modifier = 1.5
+	trigger = { has_country_flag = ab_mercenary_extra_comp_flag OR = { one_v_one_jap_nations = yes one_v_one_india_nations = yes } }
+	modifier = { infantry_power = 0.2 reserves_organisation = 1 }
+}
+one_v_one_jap_ind_mercs_age_2 = {
+	max_size = 15 min_size = 15
+	cost_modifier = 1.5
+	trigger = { has_country_flag = ab_mercenary_extra_comp_flag OR = { one_v_one_jap_nations = yes one_v_one_india_nations = yes } }
+	modifier = { no_cost_for_reinforcing = yes land_attrition = -0.75 recover_army_morale_speed = 0.5 }
+}
+# Thirty Years scenario:
+one_v_one_tyw_mercs_i_m_1 = {
+	max_size = 16 min_size = 16
+	trigger = { one_v_one_tyw_nations = yes }
+}
+one_v_one_tyw_mercs_i_m_2 = {
+	max_size = 16 min_size = 16
+	trigger = { one_v_one_tyw_nations = yes }
+}
+one_v_one_tyw_mercs_c_m_1 = {
+	max_size = 16 min_size = 16 cavalry_weight = 1
+	cost_modifier = 0.8
+	trigger = { one_v_one_tyw_nations = yes }
+}
+one_v_one_tyw_mercs_c_m_2 = {
+	max_size = 16 min_size = 16 cavalry_weight = 1
+	cost_modifier = 0.8
+	trigger = { one_v_one_tyw_nations = yes }
+}
+one_v_one_tyw_mercs_i_b = {
+	max_size = 32 min_size = 32
+	trigger = { one_v_one_tyw_nations = yes }
+}
+one_v_one_tyw_mercs_c_b = {
+	max_size = 32 min_size = 32 cavalry_weight = 1
+	cost_modifier = 0.8
+	trigger = { one_v_one_tyw_nations = yes }
+}
+one_v_one_tyw_mercs_merc = {
+	max_size = 106 min_size = 106 artillery_weight = 0.53
+	cost_modifier = 0.8
+	trigger = { has_idea = organised_mercenary_recruitment one_v_one_tyw_nations = yes }
+}
+one_v_one_tyw_mercs_merc_2 = {
+	max_size = 32 min_size = 32
+	trigger = { has_idea = organised_mercenary_payment one_v_one_tyw_nations = yes }
+}
+one_v_one_tyw_mercs_merc_4 = {
+	max_size = 32 min_size = 32
+	trigger = { has_idea = nation_of_war one_v_one_tyw_nations = yes }
+}
+one_v_one_tyw_mercs_merc_6 = {
+	max_size = 32 min_size = 32
+	trigger = { has_idea = benefits_for_mercenaries one_v_one_tyw_nations = yes }
+}
+one_v_one_tyw_mercs_age_1 = {
+	max_size = 16 min_size = 16
+	cost_modifier = 1.5
+	trigger = { has_country_flag = ab_mercenary_extra_comp_flag one_v_one_tyw_nations = yes }
+	modifier = { infantry_power = 0.2 reserves_organisation = 1 }
+}
+one_v_one_tyw_mercs_age_2 = {
+	max_size = 16 min_size = 16
+	cost_modifier = 1.5
+	trigger = { has_country_flag = ab_mercenary_extra_comp_flag one_v_one_tyw_nations = yes }
+	modifier = { no_cost_for_reinforcing = yes land_attrition = -0.75 recover_army_morale_speed = 0.5 }
+}
+# Great Turkish scenario:
+one_v_one_gtw_mercs_i_m_1 = {
+	max_size = 18 min_size = 18
+	trigger = { one_v_one_gtw_nations = yes }
+}
+one_v_one_gtw_mercs_i_m_2 = {
+	max_size = 18 min_size = 18
+	trigger = { one_v_one_gtw_nations = yes }
+}
+one_v_one_gtw_mercs_c_m_1 = {
+	max_size = 18 min_size = 18 cavalry_weight = 1
+	cost_modifier = 0.8
+	trigger = { one_v_one_gtw_nations = yes }
+}
+one_v_one_gtw_mercs_c_m_2 = {
+	max_size = 18 min_size = 18 cavalry_weight = 1
+	cost_modifier = 0.8
+	trigger = { one_v_one_gtw_nations = yes }
+}
+one_v_one_gtw_mercs_i_b_1 = {
+	max_size = 36 min_size = 36
+	trigger = { one_v_one_gtw_nations = yes }
+}
+one_v_one_gtw_mercs_i_b_2 = {
+	max_size = 36 min_size = 36
+	trigger = { one_v_one_gtw_nations = yes }
+}
+one_v_one_gtw_mercs_c_b_1 = {
+	max_size = 36 min_size = 36 cavalry_weight = 1
+	cost_modifier = 0.8
+	trigger = { one_v_one_gtw_nations = yes }
+}
+one_v_one_gtw_mercs_c_b_2 = {
+	max_size = 36 min_size = 36 cavalry_weight = 1
+	cost_modifier = 0.8
+	trigger = { one_v_one_gtw_nations = yes }
+}
+one_v_one_gtw_mercs_merc = {
+	max_size = 118 min_size = 118 artillery_weight = 0.53
+	cost_modifier = 0.8
+	trigger = { has_idea = organised_mercenary_recruitment one_v_one_gtw_nations = yes }
+}
+one_v_one_gtw_mercs_merc_2 = {
+	max_size = 36 min_size = 36
+	trigger = { has_idea = organised_mercenary_payment one_v_one_gtw_nations = yes }
+}
+one_v_one_gtw_mercs_merc_4 = {
+	max_size = 36 min_size = 36
+	trigger = { has_idea = nation_of_war one_v_one_gtw_nations = yes }
+}
+one_v_one_gtw_mercs_merc_6 = {
+	max_size = 36 min_size = 36
+	trigger = { has_idea = benefits_for_mercenaries one_v_one_gtw_nations = yes }
+}
+one_v_one_gtw_mercs_git_1 = {
+	max_size = 36 min_size = 36
+	trigger = { tag = GIT ruler_has_personality = one_v_one_git_mitrovic_personality }
+	modifier = { fire_damage_received = -0.15 }
+}
+one_v_one_gtw_mercs_git_2 = {
+	max_size = 36 min_size = 36
+	trigger = { tag = GIT ruler_has_personality = one_v_one_git_mitrovic_personality }
+	modifier = { fire_damage_received = -0.15 }
+}
+one_v_one_gtw_mercs_geb_1 = {
+	max_size = 36 min_size = 36
+	trigger = { tag = GEB ruler_has_personality = one_v_one_geb_emeric_personality }
+	modifier = { discipline = 0.05 }
+}
+one_v_one_gtw_mercs_geb_2 = {
+	max_size = 36 min_size = 36
+	trigger = { tag = GEB ruler_has_personality = one_v_one_geb_emeric_personality }
+	modifier = { discipline = 0.05 }
+}
+# Succession scenario:
+one_v_one_succ_mercs_i_m_1 = {
+	max_size = 20 min_size = 20
+	trigger = { OR = { one_v_one_re_nations = yes one_v_one_succ_nations = yes one_v_one_as_nations = yes one_v_one_syw_nations = yes one_v_one_nap_nations = yes } }
+}
+one_v_one_succ_mercs_i_m_2 = {
+	max_size = 20 min_size = 20
+	trigger = { OR = { one_v_one_re_nations = yes one_v_one_succ_nations = yes one_v_one_as_nations = yes one_v_one_syw_nations = yes one_v_one_nap_nations = yes } }
+}
+one_v_one_succ_mercs_c_m_1 = {
+	max_size = 20 min_size = 20 cavalry_weight = 1
+	cost_modifier = 0.8
+	trigger = { OR = { one_v_one_re_nations = yes one_v_one_succ_nations = yes one_v_one_as_nations = yes one_v_one_syw_nations = yes one_v_one_nap_nations = yes } }
+}
+one_v_one_succ_mercs_c_m_2 = {
+	max_size = 20 min_size = 20 cavalry_weight = 1
+	cost_modifier = 0.8
+	trigger = { OR = { one_v_one_re_nations = yes one_v_one_succ_nations = yes one_v_one_as_nations = yes one_v_one_syw_nations = yes one_v_one_nap_nations = yes } }
+}
+one_v_one_succ_mercs_i_b_1 = {
+	max_size = 38 min_size = 38
+	trigger = { OR = { one_v_one_re_nations = yes one_v_one_succ_nations = yes } }
+}
+one_v_one_succ_mercs_i_b_2 = {
+	max_size = 38 min_size = 38
+	trigger = { OR = { one_v_one_re_nations = yes one_v_one_succ_nations = yes } }
+}
+one_v_one_succ_mercs_c_b_1 = {
+	max_size = 38 min_size = 38 cavalry_weight = 1
+	cost_modifier = 0.8
+	trigger = { OR = { one_v_one_re_nations = yes one_v_one_succ_nations = yes } }
+}
+one_v_one_succ_mercs_c_b_2 = {
+	max_size = 38 min_size = 38 cavalry_weight = 1
+	cost_modifier = 0.8
+	trigger = { OR = { one_v_one_re_nations = yes one_v_one_succ_nations = yes } }
+}
+one_v_one_succ_mercs_merc = {
+	max_size = 124 min_size = 124 artillery_weight = 0.53
+	cost_modifier = 0.8
+	trigger = { has_idea = organised_mercenary_recruitment OR = { one_v_one_re_nations = yes one_v_one_succ_nations = yes } }
+}
+one_v_one_succ_mercs_merc_2 = {
+	max_size = 38 min_size = 38
+	trigger = { has_idea = organised_mercenary_payment OR = { one_v_one_re_nations = yes one_v_one_succ_nations = yes } }
+}
+one_v_one_succ_mercs_merc_4 = {
+	max_size = 38 min_size = 38
+	trigger = { has_idea = nation_of_war OR = { one_v_one_re_nations = yes one_v_one_succ_nations = yes } }
+}
+one_v_one_succ_mercs_merc_6 = {
+	max_size = 38 min_size = 38
+	trigger = { has_idea = benefits_for_mercenaries OR = { one_v_one_re_nations = yes one_v_one_succ_nations = yes } }
+}
+# Seven Years and Napoleonic scenario:
+one_v_one_nap_mercs_i_b_1 = {
+	max_size = 40 min_size = 40
+	trigger = { OR = { one_v_one_as_nations = yes one_v_one_as_nations = yes one_v_one_syw_nations = yes one_v_one_nap_nations = yes } }
+}
+one_v_one_nap_mercs_i_b_2 = {
+	max_size = 40 min_size = 40
+	trigger = { OR = { one_v_one_as_nations = yes one_v_one_syw_nations = yes one_v_one_nap_nations = yes } }
+}
+one_v_one_nap_mercs_c_b_1 = {
+	max_size = 40 min_size = 40 cavalry_weight = 1
+	cost_modifier = 0.8
+	trigger = { OR = { one_v_one_as_nations = yes one_v_one_syw_nations = yes one_v_one_nap_nations = yes } }
+}
+one_v_one_nap_mercs_c_b_2 = {
+	max_size = 40 min_size = 40 cavalry_weight = 1
+	cost_modifier = 0.8
+	trigger = { OR = { one_v_one_as_nations = yes one_v_one_syw_nations = yes one_v_one_nap_nations = yes } }
+}
+one_v_one_nap_mercs_merc = {
+	max_size = 130 min_size = 130 artillery_weight = 0.53
+	cost_modifier = 0.8
+	trigger = { has_idea = organised_mercenary_recruitment OR = { one_v_one_as_nations = yes one_v_one_syw_nations = yes one_v_one_nap_nations = yes } }
+}
+one_v_one_nap_mercs_merc_2 = {
+	max_size = 40 min_size = 40
+	trigger = { has_idea = organised_mercenary_payment OR = { one_v_one_as_nations = yes one_v_one_syw_nations = yes one_v_one_nap_nations = yes } }
+}
+one_v_one_nap_mercs_merc_4 = {
+	max_size = 40 min_size = 40
+	trigger = { has_idea = nation_of_war OR = { one_v_one_as_nations = yes one_v_one_syw_nations = yes one_v_one_nap_nations = yes } }
+}
+one_v_one_nap_mercs_merc_6 = {
+	max_size = 40 min_size = 40
+	trigger = { has_idea = benefits_for_mercenaries OR = { one_v_one_as_nations = yes one_v_one_syw_nations = yes one_v_one_nap_nations = yes } }
+}
+##########################
+# Specials:
+###
+# Japan scenario:
+one_v_one_jnp_por_4_decision_merc_comp = {
+	sprites = { dlc011_por_sprite_pack dlc042_por_sprite_pack westerngfx_sprite_pack }
+	regiments_per_development = 0.01
+	home_province = 1852
+	max_size = 30
+	min_size = 30
+	cavalry_cap = 2
+	cavalry_weight = 0.1
+	cost_modifier = 0.8
+	trigger = {
+		if = {
+			limit = { has_country_flag = one_v_one_jnp_por_4_decision_merc_comp_flag }
+			NOT = { had_country_flag = { flag = one_v_one_jnp_por_4_decision_merc_comp_flag days = 365 } }
+		}
+		else = { always = no }
+	}
+	modifier = { fire_damage = 0.3 }
+}
+one_v_one_jsp_por_4_decision_merc_comp = {
+	sprites = { dlc011_por_sprite_pack dlc042_por_sprite_pack westerngfx_sprite_pack }
+	regiments_per_development = 0.01
+	home_province = 4182
+	max_size = 30
+	min_size = 30
+	cavalry_cap = 2
+	cavalry_weight = 0.1
+	cost_modifier = 0.8
+	trigger = {
+		if = {
+			limit = { has_country_flag = one_v_one_jsp_por_4_decision_merc_comp_flag }
+			NOT = { had_country_flag = { flag = one_v_one_jsp_por_4_decision_merc_comp_flag days = 365 } }
+		}
+		else = { always = no }
+	}
+	modifier = { fire_damage = 0.3 }
+}

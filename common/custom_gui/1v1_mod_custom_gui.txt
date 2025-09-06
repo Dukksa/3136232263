@@ -1,0 +1,174 @@
+##########
+# Muslim:
+custom_button = {
+	name = one_v_one_low_piety_action
+	potential = { uses_piety = yes ai = no }
+	trigger = {
+		hidden_trigger = {
+			OR = {
+				NOT = { has_country_flag = one_v_one_low_piety_action_flag }
+				had_country_flag = { flag = one_v_one_low_piety_action_flag days = 1825 }
+			}
+			NOT = { piety = -0.76 }
+		}
+		NOT = { has_country_modifier = slackening_modifier }
+	}
+	effect = {
+		tooltip = { add_yearly_manpower = 0.5 }
+		if = {
+			limit = { NOT = { has_country_flag = one_v_one_piety_action_confirm_flag } }
+			set_country_flag = one_v_one_piety_action_confirm_flag
+			if = {
+				limit = { has_country_flag = one_v_one_low_piety_action_flag NOT = { had_country_flag = { flag = one_v_one_low_piety_action_flag days = 1825 } } }
+				custom_tooltip = one_v_one_low_piety_action_cooldown_tt
+			}
+		}
+	}
+	tooltip = one_v_one_low_piety_action_tt
+}
+custom_button = {
+	name = one_v_one_high_piety_action
+	potential = { uses_piety = yes ai = no }
+	trigger = {
+		hidden_trigger = {
+			OR = {
+				NOT = { has_country_flag = one_v_one_high_piety_action_flag }
+				had_country_flag = { flag = one_v_one_high_piety_action_flag days = 1825 }
+			}
+			piety = 0.75
+		}
+	}
+	effect = {
+		tooltip = { add_years_of_income = 0.75 }
+		if = {
+			limit = { NOT = { has_country_flag = one_v_one_piety_action_confirm_flag } }
+			set_country_flag = one_v_one_piety_action_confirm_flag
+			if = {
+				limit = { has_country_flag = one_v_one_high_piety_action_flag NOT = { had_country_flag = { flag = one_v_one_high_piety_action_flag days = 1825 } } }
+				custom_tooltip = one_v_one_high_piety_action_cooldown_tt
+			}
+		}
+	}
+	tooltip = one_v_one_high_piety_action_tt
+}
+
+custom_icon = {
+	name = one_v_one_piety_action_confirm_background
+	potential = { has_country_flag = one_v_one_piety_action_confirm_flag }
+}
+custom_button = {
+	name = one_v_one_piety_action_not_confirm
+	potential = { has_country_flag = one_v_one_piety_action_confirm_flag }
+	effect = { clr_country_flag = one_v_one_piety_action_confirm_flag }
+}
+custom_button = {
+	name = one_v_one_piety_action_confirm
+	potential = { has_country_flag = one_v_one_piety_action_confirm_flag }
+	trigger = { NOT = { has_country_modifier = slackening_modifier } }
+	effect = {
+		clr_country_flag = one_v_one_piety_action_confirm_flag
+		if = {
+			limit = {
+				NOT = { piety = -0.76 }
+			}
+			add_yearly_manpower = 0.5
+			hidden_effect = { add_piety = 0.5 }
+			set_country_flag = one_v_one_low_piety_action_flag
+			hidden_effect = {
+				export_to_variable = { which = one_v_one_low_piety_action_was_set_year value = trigger_value:is_year }
+				export_to_variable = { which = one_v_one_low_piety_action_was_set_month value = trigger_value:is_month }
+				set_variable = { which = one_v_one_low_piety_action_length value = 5 }
+				change_variable = { which = one_v_one_low_piety_action_length which = one_v_one_low_piety_action_was_set_year }
+			}
+		}
+		if = {
+			limit = {
+				piety = 0.75
+			}
+			add_years_of_income = 0.75
+			hidden_effect = { add_piety = -0.5 }
+			set_country_flag = one_v_one_high_piety_action_flag
+			hidden_effect = {
+				export_to_variable = { which = one_v_one_high_piety_action_was_set_year value = trigger_value:is_year }
+				export_to_variable = { which = one_v_one_high_piety_action_was_set_month value = trigger_value:is_month }
+				set_variable = { which = one_v_one_high_piety_action_length value = 5 }
+				change_variable = { which = one_v_one_high_piety_action_length which = one_v_one_high_piety_action_was_set_year }
+			}
+		}
+	}
+}
+##########
+# Shinto:
+custom_icon = {
+	name = one_v_one_shinto_isolationism_background
+	potential = { religion = shinto }
+}
+custom_text_box = {
+	name = one_v_one_shinto_isolationism_text
+	potential = { religion = shinto }
+}
+custom_button = {
+	name = one_v_one_shinto_isolationism_up
+	potential = { religion = shinto }
+	trigger = {
+		custom_trigger_tooltip = {
+			tooltip = one_v_one_shinto_isolationism_flag_tt
+			OR = {
+				NOT = { has_country_flag = one_v_one_shinto_isolationism_flag }
+				had_country_flag = { flag = one_v_one_shinto_isolationism_flag days = 730 }
+			}
+		}
+		isolationism = 1
+	}
+	effect = {
+		set_country_flag = one_v_one_shinto_isolationism_flag
+		hidden_effect = { add_isolationism = -1 }
+	}
+	tooltip = one_v_one_shinto_isolationism_up_tt
+}
+custom_button = {
+	name = one_v_one_shinto_isolationism_down
+	potential = { religion = shinto }
+	trigger = {
+		custom_trigger_tooltip = {
+			tooltip = one_v_one_shinto_isolationism_flag_tt
+			OR = {
+				NOT = { has_country_flag = one_v_one_shinto_isolationism_flag }
+				had_country_flag = { flag = one_v_one_shinto_isolationism_flag days = 730 }
+			}
+		}
+		NOT = { isolationism = 4 }
+	}
+	effect = {
+		set_country_flag = one_v_one_shinto_isolationism_flag
+		hidden_effect = { add_isolationism = 1 }
+	}
+	tooltip = one_v_one_shinto_isolationism_down_tt
+}
+##########
+# Roman Wars raiding:
+custom_button = {
+	name = one_v_one_re_raiding_button
+	potential = {
+		started_in = 1685.1.1
+		NOT = { started_in = 1685.1.3 }
+		one_v_one_re_raid_prov = yes
+		NOT = { owned_by = FROM }
+	}
+	trigger = {
+		controlled_by = FROM
+		NOT = { has_province_modifier = one_v_one_re_raiding_cooldown }
+	}
+	effect = {
+		hidden_effect = { add_province_modifier = { name = one_v_one_re_raiding_cooldown duration = 1825 } }
+		add_devastation = 10
+		owner = { add_treasury = -500 add_manpower = -10 }
+		FROM = { add_treasury = 500 add_manpower = 10 }
+		if = {
+			limit = { has_fort_building_trigger = yes }
+			owner = { add_adm_power = -25 add_dip_power = -25 add_mil_power = -25 }
+			FROM = { add_adm_power = 25 add_dip_power = 25 add_mil_power = 25 }
+		}
+	}
+	tooltip = one_v_one_re_raiding_button
+}

@@ -1,0 +1,473 @@
+on_startup = {
+	if = {
+		limit = { MWG = { NOT = { has_country_flag = one_v_one_setup_flag } } }
+		every_province = {
+			limit = { OR = { is_neighbor_of = IGE is_neighbor_of = IVE is_neighbor_of = MTU is_neighbor_of = MMM is_neighbor_of = IMU is_neighbor_of = IDC is_neighbor_of = WFR is_neighbor_of = WSP is_neighbor_of = JNO is_neighbor_of = JSO is_neighbor_of = WAU is_neighbor_of = WGB is_neighbor_of = NFR is_neighbor_of = NSP is_neighbor_of = NRH is_neighbor_of = NIT is_neighbor_of = NTU is_neighbor_of = NRU is_neighbor_of = NAU is_neighbor_of = NPR is_neighbor_of = NGB is_neighbor_of = NSW is_neighbor_of = TFR is_neighbor_of = TSW is_neighbor_of = TGB is_neighbor_of = TPG is_neighbor_of = TDN is_neighbor_of = TPL is_neighbor_of = TAS is_neighbor_of = TSP is_neighbor_of = TCG is_neighbor_of = TIT is_neighbor_of = GTO is_neighbor_of = GEC is_neighbor_of = GEB is_neighbor_of = GEA is_neighbor_of = GFR is_neighbor_of = GAU is_neighbor_of = GPL is_neighbor_of = GIT is_neighbor_of = GSP is_neighbor_of = GRU  is_neighbor_of = AAU is_neighbor_of = AGB is_neighbor_of = ANE is_neighbor_of = ARU is_neighbor_of = AIT is_neighbor_of = AHA is_neighbor_of = APR is_neighbor_of = AFR is_neighbor_of = ASP is_neighbor_of = ASW is_neighbor_of = APL is_neighbor_of = ABA is_neighbor_of = SPR is_neighbor_of = SGB is_neighbor_of = SUA is_neighbor_of = SCN is_neighbor_of = SPO is_neighbor_of = SBR is_neighbor_of = SAU is_neighbor_of = SFR is_neighbor_of = SQU is_neighbor_of = SLU is_neighbor_of = SSP is_neighbor_of = SNS is_neighbor_of = WWG is_neighbor_of = WWA is_neighbor_of = WWO is_neighbor_of = WWL is_neighbor_of = WWN is_neighbor_of = TYN is_neighbor_of = TYM is_neighbor_of = WWF is_neighbor_of = WWB is_neighbor_of = WWR is_neighbor_of = WWI is_neighbor_of = REW is_neighbor_of = RWN is_neighbor_of = RWS is_neighbor_of = REE is_neighbor_of = REN is_neighbor_of = RES } is_empty = yes }
+			add_core = MWG
+			cede_province = MWG
+		}
+		if = {
+			limit = { started_in = 1565.1.1 NOT = { started_in = 1565.1.3 } }
+			2741 = { add_core = MWP cede_province = MWP }
+		}
+		if = {
+			limit = {
+				OR = {
+					AND = { started_in = 1611.1.1 NOT = { started_in = 1611.1.3 } }
+					AND = { started_in = 1676.1.1 NOT = { started_in = 1676.1.3 } }
+					AND = { started_in = 1685.1.1 NOT = { started_in = 1685.1.3 } }
+					AND = { started_in = 1694.1.1 NOT = { started_in = 1694.1.3 } }
+					AND = { started_in = 1734.1.1 NOT = { started_in = 1734.1.3 } }
+					AND = { started_in = 1749.1.1 NOT = { started_in = 1749.1.3 } }
+					AND = { started_in = 1799.1.1 NOT = { started_in = 1799.1.3 } }
+					AND = { started_in = 1807.1.1 NOT = { started_in = 1807.1.3 } }
+				}
+			}
+			1988 = { add_core = PAP cede_province = PAP }
+		}
+		MWG = {
+			set_country_flag = one_v_one_setup_flag
+			country_event = { id = one_v_one_mod.1 } # I had to turn it into this event chain, since it won't fire all effects if are put all in one...
+		}
+	}
+	if = {
+		limit = { started_in = 1694.1.1 NOT = { started_in = 1694.1.3 } }
+		beieras_area = { add_province_modifier = { name = one_v_one_fra_spa_region_portugal_defender duration = -1 } }
+		alentejo_area = { add_province_modifier = { name = one_v_one_fra_spa_region_portugal_defender duration = -1 } }
+		pyrenees_areaa = { add_province_modifier = { name = one_v_one_fra_spa_region_aragon_defender duration = -1 } }
+		gerona_area = { add_province_modifier = { name = one_v_one_fra_spa_region_aragon_defender duration = -1 } }
+		catalonia_area = { add_province_modifier = { name = one_v_one_fra_spa_region_aragon_defender duration = -1 } }
+		211 = { add_province_modifier = { name = one_v_one_fra_spa_region_aragon_defender duration = -1 } }
+		214 = { add_province_modifier = { name = one_v_one_fra_spa_region_aragon_defender duration = -1 } }
+		2990 = { add_province_modifier = { name = one_v_one_fra_spa_region_aragon_defender duration = -1 } }
+		4550 = { add_province_modifier = { name = one_v_one_fra_spa_region_aragon_defender duration = -1 } }
+		220 = { add_province_modifier = { name = one_v_one_fra_spa_region_aragon_defender duration = -1 } }
+		4549 = { add_province_modifier = { name = one_v_one_fra_spa_region_aragon_defender duration = -1 } }
+		piedmont_area = { add_province_modifier = { name = one_v_one_fra_spa_region_savoy_defender duration = -1 } }
+		102 = { add_province_modifier = { name = one_v_one_fra_spa_region_savoy_defender duration = -1 } }
+		2992 = { add_province_modifier = { name = one_v_one_fra_spa_region_savoy_defender duration = -1 } }
+		205 = { add_province_modifier = { name = one_v_one_fra_spa_region_savoy_defender duration = -1 } }
+		2980 = { add_province_modifier = { name = one_v_one_fra_spa_region_tuscany_defender duration = -1 } }
+		116 = { add_province_modifier = { name = one_v_one_fra_spa_region_tuscany_defender duration = -1 } }
+		115 = { add_province_modifier = { name = one_v_one_fra_spa_region_tuscany_defender duration = -1 } }
+		117 = { add_province_modifier = { name = one_v_one_fra_spa_region_tuscany_defender duration = -1 } }
+		118 = { add_province_modifier = { name = one_v_one_fra_spa_region_tuscany_defender duration = -1 } }
+		4732 = { add_province_modifier = { name = one_v_one_fra_spa_region_tuscany_defender duration = -1 } }
+		lombardy_area = { add_province_modifier = { name = one_v_one_fra_spa_region_milan_defender duration = -1 } }
+		4739 = { add_province_modifier = { name = one_v_one_fra_spa_region_milan_defender duration = -1 } }
+		109 = { add_province_modifier = { name = one_v_one_fra_spa_region_milan_defender duration = -1 } }
+		105 = { add_province_modifier = { name = one_v_one_fra_spa_region_milan_defender duration = -1 } }
+		106 = { add_province_modifier = { name = one_v_one_fra_spa_region_milan_defender duration = -1 } }
+		101 = { add_province_modifier = { name = one_v_one_fra_spa_region_milan_defender duration = -1 } }
+		4717 = { add_province_modifier = { name = one_v_one_fra_spa_region_bavaria_defender duration = -1 } }
+		66 = { add_province_modifier = { name = one_v_one_fra_spa_region_bavaria_defender duration = -1 } }
+		67 = { add_province_modifier = { name = one_v_one_fra_spa_region_bavaria_defender duration = -1 } }
+		lower_bavaria_area = { add_province_modifier = { name = one_v_one_fra_spa_region_bavaria_defender duration = -1 } }
+		east_bavaria_area = { add_province_modifier = { name = one_v_one_fra_spa_region_bavaria_defender duration = -1 } }
+		upper_bavaria_area = { add_province_modifier = { name = one_v_one_fra_spa_region_bavaria_defender duration = -1 } }
+		wallonia_area = { add_province_modifier = { name = one_v_one_fra_spa_region_wallonia_defender duration = -1 } }
+		brabant_area = { add_province_modifier = { name = one_v_one_fra_spa_region_wallonia_defender duration = -1 } }
+		85 = { add_province_modifier = { name = one_v_one_fra_spa_region_wallonia_defender duration = -1 } }
+		lower_rhineland_area = { add_province_modifier = { name = one_v_one_fra_spa_region_wallonia_defender duration = -1 } }
+		1742 = { add_province_modifier = { name = one_v_one_fra_spa_region_wallonia_defender duration = -1 } }
+		holland_area = { add_province_modifier = { name = one_v_one_fra_spa_region_holland_defender duration = -1 } }
+		100 = { add_province_modifier = { name = one_v_one_fra_spa_region_holland_defender duration = -1 } }
+		4382 = { add_province_modifier = { name = one_v_one_fra_spa_region_holland_defender duration = -1 } }
+		4381 = { add_province_modifier = { name = one_v_one_fra_spa_region_holland_defender duration = -1 } }
+		99 = { add_province_modifier = { name = one_v_one_fra_spa_region_holland_defender duration = -1 } }
+		4770 = { add_province_modifier = { name = one_v_one_fra_spa_region_holland_defender duration = -1 } }
+		95 = { add_province_modifier = { name = one_v_one_fra_spa_region_holland_defender duration = -1 } }
+		2975 = { add_province_modifier = { name = one_v_one_fra_spa_region_holland_defender duration = -1 } }
+		1865 = { add_province_modifier = { name = one_v_one_fra_spa_region_holland_defender duration = -1 } }
+		90 = { add_province_modifier = { name = one_v_one_fra_spa_region_holland_defender duration = -1 } }
+		87 = { add_province_modifier = { name = one_v_one_fra_spa_region_holland_defender duration = -1 } }
+		4769 = { add_province_modifier = { name = one_v_one_fra_spa_region_wallonia_defender duration = -1 } }
+		naples_area = { add_province_modifier = { name = one_v_one_fra_spa_region_naples_defender duration = -1 } }
+		apulia_area = { add_province_modifier = { name = one_v_one_fra_spa_region_naples_defender duration = -1 } }
+		1934 = { add_province_modifier = { name = one_v_one_fra_spa_region_naples_defender duration = -1 } }
+		western_sicily_area = { add_province_modifier = { name = one_v_one_fra_spa_region_sicily_defender duration = -1 } }
+		sicily_area = { add_province_modifier = { name = one_v_one_fra_spa_region_sicily_defender duration = -1 } }
+		123 = { add_province_modifier = { name = one_v_one_fra_spa_region_sicily_defender duration = -1 } }
+		2984 = { add_province_modifier = { name = one_v_one_fra_spa_region_sicily_defender duration = -1 } }
+	}
+	if = {
+		limit = { started_in = 1565.1.2 NOT = { started_in = 1565.1.3 } }
+		set_global_flag = one_v_one_japan_scenario_alt_flag
+	}
+}
+on_battle_won_country = {
+	on_battle_ended_effect = yes
+	on_battle_won_country_effect = yes
+	if = {
+		limit = { tag = IGS NOT = { check_variable = { which = one_v_one_mission_s1_3_igs_bonus_2_var value = 6 } } }
+		change_variable = { which = one_v_one_mission_s1_3_igs_bonus_2_var value = 1 }
+	}
+	if = {
+		limit = { tag = MME NOT = { check_variable = { which = one_v_one_mission_s1_3_mme_bonus_2_var value = 8 } } }
+		change_variable = { which = one_v_one_mission_s1_3_mme_bonus_2_var value = 1 }
+	}
+}
+on_siege_won_country = {
+	if = {
+		limit = { started_in = 1749.1.1 NOT = { started_in = 1749.1.3 } }
+		FROM = {
+			if = {
+				limit = { OR = { owned_by = TYN owned_by = TYM } }
+				save_event_target_as = selected_province
+			}
+			ROOT = { country_event = { id = one_v_one_mod.35 days = 1 } }
+		}
+	}
+	if = {
+		limit = { started_in = 1807.1.1 NOT = { started_in = 1807.1.3 } }
+		FROM = {
+			if = {
+				limit = { owned_by = WWN }
+				save_event_target_as = selected_province
+			}
+			ROOT = { country_event = { id = one_v_one_mod.35 days = 1 } }
+		}
+	}
+	FROM = {
+		if = {
+			limit = { owned_by = TFR NOT = { controlled_by = TFR } has_province_modifier = one_v_one_local_defence_modifier }
+			remove_province_modifier = one_v_one_local_defence_modifier
+		}
+	}
+	if = {
+		limit = { TFR = { has_idea = one_v_one_tfr_7 } }
+		FROM = {
+			if = {
+				limit = { owned_by = TFR controlled_by = TFR NOT = { has_province_modifier = one_v_one_local_defence_modifier } has_fort_building_trigger = yes }
+				add_province_modifier = { name = one_v_one_local_defence_modifier duration = -1 }
+			}
+		}
+	}
+	FROM = {
+		if = {
+			limit = { owned_by = TSP NOT = { controlled_by = TSP } has_province_modifier = one_v_one_local_defence_modifier }
+			remove_province_modifier = one_v_one_local_defence_modifier
+		}
+	}
+	if = {
+		limit = { TSP = { has_idea = one_v_one_tsp_2 } }
+		FROM = {
+			if = {
+				limit = { owned_by = TSP controlled_by = TSP NOT = { has_province_modifier = one_v_one_local_defence_modifier } has_fort_building_trigger = yes }
+				add_province_modifier = { name = one_v_one_local_defence_modifier duration = -1 }
+			}
+		}
+	}
+	FROM = {
+		if = {
+			limit = {
+				OR = {
+					AND = { owned_by = REW NOT = { controlled_by = REW } }
+					AND = { owned_by = RWN NOT = { controlled_by = RWN } }
+					AND = { owned_by = RWS NOT = { controlled_by = RWS } }
+					AND = { owned_by = REE NOT = { controlled_by = REE } }
+					AND = { owned_by = REN NOT = { controlled_by = REN } }
+					AND = { owned_by = RES NOT = { controlled_by = RES } }
+				}
+				OR = {
+					has_province_modifier = one_v_one_mission_re_germany_modifier
+					has_province_modifier = one_v_one_mission_re_italy_modifier
+					has_province_modifier = one_v_one_mission_re_africa_modifier
+				}
+			}
+			remove_province_modifier = one_v_one_mission_re_germany_modifier
+			remove_province_modifier = one_v_one_mission_re_italy_modifier
+			remove_province_modifier = one_v_one_mission_re_africa_modifier
+		}
+		if = {
+			limit = { has_province_flag = re_picked_region_1_flag }
+			if = {
+				limit = {
+					OR = {
+						AND = { owned_by = REW controlled_by = REW }
+						AND = { owned_by = RWN controlled_by = RWN }
+						AND = { owned_by = RWS controlled_by = RWS }
+						AND = { owned_by = REE controlled_by = REE }
+						AND = { owned_by = REN controlled_by = REN }
+						AND = { owned_by = RES controlled_by = RES }
+					} 
+					NOT = { has_province_modifier = one_v_one_mission_re_germany_modifier } 
+					has_fort_building_trigger = yes
+				}
+				add_province_modifier = { name = one_v_one_mission_re_germany_modifier duration = -1 }
+			}
+		}
+		if = {
+			limit = { has_province_flag = re_picked_region_2_flag }
+			if = {
+				limit = {
+					OR = {
+						AND = { owned_by = REW controlled_by = REW }
+						AND = { owned_by = RWN controlled_by = RWN }
+						AND = { owned_by = RWS controlled_by = RWS }
+						AND = { owned_by = REE controlled_by = REE }
+						AND = { owned_by = REN controlled_by = REN }
+						AND = { owned_by = RES controlled_by = RES }
+					} 
+					NOT = { has_province_modifier = one_v_one_mission_re_italy_modifier } 
+					has_fort_building_trigger = yes
+				}
+				add_province_modifier = { name = one_v_one_mission_re_italy_modifier duration = -1 }
+			}
+		}
+		if = {
+			limit = { has_province_flag = re_picked_region_3_flag }
+			if = {
+				limit = {
+					OR = {
+						AND = { owned_by = REW controlled_by = REW }
+						AND = { owned_by = RWN controlled_by = RWN }
+						AND = { owned_by = RWS controlled_by = RWS }
+						AND = { owned_by = REE controlled_by = REE }
+						AND = { owned_by = REN controlled_by = REN }
+						AND = { owned_by = RES controlled_by = RES }
+					} 
+					NOT = { has_province_modifier = one_v_one_mission_re_africa_modifier } 
+					has_fort_building_trigger = yes
+				}
+				add_province_modifier = { name = one_v_one_mission_re_africa_modifier duration = -1 }
+			}
+		}
+	}
+	#FROM = {
+	#	if = {
+	#		limit = { owned_by = GSP NOT = { controlled_by = GSP } has_province_modifier = one_v_one_gsp_4_modifier }
+	#		remove_province_modifier = one_v_one_gsp_4_modifier
+	#	}
+	#}
+	#if = {
+	#	limit = { GSP = { has_idea = one_v_one_gsp_4 } }
+	#	FROM = {
+	#		if = {
+	#			limit = { owned_by = GSP controlled_by = GSP NOT = { has_province_modifier = one_v_one_gsp_4_modifier } has_fort_building_trigger = yes }
+	#			add_province_modifier = { name = one_v_one_gsp_4_modifier duration = -1 }
+	#		}
+	#	}
+	#}
+	FROM = {
+		if = {
+			limit = { owned_by = IVF NOT = { controlled_by = IVF } has_province_modifier = one_v_one_mission_s1_1_ivf_bonus_11_modifier }
+			remove_province_modifier = one_v_one_mission_s1_1_ivf_bonus_11_modifier
+		}
+	}
+	if = {
+		limit = { IVF = { mission_completed = one_v_one_mission_s1_1_ivf_bonus_1 } }
+		FROM = {
+			if = {
+				limit = { owned_by = IVF controlled_by = IVF NOT = { has_province_modifier = one_v_one_mission_s1_1_ivf_bonus_11_modifier } }
+				add_province_modifier = { name = one_v_one_mission_s1_1_ivf_bonus_11_modifier duration = -1 }
+			}
+		}
+	}
+	FROM = {
+		if = {
+			limit = { owned_by = GFR NOT = { controlled_by = GFR } has_province_modifier = one_v_one_gfr_prestre_personality_modifier }
+			remove_province_modifier = one_v_one_gfr_prestre_personality_modifier
+		}
+	}
+	if = {
+		limit = { GFR = { ruler_has_personality = one_v_one_gfr_prestre_personality } }
+		FROM = {
+			if = {
+				limit = { owned_by = GFR controlled_by = GFR NOT = { has_province_modifier = one_v_one_gfr_prestre_personality_modifier } has_fort_building_trigger = yes }
+				add_province_modifier = { name = one_v_one_gfr_prestre_personality_modifier duration = -1 }
+			}
+		}
+	}
+}
+
+on_province_religion_converted = {
+	on_province_religion_changed_effect = yes
+	on_province_religion_converted_effect = yes
+	if = {
+		limit = { owner = { has_government_attribute = more_25_tax_in_true_faith_provinces } religion_group = owner NOT = { has_province_modifier = ottoman_siyasah_tax_reform_tax } }
+		add_province_modifier = { name = ottoman_siyasah_tax_reform_tax duration = -1 }
+	}
+	if = {
+		limit = { OR = { NOT = {  owner = { has_government_attribute = more_25_tax_in_true_faith_provinces } } NOT = { religion_group = owner } } has_province_modifier = ottoman_siyasah_tax_reform_tax }
+		remove_province_modifier = ottoman_siyasah_tax_reform_tax
+	}
+	if = {
+		limit = { owner = { has_government_attribute = more_15_manpower_in_heathen_provinces } NOT ={ religion_group = owner } NOT = { has_province_modifier = ottoman_siyasah_tax_reform_manpower } }
+		add_province_modifier = { name = ottoman_siyasah_tax_reform_manpower duration = -1 }
+	}
+	if = {
+		limit = { OR = { NOT = { owner = { has_government_attribute = more_15_manpower_in_heathen_provinces } } religion_group = owner } has_province_modifier = ottoman_siyasah_tax_reform_manpower }
+		remove_province_modifier = ottoman_siyasah_tax_reform_manpower
+	}
+	if = {
+		limit = { has_country_flag = one_v_one_jsp_por_5_decision_flag }
+		add_papal_influence = 5
+	}
+}
+on_streltsy_raised = {
+	owner = { add_manpower = -1 }
+}
+on_monthly_pulse = {
+	#if = {
+	#	limit = { has_country_modifier = slackening_modifier }
+	#	add_yearly_manpower = 0.09
+	#}
+	#if = {
+	#	limit = { has_country_modifier = one_v_one_sailors_slacken_modifier }
+	#	add_yearly_sailors = 0.12
+	#}
+}
+on_slacken_start = {
+	add_country_modifier = {
+		name = slackening_modifier
+		duration = -1
+	}
+	if = {
+		limit = { OR = { ruler_has_personality = one_v_one_wgb_george_personality has_government_attribute = one_v_one_sailors_slacken } }
+		add_country_modifier = { name = one_v_one_sailors_slacken_modifier duration = -1 }
+	}
+}
+on_slacken_stop = {
+	remove_country_modifier = slackening_modifier
+	remove_country_modifier = one_v_one_sailors_slacken_modifier
+}
+on_barrage = {
+	if = {
+		limit = { ROOT = { OR = { has_government_attribute = one_v_one_barrage_bonus has_country_modifier = one_v_one_mission_re_war_3_modifier } } }
+		FROM = { change_siege = 2 }
+	}
+	if = {
+		limit = { ROOT = { has_country_modifier = one_v_one_mission_re_war_2_modifier } }
+		FROM = { change_siege = 1 }
+	}
+	if = {
+		limit = { ROOT = { has_country_modifier = one_v_one_mission_re_war_4_modifier } }
+		FROM = { change_siege = 3 }
+	}
+	if = {
+		limit = {
+			FROM = { owned_by = GFR }
+			ROOT = { ruler_has_personality = one_v_one_gfr_prestre_personality }
+		}
+		FROM = { change_siege = 2 }
+	}
+}
+on_naval_barrage = {
+	if = {
+		limit = { ROOT = { OR = { has_government_attribute = one_v_one_barrage_bonus has_country_modifier = one_v_one_mission_re_war_3_modifier } } }
+		FROM = { change_siege = 2 }
+	}
+	if = {
+		limit = { ROOT = { has_country_modifier = one_v_one_mission_re_war_2_modifier } }
+		FROM = { change_siege = 1 }
+	}
+	if = {
+		limit = { ROOT = { has_country_modifier = one_v_one_mission_re_war_4_modifier } }
+		FROM = { change_siege = 3 }
+	}
+}
+on_scorch_earth  = {
+	if = {
+		limit = { ROOT = { ruler_has_personality = one_v_one_gru_vasily_personality } }
+		FROM = { add_province_modifier = { name = one_v_one_gru_vasily_personality_modifier  duration = 1825} }
+	}
+	if = {
+		limit = { ROOT = { has_country_modifier = one_v_one_mission_re_art_buf_3_modifier } }
+		FROM = { add_province_modifier = { name = one_v_one_mission_re_art_buf_3_scorch  duration = 1825} }
+	}
+}
+on_center_of_trade_upgrade = {
+	if = {
+		limit = { owner = { ruler_has_personality = one_v_one_gea_osman_personality } }
+		if = {
+			limit = { province_has_center_of_trade_of_level = 2 }
+			every_province_in_state = {
+				limit = { owned_by = ROOT }
+				remove_province_modifier = one_v_one_gea_osman_personality_world_port
+			}
+			add_province_modifier = { name = one_v_one_gea_osman_personality_entrepot duration = -1 }
+		}
+		if = {
+			limit = { province_has_center_of_trade_of_level = 3 }
+			remove_province_modifier = one_v_one_gea_osman_personality_entrepot
+			every_province_in_state = {
+				limit = { owned_by = ROOT }
+				add_province_modifier = { name = one_v_one_gea_osman_personality_world_port duration = -1 }
+			}
+		}
+	}
+}
+on_center_of_trade_downgrade = {
+	if = {
+		limit = { owner = { ruler_has_personality = one_v_one_gea_osman_personality } }
+		remove_province_modifier = one_v_one_gea_osman_personality_entrepot
+		every_province_in_state = {
+			limit = { owned_by = ROOT }
+			remove_province_modifier = one_v_one_gea_osman_personality_world_port
+		}
+	}
+}
+on_centralized_state = {
+	if = {
+		limit = {
+			owner = { has_idea = one_v_one_gfr_1 }
+		}
+		area = {
+			limit = { owned_by = ROOT }
+			add_base_tax = 1
+			add_base_production = 1
+			add_base_manpower = 1
+		}
+	}
+}
+on_adm_exploited = {
+	if = {
+		limit = { owner = { ruler_has_personality = one_v_one_gru_vasily_personality } }
+		add_base_tax = 1
+	}
+}
+on_dip_exploited = {
+	if = {
+		limit = { owner = { ruler_has_personality = one_v_one_gru_vasily_personality } }
+		add_base_production = 1
+	}
+}
+on_mil_exploited = {
+	if = {
+		limit = { owner = { ruler_has_personality = one_v_one_gru_vasily_personality } }
+		add_base_manpower = 1
+	}
+}
+on_tech_taken = { #ROOT - Country
+	NFR = { if = { limit = { adm_tech = 32 } add_country_modifier = { name = one_v_one_adm_tech_33_lock duration = -1 } } }
+	NRH = { if = { limit = { adm_tech = 32 } add_country_modifier = { name = one_v_one_adm_tech_33_lock duration = -1 } } }
+	NSP = { if = { limit = { adm_tech = 32 } add_country_modifier = { name = one_v_one_adm_tech_33_lock duration = -1 } } }
+	NIT = { if = { limit = { adm_tech = 32 } add_country_modifier = { name = one_v_one_adm_tech_33_lock duration = -1 } } }
+	NTU = { if = { limit = { adm_tech = 32 } add_country_modifier = { name = one_v_one_adm_tech_33_lock duration = -1 } } }
+	NRU = { if = { limit = { adm_tech = 32 } add_country_modifier = { name = one_v_one_adm_tech_33_lock duration = -1 } } }
+	NPR = { if = { limit = { adm_tech = 32 } add_country_modifier = { name = one_v_one_adm_tech_33_lock duration = -1 } } }
+	NGB = { if = { limit = { adm_tech = 32 } add_country_modifier = { name = one_v_one_adm_tech_33_lock duration = -1 } } }
+	NAU = { if = { limit = { adm_tech = 32 } add_country_modifier = { name = one_v_one_adm_tech_33_lock duration = -1 } } }
+	NSW = { if = { limit = { adm_tech = 32 } add_country_modifier = { name = one_v_one_adm_tech_33_lock duration = -1 } } }
+	NFR = { if = { limit = { dip_tech = 32 } add_country_modifier = { name = one_v_one_dip_tech_33_lock duration = -1 } } }
+	NRH = { if = { limit = { dip_tech = 32 } add_country_modifier = { name = one_v_one_dip_tech_33_lock duration = -1 } } }
+	NSP = { if = { limit = { dip_tech = 32 } add_country_modifier = { name = one_v_one_dip_tech_33_lock duration = -1 } } }
+	NIT = { if = { limit = { dip_tech = 32 } add_country_modifier = { name = one_v_one_dip_tech_33_lock duration = -1 } } }
+	NTU = { if = { limit = { dip_tech = 32 } add_country_modifier = { name = one_v_one_dip_tech_33_lock duration = -1 } } }
+	NRU = { if = { limit = { dip_tech = 32 } add_country_modifier = { name = one_v_one_dip_tech_33_lock duration = -1 } } }
+	NPR = { if = { limit = { dip_tech = 32 } add_country_modifier = { name = one_v_one_dip_tech_33_lock duration = -1 } } }
+	NGB = { if = { limit = { dip_tech = 32 } add_country_modifier = { name = one_v_one_dip_tech_33_lock duration = -1 } } }
+	NAU = { if = { limit = { dip_tech = 32 } add_country_modifier = { name = one_v_one_dip_tech_33_lock duration = -1 } } }
+	NSW = { if = { limit = { dip_tech = 32 } add_country_modifier = { name = one_v_one_dip_tech_33_lock duration = -1 } } }
+	NFR = { if = { limit = { mil_tech = 32 } add_country_modifier = { name = one_v_one_mil_tech_33_lock duration = -1 } } }
+	NRH = { if = { limit = { mil_tech = 32 } add_country_modifier = { name = one_v_one_mil_tech_33_lock duration = -1 } } }
+	NSP = { if = { limit = { mil_tech = 32 } add_country_modifier = { name = one_v_one_mil_tech_33_lock duration = -1 } } }
+	NIT = { if = { limit = { mil_tech = 32 } add_country_modifier = { name = one_v_one_mil_tech_33_lock duration = -1 } } }
+	NTU = { if = { limit = { mil_tech = 32 } add_country_modifier = { name = one_v_one_mil_tech_33_lock duration = -1 } } }
+	NRU = { if = { limit = { mil_tech = 32 } add_country_modifier = { name = one_v_one_mil_tech_33_lock duration = -1 } } }
+	NPR = { if = { limit = { mil_tech = 32 } add_country_modifier = { name = one_v_one_mil_tech_33_lock duration = -1 } } }
+	NGB = { if = { limit = { mil_tech = 32 } add_country_modifier = { name = one_v_one_mil_tech_33_lock duration = -1 } } }
+	NAU = { if = { limit = { mil_tech = 32 } add_country_modifier = { name = one_v_one_mil_tech_33_lock duration = -1 } } }
+	NSW = { if = { limit = { mil_tech = 32 } add_country_modifier = { name = one_v_one_mil_tech_33_lock duration = -1 } } }
+}

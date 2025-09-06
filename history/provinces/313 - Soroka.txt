@@ -1,0 +1,26 @@
+1611.1.1 = {
+owner = TSW
+controller = TSW
+add_core = TSW
+culture = swedish
+religion = protestant
+hre = no
+base_tax = 3
+base_production = 2
+base_manpower = 5
+trade_goods = fur
+capital = "Soroka"
+is_city = yes
+}
+1611.1.2 = {
+owner = ---
+controller = ---
+remove_core = TSW
+culture = no_culture
+religion = noreligion
+trade_goods = unknown
+base_tax = 1
+base_production = 1
+base_manpower = 1
+is_city = no
+}

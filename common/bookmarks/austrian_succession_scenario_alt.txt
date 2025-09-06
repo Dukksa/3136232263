@@ -1,0 +1,1 @@
+bookmark = { name = "austrian_succession_alt" desc = "austrian_succession_alt_desc" date = 1734.1.2 center = 4760 default = yes country = AAU country = AGB country = ANE country = ARU country = AIT country = AHA country = APR country = AFR country = ASP country = ASW country = APL country = ABA }

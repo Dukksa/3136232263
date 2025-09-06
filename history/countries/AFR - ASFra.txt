@@ -1,0 +1,33 @@
+government = monarchy
+add_government_reform = autocracy_reform
+government_rank = 3
+technology_group = western
+religion = catholic
+primary_culture = cosmopolitan_french
+capital = 183
+historical_friend = ASW
+historical_friend = ASP
+historical_friend = APR
+historical_friend = APL
+historical_friend = ABA
+historical_rival = AAU
+historical_rival = AIT
+historical_rival = AGB
+historical_rival = ANE
+historical_rival = ARU
+historical_rival = AHA
+historical_rival = MWG
+historical_rival = TYN
+add_army_professionalism = 0.2
+#add_adm_tech = 1
+#add_dip_tech = 1
+#add_mil_tech = 1
+1701.1.1 = {
+	monarch = { name = "Louis XV" dynasty = "de Bourbon" birth_date = 1701.1.1 death_date = 1761.1.1 adm = 6 dip = 6 mil = 6 }
+	clear_scripted_personalities = yes
+	add_ruler_personality = immortal_personality
+	add_ruler_personality = just_personality
+	add_ruler_personality = kind_hearted_personality
+}
+1734.1.1 = { add_country_modifier = { name = one_v_one_manpower_fl_tfrpl duration = -1 hidden = yes } }
+1734.1.3 = { remove_country_modifier = one_v_one_manpower_fl_tfrpl }

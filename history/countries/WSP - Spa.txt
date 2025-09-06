@@ -1,0 +1,20 @@
+government = monarchy
+add_government_reform = system_of_councils_reform
+technology_group = western
+religion = catholic
+primary_culture = castillian
+capital = 217
+historical_friend = WFR
+historical_rival = WGB
+historical_rival = WAU
+historical_rival = MWG
+add_army_professionalism = 0.4
+1661.1.1 = {
+	monarch = { name = "Felipe V" dynasty = "de Bourbon" birth_date = 1661.1.1 death_date = 1721.1.1 adm = 6 dip = 6 mil = 6 }
+	clear_scripted_personalities = yes
+	add_ruler_personality = immortal_personality
+	add_ruler_personality = just_personality
+	add_ruler_personality = kind_hearted_personality
+}
+1694.1.1 = { add_country_modifier = { name = one_v_one_manpower_fl_wsp duration = -1 hidden = yes } }
+1694.1.3 = { remove_country_modifier = one_v_one_manpower_fl_wsp }

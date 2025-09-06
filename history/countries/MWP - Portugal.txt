@@ -1,0 +1,13 @@
+government = monarchy
+add_government_reform = portuguese_monarchy_reform
+primary_culture = portugese
+religion = catholic
+technology_group = western
+capital = 2741
+1532.1.1 = {
+	monarch = { name = "António I" dynasty = "de Avis" birth_date = 1532.1.1  death_date = 1592.1.1 ADM = 0 DIP = 0 MIL = 0 }
+	clear_scripted_personalities = yes
+	add_ruler_personality = immortal_personality
+	add_ruler_personality = just_personality
+	add_ruler_personality = kind_hearted_personality
+}

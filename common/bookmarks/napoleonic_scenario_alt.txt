@@ -1,0 +1,1 @@
+bookmark = { name = "napoleonic_wars_alt" desc = "napoleonic_wars_alt_desc" date = 1799.1.2 center = 4760 default = yes country = NFR country = NSP country = NRH country = NIT country = NTU country = NRU country = NGB country = NPR country = NAU country = NSW easy_country = NFR easy_country = NRU }

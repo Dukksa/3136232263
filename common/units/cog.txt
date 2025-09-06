@@ -1,0 +1,12 @@
+#Cog
+type = transport
+
+hull_size = 1
+base_cannons = 0
+blockade = 1
+
+sail_speed = 6
+
+sailors = 50
+
+sprite_level = 1

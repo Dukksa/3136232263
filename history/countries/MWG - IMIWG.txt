@@ -1,0 +1,9 @@
+government = monarchy
+add_government_reform = autocracy_reform
+technology_group = polynesian_tech
+historical_rival = WWN
+1444.11.11 = {
+	monarch = { birth_date = 1444.11.11 death_date = 1821.1.1 claim = 95 adm = 0 dip = 0 mil = 0 }
+	clear_scripted_personalities = yes
+	add_ruler_personality = immortal_personality
+}

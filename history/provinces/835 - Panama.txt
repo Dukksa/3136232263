@@ -1,0 +1,16 @@
+1749.1.1 = {
+owner = MWG
+controller = MWG
+add_core = MWG
+capital = "Panama"
+trade_goods = unknown
+hre = no
+base_tax = 1
+base_production = 1
+base_manpower = 1
+}
+1749.1.3 = {
+owner = ---
+controller = ---
+remove_core = MWG
+}

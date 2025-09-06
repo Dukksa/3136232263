@@ -1,0 +1,1 @@
+bookmark = { name = "great_war_alt" desc = "great_war_alt_desc" date = 1807.1.2 center = 4760 default = yes country = WWG country = WWA country = WWO country = WWF country = WWB country = WWR country = WWI easy_country = WWG }

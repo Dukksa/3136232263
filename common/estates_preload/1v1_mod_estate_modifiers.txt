@@ -1,0 +1,205 @@
+estate_special = {
+	modifier_definition = {
+		#type = privileges # makes it %
+		key = one_v_one_dev_adm_modifier
+		trigger = { always = yes }
+	}
+	modifier_definition = {
+		key = one_v_one_dev_dip_modifier
+		trigger = { always = yes }
+	}
+	modifier_definition = {
+		key = one_v_one_dev_mil_modifier
+		trigger = { always = yes }
+	}
+	modifier_definition = {
+		type = privileges # makes it non-%
+		key = one_v_one_centralize_state_all_dev_modifier
+		trigger = { always = yes }
+	}
+	modifier_definition = {
+		key = one_v_one_samurai_discipline
+		trigger = { always = yes }
+	}
+	modifier_definition = {
+		type = privileges
+		key = one_v_one_wau_joseph_personality_build_modifier_tt
+		trigger = { always = yes }
+	}
+	modifier_definition = {
+		key = one_v_one_wgb_7_modifier
+		trigger = { always = yes }
+	}
+	modifier_definition = {
+		type = privileges
+		key = one_v_one_wfr_neufville_personality_modifier
+		trigger = { always = yes }
+	}
+	modifier_definition = {
+		type = privileges
+		key = one_v_one_wfr_villars_personality_build_modifier_tt
+		trigger = { always = yes }
+	}
+	modifier_definition = {
+		key = one_v_one_wsp_francisco_personality_modifier
+		trigger = { always = yes }
+	}
+	modifier_definition = {
+		key = one_v_one_wau_joseph_personality_modifier
+		trigger = { always = yes }
+	}
+	modifier_definition = {
+		key = one_v_one_wau_john_personality_modifier
+		trigger = { always = yes }
+	}
+	modifier_definition = {
+		#type = privileges # makes it %
+		key = one_v_one_wgb_george_personality_modifier
+		trigger = { always = yes }
+	}
+	modifier_definition = {
+		key = one_v_one_wgb_george_personality_modifier_slacken
+		trigger = { always = yes }
+	}
+	modifier_definition = {
+		type = privileges
+		key = one_v_one_wgb_george_personality_sailors_modifier_tt
+		trigger = { always = yes }
+	}
+	modifier_definition = {
+		type = privileges
+		key = one_v_one_dev_from_manu
+		trigger = { always = yes }
+	}
+	modifier_definition = {
+		type = privileges
+		key = one_v_one_nrh_manpower_building_modifier
+		trigger = { always = yes }
+	}
+	modifier_definition = {
+		type = privileges
+		key = one_v_one_fl_building_modifier
+		trigger = { always = yes }
+	}
+	modifier_definition = {
+		key = one_v_one_sailors_building_modifier
+		trigger = { always = yes }
+	}
+	modifier_definition = {
+		type = privileges
+		key = one_v_one_navy_building_modifier
+		trigger = { always = yes }
+	}
+	modifier_definition = {
+		key = one_v_one_sailors_building_s_modifier
+		trigger = { always = yes }
+	}
+	modifier_definition = {
+		type = privileges
+		key = one_v_one_navy_building_s_modifier
+		trigger = { always = yes }
+	}
+	modifier_definition = {
+		key = one_v_one_local_defence_loc_modifier
+		trigger = { always = yes }
+	}
+	modifier_definition = {
+		type = privileges
+		key = one_v_one_local_dice_roll_loc_modifier
+		trigger = { always = yes }
+	}
+	modifier_definition = {
+		key = one_v_one_merc_power_modifier # inf/cav/art combat ability
+		trigger = { always = yes }
+	}
+	modifier_definition = {
+		key = one_v_one_merc_morale_shock_fire_dmg_modifier
+		trigger = { always = yes }
+	}
+	modifier_definition = {
+		type = privileges
+		key = one_v_one_git_5_modifier
+		trigger = { always = yes }
+	}
+	modifier_definition = {
+		key = one_v_one_marines_disc
+		trigger = { always = yes }
+	}
+	modifier_definition = {
+		key = one_v_one_geb_3_loc_modifier
+		trigger = { always = yes }
+	}
+	modifier_definition = {
+		key = one_v_one_gto_mehmed_personality_modifier_tt
+		trigger = { always = yes }
+	}
+	modifier_definition = {
+		type = privileges
+		key = one_v_one_gec_murad_personality_modifier_tt
+		trigger = { always = yes }
+	}
+	modifier_definition = {
+		type = privileges
+		key = one_v_one_gec_haci_personality_tt
+		trigger = { always = yes }
+	}
+	modifier_definition = {
+		key = one_v_one_geb_emeric_personality_modifier_tt
+		trigger = { always = yes }
+	}
+	modifier_definition = {
+		key = one_v_one_gea_osman_personality_modifier_tt
+		trigger = { always = yes }
+	}
+	modifier_definition = {
+		type = privileges
+		key = one_v_one_gea_mezzo_personality_modifier_tt
+		trigger = { always = yes }
+	}
+	modifier_definition = {
+		key = one_v_one_gea_damat_personality_modifier_tt
+		trigger = { always = yes }
+	}
+	modifier_definition = {
+		key = one_v_one_gfr_louisxiv_personality_modifier_tt
+		trigger = { always = yes }
+	}
+	modifier_definition = {
+		key = one_v_one_gfr_prestre_personality_modifier_tt
+		trigger = { always = yes }
+	}
+	modifier_definition = {
+		key = one_v_one_git_morosini_personality_modifier_tt
+		trigger = { always = yes }
+	}
+	modifier_definition = {
+		key = one_v_one_git_corner_personality_modifier_tt
+		trigger = { always = yes }
+	}
+	modifier_definition = {
+		key = one_v_one_git_mitrovic_personality_modifier_tt
+		trigger = { always = yes }
+	}
+	modifier_definition = {
+		key = one_v_one_gsp_4_modifier_tt
+		trigger = { always = yes }
+	}
+	modifier_definition = {
+		type = privileges
+		key = one_v_one_gsp_francisco_personality_modifier_tt
+		trigger = { always = yes }
+	}
+	modifier_definition = {
+		key = one_v_one_gsp_juan_personality_modifier_tt
+		trigger = { always = yes }
+	}
+	modifier_definition = {
+		key = one_v_one_gru_vasily_personality_modifier_tt
+		trigger = { always = yes }
+	}
+	modifier_definition = {
+		type = privileges
+		key = hussars_cavalry_shock_modifier
+		trigger = { always = yes }
+	}
+}

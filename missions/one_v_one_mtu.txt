@@ -1,0 +1,758 @@
+one_v_one_mission_s2_1_mtu = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		NOT = { map_setup = map_setup_random }
+		OR = { tag = MTU tag = MTB tag = MTL tag = MTO tag = MTS }
+	}
+	has_country_shield = yes
+
+	one_v_one_mission_s2_nation_select_1_mtu = {
+		icon = one_v_one_mission_flag_mtb
+		required_missions = { }
+		trigger = {
+			if = {
+				limit = { OR = { has_country_flag = mtu_chose_nation_mtb_flag has_country_flag = mtu_chose_nation_mtl_flag has_country_flag = mtu_chose_nation_mto_flag has_country_flag = mtu_chose_nation_mts_flag } }
+				custom_trigger_tooltip = {
+					tooltip = one_v_one_already_chose_nation_flag_tt
+					always = no
+				}
+			}
+			else = { OR = { tag = MTU tag = MTB } }
+			custom_trigger_tooltip = {
+				tooltip = one_v_one_nation_choosing_flag_tt
+				has_global_flag = mtu_nation_choosing_flag
+				has_global_flag = mmm_nation_choosing_flag 
+			}
+			if = {
+				limit = { has_global_flag = mmm_ban_mtb_flag }
+				custom_trigger_tooltip = {
+					tooltip = one_v_one_nation_banned_flag_tt
+					always = no
+				}
+			}
+		}
+		effect = {
+			set_country_flag = mtu_chose_nation_mtb_flag
+			set_global_flag = mtu_chose_nation_flag
+			custom_tooltip = one_v_one_chose_nation_flag_tt
+			tooltip = { one_v_one_mtu_mission_select_mtb_tag = yes }
+			hidden_effect = {
+				if = {
+					limit = { has_global_flag = mmm_chose_nation_flag }
+					one_v_one_mtu_mission_select_mtb_tag = yes
+					MMM = {
+						if = {
+							limit = { has_country_flag = mmm_chose_nation_mmn_flag }
+							one_v_one_mmm_mission_select_mmn_tag = yes
+						}
+						if = {
+							limit = { has_country_flag = mmm_chose_nation_mme_flag }
+							one_v_one_mmm_mission_select_mme_tag = yes
+						}
+						if = {
+							limit = { has_country_flag = mmm_chose_nation_mmr_flag }
+							one_v_one_mmm_mission_select_mmr_tag = yes
+						}
+						if = {
+							limit = { has_country_flag = mmm_chose_nation_mmj_flag }
+							one_v_one_mmm_mission_select_mmj_tag = yes
+						}
+					}
+				}
+			}
+		}
+	}
+}
+one_v_one_mission_s2_2_mtu = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		NOT = { map_setup = map_setup_random }
+		OR = { tag = MTU tag = MTB tag = MTL tag = MTO tag = MTS }
+	}
+	has_country_shield = yes
+
+	one_v_one_mission_s2_nation_select_2_mtu = {
+		icon = one_v_one_mission_flag_mtl
+		required_missions = { }
+		trigger = {
+			if = {
+				limit = { OR = { has_country_flag = mtu_chose_nation_mtb_flag has_country_flag = mtu_chose_nation_mtl_flag has_country_flag = mtu_chose_nation_mto_flag has_country_flag = mtu_chose_nation_mts_flag } }
+				custom_trigger_tooltip = {
+					tooltip = one_v_one_already_chose_nation_flag_tt
+					always = no
+				}
+			}
+			else = { OR = { tag = MTU tag = MTL } }
+			custom_trigger_tooltip = {
+				tooltip = one_v_one_nation_choosing_flag_tt
+				has_global_flag = mtu_nation_choosing_flag
+				has_global_flag = mmm_nation_choosing_flag 
+			}
+			if = {
+				limit = { has_global_flag = mmm_ban_mtl_flag }
+				custom_trigger_tooltip = {
+					tooltip = one_v_one_nation_banned_flag_tt
+					always = no
+				}
+			}
+		}
+		effect = {
+			set_country_flag = mtu_chose_nation_mtl_flag
+			set_global_flag = mtu_chose_nation_flag
+			custom_tooltip = one_v_one_chose_nation_flag_tt
+			tooltip = { one_v_one_mtu_mission_select_mtl_tag = yes }
+			hidden_effect = {
+				if = {
+					limit = { has_global_flag = mmm_chose_nation_flag }
+					one_v_one_mtu_mission_select_mtl_tag = yes
+					MMM = {
+						if = {
+							limit = { has_country_flag = mmm_chose_nation_mmn_flag }
+							one_v_one_mmm_mission_select_mmn_tag = yes
+						}
+						if = {
+							limit = { has_country_flag = mmm_chose_nation_mme_flag }
+							one_v_one_mmm_mission_select_mme_tag = yes
+						}
+						if = {
+							limit = { has_country_flag = mmm_chose_nation_mmr_flag }
+							one_v_one_mmm_mission_select_mmr_tag = yes
+						}
+						if = {
+							limit = { has_country_flag = mmm_chose_nation_mmj_flag }
+							one_v_one_mmm_mission_select_mmj_tag = yes
+						}
+					}
+				}
+			}
+		}
+	}
+}
+one_v_one_mission_s2_3_mtu = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		NOT = { map_setup = map_setup_random }
+		tag = MTU
+	}
+	has_country_shield = yes
+
+	one_v_one_mission_s2_construct_mtu = {
+		icon = mission_colonial
+		required_missions = { one_v_one_mission_s2_nation_select_1_mtu one_v_one_mission_s2_nation_select_2_mtu one_v_one_mission_s2_nation_select_3_mtu one_v_one_mission_s2_nation_select_4_mtu }
+		position = 2
+		trigger = {
+		}
+		effect = {
+			add_country_modifier = { name = one_v_one_mission_construct_modifier duration = 3650 }
+			add_country_modifier = { name = one_v_one_mission_construct_idea_cost_modifier duration = 1 }
+		}
+	}
+}
+one_v_one_mission_s2_4_mtu = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		NOT = { map_setup = map_setup_random }
+		OR = { tag = MTU tag = MTB tag = MTL tag = MTO tag = MTS }
+	}
+	has_country_shield = yes
+
+	one_v_one_mission_s2_nation_select_3_mtu = {
+		icon = one_v_one_mission_flag_mto
+		required_missions = { }
+		trigger = {
+			if = {
+				limit = { OR = { has_country_flag = mtu_chose_nation_mtb_flag has_country_flag = mtu_chose_nation_mtl_flag has_country_flag = mtu_chose_nation_mto_flag has_country_flag = mtu_chose_nation_mts_flag } }
+				custom_trigger_tooltip = {
+					tooltip = one_v_one_already_chose_nation_flag_tt
+					always = no
+				}
+			}
+			else = { OR = { tag = MTU tag = MTO } }
+			custom_trigger_tooltip = {
+				tooltip = one_v_one_nation_choosing_flag_tt
+				has_global_flag = mtu_nation_choosing_flag
+				has_global_flag = mmm_nation_choosing_flag 
+			}
+			if = {
+				limit = { has_global_flag = mmm_ban_mto_flag }
+				custom_trigger_tooltip = {
+					tooltip = one_v_one_nation_banned_flag_tt
+					always = no
+				}
+			}
+		}
+		effect = {
+			set_country_flag = mtu_chose_nation_mto_flag
+			set_global_flag = mtu_chose_nation_flag
+			custom_tooltip = one_v_one_chose_nation_flag_tt
+			tooltip = { one_v_one_mtu_mission_select_mto_tag = yes }
+			hidden_effect = {
+				if = {
+					limit = { has_global_flag = mmm_chose_nation_flag }
+					one_v_one_mtu_mission_select_mto_tag = yes
+					MMM = {
+						if = {
+							limit = { has_country_flag = mmm_chose_nation_mmn_flag }
+							one_v_one_mmm_mission_select_mmn_tag = yes
+						}
+						if = {
+							limit = { has_country_flag = mmm_chose_nation_mme_flag }
+							one_v_one_mmm_mission_select_mme_tag = yes
+						}
+						if = {
+							limit = { has_country_flag = mmm_chose_nation_mmr_flag }
+							one_v_one_mmm_mission_select_mmr_tag = yes
+						}
+						if = {
+							limit = { has_country_flag = mmm_chose_nation_mmj_flag }
+							one_v_one_mmm_mission_select_mmj_tag = yes
+						}
+					}
+				}
+			}
+		}
+		ai_weight = {
+			factor = 0
+		}
+	}
+}
+one_v_one_mission_s2_5_mtu = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		NOT = { map_setup = map_setup_random }
+		OR = { tag = MTU tag = MTB tag = MTL tag = MTO tag = MTS }
+	}
+	has_country_shield = yes
+
+	one_v_one_mission_s2_nation_select_4_mtu = {
+		icon = one_v_one_mission_flag_mts
+		required_missions = { }
+		trigger = {
+			if = {
+				limit = { OR = { has_country_flag = mtu_chose_nation_mtb_flag has_country_flag = mtu_chose_nation_mtl_flag has_country_flag = mtu_chose_nation_mto_flag has_country_flag = mtu_chose_nation_mts_flag } }
+				custom_trigger_tooltip = {
+					tooltip = one_v_one_already_chose_nation_flag_tt
+					always = no
+				}
+			}
+			else = { OR = { tag = MTU tag = MTS } }
+			custom_trigger_tooltip = {
+				tooltip = one_v_one_nation_choosing_flag_tt
+				has_global_flag = mtu_nation_choosing_flag
+				has_global_flag = mmm_nation_choosing_flag 
+			}
+			if = {
+				limit = { has_global_flag = mmm_ban_mts_flag }
+				custom_trigger_tooltip = {
+					tooltip = one_v_one_nation_banned_flag_tt
+					always = no
+				}
+			}
+		}
+		effect = {
+			set_country_flag = mtu_chose_nation_mts_flag
+			set_global_flag = mtu_chose_nation_flag
+			custom_tooltip = one_v_one_chose_nation_flag_tt
+			tooltip = { one_v_one_mtu_mission_select_mts_tag = yes }
+			hidden_effect = {
+				if = {
+					limit = { has_global_flag = mmm_chose_nation_flag }
+					one_v_one_mtu_mission_select_mts_tag = yes
+					MMM = {
+						if = {
+							limit = { has_country_flag = mmm_chose_nation_mmn_flag }
+							one_v_one_mmm_mission_select_mmn_tag = yes
+						}
+						if = {
+							limit = { has_country_flag = mmm_chose_nation_mme_flag }
+							one_v_one_mmm_mission_select_mme_tag = yes
+						}
+						if = {
+							limit = { has_country_flag = mmm_chose_nation_mmr_flag }
+							one_v_one_mmm_mission_select_mmr_tag = yes
+						}
+						if = {
+							limit = { has_country_flag = mmm_chose_nation_mmj_flag }
+							one_v_one_mmm_mission_select_mmj_tag = yes
+						}
+					}
+				}
+			}
+		}
+	}
+}
+##
+one_v_one_mission_s2_3_mtb = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		NOT = { map_setup = map_setup_random }
+		tag = MTB
+	}
+	has_country_shield = yes
+
+	one_v_one_mission_s2_construct_mtb = {
+		icon = mission_colonial
+		required_missions = { one_v_one_mission_s2_nation_select_1_mtu }
+		position = 2
+		trigger = {
+		}
+		effect = {
+			add_country_modifier = { name = one_v_one_mission_construct_modifier duration = 3650 }
+			add_country_modifier = { name = one_v_one_mission_construct_idea_cost_modifier duration = 1 }
+		}
+	}
+}
+one_v_one_mission_s2_3_mtl = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		NOT = { map_setup = map_setup_random }
+		tag = MTL
+	}
+	has_country_shield = yes
+
+	one_v_one_mission_s2_construct_mtl = {
+		icon = mission_colonial
+		required_missions = { one_v_one_mission_s2_nation_select_2_mtu }
+		position = 2
+		trigger = {
+		}
+		effect = {
+			add_country_modifier = { name = one_v_one_mission_construct_modifier duration = 3650 }
+			add_country_modifier = { name = one_v_one_mission_construct_idea_cost_modifier duration = 1 }
+		}
+	}
+}
+one_v_one_mission_s2_3_mto = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		NOT = { map_setup = map_setup_random }
+		tag = MTO
+	}
+	has_country_shield = yes
+
+	one_v_one_mission_s2_construct_mto = {
+		icon = mission_colonial
+		required_missions = { one_v_one_mission_s2_nation_select_3_mtu }
+		position = 2
+		trigger = {
+		}
+		effect = {
+			add_country_modifier = { name = one_v_one_mission_construct_modifier duration = 3650 }
+			add_country_modifier = { name = one_v_one_mission_construct_idea_cost_modifier duration = 1 }
+		}
+	}
+}
+one_v_one_mission_s2_3_mts = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		NOT = { map_setup = map_setup_random }
+		tag = MTS
+	}
+	has_country_shield = yes
+
+	one_v_one_mission_s2_construct_mts = {
+		icon = mission_colonial
+		required_missions = { one_v_one_mission_s2_nation_select_4_mtu }
+		position = 2
+		trigger = {
+		}
+		effect = {
+			add_country_modifier = { name = one_v_one_mission_construct_modifier duration = 3650 }
+			add_country_modifier = { name = one_v_one_mission_construct_idea_cost_modifier duration = 1 }
+		}
+	}
+}
+##################
+# Mission bonuses:
+one_v_one_mission_s1_1_mtb_bonus = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		NOT = { map_setup = map_setup_random }
+		tag = MTB
+	}
+	has_country_shield = yes
+
+	one_v_one_mission_s1_1_mtb_bonus_1 = {
+		icon = byz_avenge_1071
+		required_missions = { one_v_one_mission_s2_construct_mtb }
+		position = 3
+		provinces_to_highlight = {
+			OR = {
+				area = aleppo_area
+				area = dulkadir_area
+			}
+			NOT = { controlled_by = ROOT }
+		}
+		trigger = {
+			aleppo_area = { type = all controlled_by = ROOT }
+			dulkadir_area = { type = all controlled_by = ROOT }
+		}
+		effect = {
+			add_country_modifier = { name = one_v_one_mission_s1_1_mtb_bonus_1_modifier duration = 1095 }
+		}
+	}
+}
+one_v_one_mission_s1_3_mtb_bonus = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		NOT = { map_setup = map_setup_random }
+		tag = MTB
+	}
+	has_country_shield = yes
+
+	one_v_one_mission_s1_3_mtb_bonus_2 = {
+		icon = arm_etchmiadzin_cathedral
+		required_missions = { one_v_one_mission_s2_construct_mtb }
+		position = 3
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 20
+				has_tax_building_trigger = yes
+			}
+		}
+		effect = {
+			add_country_modifier = { name = one_v_one_mission_s1_3_mtb_bonus_2_modifier duration = -1 }
+		}
+	}
+}
+one_v_one_mission_s1_5_mtb_bonus = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		NOT = { map_setup = map_setup_random }
+		tag = MTB
+	}
+	has_country_shield = yes
+
+	one_v_one_mission_s1_5_mtb_bonus_3 = {
+		icon = mission_pf_soldier
+		required_missions = { one_v_one_mission_s2_construct_mtb }
+		position = 3
+		trigger = {
+			army_professionalism = 0.3
+		}
+		effect = {
+			add_army_professionalism = 0.1
+			add_country_modifier = { name = one_v_one_mission_s1_5_mtb_bonus_3_modifier duration = 1825 }
+		}
+	}
+}
+##
+one_v_one_mission_s1_1_mtl_bonus = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		NOT = { map_setup = map_setup_random }
+		tag = MTL
+	}
+	has_country_shield = yes
+
+	one_v_one_mission_s1_1_mtl_bonus_1 = {
+		icon = sway_the_pope
+		required_missions = { one_v_one_mission_s2_construct_mtl }
+		position = 3
+		trigger = {
+			papal_influence = 125
+		}
+		effect = {
+			add_country_modifier = { name = one_v_one_mission_s1_1_mtl_bonus_1_modifier duration = 2555 }
+		}
+	}
+}
+one_v_one_mission_s1_3_mtl_bonus = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		NOT = { map_setup = map_setup_random }
+		tag = MTL
+	}
+	has_country_shield = yes
+
+	one_v_one_mission_s1_3_mtl_bonus_2 = {
+		icon = mission_pf_map_table
+		required_missions = { one_v_one_mission_s2_construct_mtl }
+		position = 3
+		provinces_to_highlight = {
+			OR = {
+				province_id = 163
+				province_id = 320
+				province_id = 321
+			}
+			NOT = { controlled_by = ROOT }
+		}
+		trigger = {
+			163 = { controlled_by = ROOT }
+			320 = { controlled_by = ROOT }
+			321 = { controlled_by = ROOT }
+		}
+		effect = {
+			add_country_modifier = { name = one_v_one_mission_s1_3_mtl_bonus_2_modifier duration = 1825 }
+		}
+	}
+}
+one_v_one_mission_s1_5_mtl_bonus = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		NOT = { map_setup = map_setup_random }
+		tag = MTL
+	}
+	has_country_shield = yes
+
+	one_v_one_mission_s1_5_mtl_bonus_3 = {
+		icon = byz_greek_fire
+		required_missions = { one_v_one_mission_s2_construct_mtl }
+		position = 3
+		provinces_to_highlight = {
+			province_id = 151
+			NOT = { province_has_center_of_trade_of_level = 3 }
+		}
+		trigger = {
+			151 = { province_has_center_of_trade_of_level = 3 }
+			num_of_light_ship = 25
+		}
+		effect = {
+			add_country_modifier = { name = one_v_one_mission_s1_5_mtl_bonus_3_modifier duration = -1 }
+		}
+	}
+}
+##
+one_v_one_mission_s1_1_mto_bonus = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		NOT = { map_setup = map_setup_random }
+		tag = MTO
+	}
+	has_country_shield = yes
+
+	one_v_one_mission_s1_1_mto_bonus_1 = {
+		icon = mission_book_of_royal_degrees
+		required_missions = { one_v_one_mission_s2_construct_mto }
+		position = 3
+		provinces_to_highlight = {
+			OR = {
+				trade_goods = grain
+				trade_goods = livestock
+				trade_goods = wine
+			}
+			owned_by = ROOT
+			NOT = { has_building = farm_estate }
+		}
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 10
+				OR = {
+					trade_goods = grain
+					trade_goods = livestock
+					trade_goods = wine
+				}
+				has_building = farm_estate
+			}
+			num_of_owned_provinces_with = {
+				value = 10
+				has_production_building_trigger = yes
+			}
+		}
+		effect = {
+			custom_tooltip = one_v_one_mission_s1_1_mto_bonus_1_tt
+			hidden_effect = {
+				every_owned_province = {
+					limit = { has_building = farm_estate }
+					add_province_modifier = { name = one_v_one_mission_s1_1_mto_bonus_1_modifier duration = -1 }
+				}
+			}
+		}
+	}
+}
+one_v_one_mission_s1_3_mto_bonus = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		NOT = { map_setup = map_setup_random }
+		tag = MTO
+	}
+	has_country_shield = yes
+
+	one_v_one_mission_s1_3_mto_bonus_2 = {
+		icon = mission_guns_of_urban
+		required_missions = { one_v_one_mission_s2_construct_mto }
+		position = 3
+		provinces_to_highlight = {
+			area = aleppo_area
+			NOT = { controlled_by = ROOT }
+		}
+		trigger = {
+			aleppo_area = { type = all controlled_by = ROOT }
+			num_of_janissaries = 30
+			num_of_artillery = 30
+		}
+		effect = {
+			add_country_modifier = { name = one_v_one_mission_s1_3_mto_bonus_2_modifier duration = 1825 }
+		}
+	}
+}
+one_v_one_mission_s1_5_mto_bonus = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		NOT = { map_setup = map_setup_random }
+		tag = MTO
+	}
+	has_country_shield = yes
+
+	one_v_one_mission_s1_5_mto_bonus_3 = {
+		icon = mission_dominate_gujarati_trade
+		required_missions = { one_v_one_mission_s2_construct_mto }
+		position = 3
+		provinces_to_highlight = {
+			OR = {
+				area = morea_area
+				area = cukurova_area
+			}
+			NOT = { controlled_by = ROOT }
+		}
+		trigger = {
+			morea_area = { type = all controlled_by = ROOT }
+			cukurova_area = { type = all controlled_by = ROOT }
+			num_of_owned_provinces_with = {
+				value = 10
+				has_shipyard_building_trigger = yes
+			}
+			num_of_owned_provinces_with = {
+				value = 10
+				has_dock_building_trigger = yes
+			}
+		}
+		effect = {
+			add_country_modifier = { name = one_v_one_mission_s1_5_mto_bonus_3_modifier duration = -1 }
+		}
+	}
+}
+##
+one_v_one_mission_s1_1_mts_bonus = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		NOT = { map_setup = map_setup_random }
+		tag = MTS
+	}
+	has_country_shield = yes
+
+	one_v_one_mission_s1_1_mts_bonus_1 = {
+		icon = mission_war_chest
+		required_missions = { one_v_one_mission_s2_construct_mts }
+		position = 3
+		provinces_to_highlight = {
+			province_id = 151
+			NOT = { development = 30 }
+		}
+		trigger = {
+			151 = { development = 30 }
+			num_of_owned_provinces_with = {
+				value = 15
+				has_tax_building_trigger = yes
+			}
+			num_of_owned_provinces_with = {
+				value = 15
+				has_production_building_trigger = yes
+			}
+		}
+		effect = {
+			add_country_modifier = { name = one_v_one_mission_s1_1_mts_bonus_1_modifier duration = -1 }
+		}
+	}
+}
+one_v_one_mission_s1_3_mts_bonus = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		NOT = { map_setup = map_setup_random }
+		tag = MTS
+	}
+	has_country_shield = yes
+
+	one_v_one_mission_s1_3_mts_bonus_2 = {
+		icon = per_the_seljuk_successors
+		required_missions = { one_v_one_mission_s2_construct_mts }
+		position = 3
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 15
+				has_manpower_building_trigger = yes
+			}
+			num_of_owned_provinces_with = {
+				value = 15
+				has_forcelimit_building_trigger = yes
+			}
+			num_of_regiments_at_full_drill = 100
+			cavalry_fraction = 0.6
+		}
+		effect = {
+			add_country_modifier = { name = one_v_one_mission_s1_3_mts_bonus_2_modifier duration = -1 }
+		}
+	}
+}
+one_v_one_mission_s1_5_mts_bonus = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		NOT = { map_setup = map_setup_random }
+		tag = MTS
+	}
+	has_country_shield = yes
+
+	one_v_one_mission_s1_5_mts_bonus_3 = {
+		icon = mission_naval_dominance
+		required_missions = { one_v_one_mission_s2_construct_mts }
+		position = 3
+		trigger = {
+			OR = {
+				navy_size = 80
+				AND = {
+					galley_fraction = 0.8
+					navy_size = 40
+				}
+				num_of_owned_provinces_with = {
+					value = 20
+					has_shipyard_building_trigger = yes
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = { name = one_v_one_mission_s1_5_mts_bonus_3_modifier duration = -1 }
+		}
+	}
+}

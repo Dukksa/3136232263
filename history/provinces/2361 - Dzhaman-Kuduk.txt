@@ -1,0 +1,26 @@
+1733.1.1 = {
+owner = NBU
+controller = NBU
+add_core = NBU
+culture = uzbehk
+religion = sunni
+capital = "Dzhaman-Kuduk"
+trade_goods = grain
+hre = no
+base_tax = 3
+base_production = 2
+base_manpower = 5
+is_city = yes
+}
+1733.1.3 = {
+owner = ---
+controller = ---
+remove_core = NBU
+culture = no_culture
+religion = noreligion
+trade_goods = unknown
+base_tax = 1
+base_production = 1
+base_manpower = 1
+is_city = no
+}

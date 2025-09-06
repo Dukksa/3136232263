@@ -1,0 +1,18 @@
+government = monarchy
+add_government_reform = autocracy_reform
+technology_group = indian
+religion = sunni
+primary_culture = kanauji
+capital = 507
+historical_rival = IDC
+historical_rival = MWG
+add_army_professionalism = 0.4
+1550.1.1 = {
+	monarch = { name = "Akbar I" dynasty = "Timurid" birth_date = 1550.1.1 death_date = 1610.1.1 ADM = 6 DIP = 6 MIL = 6 }
+	clear_scripted_personalities = yes
+	add_ruler_personality = immortal_personality
+	add_ruler_personality = just_personality
+	add_ruler_personality = kind_hearted_personality
+}
+1583.1.1 = { add_country_modifier = { name = one_v_one_manpower_fl_imu duration = -1 hidden = yes } }
+1583.1.3 = { remove_country_modifier = one_v_one_manpower_fl_imu }

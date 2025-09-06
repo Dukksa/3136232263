@@ -1,0 +1,712 @@
+# Thirty Years War:
+alliance = {
+	first = TCG
+	second = TSP
+	start_date = 1609.1.1
+	end_date = 1635.1.1
+}
+alliance = {
+	first = TCG
+	second = TIT
+	start_date = 1609.1.1
+	end_date = 1611.1.2
+}
+alliance = {
+	first = TCG
+	second = TAS
+	start_date = 1609.1.1
+	end_date = 1635.1.1
+}
+alliance = {
+	first = TCG
+	second = TPL
+	start_date = 1609.1.1
+	end_date = 1635.1.1
+}
+alliance = {
+	first = TPL
+	second = TSP
+	start_date = 1609.1.1
+	end_date = 1635.1.1
+}
+alliance = {
+	first = TPL
+	second = TIT
+	start_date = 1609.1.1
+	end_date = 1611.1.2
+}
+alliance = {
+	first = TPL
+	second = TAS
+	start_date = 1609.1.1
+	end_date = 1635.1.1
+}
+alliance = {
+	first = TAS
+	second = TSP
+	start_date = 1609.1.1
+	end_date = 1635.1.1
+}
+alliance = {
+	first = TAS
+	second = TIT
+	start_date = 1609.1.1
+	end_date = 1611.1.2
+}
+alliance = {
+	first = TSP
+	second = TIT
+	start_date = 1609.1.1
+	end_date = 1611.1.2
+}
+#
+alliance = {
+	first = TPG
+	second = TFR
+	start_date = 1609.1.1
+	end_date = 1635.1.1
+}
+alliance = {
+	first = TPG
+	second = TGB
+	start_date = 1609.1.1
+	end_date = 1635.1.1
+}
+alliance = {
+	first = TPG
+	second = TSW
+	start_date = 1609.1.1
+	end_date = 1635.1.1
+}
+alliance = {
+	first = TPG
+	second = TDN
+	start_date = 1609.1.1
+	end_date = 1611.1.2
+}
+alliance = {
+	first = TFR
+	second = TGB
+	start_date = 1609.1.1
+	end_date = 1635.1.1
+}
+alliance = {
+	first = TFR
+	second = TSW
+	start_date = 1609.1.1
+	end_date = 1635.1.1
+}
+alliance = {
+	first = TFR
+	second = TDN
+	start_date = 1609.1.1
+	end_date = 1611.1.2
+}
+alliance = {
+	first = TSW
+	second = TGB
+	start_date = 1609.1.1
+	end_date = 1635.1.1
+}
+alliance = {
+	first = TSW
+	second = TDN
+	start_date = 1609.1.1
+	end_date = 1611.1.2
+}
+alliance = {
+	first = TGB
+	second = TDN
+	start_date = 1609.1.1
+	end_date = 1611.1.2
+}
+# Great Turkish War:
+alliance = {
+	first = GTO
+	second = GEC
+	start_date = 1676.1.1
+	end_date = 1676.1.3
+}
+alliance = {
+	first = GTO
+	second = GEB
+	start_date = 1676.1.1
+	end_date = 1676.1.3
+}
+alliance = {
+	first = GTO
+	second = GEA
+	start_date = 1676.1.1
+	end_date = 1676.1.3
+}
+alliance = {
+	first = GTO
+	second = GFR
+	start_date = 1676.1.1
+	end_date = 1676.1.3
+}
+alliance = {
+	first = GEC
+	second = GEB
+	start_date = 1676.1.1
+	end_date = 1676.1.3
+}
+alliance = {
+	first = GEC
+	second = GEA
+	start_date = 1676.1.1
+	end_date = 1676.1.3
+}
+alliance = {
+	first = GEC
+	second = GFR
+	start_date = 1676.1.1
+	end_date = 1676.1.3
+}
+alliance = {
+	first = GEB
+	second = GEA
+	start_date = 1676.1.1
+	end_date = 1676.1.3
+}
+alliance = {
+	first = GEB
+	second = GFR
+	start_date = 1676.1.1
+	end_date = 1676.1.3
+}
+alliance = {
+	first = GEA
+	second = GFR
+	start_date = 1676.1.1
+	end_date = 1676.1.3
+}
+#
+alliance = {
+	first = GAU
+	second = GSP
+	start_date = 1676.1.1
+	end_date = 1676.1.3
+}
+alliance = {
+	first = GAU
+	second = GIT
+	start_date = 1676.1.1
+	end_date = 1676.1.3
+}
+alliance = {
+	first = GAU
+	second = GPL
+	start_date = 1676.1.1
+	end_date = 1676.1.3
+}
+alliance = {
+	first = GAU
+	second = GRU
+	start_date = 1676.1.1
+	end_date = 1676.1.3
+}
+alliance = {
+	first = GSP
+	second = GIT
+	start_date = 1676.1.1
+	end_date = 1676.1.3
+}
+alliance = {
+	first = GSP
+	second = GPL
+	start_date = 1676.1.1
+	end_date = 1676.1.3
+}
+alliance = {
+	first = GSP
+	second = GRU
+	start_date = 1676.1.1
+	end_date = 1676.1.3
+}
+alliance = {
+	first = GIT
+	second = GPL
+	start_date = 1676.1.1
+	end_date = 1676.1.3
+}
+alliance = {
+	first = GIT
+	second = GRU
+	start_date = 1676.1.1
+	end_date = 1676.1.3
+}
+alliance = {
+	first = GPL
+	second = GRU
+	start_date = 1676.1.1
+	end_date = 1676.1.3
+}
+# Roman Wars:
+dependency = {
+	subject_type = one_v_one_roman_subjects
+	first = REW
+	second = RWN
+	start_date = 1685.1.2
+	end_date = 1685.1.3
+}
+dependency = {
+	subject_type = one_v_one_roman_subjects
+	first = REW
+	second = RWS
+	start_date = 1685.1.2
+	end_date = 1685.1.3
+}
+dependency = {
+	subject_type = one_v_one_roman_subjects
+	first = REE
+	second = REN
+	start_date = 1685.1.2
+	end_date = 1685.1.3
+}
+dependency = {
+	subject_type = one_v_one_roman_subjects
+	first = REE
+	second = RES
+	start_date = 1685.1.2
+	end_date = 1685.1.3
+}
+# Austrian Succession:
+alliance = {
+	first = AAU
+	second = AGB
+	start_date = 1734.1.1
+	end_date = 1734.1.3
+}
+alliance = {
+	first = AAU
+	second = ANE
+	start_date = 1734.1.1
+	end_date = 1734.1.3
+}
+alliance = {
+	first = AAU
+	second = ARU
+	start_date = 1734.1.1
+	end_date = 1734.1.3
+}
+alliance = {
+	first = AAU
+	second = AIT
+	start_date = 1734.1.1
+	end_date = 1734.1.3
+}
+alliance = {
+	first = AAU
+	second = AHA
+	start_date = 1734.1.2
+	end_date = 1734.1.3
+}
+alliance = {
+	first = AGB
+	second = ANE
+	start_date = 1734.1.1
+	end_date = 1734.1.3
+}
+alliance = {
+	first = AGB
+	second = ARU
+	start_date = 1734.1.1
+	end_date = 1734.1.3
+}
+alliance = {
+	first = AGB
+	second = AIT
+	start_date = 1734.1.1
+	end_date = 1734.1.3
+}
+alliance = {
+	first = AGB
+	second = AHA
+	start_date = 1734.1.2
+	end_date = 1734.1.3
+}
+alliance = {
+	first = ARU
+	second = ANE
+	start_date = 1734.1.1
+	end_date = 1734.1.3
+}
+alliance = {
+	first = ARU
+	second = AIT
+	start_date = 1734.1.1
+	end_date = 1734.1.3
+}
+alliance = {
+	first = ARU
+	second = AHA
+	start_date = 1734.1.2
+	end_date = 1734.1.3
+}
+alliance = {
+	first = ANE
+	second = AIT
+	start_date = 1734.1.1
+	end_date = 1734.1.3
+}
+alliance = {
+	first = ANE
+	second = AHA
+	start_date = 1734.1.2
+	end_date = 1734.1.3
+}
+alliance = {
+	first = AIT
+	second = AHA
+	start_date = 1734.1.2
+	end_date = 1734.1.3
+}
+alliance = {
+	first = APR
+	second = AFR
+	start_date = 1734.1.1
+	end_date = 1734.1.3
+}
+alliance = {
+	first = APR
+	second = ASP
+	start_date = 1734.1.1
+	end_date = 1734.1.3
+}
+alliance = {
+	first = APR
+	second = ASW
+	start_date = 1734.1.1
+	end_date = 1734.1.3
+}
+alliance = {
+	first = APR
+	second = APL
+	start_date = 1734.1.1
+	end_date = 1734.1.3
+}
+alliance = {
+	first = APR
+	second = ABA
+	start_date = 1734.1.2
+	end_date = 1734.1.3
+}
+alliance = {
+	first = AFR
+	second = ASP
+	start_date = 1734.1.1
+	end_date = 1734.1.3
+}
+alliance = {
+	first = AFR
+	second = ASW
+	start_date = 1734.1.1
+	end_date = 1734.1.3
+}
+alliance = {
+	first = AFR
+	second = APL
+	start_date = 1734.1.1
+	end_date = 1734.1.3
+}
+alliance = {
+	first = AFR
+	second = ABA
+	start_date = 1734.1.2
+	end_date = 1734.1.3
+}
+alliance = {
+	first = ASW
+	second = ASP
+	start_date = 1734.1.1
+	end_date = 1734.1.3
+}
+alliance = {
+	first = ASW
+	second = APL
+	start_date = 1734.1.1
+	end_date = 1734.1.3
+}
+alliance = {
+	first = ASW
+	second = ABA
+	start_date = 1734.1.2
+	end_date = 1734.1.3
+}
+alliance = {
+	first = ASP
+	second = APL
+	start_date = 1734.1.1
+	end_date = 1734.1.3
+}
+alliance = {
+	first = ASP
+	second = ABA
+	start_date = 1734.1.2
+	end_date = 1734.1.3
+}
+alliance = {
+	first = APL
+	second = ABA
+	start_date = 1734.1.2
+	end_date = 1734.1.3
+}
+# Seven Years War:
+alliance = {
+	first = SPR
+	second = SGB
+	start_date = 1749.1.2
+	end_date = 1763.1.1
+}
+alliance = {
+	first = SPR
+	second = SPO
+	start_date = 1749.1.2
+	end_date = 1763.1.1
+}
+alliance = {
+	first = SGB
+	second = SPO
+	start_date = 1749.1.1
+	end_date = 1763.1.1
+}
+dependency = {
+	subject_type = one_v_one_colonial_subjects
+	first = SGB
+	second = SUA
+	start_date = 1749.1.1
+	end_date = 1763.1.1
+}
+dependency = {
+	subject_type = one_v_one_colonial_subjects
+	first = SGB
+	second = SCN
+	start_date = 1749.1.1
+	end_date = 1763.1.1
+}
+dependency = {
+	subject_type = one_v_one_colonial_subjects
+	first = SPO
+	second = SBR
+	start_date = 1749.1.1
+	end_date = 1763.1.1
+}
+#
+alliance = {
+	first = SAU
+	second = SFR
+	start_date = 1749.1.2
+	end_date = 1763.1.1
+}
+alliance = {
+	first = SAU
+	second = SSP
+	start_date = 1749.1.2
+	end_date = 1763.1.1
+}
+alliance = {
+	first = SFR
+	second = SSP
+	start_date = 1749.1.1
+	end_date = 1763.1.1
+}
+dependency = {
+	subject_type = one_v_one_colonial_subjects
+	first = SFR
+	second = SLU
+	start_date = 1749.1.1
+	end_date = 1763.1.1
+}
+dependency = {
+	subject_type = one_v_one_colonial_subjects
+	first = SFR
+	second = SQU
+	start_date = 1749.1.1
+	end_date = 1763.1.1
+}
+dependency = {
+	subject_type = one_v_one_colonial_subjects
+	first = SSP
+	second = SNS
+	start_date = 1749.1.1
+	end_date = 1763.1.1
+}
+# Spanish Succession:
+alliance = {
+	first = WFR
+	second = WSP
+	start_date = 1693.1.1
+	end_date = 1714.1.1
+}
+alliance = {
+	first = WAU
+	second = WGB
+	start_date = 1693.1.1
+	end_date = 1714.1.1
+}
+# Napolenic Wars:
+dependency = {
+	subject_type = one_v_one_napolenic_subjects
+	first = NFR
+	second = NSP
+	start_date = 1798.1.1
+	end_date = 1815.1.1
+}
+dependency = {
+	subject_type = one_v_one_napolenic_subjects
+	first = NFR
+	second = NRH
+	start_date = 1798.1.1
+	end_date = 1815.1.1
+}
+dependency = {
+	subject_type = one_v_one_napolenic_subjects
+	first = NFR
+	second = NIT
+	start_date = 1798.1.1
+	end_date = 1815.1.1
+}
+dependency = {
+	subject_type = one_v_one_napolenic_subjects
+	first = NFR
+	second = NTU
+	start_date = 1799.1.2
+	end_date = 1815.1.1
+}
+#
+alliance = {
+	first = NRU
+	second = NAU
+	start_date = 1798.1.1
+	end_date = 1815.1.1
+}
+alliance = {
+	first = NRU
+	second = NPR
+	start_date = 1798.1.1
+	end_date = 1815.1.1
+}
+alliance = {
+	first = NRU
+	second = NGB
+	start_date = 1798.1.1
+	end_date = 1815.1.1
+}
+alliance = {
+	first = NRU
+	second = NSW
+	start_date = 1799.1.2
+	end_date = 1815.1.1
+}
+alliance = {
+	first = NAU
+	second = NPR
+	start_date = 1798.1.1
+	end_date = 1815.1.1
+}
+alliance = {
+	first = NAU
+	second = NGB
+	start_date = 1798.1.1
+	end_date = 1815.1.1
+}
+alliance = {
+	first = NAU
+	second = NSW
+	start_date = 1799.1.2
+	end_date = 1815.1.1
+}
+alliance = {
+	first = NPR
+	second = NGB
+	start_date = 1798.1.1
+	end_date = 1815.1.1
+}
+alliance = {
+	first = NPR
+	second = NSW
+	start_date = 1799.1.2
+	end_date = 1815.1.1
+}
+alliance = {
+	first = NGB
+	second = NSW
+	start_date = 1799.1.2
+	end_date = 1815.1.1
+}
+
+# Great War:
+alliance = {
+	first = WWG
+	second = WWA
+	start_date = 1806.1.1
+	end_date = 1718.1.1
+}
+alliance = {
+	first = WWG
+	second = WWO
+	start_date = 1806.1.1
+	end_date = 1718.1.1
+}
+alliance = {
+	first = WWG
+	second = WWL
+	start_date = 1806.1.1
+	start_date = 1806.1.2
+}
+alliance = {
+	first = WWA
+	second = WWO
+	start_date = 1806.1.1
+	end_date = 1718.1.1
+}
+alliance = {
+	first = WWA
+	second = WWL
+	start_date = 1806.1.1
+	start_date = 1806.1.2
+}
+alliance = {
+	first = WWO
+	second = WWL
+	start_date = 1806.1.1
+	start_date = 1806.1.2
+}
+
+alliance = {
+	first = WWF
+	second = WWB
+	start_date = 1806.1.1
+	end_date = 1718.1.1
+}
+alliance = {
+	first = WWF
+	second = WWR
+	start_date = 1806.1.1
+	end_date = 1718.1.1
+}
+alliance = {
+	first = WWF
+	second = WWI
+	start_date = 1806.1.1
+	end_date = 1718.1.1
+}
+alliance = {
+	first = WWB
+	second = WWR
+	start_date = 1806.1.1
+	end_date = 1718.1.1
+}
+alliance = {
+	first = WWB
+	second = WWI
+	start_date = 1806.1.1
+	end_date = 1718.1.1
+}
+alliance = {
+	first = WWR
+	second = WWI
+	start_date = 1806.1.1
+	end_date = 1718.1.1
+}

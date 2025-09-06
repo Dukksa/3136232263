@@ -1,0 +1,34 @@
+government = republic
+add_government_reform = colonial_government
+government_rank = 3
+technology_group = western
+religion = catholic
+primary_culture = louisianans
+capital = 921
+historical_friend = SAU
+historical_friend = SFR
+historical_friend = SQU
+historical_friend = SSP
+historical_friend = SNS
+historical_rival = SPR
+historical_rival = SGB
+historical_rival = SUA
+historical_rival = SCN
+historical_rival = SPO
+historical_rival = SBR
+historical_rival = MWG
+historical_rival = TYN
+historical_rival = TYM
+add_army_professionalism = 0.2
+#add_adm_tech = 1
+#add_dip_tech = 1
+#add_mil_tech = 1
+1716.1.1 = {
+	monarch = { name = "Louis Billouart" birth_date = 1716.1.1 death_date = 1776.1.1 adm = 6 dip = 6 mil = 6 }
+	clear_scripted_personalities = yes
+	add_ruler_personality = immortal_personality
+	add_ruler_personality = just_personality
+	add_ruler_personality = kind_hearted_personality
+}
+1749.1.1 = { add_country_modifier = { name = one_v_one_manpower_fl_tdnit duration = -1 hidden = yes } add_country_modifier = { name = mwg_braindead_general duration = 730 } }
+1749.1.3 = { remove_country_modifier = one_v_one_manpower_fl_tdnit }

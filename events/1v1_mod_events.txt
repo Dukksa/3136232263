@@ -1,0 +1,3273 @@
+namespace = one_v_one_mod
+
+country_event = { # Fort modifier removal. Does not work weirdly when fort building itself gets removed
+	id = one_v_one_mod.11
+	title = none
+	desc = none
+	picture = none
+	hidden = yes
+	mean_time_to_happen = { months = 1 }
+	trigger = { any_owned_province = { has_fort_building_trigger = no has_province_modifier = estate_nobles_development_of_castles_mod } }
+	immediate = { every_owned_province = { limit = { has_fort_building_trigger = no } remove_province_modifier = estate_nobles_development_of_castles_mod } }
+	option = { }
+}
+country_event = {
+	id = one_v_one_mod.1
+	title = none
+	desc = none
+	picture = none
+	hidden = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+	immediate = {
+		every_owned_province = { limit = { units_in_province = 1 } kill_units = { who = owner } }
+		define_ruler = { age = 33 ADM = 0 DIP = 0 MIL = 0 claim = 100 }
+		add_ruler_personality = immortal_personality
+		add_ruler_personality = just_personality
+		add_ruler_personality = kind_hearted_personality
+		add_country_modifier = { name = mwg_braindead duration = -1 }
+		while = { limit = { adm_power = 0 } add_adm_power = -100 }
+		while = { limit = { dip_power = 0 } add_dip_power = -100 }
+		while = { limit = { mil_power = 0 } add_mil_power = -100 }
+		if = {
+			limit = {
+				OR = {
+					AND = { started_in = 1685.1.1 NOT = { started_in = 1685.1.3 } }
+					AND = { started_in = 1734.1.1 NOT = { started_in = 1734.1.3 } }
+					AND = { started_in = 1749.1.1 NOT = { started_in = 1749.1.2 } }
+				}
+			}
+			TYN = {
+				every_owned_province = { limit = { units_in_province = 1 } kill_units = { who = owner } }
+				define_ruler = { age = 33 ADM = 0 DIP = 0 MIL = 0 claim = 100 }
+				add_ruler_personality = immortal_personality
+				add_ruler_personality = just_personality
+				add_ruler_personality = kind_hearted_personality
+				add_country_modifier = { name = mwg_braindead duration = -1 }
+				while = { limit = { adm_power = 0 } add_adm_power = -100 }
+				while = { limit = { dip_power = 0 } add_dip_power = -100 }
+				while = { limit = { mil_power = 0 } add_mil_power = -100 }
+			}
+		}
+		if = {
+			limit = { started_in = 1749.1.1 NOT = { started_in = 1749.1.2 } }
+			TYM = {
+				every_owned_province = { limit = { units_in_province = 1 } kill_units = { who = owner } }
+				define_ruler = { age = 33 ADM = 0 DIP = 0 MIL = 0 claim = 100 }
+				add_ruler_personality = immortal_personality
+				add_ruler_personality = just_personality
+				add_ruler_personality = kind_hearted_personality
+				add_country_modifier = { name = mwg_braindead duration = -1 }
+				while = { limit = { adm_power = 0 } add_adm_power = -100 }
+				while = { limit = { dip_power = 0 } add_dip_power = -100 }
+				while = { limit = { mil_power = 0 } add_mil_power = -100 }
+			}
+		}
+		if = {
+			limit = { started_in = 1807.1.1 NOT = { started_in = 1807.1.3 } }
+			WWN = {
+				every_owned_province = { limit = { units_in_province = 1 } kill_units = { who = owner } }
+				define_ruler = { age = 33 ADM = 0 DIP = 0 MIL = 0 claim = 100 }
+				add_ruler_personality = immortal_personality
+				add_ruler_personality = just_personality
+				add_ruler_personality = kind_hearted_personality
+				add_country_modifier = { name = mwg_braindead duration = -1 }
+				while = { limit = { adm_power = 0 } add_adm_power = -100 }
+				while = { limit = { dip_power = 0 } add_dip_power = -100 }
+				while = { limit = { mil_power = 0 } add_mil_power = -100 }
+			}
+		}
+		if = {
+			limit = { started_in = 1565.1.1 NOT = { started_in = 1565.1.3 } }
+			MWP = {
+				every_owned_province = { limit = { units_in_province = 1 } kill_units = { who = owner } }
+				define_ruler = { name = "António I" dynasty = "de Avis" age = 33 ADM = 0 DIP = 0 MIL = 0 claim = 100 }
+				add_ruler_personality = immortal_personality
+				add_ruler_personality = just_personality
+				add_ruler_personality = kind_hearted_personality
+				add_country_modifier = { name = mwg_braindead duration = -1 }
+				while = { limit = { adm_power = 0 } add_adm_power = -100 }
+				while = { limit = { dip_power = 0 } add_dip_power = -100 }
+				while = { limit = { mil_power = 0 } add_mil_power = -100 }
+			}
+			1852 = { add_province_modifier = { name = one_v_one_jap_por_decision_modifier duration = -1 } }
+			4182 = { add_province_modifier = { name = one_v_one_jap_por_decision_modifier duration = -1 } }
+		}
+		if = {
+			limit = {
+				OR = {
+					AND = { started_in = 1611.1.1 NOT = { started_in = 1611.1.3 } }
+					AND = { started_in = 1676.1.1 NOT = { started_in = 1676.1.3 } }
+					AND = { started_in = 1685.1.1 NOT = { started_in = 1685.1.3 } }
+					AND = { started_in = 1694.1.1 NOT = { started_in = 1694.1.3 } }
+					AND = { started_in = 1734.1.1 NOT = { started_in = 1734.1.3 } }
+					AND = { started_in = 1749.1.1 NOT = { started_in = 1749.1.3 } }
+					AND = { started_in = 1799.1.1 NOT = { started_in = 1799.1.3 } }
+					AND = { started_in = 1807.1.1 NOT = { started_in = 1807.1.3 } }
+				}
+			}
+			PAP = {
+				every_owned_province = { limit = { units_in_province = 1 } kill_units = { who = owner } }
+				define_ruler = { age = 70 ADM = 0 DIP = 0 MIL = 0 claim = 100 }
+				add_country_modifier = { name = mwg_braindead duration = -1 }
+				while = { limit = { adm_power = 0 } add_adm_power = -100 }
+				while = { limit = { dip_power = 0 } add_dip_power = -100 }
+				while = { limit = { mil_power = 0 } add_mil_power = -100 }
+			}
+		}
+		if = {
+			limit = { is_year = 1479 NOT = { is_year = 1480 } }
+			add_adm_tech = 6
+			add_dip_tech = 6
+			add_mil_tech = 6
+			IGE = {
+				country_event = { id = one_v_one_mod.2 }
+				country_event = { id = one_v_one_mod.41 }
+				add_power_projection = { type = one_v_one_base_power_projection amount = 25 }
+			}
+			IVE = {
+				country_event = { id = one_v_one_mod.2 }
+				country_event = { id = one_v_one_mod.41 }
+				add_power_projection = { type = one_v_one_base_power_projection amount = 25 }
+			}
+		}
+		if = {
+			limit = { is_year = 1516 NOT = { is_year = 1517 } }
+			add_adm_tech = 7
+			add_dip_tech = 7
+			add_mil_tech = 7
+			MTU = {
+				country_event = { id = one_v_one_mod.2 }
+				country_event = { id = one_v_one_mod.42 }
+				add_power_projection = { type = one_v_one_base_power_projection amount = 25 }
+			}
+			MMM = {
+				country_event = { id = one_v_one_mod.2 }
+				country_event = { id = one_v_one_mod.42 }
+				add_power_projection = { type = one_v_one_base_power_projection amount = 25 }
+			}
+		}
+		if = {
+			limit = { started_in = 1565.1.1 NOT = { started_in = 1565.1.2 } }
+			JNO = {
+				country_event = { id = one_v_one_mod.2 }
+				country_event = { id = one_v_one_mod.43 }
+				add_power_projection = { type = one_v_one_base_power_projection amount = 25 }
+			}
+			JSO = {
+				country_event = { id = one_v_one_mod.2 }
+				country_event = { id = one_v_one_mod.43 }
+				add_power_projection = { type = one_v_one_base_power_projection amount = 25 }
+			}
+		}
+		if = {
+			limit = { started_in = 1565.1.2 NOT = { started_in = 1565.1.3 } }
+			JNO = {
+				country_event = { id = one_v_one_mod.2 }
+				country_event = { id = one_v_one_mod.433 }
+				add_power_projection = { type = one_v_one_base_power_projection amount = 25 }
+			}
+			JSO = {
+				country_event = { id = one_v_one_mod.2 }
+				country_event = { id = one_v_one_mod.433 }
+				add_power_projection = { type = one_v_one_base_power_projection amount = 25 }
+			}
+		}
+		if = {
+			limit = { is_year = 1583 NOT = { is_year = 1584 } }
+			add_adm_tech = 6
+			add_dip_tech = 6
+			add_mil_tech = 6
+			IMU = {
+				country_event = { id = one_v_one_mod.2 }
+				country_event = { id = one_v_one_mod.44 }
+				add_power_projection = { type = one_v_one_base_power_projection amount = 25 }
+			}
+			IDC = {
+				country_event = { id = one_v_one_mod.2 }
+				country_event = { id = one_v_one_mod.44 }
+				add_power_projection = { type = one_v_one_base_power_projection amount = 25 }
+			}
+		}
+		if = {
+			limit = { started_in = 1611.1.1 NOT = { started_in = 1611.1.2 } }
+			add_adm_tech = 6
+			add_dip_tech = 6
+			add_mil_tech = 6
+			TFR = {
+				country_event = { id = one_v_one_mod.2 }
+				country_event = { id = one_v_one_mod.47 }
+				add_power_projection = { type = one_v_one_base_power_projection amount = 25 }
+			}
+			TSW = {
+				country_event = { id = one_v_one_mod.2 }
+				country_event = { id = one_v_one_mod.47 }
+				add_power_projection = { type = one_v_one_base_power_projection amount = 25 }
+				add_church_power = 80
+			}
+			TGB = {
+				country_event = { id = one_v_one_mod.2 }
+				country_event = { id = one_v_one_mod.47 }
+				add_power_projection = { type = one_v_one_base_power_projection amount = 25 }
+				add_church_power = 80
+			}
+			TPG = {
+				country_event = { id = one_v_one_mod.2 }
+				country_event = { id = one_v_one_mod.47 }
+				add_power_projection = { type = one_v_one_base_power_projection amount = 25 }
+				add_church_power = 80
+			}
+			TDN = {
+				country_event = { id = one_v_one_mod.2 }
+				country_event = { id = one_v_one_mod.47 }
+				add_power_projection = { type = one_v_one_base_power_projection amount = 25 }
+				add_church_power = 80
+			}
+			TPL = {
+				country_event = { id = one_v_one_mod.2 }
+				country_event = { id = one_v_one_mod.47 }
+				add_power_projection = { type = one_v_one_base_power_projection amount = 25 }
+			}
+			TAS = {
+				country_event = { id = one_v_one_mod.2 }
+				country_event = { id = one_v_one_mod.47 }
+				add_power_projection = { type = one_v_one_base_power_projection amount = 25 }
+			}
+			TSP = {
+				country_event = { id = one_v_one_mod.2 }
+				country_event = { id = one_v_one_mod.47 }
+				add_power_projection = { type = one_v_one_base_power_projection amount = 25 }
+			}
+			TCG = {
+				country_event = { id = one_v_one_mod.2 }
+				country_event = { id = one_v_one_mod.47 }
+				add_power_projection = { type = one_v_one_base_power_projection amount = 25 }
+			}
+			TIT = {
+				country_event = { id = one_v_one_mod.2 }
+				country_event = { id = one_v_one_mod.47 }
+				add_power_projection = { type = one_v_one_base_power_projection amount = 25 }
+			}
+		}
+		if = {
+			limit = { started_in = 1611.1.2 NOT = { started_in = 1611.1.3 } }
+			add_adm_tech = 6
+			add_dip_tech = 6
+			add_mil_tech = 6
+			TFR = {
+				country_event = { id = one_v_one_mod.2 }
+				country_event = { id = one_v_one_mod.477 }
+				add_power_projection = { type = one_v_one_base_power_projection amount = 25 }
+			}
+			TSW = {
+				country_event = { id = one_v_one_mod.2 }
+				country_event = { id = one_v_one_mod.477 }
+				add_power_projection = { type = one_v_one_base_power_projection amount = 25 }
+				add_church_power = 80
+			}
+			TGB = {
+				country_event = { id = one_v_one_mod.2 }
+				country_event = { id = one_v_one_mod.477 }
+				add_power_projection = { type = one_v_one_base_power_projection amount = 25 }
+				add_church_power = 80
+			}
+			TPG = {
+				country_event = { id = one_v_one_mod.2 }
+				country_event = { id = one_v_one_mod.477 }
+				add_power_projection = { type = one_v_one_base_power_projection amount = 25 }
+				add_church_power = 80
+			}
+			TDN = {
+				country_event = { id = one_v_one_mod.2 }
+				country_event = { id = one_v_one_mod.477 }
+				add_power_projection = { type = one_v_one_base_power_projection amount = 25 }
+			}
+			TPL = {
+				country_event = { id = one_v_one_mod.2 }
+				country_event = { id = one_v_one_mod.477 }
+				add_power_projection = { type = one_v_one_base_power_projection amount = 25 }
+			}
+			TAS = {
+				country_event = { id = one_v_one_mod.2 }
+				country_event = { id = one_v_one_mod.477 }
+				add_power_projection = { type = one_v_one_base_power_projection amount = 25 }
+			}
+			TSP = {
+				country_event = { id = one_v_one_mod.2 }
+				country_event = { id = one_v_one_mod.477 }
+				add_power_projection = { type = one_v_one_base_power_projection amount = 25 }
+			}
+			TCG = {
+				country_event = { id = one_v_one_mod.2 }
+				country_event = { id = one_v_one_mod.477 }
+				add_power_projection = { type = one_v_one_base_power_projection amount = 25 }
+			}
+			TIT = {
+				country_event = { id = one_v_one_mod.2 }
+				country_event = { id = one_v_one_mod.477 }
+				add_power_projection = { type = one_v_one_base_power_projection amount = 25 }
+			}
+		}
+		if = {
+			limit = { started_in = 1676.1.1 NOT = { started_in = 1676.1.2 } }
+			add_adm_tech = 9
+			add_dip_tech = 9
+			add_mil_tech = 9
+			GTO = {
+				country_event = { id = one_v_one_mod.2 }
+				country_event = { id = one_v_one_mod.51 }
+				add_power_projection = { type = one_v_one_base_power_projection amount = 25 }
+			}
+			GEC = {
+				country_event = { id = one_v_one_mod.2 }
+				country_event = { id = one_v_one_mod.51 }
+				add_power_projection = { type = one_v_one_base_power_projection amount = 25 }
+			}
+			GEB = {
+				country_event = { id = one_v_one_mod.2 }
+				country_event = { id = one_v_one_mod.51 }
+				add_power_projection = { type = one_v_one_base_power_projection amount = 25 }
+			}
+			GEA = {
+				country_event = { id = one_v_one_mod.2 }
+				country_event = { id = one_v_one_mod.51 }
+				add_power_projection = { type = one_v_one_base_power_projection amount = 25 }
+			}
+			GFR = {
+				country_event = { id = one_v_one_mod.2 }
+				country_event = { id = one_v_one_mod.51 }
+				add_power_projection = { type = one_v_one_base_power_projection amount = 25 }
+			}
+			GAU = {
+				country_event = { id = one_v_one_mod.2 }
+				country_event = { id = one_v_one_mod.51 }
+				add_power_projection = { type = one_v_one_base_power_projection amount = 25 }
+			}
+			GPL = {
+				country_event = { id = one_v_one_mod.2 }
+				country_event = { id = one_v_one_mod.51 }
+				add_power_projection = { type = one_v_one_base_power_projection amount = 25 }
+			}
+			GIT = {
+				country_event = { id = one_v_one_mod.2 }
+				country_event = { id = one_v_one_mod.51 }
+				add_power_projection = { type = one_v_one_base_power_projection amount = 25 }
+			}
+			GSP = {
+				country_event = { id = one_v_one_mod.2 }
+				country_event = { id = one_v_one_mod.51 }
+				add_power_projection = { type = one_v_one_base_power_projection amount = 25 }
+			}
+			GRU = {
+				country_event = { id = one_v_one_mod.2 }
+				country_event = { id = one_v_one_mod.51 }
+				add_power_projection = { type = one_v_one_base_power_projection amount = 25 }
+			}
+		}
+		if = {
+			limit = { started_in = 1676.1.2 NOT = { started_in = 1676.1.3 } }
+			add_adm_tech = 9
+			add_dip_tech = 9
+			add_mil_tech = 9
+			set_global_flag = gea_chose_nation_flag
+			set_global_flag = gfr_chose_nation_flag
+			set_global_flag = git_chose_nation_flag
+			set_global_flag = gsp_chose_nation_flag
+			set_global_flag = gea_nation_choosing_flag
+			set_global_flag = gsp_nation_choosing_flag
+			GTO = {
+				country_event = { id = one_v_one_mod.2 }
+				country_event = { id = one_v_one_mod.511 }
+				add_power_projection = { type = one_v_one_base_power_projection amount = 25 }
+			}
+			GEC = {
+				country_event = { id = one_v_one_mod.2 }
+				country_event = { id = one_v_one_mod.511 }
+				add_power_projection = { type = one_v_one_base_power_projection amount = 25 }
+			}
+			GEB = {
+				country_event = { id = one_v_one_mod.2 }
+				country_event = { id = one_v_one_mod.511 }
+				add_power_projection = { type = one_v_one_base_power_projection amount = 25 }
+			}
+			GAU = {
+				country_event = { id = one_v_one_mod.2 }
+				country_event = { id = one_v_one_mod.511 }
+				add_power_projection = { type = one_v_one_base_power_projection amount = 25 }
+			}
+			GPL = {
+				country_event = { id = one_v_one_mod.2 }
+				country_event = { id = one_v_one_mod.511 }
+				add_power_projection = { type = one_v_one_base_power_projection amount = 25 }
+			}
+			GRU = {
+				country_event = { id = one_v_one_mod.2 }
+				country_event = { id = one_v_one_mod.511 }
+				add_power_projection = { type = one_v_one_base_power_projection amount = 25 }
+			}
+		}
+		if = {
+			limit = { started_in = 1685.1.1 NOT = { started_in = 1685.1.3 } }
+			REW = {
+				country_event = { id = one_v_one_mod.2 }
+				country_event = { id = one_v_one_mod.52 }
+				add_power_projection = { type = one_v_one_base_power_projection amount = 25 }
+			}
+			if = {
+				limit = { started_in = 1685.1.2 NOT = { started_in = 1685.1.3 } }
+				RWN = {
+					country_event = { id = one_v_one_mod.2 }
+					country_event = { id = one_v_one_mod.52 }
+					add_power_projection = { type = one_v_one_base_power_projection amount = 25 }
+				}
+				RWS = {
+					country_event = { id = one_v_one_mod.2 }
+					country_event = { id = one_v_one_mod.52 }
+					add_power_projection = { type = one_v_one_base_power_projection amount = 25 }
+				}
+			}
+			REE = {
+				country_event = { id = one_v_one_mod.2 }
+				country_event = { id = one_v_one_mod.52 }
+				add_power_projection = { type = one_v_one_base_power_projection amount = 25 }
+			}
+			if = {
+				limit = { started_in = 1685.1.2 NOT = { started_in = 1685.1.3 } }
+				REN = {
+					country_event = { id = one_v_one_mod.2 }
+					country_event = { id = one_v_one_mod.52 }
+					add_power_projection = { type = one_v_one_base_power_projection amount = 25 }
+				}
+				RES = {
+					country_event = { id = one_v_one_mod.2 }
+					country_event = { id = one_v_one_mod.52 }
+					add_power_projection = { type = one_v_one_base_power_projection amount = 25 }
+				}
+			}
+		}
+		if = {
+			limit = { is_year = 1694 NOT = { is_year = 1695 } }
+			add_adm_tech = 11
+			add_dip_tech = 11
+			add_mil_tech = 11
+			WFR = {
+				country_event = { id = one_v_one_mod.2 }
+				country_event = { id = one_v_one_mod.45 }
+				add_power_projection = { type = one_v_one_base_power_projection amount = 25 }
+			}
+			WSP = {
+				country_event = { id = one_v_one_mod.2 }
+				country_event = { id = one_v_one_mod.45 }
+				add_power_projection = { type = one_v_one_base_power_projection amount = 25 }
+			}
+			WAU = {
+				country_event = { id = one_v_one_mod.2 }
+				country_event = { id = one_v_one_mod.45 }
+				add_power_projection = { type = one_v_one_base_power_projection amount = 25 }
+			}
+			WGB = {
+				country_event = { id = one_v_one_mod.2 }
+				country_event = { id = one_v_one_mod.45 }
+				add_power_projection = { type = one_v_one_base_power_projection amount = 25 }
+				add_church_power = 80
+			}
+		}
+		if = {
+			limit = { started_in = 1734.1.1 NOT = { started_in = 1734.1.2 } }
+			add_adm_tech = 11
+			add_dip_tech = 11
+			add_mil_tech = 11
+			AAU = {
+				country_event = { id = one_v_one_mod.2 }
+				country_event = { id = one_v_one_mod.50 }
+				add_power_projection = { type = one_v_one_base_power_projection amount = 25 }
+			}
+			AGB = {
+				country_event = { id = one_v_one_mod.2 }
+				country_event = { id = one_v_one_mod.50 }
+				add_power_projection = { type = one_v_one_base_power_projection amount = 25 }
+				add_church_power = 80
+			}
+			ANE = {
+				country_event = { id = one_v_one_mod.2 }
+				country_event = { id = one_v_one_mod.50 }
+				add_power_projection = { type = one_v_one_base_power_projection amount = 25 }
+				add_fervor = 80
+			}
+			ARU = {
+				country_event = { id = one_v_one_mod.2 }
+				country_event = { id = one_v_one_mod.50 }
+				add_power_projection = { type = one_v_one_base_power_projection amount = 25 }
+			}
+			AIT = {
+				country_event = { id = one_v_one_mod.2 }
+				country_event = { id = one_v_one_mod.50 }
+				add_power_projection = { type = one_v_one_base_power_projection amount = 25 }
+			}
+			APR = {
+				country_event = { id = one_v_one_mod.2 }
+				country_event = { id = one_v_one_mod.50 }
+				add_power_projection = { type = one_v_one_base_power_projection amount = 25 }
+				add_church_power = 80
+			}
+			AFR = {
+				country_event = { id = one_v_one_mod.2 }
+				country_event = { id = one_v_one_mod.50 }
+				add_power_projection = { type = one_v_one_base_power_projection amount = 25 }
+			}
+			ASP = {
+				country_event = { id = one_v_one_mod.2 }
+				country_event = { id = one_v_one_mod.50 }
+				add_power_projection = { type = one_v_one_base_power_projection amount = 25 }
+			}
+			ASW = {
+				country_event = { id = one_v_one_mod.2 }
+				country_event = { id = one_v_one_mod.50 }
+				add_power_projection = { type = one_v_one_base_power_projection amount = 25 }
+				add_church_power = 80
+			}
+			APL = {
+				country_event = { id = one_v_one_mod.2 }
+				country_event = { id = one_v_one_mod.50 }
+				add_power_projection = { type = one_v_one_base_power_projection amount = 25 }
+			}
+		}
+		if = {
+			limit = { started_in = 1734.1.2 NOT = { started_in = 1734.1.3 } }
+			add_adm_tech = 11
+			add_dip_tech = 11
+			add_mil_tech = 11
+			AAU = {
+				country_event = { id = one_v_one_mod.2 }
+				country_event = { id = one_v_one_mod.50 }
+				add_power_projection = { type = one_v_one_base_power_projection amount = 25 }
+			}
+			AGB = {
+				country_event = { id = one_v_one_mod.2 }
+				country_event = { id = one_v_one_mod.50 }
+				add_power_projection = { type = one_v_one_base_power_projection amount = 25 }
+				add_church_power = 80
+			}
+			ANE = {
+				country_event = { id = one_v_one_mod.2 }
+				country_event = { id = one_v_one_mod.50 }
+				add_power_projection = { type = one_v_one_base_power_projection amount = 25 }
+				add_church_power = 80
+			}
+			ARU = {
+				country_event = { id = one_v_one_mod.2 }
+				country_event = { id = one_v_one_mod.50 }
+				add_power_projection = { type = one_v_one_base_power_projection amount = 25 }
+			}
+			AIT = {
+				country_event = { id = one_v_one_mod.2 }
+				country_event = { id = one_v_one_mod.50 }
+				add_power_projection = { type = one_v_one_base_power_projection amount = 25 }
+			}
+			AHA = {
+				country_event = { id = one_v_one_mod.2 }
+				country_event = { id = one_v_one_mod.50 }
+				add_power_projection = { type = one_v_one_base_power_projection amount = 25 }
+				add_church_power = 80
+			}
+			APR = {
+				country_event = { id = one_v_one_mod.2 }
+				country_event = { id = one_v_one_mod.50 }
+				add_power_projection = { type = one_v_one_base_power_projection amount = 25 }
+				add_church_power = 80
+			}
+			AFR = {
+				country_event = { id = one_v_one_mod.2 }
+				country_event = { id = one_v_one_mod.50 }
+				add_power_projection = { type = one_v_one_base_power_projection amount = 25 }
+			}
+			ASP = {
+				country_event = { id = one_v_one_mod.2 }
+				country_event = { id = one_v_one_mod.50 }
+				add_power_projection = { type = one_v_one_base_power_projection amount = 25 }
+			}
+			ASW = {
+				country_event = { id = one_v_one_mod.2 }
+				country_event = { id = one_v_one_mod.50 }
+				add_power_projection = { type = one_v_one_base_power_projection amount = 25 }
+				add_church_power = 80
+			}
+			APL = {
+				country_event = { id = one_v_one_mod.2 }
+				country_event = { id = one_v_one_mod.50 }
+				add_power_projection = { type = one_v_one_base_power_projection amount = 25 }
+			}
+			ABA = {
+				country_event = { id = one_v_one_mod.2 }
+				country_event = { id = one_v_one_mod.50 }
+				add_power_projection = { type = one_v_one_base_power_projection amount = 25 }
+			}
+		}
+		if = {
+			limit = { started_in = 1749.1.1 NOT = { started_in = 1749.1.2 } }
+			add_adm_tech = 12
+			add_dip_tech = 12
+			add_mil_tech = 12
+			SPR = {
+				country_event = { id = one_v_one_mod.2 }
+				country_event = { id = one_v_one_mod.49 }
+				country_event = { id = one_v_one_mod.491 }
+				add_power_projection = { type = one_v_one_base_power_projection amount = 25 }
+				add_church_power = 80
+				add_country_modifier = { name = one_v_one_syw_base duration = -1 hidden = yes }
+			}
+			SGB = {
+				country_event = { id = one_v_one_mod.2 }
+				country_event = { id = one_v_one_mod.49 }
+				add_power_projection = { type = one_v_one_base_power_projection amount = 25 }
+				add_church_power = 80
+				add_country_modifier = { name = one_v_one_syw_base duration = -1 hidden = yes }
+			}
+			SUA = {
+				country_event = { id = one_v_one_mod.2 }
+				country_event = { id = one_v_one_mod.49 }
+				add_power_projection = { type = one_v_one_base_power_projection amount = 25 }
+				add_church_power = 80
+				add_country_modifier = { name = one_v_one_syw_base duration = -1 hidden = yes }
+			}
+			SCN = {
+				country_event = { id = one_v_one_mod.2 }
+				country_event = { id = one_v_one_mod.49 }
+				add_power_projection = { type = one_v_one_base_power_projection amount = 25 }
+				add_church_power = 80
+				add_country_modifier = { name = one_v_one_syw_base duration = -1 hidden = yes }
+			}
+			SPO = {
+				country_event = { id = one_v_one_mod.2 }
+				country_event = { id = one_v_one_mod.49 }
+				add_power_projection = { type = one_v_one_base_power_projection amount = 25 }
+				add_country_modifier = { name = one_v_one_syw_base duration = -1 hidden = yes }
+			}
+			SBR = {
+				country_event = { id = one_v_one_mod.2 }
+				country_event = { id = one_v_one_mod.49 }
+				add_power_projection = { type = one_v_one_base_power_projection amount = 25 }
+				add_country_modifier = { name = one_v_one_syw_base duration = -1 hidden = yes }
+			}
+			SAU = {
+				country_event = { id = one_v_one_mod.2 }
+				country_event = { id = one_v_one_mod.49 }
+				add_power_projection = { type = one_v_one_base_power_projection amount = 25 }
+				add_country_modifier = { name = one_v_one_syw_base duration = -1 hidden = yes }
+			}
+			SFR = {
+				country_event = { id = one_v_one_mod.2 }
+				country_event = { id = one_v_one_mod.49 }
+				add_power_projection = { type = one_v_one_base_power_projection amount = 25 }
+				add_country_modifier = { name = one_v_one_syw_base duration = -1 hidden = yes }
+			}
+			SLU = {
+				country_event = { id = one_v_one_mod.2 }
+				country_event = { id = one_v_one_mod.49 }
+				add_power_projection = { type = one_v_one_base_power_projection amount = 25 }
+				add_country_modifier = { name = one_v_one_syw_base duration = -1 hidden = yes }
+			}
+			SQU = {
+				country_event = { id = one_v_one_mod.2 }
+				country_event = { id = one_v_one_mod.49 }
+				add_power_projection = { type = one_v_one_base_power_projection amount = 25 }
+				add_country_modifier = { name = one_v_one_syw_base duration = -1 hidden = yes }
+			}
+			SSP = {
+				country_event = { id = one_v_one_mod.2 }
+				country_event = { id = one_v_one_mod.49 }
+				add_power_projection = { type = one_v_one_base_power_projection amount = 25 }
+				add_country_modifier = { name = one_v_one_syw_base duration = -1 hidden = yes }
+			}
+			SNS = {
+				country_event = { id = one_v_one_mod.2 }
+				country_event = { id = one_v_one_mod.49 }
+				add_power_projection = { type = one_v_one_base_power_projection amount = 25 }
+				add_country_modifier = { name = one_v_one_syw_base duration = -1 hidden = yes }
+			}
+		}
+		if = {
+			limit = { started_in = 1749.1.2 NOT = { started_in = 1749.1.3 } }
+			add_adm_tech = 12
+			add_dip_tech = 12
+			add_mil_tech = 12
+			SGB = {
+				country_event = { id = one_v_one_mod.2 }
+				country_event = { id = one_v_one_mod.499 }
+				add_power_projection = { type = one_v_one_base_power_projection amount = 25 }
+				add_church_power = 80
+				add_country_modifier = { name = one_v_one_syw_base duration = -1 hidden = yes }
+			}
+			SUA = {
+				country_event = { id = one_v_one_mod.2 }
+				country_event = { id = one_v_one_mod.499 }
+				add_power_projection = { type = one_v_one_base_power_projection amount = 25 }
+				add_church_power = 80
+				add_country_modifier = { name = one_v_one_syw_base duration = -1 hidden = yes }
+			}
+			SCN = {
+				country_event = { id = one_v_one_mod.2 }
+				country_event = { id = one_v_one_mod.499 }
+				add_power_projection = { type = one_v_one_base_power_projection amount = 25 }
+				add_church_power = 80
+				add_country_modifier = { name = one_v_one_syw_base duration = -1 hidden = yes }
+			}
+			SPO = {
+				country_event = { id = one_v_one_mod.2 }
+				country_event = { id = one_v_one_mod.499 }
+				add_power_projection = { type = one_v_one_base_power_projection amount = 25 }
+				add_country_modifier = { name = one_v_one_syw_base duration = -1 hidden = yes }
+			}
+			SBR = {
+				country_event = { id = one_v_one_mod.2 }
+				country_event = { id = one_v_one_mod.499 }
+				add_power_projection = { type = one_v_one_base_power_projection amount = 25 }
+				add_country_modifier = { name = one_v_one_syw_base duration = -1 hidden = yes }
+			}
+			SFR = {
+				country_event = { id = one_v_one_mod.2 }
+				country_event = { id = one_v_one_mod.499 }
+				add_power_projection = { type = one_v_one_base_power_projection amount = 25 }
+				add_country_modifier = { name = one_v_one_syw_base duration = -1 hidden = yes }
+			}
+			SLU = {
+				country_event = { id = one_v_one_mod.2 }
+				country_event = { id = one_v_one_mod.499 }
+				add_power_projection = { type = one_v_one_base_power_projection amount = 25 }
+				add_country_modifier = { name = one_v_one_syw_base duration = -1 hidden = yes }
+			}
+			SQU = {
+				country_event = { id = one_v_one_mod.2 }
+				country_event = { id = one_v_one_mod.499 }
+				add_power_projection = { type = one_v_one_base_power_projection amount = 25 }
+				add_country_modifier = { name = one_v_one_syw_base duration = -1 hidden = yes }
+			}
+			SSP = {
+				country_event = { id = one_v_one_mod.2 }
+				country_event = { id = one_v_one_mod.499 }
+				add_power_projection = { type = one_v_one_base_power_projection amount = 25 }
+				add_country_modifier = { name = one_v_one_syw_base duration = -1 hidden = yes }
+			}
+			SNS = {
+				country_event = { id = one_v_one_mod.2 }
+				country_event = { id = one_v_one_mod.499 }
+				add_power_projection = { type = one_v_one_base_power_projection amount = 25 }
+				add_country_modifier = { name = one_v_one_syw_base duration = -1 hidden = yes }
+			}
+		}
+		if = {
+			limit = { started_in = 1799.1.1 NOT = { started_in = 1799.1.2 } }
+			add_adm_tech = 14
+			add_dip_tech = 14
+			add_mil_tech = 14
+			NFR = {
+				country_event = { id = one_v_one_mod.2 }
+				country_event = { id = one_v_one_mod.46 }
+				add_power_projection = { type = one_v_one_base_power_projection amount = 25 }
+			}
+			NSP = {
+				country_event = { id = one_v_one_mod.2 }
+				country_event = { id = one_v_one_mod.46 }
+				add_power_projection = { type = one_v_one_base_power_projection amount = 25 }
+			}
+			NRH = {
+				country_event = { id = one_v_one_mod.2 }
+				country_event = { id = one_v_one_mod.46 }
+				add_power_projection = { type = one_v_one_base_power_projection amount = 25 }
+				add_church_power = 80
+			}
+			NIT = {
+				country_event = { id = one_v_one_mod.2 }
+				country_event = { id = one_v_one_mod.46 }
+				add_power_projection = { type = one_v_one_base_power_projection amount = 25 }
+			}
+			NRU = {
+				country_event = { id = one_v_one_mod.2 }
+				country_event = { id = one_v_one_mod.46 }
+				add_power_projection = { type = one_v_one_base_power_projection amount = 25 }
+			}
+			NAU = {
+				country_event = { id = one_v_one_mod.2 }
+				country_event = { id = one_v_one_mod.46 }
+				add_power_projection = { type = one_v_one_base_power_projection amount = 25 }
+			}
+			NPR = {
+				country_event = { id = one_v_one_mod.2 }
+				country_event = { id = one_v_one_mod.46 }
+				add_power_projection = { type = one_v_one_base_power_projection amount = 25 }
+				add_church_power = 80
+			}
+			NGB = {
+				country_event = { id = one_v_one_mod.2 }
+				country_event = { id = one_v_one_mod.46 }
+				add_power_projection = { type = one_v_one_base_power_projection amount = 25 }
+				add_church_power = 80
+			}
+		}
+		if = {
+			limit = { started_in = 1799.1.2 NOT = { started_in = 1799.1.3 } }
+			add_adm_tech = 14
+			add_dip_tech = 14
+			add_mil_tech = 14
+			NFR = {
+				country_event = { id = one_v_one_mod.2 }
+				country_event = { id = one_v_one_mod.466 }
+				add_power_projection = { type = one_v_one_base_power_projection amount = 25 }
+			}
+			NSP = {
+				country_event = { id = one_v_one_mod.2 }
+				country_event = { id = one_v_one_mod.466 }
+				add_power_projection = { type = one_v_one_base_power_projection amount = 25 }
+			}
+			NRH = {
+				country_event = { id = one_v_one_mod.2 }
+				country_event = { id = one_v_one_mod.466 }
+				add_power_projection = { type = one_v_one_base_power_projection amount = 25 }
+				add_church_power = 80
+			}
+			NIT = {
+				country_event = { id = one_v_one_mod.2 }
+				country_event = { id = one_v_one_mod.466 }
+				add_power_projection = { type = one_v_one_base_power_projection amount = 25 }
+			}
+			NTU = {
+				country_event = { id = one_v_one_mod.2 }
+				country_event = { id = one_v_one_mod.466 }
+				add_power_projection = { type = one_v_one_base_power_projection amount = 25 }
+			}
+			NRU = {
+				country_event = { id = one_v_one_mod.2 }
+				country_event = { id = one_v_one_mod.466 }
+				add_power_projection = { type = one_v_one_base_power_projection amount = 25 }
+			}
+			NAU = {
+				country_event = { id = one_v_one_mod.2 }
+				country_event = { id = one_v_one_mod.466 }
+				add_power_projection = { type = one_v_one_base_power_projection amount = 25 }
+			}
+			NPR = {
+				country_event = { id = one_v_one_mod.2 }
+				country_event = { id = one_v_one_mod.466 }
+				add_power_projection = { type = one_v_one_base_power_projection amount = 25 }
+				add_church_power = 80
+			}
+			NGB = {
+				country_event = { id = one_v_one_mod.2 }
+				country_event = { id = one_v_one_mod.466 }
+				add_power_projection = { type = one_v_one_base_power_projection amount = 25 }
+				add_church_power = 80
+			}
+			NSW = {
+				country_event = { id = one_v_one_mod.2 }
+				country_event = { id = one_v_one_mod.466 }
+				add_power_projection = { type = one_v_one_base_power_projection amount = 25 }
+				add_church_power = 80
+			}
+		}
+		if = {
+			limit = { is_year = 1807 NOT = { is_year = 1808 } }
+			WWG = {
+				country_event = { id = one_v_one_mod.2 }
+				country_event = { id = one_v_one_mod.48 }
+				add_power_projection = { type = one_v_one_base_power_projection amount = 25 }
+				add_church_power = 80
+			}
+			WWA = {
+				country_event = { id = one_v_one_mod.2 }
+				country_event = { id = one_v_one_mod.48 }
+				add_power_projection = { type = one_v_one_base_power_projection amount = 25 }
+			}
+			WWO = {
+				country_event = { id = one_v_one_mod.2 }
+				country_event = { id = one_v_one_mod.48 }
+				add_power_projection = { type = one_v_one_base_power_projection amount = 25 }
+			}
+			if = {
+				limit = { started_in = 1807.1.1 NOT = { started_in = 1807.1.2 } }
+				WWL = {
+					country_event = { id = one_v_one_mod.2 }
+					country_event = { id = one_v_one_mod.48 }
+					add_power_projection = { type = one_v_one_base_power_projection amount = 25 }
+				}
+			}
+			WWF = {
+				country_event = { id = one_v_one_mod.2 }
+				country_event = { id = one_v_one_mod.48 }
+				add_power_projection = { type = one_v_one_base_power_projection amount = 25 }
+			}
+			WWB = {
+				country_event = { id = one_v_one_mod.2 }
+				country_event = { id = one_v_one_mod.48 }
+				add_power_projection = { type = one_v_one_base_power_projection amount = 25 }
+			}
+			WWR = {
+				country_event = { id = one_v_one_mod.2 }
+				country_event = { id = one_v_one_mod.48 }
+				add_power_projection = { type = one_v_one_base_power_projection amount = 25 }
+			}
+			WWI = {
+				country_event = { id = one_v_one_mod.2 }
+				country_event = { id = one_v_one_mod.48 }
+				add_power_projection = { type = one_v_one_base_power_projection amount = 25 }
+			}
+		}
+	}
+	option = { }
+}
+country_event = {
+	id = one_v_one_mod.2
+	title = none
+	desc = none
+	picture = none
+	hidden = yes
+	is_triggered_only = yes
+	immediate = {
+		if = {
+			limit = { OR = { tag = IGE tag = IVE } }
+			discover_ige_v_ive_provinces = yes
+			while = { limit = { NOT = { treasury = 7000 } } add_treasury = 7000 }
+			while = { limit = { treasury = 7001 } add_treasury = -1 }
+			while = { limit = { NOT = { prestige = 50 } } add_prestige = 1 }
+			while = { limit = { prestige = 51 } add_prestige = -1 }
+			while = { limit = { NOT = { army_tradition = 40 } } add_army_tradition = 1 }
+			while = { limit = { army_tradition = 41 } add_army_tradition = -1 }
+			while = { limit = { NOT = { manpower = 80 } } add_manpower = 1 }
+			while = { limit = { manpower = 81 } add_manpower = -1 }
+			while = { limit = { NOT = { sailors = 15000 } } add_sailors = 10000 }
+			while = { limit = { sailors = 15100 } add_sailors = -100 }
+			add_adm_power = 174
+			add_dip_power = 174
+			add_mil_power = 174
+		}
+		if = {
+			limit = { OR = { tag = MTU tag = MMM } }
+			discover_mtu_v_mmm_provinces = yes
+			while = { limit = { NOT = { treasury = 12000 } } add_treasury = 12000 }
+			while = { limit = { treasury = 12001 } add_treasury = -1 }
+			while = { limit = { NOT = { prestige = 50 } } add_prestige = 1 }
+			while = { limit = { prestige = 51 } add_prestige = -1 }
+			while = { limit = { NOT = { army_tradition = 50 } } add_army_tradition = 1 }
+			while = { limit = { army_tradition = 51 } add_army_tradition = -1 }
+			while = { limit = { NOT = { manpower = 220 } } add_manpower = 220 }
+			while = { limit = { manpower = 221 } add_manpower = -1 }
+			while = { limit = { NOT = { sailors = 15000 } } add_sailors = 10000 }
+			while = { limit = { sailors = 15100 } add_sailors = -100 }
+			add_adm_power = 474
+			add_dip_power = 474
+			add_mil_power = 474
+		}
+		if = {
+			limit = { OR = { tag = JNO tag = JSO } }
+			discover_jno_v_jso_provinces = yes
+			while = { limit = { NOT = { treasury = 10000 } } add_treasury = 10000 }
+			while = { limit = { treasury = 10001 } add_treasury = -1 }
+			while = { limit = { NOT = { prestige = 50 } } add_prestige = 1 }
+			while = { limit = { prestige = 51 } add_prestige = -1 }
+			while = { limit = { NOT = { army_tradition = 60 } } add_army_tradition = 1 }
+			while = { limit = { army_tradition = 61 } add_army_tradition = -1 }
+			while = { limit = { NOT = { manpower = 120 } } add_manpower = 120 }
+			while = { limit = { manpower = 121 } add_manpower = -1 }
+			while = { limit = { NOT = { sailors = 15000 } } add_sailors = 10000 }
+			while = { limit = { sailors = 15100 } add_sailors = -100 }
+			add_adm_power = 424
+			add_dip_power = 624
+			add_mil_power = 624
+		}
+		if = {
+			limit = { OR = { tag = IMU tag = IDC } }
+			discover_imu_v_idc_provinces = yes
+			while = { limit = { NOT = { treasury = 15000 } } add_treasury = 15000 }
+			while = { limit = { treasury = 15001 } add_treasury = -1 }
+			while = { limit = { NOT = { prestige = 50 } } add_prestige = 1 }
+			while = { limit = { prestige = 51 } add_prestige = -1 }
+			while = { limit = { NOT = { army_tradition = 70 } } add_army_tradition = 1 }
+			while = { limit = { army_tradition = 71 } add_army_tradition = -1 }
+			while = { limit = { NOT = { manpower = 350 } } add_manpower = 350 }
+			while = { limit = { manpower = 351 } add_manpower = -1 }
+			while = { limit = { NOT = { sailors = 20000 } } add_sailors = 15000 }
+			while = { limit = { sailors = 20100 } add_sailors = -100 }
+			add_adm_power = 474
+			add_dip_power = 474
+			add_mil_power = 474
+		}
+		if = {
+			limit = { one_v_one_tyw_nations = yes }
+			discover_thirty_years_provinces = yes
+			while = { limit = { NOT = { treasury = 15000 } } add_treasury = 15000 }
+			while = { limit = { treasury = 15001 } add_treasury = -1 }
+			while = { limit = { NOT = { prestige = 50 } } add_prestige = 1 }
+			while = { limit = { prestige = 51 } add_prestige = -1 }
+			while = { limit = { NOT = { army_tradition = 70 } } add_army_tradition = 1 }
+			while = { limit = { army_tradition = 71 } add_army_tradition = -1 }
+			while = { limit = { NOT = { manpower = 250 } } add_manpower = 250 }
+			while = { limit = { manpower = 251 } add_manpower = -1 }
+			while = { limit = { NOT = { sailors = 25000 } } add_sailors = 20000 }
+			while = { limit = { sailors = 25100 } add_sailors = -100 }
+			add_adm_power = 474
+			add_dip_power = 474
+			add_mil_power = 474
+		}
+		if = {
+			limit = { one_v_one_gtw_nations = yes }
+			discover_great_turkish_war_provinces = yes
+			while = { limit = { NOT = { treasury = 15000 } } add_treasury = 15000 }
+			while = { limit = { treasury = 15001 } add_treasury = -1 }
+			while = { limit = { NOT = { prestige = 50 } } add_prestige = 1 }
+			while = { limit = { prestige = 51 } add_prestige = -1 }
+			while = { limit = { NOT = { army_tradition = 70 } } add_army_tradition = 1 }
+			while = { limit = { army_tradition = 71 } add_army_tradition = -1 }
+			while = { limit = { NOT = { manpower = 250 } } add_manpower = 250 }
+			while = { limit = { manpower = 251 } add_manpower = -1 }
+			while = { limit = { NOT = { sailors = 30000 } } add_sailors = 25000 }
+			while = { limit = { sailors = 30100 } add_sailors = -100 }
+			add_adm_power = 474
+			add_dip_power = 474
+			add_mil_power = 474
+		}
+		if = {
+			limit = { one_v_one_re_nations = yes }
+			discover_roman_wars_provinces = yes
+			if = {
+				limit = { started_in = 1685.1.1 NOT = { started_in = 1685.1.2 } }
+				while = { limit = { NOT = { treasury = 60000 } } add_treasury = 60000 }
+				while = { limit = { treasury = 60001 } add_treasury = -1 }
+				while = { limit = { NOT = { manpower = 300 } } add_manpower = 300 }
+				while = { limit = { manpower = 301 } add_manpower = -1 }
+				while = { limit = { NOT = { sailors = 35000 } } add_sailors = 30000 }
+				while = { limit = { sailors = 35100 } add_sailors = -100 }
+			}
+			if = {
+				limit = { started_in = 1685.1.2 NOT = { started_in = 1685.1.3 } }
+				while = { limit = { NOT = { treasury = 20000 } } add_treasury = 20000 }
+				while = { limit = { treasury = 20001 } add_treasury = -1 }
+				while = { limit = { NOT = { manpower = 100 } } add_manpower = 100 }
+				while = { limit = { manpower = 101 } add_manpower = -1 }
+				while = { limit = { NOT = { sailors = 15000 } } add_sailors = 10000 }
+				while = { limit = { sailors = 15100 } add_sailors = -100 }
+				add_country_modifier = { name = one_v_one_re_alt_nullify duration = -1 }
+			}
+			while = { limit = { NOT = { prestige = 50 } } add_prestige = 1 }
+			while = { limit = { prestige = 51 } add_prestige = -1 }
+			while = { limit = { NOT = { army_tradition = 40 } } add_army_tradition = 1 }
+			while = { limit = { army_tradition = 41 } add_army_tradition = -1 }
+			if = {
+				limit = { OR = { tag = REW tag = REE } }
+				add_adm_power = 474
+				add_dip_power = 474
+				add_mil_power = 474
+			}
+			if = {
+				limit = { one_v_one_re_subject_nations = yes }
+				add_adm_power = -76
+				add_dip_power = -76
+				add_mil_power = -76
+			}
+		}
+		if = {
+			limit = { one_v_one_succ_nations = yes }
+			discover_wfr_v_wsp_provinces = yes
+			while = { limit = { NOT = { treasury = 20000 } } add_treasury = 20000 }
+			while = { limit = { treasury = 20001 } add_treasury = -1 }
+			while = { limit = { NOT = { prestige = 50 } } add_prestige = 1 }
+			while = { limit = { prestige = 51 } add_prestige = -1 }
+			while = { limit = { NOT = { army_tradition = 80 } } add_army_tradition = 1 }
+			while = { limit = { army_tradition = 81 } add_army_tradition = -1 }
+			while = { limit = { NOT = { manpower = 500 } } add_manpower = 500 }
+			while = { limit = { manpower = 501 } add_manpower = -1 }
+			while = { limit = { NOT = { sailors = 40000 } } add_sailors = 35000 }
+			while = { limit = { sailors = 40100 } add_sailors = -100 }
+			add_adm_power = 774
+			add_dip_power = 774
+			add_mil_power = 774
+		}
+		if = {
+			limit = { one_v_one_as_nations = yes }
+			discover_austrian_succession_provinces = yes
+			while = { limit = { NOT = { treasury = 15000 } } add_treasury = 15000 }
+			while = { limit = { treasury = 15001 } add_treasury = -1 }
+			while = { limit = { NOT = { prestige = 50 } } add_prestige = 1 }
+			while = { limit = { prestige = 51 } add_prestige = -1 }
+			while = { limit = { NOT = { army_tradition = 80 } } add_army_tradition = 1 }
+			while = { limit = { army_tradition = 81 } add_army_tradition = -1 }
+			while = { limit = { NOT = { manpower = 250 } } add_manpower = 250 }
+			while = { limit = { manpower = 251 } add_manpower = -1 }
+			while = { limit = { NOT = { sailors = 30000 } } add_sailors = 25000 }
+			while = { limit = { sailors = 30100 } add_sailors = -100 }
+			add_adm_power = 774
+			add_dip_power = 774
+			add_mil_power = 774
+		}
+		if = {
+			limit = { one_v_one_syw_nations = yes }
+			discover_seven_years_provinces = yes
+			while = { limit = { NOT = { treasury = 20000 } } add_treasury = 20000 }
+			while = { limit = { treasury = 20001 } add_treasury = -1 }
+			while = { limit = { NOT = { prestige = 50 } } add_prestige = 1 }
+			while = { limit = { prestige = 51 } add_prestige = -1 }
+			while = { limit = { NOT = { army_tradition = 80 } } add_army_tradition = 1 }
+			while = { limit = { army_tradition = 81 } add_army_tradition = -1 }
+			while = { limit = { NOT = { manpower = 300 } } add_manpower = 300 }
+			while = { limit = { manpower = 301 } add_manpower = -1 }
+			while = { limit = { NOT = { sailors = 40000 } } add_sailors = 35000 }
+			while = { limit = { sailors = 40100 } add_sailors = -100 }
+			add_adm_power = 774
+			add_dip_power = 774
+			add_mil_power = 774
+		}
+		if = {
+			limit = { one_v_one_nap_nations = yes }
+			discover_napoleonic_provinces = yes
+			while = { limit = { NOT = { treasury = 25000 } } add_treasury = 25000 }
+			while = { limit = { treasury = 25001 } add_treasury = -1 }
+			while = { limit = { NOT = { prestige = 50 } } add_prestige = 1 }
+			while = { limit = { prestige = 51 } add_prestige = -1 }
+			while = { limit = { NOT = { army_tradition = 90 } } add_army_tradition = 1 }
+			while = { limit = { army_tradition = 91 } add_army_tradition = -1 }
+			while = { limit = { NOT = { manpower = 500 } } add_manpower = 500 }
+			while = { limit = { manpower = 501 } add_manpower = -1 }
+			while = { limit = { NOT = { sailors = 45000 } } add_sailors = 40000 }
+			while = { limit = { sailors = 45100 } add_sailors = -100 }
+			add_adm_power = 874
+			add_dip_power = 874
+			add_mil_power = 874
+		}
+		if = {
+			limit = { one_v_one_ww_nations = yes }
+			discover_ww_provinces = yes
+			while = { limit = { NOT = { treasury = 25000 } } add_treasury = 25000 }
+			while = { limit = { treasury = 25001 } add_treasury = -1 }
+			while = { limit = { NOT = { prestige = 50 } } add_prestige = 1 }
+			while = { limit = { prestige = 51 } add_prestige = -1 }
+			while = { limit = { NOT = { army_tradition = 90 } } add_army_tradition = 1 }
+			while = { limit = { army_tradition = 91 } add_army_tradition = -1 }
+			while = { limit = { NOT = { manpower = 500 } } add_manpower = 500 }
+			while = { limit = { manpower = 501 } add_manpower = -1 }
+			while = { limit = { NOT = { sailors = 45000 } } add_sailors = 40000 }
+			while = { limit = { sailors = 45100 } add_sailors = -100 }
+			add_adm_power = 874
+			add_dip_power = 874
+			add_mil_power = 874
+		}
+		# To reset the national ideas.
+		add_idea_group = one_v_one_filler_ideas
+		remove_idea_group = one_v_one_filler_ideas
+	}
+	option = { }
+}
+###################
+###################
+# Nation banning:
+country_event = {
+	id = one_v_one_mod.3
+	title = one_v_one_mod.3.t
+	desc = {
+		trigger = { NOT = { one_v_one_succ_nations = yes one_v_one_gtw_nations = yes one_v_one_nap_nations = yes } }
+		desc = one_v_one_mod.3.d
+	}
+	desc = {
+		trigger = { one_v_one_succ_nations = yes one_v_one_gtw_nations = yes one_v_one_nap_nations = yes }
+		desc = one_v_one_mod.3.dd
+	}
+	picture = LAND_MILITARY_eventPicture
+	is_triggered_only = yes
+	# West Italy:
+	option = {
+		name = one_v_one_mod.3.ige.a
+		trigger = { tag = IGE }
+		set_global_flag = ige_ban_ivv_flag
+		set_global_flag = ige_nation_choosing_flag
+		custom_tooltip = one_v_one_mod.3.ige.a.tt
+	}
+	option = {
+		name = one_v_one_mod.3.ige.b
+		trigger = { tag = IGE }
+		set_global_flag = ige_ban_ivf_flag
+		set_global_flag = ige_nation_choosing_flag
+		custom_tooltip = one_v_one_mod.3.ige.b.tt
+	}
+	option = {
+		name = one_v_one_mod.3.ige.c
+		trigger = { tag = IGE }
+		set_global_flag = ige_ban_ivt_flag
+		set_global_flag = ige_nation_choosing_flag
+		custom_tooltip = one_v_one_mod.3.ige.c.tt
+	}
+	option = {
+		name = one_v_one_mod.3.ige.e
+		trigger = { tag = IGE }
+		set_global_flag = ige_ban_ivd_flag
+		set_global_flag = ige_nation_choosing_flag
+		custom_tooltip = one_v_one_mod.3.ige.e.tt
+	}
+	# East Italy:
+	option = {
+		name = one_v_one_mod.3.ive.a
+		trigger = { tag = IVE }
+		set_global_flag = ive_ban_igs_flag
+		set_global_flag = ive_nation_choosing_flag
+		custom_tooltip = one_v_one_mod.3.ive.a.tt
+	}
+	option = {
+		name = one_v_one_mod.3.ive.b
+		trigger = { tag = IVE }
+		set_global_flag = ive_ban_igl_flag
+		set_global_flag = ive_nation_choosing_flag
+		custom_tooltip = one_v_one_mod.3.ive.b.tt
+	}
+	option = {
+		name = one_v_one_mod.3.ive.c
+		trigger = { tag = IVE }
+		set_global_flag = ive_ban_igt_flag
+		set_global_flag = ive_nation_choosing_flag
+		custom_tooltip = one_v_one_mod.3.ive.c.tt
+	}
+	option = {
+		name = one_v_one_mod.3.ive.e
+		trigger = { tag = IVE }
+		set_global_flag = ive_ban_igp_flag
+		set_global_flag = ive_nation_choosing_flag
+		custom_tooltip = one_v_one_mod.3.ive.e.tt
+	}
+	# North Levant:
+	option = {
+		name = one_v_one_mod.3.mtu.a
+		trigger = { tag = MTU }
+		set_global_flag = mtu_ban_mmn_flag
+		set_global_flag = mtu_nation_choosing_flag
+		custom_tooltip = one_v_one_mod.3.mtu.a.tt
+	}
+	option = {
+		name = one_v_one_mod.3.mtu.b
+		trigger = { tag = MTU }
+		set_global_flag = mtu_ban_mme_flag
+		set_global_flag = mtu_nation_choosing_flag
+		custom_tooltip = one_v_one_mod.3.mtu.b.tt
+	}
+	option = {
+		name = one_v_one_mod.3.mtu.c
+		trigger = { tag = MTU }
+		set_global_flag = mtu_ban_mmr_flag
+		set_global_flag = mtu_nation_choosing_flag
+		custom_tooltip = one_v_one_mod.3.mtu.c.tt
+	}
+	option = {
+		name = one_v_one_mod.3.mtu.e
+		trigger = { tag = MTU }
+		set_global_flag = mtu_ban_mmj_flag
+		set_global_flag = mtu_nation_choosing_flag
+		custom_tooltip = one_v_one_mod.3.mtu.e.tt
+	}
+	# South Levant:
+	option = {
+		name = one_v_one_mod.3.mmm.a
+		trigger = { tag = MMM }
+		set_global_flag = mmm_ban_mtb_flag
+		set_global_flag = mmm_nation_choosing_flag
+		custom_tooltip = one_v_one_mod.3.mmm.a.tt
+	}
+	option = {
+		name = one_v_one_mod.3.mmm.b
+		trigger = { tag = MMM }
+		set_global_flag = mmm_ban_mtl_flag
+		set_global_flag = mmm_nation_choosing_flag
+		custom_tooltip = one_v_one_mod.3.mmm.b.tt
+	}
+	option = {
+		name = one_v_one_mod.3.mmm.c
+		trigger = { tag = MMM }
+		set_global_flag = mmm_ban_mto_flag
+		set_global_flag = mmm_nation_choosing_flag
+		custom_tooltip = one_v_one_mod.3.mmm.c.tt
+	}
+	option = {
+		name = one_v_one_mod.3.mmm.e
+		trigger = { tag = MMM }
+		set_global_flag = mmm_ban_mts_flag
+		set_global_flag = mmm_nation_choosing_flag
+		custom_tooltip = one_v_one_mod.3.mmm.e.tt
+	}
+	# East Japan:
+	option = {
+		name = one_v_one_mod.3.jno.a
+		trigger = { tag = JNO }
+		set_global_flag = jno_ban_jss_flag
+		set_global_flag = jno_nation_choosing_flag
+		custom_tooltip = one_v_one_mod.3.jno.a.tt
+	}
+	option = {
+		name = one_v_one_mod.3.jno.b
+		trigger = { tag = JNO }
+		set_global_flag = jno_ban_jsm_flag
+		set_global_flag = jno_nation_choosing_flag
+		custom_tooltip = one_v_one_mod.3.jno.b.tt
+	}
+	option = {
+		name = one_v_one_mod.3.jno.c
+		trigger = { tag = JNO }
+		set_global_flag = jno_ban_jst_flag
+		set_global_flag = jno_nation_choosing_flag
+		custom_tooltip = one_v_one_mod.3.jno.c.tt
+	}
+	option = {
+		name = one_v_one_mod.3.jso.e
+		trigger = { tag = JNO NOT = { has_global_flag = one_v_one_japan_scenario_alt_flag } }
+		set_global_flag = jno_ban_jnu_flag
+		set_global_flag = jno_nation_choosing_flag
+		custom_tooltip = one_v_one_mod.3.jso.e.tt
+	}
+	# West Japan:
+	option = {
+		name = one_v_one_mod.3.jso.a
+		trigger = { tag = JSO }
+		set_global_flag = jso_ban_jnd_flag
+		set_global_flag = jso_nation_choosing_flag
+		custom_tooltip = one_v_one_mod.3.jso.a.tt
+	}
+	option = {
+		name = one_v_one_mod.3.jso.b
+		trigger = { tag = JSO }
+		set_global_flag = jso_ban_jnk_flag
+		set_global_flag = jso_nation_choosing_flag
+		custom_tooltip = one_v_one_mod.3.jso.b.tt
+	}
+	option = {
+		name = one_v_one_mod.3.jso.c
+		trigger = { tag = JSO }
+		set_global_flag = jso_ban_jnt_flag
+		set_global_flag = jso_nation_choosing_flag
+		custom_tooltip = one_v_one_mod.3.jso.c.tt
+	}
+	option = {
+		name = one_v_one_mod.3.jno.e
+		trigger = { tag = JSO NOT = { has_global_flag = one_v_one_japan_scenario_alt_flag } }
+		set_global_flag = jso_ban_jsi_flag
+		set_global_flag = jso_nation_choosing_flag
+		custom_tooltip = one_v_one_mod.3.jno.e.tt
+	}
+	# North India:
+	option = {
+		name = one_v_one_mod.3.imu.a
+		trigger = { tag = IMU }
+		set_global_flag = imu_ban_idv_flag
+		set_global_flag = imu_nation_choosing_flag
+		custom_tooltip = one_v_one_mod.3.imu.a.tt
+	}
+	option = {
+		name = one_v_one_mod.3.imu.b
+		trigger = { tag = IMU }
+		set_global_flag = imu_ban_idd_flag
+		set_global_flag = imu_nation_choosing_flag
+		custom_tooltip = one_v_one_mod.3.imu.b.tt
+	}
+	option = {
+		name = one_v_one_mod.3.imu.c
+		trigger = { tag = IMU }
+		set_global_flag = imu_ban_idb_flag
+		set_global_flag = imu_nation_choosing_flag
+		custom_tooltip = one_v_one_mod.3.imu.c.tt
+	}
+	# South India:
+	option = {
+		name = one_v_one_mod.3.idc.a
+		trigger = { tag = IDC }
+		set_global_flag = idc_ban_imm_flag
+		set_global_flag = idc_nation_choosing_flag
+		custom_tooltip = one_v_one_mod.3.idc.a.tt
+	}
+	option = {
+		name = one_v_one_mod.3.idc.b
+		trigger = { tag = IDC }
+		set_global_flag = idc_ban_imd_flag
+		set_global_flag = idc_nation_choosing_flag
+		custom_tooltip = one_v_one_mod.3.idc.b.tt
+	}
+	option = {
+		name = one_v_one_mod.3.idc.c
+		trigger = { tag = IDC }
+		set_global_flag = idc_ban_imr_flag
+		set_global_flag = idc_nation_choosing_flag
+		custom_tooltip = one_v_one_mod.3.idc.c.tt
+	}
+	# France:
+	option = {
+		name = one_v_one_mod.3.wfr.a
+		trigger = { tag = WFR }
+		set_global_flag = wfr_ban_charles_flag
+		set_global_flag = wfr_nation_choosing_flag
+		custom_tooltip = one_v_one_mod.3.wfr.a.tt
+	}
+	option = {
+		name = one_v_one_mod.3.wfr.b
+		trigger = { tag = WFR }
+		set_global_flag = wfr_ban_leopold_flag
+		set_global_flag = wfr_nation_choosing_flag
+		custom_tooltip = one_v_one_mod.3.wfr.b.tt
+	}
+	option = {
+		name = one_v_one_mod.3.wfr.c
+		trigger = { tag = WFR }
+		set_global_flag = wfr_ban_joseph_flag
+		set_global_flag = wfr_nation_choosing_flag
+		custom_tooltip = one_v_one_mod.3.wfr.c.tt
+	}
+	option = {
+		name = one_v_one_mod.3.wfr.e
+		trigger = { tag = WFR }
+		set_global_flag = wfr_ban_eugene_flag
+		set_global_flag = wfr_nation_choosing_flag
+		custom_tooltip = one_v_one_mod.3.wfr.e.tt
+	}
+	# Spain:
+	option = {
+		name = one_v_one_mod.3.wsp.a
+		trigger = { tag = WSP }
+		set_global_flag = wsp_ban_anne_flag
+		set_global_flag = wsp_nation_choosing_flag
+		custom_tooltip = one_v_one_mod.3.wsp.a.tt
+	}
+	option = {
+		name = one_v_one_mod.3.wsp.b
+		trigger = { tag = WSP }
+		set_global_flag = wsp_ban_henry_flag
+		set_global_flag = wsp_nation_choosing_flag
+		custom_tooltip = one_v_one_mod.3.wsp.b.tt
+	}
+	option = {
+		name = one_v_one_mod.3.wsp.c
+		trigger = { tag = WSP }
+		set_global_flag = wsp_ban_john_flag
+		set_global_flag = wsp_nation_choosing_flag
+		custom_tooltip = one_v_one_mod.3.wsp.c.tt
+	}
+	option = {
+		name = one_v_one_mod.3.wsp.e
+		trigger = { tag = WSP }
+		set_global_flag = wsp_ban_george_flag
+		set_global_flag = wsp_nation_choosing_flag
+		custom_tooltip = one_v_one_mod.3.wsp.e.tt
+	}
+	# Austria:
+	option = {
+		name = one_v_one_mod.3.wau.a
+		trigger = { tag = WAU }
+		set_global_flag = wau_ban_louisxiv_flag
+		set_global_flag = wau_nation_choosing_flag
+		custom_tooltip = one_v_one_mod.3.wau.a.tt
+	}
+	option = {
+		name = one_v_one_mod.3.wau.b
+		trigger = { tag = WAU }
+		set_global_flag = wau_ban_vendome_flag
+		set_global_flag = wau_nation_choosing_flag
+		custom_tooltip = one_v_one_mod.3.wau.b.tt
+	}
+	option = {
+		name = one_v_one_mod.3.wau.c
+		trigger = { tag = WAU }
+		set_global_flag = wau_ban_villars_flag
+		set_global_flag = wau_nation_choosing_flag
+		custom_tooltip = one_v_one_mod.3.wau.c.tt
+	}
+	option = {
+		name = one_v_one_mod.3.wau.e
+		trigger = { tag = WAU }
+		set_global_flag = wau_ban_neufville_flag
+		set_global_flag = wau_nation_choosing_flag
+		custom_tooltip = one_v_one_mod.3.wau.e.tt
+	}
+	# Britain:
+	option = {
+		name = one_v_one_mod.3.wgb.a
+		trigger = { tag = WGB }
+		set_global_flag = wgb_ban_philip_flag
+		set_global_flag = wgb_nation_choosing_flag
+		custom_tooltip = one_v_one_mod.3.wgb.a.tt
+	}
+	option = {
+		name = one_v_one_mod.3.wgb.b
+		trigger = { tag = WGB }
+		set_global_flag = wgb_ban_isidoro_flag
+		set_global_flag = wgb_nation_choosing_flag
+		custom_tooltip = one_v_one_mod.3.wgb.b.tt
+	}
+	option = {
+		name = one_v_one_mod.3.wgb.c
+		trigger = { tag = WGB }
+		set_global_flag = wgb_ban_jorge_flag
+		set_global_flag = wgb_nation_choosing_flag
+		custom_tooltip = one_v_one_mod.3.wgb.c.tt
+	}
+	option = {
+		name = one_v_one_mod.3.wgb.e
+		trigger = { tag = WGB }
+		set_global_flag = wgb_ban_francisco_flag
+		set_global_flag = wgb_nation_choosing_flag
+		custom_tooltip = one_v_one_mod.3.wgb.e.tt
+	}
+	####################
+	# Great Turkish War:
+	# Ottoman:
+	option = {
+		name = one_v_one_mod.3.gto.a
+		trigger = { tag = GTO started_in = 1676.1.1 NOT = { started_in = 1676.1.2 } }
+		set_global_flag = gto_ban_morosini_flag
+		set_global_flag = gto_nation_choosing_flag
+		set_gtw_ban_chosen_flag = yes
+		custom_tooltip = one_v_one_mod.3.gto.a.tt
+	}
+	option = {
+		name = one_v_one_mod.3.gto.b
+		trigger = { tag = GTO started_in = 1676.1.1 NOT = { started_in = 1676.1.2 } }
+		set_global_flag = gto_ban_corner_flag
+		set_global_flag = gto_nation_choosing_flag
+		set_gtw_ban_chosen_flag = yes
+		custom_tooltip = one_v_one_mod.3.gto.b.tt
+	}
+	option = {
+		name = one_v_one_mod.3.gto.c
+		trigger = { tag = GTO started_in = 1676.1.1 NOT = { started_in = 1676.1.2 } }
+		set_global_flag = gto_ban_mitrovic_flag
+		set_global_flag = gto_nation_choosing_flag
+		set_gtw_ban_chosen_flag = yes
+		custom_tooltip = one_v_one_mod.3.gto.c.tt
+	}
+	# Crimea:
+	option = {
+		name = one_v_one_mod.3.gec.a
+		trigger = { tag = GEC }
+		set_global_flag = gec_ban_peter_flag
+		set_global_flag = gec_nation_choosing_flag
+		set_gtw_ban_chosen_flag = yes
+		custom_tooltip = one_v_one_mod.3.gec.a.tt
+	}
+	option = {
+		name = one_v_one_mod.3.gec.b
+		trigger = { tag = GEC }
+		set_global_flag = gec_ban_ivan_flag
+		set_global_flag = gec_nation_choosing_flag
+		set_gtw_ban_chosen_flag = yes
+		custom_tooltip = one_v_one_mod.3.gec.b.tt
+	}
+	option = {
+		name = one_v_one_mod.3.gec.c
+		trigger = { tag = GEC }
+		set_global_flag = gec_ban_vasily_flag
+		set_global_flag = gec_nation_choosing_flag
+		set_gtw_ban_chosen_flag = yes
+		custom_tooltip = one_v_one_mod.3.gec.c.tt
+	}
+	# Balkans:
+	option = {
+		name = one_v_one_mod.3.geb.a
+		trigger = { tag = GEB }
+		set_global_flag = geb_ban_sobieski_flag
+		set_global_flag = geb_nation_choosing_flag
+		set_gtw_ban_chosen_flag = yes
+		custom_tooltip = one_v_one_mod.3.geb.a.tt
+	}
+	option = {
+		name = one_v_one_mod.3.geb.b
+		trigger = { tag = GEB }
+		set_global_flag = geb_ban_jablonowski_flag
+		set_global_flag = geb_nation_choosing_flag
+		set_gtw_ban_chosen_flag = yes
+		custom_tooltip = one_v_one_mod.3.geb.b.tt
+	}
+	option = {
+		name = one_v_one_mod.3.geb.c
+		trigger = { tag = GEB }
+		set_global_flag = geb_ban_sapieha_flag
+		set_global_flag = geb_nation_choosing_flag
+		set_gtw_ban_chosen_flag = yes
+		custom_tooltip = one_v_one_mod.3.geb.c.tt
+	}
+	# African:
+	option = {
+		name = one_v_one_mod.3.gea.a
+		trigger = { tag = GEA }
+		set_global_flag = gea_ban_carlos_flag
+		set_global_flag = gea_nation_choosing_flag
+		set_gtw_ban_chosen_flag = yes
+		custom_tooltip = one_v_one_mod.3.gea.a.tt
+	}
+	option = {
+		name = one_v_one_mod.3.gea.b
+		trigger = { tag = GEA }
+		set_global_flag = gea_ban_francisco_flag
+		set_global_flag = gea_nation_choosing_flag
+		set_gtw_ban_chosen_flag = yes
+		custom_tooltip = one_v_one_mod.3.gea.b.tt
+	}
+	option = {
+		name = one_v_one_mod.3.gea.c
+		trigger = { tag = GEA }
+		set_global_flag = gea_ban_juan_flag
+		set_global_flag = gea_nation_choosing_flag
+		set_gtw_ban_chosen_flag = yes
+		custom_tooltip = one_v_one_mod.3.gea.c.tt
+	}
+	# France:
+	option = {
+		name = one_v_one_mod.3.gfr.a
+		trigger = { OR = { tag = GFR AND = { tag = GTO started_in = 1676.1.2 NOT = { started_in = 1676.1.3 } } } }
+		set_global_flag = gfr_ban_leopold_flag
+		if = {
+			limit = { tag = GFR }
+			set_global_flag = gfr_nation_choosing_flag
+		}
+		if = {
+			limit = { tag = GTO }
+			set_global_flag = gto_nation_choosing_flag
+			set_global_flag = gfr_nation_choosing_flag
+		}
+		set_gtw_ban_chosen_flag = yes
+		custom_tooltip = one_v_one_mod.3.gfr.a.tt
+	}
+	option = {
+		name = one_v_one_mod.3.gfr.b
+		trigger = { OR = { tag = GFR AND = { tag = GTO started_in = 1676.1.2 NOT = { started_in = 1676.1.3 } } } }
+		set_global_flag = gfr_ban_charlesv_flag
+		if = {
+			limit = { tag = GFR }
+			set_global_flag = gfr_nation_choosing_flag
+		}
+		if = {
+			limit = { tag = GTO }
+			set_global_flag = gto_nation_choosing_flag
+			set_global_flag = gfr_nation_choosing_flag
+		}
+		set_gtw_ban_chosen_flag = yes
+		custom_tooltip = one_v_one_mod.3.gfr.b.tt
+	}
+	option = {
+		name = one_v_one_mod.3.gfr.c
+		trigger = { OR = { tag = GFR AND = { tag = GTO started_in = 1676.1.2 NOT = { started_in = 1676.1.3 } } } }
+		set_global_flag = gfr_ban_maximilian_flag
+		if = {
+			limit = { tag = GFR }
+			set_global_flag = gfr_nation_choosing_flag
+		}
+		if = {
+			limit = { tag = GTO }
+			set_global_flag = gto_nation_choosing_flag
+			set_global_flag = gfr_nation_choosing_flag
+		}
+		set_gtw_ban_chosen_flag = yes
+		custom_tooltip = one_v_one_mod.3.gfr.c.tt
+	}
+	# Austria:
+	option = {
+		name = one_v_one_mod.3.gau.a
+		trigger = { tag = GAU started_in = 1676.1.1 NOT = { started_in = 1676.1.2 } }
+		set_global_flag = gau_ban_louisxiv_flag
+		set_global_flag = gau_nation_choosing_flag
+		set_gtw_ban_chosen_flag = yes
+		custom_tooltip = one_v_one_mod.3.gau.a.tt
+	}
+	option = {
+		name = one_v_one_mod.3.gau.b
+		trigger = { tag = GAU started_in = 1676.1.1 NOT = { started_in = 1676.1.2 } }
+		set_global_flag = gau_ban_tellier_flag
+		set_global_flag = gau_nation_choosing_flag
+		set_gtw_ban_chosen_flag = yes
+		custom_tooltip = one_v_one_mod.3.gau.b.tt
+	}
+	option = {
+		name = one_v_one_mod.3.gau.c
+		trigger = { tag = GAU started_in = 1676.1.1 NOT = { started_in = 1676.1.2 } }
+		set_global_flag = gau_ban_prestre_flag
+		set_global_flag = gau_nation_choosing_flag
+		set_gtw_ban_chosen_flag = yes
+		custom_tooltip = one_v_one_mod.3.gau.c.tt
+	}
+	# Poland:
+	option = {
+		name = one_v_one_mod.3.gpl.a
+		trigger = { tag = GPL }
+		set_global_flag = gpl_ban_abdi_flag
+		set_global_flag = gpl_nation_choosing_flag
+		set_gtw_ban_chosen_flag = yes
+		custom_tooltip = one_v_one_mod.3.gpl.a.tt
+	}
+	option = {
+		name = one_v_one_mod.3.gpl.b
+		trigger = { tag = GPL }
+		set_global_flag = gpl_ban_emeric_flag
+		set_global_flag = gpl_nation_choosing_flag
+		set_gtw_ban_chosen_flag = yes
+		custom_tooltip = one_v_one_mod.3.gpl.b.tt
+	}
+	option = {
+		name = one_v_one_mod.3.gpl.c
+		trigger = { tag = GPL }
+		set_global_flag = gpl_ban_sari_flag
+		set_global_flag = gpl_nation_choosing_flag
+		set_gtw_ban_chosen_flag = yes
+		custom_tooltip = one_v_one_mod.3.gpl.c.tt
+	}
+	# Venice:
+	option = {
+		name = one_v_one_mod.3.git.a
+		trigger = { OR = { tag = GIT AND = { tag = GAU started_in = 1676.1.2 NOT = { started_in = 1676.1.3 } } } }
+		set_global_flag = git_ban_mehmed_flag
+		if = {
+			limit = { tag = GIT }
+			set_global_flag = git_nation_choosing_flag
+		}
+		if = {
+			limit = { tag = GAU }
+			set_global_flag = gau_nation_choosing_flag
+			set_global_flag = git_nation_choosing_flag
+		}
+		set_gtw_ban_chosen_flag = yes
+		custom_tooltip = one_v_one_mod.3.git.a.tt
+	}
+	option = {
+		name = one_v_one_mod.3.git.b
+		trigger = { OR = { tag = GIT AND = { tag = GAU started_in = 1676.1.2 NOT = { started_in = 1676.1.3 } } } }
+		set_global_flag = git_ban_kara_flag
+		if = {
+			limit = { tag = GIT }
+			set_global_flag = git_nation_choosing_flag
+		}
+		if = {
+			limit = { tag = GAU }
+			set_global_flag = gau_nation_choosing_flag
+			set_global_flag = git_nation_choosing_flag
+		}
+		set_gtw_ban_chosen_flag = yes
+		custom_tooltip = one_v_one_mod.3.git.b.tt
+	}
+	option = {
+		name = one_v_one_mod.3.git.c
+		trigger = { OR = { tag = GIT AND = { tag = GAU started_in = 1676.1.2 NOT = { started_in = 1676.1.3 } } } }
+		set_global_flag = git_ban_suleiman_flag
+		if = {
+			limit = { tag = GIT }
+			set_global_flag = git_nation_choosing_flag
+		}
+		if = {
+			limit = { tag = GAU }
+			set_global_flag = gau_nation_choosing_flag
+			set_global_flag = git_nation_choosing_flag
+		}
+		set_gtw_ban_chosen_flag = yes
+		custom_tooltip = one_v_one_mod.3.git.c.tt
+	}
+	# Spain:
+	option = {
+		name = one_v_one_mod.3.gsp.a
+		trigger = { tag = GSP }
+		set_global_flag = gsp_ban_osman_flag
+		set_global_flag = gsp_nation_choosing_flag
+		set_gtw_ban_chosen_flag = yes
+		custom_tooltip = one_v_one_mod.3.gsp.a.tt
+	}
+	option = {
+		name = one_v_one_mod.3.gsp.b
+		trigger = { tag = GSP }
+		set_global_flag = gsp_ban_mezzo_flag
+		set_global_flag = gsp_nation_choosing_flag
+		set_gtw_ban_chosen_flag = yes
+		custom_tooltip = one_v_one_mod.3.gsp.b.tt
+	}
+	option = {
+		name = one_v_one_mod.3.gsp.c
+		trigger = { tag = GSP }
+		set_global_flag = gsp_ban_damat_flag
+		set_global_flag = gsp_nation_choosing_flag
+		set_gtw_ban_chosen_flag = yes
+		custom_tooltip = one_v_one_mod.3.gsp.c.tt
+	}
+	# Russia:
+	option = {
+		name = one_v_one_mod.3.gru.a
+		trigger = { tag = GRU }
+		set_global_flag = gru_ban_selim_flag
+		set_global_flag = gru_nation_choosing_flag
+		set_gtw_ban_chosen_flag = yes
+		custom_tooltip = one_v_one_mod.3.gru.a.tt
+	}
+	option = {
+		name = one_v_one_mod.3.gru.b
+		trigger = { tag = GRU }
+		set_global_flag = gru_ban_murad_flag
+		set_global_flag = gru_nation_choosing_flag
+		set_gtw_ban_chosen_flag = yes
+		custom_tooltip = one_v_one_mod.3.gru.b.tt
+	}
+	option = {
+		name = one_v_one_mod.3.gru.c
+		trigger = { tag = GRU }
+		set_global_flag = gru_ban_haci_flag
+		set_global_flag = gru_nation_choosing_flag
+		set_gtw_ban_chosen_flag = yes
+		custom_tooltip = one_v_one_mod.3.gru.c.tt
+	}
+	# Napoleonic Wars:
+	# France:
+	option = {
+		trigger = { one_v_one_nap_nations = yes }
+		name = one_v_one_mod.3.nfr.a
+		swap_free_idea_group = yes
+		custom_tooltip = one_v_one_mod.3.nfr.a.tt
+	}
+}
+###################
+###################
+# Advisor choosing:
+country_event = {
+	id = one_v_one_mod.30
+	title = one_v_one_mod.30.t
+	desc = one_v_one_mod.30.d
+	picture = ADVISOR_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = one_v_one_mod.30.1
+		clr_country_flag = one_v_one_get_specific_advisor_flag
+	}
+	option = {
+		name = one_v_one_mod.30.a
+		country_event = { id = one_v_one_mod.31 }
+	}
+	option = {
+		name = one_v_one_mod.30.b
+		country_event = { id = one_v_one_mod.32 }
+	}
+	option = {
+		name = one_v_one_mod.30.c
+		country_event = { id = one_v_one_mod.33 }
+	}
+}
+
+# Adm:
+country_event = {
+	id = one_v_one_mod.31
+	title = one_v_one_mod.31.t
+	desc = one_v_one_mod.30.d
+	picture = ADVISOR_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = one_v_one_mod.30.1
+		clr_country_flag = one_v_one_get_specific_advisor_flag
+	}
+	option = {
+		name = one_v_one_mod.30.2
+		hidden_effect = { country_event = { id = one_v_one_mod.30 } }
+	}
+	option = {
+		name = one_v_one_mod.31.1
+		clr_country_flag = one_v_one_get_specific_advisor_flag
+		hire_advisor = {
+			type = philosopher
+			skill = 1
+		}
+		add_treasury = -33
+	}
+	option = {
+		name = one_v_one_mod.31.2
+		clr_country_flag = one_v_one_get_specific_advisor_flag
+		hire_advisor = {
+			type = artist
+			skill = 1
+		}
+		add_treasury = -33
+	}
+	option = {
+		name = one_v_one_mod.31.3
+		clr_country_flag = one_v_one_get_specific_advisor_flag
+		hire_advisor = {
+			type = master_of_mint
+			skill = 1
+		}
+		add_treasury = -33
+	}
+	option = {
+		name = one_v_one_mod.31.4
+		clr_country_flag = one_v_one_get_specific_advisor_flag
+		hire_advisor = {
+			type = treasurer
+			skill = 1
+		}
+		add_treasury = -33
+	}
+	option = {
+		name = one_v_one_mod.31.5
+		clr_country_flag = one_v_one_get_specific_advisor_flag
+		hire_advisor = {
+			type = natural_scientist
+			skill = 1
+		}
+		add_treasury = -33
+	}
+	option = {
+		name = one_v_one_mod.31.6
+		clr_country_flag = one_v_one_get_specific_advisor_flag
+		hire_advisor = {
+			type = theologian
+			skill = 1
+		}
+		add_treasury = -33
+	}
+	option = {
+		name = one_v_one_mod.31.7
+		clr_country_flag = one_v_one_get_specific_advisor_flag
+		hire_advisor = {
+			type = inquisitor
+			skill = 1
+		}
+		add_treasury = -33
+	}
+}
+# Dip:
+country_event = {
+	id = one_v_one_mod.32
+	title = one_v_one_mod.32.t
+	desc = one_v_one_mod.30.d
+	picture = ADVISOR_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = one_v_one_mod.30.1
+		clr_country_flag = one_v_one_get_specific_advisor_flag
+	}
+	option = {
+		name = one_v_one_mod.30.2
+		hidden_effect = { country_event = { id = one_v_one_mod.30 } }
+	}
+	option = {
+		name = one_v_one_mod.32.1
+		clr_country_flag = one_v_one_get_specific_advisor_flag
+		hire_advisor = {
+			type = statesman
+			skill = 1
+		}
+		add_treasury = -33
+	}
+	option = {
+		name = one_v_one_mod.32.2
+		clr_country_flag = one_v_one_get_specific_advisor_flag
+		hire_advisor = {
+			type = diplomat
+			skill = 1
+		}
+		add_treasury = -33
+	}
+	option = {
+		name = one_v_one_mod.32.3
+		clr_country_flag = one_v_one_get_specific_advisor_flag
+		hire_advisor = {
+			type = spymaster
+			skill = 1
+		}
+		add_treasury = -33
+	}
+	option = {
+		name = one_v_one_mod.32.4
+		clr_country_flag = one_v_one_get_specific_advisor_flag
+		hire_advisor = {
+			type = trader
+			skill = 1
+		}
+		add_treasury = -33
+	}
+	option = {
+		name = one_v_one_mod.32.5
+		clr_country_flag = one_v_one_get_specific_advisor_flag
+		trigger = { num_of_colonists = 1 }
+		hire_advisor = {
+			type = colonial_governor
+			skill = 1
+		}
+		add_treasury = -33
+	}
+	option = {
+		name = one_v_one_mod.32.6
+		clr_country_flag = one_v_one_get_specific_advisor_flag
+		trigger = {
+			num_of_colonists = 1
+			is_colonial_nation = no
+			NOT = { has_reform = trade_company_government }
+		}
+		hire_advisor = {
+			type = navigator
+			skill = 1
+		}
+		add_treasury = -33
+	}
+	option = {
+		name = one_v_one_mod.32.7
+		clr_country_flag = one_v_one_get_specific_advisor_flag
+		trigger = { num_of_ports = 1 }
+		hire_advisor = {
+			type = naval_reformer
+			skill = 1
+		}
+		add_treasury = -33
+	}
+}
+# Mil:
+country_event = {
+	id = one_v_one_mod.33
+	title = one_v_one_mod.33.t
+	desc = one_v_one_mod.30.d
+	picture = ADVISOR_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = one_v_one_mod.30.1
+		clr_country_flag = one_v_one_get_specific_advisor_flag
+	}
+	option = {
+		name = one_v_one_mod.30.2
+		hidden_effect = { country_event = { id = one_v_one_mod.30 } }
+	}
+	option = {
+		name = one_v_one_mod.33.1
+		clr_country_flag = one_v_one_get_specific_advisor_flag
+		hire_advisor = {
+			type = army_reformer
+			skill = 1
+		}
+		add_treasury = -33
+	}
+	option = {
+		name = one_v_one_mod.33.2
+		clr_country_flag = one_v_one_get_specific_advisor_flag
+		hire_advisor = {
+			type = commandant
+			skill = 1
+		}
+		add_treasury = -33
+	}
+	option = {
+		name = one_v_one_mod.33.3
+		clr_country_flag = one_v_one_get_specific_advisor_flag
+		hire_advisor = {
+			type = quartermaster
+			skill = 1
+		}
+		add_treasury = -33
+	}
+	option = {
+		name = one_v_one_mod.33.4
+		clr_country_flag = one_v_one_get_specific_advisor_flag
+		hire_advisor = {
+			type = recruitmaster
+			skill = 1
+		}
+		add_treasury = -33
+	}
+	option = {
+		name = one_v_one_mod.33.5
+		clr_country_flag = one_v_one_get_specific_advisor_flag
+		hire_advisor = {
+			type = army_organiser
+			skill = 1
+		}
+		add_treasury = -33
+	}
+	option = {
+		name = one_v_one_mod.33.6
+		clr_country_flag = one_v_one_get_specific_advisor_flag
+		hire_advisor = {
+			type = grand_captain
+			skill = 1
+		}
+		add_treasury = -33
+	}
+	option = {
+		name = one_v_one_mod.33.7
+		clr_country_flag = one_v_one_get_specific_advisor_flag
+		hire_advisor = {
+			type = fortification_expert
+			skill = 1
+		}
+		add_treasury = -33
+	}
+}
+country_event = { # Religion choosing
+	id = one_v_one_mod.34
+	title = one_v_one_mod.34.t
+	desc = one_v_one_mod.34.d
+	picture = RELIGION_eventPicture
+	is_triggered_only = yes
+	option = { # Sunni
+		trigger = { OR = { tag = MME tag = MMR } }
+		name = one_v_one_mod.34.a
+		custom_tooltip = one_v_one_mod.34.a.tt
+		hidden_effect = { every_owned_province = { change_religion = sunni } change_religion = sunni set_ruler_religion = sunni }
+		set_country_flag = one_v_one_invite_scholar_flag
+		country_event = { id = muslim_school_events.20 }
+		if = {
+			limit = { tag = MMR }
+			hidden_effect = { change_government = tribal }
+			add_government_reform = tribal_federation
+		}
+	}
+	option = { # Shia
+		trigger = { OR = { tag = MME tag = MMR } }
+		name = one_v_one_mod.34.b
+		custom_tooltip = one_v_one_mod.34.b.tt
+		hidden_effect = { every_owned_province = { change_religion = shiite } change_religion = shiite set_ruler_religion = shiite }
+		set_country_flag = one_v_one_invite_scholar_flag
+		country_event = { id = muslim_school_events.20 }
+		if = {
+			limit = { tag = MMR }
+			hidden_effect = { change_government = monarchy }
+			add_government_reform = feudal_theocracy 
+		}
+	}
+	option = { # Catholic
+		trigger = { OR = { tag = REW tag = REE } }
+		name = one_v_one_mod.34.c
+		custom_tooltip = one_v_one_mod.34.c.tt
+		tooltip = { add_country_modifier = { name = one_v_one_re_catholic_boost duration = -1 } }
+		re_choosing_religion = { religion = catholic }
+		if = {
+			limit = { has_global_flag = re_religion_chosen_flag }
+			REE = { re_chosen_religion = yes }
+			REW = { re_chosen_religion = yes }
+			if = {
+				limit = { started_in = 1685.1.2 NOT = { started_in = 1685.1.3 } }
+				REN = { re_chosen_religion = yes }
+				RES = { re_chosen_religion = yes }
+				RWN = { re_chosen_religion = yes }
+				RWS = { re_chosen_religion = yes }
+			}
+		}
+		set_global_flag = re_religion_chosen_flag
+	}
+	option = { # Protestant
+		trigger = { OR = { tag = REW tag = REE } }
+		name = one_v_one_mod.34.e
+		custom_tooltip = one_v_one_mod.34.e.tt
+		tooltip = { add_country_modifier = { name = one_v_one_re_protestant_boost duration = -1 } }
+		re_choosing_religion = { religion = protestant }
+		if = {
+			limit = { has_global_flag = re_religion_chosen_flag }
+			REE = { re_chosen_religion = yes }
+			REW = { re_chosen_religion = yes }
+			if = {
+				limit = { started_in = 1685.1.2 NOT = { started_in = 1685.1.3 } }
+				REN = { re_chosen_religion = yes }
+				RES = { re_chosen_religion = yes }
+				RWN = { re_chosen_religion = yes }
+				RWS = { re_chosen_religion = yes }
+			}
+		}
+		set_global_flag = re_religion_chosen_flag
+	}
+	option = { # Reformed
+		trigger = { always = no }
+		name = one_v_one_mod.34.f
+		custom_tooltip = one_v_one_mod.34.f.tt
+		re_choosing_religion = { religion = reformed }
+		if = {
+			limit = { has_global_flag = re_religion_chosen_flag }
+			REE = { re_chosen_religion = yes }
+			REW = { re_chosen_religion = yes }
+			if = {
+				limit = { started_in = 1685.1.2 NOT = { started_in = 1685.1.3 } }
+				REN = { re_chosen_religion = yes }
+				RES = { re_chosen_religion = yes }
+				RWN = { re_chosen_religion = yes }
+				RWS = { re_chosen_religion = yes }
+			}
+		}
+		set_global_flag = re_religion_chosen_flag
+	}
+	option = { # Anglican
+		trigger = { always = no }
+		name = one_v_one_mod.34.g
+		custom_tooltip = one_v_one_mod.34.g.tt
+		re_choosing_religion = { religion = anglican }
+		if = {
+			limit = { has_global_flag = re_religion_chosen_flag }
+			REE = { re_chosen_religion = yes }
+			REW = { re_chosen_religion = yes }
+			if = {
+				limit = { started_in = 1685.1.2 NOT = { started_in = 1685.1.3 } }
+				REN = { re_chosen_religion = yes }
+				RES = { re_chosen_religion = yes }
+				RWN = { re_chosen_religion = yes }
+				RWS = { re_chosen_religion = yes }
+			}
+		}
+		set_global_flag = re_religion_chosen_flag
+	}
+	option = { # Orthodox aka keep religion.
+		trigger = { OR = { tag = REW tag = REE } }
+		name = one_v_one_mod.34.h
+		set_country_flag = re_no_religion_chosen_flag
+		tooltip = { if = { limit = { religion = orthodox } add_country_modifier = { name = one_v_one_re_orthodox_boost duration = -1 } } }
+		if = {
+			limit = { has_global_flag = re_religion_chosen_flag }
+			REE = { re_chosen_religion = yes }
+			REW = { re_chosen_religion = yes }
+			if = {
+				limit = { started_in = 1685.1.2 NOT = { started_in = 1685.1.3 } }
+				REN = { re_chosen_religion = yes }
+				RES = { re_chosen_religion = yes }
+				RWN = { re_chosen_religion = yes }
+				RWS = { re_chosen_religion = yes }
+			}
+		}
+		set_global_flag = re_religion_chosen_flag
+	}
+}
+country_event = { # Kill units
+	id = one_v_one_mod.35
+	title = none
+	desc = none
+	picture = none
+	is_triggered_only = yes
+	hidden = yes
+	immediate = {
+		if = {
+			limit = { started_in = 1749.1.1 NOT = { started_in = 1749.1.3 } }
+			if = {
+				limit = { OR = { tag = SPR tag = SGB tag = SAU } }
+				event_target:selected_province = {
+					neut_prov_event = { neutr = TYN }
+				}
+			}
+			if = {
+				limit = { OR = { tag = SUA tag = SCN tag = SLU tag = SQU } }
+				event_target:selected_province = {
+					neut_prov_event = { neutr = TYM }
+				}
+			}
+		}
+		if = {
+			limit = { started_in = 1807.1.1 NOT = { started_in = 1807.1.3 } }
+			event_target:selected_province = {
+				neut_prov_event = { neutr = WWN }
+			}
+		}
+	}
+	option = { }
+}
+
+country_event = { # Italy
+	id = one_v_one_mod.41
+	title = one_v_one_mod.41.t
+	desc = one_v_one_mod.41.d
+	picture = one_v_one_ita_rules_event_pic
+	is_triggered_only = yes
+	trigger = { OR = { OR = { NOT = { has_country_flag = one_v_one_startup_event } has_country_flag = check_scenario_rules } has_country_flag = check_scenario_rules } }
+	immediate = { set_country_flag = one_v_one_startup_event }
+	option = {
+		name = one_v_one_mod.41.a highlight = yes
+		if = {
+			limit = { NOT = { has_country_flag = check_scenario_rules } }
+			country_event = { id = one_v_one_mod.3 }
+		}
+		clr_country_flag = check_scenario_rules
+	}
+}
+country_event = { # Otto-Mam
+	id = one_v_one_mod.42
+	title = one_v_one_mod.42.t
+	desc = one_v_one_mod.42.d
+	picture = one_v_one_ita_rules_event_pic
+	is_triggered_only = yes
+	trigger = { OR = { NOT = { has_country_flag = one_v_one_startup_event } has_country_flag = check_scenario_rules } }
+	immediate = { set_country_flag = one_v_one_startup_event }
+	option = {
+		name = one_v_one_mod.41.a highlight = yes
+		if = {
+			limit = { NOT = { has_country_flag = check_scenario_rules } }
+			country_event = { id = one_v_one_mod.3 }
+		}
+		clr_country_flag = check_scenario_rules
+	}
+}
+country_event = { # Japan
+	id = one_v_one_mod.43
+	title = one_v_one_mod.43.t
+	desc = one_v_one_mod.43.d
+	picture = one_v_one_ita_rules_event_pic
+	is_triggered_only = yes
+	trigger = { OR = { NOT = { has_country_flag = one_v_one_startup_event } has_country_flag = check_scenario_rules } }
+	immediate = { set_country_flag = one_v_one_startup_event }
+	option = {
+		name = one_v_one_mod.41.a highlight = yes
+		if = {
+			limit = { NOT = { has_country_flag = check_scenario_rules } }
+			country_event = { id = one_v_one_mod.3 }
+		}
+		clr_country_flag = check_scenario_rules
+	}
+}
+country_event = { # Japan alt
+	id = one_v_one_mod.433
+	title = one_v_one_mod.433.t
+	desc = one_v_one_mod.43.d
+	picture = one_v_one_ita_rules_event_pic
+	is_triggered_only = yes
+	trigger = { OR = { NOT = { has_country_flag = one_v_one_startup_event } has_country_flag = check_scenario_rules } }
+	immediate = { set_country_flag = one_v_one_startup_event }
+	option = {
+		name = one_v_one_mod.41.a highlight = yes
+		if = {
+			limit = { NOT = { has_country_flag = check_scenario_rules } }
+			country_event = { id = one_v_one_mod.3 }
+		}
+		clr_country_flag = check_scenario_rules
+	}
+}
+country_event = { # India
+	id = one_v_one_mod.44
+	title = one_v_one_mod.44.t
+	desc = one_v_one_mod.44.d
+	picture = one_v_one_ita_rules_event_pic
+	is_triggered_only = yes
+	trigger = { OR = { NOT = { has_country_flag = one_v_one_startup_event } has_country_flag = check_scenario_rules } }
+	immediate = { set_country_flag = one_v_one_startup_event }
+	option = {
+		name = one_v_one_mod.41.a highlight = yes
+		if = {
+			limit = { NOT = { has_country_flag = check_scenario_rules } }
+			country_event = { id = one_v_one_mod.3 }
+		}
+		clr_country_flag = check_scenario_rules
+	}
+}
+country_event = { # Spa-Fra
+	id = one_v_one_mod.45
+	title = one_v_one_mod.45.t
+	desc = one_v_one_mod.45.d
+	picture = one_v_one_ita_rules_event_pic
+	is_triggered_only = yes
+	trigger = { OR = { NOT = { has_country_flag = one_v_one_startup_event } has_country_flag = check_scenario_rules } }
+	immediate = { set_country_flag = one_v_one_startup_event }
+	option = {
+		name = one_v_one_mod.41.a highlight = yes
+		if = {
+			limit = { NOT = { has_country_flag = check_scenario_rules } }
+			country_event = { id = one_v_one_mod.3 }
+		}
+		clr_country_flag = check_scenario_rules
+	}
+}
+country_event = { # Napoleonic
+	id = one_v_one_mod.46
+	title = one_v_one_mod.46.t
+	desc = one_v_one_mod.46.d
+	picture = one_v_one_ita_rules_event_pic
+	is_triggered_only = yes
+	trigger = { OR = { NOT = { has_country_flag = one_v_one_startup_event } has_country_flag = check_scenario_rules } }
+	immediate = { set_country_flag = one_v_one_startup_event }
+	option = {
+		name = one_v_one_mod.41.a highlight = yes
+		if = {
+			limit = { NOT = { has_country_flag = check_scenario_rules } }
+			country_event = { id = one_v_one_mod.3 }
+		}
+		clr_country_flag = check_scenario_rules
+	}
+}
+country_event = { # Napoleonic alt
+	id = one_v_one_mod.466
+	title = one_v_one_mod.466.t
+	desc = one_v_one_mod.46.d
+	picture = one_v_one_ita_rules_event_pic
+	is_triggered_only = yes
+	trigger = { OR = { NOT = { has_country_flag = one_v_one_startup_event } has_country_flag = check_scenario_rules } }
+	immediate = { set_country_flag = one_v_one_startup_event }
+	option = {
+		name = one_v_one_mod.41.a highlight = yes
+		if = {
+			limit = { NOT = { has_country_flag = check_scenario_rules } }
+			country_event = { id = one_v_one_mod.3 }
+		}
+		clr_country_flag = check_scenario_rules
+	}
+}
+country_event = { # Thirty Years
+	id = one_v_one_mod.47
+	title = one_v_one_mod.47.t
+	desc = one_v_one_mod.47.d
+	picture = one_v_one_ita_rules_event_pic
+	is_triggered_only = yes
+	trigger = { OR = { NOT = { has_country_flag = one_v_one_startup_event } has_country_flag = check_scenario_rules } }
+	immediate = { set_country_flag = one_v_one_startup_event }
+	option = {
+		name = one_v_one_mod.41.a highlight = yes
+		if = {
+			limit = { NOT = { has_country_flag = check_scenario_rules } }
+			swap_free_idea_group = yes
+			custom_tooltip = one_v_one_mod.3.tyww.a.tt
+		}
+		clr_country_flag = check_scenario_rules
+	}
+}
+country_event = { # Thirty Years alt
+	id = one_v_one_mod.477
+	title = one_v_one_mod.477.t
+	desc = one_v_one_mod.47.d
+	picture = one_v_one_ita_rules_event_pic
+	is_triggered_only = yes
+	trigger = { OR = { NOT = { has_country_flag = one_v_one_startup_event } has_country_flag = check_scenario_rules } }
+	immediate = { set_country_flag = one_v_one_startup_event }
+	option = {
+		name = one_v_one_mod.41.a highlight = yes
+		if = {
+			limit = { NOT = { has_country_flag = check_scenario_rules } }
+			swap_free_idea_group = yes
+			custom_tooltip = one_v_one_mod.3.tyww.a.tt
+		}
+		clr_country_flag = check_scenario_rules
+	}
+}
+country_event = { # Great War
+	id = one_v_one_mod.48
+	title = one_v_one_mod.48.t
+	desc = one_v_one_mod.48.d
+	picture = one_v_one_ita_rules_event_pic
+	is_triggered_only = yes
+	trigger = { OR = { NOT = { has_country_flag = one_v_one_startup_event } has_country_flag = check_scenario_rules } }
+	immediate = { set_country_flag = one_v_one_startup_event }
+	option = {
+		name = one_v_one_mod.41.a highlight = yes
+		if = {
+			limit = { NOT = { has_country_flag = check_scenario_rules } }
+			swap_free_idea_group = yes
+			custom_tooltip = one_v_one_mod.3.tyww.a.tt
+		}
+		clr_country_flag = check_scenario_rules
+	}
+}
+country_event = { # Seven Years
+	id = one_v_one_mod.49
+	title = one_v_one_mod.49.t
+	desc = one_v_one_mod.49.d
+	picture = one_v_one_ita_rules_event_pic
+	is_triggered_only = yes
+	trigger = { OR = { NOT = { has_country_flag = one_v_one_startup_event } has_country_flag = check_scenario_rules } }
+	immediate = { set_country_flag = one_v_one_startup_event }
+	option = {
+		name = one_v_one_mod.41.a highlight = yes
+		if = {
+			limit = { NOT = { has_country_flag = check_scenario_rules } }
+			swap_free_idea_group = yes
+			custom_tooltip = one_v_one_mod.3.tyww.a.tt
+		}
+		clr_country_flag = check_scenario_rules
+	}
+}
+country_event = { # Thirty Years alt
+	id = one_v_one_mod.499
+	title = one_v_one_mod.499.t
+	desc = one_v_one_mod.49.d
+	picture = one_v_one_ita_rules_event_pic
+	is_triggered_only = yes
+	trigger = { OR = { NOT = { has_country_flag = one_v_one_startup_event } has_country_flag = check_scenario_rules } }
+	immediate = { set_country_flag = one_v_one_startup_event }
+	option = {
+		name = one_v_one_mod.41.a highlight = yes
+		if = {
+			limit = { NOT = { has_country_flag = check_scenario_rules } }
+			swap_free_idea_group = yes
+			custom_tooltip = one_v_one_mod.3.tyww.a.tt
+		}
+		clr_country_flag = check_scenario_rules
+	}
+}
+country_event = { # Seven Years Prussia-Britain Hannover
+	id = one_v_one_mod.491
+	title = one_v_one_mod.491.t
+	desc = one_v_one_mod.491.d
+	picture = GENERALS_DISCUSSING_eventPicture
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = { name = one_v_one_mod.491.a }
+	option = {
+		name = one_v_one_mod.491.b
+		SGB = { country_event = { id = one_v_one_mod.492 } }
+		custom_tooltip = one_v_one_mod.491.b.tt
+	}
+}
+country_event = { # Seven Years Prussia-Britain Hannover
+	id = one_v_one_mod.492
+	title = one_v_one_mod.491.t
+	desc = one_v_one_mod.492.d
+	picture = GENERALS_DISCUSSING_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = one_v_one_mod.492.a
+		SPR = { country_event = { id = one_v_one_mod.493 } }
+	}
+	option = {
+		name = one_v_one_mod.492.b
+		custom_tooltip = one_v_one_mod.492.b.tt
+		hidden_effect = {
+			north_german_region = {
+				limit = { owned_by = SGB }
+				every_neighbor_province = { discover_country = SPR }
+				add_core = SPR
+				cede_province = SPR
+				remove_core = SGB
+				change_religion = protestant
+				change_culture = prussian
+			}
+		}
+	}
+}
+country_event = { # Seven Years Prussia-Britain Hannover
+	id = one_v_one_mod.493
+	title = one_v_one_mod.491.t
+	desc = one_v_one_mod.493.d
+	picture = GENERALS_DISCUSSING_eventPicture
+	is_triggered_only = yes
+	option = { name = one_v_one_mod.493.a }
+}
+country_event = { # Seven Years Colonial Wars
+	id = one_v_one_mod.494
+	title = one_v_one_mod.494.t
+	desc = one_v_one_mod.494.d
+	picture = MILITARY_CAMP_eventPicture
+	trigger = {
+		NOT = { has_global_flag = block_war_dec }
+		NOT = { has_global_flag = syw_start_flag }
+		is_year = 1755
+		NOT = { is_year = 1756 }
+		OR = {
+			tag = SUA
+			tag = SLU
+		}
+		owns = 948
+	}
+	major = yes
+	immediate = {
+		hidden_effect = {
+			if = {
+				limit = { SUA = { owns = 948 } }
+				948 = { add_permanent_claim = SLU }
+				SLU = {
+					declare_war_with_cb = {
+						who = SUA
+						casus_belli = cb_conquest
+						war_goal_province = 948
+					}
+				}
+				SFR = { join_all_offensive_wars_of = SLU hidden_effect = { country_event = { id = one_v_one_mod.4944 } } }
+				SQU = { join_all_offensive_wars_of = SLU hidden_effect = { country_event = { id = one_v_one_mod.4944 } } }
+				SGB = { join_all_defensive_wars_of = SUA hidden_effect = { country_event = { id = one_v_one_mod.4944 } } }
+				SCN = { join_all_defensive_wars_of = SUA hidden_effect = { country_event = { id = one_v_one_mod.4944 } } }
+				SLU = { hidden_effect = { country_event = { id = one_v_one_mod.4944 } } }
+				SUA = { hidden_effect = { country_event = { id = one_v_one_mod.4944 } } }
+			}
+			if = {
+				limit = { SLU = { owns = 948 } }
+				948 = { add_permanent_claim = SUA }
+				SUA = {
+					declare_war_with_cb = {
+						who = SLU
+						casus_belli = cb_conquest
+						war_goal_province = 948
+					}
+				}
+				SGB = { join_all_offensive_wars_of = SUA hidden_effect = { country_event = { id = one_v_one_mod.4944 } } }
+				SCN = { join_all_offensive_wars_of = SUA hidden_effect = { country_event = { id = one_v_one_mod.4944 } } }
+				SFR = { join_all_defensive_wars_of = SLU hidden_effect = { country_event = { id = one_v_one_mod.4944 } } }
+				SQU = { join_all_defensive_wars_of = SLU hidden_effect = { country_event = { id = one_v_one_mod.4944 } } }
+				SUA = { hidden_effect = { country_event = { id = one_v_one_mod.4944 } } }
+				SLU = { hidden_effect = { country_event = { id = one_v_one_mod.4944 } } }
+			}
+			set_global_flag = syw_start_flag
+		}
+	}
+	option = { name = one_v_one_mod.494.a }
+}
+country_event = { # maps reveal
+	id = one_v_one_mod.4944
+	title = none
+	desc = none
+	picture = none
+	hidden = yes
+	is_triggered_only = yes
+	immediate = {
+		every_province = {
+			limit = {
+				OR = {
+					owned_by = SGB
+					owned_by = SUA
+					owned_by = SCN
+					owned_by = SFR
+					owned_by = SLU
+					owned_by = SQU
+				}
+			}
+			discover_country = ROOT
+		}
+	}
+	option = {}
+}
+country_event = { # maps reveal
+	id = one_v_one_mod.4945
+	title = none
+	desc = none
+	picture = none
+	hidden = yes
+	is_triggered_only = yes
+	immediate = {
+		every_province = {
+			limit = {
+				OR = {
+					owned_by = SPR
+					owned_by = SGB
+					owned_by = SUA
+					owned_by = SCN
+					owned_by = SPO
+					owned_by = SBR
+					owned_by = SAU
+					owned_by = SFR
+					owned_by = SLU
+					owned_by = SQU
+					owned_by = SSP
+					owned_by = SNS
+				}
+			}
+			discover_country = ROOT
+		}
+	}
+	option = {}
+}
+country_event = { # Seven Years Europe
+	id = one_v_one_mod.495
+	title = one_v_one_mod.495.t
+	desc = one_v_one_mod.495.d
+	picture = MILITARY_CAMP_eventPicture
+	trigger = {
+		has_global_flag = syw_start_flag
+		NOT = { has_country_flag = joined_syw_flag }
+		is_year = 1756
+		OR = {
+			tag = SPR
+			tag = SAU
+			tag = SPO
+			tag = SSP
+		}
+	}
+	immediate = {
+		hidden_effect = {
+			if = {
+				limit = { OR = { tag = SPR tag = SPO } }
+				ROOT = { join_all_offensive_wars_of = SUA hidden_effect = { country_event = { id = one_v_one_mod.4945 } } }
+				ROOT = { join_all_defensive_wars_of = SUA hidden_effect = { country_event = { id = one_v_one_mod.4945 } } }
+				SBR = { hidden_effect = { country_event = { id = one_v_one_mod.4945 } } }
+				SGB = { hidden_effect = { country_event = { id = one_v_one_mod.4945 } } }
+				SUA = { hidden_effect = { country_event = { id = one_v_one_mod.4945 } } }
+				SCN = { hidden_effect = { country_event = { id = one_v_one_mod.4945 } } }
+			}
+			if = {
+				limit = { OR = { tag = SAU tag = SSP } }
+				ROOT = { join_all_offensive_wars_of = SLU hidden_effect = { country_event = { id = one_v_one_mod.4945 } } }
+				ROOT = { join_all_defensive_wars_of = SLU hidden_effect = { country_event = { id = one_v_one_mod.4945 } } }
+				SNS = { hidden_effect = { country_event = { id = one_v_one_mod.4945 } } }
+				SFR = { hidden_effect = { country_event = { id = one_v_one_mod.4945 } } }
+				SQU = { hidden_effect = { country_event = { id = one_v_one_mod.4945 } } }
+				SLU = { hidden_effect = { country_event = { id = one_v_one_mod.4945 } } }
+			}
+			set_country_flag = joined_syw_flag
+		}
+	}
+	option = { name = one_v_one_mod.494.a }
+}
+country_event = { # Austrian Succession
+	id = one_v_one_mod.50
+	title = one_v_one_mod.50.t
+	desc = one_v_one_mod.50.d
+	picture = one_v_one_ita_rules_event_pic
+	is_triggered_only = yes
+	trigger = { OR = { NOT = { has_country_flag = one_v_one_startup_event } has_country_flag = check_scenario_rules } }
+	immediate = { set_country_flag = one_v_one_startup_event }
+	option = {
+		name = one_v_one_mod.41.a highlight = yes
+		if = {
+			limit = { NOT = { has_country_flag = check_scenario_rules } }
+			swap_free_idea_group = yes
+			custom_tooltip = one_v_one_mod.3.tyww.a.tt
+		}
+		clr_country_flag = check_scenario_rules
+	}
+}
+country_event = { # Great Turkish War
+	id = one_v_one_mod.51
+	title = one_v_one_mod.51.t
+	desc = one_v_one_mod.51.d
+	picture = one_v_one_ita_rules_event_pic
+	is_triggered_only = yes
+	trigger = { OR = { NOT = { has_country_flag = one_v_one_startup_event } has_country_flag = check_scenario_rules } }
+	immediate = { set_country_flag = one_v_one_startup_event }
+	option = {
+		name = one_v_one_mod.41.a highlight = yes
+		if = {
+			limit = { NOT = { has_country_flag = check_scenario_rules } }
+			country_event = { id = one_v_one_mod.3 }
+		}
+		if = {
+			limit = { NOT = { has_country_flag = one_v_one_gtw_starting_nation_flag } }
+			set_country_flag = one_v_one_gtw_starting_nation_flag
+			swap_free_idea_group = yes
+		}
+		clr_country_flag = check_scenario_rules
+	}
+}
+country_event = { # Great Turkish War Alt
+	id = one_v_one_mod.511
+	title = one_v_one_mod.511.t
+	desc = one_v_one_mod.51.d
+	picture = one_v_one_ita_rules_event_pic
+	is_triggered_only = yes
+	trigger = { OR = { NOT = { has_country_flag = one_v_one_startup_event } has_country_flag = check_scenario_rules } }
+	immediate = { set_country_flag = one_v_one_startup_event }
+	option = {
+		name = one_v_one_mod.41.a highlight = yes
+		if = {
+			limit = { NOT = { has_country_flag = check_scenario_rules } }
+			country_event = { id = one_v_one_mod.3 }
+		}
+		if = {
+			limit = { NOT = { has_country_flag = one_v_one_gtw_starting_nation_flag } }
+			set_country_flag = one_v_one_gtw_starting_nation_flag
+			swap_free_idea_group = yes
+		}
+		clr_country_flag = check_scenario_rules
+	}
+}
+country_event = { # Great Turkish War Scripted War
+	id = one_v_one_mod.512
+	title = none
+	desc = none
+	picture = none
+	hidden = yes
+	fire_only_once = yes
+	mean_time_to_happen = { days = 1 }
+	trigger = {
+		NOT = { has_global_flag = block_war_dec }
+		is_year = 1683
+		is_month = 6
+		tag = GTO
+		GTO = { is_at_war = no }
+	}
+	immediate = {
+		hidden_effect = {
+			134 = { add_permanent_claim = GTO }
+			GTO = {
+				declare_war_with_cb = {
+					who = GAU
+					casus_belli = cb_conquest
+					war_goal_province = 134
+				}
+			}
+		}
+	}
+	option = { }
+}
+country_event = { # Roman Wars
+	id = one_v_one_mod.52
+	title = one_v_one_mod.52.t
+	desc = one_v_one_mod.52.d
+	picture = one_v_one_ita_rules_event_pic
+	is_triggered_only = yes
+	trigger = { OR = { NOT = { has_country_flag = one_v_one_startup_event } has_country_flag = check_scenario_rules } }
+	immediate = { set_country_flag = one_v_one_startup_event }
+	option = {
+		name = one_v_one_mod.41.a highlight = yes
+		if = {
+			limit = { NOT = { has_country_flag = check_scenario_rules } }
+			swap_free_idea_group = yes
+			custom_tooltip = one_v_one_mod.3.tyww.a.tt
+			if = {
+				limit = { OR = { tag = REW tag = REE } }
+				country_event = { id = one_v_one_mod.521 }
+				country_event = { id = one_v_one_mod.34 }
+			}
+		}
+		clr_country_flag = check_scenario_rules
+	}
+}
+country_event = { # Roman Wars Bans Block
+	id = one_v_one_mod.521
+	title = one_v_one_mod.521.t
+	desc = one_v_one_mod.521.d
+	picture = GENERALS_DISCUSSING_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = one_v_one_mod.521.a
+		if = {
+			limit = { NOT = { has_country_flag = re_maj_debuff_blocked } }
+			re_bans_block_effect = { re_option = re_maj re_num = 1 }
+		}
+		if = {
+			limit = { has_country_flag = re_maj_debuff_blocked }
+			re_bans_block_effect = { re_option = re_min re_num = 1 }
+		}
+	}
+	option = {
+		name = one_v_one_mod.521.b
+		if = {
+			limit = { NOT = { has_country_flag = re_maj_debuff_blocked } }
+			re_bans_block_effect = { re_option = re_maj re_num = 2 }
+		}
+		if = {
+			limit = { has_country_flag = re_maj_debuff_blocked }
+			re_bans_block_effect = { re_option = re_min re_num = 2 }
+		}
+	}
+	option = {
+		name = one_v_one_mod.521.c
+		if = {
+			limit = { NOT = { has_country_flag = re_maj_debuff_blocked } }
+			re_bans_block_effect = { re_option = re_maj re_num = 3 }
+		}
+		if = {
+			limit = { has_country_flag = re_maj_debuff_blocked }
+			re_bans_block_effect = { re_option = re_min re_num = 3 }
+		}
+	}
+}
+country_event = { # Roman Wars Bans Maj
+	id = one_v_one_mod.522
+	title = one_v_one_mod.522.t
+	desc = one_v_one_mod.522.d
+	picture = GENERALS_DISCUSSING_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = one_v_one_mod.522.a
+		trigger = {
+			if = {
+				limit = { tag = REW }
+				REE = { NOT = { has_country_flag = block_re_maj_debuf_1_ban_block_flag } }
+			}
+			if = {
+				limit = { tag = REE }
+				REW = { NOT = { has_country_flag = block_re_maj_debuf_1_ban_block_flag } }
+			}
+		}
+		set_country_flag = re_maj_debuff_blocked
+		re_bans_effect = { re_option = re_maj re_num = 1 }
+	}
+	option = {
+		name = one_v_one_mod.522.b
+		trigger = {
+			if = {
+				limit = { tag = REW }
+				REE = { NOT = { has_country_flag = block_re_maj_debuf_2_ban_block_flag } }
+			}
+			if = {
+				limit = { tag = REE }
+				REW = { NOT = { has_country_flag = block_re_maj_debuf_2_ban_block_flag } }
+			}
+		}
+		set_country_flag = re_maj_debuff_blocked
+		re_bans_effect = { re_option = re_maj re_num = 2 }
+	}
+	option = {
+		name = one_v_one_mod.522.c
+		trigger = {
+			if = {
+				limit = { tag = REW }
+				REE = { NOT = { has_country_flag = block_re_maj_debuf_3_ban_block_flag } }
+			}
+			if = {
+				limit = { tag = REE }
+				REW = { NOT = { has_country_flag = block_re_maj_debuf_3_ban_block_flag } }
+			}
+		}
+		set_country_flag = re_maj_debuff_blocked
+		re_bans_effect = { re_option = re_maj re_num = 3 }
+	}
+}
+country_event = { # Roman Wars Bans Min
+	id = one_v_one_mod.523
+	title = one_v_one_mod.523.t
+	desc = one_v_one_mod.523.d
+	picture = GENERALS_DISCUSSING_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = one_v_one_mod.523.a
+		trigger = {
+			if = {
+				limit = { tag = REW }
+				REE = { NOT = { has_country_flag = block_re_min_debuf_1_ban_block_flag } }
+			}
+			if = {
+				limit = { tag = REE }
+				REW = { NOT = { has_country_flag = block_re_min_debuf_1_ban_block_flag } }
+			}
+		}
+		re_bans_effect = { re_option = re_min re_num = 1 }
+	}
+	option = {
+		name = one_v_one_mod.523.b
+		trigger = {
+			if = {
+				limit = { tag = REW }
+				REE = { NOT = { has_country_flag = block_re_min_debuf_2_ban_block_flag } }
+			}
+			if = {
+				limit = { tag = REE }
+				REW = { NOT = { has_country_flag = block_re_min_debuf_2_ban_block_flag } }
+			}
+		}
+		re_bans_effect = { re_option = re_min re_num = 2 }
+	}
+	option = {
+		name = one_v_one_mod.523.c
+		trigger = {
+			if = {
+				limit = { tag = REW }
+				REE = { NOT = { has_country_flag = block_re_min_debuf_3_ban_block_flag } }
+			}
+			if = {
+				limit = { tag = REE }
+				REW = { NOT = { has_country_flag = block_re_min_debuf_3_ban_block_flag } }
+			}
+		}
+		re_bans_effect = { re_option = re_min re_num = 3 }
+	}
+}
+country_event = { # Roman Wars Bans Min
+	id = one_v_one_mod.524
+	title = one_v_one_mod.524.t
+	desc = one_v_one_mod.524.d
+	picture = GENERALS_DISCUSSING_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = one_v_one_mod.524.a
+		if = {
+			limit = { has_global_flag = re_banned_region_flag }
+			set_global_flag = one_v_one_mission_re_debuf_done_flag
+		}
+		set_global_flag = re_banned_region_flag
+		set_country_flag = re_banned_region_1_flag
+	}
+	option = {
+		name = one_v_one_mod.524.b
+		if = {
+			limit = { has_global_flag = re_banned_region_flag }
+			set_global_flag = one_v_one_mission_re_debuf_done_flag
+		}
+		set_global_flag = re_banned_region_flag
+		set_country_flag = re_banned_region_2_flag
+	}
+	option = {
+		name = one_v_one_mod.524.c
+		if = {
+			limit = { has_global_flag = re_banned_region_flag }
+			set_global_flag = one_v_one_mission_re_debuf_done_flag
+		}
+		set_global_flag = re_banned_region_flag
+		set_country_flag = re_banned_region_3_flag
+	}
+}
+country_event = { # Roman Wars War Buff timed effect
+	id = one_v_one_mod.525
+	title = one_v_one_mod.525.t
+	desc = one_v_one_mod.525.d
+	picture = GENERALS_DISCUSSING_eventPicture
+	trigger = {
+		NOT = { has_country_flag = mission_re_war_effect_fired }
+		one_v_one_re_nations = yes
+		is_at_war = yes
+		if = {
+			limit = { mission_completed = one_v_one_mission_re_war_2 }
+			had_country_flag = {
+				flag = one_v_one_mission_re_war_2_flag
+				days = 2190
+			}
+		}
+		if = {
+			limit = { mission_completed = one_v_one_mission_re_war_3 }
+			had_country_flag = {
+				flag = one_v_one_mission_re_war_3_flag
+				days = 3285
+			}
+		}
+		if = {
+			limit = { mission_completed = one_v_one_mission_re_war_4 }
+			had_country_flag = {
+				flag = one_v_one_mission_re_war_4_flag
+				days = 4745
+			}
+		}
+	}
+	immediate = {
+		hidden_effect = {
+			set_country_flag = mission_re_war_effect_fired
+			if = {
+				limit = { mission_completed = one_v_one_mission_re_war_1 }
+				play_sound = re_banzai
+				if = {
+					limit = { started_in = 1685.1.1 NOT = { started_in = 1685.1.2 } }
+					add_manpower = 250
+					add_country_modifier = { name = one_v_one_mission_re_war_1_modifier duration = 2190 }
+				}
+				if = {
+					limit = { started_in = 1685.1.2 NOT = { started_in = 1685.1.3 } }
+					add_manpower = 84
+					add_country_modifier = { name = one_v_one_mission_re_war_1_modifier duration = 2190 }
+				}
+				if = {
+					limit = { OR = { tag = REW tag = RWN tag = RWS } }
+					REE = { set_country_flag = re_west_war_1_fired country_event = { id = one_v_one_mod.526 } }
+					REN = { set_country_flag = re_west_war_1_fired country_event = { id = one_v_one_mod.526 } }
+					RES = { set_country_flag = re_west_war_1_fired country_event = { id = one_v_one_mod.526 } }
+				}
+				if = {
+					limit = { OR = { tag = REE tag = REN tag = RES } }
+					REW = { set_country_flag = re_east_war_1_fired country_event = { id = one_v_one_mod.526 } }
+					RWN = { set_country_flag = re_east_war_1_fired country_event = { id = one_v_one_mod.526 } }
+					RWS = { set_country_flag = re_east_war_1_fired country_event = { id = one_v_one_mod.526 } }
+				}
+			}
+			if = {
+				limit = { mission_completed = one_v_one_mission_re_war_2 }
+				play_sound = re_hell
+				if = {
+					limit = { started_in = 1685.1.1 NOT = { started_in = 1685.1.2 } }
+					add_manpower = 300
+					add_treasury = 15000
+					add_country_modifier = { name = one_v_one_mission_re_war_2_modifier duration = 4015 }
+				}
+				if = {
+					limit = { started_in = 1685.1.2 NOT = { started_in = 1685.1.3 } }
+					add_manpower = 100
+					add_treasury = 1666
+					add_country_modifier = { name = one_v_one_mission_re_war_2_modifier duration = 4015 }
+				}
+				if = {
+					limit = { OR = { tag = REW tag = RWN tag = RWS } }
+					REE = { set_country_flag = re_west_war_2_fired country_event = { id = one_v_one_mod.526 } }
+					REN = { set_country_flag = re_west_war_2_fired country_event = { id = one_v_one_mod.526 } }
+					RES = { set_country_flag = re_west_war_2_fired country_event = { id = one_v_one_mod.526 } }
+				}
+				if = {
+					limit = { OR = { tag = REE tag = REN tag = RES } }
+					REW = { set_country_flag = re_east_war_2_fired country_event = { id = one_v_one_mod.526 } }
+					RWN = { set_country_flag = re_east_war_2_fired country_event = { id = one_v_one_mod.526 } }
+					RWS = { set_country_flag = re_east_war_2_fired country_event = { id = one_v_one_mod.526 } }
+				}
+			}
+			if = {
+				limit = { mission_completed = one_v_one_mission_re_war_3 }
+				play_sound = re_rigged
+				if = {
+					limit = { started_in = 1685.1.1 NOT = { started_in = 1685.1.2 } }
+					add_manpower = 500
+					add_treasury = 15000
+					add_country_modifier = { name = one_v_one_mission_re_war_3_modifier duration = -1 }
+				}
+				if = {
+					limit = { started_in = 1685.1.2 NOT = { started_in = 1685.1.3 } }
+					add_manpower = 166
+					add_treasury = 3333
+					add_country_modifier = { name = one_v_one_mission_re_war_3_modifier duration = -1 }
+				}
+				if = {
+					limit = { OR = { tag = REW tag = RWN tag = RWS } }
+					REE = { set_country_flag = re_west_war_3_fired country_event = { id = one_v_one_mod.526 } }
+					REN = { set_country_flag = re_west_war_3_fired country_event = { id = one_v_one_mod.526 } }
+					RES = { set_country_flag = re_west_war_3_fired country_event = { id = one_v_one_mod.526 } }
+				}
+				if = {
+					limit = { OR = { tag = REE tag = REN tag = RES } }
+					REW = { set_country_flag = re_east_war_3_fired country_event = { id = one_v_one_mod.526 } }
+					RWN = { set_country_flag = re_east_war_3_fired country_event = { id = one_v_one_mod.526 } }
+					RWS = { set_country_flag = re_east_war_3_fired country_event = { id = one_v_one_mod.526 } }
+				}
+			}
+			if = {
+				limit = { mission_completed = one_v_one_mission_re_war_4 }
+				play_sound = re_creeping
+				if = {
+					limit = { started_in = 1685.1.1 NOT = { started_in = 1685.1.2 } }
+					add_manpower = 500
+					add_treasury = 15000
+					add_country_modifier = { name = one_v_one_mission_re_war_4_modifier duration = -1 }
+				}
+				if = {
+					limit = { started_in = 1685.1.2 NOT = { started_in = 1685.1.3 } }
+					add_manpower = 166
+					add_treasury = 5000
+					add_country_modifier = { name = one_v_one_mission_re_war_4_modifier duration = -1 }
+				}
+				if = {
+					limit = { OR = { tag = REW tag = RWN tag = RWS } }
+					REE = { set_country_flag = re_west_war_4_fired country_event = { id = one_v_one_mod.526 } }
+					REN = { set_country_flag = re_west_war_4_fired country_event = { id = one_v_one_mod.526 } }
+					RES = { set_country_flag = re_west_war_4_fired country_event = { id = one_v_one_mod.526 } }
+				}
+				if = {
+					limit = { OR = { tag = REE tag = REN tag = RES } }
+					REW = { set_country_flag = re_east_war_4_fired country_event = { id = one_v_one_mod.526 } }
+					RWN = { set_country_flag = re_east_war_4_fired country_event = { id = one_v_one_mod.526 } }
+					RWS = { set_country_flag = re_east_war_4_fired country_event = { id = one_v_one_mod.526 } }
+				}
+			}
+		}
+	}
+	option = {
+		name = one_v_one_mod.525.a
+		tooltip = {
+			if = {
+				limit = { mission_completed = one_v_one_mission_re_war_1 }
+				if = {
+					limit = { started_in = 1685.1.1 NOT = { started_in = 1685.1.2 } }
+					add_manpower = 250
+					add_country_modifier = { name = one_v_one_mission_re_war_1_modifier duration = 2190 }
+				}
+				if = {
+					limit = { started_in = 1685.1.2 NOT = { started_in = 1685.1.3 } }
+					add_manpower = 84
+					add_country_modifier = { name = one_v_one_mission_re_war_1_modifier duration = 2190 }
+				}
+			}
+			if = {
+				limit = { mission_completed = one_v_one_mission_re_war_2 }
+				if = {
+					limit = { started_in = 1685.1.1 NOT = { started_in = 1685.1.2 } }
+					add_manpower = 300
+					add_treasury = 15000
+					add_country_modifier = { name = one_v_one_mission_re_war_2_modifier duration = 4015 }
+				}
+				if = {
+					limit = { started_in = 1685.1.2 NOT = { started_in = 1685.1.3 } }
+					add_manpower = 100
+					add_treasury = 1666
+					add_country_modifier = { name = one_v_one_mission_re_war_2_modifier duration = 4015 }
+				}
+			}
+			if = {
+				limit = { mission_completed = one_v_one_mission_re_war_3 }
+				if = {
+					limit = { started_in = 1685.1.1 NOT = { started_in = 1685.1.2 } }
+					add_manpower = 500
+					add_treasury = 15000
+					add_country_modifier = { name = one_v_one_mission_re_war_3_modifier duration = -1 }
+				}
+				if = {
+					limit = { started_in = 1685.1.2 NOT = { started_in = 1685.1.3 } }
+					add_manpower = 166
+					add_treasury = 3333
+					add_country_modifier = { name = one_v_one_mission_re_war_3_modifier duration = -1 }
+				}
+			}
+			if = {
+				limit = { mission_completed = one_v_one_mission_re_war_4 }
+				if = {
+					limit = { started_in = 1685.1.1 NOT = { started_in = 1685.1.2 } }
+					add_manpower = 500
+					add_treasury = 15000
+					add_country_modifier = { name = one_v_one_mission_re_war_4_modifier duration = -1 }
+				}
+				if = {
+					limit = { started_in = 1685.1.2 NOT = { started_in = 1685.1.3 } }
+					add_manpower = 166
+					add_treasury = 5000
+					add_country_modifier = { name = one_v_one_mission_re_war_4_modifier duration = -1 }
+				}
+			}
+		}
+	}
+}
+country_event = { # Roman Wars War Buff timed effect
+	id = one_v_one_mod.526
+	title = one_v_one_mod.526.t
+	desc = one_v_one_mod.526.d
+	picture = GENERALS_DISCUSSING_eventPicture
+	is_triggered_only = yes
+	trigger = {
+		NOT = { has_country_flag = mission_re_war_effect_fired2 }
+		one_v_one_re_nations = yes
+	}
+	immediate = {
+		hidden_effect = {
+			set_country_flag = mission_re_war_effect_fired2
+			if = {
+				limit = { OR = { has_country_flag = re_west_war_1_fired has_country_flag = re_east_war_1_fired } }
+				play_sound = re_banzai
+			}
+			if = {
+				limit = { OR = { has_country_flag = re_west_war_2_fired has_country_flag = re_east_war_2_fired } }
+				play_sound = re_hell
+			}
+			if = {
+				limit = { OR = { has_country_flag = re_west_war_3_fired has_country_flag = re_east_war_3_fired } }
+				play_sound = re_rigged
+			}
+			if = {
+				limit = { OR = { has_country_flag = re_west_war_4_fired has_country_flag = re_east_war_4_fired } }
+				play_sound = re_creeping
+			}
+		}
+	}
+	option = {
+		name = one_v_one_mod.525.a
+		custom_tooltip = one_v_one_mod.526.tt
+		tooltip = {
+			FROM = {
+			if = {
+				limit = { OR = { has_country_flag = re_west_war_1_fired has_country_flag = re_east_war_1_fired } }
+				if = {
+					limit = { started_in = 1685.1.1 NOT = { started_in = 1685.1.2 } }
+					add_manpower = 250
+					add_country_modifier = { name = one_v_one_mission_re_war_1_modifier duration = 2190 }
+				}
+				if = {
+					limit = { started_in = 1685.1.2 NOT = { started_in = 1685.1.3 } }
+					add_manpower = 84
+					add_country_modifier = { name = one_v_one_mission_re_war_1_modifier duration = 2190 }
+				}
+			}
+			if = {
+				limit = { OR = { has_country_flag = re_west_war_2_fired has_country_flag = re_east_war_2_fired } }
+				if = {
+					limit = { started_in = 1685.1.1 NOT = { started_in = 1685.1.2 } }
+					add_manpower = 300
+					add_treasury = 15000
+					add_country_modifier = { name = one_v_one_mission_re_war_2_modifier duration = 4015 }
+				}
+				if = {
+					limit = { started_in = 1685.1.2 NOT = { started_in = 1685.1.3 } }
+					add_manpower = 100
+					add_treasury = 1666
+					add_country_modifier = { name = one_v_one_mission_re_war_2_modifier duration = 4015 }
+				}
+			}
+			if = {
+				limit = { OR = { has_country_flag = re_west_war_3_fired has_country_flag = re_east_war_3_fired } }
+				if = {
+					limit = { started_in = 1685.1.1 NOT = { started_in = 1685.1.2 } }
+					add_manpower = 500
+					add_treasury = 15000
+					add_country_modifier = { name = one_v_one_mission_re_war_3_modifier duration = -1 }
+				}
+				if = {
+					limit = { started_in = 1685.1.2 NOT = { started_in = 1685.1.3 } }
+					add_manpower = 166
+					add_treasury = 3333
+					add_country_modifier = { name = one_v_one_mission_re_war_3_modifier duration = -1 }
+				}
+			}
+			if = {
+				limit = { OR = { has_country_flag = re_west_war_4_fired has_country_flag = re_east_war_4_fired } }
+				if = {
+					limit = { started_in = 1685.1.1 NOT = { started_in = 1685.1.2 } }
+					add_manpower = 500
+					add_treasury = 15000
+					add_country_modifier = { name = one_v_one_mission_re_war_4_modifier duration = -1 }
+				}
+				if = {
+					limit = { started_in = 1685.1.2 NOT = { started_in = 1685.1.3 } }
+					add_manpower = 166
+					add_treasury = 5000
+					add_country_modifier = { name = one_v_one_mission_re_war_4_modifier duration = -1 }
+				}
+			}
+			}
+		}
+	}
+}

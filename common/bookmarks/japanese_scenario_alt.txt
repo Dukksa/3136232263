@@ -1,0 +1,1 @@
+bookmark = { name = "japanese_scenario_alt" desc = "japanese_scenario_alt_desc" date = 1565.1.2 center = 1024 default = yes country = JSO country = JNO }

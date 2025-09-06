@@ -1,0 +1,167 @@
+MWG = "countries/IMIWG.txt"
+MWP = "countries/IMIWP.txt"
+# 1st scenario:
+IGE = "countries/ItaGen.txt"
+IGS = "countries/ItaGenSpi.txt" # Def, Attr, FL
+IGL = "countries/ItaGenLom.txt" # Cav
+IGT = "countries/ItaGenTus.txt" # Inf
+IGP = "countries/ItaGenPap.txt" # Merc, Shock Dmg Rec
+IVE = "countries/ItaVen.txt"
+IVV = "countries/ItaVenVen.txt" # Navy, Marines
+IVF = "countries/ItaVenFer.txt" # Scale, Dmg Rec
+IVT = "countries/ItaVenTir.txt" # ?
+IVD = "countries/ItaVenDal.txt" # ICA
+
+# 2nd secnario:
+MTU = "countries/MedTur.txt"
+MTL = "countries/MedTurLat.txt" # Qaunt, Qual
+MTB = "countries/MedTurByz.txt" # Quant, Def
+MTO = "countries/MedTurOtt.txt" # Art, Quant
+MTS = "countries/MedTurSel.txt" # Cav
+MMM = "countries/MedMam.txt"
+MMN = "countries/MedMamMam.txt" # Cav, Special
+MME = "countries/MedMamEgy.txt" # Build, Def
+MMR = "countries/MedMamAra.txt" # Cav
+MMJ = "countries/MedMamJer.txt" # God
+
+# 3rd scenario:
+IMU = "countries/IndMug.txt"
+IMM = "countries/IndMugMug.txt" # Cav
+IMD = "countries/IndMugDel.txt" # Quant
+IMR = "countries/IndMugRaj.txt" # Inf, Raj
+IDC = "countries/IndDrC.txt"
+IDV = "countries/IndDrCVij.txt" # Cav, Marine
+IDD = "countries/IndDrCDec.txt" # Overall
+IDB = "countries/IndDrCBen.txt" # Art
+
+# 3th scenario:
+WFR = "countries/WesFra.txt"
+WFF = "countries/WesFraFra.txt" # Cav, Morale, Tax, Man Recover, Musketeers
+WFO = "countries/WesFraOrl.txt" # Theocr, Joan Arc, Fire Dmg
+WFA = "countries/WesFraAng.txt" # Disc, ICA, Marines, boats Man-o-War
+WFL = "countries/WesFraLot.txt" # ???
+WSP = "countries/WesSpa.txt"
+WSS = "countries/WesSpaSpa.txt" # Art fre, Morale
+WSA = "countries/WesSpaAnd.txt" # Dmg Rec, Morale
+WSB = "countries/WesSpaPor.txt" # Art, Def, Boats
+WSH = "countries/WesSpaHaS.txt" # Manpower, FL
+WGB = "countries/WesGBr.txt"
+WAU = "countries/WesAus.txt"
+
+# Japan scenario:
+JNO = "countries/JapNor.txt"
+JND = "countries/JapNorOda.txt" 	# Oda Nobunaga # Firearms
+JNK = "countries/JapNorTok.txt" 	# Tokugawa Ieyasu # Fast army
+JNT = "countries/JapNorTak.txt" 	# Takeda, Takeda Shingen # Cav
+JNU = "countries/JapNorUes.txt" 	# Uesugi Kenshin # Disciplined inf
+JSO = "countries/JapSou.txt"
+JSS = "countries/JapSouShi.txt" 	# Shimazu Yoshihiro # Navy, scale?
+JSM = "countries/JapSouMor.txt" 	# Mōri Terumoto # Navy, defence
+JST = "countries/JapSouToy.txt" 	# Toyotomi Hideyoshi # Siege
+JSI = "countries/JapSouIkk.txt" 	# Kōsa # Theocr, Attr, merc?
+
+# Napoleonic scenario:
+NFR = "countries/NapFra.txt"
+NRH = "countries/NapRhi.txt"
+NSP = "countries/NapSpa.txt"
+NIT = "countries/NapIta.txt"
+NTU = "countries/NapOtt.txt"
+
+NRU = "countries/NapRus.txt"
+NPR = "countries/NapPru.txt"
+NAU = "countries/NapAus.txt"
+NGB = "countries/NapGBr.txt"
+NSW = "countries/NapSwe.txt"
+
+# Thirty Years scenario:
+TFR = "countries/TYFra.txt" # France
+TSW = "countries/TYSwe.txt" # Sweden
+TGB = "countries/TYGBr.txt" # Britain
+TPG = "countries/TYProGer.txt" # Protestant German
+TDN = "countries/TYDanNor.txt" # Dan-Nor
+
+TPL = "countries/TYPLC.txt" # Commonwealth
+TAS = "countries/TYAus.txt" # Austria
+TSP = "countries/TYSpa.txt" # Spain
+TCG = "countries/TYCatGer.txt" # Catholic German
+TIT = "countries/TYIta.txt" # Italy
+
+# Great Turkish War scenario:
+GTO = "countries/GTOtt.txt" # Ottoman
+GEC = "countries/GTEyaCri.txt" # Ottoman Crimea
+GEB = "countries/GTEyaBal.txt" # Ottoman Balkan
+GEA = "countries/GTEyaAfr.txt" # Ottoman Africa
+GFR = "countries/GTFra.txt" # France
+
+GAU = "countries/GTAus.txt" # Austria
+GPL = "countries/GTPLC.txt" # Poland
+GIT = "countries/GTIta.txt" # Italy
+GSP = "countries/GTSpa.txt" # Spain
+GRU = "countries/GTRus.txt" # Russia
+
+# Austrian Succession scenario:
+AAU = "countries/ASAus.txt" # Austria
+AIT = "countries/ASSar.txt" # Sardinia/Italy
+AGB = "countries/ASGBr.txt" # Britain
+ANE = "countries/ASNed.txt" # Netherlands
+ARU = "countries/ASRus.txt" # Russia
+AHA = "countries/ASHan.txt" # Hannover
+
+AFR = "countries/ASFra.txt" # France
+ASW = "countries/ASSwe.txt" # Sweden
+ASP = "countries/ASSpa.txt" # Spain
+APR = "countries/ASPru.txt" # Prussia
+APL = "countries/ASPLC.txt" # Commonwealth
+ABA = "countries/ASBav.txt" # Bavaria
+
+# Seven Years scenario:
+SPR = "countries/SYPru.txt" # Prussia
+SGB = "countries/SYGBr.txt" # Britain
+SUA = "countries/SYUSA.txt" # 13c
+SCN = "countries/SYCan.txt" # Canada
+SPO = "countries/SYPor.txt" # Portugal
+SBR = "countries/SYBra.txt" # Brazil
+
+TYN = "countries/TYNeu.txt" # Neutral
+TYM = "countries/TYMeu.txt" # Amerc Neutral
+
+SAU = "countries/SYAus.txt" # Austria
+SFR = "countries/SYFra.txt" # France
+SQU = "countries/SYQue.txt" # Quebec
+SLU = "countries/SYLou.txt" # Louisiana
+SSP = "countries/SYSpa.txt" # Spain
+SNS = "countries/SYNSp.txt" # New Spain
+
+# World War scenario:
+WWG = "countries/WWGer.txt" # Germany
+WWA = "countries/WWAuH.txt" # Austria-Hungary
+WWO = "countries/WWOtt.txt" # Turkey
+WWL = "countries/WWBul.txt" # Bulgaria
+
+WWN = "countries/WWNeu.txt" # Neutral
+
+WWF = "countries/WWFra.txt" # France
+WWB = "countries/WWGBr.txt" # Britain
+WWR = "countries/WWRus.txt" # Russia
+WWI = "countries/WWIta.txt" # Italy
+
+# Roman Wars:
+REW = "countries/REWest.txt" # 1 West Rome
+RWN = "countries/REWestNorth.txt" # 2 West Rome
+RWS = "countries/REWestSouth.txt" # 3 West Rome
+REE = "countries/REEast.txt" # 1 East Rome
+REN = "countries/REEastNorth.txt" # 2 East Rome
+RES = "countries/REEastSouth.txt" # 3 East Rome
+
+# Nader Shah Invasion:
+NIR = "countries/NaderIran.txt" # 
+NKA = "countries/NaderKakheti.txt" # 
+NMA = "countries/NaderMarathas.txt" # 
+NRA = "countries/NaderRajputana.txt" # 
+NBC = "countries/NaderBrComp.txt" # 
+
+NMU = "countries/NaderMughals.txt" # 
+NBU = "countries/NaderBukhara.txt" # 
+NHY = "countries/NaderHyderabad.txt" # 
+NMY = "countries/NaderMysore.txt" # 
+NFC = "countries/NaderFrComp.txt" # 

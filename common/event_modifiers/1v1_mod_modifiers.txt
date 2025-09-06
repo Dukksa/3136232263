@@ -1,0 +1,1479 @@
+mwg_braindead = {
+	land_forcelimit = -1000
+	naval_forcelimit = -1000
+	capped_by_forcelimit = yes
+	can_not_build_buildings = yes
+	can_not_declare_war = yes
+	can_not_send_merchants = yes
+	country_admin_power = -10
+	country_diplomatic_power = -10
+	country_military_power = -10
+	merchants = -3
+	diplomats = -3
+	missionaries = -3
+	global_unrest = -10
+	colonists = -5
+}
+mwg_braindead_general = {
+	general_cost = 30
+}
+mwg_braindead_local = {
+	local_defensiveness = -10
+	fort_level = -3
+}
+one_v_one_tech_34_tanks = {
+	cavalry_cost = 1
+}
+one_v_one_adm_tech_33_lock = {
+	adm_tech_cost_modifier = 10
+}
+one_v_one_dip_tech_33_lock = {
+	dip_tech_cost_modifier = 10
+}
+one_v_one_mil_tech_33_lock = {
+	mil_tech_cost_modifier = 10
+}
+one_v_one_pyrenees = {
+	max_attrition = 5
+	attrition = 5
+	local_hostile_movement_speed = -0.7
+	local_friendly_movement_speed = -0.7
+	supply_limit_modifier = -0.75
+}
+one_v_one_sailors_slacken_modifier = {
+	sailors_recovery_speed = 1.5
+}
+one_v_one_cavalry_shock_modifier = {
+	cavalry_shock = 0.5
+	fire_damage_received = 0.1
+	is_hussars_modifier = yes
+}
+one_v_one_local_defence_modifier = {
+	local_defensiveness = 0.25
+	local_garrison_damage = 0.25
+}
+one_v_one_local_dice_roll_modifier = {
+	local_defender_dice_roll_bonus = 1
+	#fort_level = -2
+}
+one_v_one_train_horsemanship_modifier_upgraded = {
+	cavalry_power = 0.15
+}
+one_v_one_pope_mod = {
+	army_tradition_from_battle = 0.5
+	prestige_from_land = 0.5
+}
+# Mission for all:
+one_v_one_mission_construct_modifier = {
+	build_cost = -0.5
+	build_time = -0.1
+	development_cost = -0.2
+	global_trade_goods_size_modifier = 0.2
+	expand_infrastructure_cost_modifier = -0.6
+}
+one_v_one_mission_construct_idea_cost_modifier = {
+	idea_cost = -0.9
+	technology_cost = 1
+}
+one_v_one_second_golden_era_modifier = {
+	land_morale = 0.1
+	naval_morale = 0.1
+	all_power_cost = -0.15
+	global_trade_goods_size_modifier = 0.1
+	max_absolutism = 5
+}
+###############
+# Merc bonuses:
+one_v_one_seasoned_veterans = {
+	infantry_power = 0.15
+	cavalry_power = 0.15
+	artillery_power = 0.15
+	is_mercenary_modifier = yes
+}
+one_v_one_nation_of_war = {
+	morale_damage_received = -0.1
+	shock_damage_received = -0.1
+	fire_damage = 0.1
+	is_mercenary_modifier = yes
+}
+###############
+# Age bonuses:
+ab_cavalry_armies_modifier = {
+	cav_to_inf_ratio = 0.5
+}
+ab_assault_fort_ability_modifier = {
+	assault_fort_ability = 0.15
+}
+ab_attack_bonus_in_capital_terrain_modifier = {
+	attack_bonus_in_capital_terrain = 1
+}
+ab_mercenary_discipline_modifier = {
+	mercenary_discipline = 0.05
+}
+ab_global_sailors_modifier_modifier = {
+	global_sailors_modifier = 1
+}
+ab_global_ship_cost_modifier = {
+	global_ship_cost = -0.5
+}
+ab_reinforce_cost_modifier_modifier = {
+	reinforce_cost_modifier = -0.33
+}
+ab_free_war_taxes_modifier = {
+	war_taxes_cost_modifier = -1.0
+}
+ab_mercantilism_cost_modifier = {
+	mercantilism_cost = -0.66
+}
+ab_trade_efficiency_modifier = {
+	trade_efficiency = 0.15
+}
+# Absolutism
+ab_cavalry_armies3_modifier = {
+	cav_to_inf_ratio = 0.5
+}
+ab_siege_ability_modifier = {
+	siege_ability = 0.25
+}
+ab_leader_land_pips_modifier = {
+	leader_land_fire = 1
+	leader_land_manuever = 1
+	leader_land_shock = 1
+	general_cost = 0.5
+}
+ab_merc_maintenance_modifier_modifier = {
+	merc_maintenance_modifier = -0.33
+}
+ab_mercenary_manpower_modifier = {
+	mercenary_manpower = 0.5
+}
+ab_naval_forcelimit_modifier_modifier = {
+	naval_forcelimit_modifier = 0.5
+}
+ab_more_ships_can_fire1_modifier = {
+	global_naval_engagement_modifier = 0.2
+}
+ab_global_ship_repair_modifier = {
+	global_ship_repair = 0.66
+}
+ab_yearly_absolutism1_modifier = {
+	yearly_absolutism = 6
+	max_absolutism = 30
+}
+ab_development_cost_modifier = {
+	development_cost = -0.15
+}
+ab_global_trade_goods_size_modifier_modifier = {
+	global_trade_goods_size_modifier = 0.2
+}
+###############
+# 1st scenario:
+# Keeping separate, in case later needs separate numbers.
+one_v_one_manpower_fl_ige = {
+	global_manpower = 20 # 21 # 80k manpower
+}
+one_v_one_manpower_fl_ive = {
+	global_manpower = 20 # 21 # 80k manpower
+	range = 0.25 # So east can have same range (will have an advantage over Indian Ocean then...)
+}
+# Sardinia:
+one_v_one_mission_s1_1_igs_bonus_1_modifier = {
+	trade_goods_size = 1
+}
+one_v_one_mission_s1_3_igs_bonus_2_modifier = {
+	land_morale = 0.15
+}
+one_v_one_mission_s1_5_igs_bonus_3_modifier = {
+	garrison_damage = 0.5
+	global_trade_goods_size_modifier = 0.17
+	defensiveness = 0.1
+}
+# Lombardy:
+one_v_one_mission_s1_1_igl_bonus_1_modifier = {
+	cavalry_cost = -0.1
+	land_maintenance_modifier = -0.05
+}
+one_v_one_mission_s1_3_igl_bonus_2_modifier = {
+	siege_ability = 0.2
+	reinforce_speed = 0.3
+	reinforce_cost_modifier = -0.2
+}
+one_v_one_mission_s1_5_igl_bonus_3_modifier = {
+	trade_goods_size = 4
+}
+# Tuscany:
+one_v_one_mission_s1_1_igt_bonus_1_modifier = {
+	local_manpower_modifier = 1.1
+}
+one_v_one_mission_s1_3_igt_bonus_2_modifier = {
+	siege_ability = 0.2
+	infantry_power = 0.05
+	land_forcelimit = 10
+	land_forcelimit_modifier = 0.1
+}
+# Papal:
+one_v_one_mission_s1_1_igp_bonus_1_modifier = {
+	local_defensiveness = 1
+	local_defender_dice_roll_bonus = 1
+	local_garrison_damage = 0.5
+	tax_income = 48
+}
+one_v_one_mission_s1_3_igp_bonus_2_modifier = {
+	land_morale = 0.2
+}
+one_v_one_mission_s1_5_igp_bonus_3_modifier = {
+	land_morale = 0.05
+	shock_damage_received = -0.05
+	shock_damage = 0.05
+}
+# Venice:
+one_v_one_mission_s1_1_ivv_bonus_1_modifier = {
+	drill_gain_modifier = 0.5
+	infantry_fire = 0.2
+	is_marine_modifier = yes
+}
+one_v_one_mission_s1_3_ivv_bonus_2_modifier = {
+	drill_decay_modifier = -0.2
+}
+one_v_one_mission_s1_3_ivv_bonus_22_modifier = {
+	infantry_shock = 0.2
+	is_marine_modifier = yes
+}
+# Ferrara:
+one_v_one_mission_s1_1_ivf_bonus_1_modifier = {
+	garrison_damage = 1
+}
+one_v_one_mission_s1_1_ivf_bonus_11_modifier = {
+	local_development_cost = -0.05
+	local_friendly_movement_speed = 1
+	local_hostile_movement_speed = -0.3
+}
+one_v_one_mission_s1_3_ivf_bonus_2_modifier = {
+	shock_damage_received = -0.05
+	fire_damage_received = -0.05
+}
+# Tyrol:
+one_v_one_mission_s1_1_ivt_bonus_1_modifier = {
+	trade_goods_size = 3
+}
+one_v_one_mission_s1_1_ivt_bonus_11_modifier = {
+	inflation_reduction = 0.2
+}
+one_v_one_mission_s1_3_ivt_bonus_2_modifier = {
+	local_defender_dice_roll_bonus = 2
+}
+one_v_one_mission_s1_5_ivt_bonus_3_modifier = {
+	attack_bonus_in_capital_terrain = 1
+}
+# Dalmatia:
+one_v_one_mission_s1_1_ivd_bonus_1_modifier = {
+	may_perform_slave_raid_on_same_religion = yes
+	coast_raid_range = 6
+}
+one_v_one_mission_s1_5_ivd_bonus_3_modifier = {
+	infantry_shock = 0.05
+	infantry_fire = 0.05
+	fire_damage = 0.05
+	morale_damage_received = -0.05
+}
+# 2nd scenario:
+one_v_one_manpower_fl_mtu = {
+	global_manpower = 90 # 220k manpower
+}
+one_v_one_manpower_fl_mmm = {
+	global_manpower = 90 # 220k manpower
+}
+# Roman Empire:
+one_v_one_mission_s1_1_mtb_bonus_1_modifier = {
+	infantry_power = 0.15
+	naval_morale = 0.1
+}
+one_v_one_mission_s1_3_mtb_bonus_2_modifier = {
+	global_tax_modifier = 0.5
+}
+one_v_one_mission_s1_5_mtb_bonus_3_modifier = {
+	recover_army_morale_speed = 0.5
+	global_supply_limit_modifier = 0.5
+}
+# Latin:
+one_v_one_mission_s1_1_mtl_bonus_1_modifier = {
+	development_cost = -0.05
+	global_prosperity_growth = 0.33
+}
+one_v_one_mission_s1_3_mtl_bonus_2_modifier = {
+	naval_morale = 0.1
+	land_maintenance_modifier = -0.1
+}
+one_v_one_mission_s1_5_mtl_bonus_3_modifier = {
+	trade_efficiency = 0.1
+	light_ship_number_of_cannons_modifier = 0.1
+}
+# Ottoman:
+one_v_one_mission_s1_1_mto_bonus_1_modifier = {
+	trade_goods_size = 1
+}
+one_v_one_mission_s1_3_mto_bonus_2_modifier = {
+	artillery_power = 0.05
+	artillery_fire = 0.25
+	special_unit_cost_modifier = -0.5
+}
+one_v_one_mission_s1_5_mto_bonus_3_modifier = {
+	naval_morale = 0.05
+	global_ship_cost = -0.1
+}
+# Seljuks:
+one_v_one_mission_s1_1_mts_bonus_1_modifier = {
+	interest = -0.15
+}
+one_v_one_mission_s1_3_mts_bonus_2_modifier = {
+	cavalry_flanking = 0.7
+	cav_to_inf_ratio = 0.1
+}
+one_v_one_mission_s1_5_mts_bonus_3_modifier = {
+	regiment_disembark_speed = 1
+	movement_speed_in_fleet_modifier = 1
+	may_perform_slave_raid_on_same_religion = yes
+}
+# Mamluks:
+one_v_one_mission_s1_1_mmn_bonus_1_modifier = {
+	state_maintenance_modifier = -0.2
+	build_cost = -0.05
+}
+one_v_one_mission_s1_3_mmn_bonus_2_modifier = {
+	infantry_power = 0.1
+	siege_ability = 0.1
+}
+one_v_one_mission_s1_5_mmn_bonus_3_modifier = {
+	naval_maintenance_modifier = -0.1
+}
+# Egypt:
+one_v_one_mission_s1_1_mme_bonus_1_modifier = {
+	yearly_army_professionalism = 0.01
+}
+one_v_one_mission_s1_5_mme_bonus_3_modifier = {
+	manpower_recovery_speed = 0.1
+	infantry_power = 0.05
+}
+# Arabia:
+one_v_one_mission_s1_1_mmr_bonus_1_modifier = {
+	global_tax_modifier = 1
+}
+# Jerusalem:
+one_v_one_mission_s1_1_mmj_bonus_1_modifier = {
+	fort_maintenance_modifier = -0.75
+}
+one_v_one_mission_s1_3_mmj_bonus_2_modifier = {
+	land_morale = 0.15
+	siege_ability = 0.15
+}
+# 3rd scenario:
+one_v_one_manpower_fl_imu = {
+	global_manpower = 200 # 204 # 360k manpower
+	land_forcelimit = 90 # 89 # 200 FL
+	assault_fort_ability = -0.3
+	garrison_damage = -0.2
+}
+one_v_one_manpower_fl_idc = {
+	global_manpower = 200 # 204 # 360k manpower
+	land_forcelimit = 90 # 89 # 200 FL
+	assault_fort_ability = -0.3
+	garrison_damage = -0.2
+}
+# 4th scenario:
+# France:
+one_v_one_manpower_fl_wfr = {
+	global_manpower = 380 # 379 # 500k manpower
+	land_forcelimit = 170 # 174 # 260 FL
+	assault_fort_ability = -0.3
+	garrison_damage = -0.2
+}
+one_v_one_wfr_villars_personality_build_modifier = {
+	local_amount_of_hussars = 1
+}
+one_v_one_wfr_neufville_personality_modifier = {
+	infantry_fire = 0.2
+	is_musketeer_modifier = yes
+}
+# Spain:
+one_v_one_manpower_fl_wsp = {
+	global_manpower = 380 # 379 # 500k manpower
+	land_forcelimit = 170 # 174 # 260 FL
+	assault_fort_ability = -0.3
+	garrison_damage = -0.2
+}
+one_v_one_wsp_francisco_personality_modifier = {
+	infantry_power = 0.3
+	is_tercio_modifier = yes
+}
+# Austria:
+one_v_one_manpower_fl_wau = {
+	global_manpower = 380 # 379 # 500k manpower
+	land_forcelimit = 170 # 174 # 260 FL
+	assault_fort_ability = -0.3
+	garrison_damage = -0.2
+}
+one_v_one_manpower_fl_wau_local = {
+	local_amount_of_carolean = 25
+}
+one_v_one_wau_joseph_personality_build_modifier = {
+	local_amount_of_carolean = 1
+}
+one_v_one_wau_joseph_personality_modifier = {
+	discipline = 0.1
+	is_carolean_modifier = yes
+}
+# Britain:
+one_v_one_manpower_fl_wgb = {
+	global_manpower = 380 # 379 # 500k manpower
+	land_forcelimit = 170 # 174 # 260 FL
+	assault_fort_ability = -0.3
+	garrison_damage = -0.2
+}
+one_v_one_wau_john_personality_modifier = {
+	infantry_power = 0.2
+	is_streltsy_modifier = yes
+}
+one_v_one_wgb_7_modifier1 = {
+	fire_damage = 0.2
+	is_marine_modifier = yes
+}
+one_v_one_wgb_george_personality_modifier = {
+	regiment_manpower_usage = -0.7
+	infantry_power = 0.2
+	is_marine_modifier = yes
+}
+one_v_one_wgb_george_personality_sailors_modifier = {
+	local_sailors = 250
+}
+# FOR ALL:
+one_v_one_mission_s4_wfr_wsp_wau_wgb_naval_buildup_modifier = {
+	sailors_recovery_speed = 1
+	global_ship_recruit_speed = -0.1
+}
+# Regional bonuses:
+one_v_one_fra_spa_region_portugal_defender = {
+	local_defensiveness = 0.8
+	local_garrison_size = 0.5
+	local_garrison_damage = 0.5
+	trade_value_modifier = 0.5
+	local_defender_dice_roll_bonus = 1
+}
+one_v_one_fra_spa_region_aragon_defender = {
+	local_defensiveness = 0.7
+	local_garrison_size = 0.3
+	local_garrison_damage = 0.3
+	local_defender_dice_roll_bonus = 1
+	local_hostile_movement_speed = -0.25
+	local_production_efficiency = 1
+}
+one_v_one_fra_spa_region_savoy_defender = {
+	local_defensiveness = 0.3
+	local_garrison_size = 0.3
+	local_garrison_damage = 0.3
+	local_hostile_attrition = 1
+	max_attrition = 1
+	local_manpower = 0.75
+}
+one_v_one_fra_spa_region_tuscany_defender = {
+	local_defensiveness = 0.3
+	local_garrison_size = 0.3
+	local_garrison_damage = 0.3
+	local_hostile_movement_speed = -0.5
+}
+one_v_one_fra_spa_region_milan_defender = {
+	local_defensiveness = 0.3
+	local_garrison_size = 0.3
+	local_garrison_damage = 0.3
+	local_hostile_movement_speed = -0.5
+}
+one_v_one_fra_spa_region_bavaria_defender = {
+	local_defensiveness = 0.5
+	local_garrison_damage = 0.5
+	local_hostile_movement_speed = -0.25
+	trade_goods_size = 0.6
+}
+one_v_one_fra_spa_region_wallonia_defender = {
+	local_defensiveness = 0.5
+	local_garrison_size = 0.5
+	local_garrison_damage = 0.5
+}
+one_v_one_fra_spa_region_holland_defender = {
+	local_defensiveness = 0.4
+	local_garrison_size = 0.4
+	local_garrison_damage = 0.4
+	local_defender_dice_roll_bonus = 1
+}
+one_v_one_fra_spa_region_naples_defender = {
+	local_defensiveness = 0.3
+	local_garrison_size = 0.3
+	local_garrison_damage = 0.3
+	local_hostile_movement_speed = -0.5
+	regiment_recruit_speed = -0.5
+}
+one_v_one_fra_spa_region_sicily_defender = {
+	local_defensiveness = 0.3
+	local_garrison_size = 0.3
+	local_garrison_damage = 0.3
+	local_hostile_movement_speed = -0.5
+	regiment_recruit_speed = -1
+}
+# 4th scenario, alternative:
+one_v_one_manpower_fl_alt_wfr = {
+	global_manpower = 410 # 413 # 500k manpower
+	land_forcelimit = 200 # 199 # 260 FL
+	assault_fort_ability = -0.3
+	garrison_damage = -0.2
+}
+one_v_one_manpower_fl_alt_wsp = {
+	global_manpower = 410 # 413 # 500k manpower
+	land_forcelimit = 200 # 199 # 260 FL
+	assault_fort_ability = -0.3
+	garrison_damage = -0.2
+}
+# Japan scenario:
+one_v_one_manpower_fl_jno = {
+	global_manpower = 70 # 120k manpower
+	land_forcelimit = 20 # 89 # 60 FL
+	assault_fort_ability = -0.3
+	garrison_damage = -0.2
+}
+one_v_one_manpower_fl_jso = {
+	global_manpower = 70 # 120k manpower
+	land_forcelimit = 20 # 89 # 60 FL
+	assault_fort_ability = -0.3
+	garrison_damage = -0.2
+}
+one_v_one_samurai_discipline_5 = {
+	discipline = 0.05
+	is_samurai_modifier = yes
+}
+one_v_one_samurai_discipline_10 = {
+	discipline = 0.1
+	is_samurai_modifier = yes
+}
+one_v_one_jap_por_decision_modifier = {
+	province_trade_power_value = 1
+	picture = "one_v_one_jap_por_decision_modifier_icon"
+}
+#
+one_v_one_jnp_por_1_decision_modifier = {
+	navy_tradition = 2
+}
+one_v_one_jnp_por_2_decision_modifier = {
+	fire_damage = 0.15
+	infantry_fire = 0.2
+}
+one_v_one_jnp_por_3_decision_modifier = {
+	artillery_fire = 1
+}
+one_v_one_jnp_por_5_decision_modifier = {
+	papal_influence = 1
+	missionaries = 2
+	global_missionary_strength = 0.07
+}
+one_v_one_jnp_por_55_decision_modifier = {
+	land_morale = 0.1
+}
+#
+one_v_one_jsp_por_1_decision_modifier = {
+	navy_tradition = 2
+}
+one_v_one_jsp_por_2_decision_modifier = {
+	fire_damage = 0.15
+	infantry_fire = 0.2
+}
+one_v_one_jsp_por_3_decision_modifier = {
+	artillery_fire = 1
+}
+one_v_one_jsp_por_5_decision_modifier = {
+	papal_influence = 1
+	missionaries = 2
+	global_missionary_strength = 0.07
+}
+one_v_one_jsp_por_55_decision_modifier = {
+	land_morale = 0.1
+}
+# Napoleonic scenario:
+# France:
+one_v_one_manpower_fl_nfr = {
+	global_manpower = 330 # -- old: 430 # 432 # 600k manpower
+	land_forcelimit = 190 # 194 # 300 FL
+	assault_fort_ability = -0.3
+	garrison_damage = -0.2
+}
+# Spain:
+one_v_one_manpower_fl_nsp = {
+	global_manpower = 280 # -- old: 380 # 388 # 500k manpower
+	land_forcelimit = 180 # 180 # 250 FL
+	assault_fort_ability = -0.3
+	garrison_damage = -0.2
+}
+# Rhine:
+one_v_one_manpower_fl_nrh = {
+	global_manpower = 280 # -- old: 380 # 388 # 500k manpower
+	land_forcelimit = 180 # 180 # 250 FL
+	assault_fort_ability = -0.3
+	garrison_damage = -0.2
+}
+one_v_one_nrh_manpower_building_modifier = {
+	local_manpower = 0.3
+}
+one_v_one_fl_building_modifier = {
+	land_forcelimit = 1
+}
+one_v_one_sailors_building_modifier = {
+	naval_forcelimit = 3
+	local_sailors_modifier = 1
+}
+one_v_one_navy_building_modifier = {
+	naval_forcelimit = 3
+	local_sailors_modifier = 2
+}
+one_v_one_sailors_building_s_modifier = {
+	naval_forcelimit = 3
+	local_sailors_modifier = 2
+}
+one_v_one_navy_building_s_modifier = {
+	naval_forcelimit = 3
+	local_sailors_modifier = 2
+}
+# Italy-Ottoman:
+one_v_one_manpower_fl_nit = {
+	global_manpower = 200 # -- old: 300 # 400k manpower
+	land_forcelimit = 140 # 138 # 200 FL
+	assault_fort_ability = -0.3
+	garrison_damage = -0.2
+}
+##
+# Russia:
+one_v_one_manpower_fl_nru = {
+	global_manpower = 330 # -- old: 430 # 432 # 600k manpower
+	land_forcelimit = 190 # 194 # 300 FL
+	assault_fort_ability = -0.3
+	garrison_damage = -0.2
+}
+# Austria:
+one_v_one_manpower_fl_nau = {
+	global_manpower = 280 # -- old: 380 # 388 # 500k manpower
+	land_forcelimit = 180 # 180 # 250 FL
+	assault_fort_ability = -0.3
+	garrison_damage = -0.2
+}
+# Prussia:
+one_v_one_manpower_fl_npr = {
+	global_manpower = 280 # -- old: 380 # 388 # 500k manpower
+	land_forcelimit = 180 # 180 # 250 FL
+	assault_fort_ability = -0.3
+	garrison_damage = -0.2
+}
+# Britain-Sweden: # All have
+one_v_one_manpower_fl_ngb = {
+	global_manpower = 120 # 200k manpower
+	land_forcelimit = 90 # 150 FL
+	global_attacker_dice_roll_bonus = 1
+	assault_fort_ability = -0.3
+	garrison_damage = -0.2
+}
+one_v_one_manpower_fl_tgbspg = {
+	global_manpower = 120 # 200k manpower
+	land_forcelimit = 90 # 150 FL
+	assault_fort_ability = -0.3
+	garrison_damage = -0.2
+}
+# Thirty Years scenario:
+# France-PLC:
+one_v_one_manpower_fl_tfrpl = {
+	global_manpower = 200 # 300k manpower
+	land_forcelimit = 120 # 200 FL
+	assault_fort_ability = -0.3
+	garrison_damage = -0.2
+}
+# Sweden-Austria:
+one_v_one_manpower_fl_tswas = {
+	global_manpower = 170 # 250k manpower
+	land_forcelimit = 120 # 180 FL
+	assault_fort_ability = -0.3
+	garrison_damage = -0.2
+}
+# England-Spain-Leagues:
+one_v_one_manpower_fl_tgbspg = {
+	global_manpower = 120 # 200k manpower
+	land_forcelimit = 90 # 150 FL
+	assault_fort_ability = -0.3
+	garrison_damage = -0.2
+}
+# Denmark-Italy:
+one_v_one_manpower_fl_tdnit = {
+	global_manpower = 100 # 160k manpower
+	land_forcelimit = 60 # 110 FL
+	assault_fort_ability = -0.3
+	garrison_damage = -0.2
+}
+# Great Turkish War scenario:
+one_v_one_manpower_fl_gtw = {
+	global_manpower = 50
+	land_forcelimit = 90
+	assault_fort_ability = -0.3
+	garrison_damage = -0.2
+}
+# Ottoman:
+one_v_one_gto_3_modifier = {
+	assault_fort_ability = -0.3
+	fire_damage_received = -0.05
+	shock_damage_received = -0.05
+	drill_gain_modifier = -0.5
+	drill_decay_modifier = -0.2
+	is_janissary_modifier = yes
+}
+one_v_one_gto_3_modifier_fl = {
+	special_unit_forcelimit = -0.7
+	allowed_man_of_war_fraction = 0.25
+	allowed_galleon_fraction = 0.25
+	allowed_galleass_fraction = 0.7
+}
+one_v_one_gto_mehmed_personality_modifier = {
+	regiment_manpower_usage = -0.1
+	infantry_power = 0.1
+	reinforce_cost_modifier = -1
+	is_janissary_modifier = yes
+}
+# Crimea:
+one_v_one_gec_murad_personality_modifier = {
+	local_development_cost = -0.2
+	local_manpower_modifier = 0.5
+	local_defensiveness = 0.2
+	trade_goods_size_modifier = 1.5
+	allowed_num_of_buildings = 1
+}
+one_v_one_gec_haci_personality = {
+	monthly_splendor = 3
+}
+# Balkans:
+one_v_one_geb_3_modifier = {
+	local_production_efficiency = 2
+	local_development_cost = -0.3
+}
+one_v_one_geb_emeric_personality_modifier = {
+	fire_damage = 0.15
+	is_mercenary_modifier = yes
+}
+# African:
+one_v_one_gea_osman_personality_modifier = {
+        local_development_cost = -0.1
+	local_manpower_modifier = 0.33
+	allowed_num_of_buildings = 1
+	trade_value_modifier = 0.25
+}
+one_v_one_gea_osman_personality_entrepot = {
+        province_trade_power_value = 5
+        local_development_cost = -0.05
+        local_institution_spread = 0.05
+}
+one_v_one_gea_osman_personality_world_port = {
+        province_trade_power_value = 10
+        local_institution_spread = 0.1
+        local_development_cost = -0.1
+        local_manpower_modifier = 0.1
+}
+one_v_one_gea_mezzo_personality = {
+        local_development_cost = -0.15
+	naval_forcelimit = 1
+}
+# France:
+one_v_one_gfr_4_modifier = {
+	infantry_fire = 0.4
+	fire_damage = -0.3
+	is_musketeer_modifier = yes
+}
+one_v_one_gfr_louisxiv_personality_modifier = {
+	infantry_fire = 0.3
+	fire_damage = 0.1
+	infantry_power = 0.1
+	discipline = 0.05
+	is_musketeer_modifier = yes
+}
+one_v_one_gfr_prestre_personality_modifier = {
+	local_defender_dice_roll_bonus = 1
+	local_garrison_damage = 0.3
+	local_defensiveness = 0.3
+	local_tax_modifier = 1
+	trade_value = 15
+	# better starting siege
+}
+# Poland:
+one_v_one_gpl_3_modifier = {
+	morale_damage = -0.5
+	fire_damage_received = -0.2
+	is_hussars_modifier = yes
+}
+hussars_cavalry_shock_modifier = {
+	cavalry_shock = 0.35
+	is_hussars_modifier = yes
+}
+# Italy:
+one_v_one_git_5_modifier = {
+	infantry_shock = 0.6
+	is_marine_modifier = yes
+}
+one_v_one_marines_disc = {
+	discipline = 0.05
+	is_marine_modifier = yes
+}
+one_v_one_geb_3_modifier = {
+	local_production_efficiency = 2
+	local_development_cost = -0.3
+}
+one_v_one_git_islands_modifier = {
+	local_sailors = 5000
+}
+one_v_one_git_morosini_personality_modifier = {
+	regiment_manpower_usage = -0.1
+	shock_damage = 0.15
+	assault_fort_ability = 0.1
+	is_marine_modifier = yes
+}
+one_v_one_git_corner_personality_modifier = {
+	local_garrison_damage = 0.33
+	trade_value_modifier = 0.25
+	land_forcelimit = 1
+}
+one_v_one_git_mitrovic_personality_modifier = {
+	land_morale = 0.15
+	shock_damage_received = -0.15
+	is_mercenary_modifier = yes
+}
+# Spain:
+one_v_one_gsp_4_modifier = {
+	block_slave_raid = yes
+	local_hostile_movement_speed = -0.2
+        local_prosperity_growth = 0.2
+}
+one_v_one_gsp_francisco_personality_modifier = {
+	shock_damage_received = 0.1
+	fire_damage_received = 0.15
+	military_tactics = 0.3
+	land_attrition = -0.3
+	is_tercio_modifier = yes
+}
+one_v_one_gsp_juan_personality_modifier = {
+	allowed_galleon_fraction = 0.2
+	allowed_man_of_war_fraction = 0.2
+	allowed_galleass_fraction = 0.2
+}
+# Russia:
+one_v_one_gru_vasily_personality_modifier = {
+	local_hostile_attrition = 2
+	max_attrition = 1
+	local_monthly_devastation = 1
+	local_garrison_size = 0.6
+	local_defensiveness = 0.2
+}
+# Great War scenario:
+one_v_one_manpower_fl_ww = {
+	global_manpower = 400
+	land_forcelimit = 200
+	global_attacker_dice_roll_bonus = 1
+	#assault_fort_ability = -0.3
+	#garrison_damage = -0.2
+}
+one_v_one_manpower_points_ww = {
+	country_admin_power = 2
+	country_diplomatic_power = 2
+	country_military_power = 2
+}
+# Seven Years scenario:
+one_v_one_syw_base = {
+	interest = 2
+}
+one_v_one_goods_prod = {
+	trade_value = 2
+	trade_goods_size = 1
+}
+one_v_one_goods_prod_exp = {
+	trade_value = 4
+	trade_goods_size = 2
+}
+one_v_one_trade_power = {
+	province_trade_power_value = 20
+	picture = "estuary_icon"
+}
+one_v_one_india_good = {
+	infantry_power = 0.05
+	naval_morale = 0.05
+}
+one_v_one_india_bad = {
+	infantry_power = -0.05
+	naval_morale = -0.05
+	global_trade_power = -0.2
+}
+one_v_one_india_colony = {
+	discipline = 0.05
+	reinforce_speed = 0.15
+}
+one_v_one_phili_good = {
+	global_naval_engagement_modifier = 0.05
+	artillery_fire = 0.5
+}
+one_v_one_phili_bad = {
+	global_naval_engagement_modifier = -0.05
+	artillery_fire = -0.5
+	global_trade_power = -0.2
+}
+one_v_one_phili_colony = {
+	discipline = 0.05
+	reinforce_speed = 0.15
+}
+one_v_one_por_def = {
+	local_garrison_size = 0.33
+	local_garrison_damage = 0.33
+	local_defensiveness = 0.33
+}
+###############
+# Roman Wars scenario:
+one_v_one_re_alt_nullify = {
+	country_admin_power = -10
+	country_diplomatic_power = -10
+	country_military_power = -10
+	monthly_splendor = -3
+	merchants = -3
+	max_flagships = -2
+	governing_capacity = -1000
+	free_leader_pool = -10
+}
+one_v_one_re_subject_penalty = {
+	idea_cost = 10
+}
+one_v_one_re_raiding_cooldown = {
+	picture = "local_monthly_devastation"
+}
+one_v_one_re_catholic_boost = {
+	army_tradition_from_battle = -0.25
+}
+one_v_one_re_protestant_boost = {
+	idea_cost = -0.05
+}
+one_v_one_re_orthodox_boost = {
+	army_tradition_from_battle = 0.75
+}
+#
+one_v_one_mission_re_maj_debuf_1_modifier = {
+	global_manpower_modifier = -0.05
+	land_forcelimit_modifier = -0.05
+	manpower_recovery_speed = -0.025
+	army_tradition_from_battle = -0.25
+	yearly_army_professionalism = -0.01
+	mil_tech_cost_modifier = 0.1
+	defensiveness = -0.1
+	fort_maintenance_modifier = 0.33
+}
+one_v_one_mission_re_maj_debuf_2_modifier = {
+	country_diplomatic_power = -1
+	trade_efficiency = -0.125
+	production_efficiency = -0.125
+	global_trade_goods_size_modifier = -0.05
+	naval_morale = -0.05
+	number_of_cannons_modifier = -0.025
+	ship_durability = -0.025
+	merchants = -2
+	war_exhaustion = 0.15
+	global_trade_power = -0.1
+	dip_tech_cost_modifier = 0.1
+}
+one_v_one_mission_re_maj_debuf_3_modifier = {
+	country_admin_power = -1
+	diplomats = -2
+	global_tax_modifier = -0.33
+	prestige = -4
+	prestige_from_land = -0.25
+	development_cost = 0.05
+	build_time = 0.1
+	build_cost = 0.1
+	adm_tech_cost_modifier = 0.1
+	curia_powers_cost = 0.15
+	church_power_modifier = -0.15
+	monthly_fervor_increase = -0.3
+	yearly_patriarch_authority = -0.001
+}
+### ### ###
+one_v_one_mission_re_min_debuf_1_modifier = {
+	country_military_power = -1
+	land_morale = -0.025
+	land_forcelimit_modifier = -0.025
+}
+one_v_one_mission_re_min_debuf_2_modifier = {
+	country_diplomatic_power = -1
+	naval_morale = -0.025
+	naval_forcelimit_modifier = -0.025
+}
+one_v_one_mission_re_min_debuf_3_modifier = {
+	country_admin_power = -1
+	build_cost = 0.075
+	build_time = 0.075
+}
+### ### ###
+one_v_one_mission_re_germany_modifier = {
+	fort_level = 2
+	local_defensiveness = 0.2
+	local_fort_maintenance_modifier = -1
+	local_friendly_movement_speed = 0.2
+	local_hostile_movement_speed = 0.1
+	local_manpower_modifier = 1
+	local_garrison_size = 0.05
+	local_garrison_damage = 0.05
+	province_trade_power_modifier = 0.3
+}
+one_v_one_mission_re_italy_modifier = {
+	fort_level = 2
+	local_defensiveness = 0.2
+	local_fort_maintenance_modifier = -1
+	local_friendly_movement_speed = 0.2
+	local_hostile_movement_speed = 0.1
+	local_manpower_modifier = 1
+	local_garrison_size = 0.05
+	local_garrison_damage = 0.2
+	province_trade_power_modifier = 0.3
+	trade_value_modifier = 0.3
+}
+one_v_one_mission_re_africa_modifier = {
+	fort_level = 2
+	local_defensiveness = 0.2
+	local_fort_maintenance_modifier = -1
+	local_friendly_movement_speed = 0.2
+	local_hostile_movement_speed = 0.1
+	local_manpower_modifier = 1
+	local_garrison_size = 0.05
+	local_garrison_damage = 0.05
+	province_trade_power_modifier = 0.3
+	trade_value_modifier = 0.3
+	local_defender_dice_roll_bonus = 1
+}
+### ### ###
+one_v_one_mission_re_inf_l_buf_1_modifier = {
+	infantry_power = 0.15
+	discipline = 0.05
+	land_morale = 0.1
+	fire_damage = 0.075
+	shock_damage = 0.075
+	movement_speed = 0.1
+	drill_gain_modifier = 0.5
+	drill_decay_modifier = -0.5
+}
+one_v_one_mission_re_inf_l_buf_2_modifier = {
+	global_regiment_cost = -0.2
+	manpower_recovery_speed = 0.2
+	global_manpower_modifier = 0.1
+	land_forcelimit_modifier = 0.1
+	global_manpower = 200
+	regiment_manpower_usage = -0.125
+	special_unit_forcelimit = 0.15
+}
+one_v_one_mission_re_inf_l_buf_2_modifier_alt = {
+	global_regiment_cost = -0.2
+	manpower_recovery_speed = 0.2
+	global_manpower_modifier = 0.1
+	land_forcelimit_modifier = 0.1
+	global_manpower = 66
+	regiment_manpower_usage = -0.125
+	special_unit_forcelimit = 0.15
+}
+one_v_one_mission_re_inf_l_buf_3_modifier = {
+	military_tactics = 0.4
+	infantry_fire = 0.35
+	infantry_shock = 0.35
+	fire_damage_received = -0.075
+	shock_damage_received = -0.075
+	army_tradition_from_battle = 0.25
+	prestige_from_land = 0.25
+	yearly_army_professionalism = 0.02
+	infantry_cost = 0.075
+}
+### ### ###
+one_v_one_mission_re_inf_m_buf_1_modifier = {
+	morale_damage_received = -0.1
+	defensiveness = 0.15
+	mil_tech_cost_modifier = -0.1
+	mil_advisor_cost = -0.33
+	fort_maintenance_modifier = 0.33
+}
+one_v_one_mission_re_inf_m_buf_2_modifier = {
+	infantry_power = 0.05
+	morale_damage_received = -0.075
+	siege_ability = 0.1
+	leader_siege = 1
+	general_cost = 0.1
+}
+one_v_one_mission_re_inf_m_buf_3_modifier = {
+	infantry_power = 0.05
+	leader_land_fire = 1
+	leader_land_shock = 1
+	leader_land_manuever = 1
+	free_land_leader_pool = 5
+	general_cost = 0.35
+}
+### ### ###
+one_v_one_mission_re_inf_s_buf_1_modifier = {
+	country_military_power = 2
+	army_tradition_from_battle = 0.2
+}
+one_v_one_mission_re_inf_s_buf_2_modifier = {
+	possible_mil_policy = 1
+	idea_cost = -0.1
+}
+one_v_one_mission_re_inf_s_buf_3_modifier = {
+	infantry_power = 0.1
+	discipline = 0.025
+	manpower_recovery_speed = -0.025
+	global_manpower_modifier = -0.025
+	land_forcelimit_modifier = -0.025
+	infantry_cost = 0.025
+}
+### ### ###
+one_v_one_mission_re_cav_l_buf_1_modifier = {
+	cavalry_power = 0.15
+	cavalry_shock = 0.5
+	shock_damage = 0.2
+	max_general_shock = 1
+	leader_land_shock = 1
+	leader_land_manuever = 1
+	leader_land_fire = -1
+	cavalry_cost = 0.05
+}
+one_v_one_mission_re_cav_l_buf_2_modifier = {
+	cavalry_power = 0.15
+	cavalry_fire = 1.33
+	cavalry_shock = -0.3
+	discipline = 0.025
+	morale_damage = 0.1
+	fire_damage = 0.15
+	movement_speed = 0.2
+	cavalry_cost = 0.05
+}
+one_v_one_mission_re_cav_l_buf_3_modifier = {
+	military_tactics = 0.4
+	land_morale = 0.1
+	discipline = 0.05
+	shock_damage_received = -0.075
+	fire_damage_received = -0.075
+	yearly_army_professionalism = 0.03
+	special_unit_forcelimit = 0.15
+	reinforce_speed = 0.1
+	drill_decay_modifier = -0.15
+	cavalry_cost = 0.025
+}
+### ### ###
+one_v_one_mission_re_cav_m_buf_1_modifier = {
+	morale_damage_received = -0.1
+	defensiveness = 0.15
+	mil_tech_cost_modifier = -0.1
+	mil_advisor_cost = -0.15
+	fort_maintenance_modifier = 0.33
+}
+one_v_one_mission_re_cav_m_buf_2_modifier = {
+	cavalry_power = 0.05
+	morale_damage = 0.075
+	siege_ability = 0.1
+	leader_siege = 1
+	general_cost = 0.1
+}
+one_v_one_mission_re_cav_m_buf_3_modifier = {
+	cavalry_power = 0.05
+	cavalry_cost = 0.05
+	leader_land_fire = 1
+	leader_land_shock = 1
+	leader_land_manuever = 1
+	free_land_leader_pool = 5
+	general_cost = 0.35
+}
+### ### ###
+one_v_one_mission_re_cav_s_buf_1_modifier = {
+	country_military_power = 2
+	army_tradition_from_battle = 0.2
+}
+one_v_one_mission_re_cav_s_buf_2_modifier = {
+	possible_mil_policy = 1
+	idea_cost = -0.1
+}
+one_v_one_mission_re_cav_s_buf_3_modifier = {
+	cavalry_power = 0.1
+	cavalry_cost = 0.05
+	discipline = 0.025
+	manpower_recovery_speed = -0.025
+	global_manpower_modifier = -0.025
+	land_forcelimit_modifier = -0.025
+}
+### ### ###
+one_v_one_mission_re_adm_buf_1_modifier = {
+	country_admin_power = 1
+	build_cost = -0.33
+	build_time = -0.5
+	global_allowed_num_of_buildings = 1
+	state_maintenance_modifier = -0.5
+	# +1 dev from Manufactories (remove ability from eco ideas for that scenario)
+	one_v_one_dev_from_manu = 1
+	global_tax_modifier = 0.6
+	governing_capacity = 2000
+}
+one_v_one_mission_re_adm_buf_1_modifier_alt = {
+	country_admin_power = 1
+	build_cost = -0.33
+	build_time = -0.5
+	global_allowed_num_of_buildings = 1
+	state_maintenance_modifier = -0.5
+	# +1 dev from Manufactories (remove ability from eco ideas for that scenario)
+	one_v_one_dev_from_manu = 1
+	global_tax_modifier = 0.6
+	governing_capacity = 600
+}
+one_v_one_mission_re_adm_buf_2_modifier = {
+	expand_infrastructure_cost_modifier = -0.075
+	# Adm and Dip give +1 extra dev
+	one_v_one_dev_adm_modifier = 1
+	one_v_one_dev_dip_modifier = 1
+}
+one_v_one_mission_re_adm_buf_3_modifier = {
+	country_admin_power = 2
+	yearly_innovativeness = 5
+	all_power_cost = -0.05
+	technology_cost = -0.1
+	idea_cost = -0.1
+	interest = -0.25
+	monthly_splendor = 6
+	max_absolutism = 60
+	yearly_absolutism = 5
+	adm_advisor_cost = -0.33
+	inflation_reduction = 0.5
+}
+### ### ###
+one_v_one_mission_re_dip_buf_1_modifier = {
+	production_efficiency = 0.25
+	global_trade_goods_size_modifier = 0.1
+	global_trade_goods_size = 0.1
+	# Spawn 10 Gold Mines
+	gold_depletion_chance_modifier = -1
+}
+one_v_one_mission_re_dip_buf_1_workshop = {
+	trade_goods_size = 0.1
+}
+one_v_one_mission_re_dip_buf_1_counting_house = {
+	trade_goods_size = 0.2
+}
+one_v_one_mission_re_dip_buf_2_modifier = {
+	all_estate_possible_privileges = 1
+	all_estate_loyalty_equilibrium = 1
+	spy_offence = 0.3
+	global_spy_defence = 0.15
+	# Power Projection +50
+	dip_advisor_cost = -0.33
+	free_policy = 1
+	dip_tech_cost_modifier = -0.1
+}
+one_v_one_mission_re_dip_buf_3_modifier = {
+	country_diplomatic_power = 3
+	mercantilism_cost = -0.7
+	trade_efficiency = 0.2
+	merchants = 4
+	global_trade_power = 0.2
+	placed_merchant_power_modifier = 1
+	placed_merchant_power = 35
+	embargo_efficiency = -0.5
+}
+one_v_one_mission_re_dip_buf_3_modifier_alt = {
+	country_diplomatic_power = 1
+	mercantilism_cost = -0.7
+	trade_efficiency = 0.2
+	merchants = 1
+	global_trade_power = 0.2
+	placed_merchant_power_modifier = 1
+	placed_merchant_power = 35
+	embargo_efficiency = -0.5
+}
+one_v_one_mission_re_dip_buf_3_trade_depot = {
+	trade_value = 0.62
+}
+one_v_one_mission_re_dip_buf_3_stock_exchange = {
+	trade_value = 1.25
+}
+### ### ###
+one_v_one_mission_re_art_buf_1_modifier = {
+	artillery_power = 0.1
+	artillery_fire = 1
+	artillery_cost = 0.1
+	fire_damage = 0.05
+}
+one_v_one_mission_re_art_buf_2_modifier = {
+	artillery_power = 0.1
+	artillery_shock = 1.5
+	artillery_cost = 0.1
+	shock_damage = 0.05
+}
+one_v_one_mission_re_art_buf_3_modifier = {
+	fire_damage = 0.05
+	shock_damage = 0.05
+	discipline = 0.025
+	artillery_cost = -0.1
+	artillery_barrage_cost = -0.25
+	global_naval_barrage_cost = -0.25
+	assault_fort_cost_modifier = -0.5
+	siege_ability = 0.1
+	defensiveness = 0.1
+	garrison_size = 0.10
+	# Scorch gives max_hostile_attrition = 2 and hostile_attrition = 2
+}
+one_v_one_mission_re_art_buf_3_scorch = {
+	max_attrition = 2
+	local_hostile_attrition = 2
+}
+### ### ###
+one_v_one_mission_re_nav_buf_1_modifier = {
+	own_coast_naval_combat_bonus = 6
+	global_ship_repair = 0.5
+	recover_navy_morale_speed = 0.25
+	global_ship_cost = 0.075
+	global_sailors_modifier = -0.1
+	leader_naval_fire = -2
+	leader_naval_shock = -2
+	max_admiral_fire = -1
+	max_admiral_shock = -1
+	sailor_maintenance_modifer = 2
+}
+one_v_one_mission_re_nav_buf_2_modifier = {
+	regiment_disembark_speed = 1
+	sailors_recovery_speed = 0.15
+	global_ship_trade_power = 0.33
+	privateer_efficiency = 0.33
+	light_ship_number_of_cannons_modifier = 0.25
+	sea_repair = yes
+	movement_speed_in_fleet_modifier = 1
+	leader_naval_manuever = 1
+	leader_naval_fire = 2
+	leader_naval_shock = 2
+}
+one_v_one_mission_re_nav_buf_3_modifier = {
+	naval_morale = -0.125
+	ship_durability = -0.025
+	number_of_cannons_modifier = -0.025
+	naval_forcelimit_modifier = -0.15
+	global_sailors_modifier = -0.25
+	# Docks -25% Sailors +25% Manpower
+	# Shipyards -0.5 Navy FL +0.5 Land FL
+	infantry_power = 0.05
+	cavalry_power = 0.05
+	artillery_power = 0.05
+	global_manpower_modifier = 0.15
+}
+one_v_one_mission_re_nav_buf_3_dock = {
+	local_sailors_modifier = -0.25
+	local_manpower_modifier = 0.25
+}
+one_v_one_mission_re_nav_buf_3_drydock = {
+	local_sailors_modifier = -0.5
+	local_manpower_modifier = 0.5
+}
+one_v_one_mission_re_nav_buf_3_shipyard = {
+	naval_forcelimit = -0.5
+	land_forcelimit = 0.5
+}
+one_v_one_mission_re_nav_buf_3_grand_shipyard = {
+	naval_forcelimit = -1
+	land_forcelimit = 1
+}
+### ### ###
+one_v_one_mission_re_mil_buf_1_modifier = {
+	manpower_recovery_speed = 0.2
+	global_manpower_modifier = 0.3
+	land_forcelimit_modifier = 0.3
+	regiment_manpower_usage = -0.05
+	reinforce_cost_modifier = -0.2
+	yearly_army_professionalism = 0.01
+	land_attrition = -0.15
+	# Barracks +200 Manpower
+	# Regiment Camps +1 Fl
+}
+one_v_one_mission_re_mil_buf_1_barracks = {
+	local_manpower = 0.2
+}
+one_v_one_mission_re_mil_buf_1_training_fields = {
+	local_manpower = 0.4
+}
+one_v_one_mission_re_mil_buf_1_regimental_camp = {
+	land_forcelimit = 1
+}
+one_v_one_mission_re_mil_buf_1_conscription_center = {
+	land_forcelimit = 2
+}
+one_v_one_mission_re_mil_buf_2_modifier = {
+	discipline = 0.05
+	land_morale = 0.1
+	movement_speed = 0.2
+	force_march_free = yes
+	land_attrition = -0.1
+	reinforce_speed = 0.2
+	recover_army_morale_speed = 0.15
+	fort_maintenance_modifier = -0.2
+	prestige_decay = -0.02
+	mil_advisor_cost = -0.33
+}
+one_v_one_mission_re_mil_buf_3_modifier = {
+	max_general_fire = 3
+	max_general_shock = 3
+	leader_land_fire = 1
+	leader_land_shock = 1
+	leader_land_manuever = 2
+	general_cost = 0.5
+	army_tradition_from_battle = -0.2
+}
+### ### ###
+one_v_one_mission_re_war_1_modifier = {
+	infantry_power = 0.075
+	cavalry_power = 0.075
+	artillery_power = 0.075
+	siege_ability = 0.05
+	# add_manpower = 250
+	global_regiment_cost = -0.05
+	recover_army_morale_speed = 0.33
+	reinforce_speed = 0.33
+}
+one_v_one_mission_re_war_2_modifier = {
+	infantry_power = 0.125
+	cavalry_power = 0.125
+	artillery_power = 0.125
+	discipline = 0.025
+	military_tactics = 0.05
+	# add_manpower = 300
+	# add_treasury = 5000
+	siege_ability = 0.1
+	defensiveness = 0.1
+	manpower_recovery_speed = 0.1
+	# Own forts on barrage +1 siege progress
+}
+one_v_one_mission_re_war_3_modifier = {
+	infantry_power = 0.2
+	cavalry_power = 0.2
+	artillery_power = 0.2
+	discipline = 0.05
+	land_morale = 0.1
+	siege_ability = 0.2
+	defensiveness = 0.15
+	manpower_recovery_speed = 0.15
+	global_regiment_cost = -0.1
+	# add_manpower = 500
+	# add_treasury = 10000
+	# Own forts on barrage +2 siege progress
+}
+one_v_one_mission_re_war_4_modifier = {
+	siege_ability = 0.3
+	infantry_power = 0.3
+	cavalry_power = 0.3
+	artillery_power = 0.3
+	discipline = 0.075
+	land_morale_constant = 0.5
+	morale_damage_received = -1
+	global_manpower_modifier = 0.5
+	land_forcelimit_modifier = 0.5
+	manpower_recovery_speed = 0.25
+	regiment_recruit_speed = -1
+	movement_speed = 0.5
+	interest = -1
+	# add_treasury = 15000
+	# add_manpower = 500
+}

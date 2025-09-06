@@ -1,0 +1,35 @@
+revolution = {
+	ended_by_country_breaking_to_rebels = no
+	potential = {
+		always = no
+	}
+
+	
+	
+	can_start = {
+	}
+	
+	can_stop = { 
+	}
+	
+	
+	progress = {
+	}
+	
+	can_end = {
+	}
+	
+
+	modifier = {
+	}
+	
+	
+	on_start = revolution.1
+	on_end = revolution.9
+	
+	on_monthly = {
+		events = {
+		}
+	}
+}
+

@@ -1,0 +1,1577 @@
+country_decisions = {
+	one_v_one_check_rules = {
+		potential = { one_v_one_starting_nation = no NOT = { has_country_flag = check_scenario_rules } }
+		effect = {
+			set_country_flag = check_scenario_rules
+			hidden_effect = {
+				if = { # Italy
+					limit = { started_in = 1479.1.1 NOT = { started_in = 1479.1.3 } }
+					country_event = { id = one_v_one_mod.41 }
+				}
+				if = { # Ottoman and Ottoman Alt
+					limit = { OR = { started_in = 1516.1.1 started_in = 1516.1.2 } NOT = { started_in = 1516.1.3 } }
+					country_event = { id = one_v_one_mod.42 }
+				}
+				if = { # Japan
+					limit = { started_in = 1565.1.1 NOT = { started_in = 1565.1.2 } }
+					country_event = { id = one_v_one_mod.43 }
+				}
+				if = { # Japan Alt
+					limit = { started_in = 1565.1.2 NOT = { started_in = 1565.1.3 } }
+					country_event = { id = one_v_one_mod.433 }
+				}
+				if = { # India
+					limit = { OR = { started_in = 1584.1.1 started_in = 1584.1.2 } NOT = { started_in = 1584.1.3 } }
+					country_event = { id = one_v_one_mod.44 }
+				}
+				if = { # Thirty Years
+					limit = { started_in = 1611.1.1 NOT = { started_in = 1611.1.2 } }
+					country_event = { id = one_v_one_mod.47 }
+				}
+				if = { # Thirty Years Alt
+					limit = { started_in = 1611.1.2 NOT = { started_in = 1611.1.3 } }
+					country_event = { id = one_v_one_mod.477 }
+				}
+				if = { # Great Turkish War
+					limit = { started_in = 1676.1.1 NOT = { started_in = 1676.1.2 } }
+					country_event = { id = one_v_one_mod.51 }
+				}
+				if = { # Great Turkish War Alt
+					limit = { started_in = 1676.1.2 NOT = { started_in = 1676.1.3 } }
+					country_event = { id = one_v_one_mod.511 }
+				}
+				if = { # Roman Wars
+					limit = { OR = { started_in = 1685.1.1 started_in = 1685.1.2 } NOT = { started_in = 1685.1.3 } }
+					country_event = { id = one_v_one_mod.52 }
+				}
+				if = { # Austrian Succession
+					limit = { OR = { started_in = 1734.1.1 started_in = 1734.1.2 } NOT = { started_in = 1734.1.3 } }
+					country_event = { id = one_v_one_mod.50 }
+				}
+				if = { # Seven Years
+					limit = { OR = { started_in = 1749.1.1 started_in = 1749.1.2 } NOT = { started_in = 1749.1.3 } }
+					country_event = { id = one_v_one_mod.49 }
+				}
+				if = { # Succession Wars
+					limit = { OR = { started_in = 1694.1.1 started_in = 1694.1.2 } NOT = { started_in = 1694.1.3 } }
+					country_event = { id = one_v_one_mod.45 }
+				}
+				if = { # Napoleon
+					limit = { started_in = 1799.1.1 NOT = { started_in = 1799.1.2 } }
+					country_event = { id = one_v_one_mod.46 }
+				}
+				if = { # Napoleon Alt
+					limit = { started_in = 1799.1.2 NOT = { started_in = 1799.1.3 } }
+					country_event = { id = one_v_one_mod.466 }
+				}
+				if = { # Great War and Alt
+					limit = { OR = { started_in = 1807.1.1 started_in = 1807.1.2 } NOT = { started_in = 1807.1.2 } }
+					country_event = { id = one_v_one_mod.48 }
+				}
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
+	one_v_one_papal_controller = {
+		potential = {
+			one_v_one_starting_nation = no
+			religion = catholic
+			papacy_active = yes
+			is_papal_controller = no
+			OR = { tag = WFR tag = WSP tag = WAU tag = NFR tag = NSP tag = NIT tag = NAU tag = TFR tag = TPL tag = TAS tag = TSP tag = TCG tag = TIT tag = GSP tag = GFR tag = GIT tag = GAU tag = GPL tag = AFR tag = ASP tag = AIT tag = AAU tag = APL tag = ABA tag = SAU tag = SFR tag = SSP tag = SPO tag = WWF tag = WWI tag = WWA one_v_one_re_nations = yes }
+			PAP = {
+				OR = {
+					had_ruler_flag = { flag = papal_controller_flag days = 1825 }
+					NOT = { has_ruler_flag = papal_controller_flag }
+				}
+			}
+		}
+		allow = {
+			religion = catholic
+			invested_papal_influence = 100
+		}
+		effect = {
+			custom_tooltip = one_v_one_papal_controller_tt
+			hidden_effect = {
+				PAP = {
+					define_ruler = { age = 60 ADM = 0 DIP = 0 MIL = 0 }
+					set_ruler_flag = papal_controller_flag
+				}
+			}
+			transfer_papal_controller = ROOT
+			add_papal_influence = -200
+		}
+		ai_will_do = { factor = 0 }
+	}
+	one_v_one_parliament_on_all_provinces = {
+		potential = { one_v_one_starting_nation = no has_parliament = yes any_owned_province = { has_seat_in_parliament = no } }
+		allow = {
+			custom_trigger_tooltip = {
+				tooltip = one_v_one_parliament_on_all_provinces_tt
+				any_owned_province = { has_seat_in_parliament = no } 
+			}
+		}
+		effect = {
+			custom_tooltip = one_v_one_parliament_on_all_provinces_ttt
+			hidden_effect = { every_owned_province = { set_seat_in_parliament = yes } }
+		}
+		ai_will_do = { factor = 0 }
+	}
+	one_v_one_delete_churches = {
+		potential = {
+			one_v_one_starting_nation = no any_owned_province = { has_tax_building_trigger = yes }
+			NOT = { has_country_flag = one_v_one_church_decision_flag }
+		}
+		allow = {
+			any_owned_province = { has_tax_building_trigger = yes }
+		}
+		effect = {
+			set_country_flag = one_v_one_church_decision_flag
+			custom_tooltip = one_v_one_delete_churches_tt
+			hidden_effect = {
+				every_owned_province = {
+					limit = { has_building = temple }
+					remove_building = temple
+				}
+				every_owned_province = {
+					limit = { has_building = cathedral }
+					remove_building = cathedral
+				}
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
+	one_v_one_get_specific_advisor = {
+		major = yes
+		potential = { one_v_one_starting_nation = no NOT = { has_country_flag = one_v_one_get_specific_advisor_flag } }
+		allow = { treasury = 33 }
+		effect = {
+			set_country_flag = one_v_one_get_specific_advisor_flag
+			country_event = { id = one_v_one_mod.30 }
+		}
+		ai_will_do = { factor = 0 }
+	}
+	one_v_one_advancement_edict = {
+		color = { 70 133 70 }
+		potential = { one_v_one_starting_nation = no }
+		allow = { any_owned_province = { NOT = { has_state_edict = edict_advancement_effort } } }
+		effect = {
+			custom_tooltip = one_v_one_advancement_edict_tt
+			every_owned_province = {
+				limit = { is_state = yes }
+				set_state_edict = edict_advancement_effort
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
+	one_v_one_manpower_edict = {
+		color = { 70 133 70 }
+		potential = { one_v_one_starting_nation = no }
+		allow = { any_owned_province = { NOT = { has_state_edict = edict_promote_military_recruitment } } }
+		effect = {
+			custom_tooltip = one_v_one_manpower_edict_tt
+			every_owned_province = {
+				limit = { is_state = yes }
+				set_state_edict = edict_promote_military_recruitment
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
+	one_v_one_taxes_edict = {
+		color = { 70 133 70 }
+		potential = { one_v_one_starting_nation = no current_age = age_of_discovery has_government_attribute = unlock_special_state_edicts }
+		allow = { any_owned_province = { NOT = { has_state_edict = feudal_taxes_state_edict } } }
+		effect = {
+			custom_tooltip = one_v_one_taxes_edict_tt
+			every_owned_province = {
+				limit = { is_state = yes }
+				set_state_edict = feudal_taxes_state_edict
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
+	one_v_one_urbanization_edict = {
+		color = { 70 133 70 }
+		potential = { one_v_one_starting_nation = no current_age = age_of_revolutions has_government_attribute = unlock_special_state_edicts }
+		allow = { any_owned_province = { NOT = { has_state_edict = urbanization_state_edict } } }
+		effect = {
+			custom_tooltip = one_v_one_urbanization_edict_tt
+			every_owned_province = {
+				limit = { is_state = yes }
+				set_state_edict = urbanization_state_edict
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
+	one_v_one_general_spawner = {
+		major = yes
+		potential = {
+			one_v_one_starting_nation = no
+			OR = {
+				NOT = { has_country_flag = one_v_one_general_spawner_flag }
+				had_country_flag = { flag = one_v_one_general_spawner_flag days = 30 }
+			}
+		}
+		allow = {
+			custom_trigger_tooltip = {
+				tooltip = one_v_one_general_spawner_tt
+				OR = {
+					NOT = { has_country_flag = one_v_one_general_spawner_flag }
+					had_country_flag = { flag = one_v_one_general_spawner_flag days = 30 }
+				}
+			}
+		}
+		effect = {
+			set_country_flag = one_v_one_general_spawner_flag
+			define_general = { fire = 3 shock = 3 manuever = 3 siege = 1 }
+		}
+		ai_will_do = { factor = 0 }
+	}
+	one_v_one_explorer_spawner = {
+		major = yes
+		potential = {
+			one_v_one_starting_nation = no
+			OR = {
+				NOT = { has_country_flag = one_v_one_explorer_spawner_flag }
+				had_country_flag = { flag = one_v_one_explorer_spawner_flag days = 90 }
+			}
+		}
+		allow = {
+			custom_trigger_tooltip = {
+				tooltip = one_v_one_explorer_spawner_tt
+				OR = {
+					NOT = { has_country_flag = one_v_one_explorer_spawner_flag }
+					had_country_flag = { flag = one_v_one_explorer_spawner_flag days = 90 }
+				}
+			}
+		}
+		effect = {
+			set_country_flag = one_v_one_explorer_spawner_flag
+			define_explorer = { fire = 1 shock = 1 manuever = 1 siege = 1 }
+		}
+		ai_will_do = { factor = 0 }
+	}
+	one_v_one_estate_church_clerical_ministers_decrease_piety_decision = {
+		color = { 195 160 20 }
+		potential = {
+			one_v_one_starting_nation = no
+			has_estate_privilege = estate_church_clerical_ministers
+			religion_group = muslim
+			has_country_flag = one_v_one_estate_church_clerical_ministers_increase_piety_flag
+		}
+		allow = { NOT = { estate_influence = { estate = estate_church influence = 70 } } }
+		effect = {
+			add_estate_influence_modifier = {
+				estate = estate_church
+				desc = EST_VAL_ONE_V_ONE_INFLUENCED_PIETY
+				influence = 20
+				duration = 3650
+			}
+			custom_tooltip = one_v_one_estate_church_clerical_ministers_decrease_piety_tt
+			clr_country_flag = one_v_one_estate_church_clerical_ministers_increase_piety_flag
+			set_country_flag = one_v_one_estate_church_clerical_ministers_decrease_piety_flag
+		}
+		ai_will_do = { factor = 0 }
+	}
+	one_v_one_estate_church_clerical_ministers_increase_piety_decision = {
+		color = { 195 160 20 }
+		potential = {
+			one_v_one_starting_nation = no
+			has_estate_privilege = estate_church_clerical_ministers
+			religion_group = muslim
+			has_country_flag = one_v_one_estate_church_clerical_ministers_decrease_piety_flag
+		}
+		allow = { NOT = { estate_influence = { estate = estate_church influence = 70 } } }
+		effect = {
+			add_estate_influence_modifier = {
+				estate = estate_church
+				desc = EST_VAL_ONE_V_ONE_INFLUENCED_PIETY
+				influence = 20
+				duration = 3650
+			}
+			custom_tooltip = one_v_one_estate_church_clerical_ministers_increase_piety_tt
+			clr_country_flag = one_v_one_estate_church_clerical_ministers_decrease_piety_flag
+			set_country_flag = one_v_one_estate_church_clerical_ministers_increase_piety_flag
+		}
+		ai_will_do = { factor = 0 }
+	}
+######### Tur-Mam scenario:
+	one_v_one_mission_s1_5_mmj_bonus_3_decision = {
+		color = { 0 150 200 }
+		potential = { one_v_one_starting_nation = no tag = MMJ mission_completed = one_v_one_mission_s1_5_mmj_bonus_3 }
+		allow = {
+			custom_trigger_tooltip = {
+				tooltip = one_v_one_mission_s1_5_mmj_bonus_3_decision_flag_tt
+				OR = {
+					NOT = { has_country_flag = one_v_one_mission_s1_5_mmj_bonus_3_decision_flag  }
+					had_country_flag = { flag = one_v_one_mission_s1_5_mmj_bonus_3_decision_flag days = 2190 }
+				}
+			}
+			treasury = 900
+		}
+		effect = {
+			set_country_flag = one_v_one_mission_s1_5_mmj_bonus_3_decision_flag
+			add_treasury = -900
+			custom_tooltip = one_v_one_mission_s1_5_mmj_bonus_3_decision_tt
+			hidden_effect = {
+				365 = { carrack = ROOT carrack = ROOT carrack = ROOT carrack = ROOT carrack = ROOT war_galley = ROOT war_galley = ROOT war_galley = ROOT war_galley = ROOT war_galley = ROOT war_galley = ROOT war_galley = ROOT war_galley = ROOT war_galley = ROOT war_galley = ROOT war_galley = ROOT war_galley = ROOT war_galley = ROOT war_galley = ROOT war_galley = ROOT war_galley = ROOT war_galley = ROOT war_galley = ROOT war_galley = ROOT war_galley = ROOT war_galley = ROOT war_galley = ROOT war_galley = ROOT war_galley = ROOT war_galley = ROOT war_galley = ROOT war_galley = ROOT war_galley = ROOT war_galley = ROOT war_galley = ROOT war_galley = ROOT war_galley = ROOT war_galley = ROOT war_galley = ROOT war_galley = ROOT war_galley = ROOT war_galley = ROOT war_galley = ROOT war_galley = ROOT war_galley = ROOT war_galley = ROOT war_galley = ROOT war_galley = ROOT war_galley = ROOT war_galley = ROOT war_galley = ROOT war_galley = ROOT war_galley = ROOT war_galley = ROOT war_galley = ROOT }
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
+######### Japan scenario:
+	# East Japan:
+	one_v_one_jnp_por_1_decision = {
+		color = { 0 150 200 }
+		provinces_to_highlight = {
+			province_id = 1852
+		}
+		potential = {
+			one_v_one_starting_nation = no
+			started_in = 1565.1.1
+			NOT = { started_in = 1565.1.3 }
+			1852 = { controlled_by = ROOT }
+		}
+		allow = {
+			1852 = { controlled_by = ROOT }
+			if = {
+				limit = { religion = catholic }
+				custom_trigger_tooltip = {
+					tooltip = one_v_one_jap_por_decision_flag_ttt
+					OR = {
+						NOT = { has_country_flag = one_v_one_jnp_por_decision_flag  }
+						had_country_flag = { flag = one_v_one_jnp_por_decision_flag days = 1460 }
+					}
+				}
+			}
+			else = {
+				custom_trigger_tooltip = {
+					tooltip = one_v_one_jap_por_decision_flag_tt
+					OR = {
+						NOT = { has_country_flag = one_v_one_jnp_por_decision_flag  }
+						had_country_flag = { flag = one_v_one_jnp_por_decision_flag days = 1825 }
+					}
+				}
+			}
+			treasury = 300
+			if = { limit = { religion = shinto } NOT = { isolationism = 4 } }
+			MWP = { has_opinion = { who = ROOT value = 50 } }
+		}
+		effect = {
+			set_country_flag = one_v_one_jnp_por_decision_flag
+			add_treasury = -300
+			add_country_modifier = { name = one_v_one_jnp_por_1_decision_modifier duration = 3650 }
+			custom_tooltip = one_v_one_jnp_por_1_decision_tt
+			hidden_effect = {
+				1852 = { heavy_ship = ROOT heavy_ship = ROOT heavy_ship = ROOT caravel_light = ROOT caravel_light = ROOT caravel_light = ROOT caravel_light = ROOT caravel_light = ROOT caravel_light = ROOT }
+			}
+		}
+		ai_will_do = { factor = 1 }
+	}
+	one_v_one_jnp_por_2_decision = {
+		color = { 0 150 200 }
+		provinces_to_highlight = {
+			province_id = 1852
+		}
+		potential = {
+			one_v_one_starting_nation = no
+			started_in = 1565.1.1
+			NOT = { started_in = 1565.1.3 }
+			1852 = { controlled_by = ROOT }
+		}
+		allow = {
+			1852 = { controlled_by = ROOT }
+			if = {
+				limit = { religion = catholic }
+				custom_trigger_tooltip = {
+					tooltip = one_v_one_jap_por_decision_flag_ttt
+					OR = {
+						NOT = { has_country_flag = one_v_one_jnp_por_decision_flag  }
+						had_country_flag = { flag = one_v_one_jnp_por_decision_flag days = 1460 }
+					}
+				}
+			}
+			else = {
+				custom_trigger_tooltip = {
+					tooltip = one_v_one_jap_por_decision_flag_tt
+					OR = {
+						NOT = { has_country_flag = one_v_one_jnp_por_decision_flag  }
+						had_country_flag = { flag = one_v_one_jnp_por_decision_flag days = 1825 }
+					}
+				}
+			}
+			treasury = 500
+			if = { limit = { religion = shinto } NOT = { isolationism = 3 } }
+			MWP = { has_opinion = { who = ROOT value = 100 } }
+		}
+		effect = {
+			set_country_flag = one_v_one_jnp_por_decision_flag
+			add_treasury = -500
+			add_country_modifier = { name = one_v_one_jnp_por_2_decision_modifier duration = 1460 }
+		}
+		ai_will_do = { factor = 1 }
+	}
+	one_v_one_jnp_por_3_decision = {
+		color = { 0 150 200 }
+		provinces_to_highlight = {
+			province_id = 1852
+		}
+		potential = {
+			one_v_one_starting_nation = no
+			started_in = 1565.1.1
+			NOT = { started_in = 1565.1.3 }
+			1852 = { controlled_by = ROOT }
+		}
+		allow = {
+			1852 = { controlled_by = ROOT }
+			if = {
+				limit = { religion = catholic }
+				custom_trigger_tooltip = {
+					tooltip = one_v_one_jap_por_decision_flag_ttt
+					OR = {
+						NOT = { has_country_flag = one_v_one_jnp_por_decision_flag  }
+						had_country_flag = { flag = one_v_one_jnp_por_decision_flag days = 1460 }
+					}
+				}
+			}
+			else = {
+				custom_trigger_tooltip = {
+					tooltip = one_v_one_jap_por_decision_flag_tt
+					OR = {
+						NOT = { has_country_flag = one_v_one_jnp_por_decision_flag  }
+						had_country_flag = { flag = one_v_one_jnp_por_decision_flag days = 1825 }
+					}
+				}
+			}
+			treasury = 500
+			if = { limit = { religion = shinto } NOT = { isolationism = 3 } }
+			MWP = { has_opinion = { who = ROOT value = 100 } }
+		}
+		effect = {
+			set_country_flag = one_v_one_jnp_por_decision_flag
+			add_treasury = -500
+			add_country_modifier = { name = one_v_one_jnp_por_3_decision_modifier duration = 1460 }
+		}
+		ai_will_do = { factor = 1 }
+	}
+	one_v_one_jnp_por_4_decision = {
+		color = { 0 150 200 }
+		provinces_to_highlight = {
+			province_id = 1852
+		}
+		potential = {
+			one_v_one_starting_nation = no
+			started_in = 1565.1.1
+			NOT = { started_in = 1565.1.3 }
+			1852 = { controlled_by = ROOT }
+		}
+		allow = {
+			1852 = { controlled_by = ROOT }
+			if = {
+				limit = { religion = catholic }
+				custom_trigger_tooltip = {
+					tooltip = one_v_one_jap_por_decision_flag_ttt
+					OR = {
+						NOT = { has_country_flag = one_v_one_jnp_por_decision_flag  }
+						had_country_flag = { flag = one_v_one_jnp_por_decision_flag days = 1460 }
+					}
+				}
+			}
+			else = {
+				custom_trigger_tooltip = {
+					tooltip = one_v_one_jap_por_decision_flag_tt
+					OR = {
+						NOT = { has_country_flag = one_v_one_jnp_por_decision_flag  }
+						had_country_flag = { flag = one_v_one_jnp_por_decision_flag days = 1825 }
+					}
+				}
+			}
+			treasury = 300
+			if = { limit = { religion = shinto } NOT = { isolationism = 3 } }
+			MWP = { has_opinion = { who = ROOT value = 40 } }
+		}
+		effect = {
+			set_country_flag = one_v_one_jnp_por_decision_flag
+			add_treasury = -300
+			custom_tooltip = one_v_one_jnp_por_4_decision_tt
+			set_country_flag = one_v_one_jnp_por_4_decision_merc_comp_flag
+		}
+		ai_will_do = { factor = 1 }
+	}
+	one_v_one_jnp_por_5_decision = {
+		color = { 0 150 200 }
+		provinces_to_highlight = {
+			province_id = 1852
+		}
+		potential = {
+			one_v_one_starting_nation = no
+			started_in = 1565.1.1
+			NOT = { started_in = 1565.1.3 }
+			1852 = { owned_by = ROOT }
+			NOT = { has_country_flag = one_v_one_jnp_por_5_decision_flag }
+			NOT = { has_country_flag = one_v_one_jsp_por_5_decision_flag }
+		}
+		allow = {
+			1852 = { controlled_by = ROOT }
+			custom_trigger_tooltip = {
+				tooltip = one_v_one_jap_por_decision_flag_tt
+				OR = {
+					NOT = { has_country_flag = one_v_one_jnp_por_decision_flag  }
+					had_country_flag = { flag = one_v_one_jnp_por_decision_flag days = 1825 }
+				}
+			}
+			NOT = { isolationism = 1 }
+			MWP = { has_opinion = { who = ROOT value = 20 } }
+		}
+		effect = {
+			set_country_flag = one_v_one_jnp_por_decision_flag
+			add_country_modifier = { name = one_v_one_jnp_por_5_decision_modifier duration = -1 }
+			add_country_modifier = { name = one_v_one_jnp_por_55_decision_modifier duration = 5475 }
+			add_opinion = { who = MWP modifier = one_v_one_jap_por_5_decision_opinion }
+			MWP = { add_opinion = { who = ROOT modifier = one_v_one_jap_por_5_decision_opinion } }
+			change_religion = catholic
+			set_ruler_religion = catholic
+			capital_scope = { change_religion = catholic }
+			custom_tooltip = one_v_one_jnp_por_5_decision_tt
+			set_country_flag = one_v_one_jnp_por_5_decision_flag
+		}
+		ai_will_do = { factor = 0 }
+	}
+	# West Japan:
+	one_v_one_jsp_por_1_decision = {
+		color = { 0 150 200 }
+		provinces_to_highlight = {
+			province_id = 4182
+		}
+		potential = {
+			one_v_one_starting_nation = no
+			started_in = 1565.1.1
+			NOT = { started_in = 1565.1.3 }
+			4182 = { controlled_by = ROOT }
+		}
+		allow = {
+			4182 = { controlled_by = ROOT }
+			if = {
+				limit = { religion = catholic }
+				custom_trigger_tooltip = {
+					tooltip = one_v_one_jap_por_decision_flag_ttt
+					OR = {
+						NOT = { has_country_flag = one_v_one_jsp_por_decision_flag  }
+						had_country_flag = { flag = one_v_one_jsp_por_decision_flag days = 1460 }
+					}
+				}
+			}
+			else = {
+				custom_trigger_tooltip = {
+					tooltip = one_v_one_jap_por_decision_flag_tt
+					OR = {
+						NOT = { has_country_flag = one_v_one_jsp_por_decision_flag  }
+						had_country_flag = { flag = one_v_one_jsp_por_decision_flag days = 1825 }
+					}
+				}
+			}
+			treasury = 300
+			if = { limit = { religion = shinto } NOT = { isolationism = 4 } }
+			MWP = { has_opinion = { who = ROOT value = 50 } }
+		}
+		effect = {
+			set_country_flag = one_v_one_jsp_por_decision_flag
+			add_treasury = -300
+			add_country_modifier = { name = one_v_one_jsp_por_1_decision_modifier duration = 3650 }
+			custom_tooltip = one_v_one_jsp_por_1_decision_tt
+			hidden_effect = {
+				4182 = { heavy_ship = ROOT heavy_ship = ROOT heavy_ship = ROOT caravel_light = ROOT caravel_light = ROOT caravel_light = ROOT caravel_light = ROOT caravel_light = ROOT caravel_light = ROOT }
+			}
+		}
+		ai_will_do = { factor = 1 }
+	}
+	one_v_one_jsp_por_2_decision = {
+		color = { 0 150 200 }
+		provinces_to_highlight = {
+			province_id = 4182
+		}
+		potential = {
+			one_v_one_starting_nation = no
+			started_in = 1565.1.1
+			NOT = { started_in = 1565.1.3 }
+			4182 = { controlled_by = ROOT }
+		}
+		allow = {
+			4182 = { controlled_by = ROOT }
+			if = {
+				limit = { religion = catholic }
+				custom_trigger_tooltip = {
+					tooltip = one_v_one_jap_por_decision_flag_ttt
+					OR = {
+						NOT = { has_country_flag = one_v_one_jsp_por_decision_flag  }
+						had_country_flag = { flag = one_v_one_jsp_por_decision_flag days = 1460 }
+					}
+				}
+			}
+			else = {
+				custom_trigger_tooltip = {
+					tooltip = one_v_one_jap_por_decision_flag_tt
+					OR = {
+						NOT = { has_country_flag = one_v_one_jsp_por_decision_flag  }
+						had_country_flag = { flag = one_v_one_jsp_por_decision_flag days = 1825 }
+					}
+				}
+			}
+			treasury = 500
+			if = { limit = { religion = shinto } NOT = { isolationism = 3 } }
+			MWP = { has_opinion = { who = ROOT value = 100 } }
+		}
+		effect = {
+			set_country_flag = one_v_one_jsp_por_decision_flag
+			add_treasury = -500
+			add_country_modifier = { name = one_v_one_jsp_por_2_decision_modifier duration = 1460 }
+		}
+		ai_will_do = { factor = 1 }
+	}
+	one_v_one_jsp_por_3_decision = {
+		color = { 0 150 200 }
+		provinces_to_highlight = {
+			province_id = 4182
+		}
+		potential = {
+			one_v_one_starting_nation = no
+			started_in = 1565.1.1
+			NOT = { started_in = 1565.1.3 }
+			4182 = { controlled_by = ROOT }
+		}
+		allow = {
+			4182 = { controlled_by = ROOT }
+			if = {
+				limit = { religion = catholic }
+				custom_trigger_tooltip = {
+					tooltip = one_v_one_jap_por_decision_flag_ttt
+					OR = {
+						NOT = { has_country_flag = one_v_one_jsp_por_decision_flag  }
+						had_country_flag = { flag = one_v_one_jsp_por_decision_flag days = 1460 }
+					}
+				}
+			}
+			else = {
+				custom_trigger_tooltip = {
+					tooltip = one_v_one_jap_por_decision_flag_tt
+					OR = {
+						NOT = { has_country_flag = one_v_one_jsp_por_decision_flag  }
+						had_country_flag = { flag = one_v_one_jsp_por_decision_flag days = 1825 }
+					}
+				}
+			}
+			treasury = 500
+			if = { limit = { religion = shinto } NOT = { isolationism = 3 } }
+			MWP = { has_opinion = { who = ROOT value = 100 } }
+		}
+		effect = {
+			set_country_flag = one_v_one_jsp_por_decision_flag
+			add_treasury = -500
+			add_country_modifier = { name = one_v_one_jsp_por_3_decision_modifier duration = 1460 }
+		}
+		ai_will_do = { factor = 1 }
+	}
+	one_v_one_jsp_por_4_decision = {
+		color = { 0 150 200 }
+		provinces_to_highlight = {
+			province_id = 4182
+		}
+		potential = {
+			one_v_one_starting_nation = no
+			started_in = 1565.1.1
+			NOT = { started_in = 1565.1.3 }
+			4182 = { controlled_by = ROOT }
+		}
+		allow = {
+			4182 = { controlled_by = ROOT }
+			if = {
+				limit = { religion = catholic }
+				custom_trigger_tooltip = {
+					tooltip = one_v_one_jap_por_decision_flag_ttt
+					OR = {
+						NOT = { has_country_flag = one_v_one_jsp_por_decision_flag  }
+						had_country_flag = { flag = one_v_one_jsp_por_decision_flag days = 1460 }
+					}
+				}
+			}
+			else = {
+				custom_trigger_tooltip = {
+					tooltip = one_v_one_jap_por_decision_flag_tt
+					OR = {
+						NOT = { has_country_flag = one_v_one_jsp_por_decision_flag  }
+						had_country_flag = { flag = one_v_one_jsp_por_decision_flag days = 1825 }
+					}
+				}
+			}
+			treasury = 300
+			if = { limit = { religion = shinto } NOT = { isolationism = 3 } }
+			MWP = { has_opinion = { who = ROOT value = 40 } }
+		}
+		effect = {
+			set_country_flag = one_v_one_jsp_por_decision_flag
+			add_treasury = -300
+			custom_tooltip = one_v_one_jsp_por_4_decision_tt
+			set_country_flag = one_v_one_jsp_por_4_decision_merc_comp_flag
+		}
+		ai_will_do = { factor = 1 }
+	}
+	one_v_one_jsp_por_5_decision = {
+		color = { 0 150 200 }
+		provinces_to_highlight = {
+			province_id = 4182
+		}
+		potential = {
+			one_v_one_starting_nation = no
+			started_in = 1565.1.1
+			NOT = { started_in = 1565.1.3 }
+			4182 = { owned_by = ROOT }
+			NOT = { has_country_flag = one_v_one_jnp_por_5_decision_flag }
+			NOT = { has_country_flag = one_v_one_jsp_por_5_decision_flag }
+			NOT = { tag = JSI }
+		}
+		allow = {
+			4182 = { controlled_by = ROOT }
+			custom_trigger_tooltip = {
+				tooltip = one_v_one_jap_por_decision_flag_tt
+				OR = {
+					NOT = { has_country_flag = one_v_one_jsp_por_decision_flag  }
+					had_country_flag = { flag = one_v_one_jsp_por_decision_flag days = 1825 }
+				}
+			}
+			NOT = { isolationism = 1 }
+			MWP = { has_opinion = { who = ROOT value = 20 } }
+		}
+		effect = {
+			set_country_flag = one_v_one_jsp_por_decision_flag
+			add_country_modifier = { name = one_v_one_jsp_por_5_decision_modifier duration = -1 }
+			add_country_modifier = { name = one_v_one_jsp_por_55_decision_modifier duration = 5475 }
+			add_opinion = { who = MWP modifier = one_v_one_jap_por_5_decision_opinion }
+			MWP = { add_opinion = { who = ROOT modifier = one_v_one_jap_por_5_decision_opinion } }
+			change_religion = catholic
+			set_ruler_religion = catholic
+			capital_scope = { change_religion = catholic }
+			custom_tooltip = one_v_one_jsp_por_5_decision_tt
+			set_country_flag = one_v_one_jsp_por_5_decision_flag
+		}
+		ai_will_do = { factor = 0 }
+	}
+	#################################
+	# Great Turkish War:
+	one_v_one_gtw_venice_decision = {
+		color = { 0 150 200 }
+		provinces_to_highlight = {
+			OR = {
+				province_id = 126
+				province_id = 2954
+				province_id = 142
+				province_id = 4698
+				province_id = 163
+				province_id = 164
+				province_id = 3003
+				province_id = 2348
+				province_id = 4700
+				province_id = 320
+				province_id = 321
+			}
+			NOT = { owned_by = ROOT }
+		}
+		potential = {
+			NOT = {
+				one_v_one_gtw_venice = {
+					type = all
+					owned_by = ROOT
+				}
+			}
+			one_v_one_starting_nation = no
+			started_in = 1676.1.1
+			NOT = { started_in = 1676.1.2 }
+			tag = GIT
+			ruler_has_personality = one_v_one_git_morosini_personality
+		}
+		allow = {
+			OR = {
+				126 = { controlled_by = ROOT NOT = { owned_by = ROOT } }
+				2954 = { controlled_by = ROOT NOT = { owned_by = ROOT } }
+				142 = { controlled_by = ROOT NOT = { owned_by = ROOT } }
+				4698 = { controlled_by = ROOT NOT = { owned_by = ROOT } }
+				163 = { controlled_by = ROOT NOT = { owned_by = ROOT } }
+				164 = { controlled_by = ROOT NOT = { owned_by = ROOT } }
+				3003 = { controlled_by = ROOT NOT = { owned_by = ROOT } }
+				2348 = { controlled_by = ROOT NOT = { owned_by = ROOT } }
+				4700 = { controlled_by = ROOT NOT = { owned_by = ROOT } }
+				320 = { controlled_by = ROOT NOT = { owned_by = ROOT } }
+				321 = { controlled_by = ROOT NOT = { owned_by = ROOT } }
+			}
+		}
+		effect = {
+			if = {
+				limit = { 126 = { controlled_by = ROOT NOT = { owned_by = ROOT } } }
+				126 = {
+					add_core = ROOT
+					remove_core = GTO
+					cede_province = ROOT
+					change_culture = ROOT
+					change_religion = ROOT
+					add_province_modifier = { name = one_v_one_git_islands_modifier duration = -1 }
+				}
+				add_splendor = 50
+			}
+			if = {
+				limit = { 2954 = { controlled_by = ROOT NOT = { owned_by = ROOT } } }
+				2954 = {
+					add_core = ROOT
+					remove_core = GEA
+					cede_province = ROOT
+					change_culture = ROOT
+					change_religion = ROOT
+					add_province_modifier = { name = one_v_one_git_islands_modifier duration = -1 }
+				}
+				add_splendor = 50
+			}
+			if = {
+				limit = { 142 = { controlled_by = ROOT NOT = { owned_by = ROOT } } }
+				142 = {
+					add_core = ROOT
+					remove_core = GEB
+					cede_province = ROOT
+					change_culture = ROOT
+					change_religion = ROOT
+					add_province_modifier = { name = one_v_one_git_islands_modifier duration = -1 }
+				}
+				add_splendor = 50
+			}
+			if = {
+				limit = { 4698 = { controlled_by = ROOT NOT = { owned_by = ROOT } } }
+				4698 = {
+					add_core = ROOT
+					remove_core = GEB
+					cede_province = ROOT
+					change_culture = ROOT
+					change_religion = ROOT
+					add_province_modifier = { name = one_v_one_git_islands_modifier duration = -1 }
+				}
+				add_splendor = 50
+			}
+			if = {
+				limit = { 163 = { controlled_by = ROOT NOT = { owned_by = ROOT } } }
+				163 = {
+					add_core = ROOT
+					remove_core = GEB
+					cede_province = ROOT
+					change_culture = ROOT
+					change_religion = ROOT
+					add_province_modifier = { name = one_v_one_git_islands_modifier duration = -1 }
+				}
+				add_splendor = 50
+			}
+			if = {
+				limit = { 164 = { controlled_by = ROOT NOT = { owned_by = ROOT } } }
+				164 = {
+					add_core = ROOT
+					remove_core = GTO
+					cede_province = ROOT
+					change_culture = ROOT
+					change_religion = ROOT
+					add_province_modifier = { name = one_v_one_git_islands_modifier duration = -1 }
+				}
+				add_splendor = 50
+			}
+			if = {
+				limit = { 3003 = { controlled_by = ROOT NOT = { owned_by = ROOT } } }
+				3003 = {
+					add_core = ROOT
+					remove_core = GTO
+					cede_province = ROOT
+					change_culture = ROOT
+					change_religion = ROOT
+					add_province_modifier = { name = one_v_one_git_islands_modifier duration = -1 }
+				}
+				add_splendor = 50
+			}
+			if = {
+				limit = { 2348 = { controlled_by = ROOT NOT = { owned_by = ROOT } } }
+				2348 = {
+					add_core = ROOT
+					remove_core = GTO
+					cede_province = ROOT
+					change_culture = ROOT
+					change_religion = ROOT
+					add_province_modifier = { name = one_v_one_git_islands_modifier duration = -1 }
+				}
+				add_splendor = 50
+			}
+			if = {
+				limit = { 4700 = { controlled_by = ROOT NOT = { owned_by = ROOT } } }
+				4700 = {
+					add_core = ROOT
+					remove_core = GTO
+					cede_province = ROOT
+					change_culture = ROOT
+					change_religion = ROOT
+					add_province_modifier = { name = one_v_one_git_islands_modifier duration = -1 }
+				}
+				add_splendor = 50
+			}
+			if = {
+				limit = { 320 = { controlled_by = ROOT NOT = { owned_by = ROOT } } }
+				320 = {
+					add_core = ROOT
+					remove_core = GTO
+					cede_province = ROOT
+					change_culture = ROOT
+					change_religion = ROOT
+					add_province_modifier = { name = one_v_one_git_islands_modifier duration = -1 }
+				}
+				add_splendor = 50
+			}
+			if = {
+				limit = { 321 = { controlled_by = ROOT NOT = { owned_by = ROOT } } }
+				321 = {
+					add_core = ROOT
+					remove_core = GTO
+					cede_province = ROOT
+					change_culture = ROOT
+					change_religion = ROOT
+					add_province_modifier = { name = one_v_one_git_islands_modifier duration = -1 }
+				}
+				add_splendor = 50
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
+	one_v_one_gtw_morocco_decision = {
+		color = { 150 50 50 }
+		provinces_to_highlight = {
+			OR = {
+				area = northern_morocco_area
+				area = algiers_area
+				area = barbary_coast_area
+				area = hautes_plaines_area
+				province_id = 342
+				province_id = 2467
+				province_id = 343
+				province_id = 349
+			}
+		}
+		potential = {
+			one_v_one_starting_nation = no
+			started_in = 1676.1.1
+			NOT = { started_in = 1676.1.2 }
+			one_v_one_gtw_nations = yes
+		}
+		allow = { always = no }
+		effect = {}
+		ai_will_do = { factor = 0 }
+	}
+	one_v_one_gtw_tunis_decision = {
+		color = { 150 50 50 }
+		provinces_to_highlight = {
+			OR = {
+				area = kabylia_area
+				area = ouled_nail_area
+				area = north_saharan_area
+				area = tunisia_area
+				area = djerba_area
+				area = tripolitania_area
+				province_id = 4567
+				province_id = 2449
+			}
+		}
+		potential = {
+			one_v_one_starting_nation = no
+			started_in = 1676.1.1
+			NOT = { started_in = 1676.1.2 }
+			one_v_one_gtw_nations = yes
+		}
+		allow = { always = no }
+		effect = {}
+		ai_will_do = { factor = 0 }
+	}
+	one_v_one_gtw_georgia_decision = {
+		color = { 150 50 50 }
+		provinces_to_highlight = {
+			OR = {
+				area = imereti_area
+				area = samtskhe_area
+				area = kartli_kakheti_area
+				area = shirvan_area
+				area = armenia_area
+			}
+		}
+		potential = {
+			one_v_one_starting_nation = no
+			started_in = 1676.1.1
+			NOT = { started_in = 1676.1.3 }
+			one_v_one_gtw_nations = yes
+		}
+		allow = { always = no }
+		effect = {}
+		ai_will_do = { factor = 0 }
+	}
+	one_v_one_gtw_steppe_decision = {
+		color = { 150 50 50 }
+		provinces_to_highlight = {
+			OR = {
+				area = lower_don_area
+				area = saratov_area
+				area = lower_yik_area
+				area = astrakhan_area
+				area = dagestan_area
+				area = circassia_area
+			}
+		}
+		potential = {
+			one_v_one_starting_nation = no
+			started_in = 1676.1.1
+			NOT = { started_in = 1676.1.3 }
+			one_v_one_gtw_nations = yes
+		}
+		allow = { always = no }
+		effect = {}
+		ai_will_do = { factor = 0 }
+	}
+	one_v_one_gtw_italy_decision = {
+		color = { 150 50 50 }
+		provinces_to_highlight = {
+			OR = {
+				area = calabria_area
+				area = sicily_area
+				area = western_sicily_area
+				province_id = 127
+				province_id = 4735
+				province_id = 2986
+				province_id = 2983
+				province_id = 4734
+				province_id = 2985
+				province_id = 1933
+				province_id = 122
+			}
+		}
+		potential = {
+			one_v_one_starting_nation = no
+			started_in = 1676.1.1
+			NOT = { started_in = 1676.1.2 }
+			one_v_one_gtw_nations = yes
+		}
+		allow = { always = no }
+		effect = {}
+		ai_will_do = { factor = 0 }
+	}
+	one_v_one_gtw_hungary_decision = {
+		color = { 150 50 50 }
+		provinces_to_highlight = {
+			OR = {
+				area = croatia_area
+				province_id = 4236
+				province_id = 1318
+				province_id = 154
+				province_id = 1772
+				province_id = 135
+				province_id = 152
+				province_id = 139
+				province_id = 4753
+				province_id = 136
+			}
+		}
+		potential = {
+			one_v_one_starting_nation = no
+			started_in = 1676.1.1
+			NOT = { started_in = 1676.1.3 }
+			one_v_one_gtw_nations = yes
+		}
+		allow = { always = no }
+		effect = {}
+		ai_will_do = { factor = 0 }
+	}
+	#################################
+	# Great War:
+	one_v_one_ww_egypt_decision = {
+		color = { 0 150 200 }
+		provinces_to_highlight = {
+			OR = {
+				area = delta_area
+				area = bahari_area
+				area = vostani_area
+				province_id = 2326
+				province_id = 2325
+				province_id = 2318
+				province_id = 2320
+				province_id = 2315
+				province_id = 365
+				province_id = 364
+			}
+			NOT = { controlled_by = ROOT }
+		}
+		potential = {
+			NOT = { has_country_flag = one_v_one_ww_egypt_flag }
+			one_v_one_starting_nation = no
+			started_in = 1807.1.1
+			NOT = { started_in = 1807.1.3 }
+			tag = WWO
+		}
+		allow = {
+			one_v_one_ww_egypt = {
+				type = all
+				controlled_by = ROOT
+			}
+		}
+		effect = {
+			set_country_flag = one_v_one_ww_egypt_flag
+			one_v_one_ww_egypt = {
+				add_core = ROOT
+				remove_core = WWB
+				cede_province = ROOT
+				change_culture = ROOT
+				change_religion = ROOT
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
+	one_v_one_ww_libya_decision = {
+		color = { 0 150 200 }
+		provinces_to_highlight = {
+			OR = {
+				area = tunisia_area
+				area = tripolitania_area 
+				area = cyrenaica_area
+				area = delta_area
+				area = bahari_area
+				area = vostani_area
+				province_id = 2453
+				province_id = 353
+				province_id = 2318
+				province_id = 2320
+				province_id = 2315
+				province_id = 365
+				province_id = 364
+			}
+			NOT = { controlled_by = ROOT }
+		}
+		potential = {
+			NOT = { has_country_flag = one_v_one_ww_libya_flag }
+			one_v_one_starting_nation = no
+			started_in = 1807.1.1
+			NOT = { started_in = 1807.1.3 }
+			tag = WWO
+		}
+		allow = {
+			one_v_one_ww_libya = {
+				type = all
+				controlled_by = ROOT
+			}
+		}
+		effect = {
+			set_country_flag = one_v_one_ww_libya_flag
+			one_v_one_ww_libya = {
+				add_core = ROOT
+				remove_core = WWI
+				cede_province = ROOT
+				change_culture = ROOT
+				change_religion = ROOT
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
+	one_v_one_ww_tunis_decision = {
+		color = { 0 150 200 }
+		provinces_to_highlight = {
+			OR = {
+				area = tunisia_area
+				area = tripolitania_area 
+				area = cyrenaica_area
+				area = delta_area
+				area = bahari_area
+				area = vostani_area
+				province_id = 2453
+				province_id = 353
+				province_id = 2318
+				province_id = 2320
+				province_id = 2315
+				province_id = 365
+				province_id = 364
+			}
+			NOT = { controlled_by = ROOT }
+		}
+		potential = {
+			NOT = { has_country_flag = one_v_one_ww_tunis_flag }
+			one_v_one_starting_nation = no
+			started_in = 1807.1.1
+			NOT = { started_in = 1807.1.3 }
+			tag = WWO
+		}
+		allow = {
+			one_v_one_ww_tunis = {
+				type = all
+				controlled_by = ROOT
+			}
+		}
+		effect = {
+			set_country_flag = one_v_one_ww_tunis_flag
+			one_v_one_ww_tunis = {
+				add_core = ROOT
+				remove_core = WWF
+				cede_province = ROOT
+				change_culture = ROOT
+				change_religion = ROOT
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
+	#################################
+	# Seven Years War:
+	one_v_one_syw_india_decision = {
+		color = { 0 150 200 }
+		provinces_to_highlight = {
+			OR = {
+				area = orissa_area
+				area = jharkhand_area
+				area = west_bengal_area
+				province_id = 2039
+				province_id = 4475
+				province_id = 564
+				province_id = 4478
+				province_id = 4479
+				province_id = 2084
+				province_id = 549
+				province_id = 2080
+				province_id = 2048
+				province_id = 4448
+				province_id = 4446
+				province_id = 4447
+				province_id = 4451
+				province_id = 553
+			}
+			NOT = { owned_by = ROOT }
+			NOT = { controlled_by = ROOT }
+		}
+		potential = {
+			NOT = { has_country_flag = one_v_one_syw_india_flag }
+			one_v_one_starting_nation = no
+			started_in = 1749.1.1
+			NOT = { started_in = 1749.1.3 }
+			OR = { tag = SGB tag = SFR }
+		}
+		allow = {
+			one_v_one_syw_india_fr = {
+				type = all
+				controlled_by = ROOT
+			}
+			one_v_one_syw_india_gb = {
+				type = all
+				controlled_by = ROOT
+			}
+		}
+		effect = {
+			set_country_flag = one_v_one_syw_india_flag
+			if = {
+				limit = { tag = SGB }
+				one_v_one_syw_india_fr = {
+					add_core = ROOT
+					remove_core = SFR
+					cede_province = ROOT
+					change_culture = ROOT
+					change_religion = ROOT
+				}
+				add_country_modifier = { name = one_v_one_india_good duration = -1 }
+				SFR = { add_country_modifier = { name = one_v_one_india_bad duration = -1 } }
+				SUA = { add_country_modifier = { name = one_v_one_india_colony duration = -1 } }
+				SCN = { add_country_modifier = { name = one_v_one_india_colony duration = -1 } }
+			}
+			if = {
+				limit = { tag = SFR }
+				one_v_one_syw_india_gb = {
+					add_core = ROOT
+					remove_core = SGB
+					cede_province = ROOT
+					change_culture = ROOT
+					change_religion = ROOT
+				}
+				add_country_modifier = { name = one_v_one_india_good duration = -1 }
+				SGB = { add_country_modifier = { name = one_v_one_india_bad duration = -1 } }
+				SLU = { add_country_modifier = { name = one_v_one_india_colony duration = -1 } }
+				SQU = { add_country_modifier = { name = one_v_one_india_colony duration = -1 } }
+			}
+			if = {
+				limit = { NOT = { has_global_flag = one_v_one_syw_india_goods } }
+				one_v_one_syw_india_gb = {
+					remove_province_modifier = one_v_one_goods_prod
+					add_permanent_province_modifier = {
+						name = one_v_one_goods_prod_exp
+						duration = -1
+					}
+				}
+				one_v_one_syw_india_fr = {
+					remove_province_modifier = one_v_one_goods_prod
+					add_permanent_province_modifier = {
+						name = one_v_one_goods_prod_exp
+						duration = -1
+					}
+				}
+			}
+			set_global_flag = one_v_one_syw_india_goods
+		}
+		ai_will_do = { factor = 0 }
+	}
+	one_v_one_syw_phili_decision = {
+		color = { 0 150 200 }
+		provinces_to_highlight = {
+			OR = {
+				area = southern_luzon_area
+				area = visayas_area
+				area = mindanao_area
+				area = west_mindanao_area
+				area = palawan_area
+				province_id = 657
+				province_id = 2698
+				province_id = 658
+			}
+			NOT = { owned_by = ROOT }
+			NOT = { controlled_by = ROOT }
+		}
+		potential = {
+			NOT = { has_country_flag = one_v_one_syw_phili_flag }
+			one_v_one_starting_nation = no
+			started_in = 1749.1.1
+			NOT = { started_in = 1749.1.3 }
+			OR = { tag = SSP tag = SPO }
+		}
+		allow = {
+			one_v_one_syw_phili_po = {
+				type = all
+				controlled_by = ROOT
+			}
+			one_v_one_syw_phili_sp = {
+				type = all
+				controlled_by = ROOT
+			}
+		}
+		effect = {
+			set_country_flag = one_v_one_syw_phili_flag
+			if = {
+				limit = { tag = SSP }
+				one_v_one_syw_phili_po = {
+					add_core = ROOT
+					remove_core = SPO
+					cede_province = ROOT
+					change_culture = ROOT
+					change_religion = ROOT
+				}
+				add_country_modifier = { name = one_v_one_phili_good duration = -1 }
+				SPO = { add_country_modifier = { name = one_v_one_phili_bad duration = -1 } }
+				SNS = { add_country_modifier = { name = one_v_one_phili_colony duration = -1 } }
+			}
+			if = {
+				limit = { tag = SPO }
+				one_v_one_syw_phili_sp = {
+					add_core = ROOT
+					remove_core = SSP
+					cede_province = ROOT
+					change_culture = ROOT
+					change_religion = ROOT
+				}
+				add_country_modifier = { name = one_v_one_phili_good duration = -1 }
+				SSP = { add_country_modifier = { name = one_v_one_phili_bad duration = -1 } }
+				SBR = { add_country_modifier = { name = one_v_one_phili_colony duration = -1 } }
+			}
+			if = {
+				limit = { NOT = { has_global_flag = one_v_one_syw_phili_goods } }
+				one_v_one_syw_phili_sp = {
+					custom_tooltip = one_v_one_goods_prod_tt
+					hidden_effect = {
+						remove_province_modifier = one_v_one_goods_prod
+						add_permanent_province_modifier = {
+							name = one_v_one_goods_prod_exp
+							duration = -1
+						}
+					}
+				}
+				one_v_one_syw_phili_po = {
+					custom_tooltip = one_v_one_goods_prod_tt
+					hidden_effect = {
+						remove_province_modifier = one_v_one_goods_prod
+						add_permanent_province_modifier = {
+							name = one_v_one_goods_prod_exp
+							duration = -1
+						}
+					}
+				}
+			}
+			set_global_flag = one_v_one_syw_phili_goods
+		}
+		ai_will_do = { factor = 0 }
+	}
+	one_v_one_syw_portugal_decision = {
+		color = { 0 150 200 }
+		provinces_to_highlight = {
+			OR = {
+				area = beieras_area
+				area = alentejo_area
+			}
+			NOT = { owned_by = ROOT }
+			NOT = { controlled_by = ROOT }
+		}
+		potential = {
+			if = {
+				limit = { tag = SPO }
+				has_country_flag = one_v_one_syw_portugal
+			}
+			NOT = { has_country_flag = one_v_one_syw_portugal_flag }
+			one_v_one_starting_nation = no
+			started_in = 1749.1.1
+			NOT = { started_in = 1749.1.3 }
+			OR = { tag = SSP tag = SPO }
+		}
+		allow = {
+			one_v_one_syw_portugal = {
+				type = all
+				controlled_by = ROOT
+			}
+		}
+		effect = {
+			hidden_effect = { SPO = { set_country_flag = one_v_one_syw_portugal } }
+			set_country_flag = one_v_one_syw_portugal_flag
+			if = {
+				limit = { tag = SSP }
+				one_v_one_syw_portugal = {
+					add_core = ROOT
+					remove_core = SPO
+					cede_province = ROOT
+					change_culture = ROOT
+					change_religion = ROOT
+				}
+			}
+			if = {
+				limit = { tag = SPO }
+				one_v_one_syw_portugal = {
+					add_core = ROOT
+					remove_core = SSP
+					cede_province = ROOT
+					change_culture = ROOT
+					change_religion = ROOT
+				}
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
+	#################################
+	# Roman Wars:
+	one_v_one_re_second_golden_era_decision = {
+		color = { 0 150 200 }
+		potential = {
+			NOT = { has_country_flag = one_v_one_second_golden_era_flag }
+			one_v_one_starting_nation = no
+			started_in = 1685.1.1
+			NOT = { started_in = 1685.1.3 }
+			one_v_one_re_nations = yes
+		}
+		allow = {
+			has_had_golden_age = yes
+			in_golden_age = no
+			splendor = 600
+		}
+		effect = {
+			add_splendor = -600
+			set_country_flag = one_v_one_second_golden_era_flag
+			add_country_modifier = { name = one_v_one_second_golden_era_modifier duration = 2555 }
+		}
+		ai_will_do = { factor = 0 }
+	}
+	one_v_one_re_hire_general_1_decision = {
+		color = { 0 150 200 }
+		potential = {
+			one_v_one_starting_nation = no
+			started_in = 1685.1.1
+			NOT = { started_in = 1685.1.3 }
+			one_v_one_re_nations = yes
+		}
+		allow = { mil_power = 75 }
+		effect = {
+			add_mil_power = -75
+			define_general = { shock = 4 fire = 4 manuever = 4 siege = 0 }
+		}
+		ai_will_do = { factor = 0 }
+	}
+	one_v_one_re_hire_general_2_decision = {
+		color = { 0 150 200 }
+		potential = {
+			one_v_one_starting_nation = no
+			started_in = 1685.1.1
+			NOT = { started_in = 1685.1.3 }
+			one_v_one_re_nations = yes
+		}
+		allow = { mil_power = 125 }
+		effect = {
+			add_mil_power = -125
+			define_general = { shock = 5 fire = 5 manuever = 4 siege = 0 }
+		}
+		ai_will_do = { factor = 0 }
+	}
+	one_v_one_re_hire_general_3_decision = {
+		color = { 0 150 200 }
+		potential = {
+			NOT = { has_country_flag = re_hire_general_2_time }
+			one_v_one_starting_nation = no
+			started_in = 1685.1.1
+			NOT = { started_in = 1685.1.3 }
+			one_v_one_re_nations = yes
+		}
+		allow = {
+			mil_power = 200
+			custom_trigger_tooltip = {
+				tooltip = one_v_one_re_hire_general_3_tt
+				NOT = { has_country_flag = re_hire_general_2_time }
+			}
+		}
+		effect = {
+			custom_tooltip = one_v_one_re_hire_general_3_ttt
+			if = {
+				limit = { has_country_flag = re_hire_general_1_time }
+				set_country_flag = re_hire_general_2_time
+			}
+			set_country_flag = re_hire_general_1_time
+			add_mil_power = -200
+			define_general = { shock = 6 fire = 6 manuever = 4 siege = 0 }
+		}
+		ai_will_do = { factor = 0 }
+	}
+	one_v_one_re_coastal_raid_decision = {
+		color = { 150 50 50 }
+		provinces_to_highlight = {
+			one_v_one_re_raid_prov = yes
+			NOT = { owned_by = ROOT }
+		}
+		potential = {
+			one_v_one_starting_nation = no
+			started_in = 1685.1.1
+			NOT = { started_in = 1685.1.3 }
+			one_v_one_re_nations = yes
+		}
+		allow = {
+			custom_trigger_tooltip = {
+				tooltip = one_v_one_re_coastal_raid_decision_tt
+				always = no
+			}
+		}
+		effect = { custom_tooltip = one_v_one_re_coastal_raid_decision_tt }
+		ai_will_do = { factor = 0 }
+	}
+	one_v_one_re_splendor_for_points_decision = {
+		color = { 0 150 200 }
+		potential = {
+			one_v_one_starting_nation = no
+			started_in = 1685.1.1
+			NOT = { started_in = 1685.1.3 }
+			one_v_one_re_nations = yes
+		}
+		allow = {
+			splendor = 400
+		}
+		effect = {
+			add_splendor = -400
+			add_adm_power = 100
+			add_dip_power = 100
+			add_mil_power = 100
+		}
+		ai_will_do = { factor = 0 }
+	}
+}

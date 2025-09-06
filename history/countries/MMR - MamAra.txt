@@ -1,0 +1,16 @@
+government = tribal
+add_government_reform = tribal_federation
+technology_group = muslim
+religion = sunni
+primary_culture = bedouin_arabic
+capital = 384
+add_army_professionalism = 0.2
+1483.1.1 = {
+	monarch = { name = "Musa I" dynasty = "Sa'ud" birth_date = 1483.1.1 death_date = 1543.1.1 adm = 6 dip = 6 mil = 6 }
+	clear_scripted_personalities = yes
+	add_ruler_personality = immortal_personality
+	add_ruler_personality = just_personality
+	add_ruler_personality = kind_hearted_personality
+}
+1516.1.1 = { add_country_modifier = { name = one_v_one_manpower_fl_mmm duration = -1 hidden = yes } }
+1516.1.3 = { remove_country_modifier = one_v_one_manpower_fl_mmm }

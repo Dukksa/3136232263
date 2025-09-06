@@ -1,0 +1,50 @@
+estate_dhimmi = {
+	icon = 6
+	trigger = { always = no }
+	country_modifier_happy = {
+		technology_cost = -0.1
+		tolerance_heathen = 2
+	}
+	country_modifier_neutral = {
+		tolerance_heathen = 2
+	}	
+	country_modifier_angry = {
+		technology_cost = 0.1
+		tolerance_heathen = -1
+		global_unrest = 2
+	}
+	land_ownership_modifier = {
+		dhimmi_loyalty_modifier = 0.2
+	}
+	privileges = {
+		estate_dhimmi_land_rights
+		estate_dhimmi_lighter_dhimmi_taxes
+		estate_dhimmi_guaranteed_autonomy
+		estate_dhimmi_dhimmi_nobles
+		estate_dhimmi_manpower
+		estate_dhimmi_tolerance
+		estate_dhimmi_administrative_privileges
+		estate_dhimmi_millet_system
+		estate_dhimmi_guarantee_of_traditions
+		estate_dhimmi_grant_liberties
+		estate_dhimmi_development_of_communities
+		estate_dhimmi_grant_trading_privileges
+		estate_dhimmi_dhimmi_education
+		estate_dhimmi_promote_dhimmi_nobility
+		#estate_dhimmi_military_service
+		estate_dhimmi_protected_communities
+		estate_dhimmi_contribution_demand
+	}
+	agendas = {
+		estate_dhimmi_develop_x
+		estate_dhimmi_build_temple_in_y
+		estate_dhimmi_build_university_in_y
+		estate_dhimmi_stop_converting_province_x
+		estate_dhimmi_increase_autonomy_in_province_x
+		estate_dhimmi_three_privileges
+		estate_dhimmi_relations_with_X
+		estate_dhimmi_hire_advisor
+		estate_dhimmi_fire_advisor
+	}
+	color = { 100 125 150 }
+}

@@ -1,0 +1,26 @@
+1807.1.1 = {
+owner = WWR
+controller = WWR
+add_core = WWR
+culture = russian
+religion = orthodox
+hre = no
+base_tax = 3
+base_production = 2
+base_manpower = 5
+trade_goods = naval_supplies
+capital = "Ustyuzhna"
+is_city = yes
+}
+1807.1.3 = {
+owner = ---
+controller = ---
+remove_core = WWR
+culture = no_culture
+religion = noreligion
+trade_goods = unknown
+base_tax = 1
+base_production = 1
+base_manpower = 1
+is_city = no
+}

@@ -1,0 +1,1 @@
+bookmark = { name = "first_scenario_northern_italy" desc = "first_scenario_northern_italy_desc" date = 1479.1.1 center = 109 default = yes country = IGE country = IVE }

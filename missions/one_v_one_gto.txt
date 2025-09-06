@@ -1,0 +1,314 @@
+one_v_one_mission_gtw_1_gto = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		NOT = { map_setup = map_setup_random }
+		tag = GTO
+	}
+	has_country_shield = yes
+
+	one_v_one_mission_gtw_nation_select_1_gto = {
+		icon = mission_janissaries
+		required_missions = { }
+		trigger = {
+			if = {
+				limit = { OR = { has_country_flag = gto_chose_nation_mehmed_flag has_country_flag = gto_chose_nation_kara_flag has_country_flag = gto_chose_nation_suleiman_flag } }
+				custom_trigger_tooltip = {
+					tooltip = one_v_one_already_chose_nation_flag_tt
+					always = no
+				}
+			}
+			else = { tag = GTO }
+			custom_trigger_tooltip = {
+				tooltip = one_v_one_nation_choosing_flag_tt
+				has_global_flag = gto_nation_choosing_flag
+				has_global_flag = gec_nation_choosing_flag
+				has_global_flag = geb_nation_choosing_flag
+				has_global_flag = gea_nation_choosing_flag
+				has_global_flag = gfr_nation_choosing_flag
+				has_global_flag = gau_nation_choosing_flag
+				has_global_flag = gpl_nation_choosing_flag
+				has_global_flag = git_nation_choosing_flag
+				has_global_flag = gsp_nation_choosing_flag
+				has_global_flag = gru_nation_choosing_flag
+			}
+			if = {
+				limit = { NOT = { has_global_flag = gtw_ban_chosen_flag } }
+				hidden_trigger = {
+					if = {
+						limit = { has_global_flag = git_ban_mehmed_flag }
+						custom_trigger_tooltip = {
+							tooltip = one_v_one_nation_banned_flag_tt
+							always = no
+						}
+					}
+				}
+			}
+			else = {
+				if = {
+					limit = { has_global_flag = git_ban_mehmed_flag }
+					custom_trigger_tooltip = {
+						tooltip = one_v_one_nation_banned_flag_tt
+						always = no
+					}
+				}
+			}
+		}
+		effect = {
+			set_country_flag = gto_chose_nation_mehmed_flag
+			set_global_flag = gto_chose_nation_flag
+			custom_tooltip = one_v_one_chose_nation_flag_tt
+			tooltip = { one_v_one_gto_mission_select_mehmed_tag = yes }
+			hidden_effect = {
+				if = {
+					limit = { has_global_flag = gec_chose_nation_flag has_global_flag = geb_chose_nation_flag has_global_flag = gea_chose_nation_flag has_global_flag = gfr_chose_nation_flag has_global_flag = gau_chose_nation_flag has_global_flag = gpl_chose_nation_flag has_global_flag = git_chose_nation_flag has_global_flag = gsp_chose_nation_flag has_global_flag = gru_chose_nation_flag }
+					one_v_one_gto_mission_select_mehmed_tag = yes
+					one_v_one_mission_effect_gtw = yes
+				}
+			}
+		}
+	}
+}
+one_v_one_mission_gtw_3_gto = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		NOT = { map_setup = map_setup_random }
+		tag = GTO
+	}
+	has_country_shield = yes
+
+	one_v_one_mission_gtw_nation_select_3_gto = {
+		icon = mission_guns_of_urban
+		required_missions = { }
+		trigger = {
+			if = {
+				limit = { OR = { has_country_flag = gto_chose_nation_mehmed_flag has_country_flag = gto_chose_nation_kara_flag has_country_flag = gto_chose_nation_suleiman_flag } }
+				custom_trigger_tooltip = {
+					tooltip = one_v_one_already_chose_nation_flag_tt
+					always = no
+				}
+			}
+			else = { tag = GTO }
+			custom_trigger_tooltip = {
+				tooltip = one_v_one_nation_choosing_flag_tt
+				has_global_flag = gto_nation_choosing_flag
+				has_global_flag = gec_nation_choosing_flag
+				has_global_flag = geb_nation_choosing_flag
+				has_global_flag = gea_nation_choosing_flag
+				has_global_flag = gfr_nation_choosing_flag
+				has_global_flag = gau_nation_choosing_flag
+				has_global_flag = gpl_nation_choosing_flag
+				has_global_flag = git_nation_choosing_flag
+				has_global_flag = gsp_nation_choosing_flag
+				has_global_flag = gru_nation_choosing_flag
+			}
+			if = {
+				limit = { NOT = { has_global_flag = gtw_ban_chosen_flag } }
+				hidden_trigger = {
+					if = {
+						limit = { has_global_flag = git_ban_kara_flag }
+						custom_trigger_tooltip = {
+							tooltip = one_v_one_nation_banned_flag_tt
+							always = no
+						}
+					}
+				}
+			}
+			else = {
+				if = {
+					limit = { has_global_flag = git_ban_kara_flag }
+					custom_trigger_tooltip = {
+						tooltip = one_v_one_nation_banned_flag_tt
+						always = no
+					}
+				}
+			}
+		}
+		effect = {
+			set_country_flag = gto_chose_nation_kara_flag
+			set_global_flag = gto_chose_nation_flag
+			custom_tooltip = one_v_one_chose_nation_flag_tt
+			tooltip = { one_v_one_gto_mission_select_kara_tag = yes }
+			hidden_effect = {
+				if = {
+					limit = { has_global_flag = gec_chose_nation_flag has_global_flag = geb_chose_nation_flag has_global_flag = gea_chose_nation_flag has_global_flag = gfr_chose_nation_flag has_global_flag = gau_chose_nation_flag has_global_flag = gpl_chose_nation_flag has_global_flag = git_chose_nation_flag has_global_flag = gsp_chose_nation_flag has_global_flag = gru_chose_nation_flag }
+					one_v_one_gto_mission_select_kara_tag = yes
+					one_v_one_mission_effect_gtw = yes
+				}
+			}
+		}
+	}
+}
+one_v_one_mission_gtw_33_gto = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		NOT = { map_setup = map_setup_random }
+		tag = GTO
+		NOT = { OR = { has_country_flag = gto_chose_nation_mehmed_flag has_country_flag = gto_chose_nation_kara_flag has_country_flag = gto_chose_nation_suleiman_flag } }
+	}
+	has_country_shield = yes
+
+	one_v_one_mission_gtw_construct_gto = {
+		icon = mission_colonial
+		required_missions = { one_v_one_mission_gtw_nation_select_1_gto one_v_one_mission_gtw_nation_select_3_gto one_v_one_mission_gtw_nation_select_5_gto }
+		position = 2
+		trigger = {
+		}
+		effect = {
+			set_country_flag = one_v_one_commanders_chosen_flag
+			custom_tooltip = one_v_one_commanders_chosen_tt
+			add_country_modifier = { name = one_v_one_mission_construct_modifier duration = 3650 }
+			add_country_modifier = { name = one_v_one_mission_construct_idea_cost_modifier duration = 1 }
+		}
+	}
+}
+one_v_one_mission_gtw_5_gto = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		NOT = { map_setup = map_setup_random }
+		tag = GTO
+	}
+	has_country_shield = yes
+
+	one_v_one_mission_gtw_nation_select_5_gto = {
+		icon = mission_late_ottoman_reforms
+		required_missions = { }
+		trigger = {
+			if = {
+				limit = { OR = { has_country_flag = gto_chose_nation_mehmed_flag has_country_flag = gto_chose_nation_kara_flag has_country_flag = gto_chose_nation_suleiman_flag } }
+				custom_trigger_tooltip = {
+					tooltip = one_v_one_already_chose_nation_flag_tt
+					always = no
+				}
+			}
+			else = { tag = GTO }
+			custom_trigger_tooltip = {
+				tooltip = one_v_one_nation_choosing_flag_tt
+				has_global_flag = gto_nation_choosing_flag
+				has_global_flag = gec_nation_choosing_flag
+				has_global_flag = geb_nation_choosing_flag
+				has_global_flag = gea_nation_choosing_flag
+				has_global_flag = gfr_nation_choosing_flag
+				has_global_flag = gau_nation_choosing_flag
+				has_global_flag = gpl_nation_choosing_flag
+				has_global_flag = git_nation_choosing_flag
+				has_global_flag = gsp_nation_choosing_flag
+				has_global_flag = gru_nation_choosing_flag
+			}
+			if = {
+				limit = { NOT = { has_global_flag = gtw_ban_chosen_flag } }
+				hidden_trigger = {
+					if = {
+						limit = { has_global_flag = git_ban_suleiman_flag }
+						custom_trigger_tooltip = {
+							tooltip = one_v_one_nation_banned_flag_tt
+							always = no
+						}
+					}
+				}
+			}
+			else = {
+				if = {
+					limit = { has_global_flag = git_ban_suleiman_flag }
+					custom_trigger_tooltip = {
+						tooltip = one_v_one_nation_banned_flag_tt
+						always = no
+					}
+				}
+			}
+		}
+		effect = {
+			set_country_flag = gto_chose_nation_suleiman_flag
+			set_global_flag = gto_chose_nation_flag
+			custom_tooltip = one_v_one_chose_nation_flag_tt
+			tooltip = { one_v_one_gto_mission_select_suleiman_tag = yes }
+			hidden_effect = {
+				if = {
+					limit = { has_global_flag = gec_chose_nation_flag has_global_flag = geb_chose_nation_flag has_global_flag = gea_chose_nation_flag has_global_flag = gfr_chose_nation_flag has_global_flag = gau_chose_nation_flag has_global_flag = gpl_chose_nation_flag has_global_flag = git_chose_nation_flag has_global_flag = gsp_chose_nation_flag has_global_flag = gru_chose_nation_flag }
+					one_v_one_gto_mission_select_suleiman_tag = yes
+					one_v_one_mission_effect_gtw = yes
+				}
+			}
+		}
+	}
+}
+##
+one_v_one_mission_gtw_3_mehmed = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		NOT = { map_setup = map_setup_random }
+		has_country_flag = gto_chose_nation_mehmed_flag
+	}
+	has_country_shield = yes
+
+	one_v_one_mission_gtw_construct_mehmed = {
+		icon = mission_colonial
+		required_missions = { one_v_one_mission_gtw_nation_select_1_gto }
+		position = 2
+		trigger = {
+		}
+		effect = {
+			set_country_flag = one_v_one_commanders_chosen_flag
+			custom_tooltip = one_v_one_commanders_chosen_tt
+			add_country_modifier = { name = one_v_one_mission_construct_modifier duration = 3650 }
+			add_country_modifier = { name = one_v_one_mission_construct_idea_cost_modifier duration = 1 }
+		}
+	}
+}
+one_v_one_mission_gtw_3_kara = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		NOT = { map_setup = map_setup_random }
+		has_country_flag = gto_chose_nation_kara_flag
+	}
+	has_country_shield = yes
+
+	one_v_one_mission_gtw_construct_kara = {
+		icon = mission_colonial
+		required_missions = { one_v_one_mission_gtw_nation_select_3_gto }
+		position = 2
+		trigger = {
+		}
+		effect = {
+			set_country_flag = one_v_one_commanders_chosen_flag
+			custom_tooltip = one_v_one_commanders_chosen_tt
+			add_country_modifier = { name = one_v_one_mission_construct_modifier duration = 3650 }
+			add_country_modifier = { name = one_v_one_mission_construct_idea_cost_modifier duration = 1 }
+		}
+	}
+}
+one_v_one_mission_gtw_3_suleiman = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		NOT = { map_setup = map_setup_random }
+		has_country_flag = gto_chose_nation_suleiman_flag
+	}
+	has_country_shield = yes
+
+	one_v_one_mission_gtw_construct_suleiman = {
+		icon = mission_colonial
+		required_missions = { one_v_one_mission_gtw_nation_select_5_gto }
+		position = 2
+		trigger = {
+		}
+		effect = {
+			set_country_flag = one_v_one_commanders_chosen_flag
+			custom_tooltip = one_v_one_commanders_chosen_tt
+			add_country_modifier = { name = one_v_one_mission_construct_modifier duration = 3650 }
+			add_country_modifier = { name = one_v_one_mission_construct_idea_cost_modifier duration = 1 }
+		}
+	}
+}

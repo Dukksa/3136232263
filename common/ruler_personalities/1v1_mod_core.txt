@@ -1,0 +1,520 @@
+# France:
+one_v_one_wfr_louisxiv_personality = {
+	allow = { always = no }
+	manpower_recovery_speed = 0.2
+	war_exhaustion = -0.05
+	discipline = 0.05
+	land_forcelimit_modifier = 0.33
+	nation_designer_cost = 999
+}
+one_v_one_wfr_vendome_personality = {
+	allow = { always = no }
+	reinforce_speed = 0.33
+	war_exhaustion = -0.05
+	drill_gain_modifier = 1
+	recover_army_morale_speed = 0.5
+	defensiveness = 0.33
+	interest = -0.5
+	nation_designer_cost = 999
+}
+one_v_one_wfr_villars_personality = {
+	allow = { always = no }
+	cavalry_power = 0.2
+	war_exhaustion = -0.05
+	can_recruit_hussars = yes
+	#amount_of_hussars = 20
+	reinforce_cost_modifier = -0.33
+	one_v_one_wfr_villars_personality_build_modifier_tt = 1 # local_amount_of_hussars = 1
+	nation_designer_cost = 999
+}
+one_v_one_wfr_neufville_personality = {
+	allow = { always = no }
+	allowed_musketeer_fraction = 0.2
+	war_exhaustion = -0.05
+	one_v_one_wfr_neufville_personality_modifier = 0.2 # musketeer_infantry_fire
+	development_cost = -0.2
+	nation_designer_cost = 999
+}
+# Spain:
+one_v_one_wsp_philip_personality = {
+	allow = { always = no }
+	artillery_fire = 0.5
+	artillery_power = 0.1
+	war_exhaustion = -0.05
+	mil_tech_cost_modifier = -0.15
+	artillery_cost = -0.5
+	nation_designer_cost = 999
+}
+one_v_one_wsp_isidoro_personality = {
+	allow = { always = no }
+	infantry_power = 0.15
+	war_exhaustion = -0.05
+	leader_land_shock = 2
+	infantry_cost = -0.33
+	nation_designer_cost = 999
+}
+one_v_one_wsp_jorge_personality = {
+	allow = { always = no }
+	defensiveness = 0.33
+	war_exhaustion = -0.05
+	land_morale = 0.15
+	garrison_size = 0.33
+	fort_maintenance_modifier = -0.5
+	development_cost = -0.2
+	nation_designer_cost = 999
+}
+one_v_one_wsp_francisco_personality = {
+	allow = { always = no }
+	allowed_tercio_fraction = 0.2
+	war_exhaustion = -0.05
+	one_v_one_wsp_francisco_personality_modifier = 0.3 # tercio_infantry_power
+	trade_efficiency = 0.15
+	global_trade_power = 0.15
+	production_efficiency = 0.15
+	nation_designer_cost = 999
+}
+# Austria:
+one_v_one_wau_charles_personality = {
+	allow = { always = no }
+	global_defender_dice_roll_bonus = 1
+	war_exhaustion = -0.05
+	manpower_recovery_speed = 0.2
+	global_trade_goods_size_modifier = 0.33
+	nation_designer_cost = 999
+}
+one_v_one_wau_leopold_personality = {
+	allow = { always = no }
+	reinforce_speed = 0.33
+	war_exhaustion = -0.05
+	discipline = 0.05
+	reinforce_cost_modifier = -0.33
+	global_regiment_cost = -0.2
+	nation_designer_cost = 999
+}
+one_v_one_wau_joseph_personality = {
+	allow = { always = no }
+	one_v_one_wau_joseph_personality_build_modifier_tt = 1 # local_amount_of_carolean = 1
+	war_exhaustion = -0.05
+	one_v_one_wau_joseph_personality_modifier = 0.1 # jaggerkorps_discipline
+	global_trade_power = 0.2
+	trade_efficiency = 0.2
+	nation_designer_cost = 999
+}
+one_v_one_wau_eugene_personality = {
+	allow = { always = no }
+	defensiveness = 0.33
+	war_exhaustion = -0.05
+	land_morale = 0.15
+	garrison_size = 0.33
+	fort_maintenance_modifier = -0.5
+	development_cost = -0.2
+	nation_designer_cost = 999
+}
+# Britain:
+one_v_one_wgb_anne_personality = {
+	allow = { always = no }
+	global_attacker_dice_roll_bonus = 1
+	war_exhaustion = -0.05
+	discipline = 0.05
+	development_cost = -0.2
+	nation_designer_cost = 999
+}
+one_v_one_wgb_henry_personality = {
+	allow = { always = no }
+	infantry_fire = 0.2
+	war_exhaustion = -0.05
+	leader_land_fire = 2
+	trade_efficiency = 0.33
+	nation_designer_cost = 999
+}
+one_v_one_wgb_john_personality = {
+	allow = { always = no }
+	allowed_streltsy_fraction = 0.25
+	war_exhaustion = -0.05
+	manpower_recovery_speed = 0.2
+	drill_gain_modifier = 1
+	drill_decay_modifier = -0.25
+	#global_trade_goods_size_modifier = 0.33
+	one_v_one_wau_john_personality_modifier = 0.2 # redcoats_reinforce_speed
+	nation_designer_cost = 999
+}
+one_v_one_wgb_george_personality = {
+	allow = { always = no }
+	one_v_one_wgb_george_personality_modifier = 0.2 # marines_infantry_power and marines_manpower_usage
+	war_exhaustion = -0.05
+	allowed_marine_fraction = 0.33
+	naval_attrition = -0.5
+	naval_forcelimit_modifier = 0.33
+	one_v_one_wgb_george_personality_modifier_slacken = 1.5 # slacken gives 150% sailors
+	one_v_one_wgb_george_personality_sailors_modifier_tt = 250 # sailors increase +250
+	nation_designer_cost = 999
+}
+# Great Turkish War:
+# Ottoman:
+one_v_one_gto_mehmed_personality = {
+	allow = { always = no }
+	# janissary_manpower_usage = -0.2
+	# janissary_reinforce_cost = -1
+	# janissary_combat_ability = 0.1
+	one_v_one_gto_mehmed_personality_modifier_tt = 0.1
+	war_exhaustion = -0.05
+	janissary_cost_modifier = -0.67
+	mil_tech_cost_modifier = -0.1
+	nation_designer_cost = 999
+}
+one_v_one_gto_kara_personality = {
+	allow = { always = no }
+	artillery_fire = 0.6
+	war_exhaustion = -0.05
+	leader_siege = 1
+	artillery_cost = -0.2
+	morale_damage = 0.1
+	max_general_siege = 1
+	nation_designer_cost = 999
+}
+one_v_one_gto_suleiman_personality = {
+	allow = { always = no }
+	technology_cost = -0.1
+	war_exhaustion = -0.05
+	development_cost = -0.1
+	idea_cost = -0.2
+	production_efficiency = 0.1
+	global_tax_modifier = 0.33
+	global_allowed_num_of_buildings = 1
+	nation_designer_cost = 999
+}
+# Crimea:
+one_v_one_gec_selim_personality = {
+	allow = { always = no }
+	attack_bonus_in_capital_terrain = 1
+	war_exhaustion = -0.05
+	cavalry_shock = 0.3
+	yearly_government_power = 30
+	siege_ability = 0.1
+	nation_designer_cost = 999
+}
+one_v_one_gec_murad_personality = {
+	allow = { always = no }
+	# mountains:
+	# local_development_cost = -0.2
+	# local_manpower_modifier = 0.5
+	# local_defensiveness = 0.2
+	# trade_goods_size_modifier = 1.5
+	# allowed_num_of_buildings = 1
+	one_v_one_gec_murad_personality_modifier_tt = 0.2
+	war_exhaustion = -0.05
+	shock_damage_received = -0.1
+	land_forcelimit_modifier = 0.15
+	technology_cost = -0.1
+	nation_designer_cost = 999
+}
+one_v_one_gec_haci_personality = {
+	allow = { always = no }
+	establish_order_cost = -0.9
+	war_exhaustion = -0.05
+	land_morale = 0.1
+	morale_damage_received = -0.15
+	infantry_power = 0.15
+	# hostile movement speed -20%, production efficiency 15%, construction cost -15% construction time -25% replace first 3 organizations/holy orders with those
+	one_v_one_gec_haci_personality_tt = 3
+	nation_designer_cost = 999
+}
+# Balkans:
+one_v_one_geb_abdi_personality = {
+	allow = { always = no }
+	cavalry_power = 0.15
+	war_exhaustion = -0.35
+	cav_to_inf_ratio = 0.5
+	cavalry_fire = 1
+	cavalry_cost = -0.15
+	infantry_fire = -0.5
+	infantry_cost = 0.15
+	fire_damage = 0.15
+	nation_designer_cost = 999
+}
+one_v_one_geb_emeric_personality = {
+	allow = { always = no }
+	merc_maintenance_modifier = -0.2
+	war_exhaustion = -0.05
+	reinforce_cost_modifier = -0.25
+	mercenary_manpower = 0.1
+	# mercenary_fire_damge = 0.15
+	mercenary_discipline = 0.05
+	one_v_one_geb_emeric_personality_modifier_tt = 0.15
+	nation_designer_cost = 999
+}
+one_v_one_geb_sari_personality = {
+	allow = { always = no }
+	build_cost = -0.1
+	war_exhaustion = -0.05
+	advisor_cost = -0.15
+	build_time = -0.15
+	embargo_efficiency = 0.5
+	idea_cost = -0.15
+	mil_tech_cost_modifier = -0.1
+	global_manpower_modifier = 0.1
+	possible_policy = 1
+	nation_designer_cost = 999
+}
+# African:
+one_v_one_gea_osman_personality = {
+	allow = { always = no }
+	# deserts:
+	# center of trade upgrade double bonuses
+	# allowed_num_of_buildings = 1
+	# local_manpower_modifier = 0.33
+	# trade_value_modifier = 0.25
+	one_v_one_gea_osman_personality_modifier_tt = 0.25
+	war_exhaustion = -0.05
+	idea_cost = -0.2
+	shock_damage = 0.1
+	embargo_efficiency = 0.5
+	nation_designer_cost = 999
+}
+one_v_one_gea_mezzo_personality = {
+	allow = { always = no }
+	available_province_loot = 5
+	war_exhaustion = -0.05
+	may_perform_slave_raid = yes
+	coast_raid_range = 5
+	allowed_marine_fraction = 0.3
+	sailors_recovery_speed = 0.5
+	one_v_one_gea_mezzo_personality_modifier_tt = 1
+	nation_designer_cost = 999
+}
+one_v_one_gea_damat_personality = {
+	allow = { always = no }
+	yearly_army_professionalism = 0.02
+	war_exhaustion = -0.05
+	discipline = 0.025
+	infantry_power = 0.05
+	production_efficiency = -0.2
+	global_tax_modifier = 0.7
+	# dip dev to 0% and tax dev to 100%
+	one_v_one_gea_damat_personality_modifier_tt = 1
+	nation_designer_cost = 999
+}
+# France:
+one_v_one_gfr_louisxiv_personality = {
+	allow = { always = no }
+	# musketeer_discipline = 0.05
+	# musketeer_fire_damage = 0.1
+	# musketeer_combat_ability = 0.1
+	one_v_one_gfr_louisxiv_personality_modifier_tt = 0.1
+	war_exhaustion = -0.05
+	one_v_one_wfr_neufville_personality_modifier = 0.3
+	allowed_musketeer_fraction = 0.15
+	backrow_artillery_damage = 0.2
+	artillery_cost = -0.1
+	nation_designer_cost = 999
+}
+one_v_one_gfr_tellier_personality = {
+	allow = { always = no }
+	cavalry_power = 0.15
+	war_exhaustion = -0.05
+	cavalry_cost = -0.15
+	siege_ability = 0.1
+	shock_damage = 0.15
+	general_cost = -0.1
+	cav_to_inf_ratio = 0.5
+	nation_designer_cost = 999
+}
+one_v_one_gfr_prestre_personality = {
+	allow = { always = no }
+	# own forts:
+	# trade_value = 15
+	# local_defender_dice_roll_bonus = 1
+	# local_garrison_damage = 0.3
+	# local_defensiveness = 0.3
+	# better starting siege
+	# local_tax_modifier = 1
+	one_v_one_gfr_prestre_personality_modifier_tt = 0.3
+	war_exhaustion = -0.05
+	nation_designer_cost = 999
+}
+# Austria:
+one_v_one_gau_leopold_personality = {
+	allow = { always = no }
+	shock_damage_received = -0.075
+	fire_damage_received = -0.075
+	war_exhaustion = -0.05
+	defensiveness = 0.3
+	reinforce_speed = 0.25
+	land_attrition = -0.3
+	global_trade_goods_size_modifier = 0.1
+	nation_designer_cost = 999
+}
+one_v_one_gau_charlesv_personality = {
+	allow = { always = no }
+	drill_gain_modifier = 0.2
+	war_exhaustion = -0.05
+	recover_army_morale_speed = 0.5
+	leader_land_fire = 1
+	drill_decay_modifier = -0.33
+	infantry_power = 0.1
+	yearly_army_professionalism = 0.03
+	nation_designer_cost = 999
+}
+one_v_one_gau_maximilian_personality = {
+	allow = { always = no }
+	artillery_shock = 0.5
+	war_exhaustion = -0.05
+	artillery_power = 0.05
+	leader_siege = 1
+	artillery_levels_available_vs_fort = 1
+	nation_designer_cost = 999
+}
+# Poland:
+one_v_one_gru_sobieski_personality = {
+	allow = { always = no }
+	leader_land_shock = 1
+	war_exhaustion = -0.05
+	shock_damage = 0.1
+	land_morale = 0.1
+	backrow_artillery_damage 0.1
+	nation_designer_cost = 999
+}
+one_v_one_gpl_jablonowski_personality = {
+	allow = { always = no }
+	hussars_cavalry_shock_modifier = 0.35
+	war_exhaustion = -0.05
+	amount_of_hussars = 50
+	movement_speed = 0.1
+	land_attrition = -0.15
+	army_tradition_decay = -0.01
+	nation_designer_cost = 999
+}
+one_v_one_gpl_sapieha_personality = {
+	allow = { always = no }
+	development_cost_modifier = -0.1
+	war_exhaustion = -0.05
+	global_allowed_num_of_buildings = 1
+	land_forcelimit_modifier = 0.2
+	reserves_organisation = 0.2
+	morale_damage = 0.1
+	nation_designer_cost = 999
+}
+# Venice:
+one_v_one_git_morosini_personality = {
+	allow = { always = no }
+	# marine_shock_damage = 0.15
+	# marine_manpower_usage = -0.1
+	# marine_fort_assault = 0.1
+	# occupying crete, cyprus and corfu gives ownership, needs to control all at once
+	one_v_one_git_morosini_personality_modifier_tt = 0.1
+	war_exhaustion = -0.05
+	landing_penalty = -2
+	nation_designer_cost = 999
+}
+one_v_one_git_corner_personality = {
+	allow = { always = no }
+	manpower_recovery_speed = 0.5
+	war_exhaustion = -0.05
+	land_forcelimit_modifier = 0.2
+	one_v_one_git_5_modifier = -0.6
+	one_v_one_sailors_building_s_modifier = -2 # sailors 200%
+	one_v_one_navy_building_s_modifier = -3 # navy FL +3
+	sailors_recovery_speed = -0.5
+	naval_forcelimit_modifier = -0.2
+	infantry_shock = 0.6
+	land_morale = 0.1
+	infantry_power = 0.05
+	# trade depots buildings give:
+	# trade_value_modifier = 0.2
+	# local_garrison_damage = 0.3
+	# local_garrison_damage = 0.3
+	one_v_one_git_corner_personality_modifier_tt = 0.33
+	nation_designer_cost = 999
+}
+one_v_one_git_mitrovic_personality = {
+	allow = { always = no }
+	mercenary_cost = -0.2
+	war_exhaustion = -0.05
+	# 2 merc comps with -15% fire dmg rec and merc manpower 50%
+	# mercenary_morale = 0.15
+	# mercenary_shock_damage_received = -0.15
+	one_v_one_git_mitrovic_personality_modifier_tt = 0.15
+	dip_tech_cost_modifier = -0.1
+	leader_naval_shock = 1
+	global_tax_income = 600
+	nation_designer_cost = 999
+}
+# Spain:
+one_v_one_gsp_carlos_personality = {
+	allow = { always = no }
+	artillery_fire = 0.7
+	war_exhaustion = -0.05
+	general_cost = -0.2
+	artillery_cost = -0.1
+	morale_damage = 0.1
+	nation_designer_cost = 999
+}
+one_v_one_gsp_francisco_personality = {
+	allow = { always = no }
+	has_tercio = yes
+	war_exhaustion = -0.05
+	manpower_recovery_speed = 0.15
+	siege_ability = 0.1
+	allowed_tercio_fraction = 0.3
+	# tercio_shock_damage_received = -0.2
+	# tercio_military_tactics = 0.3
+	# tercio_land_attrition = -0.3
+	one_v_one_gsp_francisco_personality_modifier_tt = 0.3
+	nation_designer_cost = 999
+}
+one_v_one_gsp_juan_personality = {
+	allow = { always = no }
+	#allowed_galleon_fraction = 0.2
+	#allowed_man_of_war_fraction = 0.2
+	#allowed_galleass_fraction = 0.2
+	one_v_one_gsp_juan_personality_modifier_tt = 0.2
+	war_exhaustion = -0.05
+	establish_order_cost = -0.9
+	global_sailors_modifier = 0.3
+	naval_forcelimit_modifier = 0.1
+	trade_efficiency = 0.15
+	leader_land_fire = 1
+	country_diplomatic_power = 2
+	nation_designer_cost = 999
+}
+# Russia:
+one_v_one_gru_peter_personality = {
+	allow = { always = no }
+	idea_cost = -0.2
+	war_exhaustion = -0.05
+	technology_cost = -0.05
+	yearly_innovativeness = 4
+	monthly_splendor = 3
+	free_policy = 1
+	global_trade_goods_size_modifier = 0.15
+	artillery_power = 0.2
+	nation_designer_cost = 999
+}
+one_v_one_gru_ivan_personality = {
+	allow = { always = no }
+	infantry_power = 0.2
+	war_exhaustion = -0.05
+	global_manpower_modifier = -0.25
+	manpower_recovery_speed = -0.25
+	land_forcelimit_modifier = -0.25
+	fire_damage_received = -0.1
+	infantry_shock = 0.3
+	leader_land_shock = 1
+	nation_designer_cost = 999
+}
+one_v_one_gru_vasily_personality = {
+	allow = { always = no }
+	# scorch earth gives:
+	# hostile_attrition = 2
+	# max_hostile_attrition = 1
+	# local_monthly_devastation = 1
+	# local_garrison_size = 0.6
+	# local_defensiveness = 0.2
+	# exploiting dev gives 50% no loss
+	one_v_one_gru_vasily_personality_modifier_tt = 0.6
+	war_exhaustion = -0.05
+	siege_ability = 0.2
+	discipline = 0.05
+	war_taxes_cost_modifier = -1
+	nation_designer_cost = 999
+}

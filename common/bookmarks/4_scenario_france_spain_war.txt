@@ -1,0 +1,1 @@
+bookmark = { name = "fourth_scenario_france_spain_war" desc = "fourth_scenario_france_spain_war_desc" date = 1694.1.1 center = 4392 default = yes country = WFR country = WSP country = WAU country = WGB }

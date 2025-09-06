@@ -1,0 +1,1 @@
+bookmark = { name = "seven_years_war_alt" desc = "seven_years_war_alt_desc" date = 1749.1.2 center = 170 default = yes country = SGB country = SUA country = SCN country = SPO country = SBR country = SFR country = SLU country = SQU country = SSP country = SNS easy_country = SGB easy_country = SFR }

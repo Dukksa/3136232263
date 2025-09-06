@@ -1,0 +1,1 @@
+bookmark = { name = "thirty_years_war" desc = "thirty_years_war_desc" date = 1611.1.1 center = 4760 default = yes country = TFR country = TSW country = TPG country = TGB country = TDN country = TPL country = TAS country = TCG country = TSP country = TIT }

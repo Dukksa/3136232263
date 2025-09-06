@@ -1,0 +1,34 @@
+one_v_one_mission_tyw = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		NOT = { map_setup = map_setup_random }
+		OR = { one_v_one_as_nations = yes one_v_one_tyw_nations = yes one_v_one_syw_nations = yes }
+	}
+	has_country_shield = yes
+
+	one_v_one_mission_tyw_construct = {
+		icon = mission_colonial
+		position = 2
+		trigger = {
+		}
+		effect = {
+			add_country_modifier = { name = one_v_one_mission_construct_modifier duration = 3650 }
+			add_country_modifier = { name = one_v_one_mission_construct_idea_cost_modifier duration = 1 }
+			custom_tooltip = one_v_one_mission_tyw_construct_tt
+			if = {
+				limit = { one_v_one_tyw_nations = yes }
+				set_country_flag = one_v_one_tyw_starting_nation_flag
+			}
+			if = {
+				limit = { one_v_one_as_nations = yes }
+				set_country_flag = one_v_one_as_starting_nation_flag
+			}
+			if = {
+				limit = { one_v_one_syw_nations = yes }
+				set_country_flag = one_v_one_syw_starting_nation_flag
+			}
+		}
+	}
+}

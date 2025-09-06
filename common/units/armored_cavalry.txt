@@ -1,0 +1,9 @@
+type = cavalry
+maneuver = 3
+offensive_fire = 8
+defensive_fire = 6
+offensive_shock = 8
+defensive_shock = 5
+offensive_morale = 8
+defensive_morale = 6
+trigger = { one_v_one_ww_nations = yes }

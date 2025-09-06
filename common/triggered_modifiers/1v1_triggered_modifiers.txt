@@ -1,0 +1,755 @@
+one_v_one_warchest = {
+	potential = { NOT = { OR = { one_v_one_syw_nations = yes one_v_one_nap_nations = yes one_v_one_ww_nations = yes } } }
+	trigger = { years_of_income = 2 NOT = { num_of_loans = 1 } }
+	land_morale = 0.15
+	discipline = 0.05
+	global_manpower_modifier = 0.1
+	manpower_recovery_speed = 0.15
+	land_forcelimit_modifier = 0.1
+}
+one_v_one_warchest_1 = {
+	potential = { OR = { one_v_one_syw_nations = yes one_v_one_nap_nations = yes one_v_one_ww_nations = yes } }
+	trigger = { years_of_income = 2 NOT = { num_of_loans = 1 } }
+	land_morale = 0.1
+	discipline = 0.05
+	global_manpower_modifier = 0.1
+	manpower_recovery_speed = 0.15
+	land_forcelimit_modifier = 0.1
+}
+# Fra-Spa Scenario:
+one_v_one_fra_spa_region_portugal_occupier = {
+	potential = { one_v_one_succ_nations = yes }
+	trigger = {
+		OR = { tag = WSP tag = WFR }
+		WGB = {
+			num_of_owned_provinces_with = {
+				value = 6
+				OR = {
+					area = beieras_area
+					area = alentejo_area
+				}
+				NOT = { controlled_by = WGB }
+			}
+		}
+	}
+	war_exhaustion = -0.1
+	naval_morale = 0.075
+	global_prov_trade_power_modifier = 0.05
+	heavy_ship_power = 0.05
+}
+one_v_one_fra_spa_region_aragon_occupier = {
+	potential = { one_v_one_succ_nations = yes }
+	trigger = {
+		OR = { tag = WSP tag = WFR }
+		WAU = {
+			num_of_owned_provinces_with = {
+				value = 9
+				OR = {
+					area = pyrenees_areaa
+					area = gerona_area
+					area = catalonia_area
+					province_id = 211
+					province_id = 214
+					province_id = 2990
+					province_id = 4550
+					province_id = 220
+					province_id = 4549
+				}
+				NOT = { controlled_by = WAU }
+			}
+		}
+	}
+	land_forcelimit = 8 # land_morale = 0.025
+	manpower_recovery_speed = 0.15
+}
+one_v_one_fra_spa_region_savoy_occupier_wfr = {
+	potential = { one_v_one_succ_nations = yes }
+	trigger = {
+		tag = WFR
+		WAU = {
+			num_of_owned_provinces_with = {
+				value = 5
+				OR = {
+					area = piedmont_area
+					province_id = 102
+					province_id = 205
+					province_id = 2992
+				}
+				NOT = { controlled_by = WAU }
+			}
+		}
+	}
+	war_exhaustion = -0.1
+	cavalry_power = 0.1
+	movement_speed = 0.1
+	cav_to_inf_ratio = 0.1
+}
+one_v_one_fra_spa_region_savoy_occupier_wsp = {
+	potential = { one_v_one_succ_nations = yes }
+	trigger = {
+		tag = WSP
+		WAU = {
+			num_of_owned_provinces_with = {
+				value = 5
+				OR = {
+					area = piedmont_area
+					province_id = 102
+					province_id = 205
+					province_id = 2992
+				}
+				NOT = { controlled_by = WAU }
+			}
+		}
+	}
+	war_exhaustion = -0.1
+	global_supply_limit_modifier = 0.33 # discipline = 0.025
+	reinforce_speed = 0.2 #
+	artillery_cost = -0.1 #
+}
+one_v_one_fra_spa_region_tuscany_occupier = {
+	potential = { one_v_one_succ_nations = yes }
+	trigger = {
+		OR = { tag = WAU tag = WGB }
+		WFR = {
+			num_of_owned_provinces_with = {
+				value = 4
+				OR = {
+					province_id = 2980
+					province_id = 115
+					province_id = 116
+					province_id = 117
+					province_id = 118
+					province_id = 4732
+				}
+				NOT = { controlled_by = WFR }
+			}
+		}
+	}
+	yearly_army_professionalism = 0.025 # discipline = 0.025
+	leader_siege = 1 # land_morale = 0.025
+	war_exhaustion = -0.2
+}
+one_v_one_fra_spa_region_milan_occupier = {
+	potential = { one_v_one_succ_nations = yes }
+	trigger = {
+		OR = { tag = WAU tag = WGB }
+		WSP = {
+			num_of_owned_provinces_with = {
+				value = 6
+				OR = {
+					area = lombardy_area
+					province_id = 4739
+					province_id = 109
+					province_id = 105
+					province_id = 106
+					province_id = 101
+				}
+				NOT = { controlled_by = WSP }
+			}
+		}
+	}
+	shock_damage_received = -0.1 # discipline = 0.025
+	army_tradition_from_battle = 0.5 # land_morale = 0.025
+	war_exhaustion = -0.2
+}
+one_v_one_fra_spa_region_bavaria_occupier_wau = {
+	potential = { one_v_one_succ_nations = yes }
+	trigger = {
+		tag = WAU
+		WFR = {
+			num_of_owned_provinces_with = {
+				value = 9
+				OR = {
+					area = lower_bavaria_area
+					area = east_bavaria_area
+					area = lower_swabia_area
+					province_id = 4717
+					province_id = 66
+					province_id = 67
+				}
+				NOT = { controlled_by = WFR }
+			}
+		}
+	}
+	land_forcelimit = 14 #
+	manpower_recovery_speed = 0.15
+}
+one_v_one_fra_spa_region_bavaria_occupier_wgb = {
+	potential = { one_v_one_succ_nations = yes }
+	trigger = {
+		tag = WGB
+		WFR = {
+			num_of_owned_provinces_with = {
+				value = 9
+				OR = {
+					area = lower_bavaria_area
+					area = east_bavaria_area
+					area = lower_swabia_area
+					province_id = 4717
+					province_id = 66
+					province_id = 67
+				}
+				NOT = { controlled_by = WFR }
+			}
+		}
+	}
+	merc_maintenance_modifier = -0.33 # land_morale = 0.025
+	allow_mercenary_drill = yes
+}
+##
+one_v_one_fra_spa_region_wallonia_occupier = {
+	potential = { one_v_one_succ_nations = yes }
+	trigger = {
+		OR = { tag = WGB tag = WAU }
+		WSP = {
+			num_of_owned_provinces_with = {
+				value = 9
+				OR = {
+					area = wallonia_area
+					area = brabant_area
+					area = lower_rhineland_area
+					province_id = 4769
+					province_id = 1742
+					province_id = 85
+				}
+				NOT = { controlled_by = WSP }
+			}
+		}
+	}
+	artillery_fire = 0.25 # discipline = 0.05
+	movement_speed = 0.1 #
+	war_exhaustion = -0.1
+}
+one_v_one_fra_spa_region_holland_occupier = {
+	potential = { one_v_one_succ_nations = yes }
+	trigger = {
+		OR = { tag = WFR tag = WSP }
+		WGB = {
+			num_of_owned_provinces_with = {
+				value = 9
+				OR = {
+					area = holland_area
+					province_id = 100
+					province_id = 4382
+					province_id = 4381
+					province_id = 99
+					province_id = 4770
+					province_id = 95
+					province_id = 2975
+					province_id = 1865
+					province_id = 90
+					province_id = 87
+				}
+				NOT = { controlled_by = WGB }
+			}
+		}
+	}
+	infantry_power = 0.15 #
+	heavy_ship_power = 0.15
+}
+##
+one_v_one_fra_spa_region_naples_occupier_wau = {
+	potential = { one_v_one_succ_nations = yes }
+	trigger = {
+		tag = WAU
+		WSP = {
+			num_of_owned_provinces_with = {
+				value = 6
+				OR = {
+					area = naples_area
+					area = apulia_area
+					province_id = 1934
+				}
+				NOT = { controlled_by = WSP }
+			}
+		}
+	}
+	land_attrition = -0.33 # discipline = 0.025
+	reserves_organisation = 0.33 #
+	global_trade_goods_size_modifier = 0.2
+}
+one_v_one_fra_spa_region_naples_occupier_wgb = {
+	potential = { one_v_one_succ_nations = yes }
+	trigger = {
+		tag = WGB
+		WSP = {
+			num_of_owned_provinces_with = {
+				value = 6
+				OR = {
+					area = naples_area
+					area = apulia_area
+					province_id = 1934
+				}
+				NOT = { controlled_by = WSP }
+			}
+		}
+	}
+	galley_power = 0.1 # discipline = 0.025
+	fire_damage = 0.15
+}
+one_v_one_fra_spa_region_sicily_occupier_wfr = {
+	potential = { one_v_one_succ_nations = yes }
+	trigger = {
+		tag = WFR
+		WGB = {
+			num_of_owned_provinces_with = {
+				value = 6
+				OR = {
+					area = western_sicily_area
+					area = sicily_area
+					province_id = 123
+					province_id = 2984
+				}
+				NOT = { controlled_by = WGB }
+			}
+		}
+	}
+	fire_damage_received = -0.15
+	shock_damage = 0.1 # land_morale = 0.05
+	cav_to_inf_ratio = 0.15
+}
+one_v_one_fra_spa_region_sicily_occupier_wsp = {
+	potential = { one_v_one_succ_nations = yes }
+	trigger = {
+		tag = WSP
+		WGB = {
+			num_of_owned_provinces_with = {
+				value = 6
+				OR = {
+					area = western_sicily_area
+					area = sicily_area
+					province_id = 123
+					province_id = 2984
+				}
+				NOT = { controlled_by = WGB }
+			}
+		}
+	}
+	mercenary_cost = -0.5 # discipline = 0.025
+	naval_morale = 0.025
+	heavy_ship_power = 0.05
+	ship_durability = 0.05
+}
+# Great Turkish War scenario:
+one_v_one_gtw_region_morocco_occupier = {
+	potential = { one_v_one_gtw_nations = yes started_in = 1676.1.1 NOT = { started_in = 1676.1.2 } }
+	trigger = {
+		tag = GEA
+		GSP = {
+			num_of_owned_provinces_with = {
+				value = 8
+				OR = {
+					area = northern_morocco_area
+					area = algiers_area
+					area = barbary_coast_area
+					area = hautes_plaines_area
+					province_id = 342
+					province_id = 2467
+					province_id = 343
+					province_id = 349
+				}
+				NOT = { controlled_by = GSP }
+			}
+		}
+	}
+	land_morale = 0.1
+	development_cost = -0.2
+}
+one_v_one_gtw_region_tunis_occupier = {
+	potential = { one_v_one_gtw_nations = yes started_in = 1676.1.1 NOT = { started_in = 1676.1.2 } }
+	trigger = {
+		tag = GSP
+		GEA = {
+			num_of_owned_provinces_with = {
+				value = 8
+				OR = {
+					area = kabylia_area
+					area = ouled_nail_area
+					area = north_saharan_area
+					area = tunisia_area
+					area = djerba_area
+					area = tripolitania_area
+					province_id = 4567
+					province_id = 2449
+				}
+				NOT = { controlled_by = GEA }
+			}
+		}
+	}
+	inflation_reduction = 0.6
+	max_general_fire = 1
+}
+one_v_one_gtw_region_georgia_occupier = {
+	potential = { one_v_one_gtw_nations = yes }
+	trigger = {
+		tag = GRU
+		GEC = {
+			num_of_owned_provinces_with = {
+				value = 8
+				OR = {
+					area = imereti_area
+					area = samtskhe_area
+					area = kartli_kakheti_area
+					area = shirvan_area
+					area = armenia_area
+				}
+				NOT = { controlled_by = GEC }
+			}
+		}
+	}
+	military_tactics = 0.3
+	reinforce_speed = 0.3
+	global_trade_goods_size_modifier = 0.05
+}
+one_v_one_gtw_region_steppe_occupier = {
+	potential = { one_v_one_gtw_nations = yes }
+	trigger = {
+		tag = GEC
+		GRU = {
+			num_of_owned_provinces_with = {
+				value = 8
+				OR = {
+					area = lower_don_area
+					area = saratov_area
+					area = lower_yik_area
+					area = astrakhan_area
+					area = dagestan_area
+					area = circassia_area
+				}
+				NOT = { controlled_by = GRU }
+			}
+		}
+	}
+	cavalry_cost = -0.1
+	fire_damage_received = -0.1
+}
+one_v_one_gtw_region_italy_occupier = {
+	potential = { one_v_one_gtw_nations = yes started_in = 1676.1.1 NOT = { started_in = 1676.1.2 } }
+	trigger = {
+		tag = GIT
+		calc_true_if = {
+			all_province = {
+				OR = {
+					area = calabria_area
+					area = sicily_area
+					area = western_sicily_area
+					province_id = 127
+					province_id = 4735
+					province_id = 2986
+					province_id = 2983
+					province_id = 4734
+					province_id = 2985
+					province_id = 1933
+					province_id = 122
+				}
+				controlled_by = GIT
+			}
+			amount = 8
+		}
+	}
+	discipline = 0.05
+	technology_cost = -0.1
+	artillery_levels_available_vs_fort = 1
+}
+one_v_one_gtw_region_hungary_occupier = {
+	potential = { one_v_one_gtw_nations = yes }
+	trigger = {
+		tag = GEB
+		calc_true_if = {
+			all_province = {
+				OR = {
+					area = croatia_area
+					province_id = 4236
+					province_id = 1318
+					province_id = 154
+					province_id = 1772
+					province_id = 135
+					province_id = 152
+					province_id = 139
+					province_id = 4753
+					province_id = 136
+				}
+				controlled_by = GEB
+			}
+			amount = 8
+		}
+	}
+	max_general_fire = 1
+}
+one_v_one_gtw_region_italy_defender = {
+	potential = { one_v_one_gtw_nations = yes started_in = 1676.1.1 NOT = { started_in = 1676.1.2 } }
+	trigger = {
+		tag = GTO
+		calc_true_if = {
+			all_province = {
+				OR = {
+					area = calabria_area
+					area = sicily_area
+					area = western_sicily_area
+					province_id = 127
+					province_id = 4735
+					province_id = 2986
+					province_id = 2983
+					province_id = 4734
+					province_id = 2985
+					province_id = 1933
+					province_id = 122
+				}
+				NOT = { controlled_by = GIT }
+			}
+			amount = 8
+		}
+	}
+	global_ship_cost = -0.15
+	movement_speed = 0.15
+	discipline = 0.025
+}
+one_v_one_gtw_region_tunis_georgia_defender = {
+	potential = { one_v_one_gtw_nations = yes started_in = 1676.1.1 NOT = { started_in = 1676.1.2 } }
+	trigger = {
+		tag = GTO
+		calc_true_if = {
+			all_province = {
+				OR = {
+					area = kabylia_area
+					area = ouled_nail_area
+					area = north_saharan_area
+					area = tunisia_area
+					area = djerba_area
+					area = tripolitania_area
+					province_id = 4567
+					province_id = 2449
+					area = imereti_area
+					area = samtskhe_area
+					area = kartli_kakheti_area
+					area = shirvan_area
+					area = armenia_area
+				}
+				OR = {
+					controlled_by = GEA
+					controlled_by = GEC
+				}
+			}
+			amount = 36
+		}
+	}
+	hull_size = 3
+	naval_morale_damage = 0.1
+	global_naval_engagement_modifier = 0.1
+}
+# Roman Wars scenario:
+one_v_one_rew_region_occupier = {
+	potential = { one_v_one_re_nations = yes started_in = 1685.1.1 NOT = { started_in = 1685.1.2 } }
+	trigger = {
+		tag = REW
+		is_at_war = yes
+		NOT = {
+			REW = {
+				num_of_owned_provinces_with = {
+					value = 5
+					NOT = { is_neighbor_of = REE }
+					OR = {
+						region = north_german_region
+						region = south_german_region
+						region = british_isles_region 
+						region = low_countries_region
+						area = picardy_area
+						area = champagne_area
+						area = lorraine_area
+						area = bourgogne_area
+						area = west_burgundy_area
+						area = ile_de_france_area
+						area = normandy_area
+						area = orleans_area
+						area = loire_area
+						area = brittany_area
+					}
+					NOT = { controlled_by = REW }
+				}
+				num_of_owned_provinces_with = {
+					value = 5
+					NOT = { is_neighbor_of = REE }
+					OR = {
+						region = italy_region
+						area = savoy_dauphine_area
+						area = provence_area
+						area = massif_central_area
+						area = languedoc_area
+						area = poitou_area
+						area = guyenne_area
+						area = pyrenees_area
+					}
+					NOT = { controlled_by = REW }
+				}
+				num_of_owned_provinces_with = {
+					value = 5
+					NOT = { is_neighbor_of = REE }
+					OR = {
+						region = iberia_region
+						region = maghreb_region
+					}
+					NOT = { controlled_by = REW }
+				}
+			}
+		}
+	}
+	stability_cost_modifier = -10
+}
+one_v_one_ree_region_occupier = {
+	potential = { one_v_one_re_nations = yes started_in = 1685.1.1 NOT = { started_in = 1685.1.2 } }
+	trigger = {
+		tag = REE
+		is_at_war = yes
+		NOT = {
+			REE = {
+				num_of_owned_provinces_with = {
+					value = 5
+					NOT = { is_neighbor_of = REW }
+					OR = {
+						region = north_german_region
+						region = south_german_region
+						region = poland_region
+					}
+					NOT = { controlled_by = REE }
+				}
+				num_of_owned_provinces_with = {
+					value = 5
+					NOT = { is_neighbor_of = REW }
+					OR = {
+						region = italy_region
+						region = carpathia_region
+						region = balkan_region
+					}
+					NOT = { controlled_by = REE }
+				}
+				num_of_owned_provinces_with = {
+					value = 5
+					NOT = { is_neighbor_of = REW }
+					OR = {
+						region = maghreb_region
+						region = egypt_region
+						region = mashriq_region
+						region = arabia_region
+						region = anatolia_region
+					}
+					NOT = { controlled_by = REE }
+				}
+			}
+		}
+	}
+	stability_cost_modifier = -10
+}
+###
+one_v_one_rew_region_occupier2 = {
+	potential = { one_v_one_re_nations = yes started_in = 1685.1.2 NOT = { started_in = 1685.1.3 } }
+	trigger = {
+		tag = REW
+		is_at_war = yes
+		NOT = {
+			REW = {
+				num_of_owned_provinces_with = {
+					value = 5
+					NOT = { is_neighbor_of = REE }
+					NOT = { is_neighbor_of = REN }
+					NOT = { is_neighbor_of = RES }
+					OR = {
+						region = north_german_region
+						region = south_german_region
+						region = british_isles_region 
+						region = low_countries_region
+						area = picardy_area
+						area = champagne_area
+						area = lorraine_area
+						area = bourgogne_area
+						area = west_burgundy_area
+						area = ile_de_france_area
+						area = normandy_area
+						area = orleans_area
+						area = loire_area
+						area = brittany_area
+					}
+					NOT = { controlled_by = REW }
+				}
+				num_of_owned_provinces_with = {
+					value = 5
+					NOT = { is_neighbor_of = REE }
+					NOT = { is_neighbor_of = REN }
+					NOT = { is_neighbor_of = RES }
+					OR = {
+						region = italy_region
+						area = savoy_dauphine_area
+						area = provence_area
+						area = massif_central_area
+						area = languedoc_area
+						area = poitou_area
+						area = guyenne_area
+						area = pyrenees_area
+					}
+					NOT = { controlled_by = REW }
+				}
+				num_of_owned_provinces_with = {
+					value = 5
+					NOT = { is_neighbor_of = REE }
+					NOT = { is_neighbor_of = REN }
+					NOT = { is_neighbor_of = RES }
+					OR = {
+						region = iberia_region
+						region = maghreb_region
+					}
+					NOT = { controlled_by = REW }
+				}
+			}
+		}
+	}
+	stability_cost_modifier = -10
+}
+one_v_one_ree_region_occupier2 = {
+	potential = { one_v_one_re_nations = yes started_in = 1685.1.2 NOT = { started_in = 1685.1.3 } }
+	trigger = {
+		tag = REE
+		is_at_war = yes
+		NOT = {
+			REE = {
+				num_of_owned_provinces_with = {
+					value = 5
+					NOT = { is_neighbor_of = REW }
+					NOT = { is_neighbor_of = RWN }
+					NOT = { is_neighbor_of = RWS }
+					OR = {
+						region = north_german_region
+						region = south_german_region
+						region = poland_region
+					}
+					NOT = { controlled_by = REE }
+				}
+				num_of_owned_provinces_with = {
+					value = 5
+					NOT = { is_neighbor_of = REW }
+					NOT = { is_neighbor_of = RWN }
+					NOT = { is_neighbor_of = RWS }
+					OR = {
+						region = italy_region
+						region = carpathia_region
+						region = balkan_region
+					}
+					NOT = { controlled_by = REE }
+				}
+				num_of_owned_provinces_with = {
+					value = 5
+					NOT = { is_neighbor_of = REW }
+					NOT = { is_neighbor_of = RWN }
+					NOT = { is_neighbor_of = RWS }
+					OR = {
+						region = maghreb_region
+						region = egypt_region
+						region = mashriq_region
+						region = arabia_region
+						region = anatolia_region
+					}
+					NOT = { controlled_by = REE }
+				}
+			}
+		}
+	}
+	stability_cost_modifier = -10
+}

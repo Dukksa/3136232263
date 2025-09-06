@@ -1,0 +1,59 @@
+1676.1.1 = {
+owner = GEC
+controller = GEC
+add_core = GEC
+culture = crimean
+religion = sunni
+capital = "Bayazid"
+trade_goods = wool
+is_city = yes
+hre = no
+base_tax = 3
+base_production = 2
+base_manpower = 5
+}
+1676.1.2 = {
+owner = GTO
+controller = GTO
+add_core = GTO
+remove_core = GEC
+culture = turkish
+}
+1676.1.3 = {
+owner = ---
+controller = ---
+remove_core = GTO
+culture = no_culture
+religion = noreligion
+trade_goods = unknown
+base_tax = 1
+base_production = 1
+base_manpower = 1
+is_city = no
+}
+1807.1.1 = {
+owner = WWO
+controller = WWO
+add_core = WWO
+culture = turkish
+religion = sunni
+capital = "Bayazid"
+trade_goods = wool
+hre = no
+base_tax = 3
+base_production = 2
+base_manpower = 5
+is_city = yes
+}
+1807.1.3 = {
+owner = ---
+controller = ---
+remove_core = WWO
+culture = no_culture
+religion = noreligion
+trade_goods = unknown
+base_tax = 1
+base_production = 1
+base_manpower = 1
+is_city = no
+}

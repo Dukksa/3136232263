@@ -1,0 +1,1 @@
+bookmark = { name = "japanese_scenario" desc = "japanese_scenario_desc" date = 1565.1.1 center = 1024 default = yes country = JSO country = JNO }

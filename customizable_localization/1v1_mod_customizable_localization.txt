@@ -1,0 +1,56 @@
+defined_text = {
+	name = GetMonthName_one_v_one_low_piety_action_was_set_month
+	random = no
+	text = { localisation_key = January trigger = { is_variable_equal = { which = one_v_one_low_piety_action_was_set_month value = 0 } } }
+	text = { localisation_key = February trigger = { is_variable_equal = { which = one_v_one_low_piety_action_was_set_month value = 1 } } }
+	text = { localisation_key = March trigger = { is_variable_equal = { which = one_v_one_low_piety_action_was_set_month value = 2 } } }
+	text = { localisation_key = April trigger = { is_variable_equal = { which = one_v_one_low_piety_action_was_set_month value = 3 } } }
+	text = { localisation_key = May trigger = { is_variable_equal = { which = one_v_one_low_piety_action_was_set_month value = 4 } } }
+	text = { localisation_key = June trigger = { is_variable_equal = { which = one_v_one_low_piety_action_was_set_month value = 5 } } }
+	text = { localisation_key = July trigger = { is_variable_equal = { which = one_v_one_low_piety_action_was_set_month value = 6 } } }
+	text = { localisation_key = August trigger = { is_variable_equal = { which = one_v_one_low_piety_action_was_set_month value = 7 } } }
+	text = { localisation_key = September trigger = { is_variable_equal = { which = one_v_one_low_piety_action_was_set_month value = 8 } } }
+	text = { localisation_key = October trigger = { is_variable_equal = { which = one_v_one_low_piety_action_was_set_month value = 9 } } }
+	text = { localisation_key = November trigger = { is_variable_equal = { which = one_v_one_low_piety_action_was_set_month value = 10 } } }
+	text = { localisation_key = December }
+}
+defined_text = {
+	name = GetMonthName_one_v_one_high_piety_action_was_set_month
+	random = no
+	text = { localisation_key = January trigger = { is_variable_equal = { which = one_v_one_high_piety_action_was_set_month value = 0 } } }
+	text = { localisation_key = February trigger = { is_variable_equal = { which = one_v_one_high_piety_action_was_set_month value = 1 } } }
+	text = { localisation_key = March trigger = { is_variable_equal = { which = one_v_one_high_piety_action_was_set_month value = 2 } } }
+	text = { localisation_key = April trigger = { is_variable_equal = { which = one_v_one_high_piety_action_was_set_month value = 3 } } }
+	text = { localisation_key = May trigger = { is_variable_equal = { which = one_v_one_high_piety_action_was_set_month value = 4 } } }
+	text = { localisation_key = June trigger = { is_variable_equal = { which = one_v_one_high_piety_action_was_set_month value = 5 } } }
+	text = { localisation_key = July trigger = { is_variable_equal = { which = one_v_one_high_piety_action_was_set_month value = 6 } } }
+	text = { localisation_key = August trigger = { is_variable_equal = { which = one_v_one_high_piety_action_was_set_month value = 7 } } }
+	text = { localisation_key = September trigger = { is_variable_equal = { which = one_v_one_high_piety_action_was_set_month value = 8 } } }
+	text = { localisation_key = October trigger = { is_variable_equal = { which = one_v_one_high_piety_action_was_set_month value = 9 } } }
+	text = { localisation_key = November trigger = { is_variable_equal = { which = one_v_one_high_piety_action_was_set_month value = 10 } } }
+	text = { localisation_key = December }
+}
+defined_text = {
+	name = GetName_one_v_one_religion_boost
+	random = no
+	text = { localisation_key = one_v_one_mod.31.7.1 trigger = { religion = catholic } }
+	text = { localisation_key = one_v_one_mod.31.7.2 trigger = { OR = { religion = anglican religion = hussite religion = protestant religion = jewish } } }
+	text = { localisation_key = one_v_one_mod.31.7.3 trigger = { religion = reformed } }
+	text = { localisation_key = one_v_one_mod.31.7.4 trigger = { religion = orthodox } }
+	text = { localisation_key = one_v_one_mod.31.7.5 trigger = { OR = { religion = sunni religion = shiite religion = ibadi } } }
+}
+defined_text = {
+	name = GetEventTitleName_one_v_one_mod_3_event
+	random = no
+	text = { localisation_key = one_v_one_mod_3_event_nation_banning trigger = { NOT = { OR = { one_v_one_succ_nations = yes one_v_one_gtw_nations = yes } } } }
+	text = { localisation_key = one_v_one_mod_3_event_commander_banning trigger = { OR = { one_v_one_succ_nations = yes one_v_one_gtw_nations = yes } } }
+}
+defined_text = {
+	name = GetShintoIsolationismLevel_one_v_one_mod_shinto
+	random = no
+	text = { localisation_key = one_v_one_mod_shinto_level_0 trigger = { NOT = { isolationism = 1 } } }
+	text = { localisation_key = one_v_one_mod_shinto_level_1 trigger = { isolationism = 1 NOT = { isolationism = 2 } } }
+	text = { localisation_key = one_v_one_mod_shinto_level_2 trigger = { isolationism = 2 NOT = { isolationism = 3 } } }
+	text = { localisation_key = one_v_one_mod_shinto_level_3 trigger = { isolationism = 3 NOT = { isolationism = 4 } } }
+	text = { localisation_key = one_v_one_mod_shinto_level_4 trigger = { isolationism = 4 } }
+}

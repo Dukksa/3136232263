@@ -1,0 +1,20 @@
+government = monarchy
+add_government_reform = absolute_british_monarchy
+technology_group = western
+religion = anglican
+primary_culture = english
+capital = 236
+historical_friend = WAU
+historical_rival = WFR
+historical_rival = WSP
+historical_rival = MWG
+add_army_professionalism = 0.4
+1661.1.1 = {
+	monarch = { name = "Anne I" dynasty = "Stuart" birth_date = 1661.1.1 death_date = 1721.1.1 adm = 6 dip = 6 mil = 6 female = yes }
+	clear_scripted_personalities = yes
+	add_ruler_personality = immortal_personality
+	add_ruler_personality = just_personality
+	add_ruler_personality = kind_hearted_personality
+}
+1694.1.1 = { add_country_modifier = { name = one_v_one_manpower_fl_wgb duration = -1 hidden = yes } }
+1694.1.3 = { remove_country_modifier = one_v_one_manpower_fl_wgb }

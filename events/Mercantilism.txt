@@ -1,0 +1,77 @@
+namespace = mercantilism_events
+
+# Radical Reforms
+country_event = {
+	id = mercantilism_events.6
+	title = "mercantilism_events.6.t"
+	desc = "mercantilism_events.6.d"
+	picture = MERCHANTS_TALKING_eventPicture
+
+	trigger = {
+		NOT = { mercantilism = 100 }
+		advisor = trader
+		advisor = master_of_mint
+		NOT = { has_country_flag = radical_mercantilist_reforms }
+	}
+
+	mean_time_to_happen = {
+		months = 40
+		modifier = {
+			factor = 0.9
+			ruler_age = 36
+		}
+		modifier = {
+			factor = 0.7
+			ruler_age = 38
+		}
+		modifier = {
+			factor = 0.5
+			ruler_age = 40
+		}
+		modifier = {
+			factor = 0.3
+			ruler_age = 42
+		}
+	}
+	
+	immediate = {
+		if = {
+			limit = {
+				has_country_flag = can_have_radical_reforms_twice
+			}
+			clr_country_flag = can_have_radical_reforms_twice
+		}
+		else = {
+			set_country_flag = radical_mercantilist_reforms
+		}
+	}
+
+	option = {
+		name = "mercantilism_events.6.a"
+		add_mercantilism = 25
+		#add_stability = -1
+	}
+
+	option = {
+		name = "mercantilism_events.6.b"
+		reduce_meritocracy_effect = yes
+		remove_advisor = master_of_mint
+		add_adm_power = 200
+	}
+
+	option = {
+		name = "mercantilism_events.6.c"
+		reduce_meritocracy_effect = yes
+		remove_advisor = trader
+		add_dip_power = 200
+	}
+
+	option = {
+		name = "mercantilism_events.6.e"
+		reduce_meritocracy_effect = yes
+		remove_advisor = master_of_mint
+		remove_advisor = trader
+		add_adm_power = 200
+		add_dip_power = 200
+	}
+}

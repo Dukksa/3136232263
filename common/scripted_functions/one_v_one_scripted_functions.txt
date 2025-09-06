@@ -1,0 +1,43 @@
+can_improve_tax = {
+	#condition = {
+	#	tooltip = "CANNOT_DEV_PYRENEES"
+	#	potential = { has_province_modifier = one_v_one_pyrenees }
+	#	allow = { always = no }
+	#}
+}
+
+can_improve_production = {
+	#condition = {
+	#	tooltip = "CANNOT_DEV_PYRENEES"
+	#	potential = { has_province_modifier = one_v_one_pyrenees }
+	#	allow = { always = no }
+	#}
+}
+
+can_improve_manpower = {
+	#condition = {
+	#	tooltip = "CANNOT_DEV_PYRENEES"
+	#	potential = { has_province_modifier = one_v_one_pyrenees }
+	#	allow = { always = no }
+	#}
+}
+can_move_capital = {
+	condition = {
+		tooltip = "CANNOT_MOVE_CAP_THERE_PYRENEES"
+		potential = { has_province_modifier = one_v_one_pyrenees }
+		allow = { always = no }
+	}
+}
+can_scorch_earth = {
+	condition = {
+		tooltip = "CANNOT_SCORCH_PYRENEES"
+		potential = { has_province_modifier = one_v_one_pyrenees }
+		allow = { always = no }
+	}
+}
+can_claim_defender_of_faith = {
+	condition = {
+		tooltip = NOT_POSSIBLE_DO_TO_ACTION
+		allow = { always = no }
+	}
+}

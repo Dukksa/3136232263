@@ -1,0 +1,668 @@
+spriteTypes = {
+################
+### MISSIONS ###
+
+	# Italy:
+	spriteType = {
+		name = "one_v_one_mission_flag_igs"
+		texturefile = "gfx//interface//missions//one_v_one_mission_flag_igs.dds"
+	}
+	spriteType = {
+		name = "one_v_one_mission_flag_igl"
+		texturefile = "gfx//interface//missions//one_v_one_mission_flag_igl.dds"
+	}
+	spriteType = {
+		name = "one_v_one_mission_flag_igt"
+		texturefile = "gfx//interface//missions//one_v_one_mission_flag_igt.dds"
+	}
+	spriteType = {
+		name = "one_v_one_mission_flag_igp"
+		texturefile = "gfx//interface//missions//one_v_one_mission_flag_igp.dds"
+	}
+	spriteType = {
+		name = "one_v_one_mission_flag_ivv"
+		texturefile = "gfx//interface//missions//one_v_one_mission_flag_ivv.dds"
+	}
+	spriteType = {
+		name = "one_v_one_mission_flag_ivf"
+		texturefile = "gfx//interface//missions//one_v_one_mission_flag_ivf.dds"
+	}
+	spriteType = {
+		name = "one_v_one_mission_flag_ivt"
+		texturefile = "gfx//interface//missions//one_v_one_mission_flag_ivt.dds"
+	}
+	spriteType = {
+		name = "one_v_one_mission_flag_ivd"
+		texturefile = "gfx//interface//missions//one_v_one_mission_flag_ivd.dds"
+	}
+	# Tur-Mam:
+	spriteType = {
+		name = "one_v_one_mission_flag_mtl"
+		texturefile = "gfx//interface//missions//one_v_one_mission_flag_mtl.dds"
+	}
+	spriteType = {
+		name = "one_v_one_mission_flag_mtb"
+		texturefile = "gfx//interface//missions//one_v_one_mission_flag_mtb.dds"
+	}
+	spriteType = {
+		name = "one_v_one_mission_flag_mto"
+		texturefile = "gfx//interface//missions//one_v_one_mission_flag_mto.dds"
+	}
+	spriteType = {
+		name = "one_v_one_mission_flag_mts"
+		texturefile = "gfx//interface//missions//one_v_one_mission_flag_mts.dds"
+	}
+	spriteType = {
+		name = "one_v_one_mission_flag_mmn"
+		texturefile = "gfx//interface//missions//one_v_one_mission_flag_mmn.dds"
+	}
+	spriteType = {
+		name = "one_v_one_mission_flag_mme"
+		texturefile = "gfx//interface//missions//one_v_one_mission_flag_mme.dds"
+	}
+	spriteType = {
+		name = "one_v_one_mission_flag_mmr"
+		texturefile = "gfx//interface//missions//one_v_one_mission_flag_mmr.dds"
+	}
+	spriteType = {
+		name = "one_v_one_mission_flag_mmj"
+		texturefile = "gfx//interface//missions//one_v_one_mission_flag_mmj.dds"
+	}
+	# India:
+	spriteType = {
+		name = "one_v_one_mission_flag_idv"
+		texturefile = "gfx//interface//missions//one_v_one_mission_flag_idv.dds"
+	}
+	spriteType = {
+		name = "one_v_one_mission_flag_idd"
+		texturefile = "gfx//interface//missions//one_v_one_mission_flag_idd.dds"
+	}
+	spriteType = {
+		name = "one_v_one_mission_flag_idb"
+		texturefile = "gfx//interface//missions//one_v_one_mission_flag_idb.dds"
+	}
+	spriteType = {
+		name = "one_v_one_mission_flag_imm"
+		texturefile = "gfx//interface//missions//one_v_one_mission_flag_imm.dds"
+	}
+	spriteType = {
+		name = "one_v_one_mission_flag_imd"
+		texturefile = "gfx//interface//missions//one_v_one_mission_flag_imd.dds"
+	}
+	spriteType = {
+		name = "one_v_one_mission_flag_imr"
+		texturefile = "gfx//interface//missions//one_v_one_mission_flag_imr.dds"
+	}
+	# Japan:
+	spriteType = {
+		name = "one_v_one_mission_flag_jnd"
+		texturefile = "gfx//interface//missions//one_v_one_mission_flag_jnd.dds"
+	}
+	spriteType = {
+		name = "one_v_one_mission_flag_jnk"
+		texturefile = "gfx//interface//missions//one_v_one_mission_flag_jnk.dds"
+	}
+	spriteType = {
+		name = "one_v_one_mission_flag_jnt"
+		texturefile = "gfx//interface//missions//one_v_one_mission_flag_jnt.dds"
+	}
+	spriteType = {
+		name = "one_v_one_mission_flag_jnu"
+		texturefile = "gfx//interface//missions//one_v_one_mission_flag_jnu.dds"
+	}
+	spriteType = {
+		name = "one_v_one_mission_flag_jss"
+		texturefile = "gfx//interface//missions//one_v_one_mission_flag_jss.dds"
+	}
+	spriteType = {
+		name = "one_v_one_mission_flag_jsm"
+		texturefile = "gfx//interface//missions//one_v_one_mission_flag_jsm.dds"
+	}
+	spriteType = {
+		name = "one_v_one_mission_flag_jst"
+		texturefile = "gfx//interface//missions//one_v_one_mission_flag_jst.dds"
+	}
+	spriteType = {
+		name = "one_v_one_mission_flag_jsi"
+		texturefile = "gfx//interface//missions//one_v_one_mission_flag_jsi.dds"
+	}
+	# Fra-Spa:
+	spriteType = {
+		name = "one_v_one_mission_flag_wfo"
+		texturefile = "gfx//interface//missions//one_v_one_mission_flag_wfo.dds"
+	}
+	spriteType = {
+		name = "one_v_one_mission_flag_wff"
+		texturefile = "gfx//interface//missions//one_v_one_mission_flag_wff.dds"
+	}
+	spriteType = {
+		name = "one_v_one_mission_flag_wfa"
+		texturefile = "gfx//interface//missions//one_v_one_mission_flag_wfa.dds"
+	}
+	spriteType = {
+		name = "one_v_one_mission_flag_wfl"
+		texturefile = "gfx//interface//missions//one_v_one_mission_flag_wfl.dds"
+	}
+	spriteType = {
+		name = "one_v_one_mission_flag_wss"
+		texturefile = "gfx//interface//missions//one_v_one_mission_flag_wss.dds"
+	}
+	spriteType = {
+		name = "one_v_one_mission_flag_wsb"
+		texturefile = "gfx//interface//missions//one_v_one_mission_flag_wsb.dds"
+	}
+	spriteType = {
+		name = "one_v_one_mission_flag_wsa"
+		texturefile = "gfx//interface//missions//one_v_one_mission_flag_wsa.dds"
+	}
+	spriteType = {
+		name = "one_v_one_mission_flag_wsh"
+		texturefile = "gfx//interface//missions//one_v_one_mission_flag_wsh.dds"
+	}
+################
+### DECISIONS ##
+
+	spriteType = {
+		name = "GFX_one_v_one_parliament_logo"
+		texturefile = "gfx/interface/one_v_one_inter/one_v_one_parliament_logo.dds"
+	}
+	spriteType = {
+		name = "GFX_one_v_one_temple_logo"
+		texturefile = "gfx/interface/one_v_one_inter/one_v_one_temple_logo.dds"
+	}
+	spriteType = {
+		name = "GFX_one_v_one_edict_logo"
+		texturefile = "gfx/interface/one_v_one_inter/one_v_one_edict_logo.dds"
+	}
+	spriteType = {
+		name = "GFX_one_v_one_general_logo"
+		texturefile = "gfx/interface/one_v_one_inter/one_v_one_general_logo.dds"
+	}
+	spriteType = {
+		name = "GFX_one_v_one_explorer_logo"
+		texturefile = "gfx/interface/one_v_one_inter/one_v_one_explorer_logo.dds"
+	}
+	spriteType = {
+		name = "GFX_one_v_one_advisor_logo"
+		texturefile = "gfx/interface/one_v_one_inter/one_v_one_advisor_logo.dds"
+	}
+	spriteType = {
+		name = "GFX_one_v_one_papal_logo"
+		texturefile = "gfx/interface/one_v_one_inter/one_v_one_papal_logo.dds"
+	}
+################
+### ADVISORS ###
+	spriteType = {
+		name = "GFX_one_v_one_defensiveness"
+		texturefile = "gfx/interface/one_v_one_inter/one_v_one_defensiveness.dds"
+	}
+	spriteType = {
+		name = "GFX_one_v_one_diplomatic_reputation"
+		texturefile = "gfx/interface/one_v_one_inter/one_v_one_diplomatic_reputation.dds"
+	}
+	spriteType = {
+		name = "GFX_one_v_one_estate_loyalty_equilibrium"
+		texturefile = "gfx/interface/one_v_one_inter/one_v_one_estate_loyalty_equilibrium.dds"
+	}
+	spriteType = {
+		name = "GFX_one_v_one_discipline"
+		texturefile = "gfx/interface/one_v_one_inter/one_v_one_discipline.dds"
+	}
+	spriteType = {
+		name = "GFX_one_v_one_global_manpower_modifier"
+		texturefile = "gfx/interface/one_v_one_inter/one_v_one_global_manpower_modifier.dds"
+	}
+	spriteType = {
+		name = "GFX_one_v_one_institution_spread"
+		texturefile = "gfx/interface/one_v_one_inter/one_v_one_institution_spread.dds"
+	}
+	spriteType = {
+		name = "GFX_one_v_one_global_missionary_strength"
+		texturefile = "gfx/interface/one_v_one_inter/one_v_one_global_missionary_strength.dds"
+	}
+	spriteType = {
+		name = "GFX_one_v_one_papal_influence"
+		texturefile = "gfx/interface/one_v_one_inter/one_v_one_papal_influence.dds"
+	}
+	spriteType = {
+		name = "GFX_one_v_one_church_power"
+		texturefile = "gfx/interface/one_v_one_inter/one_v_one_church_power.dds"
+	}
+	spriteType = {
+		name = "GFX_one_v_one_monthly_fervor"
+		texturefile = "gfx/interface/one_v_one_inter/one_v_one_monthly_fervor.dds"
+	}
+	spriteType = {
+		name = "GFX_one_v_one_patriarch_authority"
+		texturefile = "gfx/interface/one_v_one_inter/one_v_one_patriarch_authority.dds"
+	}
+	spriteType = {
+		name = "GFX_one_v_one_piety_accelerator"
+		texturefile = "gfx/interface/one_v_one_inter/one_v_one_piety_accelerator.dds"
+	}
+	spriteType = {
+		name = "GFX_one_v_one_global_tariffs"
+		texturefile = "gfx/interface/one_v_one_inter/one_v_one_global_tariffs.dds"
+	}
+	spriteType = {
+		name = "GFX_one_v_one_global_tax_modifier"
+		texturefile = "gfx/interface/one_v_one_inter/one_v_one_global_tax_modifier.dds"
+	}
+	spriteType = {
+		name = "GFX_one_v_one_global_unrest"
+		texturefile = "gfx/interface/one_v_one_inter/one_v_one_global_unrest.dds"
+	}
+	spriteType = {
+		name = "GFX_one_v_one_prosperity_growth"
+		texturefile = "gfx/interface/one_v_one_inter/one_v_one_prosperity_growth.dds"
+	}
+	spriteType = {
+		name = "GFX_one_v_one_monthly_devastation"
+		texturefile = "gfx/interface/one_v_one_inter/one_v_one_monthly_devastation.dds"
+	}
+	spriteType = {
+		name = "GFX_one_v_one_improve_relation_modifier"
+		texturefile = "gfx/interface/one_v_one_inter/one_v_one_improve_relation_modifier.dds"
+	}
+	spriteType = {
+		name = "GFX_one_v_one_war_exhaustion_cost"
+		texturefile = "gfx/interface/one_v_one_inter/one_v_one_war_exhaustion_cost.dds"
+	}
+	spriteType = {
+		name = "GFX_one_v_one_reform_progress"
+		texturefile = "gfx/interface/one_v_one_inter/one_v_one_reform_progress.dds"
+	}
+	spriteType = {
+		name = "GFX_one_v_one_inflation_reduction"
+		texturefile = "gfx/interface/one_v_one_inter/one_v_one_inflation_reduction.dds"
+	}
+	spriteType = {
+		name = "GFX_one_v_one_inflation_cost"
+		texturefile = "gfx/interface/one_v_one_inter/one_v_one_inflation_cost.dds"
+	}
+	spriteType = {
+		name = "GFX_one_v_one_land_forcelimit_modifier"
+		texturefile = "gfx/interface/one_v_one_inter/one_v_one_land_forcelimit_modifier.dds"
+	}
+	spriteType = {
+		name = "GFX_one_v_one_land_maintenance_modifier"
+		texturefile = "gfx/interface/one_v_one_inter/one_v_one_land_maintenance_modifier.dds"
+	}
+	spriteType = {
+		name = "GFX_one_v_one_land_morale"
+		texturefile = "gfx/interface/one_v_one_inter/one_v_one_land_morale.dds"
+	}
+	spriteType = {
+		name = "GFX_one_v_one_naval_morale"
+		texturefile = "gfx/interface/one_v_one_inter/one_v_one_naval_morale.dds"
+	}
+	spriteType = {
+		name = "GFX_one_v_one_prestige"
+		texturefile = "gfx/interface/one_v_one_inter/one_v_one_prestige.dds"
+	}
+	spriteType = {
+		name = "GFX_one_v_one_innovativeness"
+		texturefile = "gfx/interface/one_v_one_inter/one_v_one_innovativeness.dds"
+	}
+	spriteType = {
+		name = "GFX_one_v_one_production_efficiency"
+		texturefile = "gfx/interface/one_v_one_inter/one_v_one_production_efficiency.dds"
+	}
+	spriteType = {
+		name = "GFX_one_v_one_range"
+		texturefile = "gfx/interface/one_v_one_inter/one_v_one_range.dds"
+	}
+	spriteType = {
+		name = "GFX_one_v_one_reinforce_speed"
+		texturefile = "gfx/interface/one_v_one_inter/one_v_one_reinforce_speed.dds"
+	}
+	spriteType = {
+		name = "GFX_one_v_one_spy_offence"
+		texturefile = "gfx/interface/one_v_one_inter/one_v_one_spy_offence.dds"
+	}
+	spriteType = {
+		name = "GFX_one_v_one_stability_cost_modifier"
+		texturefile = "gfx/interface/one_v_one_inter/one_v_one_stability_cost_modifier.dds"
+	}
+	spriteType = {
+		name = "GFX_one_v_one_trade_efficiency"
+		texturefile = "gfx/interface/one_v_one_inter/one_v_one_trade_efficiency.dds"
+	}
+################
+### PRIVILEGE ##
+
+	spriteType = {
+		name = "one_v_one_privilege_shock"
+		texturefile = "gfx/interface/one_v_one_inter/one_v_one_privilege_shock.dds"
+	}
+	spriteType = {
+		name = "one_v_one_privilege_fire"
+		texturefile = "gfx/interface/one_v_one_inter/one_v_one_privilege_fire.dds"
+	}
+	spriteType = {
+		name = "one_v_one_wau_joseph_personality_build_modifier_tt"
+		texturefile = "gfx/interface/one_v_one_inter/one_v_one_wau_joseph_personality_build_modifier_tt.dds"
+	}
+	spriteType = {
+		name = "one_v_one_privilege_splendor"
+		texturefile = "gfx/interface/one_v_one_inter/one_v_one_privilege_splendor.dds"
+	}
+	spriteType = {
+		name = "one_v_one_privilege_merchant"
+		texturefile = "gfx/interface/one_v_one_inter/one_v_one_privilege_merchant.dds"
+	}
+################
+### RELIGION ###
+
+	spriteType = {
+		name = "one_v_one_piety_action_background"
+		texturefile = "gfx/interface/one_v_one_inter/one_v_one_piety_action_background.dds"
+	}
+	spriteType = {
+		name = "one_v_one_shinto_background"
+		texturefile = "gfx/interface/one_v_one_inter/one_v_one_shinto_background.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "one_v_one_shinto_button_up"
+		texturefile = "gfx/interface/one_v_one_inter/one_v_one_shinto_button_up.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "one_v_one_shinto_button_down"
+		texturefile = "gfx/interface/one_v_one_inter/one_v_one_shinto_button_down.dds"
+		transparencecheck = yes
+	}
+################
+##### AGES #####
+	spriteType = {
+		name = "GFX_ab_cavalry_armies1"
+		texturefile = "gfx/interface/ages/ab_cavalry_armies1.dds"
+	}
+	spriteType = {
+		name = "GFX_ab_cavalry_armies2"
+		texturefile = "gfx/interface/ages/ab_cavalry_armies2.dds"
+	}
+	spriteType = {
+		name = "GFX_ab_cavalry_armies3"
+		texturefile = "gfx/interface/ages/ab_cavalry_armies3.dds"
+	}
+	spriteType = {
+		name = "GFX_ab_attack_bonus_in_capital_terrain1"
+		texturefile = "gfx/interface/ages/ab_attack_bonus_in_capital_terrain1.dds"
+	}
+	spriteType = {
+		name = "GFX_ab_attack_bonus_in_capital_terrain2"
+		texturefile = "gfx/interface/ages/ab_attack_bonus_in_capital_terrain2.dds"
+	}
+	spriteType = {
+		name = "GFX_ab_mercenary_discipline1"
+		texturefile = "gfx/interface/ages/ab_mercenary_discipline1.dds"
+	}
+	spriteType = {
+		name = "GFX_ab_mercenary_discipline2"
+		texturefile = "gfx/interface/ages/ab_mercenary_discipline2.dds"
+	}
+	spriteType = {
+		name = "GFX_ab_free_war_taxes1"
+		texturefile = "gfx/interface/ages/ab_free_war_taxes1.dds"
+	}
+	spriteType = {
+		name = "GFX_ab_more_ships_can_fire1"
+		texturefile = "gfx/interface/ages/ab_more_ships_can_fire1.dds"
+	}
+	spriteType = {
+		name = "GFX_ab_yearly_absolutism1"
+		texturefile = "gfx/interface/ages/ab_yearly_absolutism1.dds"
+	}
+	spriteType = {
+		name = "GFX_ab_reinforce_speed"
+		texturefile = "gfx/interface/ages/ab_reinforce_speed.dds"
+	}
+	spriteType = {
+		name = "GFX_ab_mercenary_cost"
+		texturefile = "gfx/interface/ages/ab_mercenary_cost.dds"
+	}
+	spriteType = {
+		name = "GFX_ab_privateer_efficiency"
+		texturefile = "gfx/interface/ages/ab_privateer_efficiency.dds"
+	}
+	spriteType = {
+		name = "GFX_ab_may_perform_slave_raid_on_same_religion"
+		texturefile = "gfx/interface/ages/ab_may_perform_slave_raid_on_same_religion.dds"
+	}
+	spriteType = {
+		name = "GFX_ab_interest"
+		texturefile = "gfx/interface/ages/ab_interest.dds"
+	}
+	spriteType = {
+		name = "GFX_ab_global_tax_modifier"
+		texturefile = "gfx/interface/ages/ab_global_tax_modifier.dds"
+	}
+	spriteType = {
+		name = "GFX_ab_assault_fort_ability"
+		texturefile = "gfx/interface/ages/ab_assault_fort_ability.dds"
+	}
+	spriteType = {
+		name = "GFX_ab_garrison_damage"
+		texturefile = "gfx/interface/ages/ab_garrison_damage.dds"
+	}
+	spriteType = {
+		name = "GFX_ab_merc_maintenance_modifier"
+		texturefile = "gfx/interface/ages/ab_merc_maintenance_modifier.dds"
+	}
+	spriteType = {
+		name = "GFX_ab_global_sailors_modifier"
+		texturefile = "gfx/interface/ages/ab_global_sailors_modifier.dds"
+	}
+	spriteType = {
+		name = "GFX_ab_global_ship_cost"
+		texturefile = "gfx/interface/ages/ab_global_ship_cost.dds"
+	}
+	spriteType = {
+		name = "GFX_ab_reinforce_cost_modifier"
+		texturefile = "gfx/interface/ages/ab_reinforce_cost_modifier.dds"
+	}
+	spriteType = {
+		name = "GFX_ab_mercantilism_cost"
+		texturefile = "gfx/interface/ages/ab_mercantilism_cost.dds"
+	}
+	spriteType = {
+		name = "GFX_ab_trade_efficiency"
+		texturefile = "gfx/interface/ages/ab_trade_efficiency.dds"
+	}
+	spriteType = {
+		name = "GFX_ab_siege_ability"
+		texturefile = "gfx/interface/ages/ab_siege_ability.dds"
+	}
+	spriteType = {
+		name = "GFX_ab_leader_land_pips"
+		texturefile = "gfx/interface/ages/ab_leader_land_pips.dds"
+	}
+	spriteType = {
+		name = "GFX_ab_mercenary_manpower"
+		texturefile = "gfx/interface/ages/ab_mercenary_manpower.dds"
+	}
+	spriteType = {
+		name = "GFX_ab_mercenary_extra_comp"
+		texturefile = "gfx/interface/ages/ab_mercenary_extra_comp.dds"
+	}
+	spriteType = {
+		name = "GFX_ab_mercenary_manpower"
+		texturefile = "gfx/interface/ages/ab_mercenary_manpower.dds"
+	}
+	spriteType = {
+		name = "GFX_ab_naval_forcelimit_modifier"
+		texturefile = "gfx/interface/ages/ab_naval_forcelimit_modifier.dds"
+	}
+	spriteType = {
+		name = "GFX_ab_global_ship_repair"
+		texturefile = "gfx/interface/ages/ab_global_ship_repair.dds"
+	}
+	spriteType = {
+		name = "GFX_ab_development_cost"
+		texturefile = "gfx/interface/ages/ab_development_cost.dds"
+	}
+	spriteType = {
+		name = "GFX_ab_global_trade_goods_size_modifier"
+		texturefile = "gfx/interface/ages/ab_global_trade_goods_size_modifier.dds"
+	}
+	spriteType = {
+		name = "GFX_ab_max_general_pips"
+		texturefile = "gfx/interface/ages/ab_max_general_pips.dds"
+	}
+	spriteType = {
+		name = "GFX_ab_allowed_special_ships_fraction"
+		texturefile = "gfx/interface/ages/ab_allowed_special_ships_fraction.dds"
+	}
+	spriteType = {
+		name = "GFX_ab_sea_repair"
+		texturefile = "gfx/interface/ages/ab_sea_repair.dds"
+	}
+	spriteType = {
+		name = "GFX_ab_power_projection"
+		texturefile = "gfx/interface/ages/ab_power_projection.dds"
+	}
+	spriteType = {
+		name = "GFX_ab_placed_merchant_power_modifier"
+		texturefile = "gfx/interface/ages/ab_placed_merchant_power_modifier.dds"
+	}
+	###
+	spriteType = {
+		name = "GFX_obj_3_centers_of_trade"
+		texturefile = "gfx/interface/ages/obj_3_centers_of_trade.dds"
+	}
+	spriteType = {
+		name = "GFX_obj_4_centers_of_trade"
+		texturefile = "gfx/interface/ages/obj_4_centers_of_trade.dds"
+	}
+	spriteType = {
+		name = "GFX_obj_500_development"
+		texturefile = "gfx/interface/ages/obj_500_development.dds"
+	}
+	spriteType = {
+		name = "GFX_obj_monthly_income_1"
+		texturefile = "gfx/interface/ages/obj_monthly_income_1.dds"
+	}
+	spriteType = {
+		name = "GFX_obj_monthly_income_2"
+		texturefile = "gfx/interface/ages/obj_monthly_income_2.dds"
+	}
+	spriteType = {
+		name = "GFX_obj_monthly_income_3"
+		texturefile = "gfx/interface/ages/obj_monthly_income_3.dds"
+	}
+	spriteType = {
+		name = "GFX_obj_monthly_income_4"
+		texturefile = "gfx/interface/ages/obj_monthly_income_4.dds"
+	}
+	spriteType = {
+		name = "GFX_obj_large_forcelimit_1"
+		texturefile = "gfx/interface/ages/obj_large_forcelimit_1.dds"
+	}
+	spriteType = {
+		name = "GFX_obj_large_forcelimit_2"
+		texturefile = "gfx/interface/ages/obj_large_forcelimit_2.dds"
+	}
+################
+## RULE STUFF ##
+
+	spriteType = {
+		name = "GFX_one_v_one_ita_rules_event_menu"
+		texturefile = "gfx/interface/one_v_one_inter/one_v_one_ita_rules_event_menu.dds"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_one_v_one_t_m_rules_event_menu"
+		texturefile = "gfx/interface/one_v_one_inter/one_v_one_t_m_rules_event_menu.dds"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_one_v_one_jap_rules_event_menu"
+		texturefile = "gfx/interface/one_v_one_inter/one_v_one_jap_rules_event_menu.dds"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_one_v_one_jap_alt_rules_event_menu"
+		texturefile = "gfx/interface/one_v_one_inter/one_v_one_jap_alt_rules_event_menu.dds"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_one_v_one_ind_rules_event_menu"
+		texturefile = "gfx/interface/one_v_one_inter/one_v_one_ind_rules_event_menu.dds"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_one_v_one_fra_spa_rules_event_menu"
+		texturefile = "gfx/interface/one_v_one_inter/one_v_one_fra_spa_rules_event_menu.dds"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_one_v_one_napoleonic_rules_event_menu"
+		texturefile = "gfx/interface/one_v_one_inter/one_v_one_napoleonic_rules_event_menu.dds"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_one_v_one_napoleonic_alt_rules_event_menu"
+		texturefile = "gfx/interface/one_v_one_inter/one_v_one_napoleonic_alt_rules_event_menu.dds"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_one_v_one_tyw_rules_event_menu"
+		texturefile = "gfx/interface/one_v_one_inter/one_v_one_tyw_rules_event_menu.dds"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_one_v_one_tyw_alt_rules_event_menu"
+		texturefile = "gfx/interface/one_v_one_inter/one_v_one_tyw_alt_rules_event_menu.dds"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_one_v_one_gtw_rules_event_menu"
+		texturefile = "gfx/interface/one_v_one_inter/one_v_one_gtw_rules_event_menu.dds"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_one_v_one_gtw_alt_rules_event_menu"
+		texturefile = "gfx/interface/one_v_one_inter/one_v_one_gtw_alt_rules_event_menu.dds"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_one_v_one_re_rules_event_menu"
+		texturefile = "gfx/interface/one_v_one_inter/one_v_one_re_rules_event_menu.dds"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_one_v_one_as_rules_event_menu"
+		texturefile = "gfx/interface/one_v_one_inter/one_v_one_as_rules_event_menu.dds"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_one_v_one_syw_rules_event_menu"
+		texturefile = "gfx/interface/one_v_one_inter/one_v_one_syw_rules_event_menu.dds"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_one_v_one_syw_alt_rules_event_menu"
+		texturefile = "gfx/interface/one_v_one_inter/one_v_one_syw_alt_rules_event_menu.dds"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_one_v_one_ww_rules_event_menu"
+		texturefile = "gfx/interface/one_v_one_inter/one_v_one_ww_rules_event_menu.dds"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "one_v_one_ita_rules_event_pic"
+		texturefile = "gfx/interface/one_v_one_inter/one_v_one_ita_rules_event_pic.dds"
+		transparencecheck = yes
+	}
+################
+## GUI STUFF ##
+
+	spriteType = {
+		name = "GFX_one_v_one_re_raiding_button"
+		texturefile = "gfx/interface/one_v_one_inter/one_v_one_re_raiding_button.dds"
+	}
+	
+}

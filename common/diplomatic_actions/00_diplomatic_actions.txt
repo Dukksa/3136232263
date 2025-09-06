@@ -1,0 +1,406 @@
+requestpeace = {
+	condition = {
+		tooltip = NOT_POSSIBLE_DO_TO_ACTION
+		potential = { FROM = { one_v_one_neut_nations = yes } }
+		allow = { always = no }
+	}
+}
+declarewar = {
+	condition = {
+		tooltip = NOT_POSSIBLE_DO_TO_ACTION
+		potential = { has_global_flag = block_war_dec }
+		allow = { always = no }
+	}
+	condition = {
+		tooltip = NOT_POSSIBLE_DO_TO_ACTION
+		potential = { FROM = { OR = { tag = MWG tag = MWP one_v_one_neut_nations = yes tag = PAP } } }
+		allow = { always = no }
+	}
+	condition = {
+		tooltip = NOT_POSSIBLE_DO_TO_ACTION
+		potential = { OR = { tag = MWG tag = MWP one_v_one_neut_nations = yes tag = PAP } }
+		allow = { always = no }
+	}
+	condition = {
+		tooltip = ONE_V_ONE_FRA_SPA_NOT_POSSIBLE_DO_TO_ACTION
+		potential = { OR = { tag = WSP tag = WGB } }
+		allow = { always = no }
+	}
+	condition = {
+		tooltip = NOT_POSSIBLE_DO_TO_ACTION
+		potential = { OR = { tag = NRU tag = NAU tag = NPR tag = NGB tag = NSW tag = GAU tag = GPL tag = GIT tag = GSP tag = GRU } }
+		allow = { FROM = { NOT = { OR = { tag = NRU tag = NAU tag = NPR tag = NGB tag = NSW tag = GAU tag = GPL tag = GIT tag = GSP tag = GRU is_subject_of = ROOT } } } }
+	}
+	condition = {
+		tooltip = NOT_POSSIBLE_DO_TO_ACTION
+		potential = { OR = { tag = NFR tag = NSP tag = NRH tag = NIT tag = NTU tag = GTO tag = GEC tag = GEB tag = GEA tag = GFR } }
+		allow = { FROM = { NOT = { OR = { tag = NFR tag = NSP tag = NRH tag = NIT tag = NTU tag = GTO tag = GEC tag = GEB tag = GEA tag = GFR is_subject_of = ROOT } } } }
+	}
+	condition = {
+		tooltip = NOT_POSSIBLE_DO_TO_ACTION
+		potential = { OR = { tag = WFR tag = WSP } }
+		allow = { FROM = { NOT = { OR = { tag = WFR tag = WSP is_subject_of = ROOT } } } }
+	}
+	condition = {
+		tooltip = NOT_POSSIBLE_DO_TO_ACTION
+		potential = { OR = { tag = WGB tag = WAU } }
+		allow = { FROM = { NOT = { OR = { tag = WGB tag = WAU is_subject_of = ROOT } } } }
+	}
+	condition = {
+		tooltip = NOT_POSSIBLE_DO_TO_ACTION
+		potential = { OR = { tag = TFR tag = TSW tag = TGB tag = TPG tag = TDN } }
+		allow = { FROM = { NOT = { OR = { tag = TFR tag = TSW tag = TGB tag = TPG tag = TDN is_subject_of = ROOT } } } }
+	}
+	condition = {
+		tooltip = NOT_POSSIBLE_DO_TO_ACTION
+		potential = { OR = { tag = TPL tag = TAS tag = TSP tag = TCG tag = TIT } }
+		allow = { FROM = { NOT = { OR = { tag = TPL tag = TAS tag = TSP tag = TCG tag = TIT is_subject_of = ROOT } } } }
+	}
+	condition = {
+		tooltip = ONE_V_ONE_AS_NOT_POSSIBLE_DO_TO_ACTION_TO
+		potential = { tag = ARU }
+		allow = { always = no }
+	}
+	condition = {
+		tooltip = ONE_V_ONE_AS_NOT_POSSIBLE_DO_TO_ACTION_FROM
+		potential = { FROM = { tag = ARU } }
+		allow = { always = no }
+	}
+	effect = {
+		set_global_flag = block_war_dec
+		on_war_declaration_effect = yes
+		every_ally = { join_all_offensive_wars_of = ROOT }
+		every_ally = { join_all_defensive_wars_of = ROOT }
+		if = {
+			limit = { started_in = 1685.1.1 NOT = { started_in = 1685.1.2 } }
+			re_diplo_war = { re_tag = REW }
+			re_diplo_war = { re_tag = REE }
+		}
+		if = {
+			limit = { started_in = 1685.1.2 NOT = { started_in = 1685.1.3 } }
+			REW = { re_diplo_war = { re_tag = REW } }
+			RWN = { re_diplo_war = { re_tag = RWN } }
+			RWS = { re_diplo_war = { re_tag = RWS } }
+			REE = { re_diplo_war = { re_tag = REE } }
+			REN = { re_diplo_war = { re_tag = REN } }
+			RES = { re_diplo_war = { re_tag = RES } }
+			if = {
+				limit = { OR = { tag = REW tag = RWN tag = RWS } }
+				REW = { join_all_offensive_wars_of = ROOT join_all_defensive_wars_of = ROOT }
+				RWN = { join_all_offensive_wars_of = ROOT join_all_defensive_wars_of = ROOT }
+				RWS = { join_all_offensive_wars_of = ROOT join_all_defensive_wars_of = ROOT }
+			}
+			if = {
+				limit = { OR = { tag = REE tag = REN tag = RES } }
+				REE = { join_all_offensive_wars_of = ROOT join_all_defensive_wars_of = ROOT }
+				REN = { join_all_offensive_wars_of = ROOT join_all_defensive_wars_of = ROOT }
+				RES = { join_all_offensive_wars_of = ROOT join_all_defensive_wars_of = ROOT }
+			}
+		}
+	}
+}
+callaction = {
+	condition = {
+		tooltip = NOT_POSSIBLE_DO_TO_ACTION
+		potential = {
+			OR = {
+				is_in_war = { defender_leader = TYN }
+				is_in_war = { defender_leader = TYM }
+			}
+		}
+		allow = { always = no }
+	}
+}
+support_independence_action = {
+	condition = {
+		tooltip = NOT_POSSIBLE_DO_TO_ACTION
+		allow = { always = no }
+	}
+}
+allianceaction = {
+	condition = {
+		tooltip = NOT_POSSIBLE_DO_TO_ACTION
+		potential = { FROM = { OR = { tag = MWG tag = MWP one_v_one_neut_nations = yes tag = PAP tag = SUA tag = SCN tag = SLU tag = SQU tag = SBR tag = SNS } } }
+		allow = { always = no }
+	}
+	condition = {
+		tooltip = NOT_POSSIBLE_DO_TO_ACTION
+		potential = { OR = { tag = MWG tag = MWP one_v_one_neut_nations = yes tag = PAP tag = SUA tag = SCN tag = SLU tag = SQU tag = SBR tag = SNS } }
+		allow = { always = no }
+	}
+}
+royal_marriage = {
+	condition = {
+		tooltip = MARWAR
+		potential = {
+		}
+		allow = {
+			NOT = { war_with = FROM }
+		}
+	}
+	condition = {
+		tooltip = NOT_POSSIBLE_DO_TO_ACTION
+		potential = { FROM = { OR = { tag = MWG tag = MWP one_v_one_neut_nations = yes tag = PAP } } }
+		allow = { always = no }
+	}
+	condition = {
+		tooltip = NOT_POSSIBLE_DO_TO_ACTION
+		potential = { OR = { tag = MWG tag = MWP one_v_one_neut_nations = yes tag = PAP } }
+		allow = { always = no }
+	}
+}
+guaranteeaction = {
+	condition = {
+		tooltip = NOT_POSSIBLE_DO_TO_ACTION
+		allow = { always = no }
+	}
+}
+warningaction = {
+	condition = {
+		tooltip = NOT_POSSIBLE_DO_TO_ACTION
+		potential = { FROM = { OR = { tag = MWG one_v_one_neut_nations = yes tag = PAP } } }
+		allow = { always = no }
+	}
+	condition = {
+		tooltip = NOT_POSSIBLE_DO_TO_ACTION
+		potential = { OR = { tag = MWG one_v_one_neut_nations = yes tag = PAP } }
+		allow = { always = no }
+	}
+}
+threaten_war = {
+	condition = {
+		tooltip = NOT_POSSIBLE_DO_TO_ACTION
+		potential = { FROM = { OR = { tag = MWG tag = MWP one_v_one_neut_nations = yes tag = PAP } } }
+		allow = { always = no }
+	}
+	condition = {
+		tooltip = NOT_POSSIBLE_DO_TO_ACTION
+		potential = { OR = { tag = MWG tag = MWP one_v_one_neut_nations = yes tag = PAP } }
+		allow = { always = no }
+	}
+}
+improve_relation = {
+	condition = {
+		tooltip = NOT_POSSIBLE_DO_TO_ACTION
+		potential = { FROM = { OR = { tag = MWG one_v_one_neut_nations = yes tag = PAP } } }
+		allow = { always = no }
+	}
+	condition = {
+		tooltip = NOT_POSSIBLE_DO_TO_ACTION
+		potential = { OR = { tag = MWG one_v_one_neut_nations = yes tag = PAP } }
+		allow = { always = no }
+	}
+}
+spy_network = {
+	condition = {
+		tooltip = NOT_POSSIBLE_DO_TO_ACTION
+		potential = { FROM = { OR = { tag = MWG one_v_one_neut_nations = yes tag = PAP } } }
+		allow = { always = no }
+	}
+	condition = {
+		tooltip = NOT_POSSIBLE_DO_TO_ACTION
+		potential = { OR = { tag = MWG one_v_one_neut_nations = yes tag = PAP } }
+		allow = { always = no }
+	}
+}
+transfer_trade_power = {
+	condition = {
+		tooltip = NOT_POSSIBLE_DO_TO_ACTION
+		allow = { always = no }
+	}
+}
+steer_trade = {
+	condition = {
+		tooltip = NOT_POSSIBLE_DO_TO_ACTION
+		allow = { always = no }
+	}
+}
+embargoaction = {
+	condition = {
+		tooltip = NOT_POSSIBLE_DO_TO_ACTION
+		potential = { FROM = { OR = { tag = MWG one_v_one_neut_nations = yes tag = PAP } } }
+		allow = { always = no }
+	}
+	condition = {
+		tooltip = NOT_POSSIBLE_DO_TO_ACTION
+		potential = { OR = { tag = MWG one_v_one_neut_nations = yes tag = PAP } }
+		allow = { always = no }
+	}
+}
+knowledge_sharing = {
+	condition = {
+		tooltip = NOT_POSSIBLE_DO_TO_ACTION
+		potential = { FROM = { OR = { tag = MWG one_v_one_neut_nations = yes tag = PAP } } }
+		allow = { always = no }
+	}
+	condition = {
+		tooltip = NOT_POSSIBLE_DO_TO_ACTION
+		potential = { OR = { tag = MWG one_v_one_neut_nations = yes tag = PAP } }
+		allow = { always = no }
+	}
+}
+giftaction = {
+	condition = {
+		tooltip = NOT_POSSIBLE_DO_TO_ACTION
+		potential = { FROM = { OR = { tag = MWG one_v_one_neut_nations = yes tag = PAP } } }
+		allow = { always = no }
+	}
+	condition = {
+		tooltip = NOT_POSSIBLE_DO_TO_ACTION
+		potential = { OR = { tag = MWG one_v_one_neut_nations = yes tag = PAP } }
+		allow = { always = no }
+	}
+}
+offerloan = {
+	condition = {
+		tooltip = NOT_POSSIBLE_DO_TO_ACTION
+		potential = { FROM = { OR = { tag = MWG one_v_one_neut_nations = yes tag = PAP } } }
+		allow = { always = no }
+	}
+	condition = {
+		tooltip = NOT_POSSIBLE_DO_TO_ACTION
+		potential = { OR = { tag = MWG one_v_one_neut_nations = yes tag = PAP } }
+		allow = { always = no }
+	}
+}
+sellprov = {
+	condition = {
+		tooltip = NOT_POSSIBLE_DO_TO_ACTION
+		allow = { always = no }
+	}
+}
+milaccess = {
+	condition = {
+		tooltip = NOT_POSSIBLE_DO_TO_ACTION
+		potential = {
+			FROM = { OR = { tag = MWG tag = PAP } }
+		}
+		allow = { always = no }
+	}
+	condition = {
+		tooltip = NOT_POSSIBLE_DO_TO_ACTION
+		potential = { OR = { tag = MWG tag = PAP } }
+		allow = { always = no }
+	}
+}
+offermilaccess = {
+	condition = {
+		tooltip = NOT_POSSIBLE_DO_TO_ACTION
+		potential = { FROM = { OR = { tag = MWG one_v_one_neut_nations = yes tag = PAP } } }
+		allow = { always = no }
+	}
+	condition = {
+		tooltip = NOT_POSSIBLE_DO_TO_ACTION
+		potential = { OR = { tag = MWG one_v_one_neut_nations = yes tag = PAP } }
+		allow = { always = no }
+	}
+}
+fleet_access = {
+	condition = {
+		tooltip = NOT_POSSIBLE_DO_TO_ACTION
+		potential = { FROM = { OR = { tag = MWG one_v_one_neut_nations = yes tag = PAP } } }
+		allow = { always = no }
+	}
+	condition = {
+		tooltip = NOT_POSSIBLE_DO_TO_ACTION
+		potential = { OR = { tag = MWG one_v_one_neut_nations = yes tag = PAP } }
+		allow = { always = no }
+	}
+}
+offer_fleet_access = {
+	condition = {
+		tooltip = NOT_POSSIBLE_DO_TO_ACTION
+		potential = { FROM = { OR = { tag = MWG one_v_one_neut_nations = yes tag = PAP } } }
+		allow = { always = no }
+	}
+	condition = {
+		tooltip = NOT_POSSIBLE_DO_TO_ACTION
+		potential = { OR = { tag = MWG one_v_one_neut_nations = yes tag = PAP } }
+		allow = { always = no }
+	}
+}
+takeondebt = {
+	condition = {
+		tooltip = NOT_POSSIBLE_DO_TO_ACTION
+		potential = { FROM = { OR = { tag = MWG one_v_one_neut_nations = yes tag = PAP } } }
+		allow = { always = no }
+	}
+	condition = {
+		tooltip = NOT_POSSIBLE_DO_TO_ACTION
+		potential = { OR = { tag = MWG one_v_one_neut_nations = yes tag = PAP } }
+		allow = { always = no }
+	}
+}
+influence_nation = {
+	condition = {
+		tooltip = NOT_POSSIBLE_DO_TO_ACTION
+		potential = { FROM = { OR = { tag = MWG one_v_one_neut_nations = yes tag = PAP } } }
+		allow = { always = no }
+	}
+	condition = {
+		tooltip = NOT_POSSIBLE_DO_TO_ACTION
+		potential = { OR = { tag = MWG one_v_one_neut_nations = yes tag = PAP } }
+		allow = { always = no }
+	}
+}
+intervene_in_war = {
+	condition = {
+		tooltip = NOT_POSSIBLE_DO_TO_ACTION
+		potential = { FROM = { OR = { tag = MWG tag = MWP one_v_one_neut_nations = yes tag = PAP } } }
+		allow = { always = no }
+	}
+	condition = {
+		tooltip = NOT_POSSIBLE_DO_TO_ACTION
+		potential = { OR = { tag = MWG tag = MWP one_v_one_neut_nations = yes tag = PAP } }
+		allow = { always = no }
+	}
+}
+vassalaction = {
+	condition = {
+		tooltip = VASSALINVALID
+		potential = {
+		}
+		allow = {
+			alliance_with = FROM
+			FROM = {
+				has_opinion = {
+					who = ROOT
+					value = 190
+				}
+			}
+			FROM = { is_at_war = no }
+		}
+	}
+	condition = {
+		tooltip = NOT_POSSIBLE_DO_TO_ACTION
+		potential = { FROM = { OR = { tag = MWG tag = MWP one_v_one_neut_nations = yes tag = PAP } } }
+		allow = { always = no }
+	}
+	condition = {
+		tooltip = NOT_POSSIBLE_DO_TO_ACTION
+		potential = { OR = { tag = MWG tag = MWP one_v_one_neut_nations = yes tag = PAP } }
+		allow = { always = no }
+	}
+}
+tributary_state_action = {
+	condition = {
+		tooltip = NOT_POSSIBLE_DO_TO_ACTION
+		allow = { always = no }
+	}
+}
+ask_for_tributary_state_action = {
+	condition = {
+		tooltip = NOT_POSSIBLE_DO_TO_ACTION
+		allow = { always = no }
+	}
+}
+
+break_alliance = {
+	condition = {
+		tooltip = NOT_POSSIBLE_DO_TO_ACTION
+		allow = { always = no }
+	}
+	effect = {
+		on_alliance_broken_effect = yes
+	}
+}

@@ -1,0 +1,572 @@
+
+####### FOR ALL #######
+one_v_one_mission_s4_wfr_wsp_wau_wgb = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		NOT = { map_setup = map_setup_random }
+		OR = { tag = WFR tag = WSP tag = WAU tag = WGB }
+		has_global_flag = wfr_nation_choosing_flag
+		has_global_flag = wsp_nation_choosing_flag
+		has_global_flag = wau_nation_choosing_flag
+		has_global_flag = wgb_nation_choosing_flag
+	}
+	has_country_shield = yes
+
+	one_v_one_mission_s4_wfr_wsp_wau_wgb_naval_buildup = {
+		icon = mission_colonial
+		position = 1
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 15
+				has_shipyard_building_trigger = yes
+			}
+			num_of_owned_provinces_with = {
+				value = 15
+				has_dock_building_trigger = yes
+			}
+		}
+		effect = {
+			add_sailors = 100000
+			add_country_modifier = { name = one_v_one_mission_s4_wfr_wsp_wau_wgb_naval_buildup_modifier duration = 2190 }
+		}
+	}
+}
+#######################
+
+one_v_one_mission_s4_1_wau = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		NOT = { map_setup = map_setup_random }
+		tag = WAU
+	}
+	has_country_shield = yes
+
+	one_v_one_mission_s4_nation_select_1_wau = {
+		icon = glory_to_von_habsburg
+		required_missions = { }
+		trigger = {
+			if = {
+				limit = { OR = { has_country_flag = wau_chose_nation_charles_flag has_country_flag = wau_chose_nation_leopold_flag has_country_flag = wau_chose_nation_joseph_flag has_country_flag = wau_chose_nation_eugene_flag } }
+				custom_trigger_tooltip = {
+					tooltip = one_v_one_already_chose_nation_flag_tt
+					always = no
+				}
+			}
+			else = { tag = WAU }
+			custom_trigger_tooltip = {
+				tooltip = one_v_one_nation_choosing_flag_tt
+				has_global_flag = wau_nation_choosing_flag
+				has_global_flag = wsp_nation_choosing_flag
+				has_global_flag = wfr_nation_choosing_flag
+				has_global_flag = wgb_nation_choosing_flag
+			}
+			if = {
+				limit = { has_global_flag = wfr_ban_charles_flag }
+				custom_trigger_tooltip = {
+					tooltip = one_v_one_nation_banned_flag_tt
+					always = no
+				}
+			}
+		}
+		effect = {
+			set_country_flag = wau_chose_nation_charles_flag
+			set_global_flag = wau_chose_nation_flag
+			custom_tooltip = one_v_one_chose_nation_flag_tt
+			tooltip = { one_v_one_wau_mission_select_charles_tag = yes }
+			hidden_effect = {
+				if = {
+					limit = { has_global_flag = wsp_chose_nation_flag has_global_flag = wfr_chose_nation_flag has_global_flag = wgb_chose_nation_flag }
+					one_v_one_wau_mission_select_charles_tag = yes
+					WSP = {
+						if = {
+							limit = { has_country_flag = wsp_chose_nation_philip_flag }
+							one_v_one_wsp_mission_select_philip_tag = yes
+						}
+						if = {
+							limit = { has_country_flag = wsp_chose_nation_isidoro_flag }
+							one_v_one_wsp_mission_select_isidoro_tag = yes
+						}
+						if = {
+							limit = { has_country_flag = wsp_chose_nation_jorge_flag }
+							one_v_one_wsp_mission_select_jorge_tag = yes
+						}
+						if = {
+							limit = { has_country_flag = wsp_chose_nation_francisco_flag }
+							one_v_one_wsp_mission_select_francisco_tag = yes
+						}
+					}
+					WFR = {
+						if = {
+							limit = { has_country_flag = wfr_chose_nation_louisxiv_flag }
+							one_v_one_wfr_mission_select_louisxiv_tag = yes
+						}
+						if = {
+							limit = { has_country_flag = wfr_chose_nation_vendome_flag }
+							one_v_one_wfr_mission_select_vendome_tag = yes
+						}
+						if = {
+							limit = { has_country_flag = wfr_chose_nation_villars_flag }
+							one_v_one_wfr_mission_select_villars_tag = yes
+						}
+						if = {
+							limit = { has_country_flag = wfr_chose_nation_neufville_flag }
+							one_v_one_wfr_mission_select_neufville_tag = yes
+						}
+					}
+					WGB = {
+						if = {
+							limit = { has_country_flag = wgb_chose_nation_anne_flag }
+							one_v_one_wgb_mission_select_anne_tag = yes
+						}
+						if = {
+							limit = { has_country_flag = wgb_chose_nation_henry_flag }
+							one_v_one_wgb_mission_select_henry_tag = yes
+						}
+						if = {
+							limit = { has_country_flag = wgb_chose_nation_john_flag }
+							one_v_one_wgb_mission_select_john_tag = yes
+						}
+						if = {
+							limit = { has_country_flag = wgb_chose_nation_george_flag }
+							one_v_one_wgb_mission_select_george_tag = yes
+						}
+					}
+				}
+			}
+		}
+	}
+}
+one_v_one_mission_s4_2_wau = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		NOT = { map_setup = map_setup_random }
+		tag = WAU
+	}
+	has_country_shield = yes
+
+	one_v_one_mission_s4_nation_select_2_wau = {
+		icon = shift_the_balance
+		required_missions = { }
+		trigger = {
+			if = {
+				limit = { OR = { has_country_flag = wau_chose_nation_charles_flag has_country_flag = wau_chose_nation_leopold_flag has_country_flag = wau_chose_nation_joseph_flag has_country_flag = wau_chose_nation_eugene_flag } }
+				custom_trigger_tooltip = {
+					tooltip = one_v_one_already_chose_nation_flag_tt
+					always = no
+				}
+			}
+			else = { tag = WAU }
+			custom_trigger_tooltip = {
+				tooltip = one_v_one_nation_choosing_flag_tt
+				has_global_flag = wau_nation_choosing_flag
+				has_global_flag = wsp_nation_choosing_flag
+				has_global_flag = wfr_nation_choosing_flag
+				has_global_flag = wgb_nation_choosing_flag
+			}
+			if = {
+				limit = { has_global_flag = wfr_ban_leopold_flag }
+				custom_trigger_tooltip = {
+					tooltip = one_v_one_nation_banned_flag_tt
+					always = no
+				}
+			}
+		}
+		effect = {
+			set_country_flag = wau_chose_nation_leopold_flag
+			set_global_flag = wau_chose_nation_flag
+			custom_tooltip = one_v_one_chose_nation_flag_tt
+			tooltip = { one_v_one_wau_mission_select_leopold_tag = yes }
+			hidden_effect = {
+				if = {
+					limit = { has_global_flag = wsp_chose_nation_flag has_global_flag = wfr_chose_nation_flag has_global_flag = wgb_chose_nation_flag }
+					one_v_one_wau_mission_select_leopold_tag = yes
+					WSP = {
+						if = {
+							limit = { has_country_flag = wsp_chose_nation_philip_flag }
+							one_v_one_wsp_mission_select_philip_tag = yes
+						}
+						if = {
+							limit = { has_country_flag = wsp_chose_nation_isidoro_flag }
+							one_v_one_wsp_mission_select_isidoro_tag = yes
+						}
+						if = {
+							limit = { has_country_flag = wsp_chose_nation_jorge_flag }
+							one_v_one_wsp_mission_select_jorge_tag = yes
+						}
+						if = {
+							limit = { has_country_flag = wsp_chose_nation_francisco_flag }
+							one_v_one_wsp_mission_select_francisco_tag = yes
+						}
+					}
+					WFR = {
+						if = {
+							limit = { has_country_flag = wfr_chose_nation_louisxiv_flag }
+							one_v_one_wfr_mission_select_louisxiv_tag = yes
+						}
+						if = {
+							limit = { has_country_flag = wfr_chose_nation_vendome_flag }
+							one_v_one_wfr_mission_select_vendome_tag = yes
+						}
+						if = {
+							limit = { has_country_flag = wfr_chose_nation_villars_flag }
+							one_v_one_wfr_mission_select_villars_tag = yes
+						}
+						if = {
+							limit = { has_country_flag = wfr_chose_nation_neufville_flag }
+							one_v_one_wfr_mission_select_neufville_tag = yes
+						}
+					}
+					WGB = {
+						if = {
+							limit = { has_country_flag = wgb_chose_nation_anne_flag }
+							one_v_one_wgb_mission_select_anne_tag = yes
+						}
+						if = {
+							limit = { has_country_flag = wgb_chose_nation_henry_flag }
+							one_v_one_wgb_mission_select_henry_tag = yes
+						}
+						if = {
+							limit = { has_country_flag = wgb_chose_nation_john_flag }
+							one_v_one_wgb_mission_select_john_tag = yes
+						}
+						if = {
+							limit = { has_country_flag = wgb_chose_nation_george_flag }
+							one_v_one_wgb_mission_select_george_tag = yes
+						}
+					}
+				}
+			}
+		}
+	}
+}
+one_v_one_mission_s4_3_wau = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		NOT = { map_setup = map_setup_random }
+		tag = WAU
+		NOT = { OR = { has_country_flag = wau_chose_nation_charles_flag has_country_flag = wau_chose_nation_leopold_flag has_country_flag = wau_chose_nation_joseph_flag has_country_flag = wau_chose_nation_eugene_flag } }
+	}
+	has_country_shield = yes
+
+	one_v_one_mission_s4_construct_wau = {
+		icon = mission_colonial
+		required_missions = { one_v_one_mission_s4_nation_select_1_wau one_v_one_mission_s4_nation_select_2_wau one_v_one_mission_s4_nation_select_3_wau one_v_one_mission_s4_nation_select_4_wau }
+		position = 2
+		trigger = {
+		}
+		effect = {
+			add_country_modifier = { name = one_v_one_mission_construct_modifier duration = 3650 }
+			add_country_modifier = { name = one_v_one_mission_construct_idea_cost_modifier duration = 1 }
+		}
+	}
+}
+one_v_one_mission_s4_4_wau = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		NOT = { map_setup = map_setup_random }
+		tag = WAU
+	}
+	has_country_shield = yes
+
+	one_v_one_mission_s4_nation_select_3_wau = {
+		icon = mission_hessian_jaeger_corps
+		required_missions = { }
+		trigger = {
+			if = {
+				limit = { OR = { has_country_flag = wau_chose_nation_charles_flag has_country_flag = wau_chose_nation_leopold_flag has_country_flag = wau_chose_nation_joseph_flag has_country_flag = wau_chose_nation_eugene_flag } }
+				custom_trigger_tooltip = {
+					tooltip = one_v_one_already_chose_nation_flag_tt
+					always = no
+				}
+			}
+			else = { tag = WAU }
+			custom_trigger_tooltip = {
+				tooltip = one_v_one_nation_choosing_flag_tt
+				has_global_flag = wau_nation_choosing_flag
+				has_global_flag = wsp_nation_choosing_flag
+				has_global_flag = wfr_nation_choosing_flag
+				has_global_flag = wgb_nation_choosing_flag
+			}
+			if = {
+				limit = { has_global_flag = wfr_ban_joseph_flag }
+				custom_trigger_tooltip = {
+					tooltip = one_v_one_nation_banned_flag_tt
+					always = no
+				}
+			}
+		}
+		effect = {
+			set_country_flag = wau_chose_nation_joseph_flag
+			set_global_flag = wau_chose_nation_flag
+			custom_tooltip = one_v_one_chose_nation_flag_tt
+			tooltip = { one_v_one_wau_mission_select_joseph_tag = yes }
+			hidden_effect = {
+				if = {
+					limit = { has_global_flag = wsp_chose_nation_flag has_global_flag = wfr_chose_nation_flag has_global_flag = wgb_chose_nation_flag }
+					one_v_one_wau_mission_select_joseph_tag = yes
+					WSP = {
+						if = {
+							limit = { has_country_flag = wsp_chose_nation_philip_flag }
+							one_v_one_wsp_mission_select_philip_tag = yes
+						}
+						if = {
+							limit = { has_country_flag = wsp_chose_nation_isidoro_flag }
+							one_v_one_wsp_mission_select_isidoro_tag = yes
+						}
+						if = {
+							limit = { has_country_flag = wsp_chose_nation_jorge_flag }
+							one_v_one_wsp_mission_select_jorge_tag = yes
+						}
+						if = {
+							limit = { has_country_flag = wsp_chose_nation_francisco_flag }
+							one_v_one_wsp_mission_select_francisco_tag = yes
+						}
+					}
+					WFR = {
+						if = {
+							limit = { has_country_flag = wfr_chose_nation_louisxiv_flag }
+							one_v_one_wfr_mission_select_louisxiv_tag = yes
+						}
+						if = {
+							limit = { has_country_flag = wfr_chose_nation_vendome_flag }
+							one_v_one_wfr_mission_select_vendome_tag = yes
+						}
+						if = {
+							limit = { has_country_flag = wfr_chose_nation_villars_flag }
+							one_v_one_wfr_mission_select_villars_tag = yes
+						}
+						if = {
+							limit = { has_country_flag = wfr_chose_nation_neufville_flag }
+							one_v_one_wfr_mission_select_neufville_tag = yes
+						}
+					}
+					WGB = {
+						if = {
+							limit = { has_country_flag = wgb_chose_nation_anne_flag }
+							one_v_one_wgb_mission_select_anne_tag = yes
+						}
+						if = {
+							limit = { has_country_flag = wgb_chose_nation_henry_flag }
+							one_v_one_wgb_mission_select_henry_tag = yes
+						}
+						if = {
+							limit = { has_country_flag = wgb_chose_nation_john_flag }
+							one_v_one_wgb_mission_select_john_tag = yes
+						}
+						if = {
+							limit = { has_country_flag = wgb_chose_nation_george_flag }
+							one_v_one_wgb_mission_select_george_tag = yes
+						}
+					}
+				}
+			}
+		}
+		ai_weight = {
+			factor = 0
+		}
+	}
+}
+one_v_one_mission_s4_5_wau = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		NOT = { map_setup = map_setup_random }
+		tag = WAU
+	}
+	has_country_shield = yes
+
+	one_v_one_mission_s4_nation_select_4_wau = {
+		icon = military_self_reliance
+		required_missions = { }
+		trigger = {
+			if = {
+				limit = { OR = { has_country_flag = wau_chose_nation_charles_flag has_country_flag = wau_chose_nation_leopold_flag has_country_flag = wau_chose_nation_joseph_flag has_country_flag = wau_chose_nation_eugene_flag } }
+				custom_trigger_tooltip = {
+					tooltip = one_v_one_already_chose_nation_flag_tt
+					always = no
+				}
+			}
+			else = { tag = WAU }
+			custom_trigger_tooltip = {
+				tooltip = one_v_one_nation_choosing_flag_tt
+				has_global_flag = wau_nation_choosing_flag
+				has_global_flag = wsp_nation_choosing_flag
+				has_global_flag = wfr_nation_choosing_flag
+				has_global_flag = wgb_nation_choosing_flag
+			}
+			if = {
+				limit = { has_global_flag = wfr_ban_eugene_flag }
+				custom_trigger_tooltip = {
+					tooltip = one_v_one_nation_banned_flag_tt
+					always = no
+				}
+			}
+		}
+		effect = {
+			set_country_flag = wau_chose_nation_eugene_flag
+			set_global_flag = wau_chose_nation_flag
+			custom_tooltip = one_v_one_chose_nation_flag_tt
+			tooltip = { one_v_one_wau_mission_select_eugene_tag = yes }
+			hidden_effect = {
+				if = {
+					limit = { has_global_flag = wsp_chose_nation_flag has_global_flag = wfr_chose_nation_flag has_global_flag = wgb_chose_nation_flag }
+					one_v_one_wau_mission_select_eugene_tag = yes
+					WSP = {
+						if = {
+							limit = { has_country_flag = wsp_chose_nation_philip_flag }
+							one_v_one_wsp_mission_select_philip_tag = yes
+						}
+						if = {
+							limit = { has_country_flag = wsp_chose_nation_isidoro_flag }
+							one_v_one_wsp_mission_select_isidoro_tag = yes
+						}
+						if = {
+							limit = { has_country_flag = wsp_chose_nation_jorge_flag }
+							one_v_one_wsp_mission_select_jorge_tag = yes
+						}
+						if = {
+							limit = { has_country_flag = wsp_chose_nation_francisco_flag }
+							one_v_one_wsp_mission_select_francisco_tag = yes
+						}
+					}
+					WFR = {
+						if = {
+							limit = { has_country_flag = wfr_chose_nation_louisxiv_flag }
+							one_v_one_wfr_mission_select_louisxiv_tag = yes
+						}
+						if = {
+							limit = { has_country_flag = wfr_chose_nation_vendome_flag }
+							one_v_one_wfr_mission_select_vendome_tag = yes
+						}
+						if = {
+							limit = { has_country_flag = wfr_chose_nation_villars_flag }
+							one_v_one_wfr_mission_select_villars_tag = yes
+						}
+						if = {
+							limit = { has_country_flag = wfr_chose_nation_neufville_flag }
+							one_v_one_wfr_mission_select_neufville_tag = yes
+						}
+					}
+					WGB = {
+						if = {
+							limit = { has_country_flag = wgb_chose_nation_anne_flag }
+							one_v_one_wgb_mission_select_anne_tag = yes
+						}
+						if = {
+							limit = { has_country_flag = wgb_chose_nation_henry_flag }
+							one_v_one_wgb_mission_select_henry_tag = yes
+						}
+						if = {
+							limit = { has_country_flag = wgb_chose_nation_john_flag }
+							one_v_one_wgb_mission_select_john_tag = yes
+						}
+						if = {
+							limit = { has_country_flag = wgb_chose_nation_george_flag }
+							one_v_one_wgb_mission_select_george_tag = yes
+						}
+					}
+				}
+			}
+		}
+	}
+}
+##
+one_v_one_mission_s4_3_charles = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		NOT = { map_setup = map_setup_random }
+		has_country_flag = wau_chose_nation_charles_flag
+	}
+	has_country_shield = yes
+
+	one_v_one_mission_s4_construct_charles = {
+		icon = mission_colonial
+		required_missions = { one_v_one_mission_s4_nation_select_1_wau }
+		position = 2
+		trigger = {
+		}
+		effect = {
+			add_country_modifier = { name = one_v_one_mission_construct_modifier duration = 3650 }
+			add_country_modifier = { name = one_v_one_mission_construct_idea_cost_modifier duration = 1 }
+		}
+	}
+}
+one_v_one_mission_s4_3_leopold = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		NOT = { map_setup = map_setup_random }
+		has_country_flag = wau_chose_nation_leopold_flag
+	}
+	has_country_shield = yes
+
+	one_v_one_mission_s4_construct_leopold = {
+		icon = mission_colonial
+		required_missions = { one_v_one_mission_s4_nation_select_2_wau }
+		position = 2
+		trigger = {
+		}
+		effect = {
+			add_country_modifier = { name = one_v_one_mission_construct_modifier duration = 3650 }
+			add_country_modifier = { name = one_v_one_mission_construct_idea_cost_modifier duration = 1 }
+		}
+	}
+}
+one_v_one_mission_s4_3_joseph = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		NOT = { map_setup = map_setup_random }
+		has_country_flag = wau_chose_nation_joseph_flag
+	}
+	has_country_shield = yes
+
+	one_v_one_mission_s4_construct_joseph = {
+		icon = mission_colonial
+		required_missions = { one_v_one_mission_s4_nation_select_3_wau }
+		position = 2
+		trigger = {
+		}
+		effect = {
+			add_country_modifier = { name = one_v_one_mission_construct_modifier duration = 3650 }
+			add_country_modifier = { name = one_v_one_mission_construct_idea_cost_modifier duration = 1 }
+		}
+	}
+}
+one_v_one_mission_s4_3_eugene = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		NOT = { map_setup = map_setup_random }
+		has_country_flag = wau_chose_nation_eugene_flag
+	}
+	has_country_shield = yes
+
+	one_v_one_mission_s4_construct_eugene = {
+		icon = mission_colonial
+		required_missions = { one_v_one_mission_s4_nation_select_4_wau }
+		position = 2
+		trigger = {
+		}
+		effect = {
+			add_country_modifier = { name = one_v_one_mission_construct_modifier duration = 3650 }
+			add_country_modifier = { name = one_v_one_mission_construct_idea_cost_modifier duration = 1 }
+		}
+	}
+}

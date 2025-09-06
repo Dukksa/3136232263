@@ -1,0 +1,21 @@
+government = monarchy
+add_government_reform = autocracy_reform
+technology_group = western
+historical_rival = SPR
+historical_rival = SGB
+historical_rival = SUA
+historical_rival = SCN
+historical_rival = SPO
+historical_rival = SBR
+historical_rival = SAU
+historical_rival = SFR
+historical_rival = SQU
+historical_rival = SLU
+historical_rival = SSP
+historical_rival = SNS
+capital = 2531
+1716.1.1 = {
+	monarch = { birth_date = 1716.1.1 death_date = 1776.1.1 claim = 95 adm = 0 dip = 0 mil = 0 }
+	clear_scripted_personalities = yes
+	add_ruler_personality = immortal_personality
+}

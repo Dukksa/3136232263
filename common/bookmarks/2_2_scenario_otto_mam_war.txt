@@ -1,0 +1,1 @@
+bookmark = { name = "alt_second_scenario_otto_mam_war" desc = "alt_second_scenario_otto_mam_war_desc" date = 1516.1.2 center = 1932 default = yes country = MTU country = MMM }

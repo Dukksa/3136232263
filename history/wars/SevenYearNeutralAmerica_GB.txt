@@ -1,0 +1,15 @@
+name = "Natives Support"
+war_goal = {
+	type = superiority_insult_mutual
+	casus_belli = cb_insult
+}
+1749.1.1 = {
+	add_attacker = SUA
+	add_attacker = SCN
+	add_defender = TYM
+}
+1749.1.3 = {
+	rem_attacker = SUA
+	rem_attacker = SCN
+	rem_defender = TYM
+}

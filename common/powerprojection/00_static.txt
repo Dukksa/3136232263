@@ -1,0 +1,8 @@
+one_v_one_base_power_projection = { max = 25 min = 25 power = 1 decay = no }
+one_v_one_age_power_projection = { max = 25 min = 25 power = 1 decay = no }
+one_v_one_mission_projection = { max = 50 min = 50 power = 1 decay = no }
+embargoing_rival = { power = 3 max = 10 }
+privateering_rival = { power = 3 max = 10 }
+supporting_rebels_in_rival = { power = 50 max = 50 }
+insulted_rival = { power = 5 yearly_decay = 1 max = 10 }
+has_rival = { power = 1 max = 15 }

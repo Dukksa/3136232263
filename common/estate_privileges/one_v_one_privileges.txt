@@ -1,0 +1,63 @@
+# Roman Wars:
+estate_church_re_splendor_privilege = {
+	icon = one_v_one_privilege_splendor
+	influence = 0.10
+	loyalty = 0.10
+	max_absolutism = -5
+	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
+	conditional_modifier = { trigger = { has_idea = respected_authority } modifier = { max_absolutism = 4 } }
+	is_valid = {
+		one_v_one_re_nations = yes
+	}
+	can_select = {
+		re_subject_can_select_privilege = { privilege = estate_church_re_splendor_privilege }
+	}
+	can_revoke = {
+		re_subject_can_revoke_privilege = yes
+	}
+	on_granted = {
+		re_subject_grant_privilege = { privilege = estate_church_re_splendor_privilege }
+	}
+	on_revoked = {
+		re_subject_revoke_privilege = { privilege = estate_church_re_splendor_privilege }
+	}
+	benefits = {
+		monthly_splendor = 3
+	}
+	conditional_modifier = {
+		trigger = { has_government_mechanic = russian_modernization_mechanic }
+		modifier = { monthly_russian_modernization = -0.03 }
+	}
+	ai_will_do = { factor = 0 }
+}
+estate_burghers_re_merchant_privilege = {
+	icon = one_v_one_privilege_merchant
+	influence = 0.05
+	loyalty = 0.05
+	max_absolutism = -5
+	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
+	conditional_modifier = { trigger = { has_idea = respected_authority } modifier = { max_absolutism = 4 } }
+	is_valid = {
+		one_v_one_re_nations = yes
+	}
+	can_select = {
+		re_subject_can_select_privilege = { privilege = estate_church_re_merchant_privilege }
+	}
+	can_revoke = {
+		re_subject_can_revoke_privilege = yes
+	}
+	on_granted = {
+		re_subject_grant_privilege = { privilege = estate_church_re_merchant_privilege }
+	}
+	on_revoked = {
+		re_subject_revoke_privilege = { privilege = estate_church_re_merchant_privilege }
+	}
+	benefits = {
+		merchants = 2
+	}
+	conditional_modifier = {
+		trigger = { has_government_mechanic = russian_modernization_mechanic }
+		modifier = { monthly_russian_modernization = -0.03 }
+	}
+	ai_will_do = { factor = 0 }
+}

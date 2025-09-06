@@ -1,0 +1,19 @@
+government = monarchy
+add_government_reform = roman_empire_reform
+government_rank = 3
+technology_group = western
+religion = orthodox
+primary_culture = roman
+capital = 118
+historical_rival = MWG
+historical_rival = TYN
+add_army_professionalism = 0.35
+1652.1.1 = {
+	monarch = { name = "Hokus" dynasty = "Pokus" birth_date = 1652.1.1 death_date = 1712.1.1 adm = 6 dip = 6 mil = 6 }
+	clear_scripted_personalities = yes
+	add_ruler_personality = immortal_personality
+	add_ruler_personality = just_personality
+	add_ruler_personality = kind_hearted_personality
+}
+#1685.1.1 = { add_country_modifier = { name = one_v_one_manpower_fl_gtw duration = -1 hidden = yes } }
+#1685.1.3 = { remove_country_modifier = one_v_one_manpower_fl_gtw }
