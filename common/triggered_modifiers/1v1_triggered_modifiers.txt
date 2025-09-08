@@ -16,6 +16,8 @@ one_v_one_warchest_1 = {
 	manpower_recovery_speed = 0.15
 	land_forcelimit_modifier = 0.1
 }
+####################
+####################
 # Fra-Spa Scenario:
 one_v_one_fra_spa_region_portugal_occupier = {
 	potential = { one_v_one_succ_nations = yes }
@@ -330,6 +332,8 @@ one_v_one_fra_spa_region_sicily_occupier_wsp = {
 	heavy_ship_power = 0.05
 	ship_durability = 0.05
 }
+####################
+####################
 # Great Turkish War scenario:
 one_v_one_gtw_region_morocco_occupier = {
 	potential = { one_v_one_gtw_nations = yes started_in = 1676.1.1 NOT = { started_in = 1676.1.2 } }
@@ -537,6 +541,8 @@ one_v_one_gtw_region_tunis_georgia_defender = {
 	naval_morale_damage = 0.1
 	global_naval_engagement_modifier = 0.1
 }
+####################
+####################
 # Roman Wars scenario:
 one_v_one_rew_region_occupier = {
 	potential = { one_v_one_re_nations = yes started_in = 1685.1.1 NOT = { started_in = 1685.1.2 } }
@@ -752,4 +758,394 @@ one_v_one_ree_region_occupier2 = {
 		}
 	}
 	stability_cost_modifier = -10
+}
+####################
+####################
+# Hundred Years War scenario:
+one_v_one_hyw_region_hyf_stabhit_occupier = {
+	potential = { one_v_one_hyw_nations = yes }
+	trigger = {
+		tag = HYF
+		is_at_war = yes
+		ile_de_france_area = {
+			type = all
+			controlled_by = HYF
+		}
+		orleans_area = {
+			type = all
+			controlled_by = HYF
+		}
+		186 = { controlled_by = HYF }
+		4390 = { controlled_by = HYF }
+		191 = { controlled_by = HYF }
+		4389 = { controlled_by = HYF }
+		178 = { controlled_by = HYF }
+	}
+	stability_cost_modifier = -10
+}
+one_v_one_hyw_region_hye_stabhit_occupier = {
+	potential = { one_v_one_hyw_nations = yes }
+	trigger = {
+		tag = HYE
+		is_at_war = yes
+		brittany_area = {
+			type = all
+			controlled_by = HYE
+		}
+		normandy_area = {
+			type = all
+			controlled_by = HYE
+		}
+		picardy_area = {
+			type = all
+			controlled_by = HYE
+		}
+		177 = { controlled_by = HYE }
+	}
+	stability_cost_modifier = -10
+}
+one_v_one_hyw_region_scotland_occupier = {
+	potential = { one_v_one_hyw_nations = yes }
+	trigger = {
+		tag = HYE
+		calc_true_if = {
+			all_province = {
+				OR = {
+					area = highlands_area
+					area = lowlands_area
+				}
+				controlled_by = HYE
+			}
+			amount = 7
+		}
+	}
+	siege_ability = 0.25
+	land_attrition = -0.2
+}
+one_v_one_hyw_region_wales_occupier = {
+	potential = { one_v_one_hyw_nations = yes }
+	trigger = {
+		tag = HYS
+		calc_true_if = {
+			all_province = {
+				OR = {
+					area = scottish_marches_area
+					area = wales_area
+					province_id = 4365
+					province_id = 240
+				}
+				controlled_by = HYS
+			}
+			amount = 6
+		}
+	}
+	infantry_power = 0.1
+	infantry_cost = -0.15
+}
+one_v_one_hyw_region_burgundy_occupier = {
+	potential = { one_v_one_hyw_nations = yes }
+	trigger = {
+		tag = HYF
+		calc_true_if = {
+			all_province = {
+				OR = {
+					area = lorraine_area
+					area = alsace_area
+					area = bourgogne_area
+					area = romandie_area
+					province_id = 4392
+					province_id = 1877
+				}
+				controlled_by = HYF
+			}
+			amount = 7
+		}
+	}
+	fire_damage_received = -0.15
+	cavalry_shock = 0.2
+}
+one_v_one_hyw_region_savoy_occupier = {
+	potential = { one_v_one_hyw_nations = yes }
+	trigger = {
+		tag = HYB
+		calc_true_if = {
+			all_province = {
+				OR = {
+					area = savoy_dauphine_area
+					area = provence_area
+					province_id = 4777
+					province_id = 4391
+					province_id = 200
+				}
+				controlled_by = HYB
+			}
+			amount = 6
+		}
+	}
+	regiment_manpower_usage = -0.1
+	mercenary_discipline = 0.1
+}
+one_v_one_hyw_region_leon_occupier = {
+	potential = { one_v_one_hyw_nations = yes }
+	trigger = {
+		tag = HYC
+		calc_true_if = {
+			all_province = {
+				OR = {
+					area = galicia_area
+					area = leon_area
+					area = extremadura_area
+					province_id = 4548
+				}
+				controlled_by = HYC
+			}
+			amount = 7
+		}
+	}
+	leader_land_shock = 1
+	leader_siege = 1
+	general_cost = -0.33
+	shock_damage = 0.1
+}
+one_v_one_hyw_region_andalucia_occupier = {
+	potential = { one_v_one_hyw_nations = yes }
+	trigger = {
+		tag = HYP
+		calc_true_if = {
+			all_province = {
+				OR = {
+					area = upper_andalucia_area
+					province_id = 2754
+					province_id = 4547
+					province_id = 221
+					province_id = 1748
+					province_id = 225
+					province_id = 224
+					province_id = 1749
+				}
+				controlled_by = HYP
+			}
+			amount = 6
+		}
+	}
+	global_regiment_cost = -0.1
+	infantry_power = 0.1
+}
+####################
+####################
+# Nader Shah Invasion scenario:
+one_v_one_nsi_region_astrakhan_occupier = {
+	potential = { one_v_one_nsi_nations = yes }
+	trigger = {
+		tag = NKA
+		calc_true_if = {
+			all_province = {
+				OR = {
+					area = astrakhan_area
+					area = dagestan_area
+				}
+				controlled_by = NKA
+			}
+			amount = 5
+		}
+	}
+	shock_damage_received = -0.075
+	global_trade_goods_size = 0.25
+}
+one_v_one_nsi_region_astraloot_occupier = {
+	potential = { one_v_one_nsi_nations = yes }
+	trigger = {
+		tag = NBU
+		calc_true_if = {
+			all_province = {
+				OR = {
+					area = astrakhan_area
+					area = dagestan_area
+				}
+				controlled_by = NBU
+			}
+			amount = 6
+		}
+	}
+	cavalry_cost = -0.1
+	cavalry_fire = 0.5
+}
+one_v_one_nsi_region_samarkand_occupier = {
+	potential = { one_v_one_nsi_nations = yes }
+	trigger = {
+		tag = NIR
+		calc_true_if = {
+			all_province = {
+				OR = {
+					area = transcaspia_area
+					area = khiva_area
+					area = merv_area
+					area = transoxiana_area
+					area = termez_area
+					area = ferghana_area
+					area = kashgaria_area
+					area = kyzylkum_area
+					area = syr_darya_area
+					area = arys_area
+					area = jetysuu_area
+					area = kazakhstan_area
+					area = balchasj_area
+				}
+				controlled_by = NIR
+			}
+			amount = 12
+		}
+	}
+	land_attrition = -0.3
+	caravan_power = 0.25
+}
+one_v_one_nsi_region_kabul_occupier = {
+	potential = { one_v_one_nsi_nations = yes }
+	trigger = {
+		tag = NIR
+		calc_true_if = {
+			all_province = {
+				OR = {
+					area = balkh_area
+					area = ghor_area
+					area = kabulistan_area
+					province_id = 577
+					province_id = 2068
+				}
+				controlled_by = NIR
+			}
+			amount = 8
+		}
+	}
+	war_taxes_cost_modifier = -1
+	max_general_fire = 1
+}
+one_v_one_nsi_region_lahore_occupier = {
+	potential = { one_v_one_nsi_nations = yes }
+	trigger = {
+		tag = NIR
+		calc_true_if = {
+			all_province = {
+				OR = {
+					area = kashmir_area
+					area = sind_sagar_area
+					area = multan_area
+					area = lahore_area
+					area = sirhind_area
+				}
+				controlled_by = NIR
+			}
+			amount = 8
+		}
+	}
+	interest = 0.75
+	war_exhaustion = -0.3
+}
+one_v_one_nsi_region_delhi_occupier = {
+	potential = { one_v_one_nsi_nations = yes }
+	trigger = {
+		tag = NMU
+		upper_doab_area = {
+			type = all
+			controlled_by = NMU
+		}
+	}
+	all_power_cost = -0.05
+	land_morale = 0.05
+	build_cost = -0.1
+}
+one_v_one_nsi_region_surat_occupier = {
+	potential = { one_v_one_nsi_nations = yes }
+	trigger = {
+		tag = NHY
+		calc_true_if = {
+			all_province = {
+				OR = {
+					area = malwa_area
+					area = khandesh_area
+					province_id = 4460
+					province_id = 2092
+					province_id = 548
+					province_id = 4442
+					province_id = 545
+				}
+				controlled_by = NHY
+			}
+			amount = 8
+		}
+	}
+	development_cost = -0.1
+	discipline = 0.05
+}
+one_v_one_nsi_region_deccan_occupier = {
+	potential = { one_v_one_nsi_nations = yes }
+	trigger = {
+		tag = NMA
+		calc_true_if = {
+			all_province = {
+				OR = {
+					province_id = 550
+					province_id = 4458
+					province_id = 551
+					province_id = 546
+					province_id = 4443
+					province_id = 2050
+					province_id = 4437
+					province_id = 544
+					area = telingana_area
+					area = maidan_area
+					area = golconda_area
+					area = raichur_doab_area
+				}
+				controlled_by = NMA
+			}
+			amount = 10
+		}
+	}
+	drill_decay_modifier = -0.25
+	monthly_splendor = 3
+}
+one_v_one_nsi_region_orissa_occupier = {
+	potential = { one_v_one_nsi_nations = yes }
+	trigger = {
+		tag = NFC
+		calc_true_if = {
+			all_province = {
+				OR = {
+					area = orissa_area
+					province_id = 4450
+					province_id = 4448
+					province_id = 2048
+				}
+				controlled_by = NFC
+			}
+			amount = 4
+		}
+	}
+	fire_damage_received = -0.1
+	global_ship_trade_power = 0.2
+}
+one_v_one_nsi_region_bengal_occupier = {
+	potential = { one_v_one_nsi_nations = yes }
+	trigger = {
+		tag = NBC
+		calc_true_if = {
+			all_province = {
+				OR = {
+					area = mithila_area
+					area = bihar_area
+					province_id = 560
+					province_id = 4470
+					province_id = 4450
+					area = orissa_area
+					area = upper_mahanadi_area
+					area = garjat_area
+				}
+				controlled_by = NBC
+			}
+			amount = 10
+		}
+	}
+	global_tax_income = 720
+	max_general_siege = 1
 }

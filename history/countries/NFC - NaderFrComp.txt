@@ -5,7 +5,16 @@ technology_group = western
 religion = catholic
 primary_culture = cosmopolitan_french
 capital = 4417
-historical_rival = TYN
+historical_friend = NMU
+historical_friend = NBU
+historical_friend = NHY
+historical_friend = NMY
+historical_rival = NIR
+historical_rival = NKA
+historical_rival = NMA
+historical_rival = NRA
+historical_rival = NBC
+historical_rival = MWG
 add_army_professionalism = 0.2
 1700.1.1 = {
 	monarch = { name = "Philibert Orry" birth_date = 1700.1.1 death_date = 1760.1.1 adm = 6 dip = 6 mil = 6 }

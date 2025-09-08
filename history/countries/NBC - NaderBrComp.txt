@@ -5,7 +5,16 @@ technology_group = western
 religion = anglican
 primary_culture = english
 capital = 4474
-historical_rival = TYN
+historical_friend = NIR
+historical_friend = NKA
+historical_friend = NMA
+historical_friend = NRA
+historical_rival = NMU
+historical_rival = NBU
+historical_rival = NHY
+historical_rival = NMY
+historical_rival = NFC
+historical_rival = MWG
 add_army_professionalism = 0.2
 1700.1.1 = {
 	monarch = { name = "Robert Clive" birth_date = 1700.1.1 death_date = 1760.1.1 adm = 6 dip = 6 mil = 6 }

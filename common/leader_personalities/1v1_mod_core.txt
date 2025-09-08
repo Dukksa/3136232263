@@ -1,0 +1,107 @@
+# Hundred Years War:
+# France:
+one_v_one_hyf_joan_personality = {
+	allow = { always = no }
+	land_morale_constant = 0.25
+	military_tactics = 0.15
+	land_morale = 0.05
+}
+one_v_one_hyf_bureau_personality = {
+	allow = { always = no }
+	siege_ability = 0.2
+	assault_fort_ability = 0.2
+}
+one_v_one_hyf_guesclin_personality = {
+	allow = { always = no }
+	movement_speed = 0.33
+	reinforce_speed = 0.33
+	force_march_free = yes
+}
+# Castille:
+one_v_one_hyc_trastamara_personality = {
+	allow = { always = no }
+	discipline = 0.05
+}
+one_v_one_hyc_elcidg_personality = {
+	allow = { always = no }
+	reinforce_speed = 0.33
+	recover_army_morale_speed = 0.33
+}
+one_v_one_hyc_elcida_personality = {
+	allow = { always = no }
+	movement_speed_in_fleet_modifier = 1
+}
+one_v_one_hyc_fernando_personality = {
+	allow = { always = no }
+	heavy_ship_power = 0.1
+	naval_morale_damage = 0.15
+}
+# Scotland:
+one_v_one_hys_william_personality = {
+	allow = { always = no }
+	land_attrition = -0.5
+}
+one_v_one_hys_stewart_personality = {
+	allow = { always = no }
+	reinforce_cost_modifier = -1
+	reinforce_speed = 0.33
+	drill_decay_modifier = -0.5
+	siege_ability = 0.15
+}
+one_v_one_hys_thomas_personality = {
+	allow = { always = no }
+	infantry_shock = 0.2
+	shock_damage = 0.15
+}
+# England:
+one_v_one_hye_woodstock_personality = {
+	allow = { always = no }
+	shock_damage = 0.1
+	morale_damage = 0.15
+	reserves_organisation = 0.5
+}
+one_v_one_hye_edward_personality = {
+	allow = { always = no }
+	infantry_power = 0.1
+	drill_gain_modifier = 1
+}
+one_v_one_hye_henry_personality = {
+	allow = { always = no }
+	morale_damage_received = -0.25
+	fire_damage = 0.25
+	discipline = 0.05
+}
+# Burgundy:
+one_v_one_hyb_john_personality = {
+	allow = { always = no }
+	land_morale = 0.1
+}
+one_v_one_hyb_philipb_personality = {
+	allow = { always = no }
+	artillery_fire = 0.35
+	shock_damage_received = -0.1
+	backrow_artillery_damage = -0.1
+}
+one_v_one_hyb_philipg_personality = {
+	allow = { always = no }
+	cav_to_inf_ratio = 0.5
+	cavalry_shock = 0.2
+	cavalry_power = 0.15
+}
+# Portugal:
+one_v_one_hyp_periera_personality = {
+	allow = { always = no }
+	infantry_fire = 0.15
+	morale_damage_received = -0.15
+	infantry_power = 0.1
+}
+one_v_one_hyp_pedro_personality = {
+	allow = { always = no }
+	shock_damage_received = -0.1
+	fire_damage_received = -0.1
+}
+one_v_one_hyp_navigator_personality = {
+	allow = { always = no }
+	hull_size_modifier = 0.1
+	sunk_ship_morale_hit_recieved = -0.5
+}

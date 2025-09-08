@@ -2091,8 +2091,6 @@ samurai_regiment = {
 }
 
 qizilbash_regiment = {
-	fire_damage_received = -0.05
-	land_maintenance_modifier = -0.25
 }
 
 mamluks_regiment = {

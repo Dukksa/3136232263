@@ -1,0 +1,3374 @@
+
+### Made by protoboy
+
+custom_button = {
+	name = csu_upgrades_viewer_button
+    tooltip = csu_upgrades_viewer_button_title
+	potential = {
+		FROM = {
+			has_country_modifier = allow_custom_special_units_modifier_country
+		}
+	}
+	effect = { 
+		hidden_effect = {
+			FROM = {
+				if = {
+					limit = {
+						has_country_flag = csu_show_upgrades_viewer_flag
+					}
+					clr_country_flag = csu_show_upgrades_viewer_flag
+				}
+				else = {
+					set_country_flag = csu_show_upgrades_viewer_flag
+				}
+			}
+		}
+	}
+}
+
+custom_icon = {
+	name = csu_upgrades_viewer_bg
+    potential = {
+        FROM = { 
+			has_country_flag = csu_show_upgrades_viewer_flag 
+		}
+	}
+}
+
+custom_text_box = {
+	name = csu_upgrades_viewer_inf_text
+	potential = {
+		FROM = {
+			has_country_flag = csu_show_upgrades_viewer_flag
+			has_country_modifier = allow_special_infantry_modifier
+		}
+	}
+	tooltip = csu_upgrades_viewer_inf_text_t
+}
+
+custom_text_box = {
+	name = csu_upgrades_viewer_cav_text
+	potential = {
+		FROM = {
+			has_country_flag = csu_show_upgrades_viewer_flag
+			has_country_modifier = allow_special_cavalry_modifier
+		}
+	}
+	tooltip = csu_upgrades_viewer_cav_text_t
+}
+
+######## Infantry ########
+#### Tier 1 ####
+custom_text_box = {
+	name = csu_inf_T1_text
+	potential = {
+		FROM = {
+			has_country_modifier = allow_special_infantry_modifier
+			has_country_flag = csu_show_upgrades_viewer_flag
+		}
+	}
+	tooltip = csu_inf_T1_text_t
+}
+
+custom_button = {
+	name = csu_inf_T1_L3_button
+    tooltip = csu_inf_T1_L3_button_t
+	potential = {
+		FROM = {
+			has_country_modifier = allow_special_infantry_modifier
+			has_country_flag = csu_show_upgrades_viewer_flag
+		}
+	}
+	trigger = {
+		OR = {
+			has_country_modifier = custom_infantry_tier1_L3
+			
+			AND = {
+				hidden_trigger = {
+					has_country_modifier = custom_infantry_tier1_L2
+				}
+				NOT = { has_country_modifier = csu_tier1_cooldown }
+				mil_power = 100 army_tradition = 2.5 army_professionalism = 0.025 treasury = 2500
+			}
+		}
+	}
+	frame = { 
+		number = 2
+		trigger = { 
+			has_country_modifier = custom_infantry_tier1_L3
+		}
+	}
+	frame = { 
+		number = 1
+		trigger = { 
+			always = yes 
+		}
+	}
+	effect = {
+		tooltip = {
+			add_country_modifier = {
+				name = custom_infantry_tier1_L3
+				duration = -1
+			}
+		}
+		if = {
+			limit = {
+				has_country_modifier = custom_infantry_tier1_L2
+			}
+			hidden_effect = { 
+				remove_country_modifier = custom_infantry_tier1_L2
+				add_country_modifier = {
+					name = custom_infantry_tier1_L3
+					duration = -1
+				}
+			}
+			add_country_modifier = {
+				name = csu_tier1_cooldown
+				duration = 730
+			}
+			add_mil_power = -100 add_army_tradition = -2.5 add_army_professionalism = -0.025 add_treasury = -2500
+        }
+        else = {}
+	}
+}
+
+custom_button = {
+	name = csu_inf_T1_L2_button
+    tooltip = csu_inf_T1_L2_button_t
+	potential = {
+		FROM = {
+			has_country_modifier = allow_special_infantry_modifier
+			has_country_flag = csu_show_upgrades_viewer_flag
+		}
+	}
+	trigger = {
+		OR = {
+			has_country_modifier = custom_infantry_tier1_L2
+			
+			AND = {
+				hidden_trigger = {
+					has_country_modifier = custom_infantry_tier1_L1
+				}
+				NOT = { has_country_modifier = csu_tier1_cooldown }
+				mil_power = 100 army_tradition = 2.5 army_professionalism = 0.025 treasury = 2500
+			}
+		}
+	}
+	frame = { 
+		number = 2
+		trigger = { 
+			has_country_modifier = custom_infantry_tier1_L2
+		}
+	}
+	frame = { 
+		number = 1
+		trigger = { 
+			always = yes 
+		}
+	}
+	effect = {
+		tooltip = {
+			add_country_modifier = {
+				name = custom_infantry_tier1_L2
+				duration = -1
+			}
+		}
+		if = {
+			limit = {
+				has_country_modifier = custom_infantry_tier1_L1
+			}
+			hidden_effect = { 
+				remove_country_modifier = custom_infantry_tier1_L1
+				add_country_modifier = {
+					name = custom_infantry_tier1_L2
+					duration = -1
+				}
+			}
+			add_country_modifier = {
+				name = csu_tier1_cooldown
+				duration = 730
+			}
+			add_mil_power = -100 add_army_tradition = -2.5 add_army_professionalism = -0.025 add_treasury = -2500
+        }
+        else = {}
+	}
+}
+
+custom_button = {
+	name = csu_inf_T1_L1_button
+    tooltip = csu_inf_T1_L1_button_t
+	potential = {
+		FROM = {
+			has_country_modifier = allow_special_infantry_modifier
+			has_country_flag = csu_show_upgrades_viewer_flag
+		}
+	}
+	trigger = {
+		OR = {
+			has_country_modifier = custom_infantry_tier1_L1
+			
+			AND = {
+				hidden_trigger = {
+					has_country_modifier = custom_infantry_tier1_N
+				}
+				NOT = { has_country_modifier = csu_tier1_cooldown }
+				mil_power = 100 army_tradition = 2.5 army_professionalism = 0.025 treasury = 2500
+			}
+		}
+	}
+	frame = { 
+		number = 2
+		trigger = { 
+			has_country_modifier = custom_infantry_tier1_L1
+		}
+	}
+	frame = { 
+		number = 1
+		trigger = { 
+			always = yes 
+		}
+	}
+	effect = {
+		tooltip = {
+			add_country_modifier = {
+				name = custom_infantry_tier1_L1
+				duration = -1
+			}
+		}
+		if = {
+			limit = {
+				has_country_modifier = custom_infantry_tier1_N
+			}
+			hidden_effect = { 
+				remove_country_modifier = custom_infantry_tier1_N
+				add_country_modifier = {
+					name = custom_infantry_tier1_L1
+					duration = -1
+				}
+			}
+			add_country_modifier = {
+				name = csu_tier1_cooldown
+				duration = 730
+			}
+			add_mil_power = -100 add_army_tradition = -2.5 add_army_professionalism = -0.025 add_treasury = -2500
+        }
+        else = {}
+	}
+}
+
+custom_button = {
+	name = csu_inf_T1_N_button
+    tooltip = csu_inf_T1_N_button_t
+	potential = {
+		FROM = {
+			has_country_modifier = allow_special_infantry_modifier
+			has_country_flag = csu_show_upgrades_viewer_flag
+		}
+	}
+	trigger = {
+		hidden_trigger  = {
+			has_country_modifier = custom_infantry_tier1_N
+		}
+	}
+	frame = {
+		number = 2
+		trigger = { 
+			has_country_modifier = custom_infantry_tier1_N
+		}
+	}
+	frame = {
+		number = 1
+		trigger = { 
+			always = yes 
+		}
+	}
+	effect = {
+	}
+}
+
+custom_button = {
+	name = csu_inf_T1_R1_button
+    tooltip = csu_inf_T1_R1_button_t
+	potential = {
+		FROM = {
+			has_country_modifier = allow_special_infantry_modifier
+			has_country_flag = csu_show_upgrades_viewer_flag
+		}
+	}
+	trigger = {
+		OR = {
+			has_country_modifier = custom_infantry_tier1_R1
+			
+			AND = {
+				hidden_trigger = {
+					has_country_modifier = custom_infantry_tier1_N
+				}
+				NOT = { has_country_modifier = csu_tier1_cooldown }
+				mil_power = 100 army_tradition = 2.5 army_professionalism = 0.025 treasury = 2500
+			}
+		}
+	}
+	frame = { 
+		number = 2
+		trigger = { 
+			has_country_modifier = custom_infantry_tier1_R1
+		}
+	}
+	frame = { 
+		number = 1
+		trigger = { 
+			always = yes 
+		}
+	}
+	effect = {
+		tooltip = {
+			add_country_modifier = {
+				name = custom_infantry_tier1_R1
+				duration = -1
+			}
+		}
+		if = {
+			limit = {
+				has_country_modifier = custom_infantry_tier1_N
+			}
+			hidden_effect = { 
+				remove_country_modifier = custom_infantry_tier1_N
+				add_country_modifier = {
+					name = custom_infantry_tier1_R1
+					duration = -1
+				}
+			}
+			add_country_modifier = {
+				name = csu_tier1_cooldown
+				duration = 730
+			}
+			add_mil_power = -100 add_army_tradition = -2.5 add_army_professionalism = -0.025 add_treasury = -2500
+        }
+		else = {}
+	}
+}
+
+custom_button = {
+	name = csu_inf_T1_R2_button
+    tooltip = csu_inf_T1_R2_button_t
+	potential = {
+		FROM = {
+			has_country_modifier = allow_special_infantry_modifier
+			has_country_flag = csu_show_upgrades_viewer_flag
+		}
+	}
+	trigger = {
+		OR = {
+			has_country_modifier = custom_infantry_tier1_R2
+			
+			AND = {
+				hidden_trigger = {
+					has_country_modifier = custom_infantry_tier1_R1
+				}
+				NOT = { has_country_modifier = csu_tier1_cooldown }
+				mil_power = 100 army_tradition = 2.5 army_professionalism = 0.025 treasury = 2500
+			}
+		}
+	}
+	frame = { 
+		number = 2
+		trigger = { 
+			has_country_modifier = custom_infantry_tier1_R2
+		}
+	}
+	frame = { 
+		number = 1
+		trigger = { 
+			always = yes 
+		}
+	}
+	effect = {
+		tooltip = {
+			add_country_modifier = {
+				name = custom_infantry_tier1_R2
+				duration = -1
+			}
+		}
+		if = {
+			limit = {
+				has_country_modifier = custom_infantry_tier1_R1
+			}
+			hidden_effect = { 
+				remove_country_modifier = custom_infantry_tier1_R1
+				add_country_modifier = {
+					name = custom_infantry_tier1_R2
+					duration = -1
+				}
+			}
+			add_country_modifier = {
+				name = csu_tier1_cooldown
+				duration = 730
+			}
+			add_mil_power = -100 add_army_tradition = -2.5 add_army_professionalism = -0.025 add_treasury = -2500
+        }
+		else = {}
+	}
+}
+
+custom_button = {
+	name = csu_inf_T1_R3_button
+    tooltip = csu_inf_T1_R3_button_t
+	potential = {
+		FROM = {
+			has_country_modifier = allow_special_infantry_modifier
+			has_country_flag = csu_show_upgrades_viewer_flag
+		}
+	}
+	trigger = {
+		OR = {
+			has_country_modifier = custom_infantry_tier1_R3
+			
+			AND = {
+				hidden_trigger = {
+					has_country_modifier = custom_infantry_tier1_R2
+				}
+				NOT = { has_country_modifier = csu_tier1_cooldown }
+				mil_power = 100 army_tradition = 2.5 army_professionalism = 0.025 treasury = 2500
+			}
+		}
+	}
+	frame = {
+		number = 2
+		trigger = { 
+			has_country_modifier = custom_infantry_tier1_R3
+		}
+	}
+	frame = {
+		number = 1
+		trigger = { 
+			always = yes 
+		}
+	}
+	effect = {
+		tooltip = {
+			add_country_modifier = {
+				name = custom_infantry_tier1_R3
+				duration = -1
+			}
+		}
+		if = {
+			limit = {
+				has_country_modifier = custom_infantry_tier1_R2
+			}
+			hidden_effect = { 
+				remove_country_modifier = custom_infantry_tier1_R2
+				add_country_modifier = {
+					name = custom_infantry_tier1_R3
+					duration = -1
+				}
+			}
+			add_country_modifier = {
+				name = csu_tier1_cooldown
+				duration = 730
+			}
+			add_mil_power = -100 add_army_tradition = -2.5 add_army_professionalism = -0.025 add_treasury = -2500
+        }
+		else = {}
+	}
+}
+
+#### Tier 2 ####
+custom_text_box = {
+	name = csu_inf_T2_text
+	potential = {
+		FROM = {
+			has_country_modifier = allow_special_infantry_modifier
+			has_country_flag = csu_show_upgrades_viewer_flag
+		}
+	}
+	tooltip = csu_inf_T2_text_t
+}
+
+custom_button = {
+	name = csu_inf_T2_L3_button
+    tooltip = csu_inf_T2_L3_button_t
+	potential = {
+		FROM = {
+			has_country_modifier = allow_special_infantry_modifier
+			has_country_flag = csu_show_upgrades_viewer_flag
+		}
+	}
+	trigger = {
+		OR = {
+			has_country_modifier = custom_infantry_tier2_L3
+			
+			AND = {
+				hidden_trigger = {
+					has_country_modifier = custom_infantry_tier2_L2
+				}
+				NOT = { has_country_modifier = csu_tier2_cooldown }
+				mil_power = 100 army_tradition = 2.5 army_professionalism = 0.025 treasury = 2500
+			}
+		}
+	}
+	frame = { 
+		number = 2
+		trigger = { 
+			has_country_modifier = custom_infantry_tier2_L3
+		}
+	}
+	frame = { 
+		number = 1
+		trigger = { 
+			always = yes 
+		}
+	}
+	effect = {
+		tooltip = {
+			add_country_modifier = {
+				name = custom_infantry_tier2_L3
+				duration = -1
+			}
+		}
+		if = {
+			limit = {
+				has_country_modifier = custom_infantry_tier2_L2
+			}
+			hidden_effect = { 
+				remove_country_modifier = custom_infantry_tier2_L2
+				add_country_modifier = {
+					name = custom_infantry_tier2_L3
+					duration = -1
+				}
+			}
+			add_country_modifier = {
+				name = csu_tier2_cooldown
+				duration = 730
+			}
+			add_mil_power = -100 add_army_tradition = -2.5 add_army_professionalism = -0.025 add_treasury = -2500
+        }
+		else = {}
+	}
+}
+
+custom_button = {
+	name = csu_inf_T2_L2_button
+    tooltip = csu_inf_T2_L2_button_t
+	potential = {
+		FROM = {
+			has_country_modifier = allow_special_infantry_modifier
+			has_country_flag = csu_show_upgrades_viewer_flag
+		}
+	}
+	trigger = {
+		OR = {
+			has_country_modifier = custom_infantry_tier2_L2
+			
+			AND = {
+				hidden_trigger = {
+					has_country_modifier = custom_infantry_tier2_L1
+				}
+				NOT = { has_country_modifier = csu_tier2_cooldown }
+				mil_power = 100 army_tradition = 2.5 army_professionalism = 0.025 treasury = 2500
+			}
+		}
+	}
+	frame = { 
+		number = 2
+		trigger = { 
+			has_country_modifier = custom_infantry_tier2_L2
+		}
+	}
+	frame = { 
+		number = 1
+		trigger = { 
+			always = yes 
+		}
+	}
+	effect = {
+		tooltip = {
+			add_country_modifier = {
+				name = custom_infantry_tier2_L2
+				duration = -1
+			}
+		}
+		if = {
+			limit = {
+				has_country_modifier = custom_infantry_tier2_L1
+			}
+			hidden_effect = { 
+				remove_country_modifier = custom_infantry_tier2_L1
+				add_country_modifier = {
+					name = custom_infantry_tier2_L2
+					duration = -1
+				}
+			}
+			add_country_modifier = {
+				name = csu_tier2_cooldown
+				duration = 730
+			}
+			add_mil_power = -100 add_army_tradition = -2.5 add_army_professionalism = -0.025 add_treasury = -2500
+        }
+		else = {}
+	}
+}
+
+custom_button = {
+	name = csu_inf_T2_L1_button
+    tooltip = csu_inf_T2_L1_button_t
+	potential = {
+		FROM = {
+			has_country_modifier = allow_special_infantry_modifier
+			has_country_flag = csu_show_upgrades_viewer_flag
+		}
+	}
+	trigger = {
+		OR = {
+			has_country_modifier = custom_infantry_tier2_L1
+			
+			AND = {
+				hidden_trigger = {
+					has_country_modifier = custom_infantry_tier2_N
+				}
+				NOT = { has_country_modifier = csu_tier2_cooldown }
+				mil_power = 100 army_tradition = 2.5 army_professionalism = 0.025 treasury = 2500
+			}
+		}
+	}
+	frame = { 
+		number = 2
+		trigger = { 
+			has_country_modifier = custom_infantry_tier2_L1
+		}
+	}
+	frame = { 
+		number = 1
+		trigger = { 
+			always = yes 
+		}
+	}
+	effect = {
+		tooltip = {
+			add_country_modifier = {
+				name = custom_infantry_tier2_L1
+				duration = -1
+			}
+		}
+		if = {
+			limit = {
+				has_country_modifier = custom_infantry_tier2_N
+			}
+			hidden_effect = { 
+				remove_country_modifier = custom_infantry_tier2_N
+				add_country_modifier = {
+					name = custom_infantry_tier2_L1
+					duration = -1
+				}
+			}
+			add_country_modifier = {
+				name = csu_tier2_cooldown
+				duration = 730
+			}
+			add_mil_power = -100 add_army_tradition = -2.5 add_army_professionalism = -0.025 add_treasury = -2500
+        }
+		else = {}
+	}
+}
+
+custom_button = {
+	name = csu_inf_T2_N_button
+    tooltip = csu_inf_T2_N_button_t
+	potential = {
+		FROM = {
+			has_country_modifier = allow_special_infantry_modifier
+			has_country_flag = csu_show_upgrades_viewer_flag
+		}
+	}
+	trigger = {
+		hidden_trigger  = {
+			has_country_modifier = custom_infantry_tier2_N
+		}
+	}
+	frame = {
+		number = 2
+		trigger = { 
+			has_country_modifier = custom_infantry_tier2_N
+		}
+	}
+	frame = {
+		number = 1
+		trigger = { 
+			always = yes 
+		}
+	}
+	effect = {
+	}
+}
+
+custom_button = {
+	name = csu_inf_T2_R1_button
+    tooltip = csu_inf_T2_R1_button_t
+	potential = {
+		FROM = {
+			has_country_modifier = allow_special_infantry_modifier
+			has_country_flag = csu_show_upgrades_viewer_flag
+		}
+	}
+	trigger = {
+		OR = {
+			has_country_modifier = custom_infantry_tier2_R1
+			
+			AND = {
+				hidden_trigger = {
+					has_country_modifier = custom_infantry_tier2_N
+				}
+				NOT = { has_country_modifier = csu_tier2_cooldown }
+				mil_power = 100 army_tradition = 2.5 army_professionalism = 0.025 treasury = 2500
+			}
+		}
+	}
+	frame = { 
+		number = 2
+		trigger = { 
+			has_country_modifier = custom_infantry_tier2_R1
+		}
+	}
+	frame = { 
+		number = 1
+		trigger = { 
+			always = yes 
+		}
+	}
+	effect = {
+		tooltip = {
+			add_country_modifier = {
+				name = custom_infantry_tier2_R1
+				duration = -1
+			}
+		}
+		if = {
+			limit = {
+				has_country_modifier = custom_infantry_tier2_N
+			}
+			hidden_effect = { 
+				remove_country_modifier = custom_infantry_tier2_N
+				add_country_modifier = {
+					name = custom_infantry_tier2_R1
+					duration = -1
+				}
+			}
+			add_country_modifier = {
+				name = csu_tier2_cooldown
+				duration = 730
+			}
+			add_mil_power = -100 add_army_tradition = -2.5 add_army_professionalism = -0.025 add_treasury = -2500
+        }
+		else = {}
+	}
+}
+
+custom_button = {
+	name = csu_inf_T2_R2_button
+    tooltip = csu_inf_T2_R2_button_t
+	potential = {
+		FROM = {
+			has_country_modifier = allow_special_infantry_modifier
+			has_country_flag = csu_show_upgrades_viewer_flag
+		}
+	}
+	trigger = {
+		OR = {
+			has_country_modifier = custom_infantry_tier2_R2
+			
+			AND = {
+				hidden_trigger = {
+					has_country_modifier = custom_infantry_tier2_R1
+				}
+				NOT = { has_country_modifier = csu_tier2_cooldown }
+				mil_power = 100 army_tradition = 2.5 army_professionalism = 0.025 treasury = 2500
+			}
+		}
+	}
+	frame = { 
+		number = 2
+		trigger = { 
+			has_country_modifier = custom_infantry_tier2_R2
+		}
+	}
+	frame = { 
+		number = 1
+		trigger = { 
+			always = yes 
+		}
+	}
+	effect = {
+		tooltip = {
+			add_country_modifier = {
+				name = custom_infantry_tier2_R2
+				duration = -1
+			}
+		}
+		if = {
+			limit = {
+				has_country_modifier = custom_infantry_tier2_R1
+			}
+			hidden_effect = { 
+				remove_country_modifier = custom_infantry_tier2_R1
+				add_country_modifier = {
+					name = custom_infantry_tier2_R2
+					duration = -1
+				}
+			}
+			add_country_modifier = {
+				name = csu_tier2_cooldown
+				duration = 730
+			}
+			add_mil_power = -100 add_army_tradition = -2.5 add_army_professionalism = -0.025 add_treasury = -2500
+        }
+		else = {}
+	}
+}
+
+custom_button = {
+	name = csu_inf_T2_R3_button
+    tooltip = csu_inf_T2_R3_button_t
+	potential = {
+		FROM = {
+			has_country_modifier = allow_special_infantry_modifier
+			has_country_flag = csu_show_upgrades_viewer_flag
+		}
+	}
+	trigger = {
+		OR = {
+			has_country_modifier = custom_infantry_tier2_R3
+			
+			AND = {
+				hidden_trigger = {
+					has_country_modifier = custom_infantry_tier2_R2
+				}
+				NOT = { has_country_modifier = csu_tier2_cooldown }
+				mil_power = 100 army_tradition = 2.5 army_professionalism = 0.025 treasury = 2500
+			}
+		}
+	}
+	frame = {
+		number = 2
+		trigger = { 
+			has_country_modifier = custom_infantry_tier2_R3
+		}
+	}
+	frame = {
+		number = 1
+		trigger = { 
+			always = yes 
+		}
+	}
+	effect = {
+		tooltip = {
+			add_country_modifier = {
+				name = custom_infantry_tier2_R3
+				duration = -1
+			}
+		}
+		if = {
+			limit = {
+				has_country_modifier = custom_infantry_tier2_R2
+			}
+			hidden_effect = { 
+				remove_country_modifier = custom_infantry_tier2_R2
+				add_country_modifier = {
+					name = custom_infantry_tier2_R3
+					duration = -1
+				}
+			}
+			add_country_modifier = {
+				name = csu_tier2_cooldown
+				duration = 730
+			}
+			add_mil_power = -100 add_army_tradition = -2.5 add_army_professionalism = -0.025 add_treasury = -2500
+        }
+		else = {}
+	}
+}
+
+#### Tier 3 ####
+custom_text_box = {
+	name = csu_inf_T3_text
+	potential = {
+		FROM = {
+			has_country_modifier = allow_special_infantry_modifier
+			has_country_flag = csu_show_upgrades_viewer_flag
+		}
+	}
+	tooltip = csu_inf_T3_text_t
+}
+
+custom_button = {
+	name = csu_inf_T3_L3_button
+    tooltip = csu_inf_T3_L3_button_t
+	potential = {
+		FROM = {
+			has_country_modifier = allow_special_infantry_modifier
+			has_country_flag = csu_show_upgrades_viewer_flag
+		}
+	}
+	trigger = {
+		OR = {
+			has_country_modifier = custom_infantry_tier3_L3
+			
+			AND = {
+				hidden_trigger = {
+					has_country_modifier = custom_infantry_tier3_L2
+				}
+				NOT = { has_country_modifier = csu_tier3_cooldown }
+				mil_power = 100 army_tradition = 2.5 army_professionalism = 0.025 treasury = 2500
+			}
+		}
+	}
+	frame = { 
+		number = 2
+		trigger = { 
+			has_country_modifier = custom_infantry_tier3_L3
+		}
+	}
+	frame = { 
+		number = 1
+		trigger = { 
+			always = yes 
+		}
+	}
+	effect = {
+		tooltip = {
+			add_country_modifier = {
+				name = custom_infantry_tier3_L3
+				duration = -1
+			}
+		}
+		if = {
+			limit = {
+				has_country_modifier = custom_infantry_tier3_L2
+			}
+			hidden_effect = { 
+				remove_country_modifier = custom_infantry_tier3_L2
+				add_country_modifier = {
+					name = custom_infantry_tier3_L3
+					duration = -1
+				}
+			}
+			add_country_modifier = {
+				name = csu_tier3_cooldown
+				duration = 730
+			}
+			add_mil_power = -100 add_army_tradition = -2.5 add_army_professionalism = -0.025 add_treasury = -2500
+        }
+		else = {}
+	}
+}
+
+custom_button = {
+	name = csu_inf_T3_L2_button
+    tooltip = csu_inf_T3_L2_button_t
+	potential = {
+		FROM = {
+			has_country_modifier = allow_special_infantry_modifier
+			has_country_flag = csu_show_upgrades_viewer_flag
+		}
+	}
+	trigger = {
+		OR = {
+			has_country_modifier = custom_infantry_tier3_L2
+			
+			AND = {
+				hidden_trigger = {
+					has_country_modifier = custom_infantry_tier3_L1
+				}
+				NOT = { has_country_modifier = csu_tier3_cooldown }
+				mil_power = 100 army_tradition = 2.5 army_professionalism = 0.025 treasury = 2500
+			}
+		}
+	}
+	frame = { 
+		number = 2
+		trigger = { 
+			has_country_modifier = custom_infantry_tier3_L2
+		}
+	}
+	frame = { 
+		number = 1
+		trigger = { 
+			always = yes 
+		}
+	}
+	effect = {
+		tooltip = {
+			add_country_modifier = {
+				name = custom_infantry_tier3_L2
+				duration = -1
+			}
+		}
+		if = {
+			limit = {
+				has_country_modifier = custom_infantry_tier3_L1
+			}
+			hidden_effect = { 
+				remove_country_modifier = custom_infantry_tier3_L1
+				add_country_modifier = {
+					name = custom_infantry_tier3_L2
+					duration = -1
+				}
+			}
+			add_country_modifier = {
+				name = csu_tier3_cooldown
+				duration = 730
+			}
+			add_mil_power = -100 add_army_tradition = -2.5 add_army_professionalism = -0.025 add_treasury = -2500
+        }
+		else = {}
+	}
+}
+
+custom_button = {
+	name = csu_inf_T3_L1_button
+    tooltip = csu_inf_T3_L1_button_t
+	potential = {
+		FROM = {
+			has_country_modifier = allow_special_infantry_modifier
+			has_country_flag = csu_show_upgrades_viewer_flag
+		}
+	}
+	trigger = {
+		OR = {
+			has_country_modifier = custom_infantry_tier3_L1
+			
+			AND = {
+				hidden_trigger = {
+					has_country_modifier = custom_infantry_tier3_N
+				}
+				NOT = { has_country_modifier = csu_tier3_cooldown }
+				mil_power = 100 army_tradition = 2.5 army_professionalism = 0.025 treasury = 2500
+			}
+		}
+	}
+	frame = { 
+		number = 2
+		trigger = { 
+			has_country_modifier = custom_infantry_tier3_L1
+		}
+	}
+	frame = { 
+		number = 1
+		trigger = { 
+			always = yes 
+		}
+	}
+	effect = {
+		tooltip = {
+			add_country_modifier = {
+				name = custom_infantry_tier3_L1
+				duration = -1
+			}
+		}
+		if = {
+			limit = {
+				has_country_modifier = custom_infantry_tier3_N
+			}
+			hidden_effect = { 
+				remove_country_modifier = custom_infantry_tier3_N
+				add_country_modifier = {
+					name = custom_infantry_tier3_L1
+					duration = -1
+				}
+			}
+			add_country_modifier = {
+				name = csu_tier3_cooldown
+				duration = 730
+			}
+			add_mil_power = -100 add_army_tradition = -2.5 add_army_professionalism = -0.025 add_treasury = -2500
+        }
+		else = {}
+	}
+}
+
+custom_button = {
+	name = csu_inf_T3_N_button
+    tooltip = csu_inf_T3_N_button_t
+	potential = {
+		FROM = {
+			has_country_modifier = allow_special_infantry_modifier
+			has_country_flag = csu_show_upgrades_viewer_flag
+		}
+	}
+	trigger = {
+		hidden_trigger  = {
+			has_country_modifier = custom_infantry_tier3_N
+		}
+	}
+	frame = {
+		number = 2
+		trigger = { 
+			has_country_modifier = custom_infantry_tier3_N
+		}
+	}
+	frame = {
+		number = 1
+		trigger = { 
+			always = yes 
+		}
+	}
+	effect = {
+	}
+}
+
+custom_button = {
+	name = csu_inf_T3_R1_button
+    tooltip = csu_inf_T3_R1_button_t
+	potential = {
+		FROM = {
+			has_country_modifier = allow_special_infantry_modifier
+			has_country_flag = csu_show_upgrades_viewer_flag
+		}
+	}
+	trigger = {
+		OR = {
+			has_country_modifier = custom_infantry_tier3_R1
+			
+			AND = {
+				hidden_trigger = {
+					has_country_modifier = custom_infantry_tier3_N
+				}
+				NOT = { has_country_modifier = csu_tier3_cooldown }
+				mil_power = 100 army_tradition = 2.5 army_professionalism = 0.025 treasury = 2500
+			}
+		}
+	}
+	frame = { 
+		number = 2
+		trigger = { 
+			has_country_modifier = custom_infantry_tier3_R1
+		}
+	}
+	frame = { 
+		number = 1
+		trigger = { 
+			always = yes 
+		}
+	}
+	effect = {
+		tooltip = {
+			add_country_modifier = {
+				name = custom_infantry_tier3_R1
+				duration = -1
+			}
+		}
+		if = {
+			limit = {
+				has_country_modifier = custom_infantry_tier3_N
+			}
+			hidden_effect = { 
+				remove_country_modifier = custom_infantry_tier3_N
+				add_country_modifier = {
+					name = custom_infantry_tier3_R1
+					duration = -1
+				}
+			}
+			add_country_modifier = {
+				name = csu_tier3_cooldown
+				duration = 730
+			}
+			add_mil_power = -100 add_army_tradition = -2.5 add_army_professionalism = -0.025 add_treasury = -2500
+        }
+		else = {}
+	}
+}
+
+custom_button = {
+	name = csu_inf_T3_R2_button
+    tooltip = csu_inf_T3_R2_button_t
+	potential = {
+		FROM = {
+			has_country_modifier = allow_special_infantry_modifier
+			has_country_flag = csu_show_upgrades_viewer_flag
+		}
+	}
+	trigger = {
+		OR = {
+			has_country_modifier = custom_infantry_tier3_R2
+			
+			AND = {
+				hidden_trigger = {
+					has_country_modifier = custom_infantry_tier3_R1
+				}
+				NOT = { has_country_modifier = csu_tier3_cooldown }
+				mil_power = 100 army_tradition = 2.5 army_professionalism = 0.025 treasury = 2500
+			}
+		}
+	}
+	frame = { 
+		number = 2
+		trigger = { 
+			has_country_modifier = custom_infantry_tier3_R2
+		}
+	}
+	frame = { 
+		number = 1
+		trigger = { 
+			always = yes 
+		}
+	}
+	effect = {
+		tooltip = {
+			add_country_modifier = {
+				name = custom_infantry_tier3_R2
+				duration = -1
+			}
+		}
+		if = {
+			limit = {
+				has_country_modifier = custom_infantry_tier3_R1
+			}
+			hidden_effect = { 
+				remove_country_modifier = custom_infantry_tier3_R1
+				add_country_modifier = {
+					name = custom_infantry_tier3_R2
+					duration = -1
+				}
+			}
+			add_country_modifier = {
+				name = csu_tier3_cooldown
+				duration = 730
+			}
+			add_mil_power = -100 add_army_tradition = -2.5 add_army_professionalism = -0.025 add_treasury = -2500
+        }
+		else = {}
+	}
+}
+
+custom_button = {
+	name = csu_inf_T3_R3_button
+    tooltip = csu_inf_T3_R3_button_t
+	potential = {
+		FROM = {
+			has_country_modifier = allow_special_infantry_modifier
+			has_country_flag = csu_show_upgrades_viewer_flag
+		}
+	}
+	trigger = {
+		OR = {
+			has_country_modifier = custom_infantry_tier3_R3
+			
+			AND = {
+				hidden_trigger = {
+					has_country_modifier = custom_infantry_tier3_R2
+				}
+				NOT = { has_country_modifier = csu_tier3_cooldown }
+				mil_power = 100 army_tradition = 2.5 army_professionalism = 0.025 treasury = 2500
+			}
+		}
+	}
+	frame = {
+		number = 2
+		trigger = { 
+			has_country_modifier = custom_infantry_tier3_R3
+		}
+	}
+	frame = {
+		number = 1
+		trigger = { 
+			always = yes 
+		}
+	}
+	effect = {
+		tooltip = {
+			add_country_modifier = {
+				name = custom_infantry_tier3_R3
+				duration = -1
+			}
+		}
+		if = {
+			limit = {
+				has_country_modifier = custom_infantry_tier3_R2
+			}
+			hidden_effect = { 
+				remove_country_modifier = custom_infantry_tier3_R2
+				add_country_modifier = {
+					name = custom_infantry_tier3_R3
+					duration = -1
+				}
+			}
+			add_country_modifier = {
+				name = csu_tier3_cooldown
+				duration = 730
+			}
+			add_mil_power = -100 add_army_tradition = -2.5 add_army_professionalism = -0.025 add_treasury = -2500
+        }
+		else = {}
+	}
+}
+
+#### Tier 4 ####
+custom_text_box = {
+	name = csu_inf_T4_text
+	potential = {
+		FROM = {
+			has_country_modifier = allow_special_infantry_modifier
+			has_country_flag = csu_show_upgrades_viewer_flag
+		}
+	}
+	tooltip = csu_inf_T4_text_t
+}
+
+custom_button = {
+	name = csu_inf_T4_L3_button
+    tooltip = csu_inf_T4_L3_button_t
+	potential = {
+		FROM = {
+			has_country_modifier = allow_special_infantry_modifier
+			has_country_flag = csu_show_upgrades_viewer_flag
+		}
+	}
+	trigger = {
+		OR = {
+			has_country_modifier = custom_infantry_tier4_L3
+			
+			AND = {
+				hidden_trigger = {
+					has_country_modifier = custom_infantry_tier4_L2
+				}
+				NOT = { has_country_modifier = csu_tier4_cooldown }
+				mil_power = 100 army_tradition = 2.5 army_professionalism = 0.025 treasury = 2500
+			}
+		}
+	}
+	frame = { 
+		number = 2
+		trigger = { 
+			has_country_modifier = custom_infantry_tier4_L3
+		}
+	}
+	frame = { 
+		number = 1
+		trigger = { 
+			always = yes 
+		}
+	}
+	effect = {
+		tooltip = {
+			add_country_modifier = {
+				name = custom_infantry_tier4_L3
+				duration = -1
+			}
+		}
+		if = {
+			limit = {
+				has_country_modifier = custom_infantry_tier4_L2
+			}
+			hidden_effect = { 
+				remove_country_modifier = custom_infantry_tier4_L2
+				add_country_modifier = {
+					name = custom_infantry_tier4_L3
+					duration = -1
+				}
+			}
+			add_country_modifier = {
+				name = csu_tier4_cooldown
+				duration = 730
+			}
+			add_mil_power = -100 add_army_tradition = -2.5 add_army_professionalism = -0.025 add_treasury = -2500
+        }
+		else = {}
+	}
+}
+
+custom_button = {
+	name = csu_inf_T4_L2_button
+    tooltip = csu_inf_T4_L2_button_t
+	potential = {
+		FROM = {
+			has_country_modifier = allow_special_infantry_modifier
+			has_country_flag = csu_show_upgrades_viewer_flag
+		}
+	}
+	trigger = {
+		OR = {
+			has_country_modifier = custom_infantry_tier4_L2
+			
+			AND = {
+				hidden_trigger = {
+					has_country_modifier = custom_infantry_tier4_L1
+				}
+				NOT = { has_country_modifier = csu_tier4_cooldown }
+				mil_power = 100 army_tradition = 2.5 army_professionalism = 0.025 treasury = 2500
+			}
+		}
+	}
+	frame = { 
+		number = 2
+		trigger = { 
+			has_country_modifier = custom_infantry_tier4_L2
+		}
+	}
+	frame = { 
+		number = 1
+		trigger = { 
+			always = yes 
+		}
+	}
+	effect = {
+		tooltip = {
+			add_country_modifier = {
+				name = custom_infantry_tier4_L2
+				duration = -1
+			}
+		}
+		if = {
+			limit = {
+				has_country_modifier = custom_infantry_tier4_L1
+			}
+			hidden_effect = { 
+				remove_country_modifier = custom_infantry_tier4_L1
+				add_country_modifier = {
+					name = custom_infantry_tier4_L2
+					duration = -1
+				}
+			}
+			add_country_modifier = {
+				name = csu_tier4_cooldown
+				duration = 730
+			}
+			add_mil_power = -100 add_army_tradition = -2.5 add_army_professionalism = -0.025 add_treasury = -2500
+        }
+		else = {}
+	}
+}
+
+custom_button = {
+	name = csu_inf_T4_L1_button
+    tooltip = csu_inf_T4_L1_button_t
+	potential = {
+		FROM = {
+			has_country_modifier = allow_special_infantry_modifier
+			has_country_flag = csu_show_upgrades_viewer_flag
+		}
+	}
+	trigger = {
+		OR = {
+			has_country_modifier = custom_infantry_tier4_L1
+			
+			AND = {
+				hidden_trigger = {
+					has_country_modifier = custom_infantry_tier4_N
+				}
+				NOT = { has_country_modifier = csu_tier4_cooldown }
+				mil_power = 100 army_tradition = 2.5 army_professionalism = 0.025 treasury = 2500
+			}
+		}
+	}
+	frame = { 
+		number = 2
+		trigger = { 
+			has_country_modifier = custom_infantry_tier4_L1
+		}
+	}
+	frame = { 
+		number = 1
+		trigger = { 
+			always = yes 
+		}
+	}
+	effect = {
+		tooltip = {
+			add_country_modifier = {
+				name = custom_infantry_tier4_L1
+				duration = -1
+			}
+		}
+		if = {
+			limit = {
+				has_country_modifier = custom_infantry_tier4_N
+			}
+			hidden_effect = { 
+				remove_country_modifier = custom_infantry_tier4_N
+				add_country_modifier = {
+					name = custom_infantry_tier4_L1
+					duration = -1
+				}
+			}
+			add_country_modifier = {
+				name = csu_tier4_cooldown
+				duration = 730
+			}
+			add_mil_power = -100 add_army_tradition = -2.5 add_army_professionalism = -0.025 add_treasury = -2500
+        }
+		else = {}
+	}
+}
+
+custom_button = {
+	name = csu_inf_T4_N_button
+    tooltip = csu_inf_T4_N_button_t
+	potential = {
+		FROM = {
+			has_country_modifier = allow_special_infantry_modifier
+			has_country_flag = csu_show_upgrades_viewer_flag
+		}
+	}
+	trigger = {
+		hidden_trigger  = {
+			has_country_modifier = custom_infantry_tier4_N
+		}
+	}
+	frame = {
+		number = 2
+		trigger = { 
+			has_country_modifier = custom_infantry_tier4_N
+		}
+	}
+	frame = {
+		number = 1
+		trigger = { 
+			always = yes 
+		}
+	}
+	effect = {
+	}
+}
+
+custom_button = {
+	name = csu_inf_T4_R1_button
+    tooltip = csu_inf_T4_R1_button_t
+	potential = {
+		FROM = {
+			has_country_modifier = allow_special_infantry_modifier
+			has_country_flag = csu_show_upgrades_viewer_flag
+		}
+	}
+	trigger = {
+		OR = {
+			has_country_modifier = custom_infantry_tier4_R1
+			
+			AND = {
+				hidden_trigger = {
+					has_country_modifier = custom_infantry_tier4_N
+				}
+				NOT = { has_country_modifier = csu_tier4_cooldown }
+				mil_power = 100 army_tradition = 2.5 army_professionalism = 0.025 treasury = 2500
+			}
+		}
+	}
+	frame = { 
+		number = 2
+		trigger = { 
+			has_country_modifier = custom_infantry_tier4_R1
+		}
+	}
+	frame = { 
+		number = 1
+		trigger = { 
+			always = yes 
+		}
+	}
+	effect = {
+		tooltip = {
+			add_country_modifier = {
+				name = custom_infantry_tier4_R1
+				duration = -1
+			}
+		}
+		if = {
+			limit = {
+				has_country_modifier = custom_infantry_tier4_N
+			}
+			hidden_effect = { 
+				remove_country_modifier = custom_infantry_tier4_N
+				add_country_modifier = {
+					name = custom_infantry_tier4_R1
+					duration = -1
+				}
+			}
+			add_country_modifier = {
+				name = csu_tier4_cooldown
+				duration = 730
+			}
+			add_mil_power = -100 add_army_tradition = -2.5 add_army_professionalism = -0.025 add_treasury = -2500
+        }
+		else = {}
+	}
+}
+
+custom_button = {
+	name = csu_inf_T4_R2_button
+    tooltip = csu_inf_T4_R2_button_t
+	potential = {
+		FROM = {
+			has_country_modifier = allow_special_infantry_modifier
+			has_country_flag = csu_show_upgrades_viewer_flag
+		}
+	}
+	trigger = {
+		OR = {
+			has_country_modifier = custom_infantry_tier4_R2
+			
+			AND = {
+				hidden_trigger = {
+					has_country_modifier = custom_infantry_tier4_R1
+				}
+				NOT = { has_country_modifier = csu_tier4_cooldown }
+				mil_power = 100 army_tradition = 2.5 army_professionalism = 0.025 treasury = 2500
+			}
+		}
+	}
+	frame = { 
+		number = 2
+		trigger = { 
+			has_country_modifier = custom_infantry_tier4_R2
+		}
+	}
+	frame = { 
+		number = 1
+		trigger = { 
+			always = yes 
+		}
+	}
+	effect = {
+		tooltip = {
+			add_country_modifier = {
+				name = custom_infantry_tier4_R2
+				duration = -1
+			}
+		}
+		if = {
+			limit = {
+				has_country_modifier = custom_infantry_tier4_R1
+			}
+			hidden_effect = { 
+				remove_country_modifier = custom_infantry_tier4_R1
+				add_country_modifier = {
+					name = custom_infantry_tier4_R2
+					duration = -1
+				}
+			}
+			add_country_modifier = {
+				name = csu_tier4_cooldown
+				duration = 730
+			}
+			add_mil_power = -100 add_army_tradition = -2.5 add_army_professionalism = -0.025 add_treasury = -2500
+        }
+		else = {}
+	}
+}
+
+custom_button = {
+	name = csu_inf_T4_R3_button
+    tooltip = csu_inf_T4_R3_button_t
+	potential = {
+		FROM = {
+			has_country_modifier = allow_special_infantry_modifier
+			has_country_flag = csu_show_upgrades_viewer_flag
+		}
+	}
+	trigger = {
+		OR = {
+			has_country_modifier = custom_infantry_tier4_R3
+			
+			AND = {
+				hidden_trigger = {
+					has_country_modifier = custom_infantry_tier4_R2
+				}
+				NOT = { has_country_modifier = csu_tier4_cooldown }
+				mil_power = 100 army_tradition = 2.5 army_professionalism = 0.025 treasury = 2500
+			}
+		}
+	}
+	frame = {
+		number = 2
+		trigger = { 
+			has_country_modifier = custom_infantry_tier4_R3
+		}
+	}
+	frame = {
+		number = 1
+		trigger = { 
+			always = yes 
+		}
+	}
+	effect = {
+		tooltip = {
+			add_country_modifier = {
+				name = custom_infantry_tier4_R3
+				duration = -1
+			}
+		}
+		if = {
+			limit = {
+				has_country_modifier = custom_infantry_tier4_R2
+			}
+			hidden_effect = { 
+				remove_country_modifier = custom_infantry_tier4_R2
+				add_country_modifier = {
+					name = custom_infantry_tier4_R3
+					duration = -1
+				}
+			}
+			add_country_modifier = {
+				name = csu_tier4_cooldown
+				duration = 730
+			}
+			add_mil_power = -100 add_army_tradition = -2.5 add_army_professionalism = -0.025 add_treasury = -2500
+        }
+		else = {}
+	}
+}
+
+######## Cavalry ########
+#### Tier 1 ####
+custom_text_box = {
+	name = csu_cav_T1_text
+	potential = {
+		FROM = {
+			has_country_modifier = allow_special_cavalry_modifier
+			has_country_flag = csu_show_upgrades_viewer_flag
+		}
+	}
+	tooltip = csu_cav_T1_text_t
+}
+
+custom_button = {
+	name = csu_cav_T1_L3_button
+    tooltip = csu_cav_T1_L3_button_t
+	potential = {
+		FROM = {
+			has_country_modifier = allow_special_cavalry_modifier
+			has_country_flag = csu_show_upgrades_viewer_flag
+		}
+	}
+	trigger = {
+		OR = {
+			has_country_modifier = custom_cavalry_tier1_L3
+			
+			AND = {
+				hidden_trigger = {
+					has_country_modifier = custom_cavalry_tier1_L2
+				}
+				NOT = { has_country_modifier = csu_tier1_cooldown }
+				mil_power = 100 army_tradition = 2.5 army_professionalism = 0.025 treasury = 2500
+			}
+		}
+	}
+	frame = { 
+		number = 2
+		trigger = { 
+			has_country_modifier = custom_cavalry_tier1_L3
+		}
+	}
+	frame = { 
+		number = 1
+		trigger = { 
+			always = yes 
+		}
+	}
+	effect = {
+		tooltip = {
+			add_country_modifier = {
+				name = custom_cavalry_tier1_L3
+				duration = -1
+			}
+		}
+		if = {
+			limit = {
+				has_country_modifier = custom_cavalry_tier1_L2
+			}
+			hidden_effect = { 
+				remove_country_modifier = custom_cavalry_tier1_L2
+				add_country_modifier = {
+					name = custom_cavalry_tier1_L3
+					duration = -1
+				}
+			}
+			add_country_modifier = {
+				name = csu_tier1_cooldown
+				duration = 730
+			}
+			add_mil_power = -100 add_army_tradition = -2.5 add_army_professionalism = -0.025 add_treasury = -2500
+        }
+		else = {}
+	}
+}
+
+custom_button = {
+	name = csu_cav_T1_L2_button
+    tooltip = csu_cav_T1_L2_button_t
+	potential = {
+		FROM = {
+			has_country_modifier = allow_special_cavalry_modifier
+			has_country_flag = csu_show_upgrades_viewer_flag
+		}
+	}
+	trigger = {
+		OR = {
+			has_country_modifier = custom_cavalry_tier1_L2
+			
+			AND = {
+				hidden_trigger = {
+					has_country_modifier = custom_cavalry_tier1_L1
+				}
+				NOT = { has_country_modifier = csu_tier1_cooldown }
+				mil_power = 100 army_tradition = 2.5 army_professionalism = 0.025 treasury = 2500
+			}
+		}
+	}
+	frame = { 
+		number = 2
+		trigger = { 
+			has_country_modifier = custom_cavalry_tier1_L2
+		}
+	}
+	frame = { 
+		number = 1
+		trigger = { 
+			always = yes 
+		}
+	}
+	effect = {
+		tooltip = {
+			add_country_modifier = {
+				name = custom_cavalry_tier1_L2
+				duration = -1
+			}
+		}
+		if = {
+			limit = {
+				has_country_modifier = custom_cavalry_tier1_L1
+			}
+			hidden_effect = { 
+				remove_country_modifier = custom_cavalry_tier1_L1
+				add_country_modifier = {
+					name = custom_cavalry_tier1_L2
+					duration = -1
+				}
+			}
+			add_country_modifier = {
+				name = csu_tier1_cooldown
+				duration = 730
+			}
+			add_mil_power = -100 add_army_tradition = -2.5 add_army_professionalism = -0.025 add_treasury = -2500
+        }
+		else = {}
+	}
+}
+
+custom_button = {
+	name = csu_cav_T1_L1_button
+    tooltip = csu_cav_T1_L1_button_t
+	potential = {
+		FROM = {
+			has_country_modifier = allow_special_cavalry_modifier
+			has_country_flag = csu_show_upgrades_viewer_flag
+		}
+	}
+	trigger = {
+		OR = {
+			has_country_modifier = custom_cavalry_tier1_L1
+			
+			AND = {
+				hidden_trigger = {
+					has_country_modifier = custom_cavalry_tier1_N
+				}
+				NOT = { has_country_modifier = csu_tier1_cooldown }
+				mil_power = 100 army_tradition = 2.5 army_professionalism = 0.025 treasury = 2500
+			}
+		}
+	}
+	frame = { 
+		number = 2
+		trigger = { 
+			has_country_modifier = custom_cavalry_tier1_L1
+		}
+	}
+	frame = { 
+		number = 1
+		trigger = { 
+			always = yes 
+		}
+	}
+	effect = {
+		tooltip = {
+			add_country_modifier = {
+				name = custom_cavalry_tier1_L1
+				duration = -1
+			}
+		}
+		if = {
+			limit = {
+				has_country_modifier = custom_cavalry_tier1_N
+			}
+			hidden_effect = { 
+				remove_country_modifier = custom_cavalry_tier1_N
+				add_country_modifier = {
+					name = custom_cavalry_tier1_L1
+					duration = -1
+				}
+			}
+			add_country_modifier = {
+				name = csu_tier1_cooldown
+				duration = 730
+			}
+			add_mil_power = -100 add_army_tradition = -2.5 add_army_professionalism = -0.025 add_treasury = -2500
+        }
+		else = {}
+	}
+}
+
+custom_button = {
+	name = csu_cav_T1_N_button
+    tooltip = csu_cav_T1_N_button_t
+	potential = {
+		FROM = {
+			has_country_modifier = allow_special_cavalry_modifier
+			has_country_flag = csu_show_upgrades_viewer_flag
+		}
+	}
+	trigger = {
+		hidden_trigger  = {
+			has_country_modifier = custom_cavalry_tier1_N
+		}
+	}
+	frame = {
+		number = 2
+		trigger = { 
+			has_country_modifier = custom_cavalry_tier1_N
+		}
+	}
+	frame = {
+		number = 1
+		trigger = { 
+			always = yes 
+		}
+	}
+	effect = {
+	}
+}
+
+custom_button = {
+	name = csu_cav_T1_R1_button
+    tooltip = csu_cav_T1_R1_button_t
+	potential = {
+		FROM = {
+			has_country_modifier = allow_special_cavalry_modifier
+			has_country_flag = csu_show_upgrades_viewer_flag
+		}
+	}
+	trigger = {
+		OR = {
+			has_country_modifier = custom_cavalry_tier1_R1
+			
+			AND = {
+				hidden_trigger = {
+					has_country_modifier = custom_cavalry_tier1_N
+				}
+				NOT = { has_country_modifier = csu_tier1_cooldown }
+				mil_power = 100 army_tradition = 2.5 army_professionalism = 0.025 treasury = 2500
+			}
+		}
+	}
+	frame = { 
+		number = 2
+		trigger = { 
+			has_country_modifier = custom_cavalry_tier1_R1
+		}
+	}
+	frame = { 
+		number = 1
+		trigger = { 
+			always = yes 
+		}
+	}
+	effect = {
+		tooltip = {
+			add_country_modifier = {
+				name = custom_cavalry_tier1_R1
+				duration = -1
+			}
+		}
+		if = {
+			limit = {
+				has_country_modifier = custom_cavalry_tier1_N
+			}
+			hidden_effect = { 
+				remove_country_modifier = custom_cavalry_tier1_N
+				add_country_modifier = {
+					name = custom_cavalry_tier1_R1
+					duration = -1
+				}
+			}
+			add_country_modifier = {
+				name = csu_tier1_cooldown
+				duration = 730
+			}
+			add_mil_power = -100 add_army_tradition = -2.5 add_army_professionalism = -0.025 add_treasury = -2500
+        }
+		else = {}
+	}
+}
+
+custom_button = {
+	name = csu_cav_T1_R2_button
+    tooltip = csu_cav_T1_R2_button_t
+	potential = {
+		FROM = {
+			has_country_modifier = allow_special_cavalry_modifier
+			has_country_flag = csu_show_upgrades_viewer_flag
+		}
+	}
+	trigger = {
+		OR = {
+			has_country_modifier = custom_cavalry_tier1_R2
+			
+			AND = {
+				hidden_trigger = {
+					has_country_modifier = custom_cavalry_tier1_R1
+				}
+				NOT = { has_country_modifier = csu_tier1_cooldown }
+				mil_power = 100 army_tradition = 2.5 army_professionalism = 0.025 treasury = 2500
+			}
+		}
+	}
+	frame = { 
+		number = 2
+		trigger = { 
+			has_country_modifier = custom_cavalry_tier1_R2
+		}
+	}
+	frame = { 
+		number = 1
+		trigger = { 
+			always = yes 
+		}
+	}
+	effect = {
+		tooltip = {
+			add_country_modifier = {
+				name = custom_cavalry_tier1_R2
+				duration = -1
+			}
+		}
+		if = {
+			limit = {
+				has_country_modifier = custom_cavalry_tier1_R1
+			}
+			hidden_effect = { 
+				remove_country_modifier = custom_cavalry_tier1_R1
+				add_country_modifier = {
+					name = custom_cavalry_tier1_R2
+					duration = -1
+				}
+			}
+			add_country_modifier = {
+				name = csu_tier1_cooldown
+				duration = 730
+			}
+			add_mil_power = -100 add_army_tradition = -2.5 add_army_professionalism = -0.025 add_treasury = -2500
+        }
+		else = {}
+	}
+}
+
+custom_button = {
+	name = csu_cav_T1_R3_button
+    tooltip = csu_cav_T1_R3_button_t
+	potential = {
+		FROM = {
+			has_country_modifier = allow_special_cavalry_modifier
+			has_country_flag = csu_show_upgrades_viewer_flag
+		}
+	}
+	trigger = {
+		OR = {
+			has_country_modifier = custom_cavalry_tier1_R3
+			
+			AND = {
+				hidden_trigger = {
+					has_country_modifier = custom_cavalry_tier1_R2
+				}
+				NOT = { has_country_modifier = csu_tier1_cooldown }
+				mil_power = 100 army_tradition = 2.5 army_professionalism = 0.025 treasury = 2500
+			}
+		}
+	}
+	frame = {
+		number = 2
+		trigger = { 
+			has_country_modifier = custom_cavalry_tier1_R3
+		}
+	}
+	frame = {
+		number = 1
+		trigger = { 
+			always = yes 
+		}
+	}
+	effect = {
+		tooltip = {
+			add_country_modifier = {
+				name = custom_cavalry_tier1_R3
+				duration = -1
+			}
+		}
+		if = {
+			limit = {
+				has_country_modifier = custom_cavalry_tier1_R2
+			}
+			hidden_effect = { 
+				remove_country_modifier = custom_cavalry_tier1_R2
+				add_country_modifier = {
+					name = custom_cavalry_tier1_R3
+					duration = -1
+				}
+			}
+			add_country_modifier = {
+				name = csu_tier1_cooldown
+				duration = 730
+			}
+			add_mil_power = -100 add_army_tradition = -2.5 add_army_professionalism = -0.025 add_treasury = -2500
+        }
+		else = {}
+	}
+}
+
+#### Tier 2 ####
+custom_text_box = {
+	name = csu_cav_T2_text
+	potential = {
+		FROM = {
+			has_country_modifier = allow_special_cavalry_modifier
+			has_country_flag = csu_show_upgrades_viewer_flag
+		}
+	}
+	tooltip = csu_cav_T2_text_t
+}
+
+custom_button = {
+	name = csu_cav_T2_L3_button
+    tooltip = csu_cav_T2_L3_button_t
+	potential = {
+		FROM = {
+			has_country_modifier = allow_special_cavalry_modifier
+			has_country_flag = csu_show_upgrades_viewer_flag
+		}
+	}
+	trigger = {
+		OR = {
+			has_country_modifier = custom_cavalry_tier2_L3
+			
+			AND = {
+				hidden_trigger = {
+					has_country_modifier = custom_cavalry_tier2_L2
+				}
+				NOT = { has_country_modifier = csu_tier2_cooldown }
+				mil_power = 100 army_tradition = 2.5 army_professionalism = 0.025 treasury = 2500
+			}
+		}
+	}
+	frame = { 
+		number = 2
+		trigger = { 
+			has_country_modifier = custom_cavalry_tier2_L3
+		}
+	}
+	frame = { 
+		number = 1
+		trigger = { 
+			always = yes 
+		}
+	}
+	effect = {
+		tooltip = {
+			add_country_modifier = {
+				name = custom_cavalry_tier2_L3
+				duration = -1
+			}
+		}
+		if = {
+			limit = {
+				has_country_modifier = custom_cavalry_tier2_L2
+			}
+			hidden_effect = { 
+				remove_country_modifier = custom_cavalry_tier2_L2
+				add_country_modifier = {
+					name = custom_cavalry_tier2_L3
+					duration = -1
+				}
+			}
+			add_country_modifier = {
+				name = csu_tier2_cooldown
+				duration = 730
+			}
+			add_mil_power = -100 add_army_tradition = -2.5 add_army_professionalism = -0.025 add_treasury = -2500
+        }
+		else = {}
+	}
+}
+
+custom_button = {
+	name = csu_cav_T2_L2_button
+    tooltip = csu_cav_T2_L2_button_t
+	potential = {
+		FROM = {
+			has_country_modifier = allow_special_cavalry_modifier
+			has_country_flag = csu_show_upgrades_viewer_flag
+		}
+	}
+	trigger = {
+		OR = {
+			has_country_modifier = custom_cavalry_tier2_L2
+			
+			AND = {
+				hidden_trigger = {
+					has_country_modifier = custom_cavalry_tier2_L1
+				}
+				NOT = { has_country_modifier = csu_tier2_cooldown }
+				mil_power = 100 army_tradition = 2.5 army_professionalism = 0.025 treasury = 2500
+			}
+		}
+	}
+	frame = { 
+		number = 2
+		trigger = { 
+			has_country_modifier = custom_cavalry_tier2_L2
+		}
+	}
+	frame = { 
+		number = 1
+		trigger = { 
+			always = yes 
+		}
+	}
+	effect = {
+		tooltip = {
+			add_country_modifier = {
+				name = custom_cavalry_tier2_L2
+				duration = -1
+			}
+		}
+		if = {
+			limit = {
+				has_country_modifier = custom_cavalry_tier2_L1
+			}
+			hidden_effect = { 
+				remove_country_modifier = custom_cavalry_tier2_L1
+				add_country_modifier = {
+					name = custom_cavalry_tier2_L2
+					duration = -1
+				}
+			}
+			add_country_modifier = {
+				name = csu_tier2_cooldown
+				duration = 730
+			}
+			add_mil_power = -100 add_army_tradition = -2.5 add_army_professionalism = -0.025 add_treasury = -2500
+        }
+		else = {}
+	}
+}
+
+custom_button = {
+	name = csu_cav_T2_L1_button
+    tooltip = csu_cav_T2_L1_button_t
+	potential = {
+		FROM = {
+			has_country_modifier = allow_special_cavalry_modifier
+			has_country_flag = csu_show_upgrades_viewer_flag
+		}
+	}
+	trigger = {
+		OR = {
+			has_country_modifier = custom_cavalry_tier2_L1
+			
+			AND = {
+				hidden_trigger = {
+					has_country_modifier = custom_cavalry_tier2_N
+				}
+				NOT = { has_country_modifier = csu_tier2_cooldown }
+				mil_power = 100 army_tradition = 2.5 army_professionalism = 0.025 treasury = 2500
+			}
+		}
+	}
+	frame = { 
+		number = 2
+		trigger = { 
+			has_country_modifier = custom_cavalry_tier2_L1
+		}
+	}
+	frame = { 
+		number = 1
+		trigger = { 
+			always = yes 
+		}
+	}
+	effect = {
+		tooltip = {
+			add_country_modifier = {
+				name = custom_cavalry_tier2_L1
+				duration = -1
+			}
+		}
+		if = {
+			limit = {
+				has_country_modifier = custom_cavalry_tier2_N
+			}
+			hidden_effect = { 
+				remove_country_modifier = custom_cavalry_tier2_N
+				add_country_modifier = {
+					name = custom_cavalry_tier2_L1
+					duration = -1
+				}
+			}
+			add_country_modifier = {
+				name = csu_tier2_cooldown
+				duration = 730
+			}
+			add_mil_power = -100 add_army_tradition = -2.5 add_army_professionalism = -0.025 add_treasury = -2500
+        }
+		else = {}
+	}
+}
+
+custom_button = {
+	name = csu_cav_T2_N_button
+    tooltip = csu_cav_T2_N_button_t
+	potential = {
+		FROM = {
+			has_country_modifier = allow_special_cavalry_modifier
+			has_country_flag = csu_show_upgrades_viewer_flag
+		}
+	}
+	trigger = {
+		hidden_trigger  = {
+			has_country_modifier = custom_cavalry_tier2_N
+		}
+	}
+	frame = {
+		number = 2
+		trigger = { 
+			has_country_modifier = custom_cavalry_tier2_N
+		}
+	}
+	frame = {
+		number = 1
+		trigger = { 
+			always = yes 
+		}
+	}
+	effect = {
+	}
+}
+
+custom_button = {
+	name = csu_cav_T2_R1_button
+    tooltip = csu_cav_T2_R1_button_t
+	potential = {
+		FROM = {
+			has_country_modifier = allow_special_cavalry_modifier
+			has_country_flag = csu_show_upgrades_viewer_flag
+		}
+	}
+	trigger = {
+		OR = {
+			has_country_modifier = custom_cavalry_tier2_R1
+			
+			AND = {
+				hidden_trigger = {
+					has_country_modifier = custom_cavalry_tier2_N
+				}
+				NOT = { has_country_modifier = csu_tier2_cooldown }
+				mil_power = 100 army_tradition = 2.5 army_professionalism = 0.025 treasury = 2500
+			}
+		}
+	}
+	frame = { 
+		number = 2
+		trigger = { 
+			has_country_modifier = custom_cavalry_tier2_R1
+		}
+	}
+	frame = { 
+		number = 1
+		trigger = { 
+			always = yes 
+		}
+	}
+	effect = {
+		tooltip = {
+			add_country_modifier = {
+				name = custom_cavalry_tier2_R1
+				duration = -1
+			}
+		}
+		if = {
+			limit = {
+				has_country_modifier = custom_cavalry_tier2_N
+			}
+			hidden_effect = { 
+				remove_country_modifier = custom_cavalry_tier2_N
+				add_country_modifier = {
+					name = custom_cavalry_tier2_R1
+					duration = -1
+				}
+			}
+			add_country_modifier = {
+				name = csu_tier2_cooldown
+				duration = 730
+			}
+			add_mil_power = -100 add_army_tradition = -2.5 add_army_professionalism = -0.025 add_treasury = -2500
+        }
+		else = {}
+	}
+}
+
+custom_button = {
+	name = csu_cav_T2_R2_button
+    tooltip = csu_cav_T2_R2_button_t
+	potential = {
+		FROM = {
+			has_country_modifier = allow_special_cavalry_modifier
+			has_country_flag = csu_show_upgrades_viewer_flag
+		}
+	}
+	trigger = {
+		OR = {
+			has_country_modifier = custom_cavalry_tier2_R2
+			
+			AND = {
+				hidden_trigger = {
+					has_country_modifier = custom_cavalry_tier2_R1
+				}
+				NOT = { has_country_modifier = csu_tier2_cooldown }
+				mil_power = 100 army_tradition = 2.5 army_professionalism = 0.025 treasury = 2500
+			}
+		}
+	}
+	frame = { 
+		number = 2
+		trigger = { 
+			has_country_modifier = custom_cavalry_tier2_R2
+		}
+	}
+	frame = { 
+		number = 1
+		trigger = { 
+			always = yes 
+		}
+	}
+	effect = {
+		tooltip = {
+			add_country_modifier = {
+				name = custom_cavalry_tier2_R2
+				duration = -1
+			}
+		}
+		if = {
+			limit = {
+				has_country_modifier = custom_cavalry_tier2_R1
+			}
+			hidden_effect = { 
+				remove_country_modifier = custom_cavalry_tier2_R1
+				add_country_modifier = {
+					name = custom_cavalry_tier2_R2
+					duration = -1
+				}
+			}
+			add_country_modifier = {
+				name = csu_tier2_cooldown
+				duration = 730
+			}
+			add_mil_power = -100 add_army_tradition = -2.5 add_army_professionalism = -0.025 add_treasury = -2500
+        }
+		else = {}
+	}
+}
+
+custom_button = {
+	name = csu_cav_T2_R3_button
+    tooltip = csu_cav_T2_R3_button_t
+	potential = {
+		FROM = {
+			has_country_modifier = allow_special_cavalry_modifier
+			has_country_flag = csu_show_upgrades_viewer_flag
+		}
+	}
+	trigger = {
+		OR = {
+			has_country_modifier = custom_cavalry_tier2_R3
+			
+			AND = {
+				hidden_trigger = {
+					has_country_modifier = custom_cavalry_tier2_R2
+				}
+				NOT = { has_country_modifier = csu_tier2_cooldown }
+				mil_power = 100 army_tradition = 2.5 army_professionalism = 0.025 treasury = 2500
+			}
+		}
+	}
+	frame = {
+		number = 2
+		trigger = { 
+			has_country_modifier = custom_cavalry_tier2_R3
+		}
+	}
+	frame = {
+		number = 1
+		trigger = { 
+			always = yes 
+		}
+	}
+	effect = {
+		tooltip = {
+			add_country_modifier = {
+				name = custom_cavalry_tier2_R3
+				duration = -1
+			}
+		}
+		if = {
+			limit = {
+				has_country_modifier = custom_cavalry_tier2_R2
+			}
+			hidden_effect = { 
+				remove_country_modifier = custom_cavalry_tier2_R2
+				add_country_modifier = {
+					name = custom_cavalry_tier2_R3
+					duration = -1
+				}
+			}
+			add_country_modifier = {
+				name = csu_tier2_cooldown
+				duration = 730
+			}
+			add_mil_power = -100 add_army_tradition = -2.5 add_army_professionalism = -0.025 add_treasury = -2500
+        }
+		else = {}
+	}
+}
+
+#### Tier 3 ####
+custom_text_box = {
+	name = csu_cav_T3_text
+	potential = {
+		FROM = {
+			has_country_modifier = allow_special_cavalry_modifier
+			has_country_flag = csu_show_upgrades_viewer_flag
+		}
+	}
+	tooltip = csu_cav_T3_text_t
+}
+
+custom_button = {
+	name = csu_cav_T3_L3_button
+    tooltip = csu_cav_T3_L3_button_t
+	potential = {
+		FROM = {
+			has_country_modifier = allow_special_cavalry_modifier
+			has_country_flag = csu_show_upgrades_viewer_flag
+		}
+	}
+	trigger = {
+		OR = {
+			has_country_modifier = custom_cavalry_tier3_L3
+			
+			AND = {
+				hidden_trigger = {
+					has_country_modifier = custom_cavalry_tier3_L2
+				}
+				NOT = { has_country_modifier = csu_tier3_cooldown }
+				mil_power = 100 army_tradition = 2.5 army_professionalism = 0.025 treasury = 2500
+			}
+		}
+	}
+	frame = { 
+		number = 2
+		trigger = { 
+			has_country_modifier = custom_cavalry_tier3_L3
+		}
+	}
+	frame = { 
+		number = 1
+		trigger = { 
+			always = yes 
+		}
+	}
+	effect = {
+		tooltip = {
+			add_country_modifier = {
+				name = custom_cavalry_tier3_L3
+				duration = -1
+			}
+		}
+		if = {
+			limit = {
+				has_country_modifier = custom_cavalry_tier3_L2
+			}
+			hidden_effect = { 
+				remove_country_modifier = custom_cavalry_tier3_L2
+				add_country_modifier = {
+					name = custom_cavalry_tier3_L3
+					duration = -1
+				}
+			}
+			add_country_modifier = {
+				name = csu_tier3_cooldown
+				duration = 730
+			}
+			add_mil_power = -100 add_army_tradition = -2.5 add_army_professionalism = -0.025 add_treasury = -2500
+        }
+		else = {}
+	}
+}
+
+custom_button = {
+	name = csu_cav_T3_L2_button
+    tooltip = csu_cav_T3_L2_button_t
+	potential = {
+		FROM = {
+			has_country_modifier = allow_special_cavalry_modifier
+			has_country_flag = csu_show_upgrades_viewer_flag
+		}
+	}
+	trigger = {
+		OR = {
+			has_country_modifier = custom_cavalry_tier3_L2
+			
+			AND = {
+				hidden_trigger = {
+					has_country_modifier = custom_cavalry_tier3_L1
+				}
+				NOT = { has_country_modifier = csu_tier3_cooldown }
+				mil_power = 100 army_tradition = 2.5 army_professionalism = 0.025 treasury = 2500
+			}
+		}
+	}
+	frame = { 
+		number = 2
+		trigger = { 
+			has_country_modifier = custom_cavalry_tier3_L2
+		}
+	}
+	frame = { 
+		number = 1
+		trigger = { 
+			always = yes 
+		}
+	}
+	effect = {
+		tooltip = {
+			add_country_modifier = {
+				name = custom_cavalry_tier3_L2
+				duration = -1
+			}
+		}
+		if = {
+			limit = {
+				has_country_modifier = custom_cavalry_tier3_L1
+			}
+			hidden_effect = { 
+				remove_country_modifier = custom_cavalry_tier3_L1
+				add_country_modifier = {
+					name = custom_cavalry_tier3_L2
+					duration = -1
+				}
+			}
+			add_country_modifier = {
+				name = csu_tier3_cooldown
+				duration = 730
+			}
+			add_mil_power = -100 add_army_tradition = -2.5 add_army_professionalism = -0.025 add_treasury = -2500
+        }
+		else = {}
+	}
+}
+
+custom_button = {
+	name = csu_cav_T3_L1_button
+    tooltip = csu_cav_T3_L1_button_t
+	potential = {
+		FROM = {
+			has_country_modifier = allow_special_cavalry_modifier
+			has_country_flag = csu_show_upgrades_viewer_flag
+		}
+	}
+	trigger = {
+		OR = {
+			has_country_modifier = custom_cavalry_tier3_L1
+			
+			AND = {
+				hidden_trigger = {
+					has_country_modifier = custom_cavalry_tier3_N
+				}
+				NOT = { has_country_modifier = csu_tier3_cooldown }
+				mil_power = 100 army_tradition = 2.5 army_professionalism = 0.025 treasury = 2500
+			}
+		}
+	}
+	frame = { 
+		number = 2
+		trigger = { 
+			has_country_modifier = custom_cavalry_tier3_L1
+		}
+	}
+	frame = { 
+		number = 1
+		trigger = { 
+			always = yes 
+		}
+	}
+	effect = {
+		tooltip = {
+			add_country_modifier = {
+				name = custom_cavalry_tier3_L1
+				duration = -1
+			}
+		}
+		if = {
+			limit = {
+				has_country_modifier = custom_cavalry_tier3_N
+			}
+			hidden_effect = { 
+				remove_country_modifier = custom_cavalry_tier3_N
+				add_country_modifier = {
+					name = custom_cavalry_tier3_L1
+					duration = -1
+				}
+			}
+			add_country_modifier = {
+				name = csu_tier3_cooldown
+				duration = 730
+			}
+			add_mil_power = -100 add_army_tradition = -2.5 add_army_professionalism = -0.025 add_treasury = -2500
+        }
+		else = {}
+	}
+}
+
+custom_button = {
+	name = csu_cav_T3_N_button
+    tooltip = csu_cav_T3_N_button_t
+	potential = {
+		FROM = {
+			has_country_modifier = allow_special_cavalry_modifier
+			has_country_flag = csu_show_upgrades_viewer_flag
+		}
+	}
+	trigger = {
+		hidden_trigger  = {
+			has_country_modifier = custom_cavalry_tier3_N
+		}
+	}
+	frame = {
+		number = 2
+		trigger = { 
+			has_country_modifier = custom_cavalry_tier3_N
+		}
+	}
+	frame = {
+		number = 1
+		trigger = { 
+			always = yes 
+		}
+	}
+	effect = {
+	}
+}
+
+custom_button = {
+	name = csu_cav_T3_R1_button
+    tooltip = csu_cav_T3_R1_button_t
+	potential = {
+		FROM = {
+			has_country_modifier = allow_special_cavalry_modifier
+			has_country_flag = csu_show_upgrades_viewer_flag
+		}
+	}
+	trigger = {
+		OR = {
+			has_country_modifier = custom_cavalry_tier3_R1
+			
+			AND = {
+				hidden_trigger = {
+					has_country_modifier = custom_cavalry_tier3_N
+				}
+				NOT = { has_country_modifier = csu_tier3_cooldown }
+				mil_power = 100 army_tradition = 2.5 army_professionalism = 0.025 treasury = 2500
+			}
+		}
+	}
+	frame = { 
+		number = 2
+		trigger = { 
+			has_country_modifier = custom_cavalry_tier3_R1
+		}
+	}
+	frame = { 
+		number = 1
+		trigger = { 
+			always = yes 
+		}
+	}
+	effect = {
+		tooltip = {
+			add_country_modifier = {
+				name = custom_cavalry_tier3_R1
+				duration = -1
+			}
+		}
+		if = {
+			limit = {
+				has_country_modifier = custom_cavalry_tier3_N
+			}
+			hidden_effect = { 
+				remove_country_modifier = custom_cavalry_tier3_N
+				add_country_modifier = {
+					name = custom_cavalry_tier3_R1
+					duration = -1
+				}
+			}
+			add_country_modifier = {
+				name = csu_tier3_cooldown
+				duration = 730
+			}
+			add_mil_power = -100 add_army_tradition = -2.5 add_army_professionalism = -0.025 add_treasury = -2500
+        }
+		else = {}
+	}
+}
+
+custom_button = {
+	name = csu_cav_T3_R2_button
+    tooltip = csu_cav_T3_R2_button_t
+	potential = {
+		FROM = {
+			has_country_modifier = allow_special_cavalry_modifier
+			has_country_flag = csu_show_upgrades_viewer_flag
+		}
+	}
+	trigger = {
+		OR = {
+			has_country_modifier = custom_cavalry_tier3_R2
+			
+			AND = {
+				hidden_trigger = {
+					has_country_modifier = custom_cavalry_tier3_R1
+				}
+				NOT = { has_country_modifier = csu_tier3_cooldown }
+				mil_power = 100 army_tradition = 2.5 army_professionalism = 0.025 treasury = 2500
+			}
+		}
+	}
+	frame = { 
+		number = 2
+		trigger = { 
+			has_country_modifier = custom_cavalry_tier3_R2
+		}
+	}
+	frame = { 
+		number = 1
+		trigger = { 
+			always = yes 
+		}
+	}
+	effect = {
+		tooltip = {
+			add_country_modifier = {
+				name = custom_cavalry_tier3_R2
+				duration = -1
+			}
+		}
+		if = {
+			limit = {
+				has_country_modifier = custom_cavalry_tier3_R1
+			}
+			hidden_effect = { 
+				remove_country_modifier = custom_cavalry_tier3_R1
+				add_country_modifier = {
+					name = custom_cavalry_tier3_R2
+					duration = -1
+				}
+			}
+			add_country_modifier = {
+				name = csu_tier3_cooldown
+				duration = 730
+			}
+			add_mil_power = -100 add_army_tradition = -2.5 add_army_professionalism = -0.025 add_treasury = -2500
+        }
+		else = {}
+	}
+}
+
+custom_button = {
+	name = csu_cav_T3_R3_button
+    tooltip = csu_cav_T3_R3_button_t
+	potential = {
+		FROM = {
+			has_country_modifier = allow_special_cavalry_modifier
+			has_country_flag = csu_show_upgrades_viewer_flag
+		}
+	}
+	trigger = {
+		OR = {
+			has_country_modifier = custom_cavalry_tier3_R3
+			
+		
+			
+			AND = {
+				hidden_trigger = {
+					has_country_modifier = custom_cavalry_tier3_R2
+				}
+				NOT = { has_country_modifier = csu_tier3_cooldown }
+				mil_power = 100 army_tradition = 2.5 army_professionalism = 0.025 treasury = 2500
+			}
+		}
+	}
+	frame = {
+		number = 2
+		trigger = { 
+			has_country_modifier = custom_cavalry_tier3_R3
+		}
+	}
+	frame = {
+		number = 1
+		trigger = { 
+			always = yes 
+		}
+	}
+	effect = {
+		tooltip = {
+			add_country_modifier = {
+				name = custom_cavalry_tier3_R3
+				duration = -1
+			}
+		}
+		if = {
+			limit = {
+				has_country_modifier = custom_cavalry_tier3_R2
+			}
+			hidden_effect = { 
+				remove_country_modifier = custom_cavalry_tier3_R2
+				add_country_modifier = {
+					name = custom_cavalry_tier3_R3
+					duration = -1
+				}
+			}
+			add_country_modifier = {
+				name = csu_tier3_cooldown
+				duration = 730
+			}
+			add_mil_power = -100 add_army_tradition = -2.5 add_army_professionalism = -0.025 add_treasury = -2500
+        }
+		else = {}
+	}
+}
+
+#### Tier 4 ####
+custom_text_box = {
+	name = csu_cav_T4_text
+	potential = {
+		FROM = {
+			has_country_modifier = allow_special_cavalry_modifier
+			has_country_flag = csu_show_upgrades_viewer_flag
+		}
+	}
+	tooltip = csu_cav_T4_text_t
+}
+
+custom_button = {
+	name = csu_cav_T4_L3_button
+    tooltip = csu_cav_T4_L3_button_t
+	potential = {
+		FROM = {
+			has_country_modifier = allow_special_cavalry_modifier
+			has_country_flag = csu_show_upgrades_viewer_flag
+		}
+	}
+	trigger = {
+		OR = {
+			has_country_modifier = custom_cavalry_tier4_L3
+			
+			AND = {
+				hidden_trigger = {
+					has_country_modifier = custom_cavalry_tier4_L2
+				}
+				NOT = { has_country_modifier = csu_tier4_cooldown }
+				mil_power = 100 army_tradition = 2.5 army_professionalism = 0.025 treasury = 2500
+			}
+		}
+	}
+	frame = { 
+		number = 2
+		trigger = { 
+			has_country_modifier = custom_cavalry_tier4_L3
+		}
+	}
+	frame = { 
+		number = 1
+		trigger = { 
+			always = yes 
+		}
+	}
+	effect = {
+		tooltip = {
+			add_country_modifier = {
+				name = custom_cavalry_tier4_L3
+				duration = -1
+			}
+		}
+		if = {
+			limit = {
+				has_country_modifier = custom_cavalry_tier4_L2
+			}
+			hidden_effect = { 
+				remove_country_modifier = custom_cavalry_tier4_L2
+				add_country_modifier = {
+					name = custom_cavalry_tier4_L3
+					duration = -1
+				}
+			}
+			add_country_modifier = {
+				name = csu_tier4_cooldown
+				duration = 730
+			}
+			add_mil_power = -100 add_army_tradition = -2.5 add_army_professionalism = -0.025 add_treasury = -2500
+        }
+		else = {}
+	}
+}
+
+custom_button = {
+	name = csu_cav_T4_L2_button
+    tooltip = csu_cav_T4_L2_button_t
+	potential = {
+		FROM = {
+			has_country_modifier = allow_special_cavalry_modifier
+			has_country_flag = csu_show_upgrades_viewer_flag
+		}
+	}
+	trigger = {
+		OR = {
+			has_country_modifier = custom_cavalry_tier4_L2
+			
+			AND = {
+				hidden_trigger = {
+					has_country_modifier = custom_cavalry_tier4_L1
+				}
+				NOT = { has_country_modifier = csu_tier4_cooldown }
+				mil_power = 100 army_tradition = 2.5 army_professionalism = 0.025 treasury = 2500
+			}
+		}
+	}
+	frame = { 
+		number = 2
+		trigger = { 
+			has_country_modifier = custom_cavalry_tier4_L2
+		}
+	}
+	frame = { 
+		number = 1
+		trigger = { 
+			always = yes 
+		}
+	}
+	effect = {
+		tooltip = {
+			add_country_modifier = {
+				name = custom_cavalry_tier4_L2
+				duration = -1
+			}
+		}
+		if = {
+			limit = {
+				has_country_modifier = custom_cavalry_tier4_L1
+			}
+			hidden_effect = { 
+				remove_country_modifier = custom_cavalry_tier4_L1
+				add_country_modifier = {
+					name = custom_cavalry_tier4_L2
+					duration = -1
+				}
+			}
+			add_country_modifier = {
+				name = csu_tier4_cooldown
+				duration = 730
+			}
+			add_mil_power = -100 add_army_tradition = -2.5 add_army_professionalism = -0.025 add_treasury = -2500
+        }
+		else = {}
+	}
+}
+
+custom_button = {
+	name = csu_cav_T4_L1_button
+    tooltip = csu_cav_T4_L1_button_t
+	potential = {
+		FROM = {
+			has_country_modifier = allow_special_cavalry_modifier
+			has_country_flag = csu_show_upgrades_viewer_flag
+		}
+	}
+	trigger = {
+		OR = {
+			has_country_modifier = custom_cavalry_tier4_L1
+			
+			AND = {
+				hidden_trigger = {
+					has_country_modifier = custom_cavalry_tier4_N
+				}
+				NOT = { has_country_modifier = csu_tier4_cooldown }
+				mil_power = 100 army_tradition = 2.5 army_professionalism = 0.025 treasury = 2500
+			}
+		}
+	}
+	frame = { 
+		number = 2
+		trigger = { 
+			has_country_modifier = custom_cavalry_tier4_L1
+		}
+	}
+	frame = { 
+		number = 1
+		trigger = { 
+			always = yes 
+		}
+	}
+	effect = {
+		tooltip = {
+			add_country_modifier = {
+				name = custom_cavalry_tier4_L1
+				duration = -1
+			}
+		}
+		if = {
+			limit = {
+				has_country_modifier = custom_cavalry_tier4_N
+			}
+			hidden_effect = { 
+				remove_country_modifier = custom_cavalry_tier4_N
+				add_country_modifier = {
+					name = custom_cavalry_tier4_L1
+					duration = -1
+				}
+			}
+			add_country_modifier = {
+				name = csu_tier4_cooldown
+				duration = 730
+			}
+			add_mil_power = -100 add_army_tradition = -2.5 add_army_professionalism = -0.025 add_treasury = -2500
+        }
+		else = {}
+	}
+}
+
+custom_button = {
+	name = csu_cav_T4_N_button
+    tooltip = csu_cav_T4_N_button_t
+	potential = {
+		FROM = {
+			has_country_modifier = allow_special_cavalry_modifier
+			has_country_flag = csu_show_upgrades_viewer_flag
+		}
+	}
+	trigger = {
+		hidden_trigger  = {
+			has_country_modifier = custom_cavalry_tier4_N
+		}
+	}
+	frame = {
+		number = 2
+		trigger = { 
+			has_country_modifier = custom_cavalry_tier4_N
+		}
+	}
+	frame = {
+		number = 1
+		trigger = { 
+			always = yes 
+		}
+	}
+	effect = {
+	}
+}
+
+custom_button = {
+	name = csu_cav_T4_R1_button
+    tooltip = csu_cav_T4_R1_button_t
+	potential = {
+		FROM = {
+			has_country_modifier = allow_special_cavalry_modifier
+			has_country_flag = csu_show_upgrades_viewer_flag
+		}
+	}
+	trigger = {
+		OR = {
+			has_country_modifier = custom_cavalry_tier4_R1
+			
+			AND = {
+				hidden_trigger = {
+					has_country_modifier = custom_cavalry_tier4_N
+				}
+				NOT = { has_country_modifier = csu_tier4_cooldown }
+				mil_power = 100 army_tradition = 2.5 army_professionalism = 0.025 treasury = 2500
+			}
+		}
+	}
+	frame = { 
+		number = 2
+		trigger = { 
+			has_country_modifier = custom_cavalry_tier4_R1
+		}
+	}
+	frame = { 
+		number = 1
+		trigger = { 
+			always = yes 
+		}
+	}
+	effect = {
+		tooltip = {
+			add_country_modifier = {
+				name = custom_cavalry_tier4_R1
+				duration = -1
+			}
+		}
+		if = {
+			limit = {
+				has_country_modifier = custom_cavalry_tier4_N
+			}
+			hidden_effect = { 
+				remove_country_modifier = custom_cavalry_tier4_N
+				add_country_modifier = {
+					name = custom_cavalry_tier4_R1
+					duration = -1
+				}
+			}
+			add_country_modifier = {
+				name = csu_tier4_cooldown
+				duration = 730
+			}
+			add_mil_power = -100 add_army_tradition = -2.5 add_army_professionalism = -0.025 add_treasury = -2500
+        }
+		else = {}
+	}
+}
+
+custom_button = {
+	name = csu_cav_T4_R2_button
+    tooltip = csu_cav_T4_R2_button_t
+	potential = {
+		FROM = {
+			has_country_modifier = allow_special_cavalry_modifier
+			has_country_flag = csu_show_upgrades_viewer_flag
+		}
+	}
+	trigger = {
+		OR = {
+			has_country_modifier = custom_cavalry_tier4_R2
+			
+			AND = {
+				hidden_trigger = {
+					has_country_modifier = custom_cavalry_tier4_R1
+				}
+				NOT = { has_country_modifier = csu_tier4_cooldown }
+				mil_power = 100 army_tradition = 2.5 army_professionalism = 0.025 treasury = 2500
+			}
+		}
+	}
+	frame = { 
+		number = 2
+		trigger = { 
+			has_country_modifier = custom_cavalry_tier4_R2
+		}
+	}
+	frame = { 
+		number = 1
+		trigger = { 
+			always = yes 
+		}
+	}
+	effect = {
+		tooltip = {
+			add_country_modifier = {
+				name = custom_cavalry_tier4_R2
+				duration = -1
+			}
+		}
+		if = {
+			limit = {
+				has_country_modifier = custom_cavalry_tier4_R1
+			}
+			hidden_effect = { 
+				remove_country_modifier = custom_cavalry_tier4_R1
+				add_country_modifier = {
+					name = custom_cavalry_tier4_R2
+					duration = -1
+				}
+			}
+			add_country_modifier = {
+				name = csu_tier4_cooldown
+				duration = 730
+			}
+			add_mil_power = -100 add_army_tradition = -2.5 add_army_professionalism = -0.025 add_treasury = -2500
+        }
+		else = {}
+	}
+}
+
+custom_button = {
+	name = csu_cav_T4_R3_button
+    tooltip = csu_cav_T4_R3_button_t
+	potential = {
+		FROM = {
+			has_country_modifier = allow_special_cavalry_modifier
+			has_country_flag = csu_show_upgrades_viewer_flag
+		}
+	}
+	trigger = {
+		OR = {
+			has_country_modifier = custom_cavalry_tier4_R3
+			
+			AND = {
+				hidden_trigger = {
+					has_country_modifier = custom_cavalry_tier4_R2
+				}
+				NOT = { has_country_modifier = csu_tier4_cooldown }
+				mil_power = 100 army_tradition = 2.5 army_professionalism = 0.025 treasury = 2500
+			}
+		}
+	}
+	frame = {
+		number = 2
+		trigger = { 
+			has_country_modifier = custom_cavalry_tier4_R3
+		}
+	}
+	frame = {
+		number = 1
+		trigger = { 
+			always = yes 
+		}
+	}
+	effect = {
+		tooltip = {
+			add_country_modifier = {
+				name = custom_cavalry_tier4_R3
+				duration = -1
+			}
+		}
+		if = {
+			limit = {
+				has_country_modifier = custom_cavalry_tier4_R2
+			}
+			hidden_effect = { 
+				remove_country_modifier = custom_cavalry_tier4_R2
+				add_country_modifier = {
+					name = custom_cavalry_tier4_R3
+					duration = -1
+				}
+			}
+			add_country_modifier = {
+				name = csu_tier4_cooldown
+				duration = 730
+			}
+			add_mil_power = -100 add_army_tradition = -2.5 add_army_professionalism = -0.025 add_treasury = -2500
+        }
+		else = {}
+	}
+}

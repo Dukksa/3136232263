@@ -1,0 +1,64 @@
+spriteTypes = {
+	### Customizable Special Units [csu] ###
+	spriteType = {
+		name = "GFX_csu_upgrades_viewer_button"
+		texturefile = "gfx//interface//csu//csu_upgrades_viewer_button.dds"
+		noOfFrames = 1
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+	}
+	
+	spriteType = {
+		name = "GFX_csu_upgrades_viewer_bg"
+		texturefile = "gfx//interface//csu//csu_upgrades_viewer_bg.dds"
+		noOfFrames = 1
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+	}
+	
+	spriteType = {
+		name = "GFX_csu_level_button"
+		texturefile = "gfx//interface//csu//csu_level_button.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+		transparencecheck = yes
+		noOfFrames = 2
+	}
+	
+	spriteType = {
+		name = "GFX_csu_level0_button"
+		texturefile = "gfx//interface//csu//csu_level0_button.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+		transparencecheck = yes
+		noOfFrames = 2
+	}
+	
+	spriteType = {
+		name = "GFX_csu_level1_button"
+		texturefile = "gfx//interface//csu//csu_level1_button.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+		transparencecheck = yes
+		noOfFrames = 2
+	}
+	
+	spriteType = {
+		name = "GFX_csu_level2_button"
+		texturefile = "gfx//interface//csu//csu_level2_button.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+		transparencecheck = yes
+		noOfFrames = 2
+	}
+	
+	spriteType = {
+		name = "GFX_csu_level3_button"
+		texturefile = "gfx//interface//csu//csu_level3_button.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+		transparencecheck = yes
+		noOfFrames = 2
+	}
+	### end ###
+}

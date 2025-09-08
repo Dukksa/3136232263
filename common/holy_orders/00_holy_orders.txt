@@ -859,3 +859,64 @@ bektashi_order = {
     }
     localization = holy_order
 }
+savafid_order = {
+    icon = GFX_holy_order_savafid_order  
+    trigger = {
+		ruler_has_personality = one_v_one_nir_nader_personality
+    }
+    color = { 68 110 35 }
+    cost = 100
+    cost_type = mil_power
+    per_province_effect = {
+        add_base_manpower = 2
+        owner = { add_piety = -0.02 }
+        custom_tooltip = order_piety_tooltip
+    }
+    per_province_abandon_effect = {
+        add_base_manpower = -2
+        hidden_effect = {
+            if = {
+                limit = { NOT = { base_manpower = 1 } }
+                set_base_manpower = 1
+            }
+        }
+    }
+    modifier = {
+        local_manpower_modifier = 0.1
+        regiment_recruit_speed = -0.2
+        local_missionary_strength = 0.015
+    }
+    ai_priority = {
+        factor = 10
+    }
+    localization = holy_order
+}
+####################
+# Hundred Years War:
+one_v_one_golden_fleece_order = {
+	icon = GFX_holy_order_calatrava
+	trigger = {
+		mission_completed = one_v_one_mission_hyw_nation_select_5_hyb
+		tag = HYB
+	}
+	color = { 148  30  70 }
+	cost = 50
+	cost_type = mil_power
+	per_province_effect = {
+		add_base_manpower = 1
+	}
+	per_province_abandon_effect = {
+		add_base_manpower = -1
+		hidden_effect = {
+			if = {
+				limit = { NOT = { base_manpower = 1 } }
+				set_base_manpower = 1
+			}
+		}
+	}
+	modifier = {
+		local_manpower_modifier = 0.33
+	}
+	ai_priority = { factor = 0  }
+	localization = holy_order
+}

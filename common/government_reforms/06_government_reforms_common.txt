@@ -1989,17 +1989,23 @@ organized_military_staff_reform = {
 	effect = {
 		hidden_effect = { set_country_flag = one_v_one_gov_reform_switch_cooldown_flag }
 		hidden_effect = {
-			every_subject_country = {
-				set_country_flag = re_organized_military_staff_reform_flag
-				add_government_reform = organized_military_staff_reform
+			if = {
+				limit = { OR = { tag = REW tag = REE } }
+				every_subject_country = {
+					set_country_flag = re_organized_military_staff_reform_flag
+					add_government_reform = organized_military_staff_reform
+				}
 			}
 		}
 	}
 	removed_effect = {
 		hidden_effect = {
-			every_subject_country = {
-				clr_country_flag = re_organized_military_staff_reform_flag
-				remove_government_reform = organized_military_staff_reform
+			if = {
+				limit = { OR = { tag = REW tag = REE } }
+				every_subject_country = {
+					clr_country_flag = re_organized_military_staff_reform_flag
+					remove_government_reform = organized_military_staff_reform
+				}
 			}
 		}
 	}
@@ -2013,7 +2019,7 @@ military_engineering_reform = {
 	icon = "military_engineers"
 	allow_normal_conversion = yes
 	potential = {
-		NOT = { OR = { one_v_one_succ_nations = yes one_v_one_nap_nations = yes one_v_one_tyw_nations = yes one_v_one_gtw_nations = yes one_v_one_as_nations = yes one_v_one_syw_nations = yes one_v_one_ww_nations = yes } }
+		NOT = { OR = { one_v_one_succ_nations = yes one_v_one_nap_nations = yes one_v_one_tyw_nations = yes one_v_one_gtw_nations = yes one_v_one_as_nations = yes one_v_one_syw_nations = yes one_v_one_nsi_nations = yes one_v_one_ww_nations = yes } }
 	}
 	modifiers = {
 		artillery_barrage_cost = -0.5
@@ -2049,17 +2055,23 @@ military_engineering_reform = {
 	effect = {
 		hidden_effect = { set_country_flag = one_v_one_gov_reform_switch_cooldown_flag }
 		hidden_effect = {
-			every_subject_country = {
-				set_country_flag = re_military_engineering_reform_flag
-				add_government_reform = military_engineering_reform
+			if = {
+				limit = { OR = { tag = REW tag = REE } }
+				every_subject_country = {
+					set_country_flag = re_military_engineering_reform_flag
+					add_government_reform = military_engineering_reform
+				}
 			}
 		}
 	}
 	removed_effect = {
 		hidden_effect = {
-			every_subject_country = {
-				clr_country_flag = re_military_engineering_reform_flag
-				remove_government_reform = military_engineering_reform
+			if = {
+				limit = { OR = { tag = REW tag = REE } }
+				every_subject_country = {
+					clr_country_flag = re_military_engineering_reform_flag
+					remove_government_reform = military_engineering_reform
+				}
 			}
 		}
 	}
@@ -2072,7 +2084,7 @@ military_engineering_reform_1 = {
 	icon = "military_engineers"
 	allow_normal_conversion = yes
 	potential = {
-		OR = { one_v_one_succ_nations = yes one_v_one_nap_nations = yes one_v_one_tyw_nations = yes one_v_one_gtw_nations = yes one_v_one_as_nations = yes one_v_one_syw_nations = yes one_v_one_ww_nations = yes }
+		OR = { one_v_one_succ_nations = yes one_v_one_nap_nations = yes one_v_one_tyw_nations = yes one_v_one_gtw_nations = yes one_v_one_as_nations = yes one_v_one_syw_nations = yes one_v_one_nsi_nations = yes one_v_one_ww_nations = yes }
 	}
 	modifiers = {
 		artillery_barrage_cost = -0.5
@@ -2105,17 +2117,23 @@ military_engineering_reform_1 = {
 	effect = {
 		hidden_effect = { set_country_flag = one_v_one_gov_reform_switch_cooldown_flag }
 		hidden_effect = {
-			every_subject_country = {
-				set_country_flag = re_military_engineering_reform_1_flag
-				add_government_reform = military_engineering_reform_1
+			if = {
+				limit = { OR = { tag = REW tag = REE } }
+				every_subject_country = {
+					set_country_flag = re_military_engineering_reform_1_flag
+					add_government_reform = military_engineering_reform_1
+				}
 			}
 		}
 	}
 	removed_effect = {
 		hidden_effect = {
-			every_subject_country = {
-				clr_country_flag = re_military_engineering_reform_1_flag
-				remove_government_reform = military_engineering_reform_1
+			if = {
+				limit = { OR = { tag = REW tag = REE } }
+				every_subject_country = {
+					clr_country_flag = re_military_engineering_reform_1_flag
+					remove_government_reform = military_engineering_reform_1
+				}
 			}
 		}
 	}
@@ -2160,17 +2178,23 @@ defensive_stance_reform = {
 	effect = {
 		hidden_effect = { set_country_flag = one_v_one_gov_reform_switch_cooldown_flag }
 		hidden_effect = {
-			every_subject_country = {
-				set_country_flag = re_defensive_stance_reform_flag
-				add_government_reform = defensive_stance_reform
+			if = {
+				limit = { OR = { tag = REW tag = REE } }
+				every_subject_country = {
+					set_country_flag = re_defensive_stance_reform_flag
+					add_government_reform = defensive_stance_reform
+				}
 			}
 		}
 	}
 	removed_effect = {
 		hidden_effect = {
-			every_subject_country = {
-				clr_country_flag = re_defensive_stance_reform_flag
-				remove_government_reform = defensive_stance_reform
+			if = {
+				limit = { OR = { tag = REW tag = REE } }
+				every_subject_country = {
+					clr_country_flag = re_defensive_stance_reform_flag
+					remove_government_reform = defensive_stance_reform
+				}
 			}
 		}
 	}
@@ -2223,17 +2247,23 @@ sustained_discipline_reform = {
 	effect = {
 		hidden_effect = { set_country_flag = one_v_one_gov_reform_switch_cooldown_flag }
 		hidden_effect = {
-			every_subject_country = {
-				set_country_flag = re_sustained_discipline_reform_flag
-				add_government_reform = sustained_discipline_reform
+			if = {
+				limit = { OR = { tag = REW tag = REE } }
+				every_subject_country = {
+					set_country_flag = re_sustained_discipline_reform_flag
+					add_government_reform = sustained_discipline_reform
+				}
 			}
 		}
 	}
 	removed_effect = {
 		hidden_effect = {
-			every_subject_country = {
-				clr_country_flag = re_sustained_discipline_reform_flag
-				remove_government_reform = sustained_discipline_reform
+			if = {
+				limit = { OR = { tag = REW tag = REE } }
+				every_subject_country = {
+					clr_country_flag = re_sustained_discipline_reform_flag
+					remove_government_reform = sustained_discipline_reform
+				}
 			}
 		}
 	}
@@ -2293,18 +2323,24 @@ cavalry_warfare_reform = {
 				duration = -1
 				hidden = yes
 			}
-			every_subject_country = {
-				set_country_flag = re_cavalry_warfare_reform_flag
-				add_government_reform = cavalry_warfare_reform
+			if = {
+				limit = { OR = { tag = REW tag = REE } }
+				every_subject_country = {
+					set_country_flag = re_cavalry_warfare_reform_flag
+					add_government_reform = cavalry_warfare_reform
+				}
 			}
 		}
 	}
 	removed_effect = {
 		hidden_effect = {
 			remove_country_modifier = one_v_one_cavalry_shock_modifier
-			every_subject_country = {
-				clr_country_flag = re_cavalry_warfare_reform_flag
-				remove_government_reform = cavalry_warfare_reform
+			if = {
+				limit = { OR = { tag = REW tag = REE } }
+				every_subject_country = {
+					clr_country_flag = re_cavalry_warfare_reform_flag
+					remove_government_reform = cavalry_warfare_reform
+				}
 			}
 		}
 	}
@@ -2326,6 +2362,10 @@ amphibious_specialization_reform = {
 			AND = { 
 				NOT = { primary_culture = english }
 				NOT = { primary_culture = anglois }
+			}
+			AND = {
+				tag = NBC
+				NOT = { ruler_has_personality = one_v_one_nbc_edward_personality }
 			}
 		}
 	}
@@ -2366,18 +2406,24 @@ amphibious_specialization_reform = {
 				duration = -1
 				hidden = yes
 			}
-			every_subject_country = {
-				set_country_flag = re_amphibious_specialization_reform_flag
-				add_government_reform = amphibious_specialization_reform
+			if = {
+				limit = { OR = { tag = REW tag = REE } }
+				every_subject_country = {
+					set_country_flag = re_amphibious_specialization_reform_flag
+					add_government_reform = amphibious_specialization_reform
+				}
 			}
 		}
 	}
 	removed_effect = {
 		hidden_effect = {
 			remove_country_modifier = amphibious_specialization_reform_modifier
-			every_subject_country = {
-				clr_country_flag = re_amphibious_specialization_reform_flag
-				remove_government_reform = amphibious_specialization_reform
+			if = {
+				limit = { OR = { tag = REW tag = REE } }
+				every_subject_country = {
+					clr_country_flag = re_amphibious_specialization_reform_flag
+					remove_government_reform = amphibious_specialization_reform
+				}
 			}
 		}
 	}
@@ -2442,17 +2488,23 @@ mercenary_leadership_reform = {
 	effect = {
 		hidden_effect = { set_country_flag = one_v_one_gov_reform_switch_cooldown_flag }
 		hidden_effect = {
-			every_subject_country = {
-				set_country_flag = re_mercenary_leadership_reform_flag
-				add_government_reform = mercenary_leadership_reform
+			if = {
+				limit = { OR = { tag = REW tag = REE } }
+				every_subject_country = {
+					set_country_flag = re_mercenary_leadership_reform_flag
+					add_government_reform = mercenary_leadership_reform
+				}
 			}
 		}
 	}
 	removed_effect = {
 		hidden_effect = {
-			every_subject_country = {
-				clr_country_flag = re_mercenary_leadership_reform_flag
-				remove_government_reform = mercenary_leadership_reform
+			if = {
+				limit = { OR = { tag = REW tag = REE } }
+				every_subject_country = {
+					clr_country_flag = re_mercenary_leadership_reform_flag
+					remove_government_reform = mercenary_leadership_reform
+				}
 			}
 		}
 	}
@@ -2507,17 +2559,23 @@ doppelsoldner_reform = {
 	effect = {
 		hidden_effect = { set_country_flag = one_v_one_gov_reform_switch_cooldown_flag }
 		hidden_effect = {
-			every_subject_country = {
-				set_country_flag = re_doppelsoldner_reform_flag
-				add_government_reform = doppelsoldner_reform
+			if = {
+				limit = { OR = { tag = REW tag = REE } }
+				every_subject_country = {
+					set_country_flag = re_doppelsoldner_reform_flag
+					add_government_reform = doppelsoldner_reform
+				}
 			}
 		}
 	}
 	removed_effect = {
 		hidden_effect = {
-			every_subject_country = {
-				clr_country_flag = re_doppelsoldner_reform_flag
-				remove_government_reform = doppelsoldner_reform
+			if = {
+				limit = { OR = { tag = REW tag = REE } }
+				every_subject_country = {
+					clr_country_flag = re_doppelsoldner_reform_flag
+					remove_government_reform = doppelsoldner_reform
+				}
 			}
 		}
 	}
@@ -2574,17 +2632,23 @@ maritime_military_reform = {
 	effect = {
 		hidden_effect = { set_country_flag = one_v_one_gov_reform_switch_cooldown_flag }
 		hidden_effect = {
-			every_subject_country = {
-				set_country_flag = re_maritime_military_reform_flag
-				add_government_reform = maritime_military_reform
+			if = {
+				limit = { OR = { tag = REW tag = REE } }
+				every_subject_country = {
+					set_country_flag = re_maritime_military_reform_flag
+					add_government_reform = maritime_military_reform
+				}
 			}
 		}
 	}
 	removed_effect = {
 		hidden_effect = {
-			every_subject_country = {
-				clr_country_flag = re_maritime_military_reform_flag
-				remove_government_reform = maritime_military_reform
+			if = {
+				limit = { OR = { tag = REW tag = REE } }
+				every_subject_country = {
+					clr_country_flag = re_maritime_military_reform_flag
+					remove_government_reform = maritime_military_reform
+				}
 			}
 		}
 	}
@@ -3950,7 +4014,14 @@ royal_marines_reform = {
 	potential = {
 		has_dlc = "Domination"
 		OR = {
-			primary_culture = english
+			AND = {
+				tag = NBC
+				ruler_has_personality = one_v_one_nbc_edward_personality
+			}
+			AND = {
+				NOT = { tag = NBC }
+				primary_culture = english
+			}
 			primary_culture = anglois
 			tag = GBR
 			tag = AVE

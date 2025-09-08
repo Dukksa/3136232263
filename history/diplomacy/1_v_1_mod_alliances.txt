@@ -1,3 +1,40 @@
+# Hundred Years War:
+alliance = {
+	first = HYF
+	second = HYC
+	start_date = 1485.1.1
+	end_date = 1485.1.3
+}
+alliance = {
+	first = HYF
+	second = HYS
+	start_date = 1485.1.1
+	end_date = 1485.1.3
+}
+alliance = {
+	first = HYC
+	second = HYS
+	start_date = 1485.1.1
+	end_date = 1485.1.3
+}
+alliance = {
+	first = HYE
+	second = HYB
+	start_date = 1485.1.1
+	end_date = 1485.1.3
+}
+alliance = {
+	first = HYE
+	second = HYP
+	start_date = 1485.1.1
+	end_date = 1485.1.3
+}
+alliance = {
+	first = HYP
+	second = HYB
+	start_date = 1485.1.1
+	end_date = 1485.1.3
+}
 # Thirty Years War:
 alliance = {
 	first = TCG
@@ -451,6 +488,128 @@ alliance = {
 	second = ABA
 	start_date = 1734.1.2
 	end_date = 1734.1.3
+}
+# Nader Shah Invasion:
+alliance = {
+	first = NIR
+	second = NKA
+	start_date = 1733.1.1
+	end_date = 1733.1.3
+}
+alliance = {
+	first = NIR
+	second = NMA
+	start_date = 1733.1.1
+	end_date = 1733.1.3
+}
+alliance = {
+	first = NIR
+	second = NRA
+	start_date = 1733.1.1
+	end_date = 1733.1.3
+}
+alliance = {
+	first = NIR
+	second = NBC
+	start_date = 1733.1.1
+	end_date = 1733.1.3
+}
+alliance = {
+	first = NKA
+	second = NMA
+	start_date = 1733.1.1
+	end_date = 1733.1.3
+}
+alliance = {
+	first = NKA
+	second = NRA
+	start_date = 1733.1.1
+	end_date = 1733.1.3
+}
+alliance = {
+	first = NKA
+	second = NBC
+	start_date = 1733.1.1
+	end_date = 1733.1.3
+}
+alliance = {
+	first = NMA
+	second = NRA
+	start_date = 1733.1.1
+	end_date = 1733.1.3
+}
+alliance = {
+	first = NMA
+	second = NBC
+	start_date = 1733.1.1
+	end_date = 1733.1.3
+}
+alliance = {
+	first = NRA
+	second = NBC
+	start_date = 1733.1.1
+	end_date = 1733.1.3
+}
+#
+alliance = {
+	first = NMU
+	second = NBU
+	start_date = 1733.1.1
+	end_date = 1733.1.3
+}
+alliance = {
+	first = NMU
+	second = NHY
+	start_date = 1733.1.1
+	end_date = 1733.1.3
+}
+alliance = {
+	first = NMU
+	second = NMY
+	start_date = 1733.1.1
+	end_date = 1733.1.3
+}
+alliance = {
+	first = NMU
+	second = NFC
+	start_date = 1733.1.1
+	end_date = 1733.1.3
+}
+alliance = {
+	first = NBU
+	second = NHY
+	start_date = 1733.1.1
+	end_date = 1733.1.3
+}
+alliance = {
+	first = NBU
+	second = NMY
+	start_date = 1733.1.1
+	end_date = 1733.1.3
+}
+alliance = {
+	first = NBU
+	second = NFC
+	start_date = 1733.1.1
+	end_date = 1733.1.3
+}
+alliance = {
+	first = NHY
+	second = NMY
+	start_date = 1733.1.1
+	end_date = 1733.1.3
+}
+alliance = {
+	first = NHY
+	second = NFC
+	start_date = 1733.1.1
+	end_date = 1733.1.3
+}
+alliance = {
+	first = NMY
+	second = NFC
+	start_date = 1733.1.1
+	end_date = 1733.1.3
 }
 # Seven Years War:
 alliance = {

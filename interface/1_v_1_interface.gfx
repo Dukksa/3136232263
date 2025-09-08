@@ -608,6 +608,11 @@ spriteTypes = {
 		loadType = "INGAME"
 	}
 	spriteType = {
+		name = "GFX_one_v_one_hyw_rules_event_menu"
+		texturefile = "gfx/interface/one_v_one_inter/one_v_one_hyw_rules_event_menu.dds"
+		loadType = "INGAME"
+	}
+	spriteType = {
 		name = "GFX_one_v_one_tyw_rules_event_menu"
 		texturefile = "gfx/interface/one_v_one_inter/one_v_one_tyw_rules_event_menu.dds"
 		loadType = "INGAME"
@@ -635,6 +640,11 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_one_v_one_as_rules_event_menu"
 		texturefile = "gfx/interface/one_v_one_inter/one_v_one_as_rules_event_menu.dds"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_one_v_one_nsi_rules_event_menu"
+		texturefile = "gfx/interface/one_v_one_inter/one_v_one_nsi_rules_event_menu.dds"
 		loadType = "INGAME"
 	}
 	spriteType = {

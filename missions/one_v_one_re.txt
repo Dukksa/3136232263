@@ -418,6 +418,7 @@ one_v_one_mission_re_1 = {
 				add_country_modifier = { name = one_v_one_mission_re_adm_buf_1_modifier_alt duration = -1 }
 				hidden_effect = {
 					every_subject_country = {
+						add_treasury = 3333
 						add_country_modifier = { name = one_v_one_mission_re_adm_buf_1_modifier_alt duration = -1 }
 						complete_mission = one_v_one_mission_re_adm_buf_1
 					}
@@ -1334,6 +1335,7 @@ one_v_one_mission_re_3 = {
 		}
 		effect = {
 			add_country_modifier = { name = one_v_one_mission_construct_modifier duration = 3650 }
+			add_country_modifier = { name = one_v_one_mission_construct_modifier_re duration = 3650 }
 			add_country_modifier = { name = one_v_one_mission_construct_idea_cost_modifier duration = 1 }
 			custom_tooltip = one_v_one_mission_tyw_construct_tt
 			if = {
@@ -1343,6 +1345,7 @@ one_v_one_mission_re_3 = {
 			hidden_effect = {
 				every_subject_country = {
 					add_country_modifier = { name = one_v_one_mission_construct_modifier duration = 3650 }
+					add_country_modifier = { name = one_v_one_mission_construct_modifier_re duration = 3650 }
 					complete_mission = one_v_one_mission_re_construct
 					set_country_flag = one_v_one_re_starting_nation_flag
 				}
@@ -1787,11 +1790,24 @@ one_v_one_mission_re_5 = {
 			}
 		}
 		effect = {
-			add_country_modifier = { name = one_v_one_mission_re_adm_buf_3_modifier duration = -1 }
-			hidden_effect = {
-				every_subject_country = {
-					add_country_modifier = { name = one_v_one_mission_re_adm_buf_3_modifier duration = -1 }
-					complete_mission = one_v_one_mission_re_adm_buf_3
+			if = {
+				limit = { started_in = 1685.1.1 NOT = { started_in = 1685.1.2 } }
+				add_country_modifier = { name = one_v_one_mission_re_adm_buf_3_modifier duration = -1 }
+				hidden_effect = {
+					every_subject_country = {
+						add_country_modifier = { name = one_v_one_mission_re_adm_buf_3_modifier duration = -1 }
+						complete_mission = one_v_one_mission_re_adm_buf_3
+					}
+				}
+			}
+			if = {
+				limit = { started_in = 1685.1.2 NOT = { started_in = 1685.1.3 } }
+				add_country_modifier = { name = one_v_one_mission_re_adm_buf_3_modifier_alt duration = -1 }
+				hidden_effect = {
+					every_subject_country = {
+						add_country_modifier = { name = one_v_one_mission_re_adm_buf_3_modifier_alt duration = -1 }
+						complete_mission = one_v_one_mission_re_adm_buf_3
+					}
 				}
 			}
 			set_country_flag = re_picked_adm_buf_flag

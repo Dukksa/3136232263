@@ -153,6 +153,14 @@ REE = "countries/REEast.txt" # 1 East Rome
 REN = "countries/REEastNorth.txt" # 2 East Rome
 RES = "countries/REEastSouth.txt" # 3 East Rome
 
+# Hundred Years War:
+HYF = "countries/HYFra.txt" #
+HYC = "countries/HYCas.txt" #
+HYS = "countries/HYSco.txt" #
+HYE = "countries/HYEng.txt" #
+HYB = "countries/HYBur.txt" #
+HYP = "countries/HYPor.txt" #
+
 # Nader Shah Invasion:
 NIR = "countries/NaderIran.txt" # 
 NKA = "countries/NaderKakheti.txt" # 

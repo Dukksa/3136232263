@@ -1,0 +1,365 @@
+### Customizable Special Units [csu] ###
+
+allow_special_infantry_modifier = {
+	is_qizilbash_modifier = yes
+	cavalry_cost = 10000
+}
+
+allow_special_cavalry_modifier = {
+	is_qizilbash_modifier = yes
+	infantry_cost = 10000
+}
+
+allow_custom_special_units_modifier_country = {
+	has_qizilbash = yes
+	allowed_qizilbash_fraction = 0.2
+}
+
+### Custom Infantry ###
+
+# tier 1
+
+custom_infantry_tier1_L3 = {
+	is_qizilbash_modifier = yes
+	infantry_fire = 0.4
+	special_unit_cost_modifier = 0.2
+
+}
+
+custom_infantry_tier1_L2 = {
+	is_qizilbash_modifier = yes
+	infantry_fire = 0.2
+	special_unit_cost_modifier = 0.1
+
+}
+
+custom_infantry_tier1_L1 = {
+	is_qizilbash_modifier = yes
+	infantry_fire = 0.1
+	special_unit_cost_modifier = 0.05
+
+}
+
+custom_infantry_tier1_N = {
+	special_unit_cost_modifier = -0.125
+}
+
+custom_infantry_tier1_R1 = {
+	is_qizilbash_modifier = yes
+	infantry_shock = 0.1
+	special_unit_cost_modifier = 0.05
+
+}
+
+custom_infantry_tier1_R2 = {
+	is_qizilbash_modifier = yes
+	infantry_shock = 0.2
+	special_unit_cost_modifier = 0.1
+
+}
+
+custom_infantry_tier1_R3 = {
+	is_qizilbash_modifier = yes
+	infantry_shock = 0.4
+	special_unit_cost_modifier = 0.2
+
+}
+
+# tier 2
+
+custom_infantry_tier2_L3 = {
+	is_qizilbash_modifier = yes
+	infantry_power = 0.20
+}
+
+custom_infantry_tier2_L2 = {
+	is_qizilbash_modifier = yes
+	infantry_power = 0.10
+}
+
+custom_infantry_tier2_L1 = {
+	is_qizilbash_modifier = yes
+	infantry_power = 0.05
+}
+
+custom_infantry_tier2_N = {
+	special_unit_cost_modifier = -0.125
+}
+
+custom_infantry_tier2_R1 = {
+	is_qizilbash_modifier = yes
+	fire_damage_received = -0.025
+	shock_damage_received = -0.025
+	regiment_manpower_usage = -0.025
+}
+
+custom_infantry_tier2_R2 = {
+	is_qizilbash_modifier = yes
+	fire_damage_received = -0.05
+	shock_damage_received = -0.05
+	regiment_manpower_usage = -0.05
+}
+
+custom_infantry_tier2_R3 = {
+	is_qizilbash_modifier = yes
+	fire_damage_received = -0.1
+	shock_damage_received = -0.1
+	regiment_manpower_usage = -0.075
+}
+
+# tier 3
+
+custom_infantry_tier3_L3 = {
+	allowed_qizilbash_fraction = 0.4
+	land_forcelimit_modifier = -0.15
+}
+
+custom_infantry_tier3_L2 = {
+    allowed_qizilbash_fraction = 0.2
+	land_forcelimit_modifier = -0.075
+}
+
+custom_infantry_tier3_L1 = {
+	allowed_qizilbash_fraction = 0.1
+	land_forcelimit_modifier = -0.05
+}
+
+custom_infantry_tier3_N = {
+	special_unit_cost_modifier = -0.125
+}
+
+custom_infantry_tier3_R1 = {
+	special_unit_forcelimit = 0.025
+	land_forcelimit_modifier = 0.05
+}
+
+custom_infantry_tier3_R2 = {
+	special_unit_forcelimit = 0.05
+	land_forcelimit_modifier = 0.075
+}
+
+custom_infantry_tier3_R3 = {
+	special_unit_forcelimit = 0.1
+	land_forcelimit_modifier = 0.10
+}
+
+# tier 4
+
+custom_infantry_tier4_L3 = {
+	is_qizilbash_modifier = yes
+	fire_damage = 0.15
+	shock_damage = 0.15
+}
+
+custom_infantry_tier4_L2 = {
+	is_qizilbash_modifier = yes
+	fire_damage = 0.075
+	shock_damage = 0.075
+}
+
+custom_infantry_tier4_L1 = {
+	is_qizilbash_modifier = yes
+	fire_damage = 0.05
+	shock_damage = 0.05
+}
+
+custom_infantry_tier4_N = {
+	special_unit_cost_modifier = -0.125
+}
+
+custom_infantry_tier4_R1 = {
+	is_qizilbash_modifier = yes
+	reinforce_speed = 0.10
+	regiment_manpower_usage = -0.05
+}
+
+custom_infantry_tier4_R2 = {
+	is_qizilbash_modifier = yes
+	reinforce_speed = 0.20
+	regiment_manpower_usage = -0.075
+}
+
+custom_infantry_tier4_R3 = {
+	is_qizilbash_modifier = yes
+	reinforce_speed = 0.30
+	regiment_manpower_usage = -0.10
+}
+
+### Custom Cavalry ###
+
+# tier 1
+
+custom_cavalry_tier1_L3 = {
+	is_qizilbash_modifier = yes
+	cavalry_fire = 0.8
+	cavalry_shock = -0.3
+	special_unit_cost_modifier = 0.2
+}
+
+custom_cavalry_tier1_L2 = {
+	is_qizilbash_modifier = yes
+	cavalry_fire = 0.40
+	cavalry_shock = -0.20
+	special_unit_cost_modifier = 0.1
+}
+
+custom_cavalry_tier1_L1 = {
+	is_qizilbash_modifier = yes
+	cavalry_fire = 0.1
+	special_unit_cost_modifier = 0.05
+}
+
+custom_cavalry_tier1_N = {
+	special_unit_cost_modifier = -0.125
+}
+
+custom_cavalry_tier1_R1 = {
+	is_qizilbash_modifier = yes
+	cavalry_shock = 0.1
+	special_unit_cost_modifier = 0.05
+}
+
+custom_cavalry_tier1_R2 = {
+	is_qizilbash_modifier = yes
+	cavalry_shock = 0.2
+	special_unit_cost_modifier = 0.1
+}
+
+custom_cavalry_tier1_R3 = {
+	is_qizilbash_modifier = yes
+	cavalry_shock = 0.3
+	special_unit_cost_modifier = 0.2
+}
+
+# tier 2
+
+custom_cavalry_tier2_L3 = {
+	is_qizilbash_modifier = yes
+	cavalry_power = 0.15
+}
+
+custom_cavalry_tier2_L2 = {
+	is_qizilbash_modifier = yes
+	cavalry_power = 0.10
+}
+
+custom_cavalry_tier2_L1 = {
+	is_qizilbash_modifier = yes
+	cavalry_power = 0.05
+}
+
+custom_cavalry_tier2_N = {
+	special_unit_cost_modifier = -0.125
+}
+
+custom_cavalry_tier2_R1 = {
+	is_qizilbash_modifier = yes
+	fire_damage_received = -0.025
+	shock_damage_received = -0.025
+	regiment_manpower_usage = -0.025
+}
+
+custom_cavalry_tier2_R2 = {
+	is_qizilbash_modifier = yes
+	fire_damage_received = -0.05
+	shock_damage_received = -0.05
+	regiment_manpower_usage = -0.05
+}
+
+custom_cavalry_tier2_R3 = {
+	is_qizilbash_modifier = yes
+	fire_damage_received = -0.1
+	shock_damage_received = -0.1
+	regiment_manpower_usage = -0.075
+}
+
+# tier 3
+
+custom_cavalry_tier3_L3 = {
+	allowed_qizilbash_fraction = 0.4
+	land_forcelimit_modifier = -0.15
+}
+
+custom_cavalry_tier3_L2 = {
+	allowed_qizilbash_fraction = 0.2
+	land_forcelimit_modifier = -0.075
+}
+
+custom_cavalry_tier3_L1 = {
+	allowed_qizilbash_fraction = 0.1
+	land_forcelimit_modifier = -0.05
+}
+
+custom_cavalry_tier3_N = {
+	special_unit_cost_modifier = -0.125
+}
+
+custom_cavalry_tier3_R1 = {
+	special_unit_forcelimit = 0.025
+	land_forcelimit_modifier = 0.05
+}
+
+custom_cavalry_tier3_R2 = {
+	special_unit_forcelimit = 0.05
+	land_forcelimit_modifier = 0.075
+}
+
+custom_cavalry_tier3_R3 = {
+	special_unit_forcelimit = 0.1
+	land_forcelimit_modifier = 0.10
+}
+
+# tier 4
+
+custom_cavalry_tier4_L3 = {
+	movement_speed = 0.25
+	reinforce_speed = 0.125
+}
+
+custom_cavalry_tier4_L2 = {
+	movement_speed = 0.20
+	reinforce_speed = 0.075
+}
+
+custom_cavalry_tier4_L1 = {
+	movement_speed = 0.15
+	reinforce_speed = 0.05
+}
+
+custom_cavalry_tier4_N = {
+	special_unit_cost_modifier = -0.125
+}
+
+custom_cavalry_tier4_R1 = {
+	is_qizilbash_modifier = yes
+	cavalry_cost = -0.10
+	land_maintenance_modifier = -0.05
+}
+
+custom_cavalry_tier4_R2 = {
+	is_qizilbash_modifier = yes
+	cavalry_cost = -0.15
+	land_maintenance_modifier = -0.075
+}
+
+custom_cavalry_tier4_R3 = {
+	is_qizilbash_modifier = yes
+	cavalry_cost = -0.20
+	land_maintenance_modifier = -0.10
+}
+
+csu_tier1_cooldown = {
+global_autonomy	= 0.05
+}
+
+csu_tier2_cooldown = {
+global_autonomy	= 0.05
+}
+
+csu_tier3_cooldown = {
+global_autonomy	= 0.05
+}
+
+csu_tier4_cooldown = {
+global_autonomy	= 0.05
+}

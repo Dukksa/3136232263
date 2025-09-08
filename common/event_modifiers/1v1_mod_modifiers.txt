@@ -621,6 +621,18 @@ one_v_one_nrh_manpower_building_modifier = {
 one_v_one_fl_building_modifier = {
 	land_forcelimit = 1
 }
+one_v_one_barracks_double_bonus_modifier = {
+	local_manpower_modifier = 0.5
+}
+one_v_one_training_fields_double_bonus_modifier = {
+	local_manpower_modifier = 1
+}
+one_v_one_regimental_camp_double_bonus_modifier = {
+	land_forcelimit = 1
+}
+one_v_one_conscription_center_double_bonus_modifier = {
+	land_forcelimit = 2
+}
 one_v_one_sailors_building_modifier = {
 	naval_forcelimit = 3
 	local_sailors_modifier = 1
@@ -636,6 +648,10 @@ one_v_one_sailors_building_s_modifier = {
 one_v_one_navy_building_s_modifier = {
 	naval_forcelimit = 3
 	local_sailors_modifier = 2
+}
+one_v_one_temple_building_modifier = {
+	local_tax_modifier = 0.6
+	local_development_cost = -0.05
 }
 # Italy-Ottoman:
 one_v_one_manpower_fl_nit = {
@@ -680,6 +696,7 @@ one_v_one_manpower_fl_tgbspg = {
 	assault_fort_ability = -0.3
 	garrison_damage = -0.2
 }
+###############
 # Thirty Years scenario:
 # France-PLC:
 one_v_one_manpower_fl_tfrpl = {
@@ -812,7 +829,7 @@ hussars_cavalry_shock_modifier = {
 }
 # Italy:
 one_v_one_git_5_modifier = {
-	infantry_shock = 0.6
+	infantry_shock = 0.7
 	is_marine_modifier = yes
 }
 one_v_one_marines_disc = {
@@ -929,6 +946,162 @@ one_v_one_por_def = {
 	local_defensiveness = 0.33
 }
 ###############
+# Hundred Years scenario:
+one_v_one_mission_hyw_no_claim_modifier = {
+	fabricate_claims_cost = 100
+	idea_cost = -0.25
+}
+# France:
+one_v_one_mission_hyf_objective_1_modifier = {
+	drill_decay_modifier = -0.15
+}
+one_v_one_hyf_joan_personality_modifier = {
+	land_morale = 0.05
+}
+one_v_one_hyf_bureau_personality_modifier = {
+	artillery_levels_available_vs_fort = 2
+}
+# Castille:
+one_v_one_mission_hyc_objective_1_modifier = {
+	global_tax_modifier = 0.25
+	development_cost = -0.05
+}
+one_v_one_mission_hyc_objective_2_modifier = {
+	may_perform_slave_raid_on_same_religion = yes
+	coast_raid_range = 4
+}
+# Scotland:
+one_v_one_mission_hys_objective_1_modifier = {
+	development_cost = -0.15
+}
+one_v_one_mission_hys_objective_3_modifier = {
+	fire_damage_received = -0.1
+}
+one_v_one_hys_william_personality_modifier1 = {
+	loot_amount = 5
+	available_province_loot = 10
+	local_hostile_movement_speed = -0.25
+}
+one_v_one_hys_william_personality_modifier2 = {
+	local_hostile_movement_speed = -0.25
+}
+# England:
+one_v_one_mission_hye_objective_1_modifier = {
+	loot_amount = 5
+	available_province_loot = 10
+	force_march_free = yes
+}
+one_v_one_mission_hye_objective_2_modifier = {
+	local_tax_modifier = 0.5
+	local_production_efficiency = 0.5
+	local_manpower_modifier = 0.5
+}
+one_v_one_mission_hye_objective_3_modifier = {
+	land_morale = 0.05
+	shock_damage_received = -0.05
+}
+# Burgundy:
+one_v_one_mission_hyb_objective_1_modifier = {
+	own_territory_dice_roll_bonus = 1
+}
+one_v_one_mission_hyb_objective_2_modifier = {
+	artillery_power = 0.15
+}
+one_v_one_mission_hyb_objective_3_modifier = {
+	local_tax_modifier = 0.6
+}
+one_v_one_hyb_2_modifier = {
+	land_morale = 0.1
+	is_mercenary_modifier = yes
+}
+# Portugal:
+one_v_one_mission_hyp_objective_1_modifier1 = {
+	trade_goods_size = 1
+	local_garrison_size = 0.25
+	local_garrison_damage = 0.25
+}
+one_v_one_mission_hyp_objective_1_modifier2 = {
+	trade_goods_size = 1
+	local_garrison_size = 0.25
+	local_garrison_damage = 0.25
+	local_defensiveness = 0.33
+	local_defender_dice_roll_bonus = 1
+}
+one_v_one_mission_hyp_objective_2_modifier = {
+	global_ship_recruit_speed = -0.25
+	allowed_man_of_war_fraction = 0.2
+	allowed_galleon_fraction = 0.2
+	allowed_galleass_fraction = 0.2
+}
+one_v_one_hyp_6_modifier = {
+	discipline = 0.05
+	is_marine_modifier = yes
+}
+one_v_one_hyp_pedro_personality_modifier = {
+	mil_tech_cost_modifier = -0.2
+	land_morale = 0.05
+}
+###############
+# Nader Shah scenario:
+# Iran:
+# Kakheti:
+one_v_one_nka_erekle_personality_modifier = {
+	local_development_cost = -0.25
+	trade_goods_size_modifier = 1
+	local_manpower_modifier = 0.5
+	local_defensiveness = 0.2
+	allowed_num_of_buildings = 1
+}
+# Marathas:
+one_v_one_nma_chimaji_personality_modifier = {
+	province_trade_power_value = 10
+	local_tax_modifier = 1
+	local_defensiveness = 0.2
+	local_garrison_damage = 0.2
+}
+# Rajputana:
+one_v_one_nra_jagat_personality_modifier = {
+	land_morale = 0.15
+	reinforce_cost_modifier = 1.5
+	drill_decay_modifier = -0.5
+	discipline = 0.1
+	fire_damage = 0.1
+	infantry_power = 0.15
+	is_rajput_modifier = yes
+}
+one_v_one_nra_sawai_personality_modifier = {
+	reinforce_cost_modifier = -0.25
+	infantry_power = 0.1
+	regiment_manpower_usage = -0.1
+	is_rajput_modifier = yes
+}
+# Bri Comp:
+one_v_one_nbc_edward_personality_modifier = {
+	discipline = 0.05
+	is_marine_modifier = yes
+}
+# Mughals:
+one_v_one_nmu_mirza_personality_modifier = {
+	local_tax_modifier = 0.2
+}
+# Bukhara:
+one_v_one_nbu_ilbars_personality_modifier = {
+	local_development_cost = -0.2
+	local_friendly_movement_speed = 0.2
+	local_tax_modifier = 1
+	local_manpower_modifier = 0.33
+	province_trade_power_modifier = 0.25
+	allowed_num_of_buildings = 1
+}
+# Hyderabad:
+# Mysore:
+one_v_one_nmy_nanja_personality_modifier = {
+	infantry_power = 0.1
+	fire_damage_received = -0.1
+	is_mercenary_modifier = yes
+}
+# Fra Comp:
+###############
 # Roman Wars scenario:
 one_v_one_re_alt_nullify = {
 	country_admin_power = -10
@@ -939,6 +1112,10 @@ one_v_one_re_alt_nullify = {
 	max_flagships = -2
 	governing_capacity = -1000
 	free_leader_pool = -10
+}
+one_v_one_mission_construct_modifier_re = {
+	regiment_recruit_speed = -0.25
+	global_ship_recruit_speed = -0.25
 }
 one_v_one_re_subject_penalty = {
 	idea_cost = 10
@@ -1065,7 +1242,6 @@ one_v_one_mission_re_inf_l_buf_2_modifier = {
 	land_forcelimit_modifier = 0.1
 	global_manpower = 200
 	regiment_manpower_usage = -0.125
-	special_unit_forcelimit = 0.15
 }
 one_v_one_mission_re_inf_l_buf_2_modifier_alt = {
 	global_regiment_cost = -0.2
@@ -1074,10 +1250,9 @@ one_v_one_mission_re_inf_l_buf_2_modifier_alt = {
 	land_forcelimit_modifier = 0.1
 	global_manpower = 66
 	regiment_manpower_usage = -0.125
-	special_unit_forcelimit = 0.15
 }
 one_v_one_mission_re_inf_l_buf_3_modifier = {
-	military_tactics = 0.4
+	military_tactics = 0.3
 	infantry_fire = 0.35
 	infantry_shock = 0.35
 	fire_damage_received = -0.075
@@ -1086,6 +1261,7 @@ one_v_one_mission_re_inf_l_buf_3_modifier = {
 	prestige_from_land = 0.25
 	yearly_army_professionalism = 0.02
 	infantry_cost = 0.075
+	assault_fort_ability = -0.2
 }
 ### ### ###
 one_v_one_mission_re_inf_m_buf_1_modifier = {
@@ -1149,16 +1325,16 @@ one_v_one_mission_re_cav_l_buf_2_modifier = {
 	cavalry_cost = 0.05
 }
 one_v_one_mission_re_cav_l_buf_3_modifier = {
-	military_tactics = 0.4
+	military_tactics = 0.3
 	land_morale = 0.1
 	discipline = 0.05
 	shock_damage_received = -0.075
 	fire_damage_received = -0.075
 	yearly_army_professionalism = 0.03
-	special_unit_forcelimit = 0.15
 	reinforce_speed = 0.1
 	drill_decay_modifier = -0.15
 	cavalry_cost = 0.025
+	assault_fort_ability = -0.2
 }
 ### ### ###
 one_v_one_mission_re_cav_m_buf_1_modifier = {
@@ -1225,13 +1401,16 @@ one_v_one_mission_re_adm_buf_1_modifier_alt = {
 	governing_capacity = 600
 }
 one_v_one_mission_re_adm_buf_2_modifier = {
-	expand_infrastructure_cost_modifier = -0.075
-	# Adm and Dip give +1 extra dev
-	one_v_one_dev_adm_modifier = 1
+	expand_infrastructure_cost_modifier = -0.1
+	# Dip give +2 extra dev
 	one_v_one_dev_dip_modifier = 1
+	# centralizing gives 1/1/1 dev in state
+	one_v_one_centralize_state_all_dev_modifier = 1
+	reform_progress_growth = 5
+	centralize_state_cost = -0.15
 }
 one_v_one_mission_re_adm_buf_3_modifier = {
-	country_admin_power = 2
+	country_admin_power = 3
 	yearly_innovativeness = 5
 	all_power_cost = -0.05
 	technology_cost = -0.1
@@ -1242,6 +1421,18 @@ one_v_one_mission_re_adm_buf_3_modifier = {
 	yearly_absolutism = 5
 	adm_advisor_cost = -0.33
 	inflation_reduction = 0.5
+	development_cost_modifier = -0.15
+}
+one_v_one_mission_re_adm_buf_3_modifier_alt = {
+	country_admin_power = 1
+	build_cost = -0.33
+	build_time = -0.5
+	global_allowed_num_of_buildings = 1
+	state_maintenance_modifier = -0.5
+	# +1 dev from Manufactories (remove ability from eco ideas for that scenario)
+	one_v_one_dev_from_manu = 1
+	global_tax_modifier = 0.6
+	governing_capacity = 600
 }
 ### ### ###
 one_v_one_mission_re_dip_buf_1_modifier = {

@@ -1,5 +1,5 @@
 one_v_one_starting_nation = {
-	OR = { tag = IVE tag = IGE tag = MTU tag = MMM tag = JNO tag = JSO tag = IMU tag = IDC one_v_one_fra_spa_starting_nation = yes one_v_one_napoleonic_starting_nation = yes one_v_one_tyw_starting_nation = yes one_v_one_gtw_starting_nation = yes one_v_one_re_starting_nation = yes one_v_one_as_starting_nation = yes one_v_one_syw_starting_nation = yes one_v_one_ww_starting_nation = yes }
+	OR = { tag = IVE tag = IGE tag = MTU tag = MMM tag = JNO tag = JSO tag = IMU tag = IDC one_v_one_fra_spa_starting_nation = yes one_v_one_napoleonic_starting_nation = yes one_v_one_hyw_starting_nation = yes one_v_one_tyw_starting_nation = yes one_v_one_gtw_starting_nation = yes one_v_one_re_starting_nation = yes one_v_one_as_starting_nation = yes one_v_one_syw_starting_nation = yes one_v_one_nsi_starting_nation = yes one_v_one_ww_starting_nation = yes }
 }
 one_v_one_fra_spa_starting_nation = {
 	one_v_one_succ_nations = yes
@@ -8,6 +8,10 @@ one_v_one_fra_spa_starting_nation = {
 one_v_one_napoleonic_starting_nation = {
 	one_v_one_nap_nations = yes
 	NOT = { has_country_flag = one_v_one_napoleonic_starting_nation_flag }
+}
+one_v_one_hyw_starting_nation = {
+	one_v_one_hyw_nations = yes
+	NOT = { has_country_flag = one_v_one_hyw_starting_nation_flag }
 }
 one_v_one_tyw_starting_nation = {
 	one_v_one_tyw_nations = yes
@@ -28,6 +32,10 @@ one_v_one_as_starting_nation = {
 one_v_one_syw_starting_nation = {
 	one_v_one_syw_nations = yes
 	NOT = { has_country_flag = one_v_one_syw_starting_nation_flag }
+}
+one_v_one_nsi_starting_nation = {
+	one_v_one_nsi_nations = yes
+	NOT = { has_country_flag = one_v_one_nsi_starting_nation_flag }
 }
 one_v_one_ww_starting_nation = {
 	one_v_one_ww_nations = yes
@@ -51,6 +59,9 @@ one_v_one_succ_nations = {
 one_v_one_nap_nations = {
 	OR = { tag = NFR tag = NSP tag = NRH tag = NIT tag = NTU tag = NRU tag = NAU tag = NPR tag = NGB tag = NSW }
 }
+one_v_one_hyw_nations = {
+	OR = { tag = HYF tag = HYC tag = HYS tag = HYE tag = HYB tag = HYP }
+}
 one_v_one_tyw_nations = {
 	OR = { tag = TFR tag = TSW tag = TGB tag = TPG tag = TDN tag = TPL tag = TAS tag = TSP tag = TCG tag = TIT }
 }
@@ -69,6 +80,9 @@ one_v_one_as_nations = {
 one_v_one_syw_nations = {
 	OR = { tag = SPR tag = SGB tag = SUA tag = SCN tag = SPO tag = SBR tag = SAU tag = SFR tag = SLU tag = SQU tag = SSP tag = SNS }
 }
+one_v_one_nsi_nations = {
+	OR = { tag = NIR tag = NKA tag = NMA tag = NRA tag = NBC tag = NMU tag = NBU tag = NHY tag = NMY tag = NFC }
+}
 one_v_one_ww_nations = {
 	OR = { tag = WWG tag = WWA tag = WWO tag = WWL tag = WWF tag = WWB tag = WWR tag = WWI }
 }
@@ -80,7 +94,7 @@ one_v_one_subject_nations = {
 }
 one_v_one_idea_groups = {
 	if = {
-		limit = { one_v_one_gtw_nations = yes }
+		limit = { OR = { one_v_one_hyw_nations = yes one_v_one_gtw_nations = yes one_v_one_nsi_nations = yes } }
 		has_country_flag = one_v_one_commanders_chosen_flag
 	}
 	if = {
@@ -106,6 +120,27 @@ one_v_one_fort_per_area_trigger = {
 	if = {
 		limit = { NOT = { OR = { started_in = 1807.1.1 started_in = 1807.1.2 } } }
 		if = {
+			limit = {
+				FROM = { tag = HYS }
+			}
+			NOT = {
+				area_for_scope_province = {
+					owner = { tag = ROOT }
+					NOT = { area = lowlands_area }
+					OR = {
+						has_building = fort_15th
+						has_construction = fort_15th
+						has_building = fort_16th
+						has_construction = fort_16th
+						has_building = fort_17th
+						has_construction = fort_17th
+						has_building = fort_18th
+						has_construction = fort_18th
+					}
+				}
+			}
+		}
+		else_if = {
 			limit = {
 				FROM = { tag = SPO }
 			}
@@ -150,6 +185,19 @@ one_v_one_fort_per_area_keep = {
 	if = {
 		limit = { NOT = { OR = { started_in = 1807.1.1 started_in = 1807.1.2 } } }
 		if = {
+			limit = {
+				FROM = { tag = HYS }
+			}
+			NOT = {
+				area_for_scope_province = {
+					NOT = { province_id = ROOT }
+					NOT = { area = lowlands_area }
+					owner = { tag = ROOT }
+					has_fort_building_trigger = yes
+				}
+			}
+		}
+		else_if = {
 			limit = {
 				FROM = { tag = SPO }
 			}
@@ -251,6 +299,27 @@ one_v_one_re_raid_prov = {
 		province_id = 2315
 		province_id = 2320
 		province_id = 359
+	}
+}
+one_v_one_hyw_raid_prov = {
+	OR = {
+		area = basque_country
+		area = pyrenees_areaa
+		area = aragon_area
+		area = catalonia_area
+		area = valencia_area
+		area = baleares_area
+		province_id = 1746
+		province_id = 4789
+		province_id = 2755
+		province_id = 217
+		province_id = 2751
+		province_id = 4547
+		province_id = 221
+		province_id = 1748
+		province_id = 222
+		province_id = 223
+		province_id = 4546
 	}
 }
 one_v_one_privilege_limited = {

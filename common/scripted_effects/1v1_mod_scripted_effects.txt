@@ -1,6 +1,14 @@
 #################
 # STARTING STUFF:
 discover_ige_v_ive_provinces = {
+	if = {
+		limit = { tag = IGE }
+		every_province = { limit = { owned_by = IVE owned_by = MWG } undiscover_country = ROOT }
+	}
+	if = {
+		limit = { tag = IVE }
+		every_province = { limit = { owned_by = IGE owned_by = MWG } undiscover_country = ROOT }
+	}
 	1297 = { discover_country = ROOT }
 	1298 = { discover_country = ROOT }
 	1303 = { discover_country = ROOT }
@@ -17,6 +25,14 @@ discover_ige_v_ive_provinces = {
 #################
 #################
 discover_mtu_v_mmm_provinces = {
+	if = {
+		limit = { tag = MTU }
+		every_province = { limit = { owned_by = MMM owned_by = MWG } undiscover_country = ROOT }
+	}
+	if = {
+		limit = { tag = MMM }
+		every_province = { limit = { owned_by = MTU owned_by = MWG } undiscover_country = ROOT }
+	}
 	137 = { discover_country = ROOT }
 	1302 = { discover_country = ROOT }
 	1304 = { discover_country = ROOT }
@@ -62,6 +78,14 @@ discover_mtu_v_mmm_provinces = {
 #################
 #################
 discover_imu_v_idc_provinces = {
+	if = {
+		limit = { tag = IMU }
+		every_province = { limit = { owned_by = IDC owned_by = MWG } undiscover_country = ROOT }
+	}
+	if = {
+		limit = { tag = IDC }
+		every_province = { limit = { owned_by = IMU owned_by = MWG } undiscover_country = ROOT }
+	}
 	1336 = { discover_country = ROOT }
 	1337 = { discover_country = ROOT }
 	1338 = { discover_country = ROOT }
@@ -77,6 +101,14 @@ discover_imu_v_idc_provinces = {
 #################
 #################
 discover_jno_v_jso_provinces = {
+	if = {
+		limit = { tag = JNO }
+		every_province = { limit = { owned_by = JSO owned_by = MWG } undiscover_country = ROOT }
+	}
+	if = {
+		limit = { tag = JSO }
+		every_province = { limit = { owned_by = JNO owned_by = MWG } undiscover_country = ROOT }
+	}
 	1392 = { discover_country = ROOT }
 	1389 = { discover_country = ROOT }
 	1376 = { discover_country = ROOT }
@@ -101,10 +133,12 @@ discover_wfr_v_wsp_provinces = {
 	if = {
 		limit = { OR = { tag = WFR tag = WSP } }
 		every_province = { limit = { OR = { owned_by = WFR owned_by = WSP } } discover_country = ROOT }
+		every_province = { limit = { OR = { owned_by = WAU owned_by = WGB owned_by = MWG } } undiscover_country = ROOT }
 	}
 	if = {
 		limit = { OR = { tag = WAU tag = WGB } }
 		every_province = { limit = { OR = { owned_by = WAU owned_by = WGB } } discover_country = ROOT }
+		every_province = { limit = { OR = { owned_by = WFR owned_by = WSP owned_by = MWG } } undiscover_country = ROOT }
 	}
 	celtic_sea_area = { discover_country = ROOT }
 	1287 = { discover_country = ROOT }
@@ -138,10 +172,12 @@ discover_napoleonic_provinces = {
 	if = {
 		limit = { OR = { tag = NFR tag = NSP tag = NRH tag = NIT tag = NTU } }
 		every_province = { limit = { OR = { owned_by = NFR owned_by = NSP owned_by = NRH owned_by = NIT owned_by = NTU } } discover_country = ROOT }
+		every_province = { limit = { OR = { owned_by = NRU owned_by = NAU owned_by = NPR owned_by = NGB owned_by = NSW owned_by = MWG } } undiscover_country = ROOT }
 	}
 	if = {
 		limit = { OR = { tag = NRU tag = NAU tag = NPR tag = NGB tag = NSW } }
 		every_province = { limit = { OR = { owned_by = NRU owned_by = NAU owned_by = NPR owned_by = NGB owned_by = NSW } } discover_country = ROOT }
+		every_province = { limit = { OR = { owned_by = NFR owned_by = NSP owned_by = NRH owned_by = NIT owned_by = NTU owned_by = MWG } } undiscover_country = ROOT }
 	}
 	baltic_area = { discover_country = ROOT }
 	kattegat_area = { discover_country = ROOT }
@@ -179,14 +215,57 @@ discover_napoleonic_provinces = {
 }
 #################
 #################
+discover_hundred_years_provinces = {
+	if = {
+		limit = { OR = { tag = HYF tag = HYC tag = HYS } }
+		every_province = { limit = { OR = { owned_by = HYF owned_by = HYC owned_by = HYS } } discover_country = ROOT }
+		every_province = { limit = { OR = { owned_by = HYE owned_by = HYB owned_by = HYP owned_by = MWG } } undiscover_country = ROOT }
+	}
+	if = {
+		limit = { OR = { tag = HYE tag = HYB tag = HYP } }
+		every_province = { limit = { OR = { owned_by = HYE owned_by = HYB owned_by = HYP } } discover_country = ROOT }
+		every_province = { limit = { OR = { owned_by = HYF owned_by = HYC owned_by = HYS owned_by = MWG } } undiscover_country = ROOT }
+	}
+	celtic_sea_area = { discover_country = ROOT }
+	1287 = { discover_country = ROOT }
+	1286 = { discover_country = ROOT }
+	1283 = { discover_country = ROOT }
+	1299 = { discover_country = ROOT }
+	north_sea_area = { discover_country = ROOT }
+	english_channel_area = { discover_country = ROOT }
+	bay_of_biscay_area = { discover_country = ROOT }
+	1290 = { discover_country = ROOT }
+	1291 = { discover_country = ROOT }
+	1292 = { discover_country = ROOT }
+	1293 = { discover_country = ROOT }
+	1294 = { discover_country = ROOT }
+	1295 = { discover_country = ROOT }
+	1296 = { discover_country = ROOT }
+	1297 = { discover_country = ROOT }
+	1300 = { discover_country = ROOT }
+	1301 = { discover_country = ROOT }
+	every_owned_province = { limit = { units_in_province = 1 } kill_units = { who = owner } }
+	define_explorer = { shock = 1 fire = 1 manuever = 1 siege = 1 }
+	hidden_effect = { 4378 = { center_of_trade = 1 } 373 = { center_of_trade = 1 } 4121 = { center_of_trade = 1 } 248 = { center_of_trade = 1 } 243 = { center_of_trade = 1 } 239 = { center_of_trade = 1 } 236 = { center_of_trade = 1 } 100 = { center_of_trade = 1 } 96 = { center_of_trade = 1 } 168 = { center_of_trade = 1 } 183 = { center_of_trade = 1 } 186 = { center_of_trade = 1 } 4766 = { center_of_trade = 1 } 192 = { center_of_trade = 1 } 172 = { center_of_trade = 1 } 195 = { center_of_trade = 1 } 174 = { center_of_trade = 1 } 2753 = { center_of_trade = 1 } 213 = { center_of_trade = 1 } 220 = { center_of_trade = 1 } 4552 = { center_of_trade = 1 } 217 = { center_of_trade = 1 } 219 = { center_of_trade = 1 } 231 = { center_of_trade = 1 } 216 = { center_of_trade = 1 } 227 = { center_of_trade = 1 } 224 = { center_of_trade = 1 } 1751 = { center_of_trade = 1 } }
+	if = {
+		limit = { tag = HYF }
+		HYF = { set_variable = { which = one_v_one_manpower_dev value = 225 } }
+	}
+	183 = { add_permanent_claim = HYE }
+	177 = { add_permanent_claim = HYF }
+}
+#################
+#################
 discover_thirty_years_provinces = {
 	if = {
 		limit = { OR = { tag = TFR tag = TSW tag = TGB tag = TPG tag = TDN } }
 		every_province = { limit = { OR = { owned_by = TFR owned_by = TSW owned_by = TGB owned_by = TPG owned_by = TDN } } discover_country = ROOT }
+		every_province = { limit = { OR = { owned_by = TPL owned_by = TAS owned_by = TSP owned_by = TCG owned_by = TIT owned_by = MWG } } undiscover_country = ROOT }
 	}
 	if = {
 		limit = { OR = { tag = TPL tag = TAS tag = TSP tag = TCG tag = TIT } }
 		every_province = { limit = { OR = { owned_by = TPL owned_by = TAS owned_by = TSP owned_by = TCG owned_by = TIT } } discover_country = ROOT }
+		every_province = { limit = { OR = { owned_by = TFR owned_by = TSW owned_by = TGB owned_by = TPG owned_by = TDN owned_by = MWG } } undiscover_country = ROOT }
 	}
 	white_sea_area = { discover_country = ROOT }
 	1265 = { discover_country = ROOT }
@@ -224,10 +303,12 @@ discover_great_turkish_war_provinces = {
 	if = {
 		limit = { OR = { tag = GTO tag = GEC tag = GEB tag = GEA tag = GFR } }
 		every_province = { limit = { OR = { owned_by = GTO owned_by = GEC owned_by = GEB owned_by = GEA owned_by = GFR } } discover_country = ROOT }
+		every_province = { limit = { OR = { owned_by = GAU owned_by = GPL owned_by = GIT owned_by = GSP owned_by = GRU owned_by = MWG } } undiscover_country = ROOT }
 	}
 	if = {
 		limit = { OR = { tag = GAU tag = GPL tag = GIT tag = GSP tag = GRU } }
 		every_province = { limit = { OR = { owned_by = GAU owned_by = GPL owned_by = GIT owned_by = GSP owned_by = GRU } } discover_country = ROOT }
+		every_province = { limit = { OR = { owned_by = GTO owned_by = GEC owned_by = GEB owned_by = GEA owned_by = GFR owned_by = MWG } } undiscover_country = ROOT }
 	}
 	if = {
 		limit = { started_in = 1676.1.1 NOT = { started_in = 1676.1.2 } }
@@ -271,14 +352,27 @@ discover_great_turkish_war_provinces = {
 #################
 discover_roman_wars_provinces = {
 	if = {
+		limit = { started_in = 1685.1.1 NOT = { started_in = 1685.1.2 } }
+		if = {
+			limit = { tag = REW }
+			every_province = { limit = { OR = { owned_by = REE owned_by = MWG } } undiscover_country = ROOT }
+		}
+		if = {
+			limit = { tag = REE }
+			every_province = { limit = { OR = { owned_by = REW owned_by = MWG } } undiscover_country = ROOT }
+		}
+	}
+	if = {
 		limit = { started_in = 1685.1.2 NOT = { started_in = 1685.1.3 } }
 		if = {
 			limit = { OR = { tag = REW tag = RWN tag = RWS } }
 			every_province = { limit = { OR = { owned_by = REW owned_by = RWN owned_by = RWS } } discover_country = ROOT }
+			every_province = { limit = { OR = { owned_by = REE owned_by = REN owned_by = RES owned_by = MWG } } undiscover_country = ROOT }
 		}
 		if = {
 			limit = { OR = { tag = REE tag = REN tag = RES } }
 			every_province = { limit = { OR = { owned_by = REE owned_by = REN owned_by = RES } } discover_country = ROOT }
+			every_province = { limit = { OR = { owned_by = REW owned_by = RWN owned_by = RWS owned_by = MWG } } undiscover_country = ROOT }
 		}
 	}
 	1270 = { discover_country = ROOT }
@@ -309,10 +403,12 @@ discover_austrian_succession_provinces = {
 	if = {
 		limit = { OR = { tag = AAU tag = AGB tag = ANE tag = ARU tag = AIT tag = AHA } }
 		every_province = { limit = { OR = { owned_by = AAU owned_by = AGB owned_by = ANE owned_by = ARU owned_by = AIT owned_by = AHA owned_by = TYN } } discover_country = ROOT }
+		every_province = { limit = { OR = { owned_by = APR owned_by = AFR owned_by = ASP owned_by = ASW owned_by = APL owned_by = ABA owned_by = TYN owned_by = MWG } } undiscover_country = ROOT }
 	}
 	if = {
 		limit = { OR = { tag = APR tag = AFR tag = ASP tag = ASW tag = APL tag = ABA } }
 		every_province = { limit = { OR = { owned_by = APR owned_by = AFR owned_by = ASP owned_by = ASW owned_by = APL owned_by = ABA owned_by = TYN } } discover_country = ROOT }
+		every_province = { limit = { OR = { owned_by = AAU owned_by = AGB owned_by = ANE owned_by = ARU owned_by = AIT owned_by = AHA owned_by = TYN owned_by = MWG } } undiscover_country = ROOT }
 	}
 	white_sea_area = { discover_country = ROOT }
 	1265 = { discover_country = ROOT }
@@ -354,11 +450,13 @@ discover_seven_years_provinces = {
 	if = {
 		limit = { OR = { tag = SPR tag = SGB tag = SUA tag = SCN tag = SPO tag = SBR } }
 		every_province = { limit = { OR = { owned_by = SPR owned_by = SGB owned_by = SUA owned_by = SCN owned_by = SPO owned_by = SBR } } discover_country = ROOT }
+		every_province = { limit = { OR = { owned_by = SAU owned_by = SFR owned_by = SLU owned_by = SQU owned_by = SSP owned_by = SNS owned_by = MWG } } undiscover_country = ROOT }
 		every_neighbor_province = { limit = { OR = { owned_by = TYN owned_by = TYM } } discover_country = ROOT }
 	}
 	if = {
 		limit = { OR = { tag = SAU tag = SFR tag = SLU tag = SQU tag = SSP tag = SNS } }
 		every_province = { limit = { OR = { owned_by = SAU owned_by = SFR owned_by = SLU owned_by = SQU owned_by = SSP owned_by = SNS } } discover_country = ROOT }
+		every_province = { limit = { OR = { owned_by = SPR owned_by = SGB owned_by = SUA owned_by = SCN owned_by = SPO owned_by = SBR owned_by = MWG } } undiscover_country = ROOT }
 		every_neighbor_province = { limit = { OR = { owned_by = TYN owned_by = TYM } } discover_country = ROOT }
 	}
 	baltic_sea_region = { discover_country = ROOT }
@@ -394,15 +492,49 @@ discover_seven_years_provinces = {
 }
 #################
 #################
+discover_nader_shah_provinces = {
+	if = {
+		limit = { OR = { tag = NIR tag = NKA tag = NMA tag = NRA tag = NBC } }
+		every_province = { limit = { OR = { owned_by = NIR owned_by = NKA owned_by = NMA owned_by = NRA owned_by = NBC } } discover_country = ROOT }
+		every_province = { limit = { OR = { owned_by = NMU owned_by = NBU owned_by = NHY owned_by = NMY owned_by = NFC owned_by = MWG } } undiscover_country = ROOT }
+	}
+	if = {
+		limit = { OR = { tag = NMU tag = NBU tag = NHY tag = NMY tag = NFC } }
+		every_province = { limit = { OR = { owned_by = NMU owned_by = NBU owned_by = NHY owned_by = NMY owned_by = NFC } } discover_country = ROOT }
+		every_province = { limit = { OR = { owned_by = NIR owned_by = NKA owned_by = NMA owned_by = NRA owned_by = NBC owned_by = MWG } } undiscover_country = ROOT }
+	}
+	persian_gulf_area = { discover_country = ROOT }
+	1333 = { discover_country = ROOT }
+	1336 = { discover_country = ROOT }
+	1337 = { discover_country = ROOT }
+	1338 = { discover_country = ROOT }
+	1339 = { discover_country = ROOT }
+	1452 = { discover_country = ROOT }
+	1615 = { discover_country = ROOT }
+	1616 = { discover_country = ROOT }
+	1340 = { discover_country = ROOT }
+	1619 = { discover_country = ROOT }
+	1621 = { discover_country = ROOT }
+	1622 = { discover_country = ROOT }
+	bay_of_bengal_area = { discover_country = ROOT }
+	andaman_sea_area = { discover_country = ROOT }
+	every_owned_province = { limit = { units_in_province = 1 } kill_units = { who = owner } }
+	define_explorer = { shock = 1 fire = 1 manuever = 1 siege = 1 }
+	hidden_effect = { 400 = { center_of_trade = 1 } 2999 = { center_of_trade = 1 } 4332 = { center_of_trade = 1 } 412 = { center_of_trade = 1 } 2210 = { center_of_trade = 1 } 4326 = { center_of_trade = 1 } 428 = { center_of_trade = 1 } 4341 = { center_of_trade = 1 } 421 = { center_of_trade = 1 } 330 = { center_of_trade = 1 } 4301 = { center_of_trade = 1 } 1856 = { center_of_trade = 1 } 2199 = { center_of_trade = 1 } 464 = { center_of_trade = 1 } 465 = { center_of_trade = 1 } 2362 = { center_of_trade = 1 } 442 = { center_of_trade = 1 } 458 = { center_of_trade = 1 } 461 = { center_of_trade = 1 } 451 = { center_of_trade = 1 } 578 = { center_of_trade = 1 } 507 = { center_of_trade = 1 } 506 = { center_of_trade = 1 } 504 = { center_of_trade = 1 } 2058 = { center_of_trade = 1 } 4457 = { center_of_trade = 1 } 517 = { center_of_trade = 1 } 522 = { center_of_trade = 1 } 2063 = { center_of_trade = 1 } 556 = { center_of_trade = 1 } 525 = { center_of_trade = 1 } 527 = { center_of_trade = 1 } 4443 = { center_of_trade = 1 } 4435 = { center_of_trade = 1 } 542 = { center_of_trade = 1 } 541 = { center_of_trade = 1 } 531 = { center_of_trade = 1 } 533 = { center_of_trade = 1 } 537 = { center_of_trade = 1 } 2100 = { center_of_trade = 1 } 4417 = { center_of_trade = 1 } 543 = { center_of_trade = 1 } 4447 = { center_of_trade = 1 } 552 = { center_of_trade = 1 } 561 = { center_of_trade = 1 } 4489 = { center_of_trade = 1 } 4479 = { center_of_trade = 1 } 4474 = { center_of_trade = 1 } 2041 = { center_of_trade = 1 } 584 = { center_of_trade = 1 } 586 = { center_of_trade = 1 } }
+}
+#################
+#################
 discover_ww_provinces = {
 	if = {
 		limit = { OR = { tag = WWG tag = WWA tag = WWO tag = WWL } }
 		every_province = { limit = { OR = { owned_by = WWG owned_by = WWA owned_by = WWO owned_by = WWL } } discover_country = ROOT }
+		every_province = { limit = { OR = { owned_by = WWF owned_by = WWB owned_by = WWR owned_by = WWI owned_by = MWG } } undiscover_country = ROOT }
 		every_neighbor_province = { limit = { owned_by = WWN } discover_country = ROOT }
 	}
 	if = {
 		limit = { OR = { tag = WWF tag = WWB tag = WWR tag = WWI } }
 		every_province = { limit = { OR = { owned_by = WWF owned_by = WWB owned_by = WWR owned_by = WWI } } discover_country = ROOT }
+		every_province = { limit = { OR = { owned_by = WWG owned_by = WWA owned_by = WWO owned_by = WWL owned_by = MWG } } undiscover_country = ROOT }
 		every_neighbor_province = { limit = { owned_by = WWN } discover_country = ROOT }
 	}
 	baltic_area = { discover_country = ROOT }
@@ -2536,6 +2668,1286 @@ set_gtw_ban_chosen_flag = {
 }
 #############
 #############
+# NADER SHAH INVASION
+# Mission effect:
+one_v_one_mission_effect_nsi = {
+	if = {
+		limit = { NOT = { tag = NIR } }
+		NIR = {
+			if = {
+				limit = { has_country_flag = nir_chose_nation_nader_flag }
+				one_v_one_nir_mission_select_nader_tag = yes
+			}
+			if = {
+				limit = { has_country_flag = nir_chose_nation_afshar_flag }
+				one_v_one_nir_mission_select_afshar_tag = yes
+			}
+			if = {
+				limit = { has_country_flag = nir_chose_nation_khorasan_flag }
+				one_v_one_nir_mission_select_khorasan_tag = yes
+			}
+		}
+	}
+	if = {
+		limit = { NOT = { tag = NKA } }
+		NKA = {
+			if = {
+				limit = { has_country_flag = nka_chose_nation_heraclius_flag }
+				one_v_one_nka_mission_select_heraclius_tag = yes
+			}
+			if = {
+				limit = { has_country_flag = nka_chose_nation_erekle_flag }
+				one_v_one_nka_mission_select_erekle_tag = yes
+			}
+			if = {
+				limit = { has_country_flag = nka_chose_nation_bagrationi_flag }
+				one_v_one_nka_mission_select_bagrationi_tag = yes
+			}
+		}
+	}
+	if = {
+		limit = { NOT = { tag = NMA } }
+		NMA = {
+			if = {
+				limit = { has_country_flag = nma_chose_nation_baji_flag }
+				one_v_one_nma_mission_select_baji_tag = yes
+			}
+			if = {
+				limit = { has_country_flag = nma_chose_nation_chimaji_flag }
+				one_v_one_nma_mission_select_chimaji_tag = yes
+			}
+			if = {
+				limit = { has_country_flag = nma_chose_nation_ranoji_flag }
+				one_v_one_nma_mission_select_ranoji_tag = yes
+			}
+		}
+	}
+	if = {
+		limit = { NOT = { tag = NRA } }
+		NRA = {
+			if = {
+				limit = { has_country_flag = nra_chose_nation_jagat_flag }
+				one_v_one_nra_mission_select_jagat_tag = yes
+			}
+			if = {
+				limit = { has_country_flag = nra_chose_nation_sawai_flag }
+				one_v_one_nra_mission_select_sawai_tag = yes
+			}
+			if = {
+				limit = { has_country_flag = nra_chose_nation_maharana_flag }
+				one_v_one_nra_mission_select_maharana_tag = yes
+			}
+		}
+	}
+	if = {
+		limit = { NOT = { tag = NBC } }
+		NBC = {
+			if = {
+				limit = { has_country_flag = nbc_chose_nation_stringer_flag }
+				one_v_one_nbc_mission_select_stringer_tag = yes
+			}
+			if = {
+				limit = { has_country_flag = nbc_chose_nation_edward_flag }
+				one_v_one_nbc_mission_select_edward_tag = yes
+			}
+			if = {
+				limit = { has_country_flag = nbc_chose_nation_robert_flag }
+				one_v_one_nbc_mission_select_robert_tag = yes
+			}
+		}
+	}
+	if = {
+		limit = { NOT = { tag = NMU } }
+		NMU = {
+			if = {
+				limit = { has_country_flag = nmu_chose_nation_muhammad_flag }
+				one_v_one_nmu_mission_select_muhammad_tag = yes
+			}
+			if = {
+				limit = { has_country_flag = nmu_chose_nation_roshan_flag }
+				one_v_one_nmu_mission_select_roshan_tag = yes
+			}
+			if = {
+				limit = { has_country_flag = nmu_chose_nation_mirza_flag }
+				one_v_one_nmu_mission_select_mirza_tag = yes
+			}
+		}
+	}
+	if = {
+		limit = { NOT = { tag = NBU } }
+		NBU = {
+			if = {
+				limit = { has_country_flag = nbu_chose_nation_abu_flag }
+				one_v_one_nbu_mission_select_abu_tag = yes
+			}
+			if = {
+				limit = { has_country_flag = nbu_chose_nation_hakim_flag }
+				one_v_one_nbu_mission_select_hakim_tag = yes
+			}
+			if = {
+				limit = { has_country_flag = nbu_chose_nation_mitrovic_flag }
+				one_v_one_nbu_mission_select_ilbars_tag = yes
+			}
+		}
+	}
+	if = {
+		limit = { NOT = { tag = NHY } }
+		NHY = {
+			if = {
+				limit = { has_country_flag = nhy_chose_nation_asaf_flag }
+				one_v_one_nhy_mission_select_asaf_tag = yes
+			}
+			if = {
+				limit = { has_country_flag = nhy_chose_nation_nasir_flag }
+				one_v_one_nhy_mission_select_nasir_tag = yes
+			}
+			if = {
+				limit = { has_country_flag = nhy_chose_nation_nizam_flag }
+				one_v_one_nhy_mission_select_nizam_tag = yes
+			}
+		}
+	}
+	if = {
+		limit = { NOT = { tag = NMY } }
+		NMY = {
+			if = {
+				limit = { has_country_flag = nmy_chose_nation_krishnaraja_flag }
+				one_v_one_nmy_mission_select_krishnaraja_tag = yes
+			}
+			if = {
+				limit = { has_country_flag = nmy_chose_nation_hyder_flag }
+				one_v_one_nmy_mission_select_hyder_tag = yes
+			}
+			if = {
+				limit = { has_country_flag = nmy_chose_nation_nanja_flag }
+				one_v_one_nmy_mission_select_nanja_tag = yes
+			}
+		}
+	}
+	if = {
+		limit = { NOT = { tag = NFC } }
+		NFC = {
+			if = {
+				limit = { has_country_flag = nfc_chose_nation_joseph_flag }
+				one_v_one_nfc_mission_select_joseph_tag = yes
+			}
+			if = {
+				limit = { has_country_flag = nfc_chose_nation_bertrand_flag }
+				one_v_one_nfc_mission_select_bertrand_tag = yes
+			}
+			if = {
+				limit = { has_country_flag = nfc_chose_nation_philibert_flag }
+				one_v_one_nfc_mission_select_philibert_tag = yes
+			}
+		}
+	}
+}
+### ### ###
+# Iran:
+one_v_one_nir_mission_select_nader_tag = {
+	set_country_flag = one_v_one_nsi_starting_nation_flag
+	swap_non_generic_missions = yes
+	hidden_effect = {
+		complete_mission = one_v_one_mission_nsi_nation_select_1_nir
+	}
+	define_ruler = {
+		name = "Nadir Shah"
+		dynasty = "Afsharid"
+		age = 34
+		ADM = 6
+		DIP = 6
+		MIL = 6
+		claim = 100
+	}
+	hidden_effect = {
+		add_ruler_personality = immortal_personality
+		add_ruler_personality = just_personality
+		add_ruler_personality = one_v_one_nir_nader_personality
+	}
+	custom_tooltip = one_v_one_nir_nader_personality_tt
+}
+one_v_one_nir_mission_select_afshar_tag = {
+	set_country_flag = one_v_one_nsi_starting_nation_flag
+	swap_non_generic_missions = yes
+	hidden_effect = {
+		complete_mission = one_v_one_mission_nsi_nation_select_3_nir
+	}
+	define_ruler = {
+		name = "Nadir"
+		dynasty = "Afsharid"
+		age = 34
+		ADM = 6
+		DIP = 6
+		MIL = 6
+		claim = 100
+	}
+	hidden_effect = {
+		add_ruler_personality = immortal_personality
+		add_ruler_personality = just_personality
+		add_ruler_personality = one_v_one_nir_afshar_personality
+	}
+}
+one_v_one_nir_mission_select_khorasan_tag = {
+	set_country_flag = one_v_one_nsi_starting_nation_flag
+	swap_non_generic_missions = yes
+	hidden_effect = {
+		complete_mission = one_v_one_mission_nsi_nation_select_5_nir
+	}
+	define_ruler = {
+		name = "Nadir Khorasan"
+		dynasty = "Afsharid"
+		age = 34
+		ADM = 6
+		DIP = 6
+		MIL = 6
+		claim = 100
+	}
+	hidden_effect = {
+		add_ruler_personality = immortal_personality
+		add_ruler_personality = just_personality
+		add_ruler_personality = one_v_one_nir_khorasan_personality
+	}
+}
+# Kakheti:
+one_v_one_nka_mission_select_heraclius_tag = {
+	set_country_flag = one_v_one_nsi_starting_nation_flag
+	swap_non_generic_missions = yes
+	hidden_effect = {
+		complete_mission = one_v_one_mission_nsi_nation_select_1_nka
+	}
+	define_ruler = {
+		name = "Heraclius II"
+		dynasty = "Bagrationi"
+		age = 34
+		ADM = 6
+		DIP = 6
+		MIL = 6
+		claim = 100
+	}
+	hidden_effect = {
+		add_ruler_personality = immortal_personality
+		add_ruler_personality = just_personality
+		add_ruler_personality = one_v_one_nka_heraclius_personality
+	}
+}
+one_v_one_nka_mission_select_erekle_tag = {
+	set_country_flag = one_v_one_nsi_starting_nation_flag
+	swap_non_generic_missions = yes
+	hidden_effect = {
+		complete_mission = one_v_one_mission_nsi_nation_select_3_nka
+	}
+	define_ruler = {
+		name = "Erekle Kakheti"
+		dynasty = "Bagrationi"
+		age = 34
+		ADM = 6
+		DIP = 6
+		MIL = 6
+		claim = 100
+	}
+	hidden_effect = {
+		add_ruler_personality = immortal_personality
+		add_ruler_personality = just_personality
+		add_ruler_personality = one_v_one_nka_erekle_personality
+		every_owned_province = {
+			limit = { OR = { has_terrain = mountain has_terrain = highlands } }
+			add_province_modifier = { name = one_v_one_nka_erekle_personality_modifier duration = -1 }
+		}
+	}
+}
+one_v_one_nka_mission_select_bagrationi_tag = {
+	set_country_flag = one_v_one_nsi_starting_nation_flag
+	swap_non_generic_missions = yes
+	hidden_effect = {
+		complete_mission = one_v_one_mission_nsi_nation_select_5_nka
+	}
+	define_ruler = {
+		name = "Erekle"
+		dynasty = "Bagrationi"
+		age = 34
+		ADM = 6
+		DIP = 6
+		MIL = 6
+		claim = 100
+	}
+	hidden_effect = {
+		add_ruler_personality = immortal_personality
+		add_ruler_personality = just_personality
+		add_ruler_personality = one_v_one_nka_bagrationi_personality
+	}
+}
+# Marathas:
+one_v_one_nma_mission_select_baji_tag = {
+	set_country_flag = one_v_one_nsi_starting_nation_flag
+	swap_non_generic_missions = yes
+	hidden_effect = {
+		complete_mission = one_v_one_mission_nsi_nation_select_1_nma
+	}
+	define_ruler = {
+		name = "Baji Rao I"
+		dynasty = "Bhat"
+		age = 34
+		ADM = 6
+		DIP = 6
+		MIL = 6
+		claim = 100
+	}
+	hidden_effect = {
+		add_ruler_personality = immortal_personality
+		add_ruler_personality = just_personality
+		add_ruler_personality = one_v_one_nma_baji_personality
+	}
+}
+one_v_one_nma_mission_select_chimaji_tag = {
+	set_country_flag = one_v_one_nsi_starting_nation_flag
+	swap_non_generic_missions = yes
+	hidden_effect = {
+		complete_mission = one_v_one_mission_nsi_nation_select_3_nma
+	}
+	define_ruler = {
+		name = "Chimaji Appa"
+		dynasty = "Bhat"
+		age = 34
+		ADM = 6
+		DIP = 6
+		MIL = 6
+		claim = 100
+	}
+	hidden_effect = {
+		add_ruler_personality = immortal_personality
+		add_ruler_personality = just_personality
+		add_ruler_personality = one_v_one_nma_chimaji_personality
+	}
+}
+one_v_one_nma_mission_select_ranoji_tag = {
+	set_country_flag = one_v_one_nsi_starting_nation_flag
+	swap_non_generic_missions = yes
+	hidden_effect = {
+		complete_mission = one_v_one_mission_nsi_nation_select_5_nma
+	}
+	define_ruler = {
+		name = "Ranoji"
+		dynasty = "Scindia"
+		age = 34
+		ADM = 6
+		DIP = 6
+		MIL = 6
+		claim = 100
+	}
+	hidden_effect = {
+		add_ruler_personality = immortal_personality
+		add_ruler_personality = just_personality
+		add_ruler_personality = one_v_one_nma_ranoji_personality
+	}
+}
+# Rajputana:
+one_v_one_nra_mission_select_jagat_tag = {
+	set_country_flag = one_v_one_nsi_starting_nation_flag
+	swap_non_generic_missions = yes
+	hidden_effect = {
+		complete_mission = one_v_one_mission_nsi_nation_select_1_nra
+	}
+	define_ruler = {
+		name = "Jagat Singh II"
+		dynasty = "Sisodiya"
+		age = 34
+		ADM = 6
+		DIP = 6
+		MIL = 6
+		claim = 100
+	}
+	hidden_effect = {
+		add_ruler_personality = immortal_personality
+		add_ruler_personality = just_personality
+		add_ruler_personality = one_v_one_nra_jagat_personality
+		add_country_modifier = { name = one_v_one_nra_jagat_personality_modifier duration = -1 hidden = yes }
+	}
+}
+one_v_one_nra_mission_select_sawai_tag = {
+	set_country_flag = one_v_one_nsi_starting_nation_flag
+	swap_non_generic_missions = yes
+	hidden_effect = {
+		complete_mission = one_v_one_mission_nsi_nation_select_3_nra
+	}
+	define_ruler = {
+		name = "Sawai Jai Singh II"
+		dynasty = "Kachhwaha"
+		age = 34
+		ADM = 6
+		DIP = 6
+		MIL = 6
+		claim = 100
+	}
+	hidden_effect = {
+		add_ruler_personality = immortal_personality
+		add_ruler_personality = just_personality
+		add_ruler_personality = one_v_one_nra_sawai_personality
+		add_country_modifier = { name = one_v_one_nra_sawai_personality_modifier duration = -1 hidden = yes }
+	}
+}
+one_v_one_nra_mission_select_maharana_tag = {
+	set_country_flag = one_v_one_nsi_starting_nation_flag
+	swap_non_generic_missions = yes
+	hidden_effect = {
+		complete_mission = one_v_one_mission_nsi_nation_select_5_nra
+	}
+	define_ruler = {
+		name = "Maharana Pratap"
+		dynasty = "Sisodia"
+		age = 34
+		ADM = 6
+		DIP = 6
+		MIL = 6
+		claim = 100
+	}
+	hidden_effect = {
+		add_ruler_personality = immortal_personality
+		add_ruler_personality = just_personality
+		add_ruler_personality = one_v_one_nra_maharana_personality
+	}
+}
+# Bri Comp:
+one_v_one_nbc_mission_select_stringer_tag = {
+	set_country_flag = one_v_one_nsi_starting_nation_flag
+	swap_non_generic_missions = yes
+	hidden_effect = {
+		complete_mission = one_v_one_mission_nsi_nation_select_1_nbc
+	}
+	define_ruler = {
+		name = "Stringer Lawrence"
+		age = 34
+		ADM = 6
+		DIP = 6
+		MIL = 6
+		claim = 100
+	}
+	hidden_effect = {
+		add_ruler_personality = immortal_personality
+		add_ruler_personality = just_personality
+		add_ruler_personality = one_v_one_nbc_stringer_personality
+	}
+}
+one_v_one_nbc_mission_select_edward_tag = {
+	set_country_flag = one_v_one_nsi_starting_nation_flag
+	swap_non_generic_missions = yes
+	hidden_effect = {
+		complete_mission = one_v_one_mission_nsi_nation_select_3_nbc
+	}
+	define_ruler = {
+		name = "Edward Boscawen"
+		age = 34
+		ADM = 6
+		DIP = 6
+		MIL = 6
+		claim = 100
+	}
+	hidden_effect = {
+		add_ruler_personality = immortal_personality
+		add_ruler_personality = just_personality
+		add_ruler_personality = one_v_one_nbc_edward_personality
+		add_country_modifier = { name = one_v_one_nbc_edward_personality_modifier duration = -1 hidden = yes }
+	}
+}
+one_v_one_nbc_mission_select_robert_tag = {
+	set_country_flag = one_v_one_nsi_starting_nation_flag
+	swap_non_generic_missions = yes
+	hidden_effect = {
+		complete_mission = one_v_one_mission_nsi_nation_select_5_nbc
+	}
+	define_ruler = {
+		name = "Robert Clive"
+		age = 34
+		ADM = 6
+		DIP = 6
+		MIL = 6
+		claim = 100
+	}
+	hidden_effect = {
+		add_ruler_personality = immortal_personality
+		add_ruler_personality = just_personality
+		add_ruler_personality = one_v_one_nbc_robert_personality
+	}
+}
+# Mughals:
+one_v_one_nmu_mission_select_muhammad_tag = {
+	set_country_flag = one_v_one_nsi_starting_nation_flag
+	swap_non_generic_missions = yes
+	hidden_effect = {
+		complete_mission = one_v_one_mission_nsi_nation_select_1_nmu
+	}
+	define_ruler = {
+		name = "Muhammad Shâh"
+		dynasty = "Timurid"
+		age = 34
+		ADM = 6
+		DIP = 6
+		MIL = 6
+		claim = 100
+	}
+	hidden_effect = {
+		add_ruler_personality = immortal_personality
+		add_ruler_personality = just_personality
+		add_ruler_personality = one_v_one_nmu_muhammad_personality
+	}
+}
+one_v_one_nmu_mission_select_roshan_tag = {
+	set_country_flag = one_v_one_nsi_starting_nation_flag
+	swap_non_generic_missions = yes
+	hidden_effect = {
+		complete_mission = one_v_one_mission_nsi_nation_select_3_nmu
+	}
+	define_ruler = {
+		name = "Roshan Akhtar"
+		dynasty = "Babur"
+		age = 34
+		ADM = 6
+		DIP = 6
+		MIL = 6
+		claim = 100
+	}
+	hidden_effect = {
+		add_ruler_personality = immortal_personality
+		add_ruler_personality = just_personality
+		add_ruler_personality = one_v_one_nmu_roshan_personality
+	}
+}
+one_v_one_nmu_mission_select_mirza_tag = {
+	set_country_flag = one_v_one_nsi_starting_nation_flag
+	swap_non_generic_missions = yes
+	hidden_effect = {
+		complete_mission = one_v_one_mission_nsi_nation_select_5_nmu
+	}
+	define_ruler = {
+		name = "Mirza Nasir"
+		dynasty = "Mughal"
+		age = 34
+		ADM = 6
+		DIP = 6
+		MIL = 6
+		claim = 100
+	}
+	hidden_effect = {
+		add_ruler_personality = immortal_personality
+		add_ruler_personality = just_personality
+		add_ruler_personality = one_v_one_nmu_mirza_personality
+	}
+}
+# Bukhara:
+one_v_one_nbu_mission_select_abu_tag = {
+	set_country_flag = one_v_one_nsi_starting_nation_flag
+	swap_non_generic_missions = yes
+	hidden_effect = {
+		complete_mission = one_v_one_mission_nsi_nation_select_1_nbu
+	}
+	define_ruler = {
+		name = "Abu'l-Feiz"
+		dynasty = "Genghisid"
+		age = 34
+		ADM = 6
+		DIP = 6
+		MIL = 6
+		claim = 100
+	}
+	hidden_effect = {
+		add_ruler_personality = immortal_personality
+		add_ruler_personality = just_personality
+		add_ruler_personality = one_v_one_nbu_abu_personality
+	}
+}
+one_v_one_nbu_mission_select_hakim_tag = {
+	set_country_flag = one_v_one_nsi_starting_nation_flag
+	swap_non_generic_missions = yes
+	hidden_effect = {
+		complete_mission = one_v_one_mission_nsi_nation_select_3_nbu
+	}
+	define_ruler = {
+		name = "Muhammad Hakim"
+		dynasty = "Janid"
+		age = 34
+		ADM = 6
+		DIP = 6
+		MIL = 6
+		claim = 100
+	}
+	hidden_effect = {
+		add_ruler_personality = immortal_personality
+		add_ruler_personality = just_personality
+		add_ruler_personality = one_v_one_nbu_hakim_personality
+	}
+}
+one_v_one_nbu_mission_select_ilbars_tag = {
+	set_country_flag = one_v_one_nsi_starting_nation_flag
+	swap_non_generic_missions = yes
+	hidden_effect = {
+		complete_mission = one_v_one_mission_nsi_nation_select_5_nbu
+	}
+	define_ruler = {
+		name = "Ilbars II"
+		dynasty = "Genghisid"
+		age = 34
+		ADM = 6
+		DIP = 6
+		MIL = 6
+		claim = 100
+	}
+	hidden_effect = {
+		add_ruler_personality = immortal_personality
+		add_ruler_personality = just_personality
+		add_ruler_personality = one_v_one_nbu_ilbars_personality
+		every_owned_province = {
+			limit = { has_terrain = desert }
+			add_province_modifier = { name = one_v_one_nbu_ilbars_personality_modifier duration = -1 }
+		}
+	}
+}
+# Hyderabad:
+one_v_one_nhy_mission_select_asaf_tag = {
+	set_country_flag = one_v_one_nsi_starting_nation_flag
+	swap_non_generic_missions = yes
+	hidden_effect = {
+		complete_mission = one_v_one_mission_nsi_nation_select_1_nhy
+	}
+	define_ruler = {
+		name = "Asaf Jah I"
+		dynasty = "Asaf Jahi"
+		age = 34
+		ADM = 6
+		DIP = 6
+		MIL = 6
+		claim = 100
+	}
+	hidden_effect = {
+		add_ruler_personality = immortal_personality
+		add_ruler_personality = just_personality
+		add_ruler_personality = one_v_one_nhy_asaf_personality
+	}
+}
+one_v_one_nhy_mission_select_nasir_tag = {
+	set_country_flag = one_v_one_nsi_starting_nation_flag
+	swap_non_generic_missions = yes
+	hidden_effect = {
+		complete_mission = one_v_one_mission_nsi_nation_select_3_nhy
+	}
+	define_ruler = {
+		name = "Nasir Jung"
+		dynasty = "Asaf Jahi"
+		age = 34
+		ADM = 6
+		DIP = 6
+		MIL = 6
+		claim = 100
+	}
+	hidden_effect = {
+		add_ruler_personality = immortal_personality
+		add_ruler_personality = just_personality
+		add_ruler_personality = one_v_one_nhy_nasir_personality
+	}
+}
+one_v_one_nhy_mission_select_nizam_tag = {
+	set_country_flag = one_v_one_nsi_starting_nation_flag
+	swap_non_generic_missions = yes
+	hidden_effect = {
+		complete_mission = one_v_one_mission_nsi_nation_select_5_nhy
+	}
+	define_ruler = {
+		name = "Mir-Qamar Nizam"
+		dynasty = "Asaf Jahi"
+		age = 34
+		ADM = 6
+		DIP = 6
+		MIL = 6
+		claim = 100
+	}
+	hidden_effect = {
+		add_ruler_personality = immortal_personality
+		add_ruler_personality = just_personality
+		add_ruler_personality = one_v_one_nhy_nizam_personality
+	}
+}
+# Mysore:
+one_v_one_nmy_mission_select_krishnaraja_tag = {
+	set_country_flag = one_v_one_nsi_starting_nation_flag
+	swap_non_generic_missions = yes
+	hidden_effect = {
+		complete_mission = one_v_one_mission_nsi_nation_select_1_nmy
+	}
+	define_ruler = {
+		name = "Krishna Râja II"
+		dynasty = "Wodeyar"
+		age = 34
+		ADM = 6
+		DIP = 6
+		MIL = 6
+		claim = 100
+	}
+	hidden_effect = {
+		add_ruler_personality = immortal_personality
+		add_ruler_personality = just_personality
+		add_ruler_personality = one_v_one_nmy_krishnaraja_personality
+	}
+}
+one_v_one_nmy_mission_select_hyder_tag = {
+	set_country_flag = one_v_one_nsi_starting_nation_flag
+	swap_non_generic_missions = yes
+	hidden_effect = {
+		complete_mission = one_v_one_mission_nsi_nation_select_3_nmy
+	}
+	define_ruler = {
+		name = "Haydar 'Alî"
+		dynasty = "Quraysh"
+		age = 34
+		ADM = 6
+		DIP = 6
+		MIL = 6
+		claim = 100
+	}
+	hidden_effect = {
+		add_ruler_personality = immortal_personality
+		add_ruler_personality = just_personality
+		add_ruler_personality = one_v_one_nmy_hyder_personality
+	}
+}
+one_v_one_nmy_mission_select_nanja_tag = {
+	set_country_flag = one_v_one_nsi_starting_nation_flag
+	swap_non_generic_missions = yes
+	hidden_effect = {
+		complete_mission = one_v_one_mission_nsi_nation_select_5_nmy
+	}
+	define_ruler = {
+		name = "Nanja Raja"
+		dynasty = "Wodeyar"
+		age = 34
+		ADM = 6
+		DIP = 6
+		MIL = 6
+		claim = 100
+	}
+	hidden_effect = {
+		add_ruler_personality = immortal_personality
+		add_ruler_personality = just_personality
+		add_ruler_personality = one_v_one_nmy_nanja_personality
+	}
+}
+# Fra Comp:
+one_v_one_nfc_mission_select_joseph_tag = {
+	set_country_flag = one_v_one_nsi_starting_nation_flag
+	swap_non_generic_missions = yes
+	hidden_effect = {
+		complete_mission = one_v_one_mission_nsi_nation_select_1_nfc
+	}
+	define_ruler = {
+		name = "Joseph François Dupleix"
+		age = 34
+		ADM = 6
+		DIP = 6
+		MIL = 6
+		claim = 100
+	}
+	hidden_effect = {
+		add_ruler_personality = immortal_personality
+		add_ruler_personality = just_personality
+		add_ruler_personality = one_v_one_nfc_joseph_personality
+	}
+}
+one_v_one_nfc_mission_select_bertrand_tag = {
+	set_country_flag = one_v_one_nsi_starting_nation_flag
+	swap_non_generic_missions = yes
+	hidden_effect = {
+		complete_mission = one_v_one_mission_nsi_nation_select_3_nfc
+	}
+	define_ruler = {
+		name = "Bertrand de La Bourdonnais"
+		age = 34
+		ADM = 6
+		DIP = 6
+		MIL = 6
+		claim = 100
+	}
+	hidden_effect = {
+		add_ruler_personality = immortal_personality
+		add_ruler_personality = just_personality
+		add_ruler_personality = one_v_one_nfc_bertrand_personality
+	}
+}
+one_v_one_nfc_mission_select_philibert_tag = {
+	set_country_flag = one_v_one_nsi_starting_nation_flag
+	swap_non_generic_missions = yes
+	hidden_effect = {
+		complete_mission = one_v_one_mission_nsi_nation_select_5_nfc
+	}
+	define_ruler = {
+		name = "Philibert Orry"
+		age = 34
+		ADM = 6
+		DIP = 6
+		MIL = 6
+		claim = 100
+	}
+	hidden_effect = {
+		add_ruler_personality = immortal_personality
+		add_ruler_personality = just_personality
+		add_ruler_personality = one_v_one_nfc_philibert_personality
+		set_country_flag = fra_enable_infrastructure_network_flag
+	}
+}
+##################
+set_nsi_ban_chosen_flag = {
+	if = {
+		limit = {
+			has_global_flag = nir_nation_choosing_flag
+			has_global_flag = nka_nation_choosing_flag
+			has_global_flag = nma_nation_choosing_flag
+			has_global_flag = nra_nation_choosing_flag
+			has_global_flag = nbc_nation_choosing_flag
+			has_global_flag = nmu_nation_choosing_flag
+			has_global_flag = nbu_nation_choosing_flag
+			has_global_flag = nhy_nation_choosing_flag
+			has_global_flag = nmy_nation_choosing_flag
+			has_global_flag = nfc_nation_choosing_flag
+		}
+		set_global_flag = nsi_ban_chosen_flag
+	}
+}
+#############
+#############
+# NADER SHAH INVASION
+# Mission effect:
+one_v_one_mission_effect_hyw = {
+	if = {
+		limit = { NOT = { tag = HYF } }
+		HYF = {
+			if = {
+				limit = { has_country_flag = hyf_chose_nation_joan_flag }
+				one_v_one_hyf_mission_select_joan_tag = yes
+			}
+			if = {
+				limit = { has_country_flag = hyf_chose_nation_bureau_flag }
+				one_v_one_hyf_mission_select_bureau_tag = yes
+			}
+			if = {
+				limit = { has_country_flag = hyf_chose_nation_guesclin_flag }
+				one_v_one_hyf_mission_select_guesclin_tag = yes
+			}
+		}
+	}
+	if = {
+		limit = { NOT = { tag = HYC } }
+		HYC = {
+			if = {
+				limit = { has_country_flag = hyc_chose_nation_trastamara_flag }
+				one_v_one_hyc_mission_select_trastamara_tag = yes
+			}
+			if = {
+				limit = { has_country_flag = hyc_chose_nation_elcid_flag }
+				one_v_one_hyc_mission_select_elcid_tag = yes
+			}
+			if = {
+				limit = { has_country_flag = hyc_chose_nation_fernando_flag }
+				one_v_one_hyc_mission_select_fernando_tag = yes
+			}
+		}
+	}
+	if = {
+		limit = { NOT = { tag = HYS } }
+		HYS = {
+			if = {
+				limit = { has_country_flag = hys_chose_nation_william_flag }
+				one_v_one_hys_mission_select_william_tag = yes
+			}
+			if = {
+				limit = { has_country_flag = hys_chose_nation_stewart_flag }
+				one_v_one_hys_mission_select_stewart_tag = yes
+			}
+			if = {
+				limit = { has_country_flag = hys_chose_nation_thomas_flag }
+				one_v_one_hys_mission_select_thomas_tag = yes
+			}
+		}
+	}
+	if = {
+		limit = { NOT = { tag = HYE } }
+		HYE = {
+			if = {
+				limit = { has_country_flag = hye_chose_nation_woodstock_flag }
+				one_v_one_hye_mission_select_woodstock_tag = yes
+			}
+			if = {
+				limit = { has_country_flag = hye_chose_nation_edward_flag }
+				one_v_one_hye_mission_select_edward_tag = yes
+			}
+			if = {
+				limit = { has_country_flag = hye_chose_nation_henry_flag }
+				one_v_one_hye_mission_select_henry_tag = yes
+			}
+		}
+	}
+	if = {
+		limit = { NOT = { tag = HYB } }
+		HYB = {
+			if = {
+				limit = { has_country_flag = hyb_chose_nation_john_flag }
+				one_v_one_hyb_mission_select_john_tag = yes
+			}
+			if = {
+				limit = { has_country_flag = hyb_chose_nation_philipb_flag }
+				one_v_one_hyb_mission_select_philipb_tag = yes
+			}
+			if = {
+				limit = { has_country_flag = hyb_chose_nation_philipg_flag }
+				one_v_one_hyb_mission_select_philipg_tag = yes
+			}
+		}
+	}
+	if = {
+		limit = { NOT = { tag = HYP } }
+		HYP = {
+			if = {
+				limit = { has_country_flag = hyp_chose_nation_periera_flag }
+				one_v_one_hyp_mission_select_periera_tag = yes
+			}
+			if = {
+				limit = { has_country_flag = hyp_chose_nation_pedro_flag }
+				one_v_one_hyp_mission_select_pedro_tag = yes
+			}
+			if = {
+				limit = { has_country_flag = hyp_chose_nation_navigator_flag }
+				one_v_one_hyp_mission_select_navigator_tag = yes
+			}
+		}
+	}
+}
+### ### ###
+# France:
+one_v_one_hyf_mission_select_joan_tag = {
+	set_country_flag = one_v_one_hyw_starting_nation_flag
+	swap_non_generic_missions = yes
+	hidden_effect = {
+		complete_mission = one_v_one_mission_hyw_nation_select_1_hyf
+	}
+	custom_tooltip = one_v_one_hyf_mission_select_joan_tag_tt
+	tooltip = {
+		define_general = {
+			fire = 8
+			shock = 8
+			manuever = 6
+			siege = 1
+			female = yes
+			name = "Jeanne d'Arc"
+			trait = one_v_one_hyf_joan_personality
+		}
+	}
+	custom_tooltip = one_v_one_hyf_joan_personality_tt
+}
+one_v_one_hyf_mission_select_bureau_tag = {
+	set_country_flag = one_v_one_hyw_starting_nation_flag
+	swap_non_generic_missions = yes
+	hidden_effect = {
+		complete_mission = one_v_one_mission_hyw_nation_select_3_hyf
+	}
+	define_general = {
+		fire = 3
+		shock = 3
+		manuever = 1
+		siege = 6
+		name = "Jean Bureau"
+		trait = one_v_one_hyf_bureau_personality
+	}
+	custom_tooltip = one_v_one_hyf_bureau_personality_tt
+	add_country_modifier = { name = one_v_one_hyf_bureau_personality_modifier duration = -1 }
+}
+one_v_one_hyf_mission_select_guesclin_tag = {
+	set_country_flag = one_v_one_hyw_starting_nation_flag
+	swap_non_generic_missions = yes
+	hidden_effect = {
+		complete_mission = one_v_one_mission_hyw_nation_select_5_hyf
+	}
+	define_general = {
+		fire = 4
+		shock = 6
+		manuever = 7
+		siege = 2
+		name = "Bertrand du Guesclin"
+		trait = one_v_one_hyf_guesclin_personality
+	}
+	custom_tooltip = one_v_one_hyf_guesclin_personality_tt
+}
+# Castille:
+one_v_one_hyc_mission_select_trastamara_tag = {
+	set_country_flag = one_v_one_hyw_starting_nation_flag
+	swap_non_generic_missions = yes
+	hidden_effect = {
+		complete_mission = one_v_one_mission_hyw_nation_select_1_hyc
+	}
+	define_general = {
+		fire = 5
+		shock = 5
+		manuever = 2
+		siege = 2
+		name = "Henry II"
+		trait = one_v_one_hyc_trastamara_personality
+	}
+	custom_tooltip = one_v_one_hyc_trastamara_personality_tt
+}
+one_v_one_hyc_mission_select_elcid_tag = {
+	set_country_flag = one_v_one_hyw_starting_nation_flag
+	swap_non_generic_missions = yes
+	hidden_effect = {
+		complete_mission = one_v_one_mission_hyw_nation_select_3_hyc
+	}
+	define_general = {
+		fire = 6
+		shock = 5
+		manuever = 5
+		siege = 2
+		name = "Pero Nino"
+		trait = one_v_one_hyc_elcidg_personality
+	}
+	custom_tooltip = one_v_one_hyc_elcidg_personality_tt
+	define_admiral = {
+		fire = 5
+		shock = 4
+		manuever = 6
+		siege = 1
+		name = "Pero Niño"
+		trait = one_v_one_hyc_elcida_personality
+	}
+	custom_tooltip = one_v_one_hyc_elcida_personality_tt
+}
+one_v_one_hyc_mission_select_fernando_tag = {
+	set_country_flag = one_v_one_hyw_starting_nation_flag
+	swap_non_generic_missions = yes
+	hidden_effect = {
+		complete_mission = one_v_one_mission_hyw_nation_select_5_hyc
+	}
+	define_admiral = {
+		fire = 6
+		shock = 6
+		manuever = 6
+		siege = 6
+		name = "Fernando Sanchez de Tovar"
+		trait = one_v_one_hyc_fernando_personality
+	}
+	custom_tooltip = one_v_one_hyc_fernando_personality_tt
+}
+# Scotland:
+one_v_one_hys_mission_select_william_tag = {
+	set_country_flag = one_v_one_hyw_starting_nation_flag
+	swap_non_generic_missions = yes
+	hidden_effect = {
+		complete_mission = one_v_one_mission_hyw_nation_select_1_hys
+	}
+	define_general = {
+		fire = 4
+		shock = 4
+		manuever = 7
+		siege = 4
+		name = "William Douglas"
+		trait = one_v_one_hys_william_personality
+	}
+	custom_tooltip = one_v_one_hys_william_personality_tt
+	add_country_modifier = { name = one_v_one_hys_william_personality_modifier1 duration = -1 }
+	hidden_effect = {
+		every_owned_province = {
+			add_province_modifier = { name = one_v_one_hys_william_personality_modifier2 duration = -1 }
+		}
+	}
+}
+one_v_one_hys_mission_select_stewart_tag = {
+	set_country_flag = one_v_one_hyw_starting_nation_flag
+	swap_non_generic_missions = yes
+	hidden_effect = {
+		complete_mission = one_v_one_mission_hyw_nation_select_3_hys
+	}
+	define_general = {
+		fire = 6
+		shock = 6
+		manuever = 6
+		siege = 1
+		name = "John Stewart"
+		trait = one_v_one_hys_stewart_personality
+	}
+	custom_tooltip = one_v_one_hys_stewart_personality_tt
+}
+one_v_one_hys_mission_select_thomas_tag = {
+	set_country_flag = one_v_one_hyw_starting_nation_flag
+	swap_non_generic_missions = yes
+	hidden_effect = {
+		complete_mission = one_v_one_mission_hyw_nation_select_5_hys
+	}
+	define_general = {
+		fire = 3
+		shock = 6
+		manuever = 2
+		siege = 2
+		name = "Thomas Stewart"
+		trait = one_v_one_hys_thomas_personality
+	}
+	custom_tooltip = one_v_one_hys_thomas_personality_tt
+}
+# England:
+one_v_one_hye_mission_select_woodstock_tag = {
+	set_country_flag = one_v_one_hyw_starting_nation_flag
+	swap_non_generic_missions = yes
+	hidden_effect = {
+		complete_mission = one_v_one_mission_hyw_nation_select_1_hye
+	}
+	define_general = {
+		fire = 6
+		shock = 6
+		manuever = 6
+		siege = 1
+		name = "Edward of Woodstock"
+		trait = one_v_one_hye_woodstock_personality
+	}
+	custom_tooltip = one_v_one_hye_woodstock_personality_tt
+}
+one_v_one_hye_mission_select_edward_tag = {
+	set_country_flag = one_v_one_hyw_starting_nation_flag
+	swap_non_generic_missions = yes
+	hidden_effect = {
+		complete_mission = one_v_one_mission_hyw_nation_select_3_hye
+	}
+	define_general = {
+		fire = 5
+		shock = 4
+		manuever = 4
+		siege = 3
+		name = "Edward III"
+		trait = one_v_one_hye_edward_personality
+	}
+	custom_tooltip = one_v_one_hye_edward_personality_tt
+}
+one_v_one_hye_mission_select_henry_tag = {
+	set_country_flag = one_v_one_hyw_starting_nation_flag
+	swap_non_generic_missions = yes
+	hidden_effect = {
+		complete_mission = one_v_one_mission_hyw_nation_select_5_hye
+	}
+	define_general = {
+		fire = 8
+		shock = 4
+		manuever = 6
+		siege = 1
+		name = "Henry V"
+		trait = one_v_one_hye_henry_personality
+	}
+	custom_tooltip = one_v_one_hye_henry_personality_tt
+}
+# Burgundy:
+one_v_one_hyb_mission_select_john_tag = {
+	set_country_flag = one_v_one_hyw_starting_nation_flag
+	swap_non_generic_missions = yes
+	hidden_effect = {
+		complete_mission = one_v_one_mission_hyw_nation_select_1_hyb
+	}
+	define_general = {
+		fire = 4
+		shock = 4
+		manuever = 4
+		siege = 4
+		name = "John I"
+		trait = one_v_one_hyb_john_personality
+	}
+	custom_tooltip = one_v_one_hyb_john_personality_tt
+}
+one_v_one_hyb_mission_select_philipb_tag = {
+	set_country_flag = one_v_one_hyw_starting_nation_flag
+	swap_non_generic_missions = yes
+	hidden_effect = {
+		complete_mission = one_v_one_mission_hyw_nation_select_3_hyb
+	}
+	define_general = {
+		fire = 6
+		shock = 4
+		manuever = 3
+		siege = 1
+		name = "Philip II"
+		trait = one_v_one_hyb_philipb_personality
+	}
+	custom_tooltip = one_v_one_hyb_philipb_personality_tt
+}
+one_v_one_hyb_mission_select_philipg_tag = {
+	set_country_flag = one_v_one_hyw_starting_nation_flag
+	swap_non_generic_missions = yes
+	hidden_effect = {
+		complete_mission = one_v_one_mission_hyw_nation_select_5_hyb
+	}
+	define_general = {
+		fire = 3
+		shock = 6
+		manuever = 6
+		siege = 2
+		name = "Philip III"
+		trait = one_v_one_hyb_philipg_personality
+	}
+	custom_tooltip = one_v_one_hyb_philipg_personality_tt
+}
+# Portugal:
+one_v_one_hyp_mission_select_periera_tag = {
+	set_country_flag = one_v_one_hyw_starting_nation_flag
+	swap_non_generic_missions = yes
+	hidden_effect = {
+		complete_mission = one_v_one_mission_hyw_nation_select_1_hyp
+	}
+	define_general = {
+		fire = 6
+		shock = 4
+		manuever = 6
+		siege = 2
+		name = "Nuno Álvares Pereira"
+		trait = one_v_one_hyp_periera_personality
+	}
+	custom_tooltip = one_v_one_hyp_periera_personality_tt
+}
+one_v_one_hyp_mission_select_pedro_tag = {
+	set_country_flag = one_v_one_hyw_starting_nation_flag
+	swap_non_generic_missions = yes
+	hidden_effect = {
+		complete_mission = one_v_one_mission_hyw_nation_select_3_hyp
+	}
+	define_general = {
+		fire = 5
+		shock = 5
+		manuever = 6
+		siege = 1
+		name = "Pedro"
+		trait = one_v_one_hyp_pedro_personality
+	}
+	custom_tooltip = one_v_one_hyp_pedro_personality_tt
+	add_country_modifier = { name = one_v_one_hyp_pedro_personality_modifier duration = -1 }
+}
+one_v_one_hyp_mission_select_navigator_tag = {
+	set_country_flag = one_v_one_hyw_starting_nation_flag
+	swap_non_generic_missions = yes
+	hidden_effect = {
+		complete_mission = one_v_one_mission_hyw_nation_select_5_hyp
+	}
+	define_admiral = {
+		fire = 6
+		shock = 6
+		manuever = 6
+		siege = 6
+		name = "Henry"
+		trait = one_v_one_hyp_navigator_personality
+	}
+	custom_tooltip = one_v_one_hyp_navigator_personality_tt
+}
+##################
+set_hyw_ban_chosen_flag = {
+	if = {
+		limit = {
+			has_global_flag = hyf_nation_choosing_flag
+			has_global_flag = hyc_nation_choosing_flag
+			has_global_flag = hys_nation_choosing_flag
+			has_global_flag = hye_nation_choosing_flag
+			has_global_flag = hyb_nation_choosing_flag
+			has_global_flag = hyp_nation_choosing_flag
+		}
+		set_global_flag = hyw_ban_chosen_flag
+	}
+}
+#############
+#############
 # ROMAN WARS
 # Banning:
 re_bans_block_effect = {
@@ -2695,26 +4107,26 @@ re_chosen_religion = {
 	}
 }
 re_diplo_war = {
-		every_province = {
-			limit = { OR = { owned_by = REW owned_by = RWN owned_by = RWS owned_by = REE owned_by = REN owned_by = RES owned_by = TYN } }
-			discover_country = $re_tag$
-		}
-		if = {
-			limit = { mission_completed = one_v_one_mission_re_war_1 }
-			country_event = { id = one_v_one_mod.525 }
-		}
-		if = {
-			limit = { mission_completed = one_v_one_mission_re_war_2 }
-			set_country_flag = one_v_one_mission_re_war_2_flag
-		}
-		if = {
-			limit = { mission_completed = one_v_one_mission_re_war_3 }
-			set_country_flag = one_v_one_mission_re_war_3_flag
-		}
-		if = {
-			limit = { mission_completed = one_v_one_mission_re_war_4 }
-			set_country_flag = one_v_one_mission_re_war_4_flag
-		}
+	every_province = {
+		limit = { OR = { owned_by = REW owned_by = RWN owned_by = RWS owned_by = REE owned_by = REN owned_by = RES owned_by = TYN } }
+		discover_country = $re_tag$
+	}
+	if = {
+		limit = { mission_completed = one_v_one_mission_re_war_1 }
+		country_event = { id = one_v_one_mod.525 }
+	}
+	if = {
+		limit = { mission_completed = one_v_one_mission_re_war_2 }
+		set_country_flag = one_v_one_mission_re_war_2_flag
+	}
+	if = {
+		limit = { mission_completed = one_v_one_mission_re_war_3 }
+		set_country_flag = one_v_one_mission_re_war_3_flag
+	}
+	if = {
+		limit = { mission_completed = one_v_one_mission_re_war_4 }
+		set_country_flag = one_v_one_mission_re_war_4_flag
+	}
 }
 # Subjects stuff:
 re_subject_age_bonus = {
@@ -2886,6 +4298,10 @@ one_v_one_fort_on_built = {
 		limit = { has_province_flag = re_picked_region_3_flag }
 		add_province_modifier = { name = one_v_one_mission_re_africa_modifier duration = -1 }
 	}
+	if = {
+		limit = { FROM = { ruler_has_personality = one_v_one_nma_chimaji_personality } }
+		add_province_modifier = { name = one_v_one_nma_chimaji_personality_modifier duration = -1 }
+	}
 }
 one_v_one_fort_on_destroyed = {
 	if = {
@@ -2922,6 +4338,10 @@ one_v_one_fort_on_destroyed = {
 		limit = { has_province_modifier = one_v_one_mission_re_africa_modifier }
 		remove_province_modifier = one_v_one_mission_re_africa_modifier
 	}
+	if = {
+		limit = { has_province_modifier = one_v_one_nma_chimaji_personality_modifier }
+		remove_province_modifier = one_v_one_nma_chimaji_personality_modifier
+	}
 }
 one_v_one_manu_build = {
 	if = {
@@ -2932,6 +4352,10 @@ one_v_one_manu_build = {
 		limit = { FROM = { has_country_modifier = one_v_one_mission_re_adm_buf_1_modifier_alt } }
 		add_base_$type$ = 1
 	}
+	if = {
+		limit = { FROM = { ruler_has_personality = one_v_one_nhy_nasir_personality } }
+		add_base_$type$ = 2
+	}
 }
 one_v_one_manu_destroyed = {
 	if = {
@@ -2941,5 +4365,9 @@ one_v_one_manu_destroyed = {
 	if = {
 		limit = { FROM = { has_country_modifier = one_v_one_mission_re_adm_buf_1_modifier_alt } }
 		add_base_$type$ = -1
+	}
+	if = {
+		limit = { FROM = { ruler_has_personality = one_v_one_nhy_nasir_personality } }
+		add_base_$type$ = -2
 	}
 }

@@ -24,3 +24,29 @@ base_production = 1
 base_manpower = 1
 is_city = no
 }
+1733.1.1 = {
+owner = NRA
+controller = NRA
+add_core = NRA
+culture = rajput
+religion = hinduism
+capital = "Girnar"
+trade_goods = iron
+is_city = yes
+hre = no
+base_tax = 3
+base_production = 2
+base_manpower = 5
+}
+1733.1.3 = {
+owner = ---
+controller = ---
+remove_core = NRA
+culture = no_culture
+religion = noreligion
+trade_goods = unknown
+base_tax = 1
+base_production = 1
+base_manpower = 1
+is_city = no
+}

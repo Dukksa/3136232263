@@ -1,0 +1,1 @@
+#bookmark = { name = "nader_shah_invasion" desc = "nader_shah_invasion_desc" date = 1733.1.1 center = 2072 default = yes country = NIR country = NKA country = NMA country = NRA country = NBC country = NMU country = NBU country = NHY country = NMY country = NFC easy_country = NIR easy_country = NMU }

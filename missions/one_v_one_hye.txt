@@ -1,0 +1,415 @@
+one_v_one_mission_hyw_1_hye = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		NOT = { map_setup = map_setup_random }
+		tag = HYE
+	}
+	has_country_shield = yes
+
+	one_v_one_mission_hyw_nation_select_1_hye = {
+		icon = mission_janissaries
+		required_missions = { }
+		trigger = {
+			if = {
+				limit = { OR = { has_country_flag = hye_chose_nation_woodstock_flag has_country_flag = hye_chose_nation_edward_flag has_country_flag = hye_chose_nation_henry_flag } }
+				custom_trigger_tooltip = {
+					tooltip = one_v_one_already_chose_nation_flag_tt
+					always = no
+				}
+			}
+			else = { tag = HYE }
+			custom_trigger_tooltip = {
+				tooltip = one_v_one_nation_choosing_flag_tt
+				has_global_flag = hyf_nation_choosing_flag
+				has_global_flag = hyc_nation_choosing_flag
+				has_global_flag = hys_nation_choosing_flag
+				has_global_flag = hye_nation_choosing_flag
+				has_global_flag = hyb_nation_choosing_flag
+				has_global_flag = hyp_nation_choosing_flag
+			}
+			if = {
+				limit = { NOT = { has_global_flag = hyw_ban_chosen_flag } }
+				hidden_trigger = {
+					if = {
+						limit = { has_global_flag = hyf_ban_woodstock_flag }
+						custom_trigger_tooltip = {
+							tooltip = one_v_one_nation_banned_flag_tt
+							always = no
+						}
+					}
+				}
+			}
+			else = {
+				if = {
+					limit = { has_global_flag = hyf_ban_woodstock_flag }
+					custom_trigger_tooltip = {
+						tooltip = one_v_one_nation_banned_flag_tt
+						always = no
+					}
+				}
+			}
+		}
+		effect = {
+			set_country_flag = hye_chose_nation_woodstock_flag
+			set_global_flag = hye_chose_nation_flag
+			custom_tooltip = one_v_one_chose_nation_flag_tt
+			tooltip = { one_v_one_hye_mission_select_woodstock_tag = yes }
+			hidden_effect = {
+				if = {
+					limit = { has_global_flag = hyf_chose_nation_flag has_global_flag = hyc_chose_nation_flag has_global_flag = hys_chose_nation_flag has_global_flag = hyb_chose_nation_flag has_global_flag = hyp_chose_nation_flag }
+					one_v_one_hye_mission_select_woodstock_tag = yes
+					one_v_one_mission_effect_hyw = yes
+				}
+			}
+		}
+	}
+}
+one_v_one_mission_hyw_3_hye = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		NOT = { map_setup = map_setup_random }
+		tag = HYE
+	}
+	has_country_shield = yes
+
+	one_v_one_mission_hyw_nation_select_3_hye = {
+		icon = mission_janissaries
+		required_missions = { }
+		trigger = {
+			if = {
+				limit = { OR = { has_country_flag = hye_chose_nation_woodstock_flag has_country_flag = hye_chose_nation_edward_flag has_country_flag = hye_chose_nation_henry_flag } }
+				custom_trigger_tooltip = {
+					tooltip = one_v_one_already_chose_nation_flag_tt
+					always = no
+				}
+			}
+			else = { tag = HYE }
+			custom_trigger_tooltip = {
+				tooltip = one_v_one_nation_choosing_flag_tt
+				has_global_flag = hyf_nation_choosing_flag
+				has_global_flag = hyc_nation_choosing_flag
+				has_global_flag = hys_nation_choosing_flag
+				has_global_flag = hye_nation_choosing_flag
+				has_global_flag = hyb_nation_choosing_flag
+				has_global_flag = hyp_nation_choosing_flag
+			}
+			if = {
+				limit = { NOT = { has_global_flag = hyw_ban_chosen_flag } }
+				hidden_trigger = {
+					if = {
+						limit = { has_global_flag = hyf_ban_edward_flag }
+						custom_trigger_tooltip = {
+							tooltip = one_v_one_nation_banned_flag_tt
+							always = no
+						}
+					}
+				}
+			}
+			else = {
+				if = {
+					limit = { has_global_flag = hyf_ban_edward_flag }
+					custom_trigger_tooltip = {
+						tooltip = one_v_one_nation_banned_flag_tt
+						always = no
+					}
+				}
+			}
+		}
+		effect = {
+			set_country_flag = hye_chose_nation_edward_flag
+			set_global_flag = hye_chose_nation_flag
+			custom_tooltip = one_v_one_chose_nation_flag_tt
+			tooltip = { one_v_one_hye_mission_select_edward_tag = yes }
+			hidden_effect = {
+				if = {
+					limit = { has_global_flag = hyf_chose_nation_flag has_global_flag = hyc_chose_nation_flag has_global_flag = hys_chose_nation_flag has_global_flag = hyb_chose_nation_flag has_global_flag = hyp_chose_nation_flag }
+					one_v_one_hye_mission_select_edward_tag = yes
+					one_v_one_mission_effect_hyw = yes
+				}
+			}
+		}
+	}
+}
+one_v_one_mission_hyw_33_hye = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		NOT = { map_setup = map_setup_random }
+		tag = HYE
+		NOT = { OR = { has_country_flag = hye_chose_nation_woodstock_flag has_country_flag = hye_chose_nation_edward_flag has_country_flag = hye_chose_nation_henry_flag } }
+	}
+	has_country_shield = yes
+
+	one_v_one_mission_hyw_construct_hye = {
+		icon = mission_colonial
+		required_missions = { one_v_one_mission_hyw_nation_select_1_hye one_v_one_mission_hyw_nation_select_3_hye one_v_one_mission_hyw_nation_select_5_hye }
+		position = 2
+		trigger = {
+		}
+		effect = {
+			set_country_flag = one_v_one_commanders_chosen_flag
+			custom_tooltip = one_v_one_commanders_chosen_tt
+			add_country_modifier = { name = one_v_one_mission_construct_modifier duration = 3650 }
+			add_country_modifier = { name = one_v_one_mission_construct_idea_cost_modifier duration = 1 }
+		}
+	}
+}
+one_v_one_mission_hyw_5_hye = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		NOT = { map_setup = map_setup_random }
+		tag = HYE
+	}
+	has_country_shield = yes
+
+	one_v_one_mission_hyw_nation_select_5_hye = {
+		icon = mission_janissaries
+		required_missions = { }
+		trigger = {
+			if = {
+				limit = { OR = { has_country_flag = hye_chose_nation_woodstock_flag has_country_flag = hye_chose_nation_edward_flag has_country_flag = hye_chose_nation_henry_flag } }
+				custom_trigger_tooltip = {
+					tooltip = one_v_one_already_chose_nation_flag_tt
+					always = no
+				}
+			}
+			else = { tag = HYE }
+			custom_trigger_tooltip = {
+				tooltip = one_v_one_nation_choosing_flag_tt
+				has_global_flag = hyf_nation_choosing_flag
+				has_global_flag = hyc_nation_choosing_flag
+				has_global_flag = hys_nation_choosing_flag
+				has_global_flag = hye_nation_choosing_flag
+				has_global_flag = hyb_nation_choosing_flag
+				has_global_flag = hyp_nation_choosing_flag
+			}
+			if = {
+				limit = { NOT = { has_global_flag = hyw_ban_chosen_flag } }
+				hidden_trigger = {
+					if = {
+						limit = { has_global_flag = hyf_ban_henry_flag }
+						custom_trigger_tooltip = {
+							tooltip = one_v_one_nation_banned_flag_tt
+							always = no
+						}
+					}
+				}
+			}
+			else = {
+				if = {
+					limit = { has_global_flag = hyf_ban_henry_flag }
+					custom_trigger_tooltip = {
+						tooltip = one_v_one_nation_banned_flag_tt
+						always = no
+					}
+				}
+			}
+		}
+		effect = {
+			set_country_flag = hye_chose_nation_henry_flag
+			set_global_flag = hye_chose_nation_flag
+			custom_tooltip = one_v_one_chose_nation_flag_tt
+			tooltip = { one_v_one_hye_mission_select_henry_tag = yes }
+			hidden_effect = {
+				if = {
+					limit = { has_global_flag = hyf_chose_nation_flag has_global_flag = hyc_chose_nation_flag has_global_flag = hys_chose_nation_flag has_global_flag = hyb_chose_nation_flag has_global_flag = hyp_chose_nation_flag }
+					one_v_one_hye_mission_select_henry_tag = yes
+					one_v_one_mission_effect_hyw = yes
+				}
+			}
+		}
+	}
+}
+##
+one_v_one_mission_hyw_3_woodstock = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		NOT = { map_setup = map_setup_random }
+		has_country_flag = hye_chose_nation_woodstock_flag
+	}
+	has_country_shield = yes
+
+	one_v_one_mission_hyw_construct_woodstock = {
+		icon = mission_colonial
+		required_missions = { one_v_one_mission_hyw_nation_select_1_hye }
+		position = 2
+		trigger = {
+		}
+		effect = {
+			set_country_flag = one_v_one_commanders_chosen_flag
+			custom_tooltip = one_v_one_commanders_chosen_tt
+			add_country_modifier = { name = one_v_one_mission_construct_modifier duration = 3650 }
+			add_country_modifier = { name = one_v_one_mission_construct_idea_cost_modifier duration = 1 }
+		}
+	}
+}
+one_v_one_mission_hyw_3_edward = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		NOT = { map_setup = map_setup_random }
+		has_country_flag = hye_chose_nation_edward_flag
+	}
+	has_country_shield = yes
+
+	one_v_one_mission_hyw_construct_edward = {
+		icon = mission_colonial
+		required_missions = { one_v_one_mission_hyw_nation_select_3_hye }
+		position = 2
+		trigger = {
+		}
+		effect = {
+			set_country_flag = one_v_one_commanders_chosen_flag
+			custom_tooltip = one_v_one_commanders_chosen_tt
+			add_country_modifier = { name = one_v_one_mission_construct_modifier duration = 3650 }
+			add_country_modifier = { name = one_v_one_mission_construct_idea_cost_modifier duration = 1 }
+		}
+	}
+}
+one_v_one_mission_hyw_3_henry = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		NOT = { map_setup = map_setup_random }
+		has_country_flag = hye_chose_nation_henry_flag
+	}
+	has_country_shield = yes
+
+	one_v_one_mission_hyw_construct_henry = {
+		icon = mission_colonial
+		required_missions = { one_v_one_mission_hyw_nation_select_5_hye }
+		position = 2
+		trigger = {
+		}
+		effect = {
+			set_country_flag = one_v_one_commanders_chosen_flag
+			custom_tooltip = one_v_one_commanders_chosen_tt
+			add_country_modifier = { name = one_v_one_mission_construct_modifier duration = 3650 }
+			add_country_modifier = { name = one_v_one_mission_construct_idea_cost_modifier duration = 1 }
+		}
+	}
+}
+##
+one_v_one_mission_hye_1_objectives = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		NOT = { map_setup = map_setup_random }
+		tag = HYE
+	}
+	has_country_shield = yes
+
+	one_v_one_mission_hye_objective_1 = {
+		icon = mission_colonial
+		required_missions = { }
+		position = 3
+		trigger = {
+			is_at_war = yes
+		}
+		effect = {
+			add_country_modifier = { name = one_v_one_mission_hye_objective_1_modifier duration = 1095 }
+		}
+	}
+}
+one_v_one_mission_hye_2_objectives = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		NOT = { map_setup = map_setup_random }
+		tag = HYE
+	}
+	has_country_shield = yes
+
+	one_v_one_mission_hye_objective_2 = {
+		icon = mission_colonial
+		required_missions = { }
+		position = 3
+		provinces_to_highlight = {
+			OR = {
+				province_id = 244
+				province_id = 245
+				province_id = 238
+				province_id = 236
+				province_id = 235
+				province_id = 234
+			}
+			NOT = { num_of_times_improved = 25 }
+		}
+		trigger = {
+			244 = { num_of_times_improved = 25 }
+			245 = { num_of_times_improved = 25 }
+			238 = { num_of_times_improved = 25 }
+			236 = { num_of_times_improved = 25 }
+			235 = { num_of_times_improved = 25 }
+			234 = { num_of_times_improved = 25 }
+		}
+		effect = {
+			add_years_of_income = 2
+			add_yearly_manpower = 2
+			244 = { add_province_modifier = { name = one_v_one_mission_hye_objective_2_modifier duration = -1 } }
+			245 = { add_province_modifier = { name = one_v_one_mission_hye_objective_2_modifier duration = -1 } }
+			238 = { add_province_modifier = { name = one_v_one_mission_hye_objective_2_modifier duration = -1 } }
+			236 = { add_province_modifier = { name = one_v_one_mission_hye_objective_2_modifier duration = -1 } }
+			235 = { add_province_modifier = { name = one_v_one_mission_hye_objective_2_modifier duration = -1 } }
+			234 = { add_province_modifier = { name = one_v_one_mission_hye_objective_2_modifier duration = -1 } }
+		}
+	}
+}
+one_v_one_mission_hye_3_objectives = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		NOT = { map_setup = map_setup_random }
+		tag = HYE
+	}
+	has_country_shield = yes
+
+	one_v_one_mission_hye_objective_3 = {
+		icon = mission_colonial
+		required_missions = { }
+		position = 3
+		provinces_to_highlight = {
+			OR = {
+				area = brittany_area
+				area = normandy_area
+				area = picardy_area
+				province_id = 177
+			}
+			NOT = { controlled_by = ROOT }
+		}
+		trigger = {
+			army_tradition = 80
+			num_of_regiments_at_full_drill = 120
+			brittany_area = {
+				type = all
+				controlled_by = ROOT
+			}
+			normandy_area = {
+				type = all
+				controlled_by = ROOT
+			}
+			picardy_area = {
+				type = all
+				controlled_by = ROOT
+			}
+			177 = { controlled_by = ROOT }
+		}
+		effect = {
+			add_country_modifier = { name = one_v_one_mission_hye_objective_3_modifier duration = -1 }
+		}
+	}
+}

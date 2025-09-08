@@ -150,10 +150,20 @@ custom_button = {
 custom_button = {
 	name = one_v_one_re_raiding_button
 	potential = {
-		started_in = 1685.1.1
-		NOT = { started_in = 1685.1.3 }
-		one_v_one_re_raid_prov = yes
-		NOT = { owned_by = FROM }
+		OR = {
+			AND = {
+				started_in = 1685.1.1
+				NOT = { started_in = 1685.1.3 }
+				one_v_one_re_raid_prov = yes
+				NOT = { owned_by = FROM }
+			}
+			AND = {
+				FROM = { mission_completed = one_v_one_mission_hyp_objective_3 }
+				FROM = { tag = HYP }
+				one_v_one_hyw_raid_prov = yes
+				NOT = { owned_by = FROM }
+			}
+		}
 	}
 	trigger = {
 		controlled_by = FROM
@@ -162,8 +172,16 @@ custom_button = {
 	effect = {
 		hidden_effect = { add_province_modifier = { name = one_v_one_re_raiding_cooldown duration = 1825 } }
 		add_devastation = 10
-		owner = { add_treasury = -500 add_manpower = -10 }
-		FROM = { add_treasury = 500 add_manpower = 10 }
+		if = {
+			limit = { FROM = { tag = HYP } }
+			owner = { add_treasury = -250 }
+			spawn_rebels = { type = noble_rebels size = 1 friend = FROM } 
+			FROM = { add_treasury = 250 }
+		}
+		else = {
+			owner = { add_treasury = -500 add_manpower = -10 }
+			FROM = { add_treasury = 500 add_manpower = 10 }
+		}
 		if = {
 			limit = { has_fort_building_trigger = yes }
 			owner = { add_adm_power = -25 add_dip_power = -25 add_mil_power = -25 }

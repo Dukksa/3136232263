@@ -28,3 +28,6 @@ one_v_one_syw_phili_po = {
 one_v_one_syw_portugal = {
 	231 232 228 1851 4556 227 229 230 4150 4787
 }
+one_v_one_hyc_north_africa = {
+	4563 334 1751 4561 335
+}

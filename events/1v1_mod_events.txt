@@ -96,10 +96,12 @@ country_event = {
 		if = {
 			limit = {
 				OR = {
+					AND = { started_in = 1485.1.1 NOT = { started_in = 1485.1.3 } }
 					AND = { started_in = 1611.1.1 NOT = { started_in = 1611.1.3 } }
 					AND = { started_in = 1676.1.1 NOT = { started_in = 1676.1.3 } }
 					AND = { started_in = 1685.1.1 NOT = { started_in = 1685.1.3 } }
 					AND = { started_in = 1694.1.1 NOT = { started_in = 1694.1.3 } }
+					AND = { started_in = 1733.1.1 NOT = { started_in = 1733.1.3 } }
 					AND = { started_in = 1734.1.1 NOT = { started_in = 1734.1.3 } }
 					AND = { started_in = 1749.1.1 NOT = { started_in = 1749.1.3 } }
 					AND = { started_in = 1799.1.1 NOT = { started_in = 1799.1.3 } }
@@ -186,6 +188,42 @@ country_event = {
 			IDC = {
 				country_event = { id = one_v_one_mod.2 }
 				country_event = { id = one_v_one_mod.44 }
+				add_power_projection = { type = one_v_one_base_power_projection amount = 25 }
+			}
+		}
+		if = {
+			limit = { started_in = 1485.1.1 NOT = { started_in = 1485.1.3 } }
+			add_adm_tech = 4
+			add_dip_tech = 4
+			add_mil_tech = 4
+			HYF = {
+				country_event = { id = one_v_one_mod.2 }
+				country_event = { id = one_v_one_mod.54 }
+				add_power_projection = { type = one_v_one_base_power_projection amount = 25 }
+			}
+			HYC = {
+				country_event = { id = one_v_one_mod.2 }
+				country_event = { id = one_v_one_mod.54 }
+				add_power_projection = { type = one_v_one_base_power_projection amount = 25 }
+			}
+			HYS = {
+				country_event = { id = one_v_one_mod.2 }
+				country_event = { id = one_v_one_mod.54 }
+				add_power_projection = { type = one_v_one_base_power_projection amount = 25 }
+			}
+			HYE = {
+				country_event = { id = one_v_one_mod.2 }
+				country_event = { id = one_v_one_mod.54 }
+				add_power_projection = { type = one_v_one_base_power_projection amount = 25 }
+			}
+			HYB = {
+				country_event = { id = one_v_one_mod.2 }
+				country_event = { id = one_v_one_mod.54 }
+				add_power_projection = { type = one_v_one_base_power_projection amount = 25 }
+			}
+			HYP = {
+				country_event = { id = one_v_one_mod.2 }
+				country_event = { id = one_v_one_mod.54 }
 				add_power_projection = { type = one_v_one_base_power_projection amount = 25 }
 			}
 		}
@@ -470,6 +508,63 @@ country_event = {
 				country_event = { id = one_v_one_mod.45 }
 				add_power_projection = { type = one_v_one_base_power_projection amount = 25 }
 				add_church_power = 80
+			}
+		}
+		if = {
+			limit = { started_in = 1733.1.1 NOT = { started_in = 1733.1.3 } }
+			add_adm_tech = 11
+			add_dip_tech = 11
+			add_mil_tech = 11
+			NIR = {
+				country_event = { id = one_v_one_mod.2 }
+				country_event = { id = one_v_one_mod.53 }
+				add_power_projection = { type = one_v_one_base_power_projection amount = 25 }
+			}
+			NKA = {
+				country_event = { id = one_v_one_mod.2 }
+				country_event = { id = one_v_one_mod.53 }
+				add_power_projection = { type = one_v_one_base_power_projection amount = 25 }
+			}
+			NMA = {
+				country_event = { id = one_v_one_mod.2 }
+				country_event = { id = one_v_one_mod.53 }
+				add_power_projection = { type = one_v_one_base_power_projection amount = 25 }
+			}
+			NRA = {
+				country_event = { id = one_v_one_mod.2 }
+				country_event = { id = one_v_one_mod.53 }
+				add_power_projection = { type = one_v_one_base_power_projection amount = 25 }
+			}
+			NBC = {
+				country_event = { id = one_v_one_mod.2 }
+				country_event = { id = one_v_one_mod.53 }
+				add_power_projection = { type = one_v_one_base_power_projection amount = 25 }
+				add_church_power = 80
+			}
+			NMU = {
+				country_event = { id = one_v_one_mod.2 }
+				country_event = { id = one_v_one_mod.53 }
+				add_power_projection = { type = one_v_one_base_power_projection amount = 25 }
+			}
+			NBU = {
+				country_event = { id = one_v_one_mod.2 }
+				country_event = { id = one_v_one_mod.53 }
+				add_power_projection = { type = one_v_one_base_power_projection amount = 25 }
+			}
+			NHY = {
+				country_event = { id = one_v_one_mod.2 }
+				country_event = { id = one_v_one_mod.53 }
+				add_power_projection = { type = one_v_one_base_power_projection amount = 25 }
+			}
+			NMY = {
+				country_event = { id = one_v_one_mod.2 }
+				country_event = { id = one_v_one_mod.53 }
+				add_power_projection = { type = one_v_one_base_power_projection amount = 25 }
+			}
+			NFC = {
+				country_event = { id = one_v_one_mod.2 }
+				country_event = { id = one_v_one_mod.53 }
+				add_power_projection = { type = one_v_one_base_power_projection amount = 25 }
 			}
 		}
 		if = {
@@ -991,6 +1086,23 @@ country_event = {
 			add_mil_power = 474
 		}
 		if = {
+			limit = { one_v_one_hyw_nations = yes }
+			discover_hundred_years_provinces = yes
+			while = { limit = { NOT = { treasury = 10000 } } add_treasury = 10000 }
+			while = { limit = { treasury = 10001 } add_treasury = -1 }
+			while = { limit = { NOT = { prestige = 50 } } add_prestige = 1 }
+			while = { limit = { prestige = 51 } add_prestige = -1 }
+			while = { limit = { NOT = { army_tradition = 50 } } add_army_tradition = 1 }
+			while = { limit = { army_tradition = 51 } add_army_tradition = -1 }
+			while = { limit = { NOT = { manpower = 100 } } add_manpower = 100 }
+			while = { limit = { manpower = 101 } add_manpower = -1 }
+			while = { limit = { NOT = { sailors = 15000 } } add_sailors = 10000 }
+			while = { limit = { sailors = 15100 } add_sailors = -100 }
+			add_adm_power = 174
+			add_dip_power = 174
+			add_mil_power = 174
+		}
+		if = {
 			limit = { one_v_one_tyw_nations = yes }
 			discover_thirty_years_provinces = yes
 			while = { limit = { NOT = { treasury = 15000 } } add_treasury = 15000 }
@@ -1083,6 +1195,23 @@ country_event = {
 		if = {
 			limit = { one_v_one_as_nations = yes }
 			discover_austrian_succession_provinces = yes
+			while = { limit = { NOT = { treasury = 15000 } } add_treasury = 15000 }
+			while = { limit = { treasury = 15001 } add_treasury = -1 }
+			while = { limit = { NOT = { prestige = 50 } } add_prestige = 1 }
+			while = { limit = { prestige = 51 } add_prestige = -1 }
+			while = { limit = { NOT = { army_tradition = 80 } } add_army_tradition = 1 }
+			while = { limit = { army_tradition = 81 } add_army_tradition = -1 }
+			while = { limit = { NOT = { manpower = 250 } } add_manpower = 250 }
+			while = { limit = { manpower = 251 } add_manpower = -1 }
+			while = { limit = { NOT = { sailors = 30000 } } add_sailors = 25000 }
+			while = { limit = { sailors = 30100 } add_sailors = -100 }
+			add_adm_power = 774
+			add_dip_power = 774
+			add_mil_power = 774
+		}
+		if = {
+			limit = { one_v_one_nsi_nations = yes }
+			discover_nader_shah_provinces = yes
 			while = { limit = { NOT = { treasury = 15000 } } add_treasury = 15000 }
 			while = { limit = { treasury = 15001 } add_treasury = -1 }
 			while = { limit = { NOT = { prestige = 50 } } add_prestige = 1 }
@@ -1803,6 +1932,642 @@ country_event = {
 		set_global_flag = gru_nation_choosing_flag
 		set_gtw_ban_chosen_flag = yes
 		custom_tooltip = one_v_one_mod.3.gru.c.tt
+	}
+	####################
+	# Nader Shah Invasion:
+	# Iran:
+	option = {
+		name = one_v_one_mod.3.nir.a
+		trigger = { tag = NIR }
+		set_global_flag = nir_ban_muhammad_flag
+		set_global_flag = nir_nation_choosing_flag
+		set_nsi_ban_chosen_flag = yes
+		custom_tooltip = one_v_one_mod.3.nir.a.tt
+	}
+	option = {
+		name = one_v_one_mod.3.nir.b
+		trigger = { tag = NIR }
+		set_global_flag = nir_ban_roshan_flag
+		set_global_flag = nir_nation_choosing_flag
+		set_nsi_ban_chosen_flag = yes
+		custom_tooltip = one_v_one_mod.3.nir.b.tt
+	}
+	option = {
+		name = one_v_one_mod.3.nir.c
+		trigger = { tag = NIR }
+		set_global_flag = nir_ban_mirza_flag
+		set_global_flag = nir_nation_choosing_flag
+		set_nsi_ban_chosen_flag = yes
+		custom_tooltip = one_v_one_mod.3.nir.c.tt
+	}
+	# Kakheti:
+	option = {
+		name = one_v_one_mod.3.nka.a
+		trigger = { tag = NKA }
+		set_global_flag = nka_ban_abu_flag
+		set_global_flag = nka_nation_choosing_flag
+		set_nsi_ban_chosen_flag = yes
+		custom_tooltip = one_v_one_mod.3.nka.a.tt
+	}
+	option = {
+		name = one_v_one_mod.3.nka.b
+		trigger = { tag = NKA }
+		set_global_flag = nka_ban_hakim_flag
+		set_global_flag = nka_nation_choosing_flag
+		set_nsi_ban_chosen_flag = yes
+		custom_tooltip = one_v_one_mod.3.nka.b.tt
+	}
+	option = {
+		name = one_v_one_mod.3.nka.c
+		trigger = { tag = NKA }
+		set_global_flag = nka_ban_ilbars_flag
+		set_global_flag = nka_nation_choosing_flag
+		set_nsi_ban_chosen_flag = yes
+		custom_tooltip = one_v_one_mod.3.nka.c.tt
+	}
+	# Marathas:
+	option = {
+		name = one_v_one_mod.3.nma.a
+		trigger = { tag = NMA }
+		set_global_flag = nma_ban_asaf_flag
+		set_global_flag = nma_nation_choosing_flag
+		set_nsi_ban_chosen_flag = yes
+		custom_tooltip = one_v_one_mod.3.nma.a.tt
+	}
+	option = {
+		name = one_v_one_mod.3.nma.b
+		trigger = { tag = NMA }
+		set_global_flag = nma_ban_nasir_flag
+		set_global_flag = nma_nation_choosing_flag
+		set_nsi_ban_chosen_flag = yes
+		custom_tooltip = one_v_one_mod.3.nma.b.tt
+	}
+	option = {
+		name = one_v_one_mod.3.nma.c
+		trigger = { tag = NMA }
+		set_global_flag = nma_ban_nizam_flag
+		set_global_flag = nma_nation_choosing_flag
+		set_nsi_ban_chosen_flag = yes
+		custom_tooltip = one_v_one_mod.3.nma.c.tt
+	}
+	# Rajputana:
+	option = {
+		name = one_v_one_mod.3.nra.a
+		trigger = { tag = NRA }
+		set_global_flag = nra_ban_krishnaraja_flag
+		set_global_flag = nra_nation_choosing_flag
+		set_nsi_ban_chosen_flag = yes
+		custom_tooltip = one_v_one_mod.3.nra.a.tt
+	}
+	option = {
+		name = one_v_one_mod.3.nra.b
+		trigger = { tag = NRA }
+		set_global_flag = nra_ban_hyder_flag
+		set_global_flag = nra_nation_choosing_flag
+		set_nsi_ban_chosen_flag = yes
+		custom_tooltip = one_v_one_mod.3.nra.b.tt
+	}
+	option = {
+		name = one_v_one_mod.3.nra.c
+		trigger = { tag = NRA }
+		set_global_flag = nra_ban_nanja_flag
+		set_global_flag = nra_nation_choosing_flag
+		set_nsi_ban_chosen_flag = yes
+		custom_tooltip = one_v_one_mod.3.nra.c.tt
+	}
+	# Bri Comp:
+	option = {
+		name = one_v_one_mod.3.nbc.a
+		trigger = { tag = NBC }
+		set_global_flag = nbc_ban_joseph_flag
+		set_global_flag = nbc_nation_choosing_flag
+		set_nsi_ban_chosen_flag = yes
+		custom_tooltip = one_v_one_mod.3.nbc.a.tt
+	}
+	option = {
+		name = one_v_one_mod.3.nbc.b
+		trigger = { tag = NBC }
+		set_global_flag = nbc_ban_bertrand_flag
+		set_global_flag = nbc_nation_choosing_flag
+		set_nsi_ban_chosen_flag = yes
+		custom_tooltip = one_v_one_mod.3.nbc.b.tt
+	}
+	option = {
+		name = one_v_one_mod.3.nbc.c
+		trigger = { tag = NBC }
+		set_global_flag = nbc_ban_philibert_flag
+		set_global_flag = nbc_nation_choosing_flag
+		set_nsi_ban_chosen_flag = yes
+		custom_tooltip = one_v_one_mod.3.nbc.c.tt
+	}
+	##
+	# Mughals:
+	option = {
+		name = one_v_one_mod.3.nmu.a
+		trigger = { tag = NMU }
+		set_global_flag = nmu_ban_nader_flag
+		set_global_flag = nmu_nation_choosing_flag
+		set_nsi_ban_chosen_flag = yes
+		custom_tooltip = one_v_one_mod.3.nmu.a.tt
+	}
+	option = {
+		name = one_v_one_mod.3.nmu.b
+		trigger = { tag = NMU }
+		set_global_flag = nmu_ban_afshar_flag
+		set_global_flag = nmu_nation_choosing_flag
+		set_nsi_ban_chosen_flag = yes
+		custom_tooltip = one_v_one_mod.3.nmu.b.tt
+	}
+	option = {
+		name = one_v_one_mod.3.nmu.c
+		trigger = { tag = NMU }
+		set_global_flag = nmu_ban_khorasan_flag
+		set_global_flag = nmu_nation_choosing_flag
+		set_nsi_ban_chosen_flag = yes
+		custom_tooltip = one_v_one_mod.3.nmu.c.tt
+	}
+	# Bukhara:
+	option = {
+		name = one_v_one_mod.3.nbu.a
+		trigger = { tag = NBU }
+		set_global_flag = nbu_ban_heraclius_flag
+		set_global_flag = nbu_nation_choosing_flag
+		set_nsi_ban_chosen_flag = yes
+		custom_tooltip = one_v_one_mod.3.nbu.a.tt
+	}
+	option = {
+		name = one_v_one_mod.3.nbu.b
+		trigger = { tag = NBU }
+		set_global_flag = nbu_ban_erekle_flag
+		set_global_flag = nbu_nation_choosing_flag
+		set_nsi_ban_chosen_flag = yes
+		custom_tooltip = one_v_one_mod.3.nbu.b.tt
+	}
+	option = {
+		name = one_v_one_mod.3.nbu.c
+		trigger = { tag = NBU }
+		set_global_flag = nbu_ban_bagrationi_flag
+		set_global_flag = nbu_nation_choosing_flag
+		set_nsi_ban_chosen_flag = yes
+		custom_tooltip = one_v_one_mod.3.nbu.c.tt
+	}
+	# Hyderabad:
+	option = {
+		name = one_v_one_mod.3.nhy.a
+		trigger = { tag = NHY }
+		set_global_flag = nhy_ban_baji_flag
+		set_global_flag = nhy_nation_choosing_flag
+		set_nsi_ban_chosen_flag = yes
+		custom_tooltip = one_v_one_mod.3.nhy.a.tt
+	}
+	option = {
+		name = one_v_one_mod.3.nhy.b
+		trigger = { tag = NHY }
+		set_global_flag = nhy_ban_chimaji_flag
+		set_global_flag = nhy_nation_choosing_flag
+		set_nsi_ban_chosen_flag = yes
+		custom_tooltip = one_v_one_mod.3.nhy.b.tt
+	}
+	option = {
+		name = one_v_one_mod.3.nhy.c
+		trigger = { tag = NHY }
+		set_global_flag = nhy_ban_ranoji_flag
+		set_global_flag = nhy_nation_choosing_flag
+		set_nsi_ban_chosen_flag = yes
+		custom_tooltip = one_v_one_mod.3.nhy.c.tt
+	}
+	# Mysore:
+	option = {
+		name = one_v_one_mod.3.nmy.a
+		trigger = { tag = NMY }
+		set_global_flag = nmy_ban_jagat_flag
+		set_global_flag = nmy_nation_choosing_flag
+		set_nsi_ban_chosen_flag = yes
+		custom_tooltip = one_v_one_mod.3.nmy.a.tt
+	}
+	option = {
+		name = one_v_one_mod.3.nmy.b
+		trigger = { tag = NMY }
+		set_global_flag = nmy_ban_sawai_flag
+		set_global_flag = nmy_nation_choosing_flag
+		set_nsi_ban_chosen_flag = yes
+		custom_tooltip = one_v_one_mod.3.nmy.b.tt
+	}
+	option = {
+		name = one_v_one_mod.3.nmy.c
+		trigger = { tag = NMY }
+		set_global_flag = nmy_ban_maharana_flag
+		set_global_flag = nmy_nation_choosing_flag
+		set_nsi_ban_chosen_flag = yes
+		custom_tooltip = one_v_one_mod.3.nmy.c.tt
+	}
+	# Fra Comp:
+	option = {
+		name = one_v_one_mod.3.nfc.a
+		trigger = { tag = NFC }
+		set_global_flag = nfc_ban_stringer_flag
+		set_global_flag = nfc_nation_choosing_flag
+		set_nsi_ban_chosen_flag = yes
+		custom_tooltip = one_v_one_mod.3.nfc.a.tt
+	}
+	option = {
+		name = one_v_one_mod.3.nfc.b
+		trigger = { tag = NFC }
+		set_global_flag = nfc_ban_edward_flag
+		set_global_flag = nfc_nation_choosing_flag
+		set_nsi_ban_chosen_flag = yes
+		custom_tooltip = one_v_one_mod.3.nfc.b.tt
+	}
+	option = {
+		name = one_v_one_mod.3.nfc.c
+		trigger = { tag = NFC }
+		set_global_flag = nfc_ban_robert_flag
+		set_global_flag = nfc_nation_choosing_flag
+		set_nsi_ban_chosen_flag = yes
+		custom_tooltip = one_v_one_mod.3.nfc.c.tt
+	}
+	####################
+	# Hundred Years War:
+	# France:
+	option = {
+		name = one_v_one_mod.3.hyf.a
+		trigger = { tag = HYF }
+		set_global_flag = hyf_ban_woodstock_flag
+		set_global_flag = hyf_nation_choosing_flag
+		set_hyw_ban_chosen_flag = yes
+		HYE = {
+			tooltip = {
+				define_general = {
+					shock = 6
+					fire = 6
+					manuever = 6
+					siege = 1
+					name = "Edward of Woodstock"
+					trait = one_v_one_hye_woodstock_personality
+				}
+				custom_tooltip = one_v_one_hye_woodstock_personality_tt
+			}
+		}
+	}
+	option = {
+		name = one_v_one_mod.3.hyf.b
+		trigger = { tag = HYF }
+		set_global_flag = hyf_ban_edward_flag
+		set_global_flag = hyf_nation_choosing_flag
+		set_hyw_ban_chosen_flag = yes
+		HYE = {
+			tooltip = {
+				define_general = {
+					shock = 5
+					fire = 4
+					manuever = 4
+					siege = 3
+					name = "Edward III"
+					trait = one_v_one_hye_edward_personality
+				}
+				custom_tooltip = one_v_one_hye_edward_personality_tt
+			}
+		}
+	}
+	option = {
+		name = one_v_one_mod.3.hyf.c
+		trigger = { tag = HYF }
+		set_global_flag = hyf_ban_henry_flag
+		set_global_flag = hyf_nation_choosing_flag
+		set_hyw_ban_chosen_flag = yes
+		HYE = {
+			tooltip = {
+				define_general = {
+					shock = 8
+					fire = 4
+					manuever = 6
+					siege = 1
+					name = "Henry V"
+					trait = one_v_one_hye_henry_personality
+				}
+				custom_tooltip = one_v_one_hye_henry_personality_tt
+			}
+		}
+	}
+	# Castille:
+	option = {
+		name = one_v_one_mod.3.hyc.a
+		trigger = { tag = HYC }
+		set_global_flag = hyc_ban_john_flag
+		set_global_flag = hyc_nation_choosing_flag
+		set_hyw_ban_chosen_flag = yes
+		HYB = {
+			tooltip = {
+				define_general = {
+					shock = 4
+					fire = 4
+					manuever = 4
+					siege = 4
+					name = "John I"
+					trait = one_v_one_hyb_john_personality
+				}
+				custom_tooltip = one_v_one_hyb_john_personality_tt
+			}
+		}
+	}
+	option = {
+		name = one_v_one_mod.3.hyc.b
+		trigger = { tag = HYC }
+		set_global_flag = hyc_ban_philipb_flag
+		set_global_flag = hyc_nation_choosing_flag
+		set_hyw_ban_chosen_flag = yes
+		HYB = {
+			tooltip = {
+				define_general = {
+					shock = 6
+					fire = 4
+					manuever = 3
+					siege = 1
+					name = "Philip II"
+					trait = one_v_one_hyb_philipb_personality
+				}
+				custom_tooltip = one_v_one_hyb_philipb_personality_tt
+			}
+		}
+	}
+	option = {
+		name = one_v_one_mod.3.hyc.c
+		trigger = { tag = HYC }
+		set_global_flag = hyc_ban_philipg_flag
+		set_global_flag = hyc_nation_choosing_flag
+		set_hyw_ban_chosen_flag = yes
+		HYB = {
+			tooltip = {
+				define_general = {
+					shock = 3
+					fire = 6
+					manuever = 6
+					siege = 2
+					name = "Philip III"
+					trait = one_v_one_hyb_philipg_personality
+				}
+				custom_tooltip = one_v_one_hyb_philipg_personality_tt
+			}
+		}
+	}
+	# Scotland:
+	option = {
+		name = one_v_one_mod.3.hys.a
+		trigger = { tag = HYS }
+		set_global_flag = hys_ban_periera_flag
+		set_global_flag = hys_nation_choosing_flag
+		set_hyw_ban_chosen_flag = yes
+		HYP = {
+			tooltip = {
+				define_general = {
+					shock = 6
+					fire = 4
+					manuever = 6
+					siege = 2
+					name = "Nuno Álvares Pereira"
+					trait = one_v_one_hyp_periera_personality
+				}
+				custom_tooltip = one_v_one_hyp_periera_personality_tt
+			}
+		}
+	}
+	option = {
+		name = one_v_one_mod.3.hys.b
+		trigger = { tag = HYS }
+		set_global_flag = hys_ban_pedro_flag
+		set_global_flag = hys_nation_choosing_flag
+		set_hyw_ban_chosen_flag = yes
+		HYP = {
+			tooltip = {
+				define_general = {
+					shock = 5
+					fire = 5
+					manuever = 6
+					siege = 1
+					name = "Pedro"
+					trait = one_v_one_hyp_pedro_personality
+				}
+				custom_tooltip = one_v_one_hyp_pedro_personality_tt
+				add_country_modifier = { name = one_v_one_hyp_pedro_personality_modifier duration = -1 }
+			}
+		}
+	}
+	option = {
+		name = one_v_one_mod.3.hys.c
+		trigger = { tag = HYS }
+		set_global_flag = hys_ban_navigator_flag
+		set_global_flag = hys_nation_choosing_flag
+		set_hyw_ban_chosen_flag = yes
+		HYP = {
+			tooltip = {
+				define_admiral = {
+					shock = 6
+					fire = 6
+					manuever = 6
+					siege = 6
+					name = "Henry"
+					trait = one_v_one_hyp_navigator_personality
+				}
+				custom_tooltip = one_v_one_hyp_navigator_personality_tt
+			}
+		}
+	}
+	##
+	# England:
+	option = {
+		name = one_v_one_mod.3.hye.a
+		trigger = { tag = HYE }
+		set_global_flag = hye_ban_joan_flag
+		set_global_flag = hye_nation_choosing_flag
+		set_hyw_ban_chosen_flag = yes
+		HYF = {
+			tooltip = {
+				custom_tooltip = one_v_one_hyf_mission_select_joan_tag_tt
+				define_general = {
+					shock = 8
+					fire = 8
+					manuever = 6
+					siege = 1
+					female = yes
+					name = "Jeanne d'Arc"
+					trait = one_v_one_hyf_joan_personality
+				}
+				custom_tooltip = one_v_one_hyf_joan_personality_tt
+			}
+		}
+	}
+	option = {
+		name = one_v_one_mod.3.hye.b
+		trigger = { tag = HYE }
+		set_global_flag = hye_ban_bureau_flag
+		set_global_flag = hye_nation_choosing_flag
+		set_hyw_ban_chosen_flag = yes
+		HYF = {
+			tooltip = {
+				define_general = {
+					shock = 3
+					fire = 3
+					manuever = 1
+					siege = 6
+					name = "Jean Bureau"
+					trait = one_v_one_hyf_bureau_personality
+				}
+				custom_tooltip = one_v_one_hyf_bureau_personality_tt
+				add_country_modifier = { name = one_v_one_hyf_bureau_personality_modifier duration = -1 }
+			}
+		}
+	}
+	option = {
+		name = one_v_one_mod.3.hye.c
+		trigger = { tag = HYE }
+		set_global_flag = hye_ban_guesclin_flag
+		set_global_flag = hye_nation_choosing_flag
+		set_hyw_ban_chosen_flag = yes
+		HYF = {
+			tooltip = {
+				define_general = {
+					shock = 4
+					fire = 6
+					manuever = 7
+					siege = 2
+					name = "Bertrand du Guesclin"
+					trait = one_v_one_hyf_guesclin_personality
+				}
+				custom_tooltip = one_v_one_hyf_guesclin_personality_tt
+			}
+		}
+	}
+	# Burgundy:
+	option = {
+		name = one_v_one_mod.3.hyb.a
+		trigger = { tag = HYB }
+		set_global_flag = hyb_ban_trastamara_flag
+		set_global_flag = hyb_nation_choosing_flag
+		set_hyw_ban_chosen_flag = yes
+		HYC = {
+			tooltip = {
+				define_general = {
+					shock = 5
+					fire = 5
+					manuever = 2
+					siege = 2
+					name = "Henry II"
+					trait = one_v_one_hyc_trastamara_personality
+				}
+				custom_tooltip = one_v_one_hyc_trastamara_personality_tt
+			}
+		}
+	}
+	option = {
+		name = one_v_one_mod.3.hyb.b
+		trigger = { tag = HYB }
+		set_global_flag = hyb_ban_elcid_flag
+		set_global_flag = hyb_nation_choosing_flag
+		set_hyw_ban_chosen_flag = yes
+		HYC = {
+			tooltip = {
+				define_general = {
+					shock = 6
+					fire = 5
+					manuever = 5
+					siege = 2
+					name = "Pero Nino"
+					trait = one_v_one_hyc_elcidg_personality
+				}
+				custom_tooltip = one_v_one_hyc_elcidg_personality_tt
+				define_admiral = {
+					shock = 5
+					fire = 4
+					manuever = 6
+					siege = 1
+					name = "Pero Niño"
+					trait = one_v_one_hyc_elcida_personality
+				}
+				custom_tooltip = one_v_one_hyc_elcida_personality_tt
+			}
+		}
+	}
+	option = {
+		name = one_v_one_mod.3.hyb.c
+		trigger = { tag = HYB }
+		set_global_flag = hyb_ban_fernando_flag
+		set_global_flag = hyb_nation_choosing_flag
+		set_hyw_ban_chosen_flag = yes
+		HYC = {
+			tooltip = {
+				define_admiral = {
+					shock = 6
+					fire = 6
+					manuever = 6
+					siege = 6
+					name = "Fernando Sanchez de Tovar"
+					trait = one_v_one_hyc_fernando_personality
+				}
+				custom_tooltip = one_v_one_hyc_fernando_personality_tt
+			}
+		}
+	}
+	# Portugal:
+	option = {
+		name = one_v_one_mod.3.hyp.a
+		trigger = { tag = HYP }
+		set_global_flag = hyp_ban_william_flag
+		set_global_flag = hyp_nation_choosing_flag
+		set_hyw_ban_chosen_flag = yes
+		HYS = {
+			tooltip = {
+				define_general = {
+					shock = 4
+					fire = 4
+					manuever = 7
+					siege = 4
+					name = "William Douglas"
+					trait = one_v_one_hys_william_personality
+				}
+				custom_tooltip = one_v_one_hys_william_personality_tt
+				add_country_modifier = { name = one_v_one_hys_william_personality_modifier1 duration = -1 }
+			}
+		}
+	}
+	option = {
+		name = one_v_one_mod.3.hyp.b
+		trigger = { tag = HYP }
+		set_global_flag = hyp_ban_stewart_flag
+		set_global_flag = hyp_nation_choosing_flag
+		set_hyw_ban_chosen_flag = yes
+		HYS = {
+			tooltip = {
+				define_general = {
+					shock = 6
+					fire = 6
+					manuever = 6
+					siege = 1
+					name = "John Stewart"
+					trait = one_v_one_hys_stewart_personality
+				}
+				custom_tooltip = one_v_one_hys_stewart_personality_tt
+			}
+		}
+	}
+	option = {
+		name = one_v_one_mod.3.hyp.c
+		trigger = { tag = HYP }
+		set_global_flag = hyp_ban_thomas_flag
+		set_global_flag = hyp_nation_choosing_flag
+		set_hyw_ban_chosen_flag = yes
+		HYS = {
+			tooltip = {
+				define_general = {
+					shock = 3
+					fire = 6
+					manuever = 2
+					siege = 2
+					name = "Thomas Stewart"
+					trait = one_v_one_hys_thomas_personality
+				}
+				custom_tooltip = one_v_one_hys_thomas_personality_tt
+			}
+		}
 	}
 	# Napoleonic Wars:
 	# France:
@@ -3208,66 +3973,246 @@ country_event = { # Roman Wars War Buff timed effect
 		name = one_v_one_mod.525.a
 		custom_tooltip = one_v_one_mod.526.tt
 		tooltip = {
-			FROM = {
 			if = {
 				limit = { OR = { has_country_flag = re_west_war_1_fired has_country_flag = re_east_war_1_fired } }
-				if = {
-					limit = { started_in = 1685.1.1 NOT = { started_in = 1685.1.2 } }
-					add_manpower = 250
-					add_country_modifier = { name = one_v_one_mission_re_war_1_modifier duration = 2190 }
-				}
-				if = {
-					limit = { started_in = 1685.1.2 NOT = { started_in = 1685.1.3 } }
-					add_manpower = 84
-					add_country_modifier = { name = one_v_one_mission_re_war_1_modifier duration = 2190 }
+				FROM = {
+					if = {
+						limit = { started_in = 1685.1.1 NOT = { started_in = 1685.1.2 } }
+						add_manpower = 250
+						add_country_modifier = { name = one_v_one_mission_re_war_1_modifier duration = 2190 }
+					}
+					if = {
+						limit = { started_in = 1685.1.2 NOT = { started_in = 1685.1.3 } }
+						add_manpower = 84
+						add_country_modifier = { name = one_v_one_mission_re_war_1_modifier duration = 2190 }
+					}
 				}
 			}
 			if = {
 				limit = { OR = { has_country_flag = re_west_war_2_fired has_country_flag = re_east_war_2_fired } }
-				if = {
-					limit = { started_in = 1685.1.1 NOT = { started_in = 1685.1.2 } }
-					add_manpower = 300
-					add_treasury = 15000
-					add_country_modifier = { name = one_v_one_mission_re_war_2_modifier duration = 4015 }
-				}
-				if = {
-					limit = { started_in = 1685.1.2 NOT = { started_in = 1685.1.3 } }
-					add_manpower = 100
-					add_treasury = 1666
-					add_country_modifier = { name = one_v_one_mission_re_war_2_modifier duration = 4015 }
+				FROM = {
+					if = {
+						limit = { started_in = 1685.1.1 NOT = { started_in = 1685.1.2 } }
+						add_manpower = 300
+						add_treasury = 15000
+						add_country_modifier = { name = one_v_one_mission_re_war_2_modifier duration = 4015 }
+					}
+					if = {
+						limit = { started_in = 1685.1.2 NOT = { started_in = 1685.1.3 } }
+						add_manpower = 100
+						add_treasury = 1666
+						add_country_modifier = { name = one_v_one_mission_re_war_2_modifier duration = 4015 }
+					}
 				}
 			}
 			if = {
 				limit = { OR = { has_country_flag = re_west_war_3_fired has_country_flag = re_east_war_3_fired } }
-				if = {
-					limit = { started_in = 1685.1.1 NOT = { started_in = 1685.1.2 } }
-					add_manpower = 500
-					add_treasury = 15000
-					add_country_modifier = { name = one_v_one_mission_re_war_3_modifier duration = -1 }
-				}
-				if = {
-					limit = { started_in = 1685.1.2 NOT = { started_in = 1685.1.3 } }
-					add_manpower = 166
-					add_treasury = 3333
-					add_country_modifier = { name = one_v_one_mission_re_war_3_modifier duration = -1 }
+				FROM = {
+					if = {
+						limit = { started_in = 1685.1.1 NOT = { started_in = 1685.1.2 } }
+						add_manpower = 500
+						add_treasury = 15000
+						add_country_modifier = { name = one_v_one_mission_re_war_3_modifier duration = -1 }
+					}
+					if = {
+						limit = { started_in = 1685.1.2 NOT = { started_in = 1685.1.3 } }
+						add_manpower = 166
+						add_treasury = 3333
+						add_country_modifier = { name = one_v_one_mission_re_war_3_modifier duration = -1 }
+					}
 				}
 			}
 			if = {
 				limit = { OR = { has_country_flag = re_west_war_4_fired has_country_flag = re_east_war_4_fired } }
-				if = {
-					limit = { started_in = 1685.1.1 NOT = { started_in = 1685.1.2 } }
-					add_manpower = 500
-					add_treasury = 15000
-					add_country_modifier = { name = one_v_one_mission_re_war_4_modifier duration = -1 }
-				}
-				if = {
-					limit = { started_in = 1685.1.2 NOT = { started_in = 1685.1.3 } }
-					add_manpower = 166
-					add_treasury = 5000
-					add_country_modifier = { name = one_v_one_mission_re_war_4_modifier duration = -1 }
+				FROM = {
+					if = {
+						limit = { started_in = 1685.1.1 NOT = { started_in = 1685.1.2 } }
+						add_manpower = 500
+						add_treasury = 15000
+						add_country_modifier = { name = one_v_one_mission_re_war_4_modifier duration = -1 }
+					}
+					if = {
+						limit = { started_in = 1685.1.2 NOT = { started_in = 1685.1.3 } }
+						add_manpower = 166
+						add_treasury = 5000
+						add_country_modifier = { name = one_v_one_mission_re_war_4_modifier duration = -1 }
+					}
 				}
 			}
+		}
+	}
+}
+country_event = { # Nader Shah Invsion
+	id = one_v_one_mod.53
+	title = one_v_one_mod.53.t
+	desc = one_v_one_mod.53.d
+	picture = one_v_one_ita_rules_event_pic
+	is_triggered_only = yes
+	trigger = { OR = { NOT = { has_country_flag = one_v_one_startup_event } has_country_flag = check_scenario_rules } }
+	immediate = { set_country_flag = one_v_one_startup_event }
+	option = {
+		name = one_v_one_mod.41.a highlight = yes
+		if = {
+			limit = { NOT = { has_country_flag = check_scenario_rules } }
+			country_event = { id = one_v_one_mod.3 }
+		}
+		if = {
+			limit = { NOT = { has_country_flag = one_v_one_nsi_starting_nation_flag } }
+			set_country_flag = one_v_one_nsi_starting_nation_flag
+			swap_free_idea_group = yes
+		}
+		clr_country_flag = check_scenario_rules
+	}
+}
+country_event = { # Nader Shah Invsion Scripted War
+	id = one_v_one_mod.532
+	title = none
+	desc = none
+	picture = none
+	hidden = yes
+	fire_only_once = yes
+	mean_time_to_happen = { days = 1 }
+	trigger = {
+		NOT = { has_global_flag = block_war_dec }
+		is_year = 1740
+		is_month = 6
+		tag = NIR
+		NIR = { is_at_war = no }
+	}
+	major = yes
+	immediate = {
+		hidden_effect = {
+			522 = { add_permanent_claim = NIR }
+			NIR = {
+				declare_war_with_cb = {
+					who = NMU
+					casus_belli = cb_conquest
+					war_goal_province = 522
+				}
 			}
+		}
+	}
+	option = { }
+}
+country_event = { # Hundred Years War
+	id = one_v_one_mod.54
+	title = one_v_one_mod.54.t
+	desc = one_v_one_mod.54.d
+	picture = one_v_one_ita_rules_event_pic
+	is_triggered_only = yes
+	trigger = { OR = { NOT = { has_country_flag = one_v_one_startup_event } has_country_flag = check_scenario_rules } }
+	immediate = { set_country_flag = one_v_one_startup_event }
+	option = {
+		name = one_v_one_mod.41.a highlight = yes
+		if = {
+			limit = { NOT = { has_country_flag = check_scenario_rules } }
+			country_event = { id = one_v_one_mod.3 }
+		}
+		if = {
+			limit = { NOT = { has_country_flag = one_v_one_hyw_starting_nation_flag } }
+			set_country_flag = one_v_one_hyw_starting_nation_flag
+			swap_free_idea_group = yes
+		}
+		clr_country_flag = check_scenario_rules
+	}
+}
+country_event = { # Hundred Years War England general dies
+	id = one_v_one_mod.541
+	title = one_v_one_mod.541.t
+	desc = one_v_one_mod.541.d
+	picture = POPE_PREACHING_eventPicture
+	trigger = {
+		NOT = { has_country_flag = one_v_one_hye_henry_personality_flag_fired }
+		tag = HYE
+		mission_completed = one_v_one_mission_hyw_nation_select_5_hye
+		had_global_flag = {
+			flag = block_war_dec
+			days = 2555
+		}
+	}
+	major = yes
+	immediate = {
+		set_country_flag = one_v_one_hye_henry_personality_flag_fired
+		while = {
+			limit = { has_leader = "Henry V" }
+			kill_leader = { type = "Henry V" }
+		}
+	}
+	option = {
+		name = one_v_one_mod.541.a
+		custom_tooltip = one_v_one_mod.541.tt
+	}
+}
+country_event = { # Hundred Years War Joan arrived
+	id = one_v_one_mod.542
+	title = one_v_one_mod.542.t
+	desc = one_v_one_mod.542.d
+	picture = POPE_PREACHING_eventPicture
+	trigger = {
+		NOT = { has_country_flag = one_v_one_hyf_joan_personality_flag_fired }
+		tag = HYF
+		mission_completed = one_v_one_mission_hyw_nation_select_1_hyf
+		had_global_flag = {
+			flag = block_war_dec
+			days = 2190
+		}
+	}
+	major = yes
+	immediate = {
+		set_country_flag = one_v_one_hyf_joan_personality_flag_fired
+		define_general = {
+			shock = 8
+			fire = 8
+			manuever = 6
+			siege = 1
+			female = yes
+			name = "Jeanne d'Arc"
+			trait = one_v_one_hyf_joan_personality
+		}
+	}
+	option = {
+		name = one_v_one_mod.542.a
+		tooltip = {
+			define_general = {
+				shock = 8
+				fire = 8
+				manuever = 6
+				siege = 1
+				female = yes
+				name = "Jeanne d'Arc"
+				trait = one_v_one_hyf_joan_personality
+			}
+		}
+		custom_tooltip = one_v_one_hyf_joan_personality_tt
+	}
+}
+country_event = { # Hundred Years War Joan executed
+	id = one_v_one_mod.543
+	title = one_v_one_mod.543.t
+	desc = one_v_one_mod.543.d
+	picture = POPE_PREACHING_eventPicture
+	trigger = {
+		has_country_flag = one_v_one_mission_hyw_nation_select_1_hyf_flag
+		NOT = { has_country_flag = one_v_one_mission_hyw_nation_select_1_hyf_flag_fired }
+		tag = HYF
+		mission_completed = one_v_one_mission_hyw_nation_select_1_hyf
+	}
+	major = yes
+	immediate = {
+		hidden_effect = {
+			set_country_flag = one_v_one_mission_hyw_nation_select_1_hyf_flag_fired
+			while = {
+				limit = { has_leader = "Jeanne d'Arc" }
+				kill_leader = { type = "Jeanne d'Arc" }
+			}
+			HYE = { add_country_modifier = { name = one_v_one_hyf_joan_personality_modifier duration = -1 } }
+		}
+	}
+	option = {
+		name = one_v_one_mod.543.a
+		custom_tooltip = one_v_one_mod.543.tt
+		tooltip = {
+			HYE = { add_country_modifier = { name = one_v_one_hyf_joan_personality_modifier duration = -1 } }
 		}
 	}
 }

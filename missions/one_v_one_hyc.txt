@@ -1,0 +1,402 @@
+one_v_one_mission_hyw_1_hyc = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		NOT = { map_setup = map_setup_random }
+		tag = HYC
+	}
+	has_country_shield = yes
+
+	one_v_one_mission_hyw_nation_select_1_hyc = {
+		icon = mission_janissaries
+		required_missions = { }
+		trigger = {
+			if = {
+				limit = { OR = { has_country_flag = hyc_chose_nation_trastamara_flag has_country_flag = hyc_chose_nation_elcid_flag has_country_flag = hyc_chose_nation_fernando_flag } }
+				custom_trigger_tooltip = {
+					tooltip = one_v_one_already_chose_nation_flag_tt
+					always = no
+				}
+			}
+			else = { tag = HYC }
+			custom_trigger_tooltip = {
+				tooltip = one_v_one_nation_choosing_flag_tt
+				has_global_flag = hyf_nation_choosing_flag
+				has_global_flag = hyc_nation_choosing_flag
+				has_global_flag = hys_nation_choosing_flag
+				has_global_flag = hye_nation_choosing_flag
+				has_global_flag = hyb_nation_choosing_flag
+				has_global_flag = hyp_nation_choosing_flag
+			}
+			if = {
+				limit = { NOT = { has_global_flag = hyw_ban_chosen_flag } }
+				hidden_trigger = {
+					if = {
+						limit = { has_global_flag = hyb_ban_trastamara_flag }
+						custom_trigger_tooltip = {
+							tooltip = one_v_one_nation_banned_flag_tt
+							always = no
+						}
+					}
+				}
+			}
+			else = {
+				if = {
+					limit = { has_global_flag = hyb_ban_trastamara_flag }
+					custom_trigger_tooltip = {
+						tooltip = one_v_one_nation_banned_flag_tt
+						always = no
+					}
+				}
+			}
+		}
+		effect = {
+			set_country_flag = hyc_chose_nation_trastamara_flag
+			set_global_flag = hyc_chose_nation_flag
+			custom_tooltip = one_v_one_chose_nation_flag_tt
+			tooltip = { one_v_one_hyc_mission_select_trastamara_tag = yes }
+			hidden_effect = {
+				if = {
+					limit = { has_global_flag = hyf_chose_nation_flag has_global_flag = hys_chose_nation_flag has_global_flag = hye_chose_nation_flag has_global_flag = hyb_chose_nation_flag has_global_flag = hyp_chose_nation_flag }
+					one_v_one_hyc_mission_select_trastamara_tag = yes
+					one_v_one_mission_effect_hyw = yes
+				}
+			}
+		}
+	}
+}
+one_v_one_mission_hyw_3_hyc = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		NOT = { map_setup = map_setup_random }
+		tag = HYC
+	}
+	has_country_shield = yes
+
+	one_v_one_mission_hyw_nation_select_3_hyc = {
+		icon = mission_janissaries
+		required_missions = { }
+		trigger = {
+			if = {
+				limit = { OR = { has_country_flag = hyc_chose_nation_trastamara_flag has_country_flag = hyc_chose_nation_elcid_flag has_country_flag = hyc_chose_nation_fernando_flag } }
+				custom_trigger_tooltip = {
+					tooltip = one_v_one_already_chose_nation_flag_tt
+					always = no
+				}
+			}
+			else = { tag = HYC }
+			custom_trigger_tooltip = {
+				tooltip = one_v_one_nation_choosing_flag_tt
+				has_global_flag = hyf_nation_choosing_flag
+				has_global_flag = hyc_nation_choosing_flag
+				has_global_flag = hys_nation_choosing_flag
+				has_global_flag = hye_nation_choosing_flag
+				has_global_flag = hyb_nation_choosing_flag
+				has_global_flag = hyp_nation_choosing_flag
+			}
+			if = {
+				limit = { NOT = { has_global_flag = hyw_ban_chosen_flag } }
+				hidden_trigger = {
+					if = {
+						limit = { has_global_flag = hyb_ban_elcid_flag }
+						custom_trigger_tooltip = {
+							tooltip = one_v_one_nation_banned_flag_tt
+							always = no
+						}
+					}
+				}
+			}
+			else = {
+				if = {
+					limit = { has_global_flag = hyb_ban_elcid_flag }
+					custom_trigger_tooltip = {
+						tooltip = one_v_one_nation_banned_flag_tt
+						always = no
+					}
+				}
+			}
+		}
+		effect = {
+			set_country_flag = hyc_chose_nation_elcid_flag
+			set_global_flag = hyc_chose_nation_flag
+			custom_tooltip = one_v_one_chose_nation_flag_tt
+			tooltip = { one_v_one_hyc_mission_select_elcid_tag = yes }
+			hidden_effect = {
+				if = {
+					limit = { has_global_flag = hyf_chose_nation_flag has_global_flag = hys_chose_nation_flag has_global_flag = hye_chose_nation_flag has_global_flag = hyb_chose_nation_flag has_global_flag = hyp_chose_nation_flag }
+					one_v_one_hyc_mission_select_elcid_tag = yes
+					one_v_one_mission_effect_hyw = yes
+				}
+			}
+		}
+	}
+}
+one_v_one_mission_hyw_33_hyc = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		NOT = { map_setup = map_setup_random }
+		tag = HYC
+		NOT = { OR = { has_country_flag = hyc_chose_nation_trastamara_flag has_country_flag = hyc_chose_nation_elcid_flag has_country_flag = hyc_chose_nation_fernando_flag } }
+	}
+	has_country_shield = yes
+
+	one_v_one_mission_hyw_construct_hyc = {
+		icon = mission_colonial
+		required_missions = { one_v_one_mission_hyw_nation_select_1_hyc one_v_one_mission_hyw_nation_select_3_hyc one_v_one_mission_hyw_nation_select_5_hyc }
+		position = 2
+		trigger = {
+		}
+		effect = {
+			set_country_flag = one_v_one_commanders_chosen_flag
+			custom_tooltip = one_v_one_commanders_chosen_tt
+			add_country_modifier = { name = one_v_one_mission_construct_modifier duration = 3650 }
+			add_country_modifier = { name = one_v_one_mission_construct_idea_cost_modifier duration = 1 }
+		}
+	}
+}
+one_v_one_mission_hyw_5_hyc = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		NOT = { map_setup = map_setup_random }
+		tag = HYC
+	}
+	has_country_shield = yes
+
+	one_v_one_mission_hyw_nation_select_5_hyc = {
+		icon = mission_janissaries
+		required_missions = { }
+		trigger = {
+			if = {
+				limit = { OR = { has_country_flag = hyc_chose_nation_trastamara_flag has_country_flag = hyc_chose_nation_elcid_flag has_country_flag = hyc_chose_nation_fernando_flag } }
+				custom_trigger_tooltip = {
+					tooltip = one_v_one_already_chose_nation_flag_tt
+					always = no
+				}
+			}
+			else = { tag = HYC }
+			custom_trigger_tooltip = {
+				tooltip = one_v_one_nation_choosing_flag_tt
+				has_global_flag = hyf_nation_choosing_flag
+				has_global_flag = hyc_nation_choosing_flag
+				has_global_flag = hys_nation_choosing_flag
+				has_global_flag = hye_nation_choosing_flag
+				has_global_flag = hyb_nation_choosing_flag
+				has_global_flag = hyp_nation_choosing_flag
+			}
+			if = {
+				limit = { NOT = { has_global_flag = hyw_ban_chosen_flag } }
+				hidden_trigger = {
+					if = {
+						limit = { has_global_flag = hyb_ban_fernando_flag }
+						custom_trigger_tooltip = {
+							tooltip = one_v_one_nation_banned_flag_tt
+							always = no
+						}
+					}
+				}
+			}
+			else = {
+				if = {
+					limit = { has_global_flag = hyb_ban_fernando_flag }
+					custom_trigger_tooltip = {
+						tooltip = one_v_one_nation_banned_flag_tt
+						always = no
+					}
+				}
+			}
+		}
+		effect = {
+			set_country_flag = hyc_chose_nation_fernando_flag
+			set_global_flag = hyc_chose_nation_flag
+			custom_tooltip = one_v_one_chose_nation_flag_tt
+			tooltip = { one_v_one_hyc_mission_select_fernando_tag = yes }
+			hidden_effect = {
+				if = {
+					limit = { has_global_flag = hyf_chose_nation_flag has_global_flag = hys_chose_nation_flag has_global_flag = hye_chose_nation_flag has_global_flag = hyb_chose_nation_flag has_global_flag = hyp_chose_nation_flag }
+					one_v_one_hyc_mission_select_fernando_tag = yes
+					one_v_one_mission_effect_hyw = yes
+				}
+			}
+		}
+	}
+}
+##
+one_v_one_mission_hyw_3_trastamara = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		NOT = { map_setup = map_setup_random }
+		has_country_flag = hyc_chose_nation_trastamara_flag
+	}
+	has_country_shield = yes
+
+	one_v_one_mission_hyw_construct_trastamara = {
+		icon = mission_colonial
+		required_missions = { one_v_one_mission_hyw_nation_select_1_hyc }
+		position = 2
+		trigger = {
+		}
+		effect = {
+			set_country_flag = one_v_one_commanders_chosen_flag
+			custom_tooltip = one_v_one_commanders_chosen_tt
+			add_country_modifier = { name = one_v_one_mission_construct_modifier duration = 3650 }
+			add_country_modifier = { name = one_v_one_mission_construct_idea_cost_modifier duration = 1 }
+		}
+	}
+}
+one_v_one_mission_hyw_3_elcid = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		NOT = { map_setup = map_setup_random }
+		has_country_flag = hyc_chose_nation_elcid_flag
+	}
+	has_country_shield = yes
+
+	one_v_one_mission_hyw_construct_elcid = {
+		icon = mission_colonial
+		required_missions = { one_v_one_mission_hyw_nation_select_3_hyc }
+		position = 2
+		trigger = {
+		}
+		effect = {
+			set_country_flag = one_v_one_commanders_chosen_flag
+			custom_tooltip = one_v_one_commanders_chosen_tt
+			add_country_modifier = { name = one_v_one_mission_construct_modifier duration = 3650 }
+			add_country_modifier = { name = one_v_one_mission_construct_idea_cost_modifier duration = 1 }
+		}
+	}
+}
+one_v_one_mission_hyw_3_fernando = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		NOT = { map_setup = map_setup_random }
+		has_country_flag = hyc_chose_nation_fernando_flag
+	}
+	has_country_shield = yes
+
+	one_v_one_mission_hyw_construct_fernando = {
+		icon = mission_colonial
+		required_missions = { one_v_one_mission_hyw_nation_select_5_hyc }
+		position = 2
+		trigger = {
+		}
+		effect = {
+			set_country_flag = one_v_one_commanders_chosen_flag
+			custom_tooltip = one_v_one_commanders_chosen_tt
+			add_country_modifier = { name = one_v_one_mission_construct_modifier duration = 3650 }
+			add_country_modifier = { name = one_v_one_mission_construct_idea_cost_modifier duration = 1 }
+		}
+	}
+}
+##
+one_v_one_mission_hyc_1_objectives = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		NOT = { map_setup = map_setup_random }
+		tag = HYC
+	}
+	has_country_shield = yes
+
+	one_v_one_mission_hyc_objective_1 = {
+		icon = mission_colonial
+		required_missions = { }
+		position = 3
+		provinces_to_highlight = {
+			area = northern_morocco_area
+			NOT = { owned_by = ROOT }
+			NOT = { controlled_by = ROOT }
+		}
+		trigger = {
+			one_v_one_hyc_north_africa = {
+				type = all
+				controlled_by = ROOT
+			}
+		}
+		effect = {
+			one_v_one_hyc_north_africa = {
+				add_core = ROOT
+				remove_core = HYP
+				cede_province = ROOT
+				change_culture = ROOT
+				change_religion = ROOT
+			}
+		}
+	}
+}
+one_v_one_mission_hyc_2_objectives = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		NOT = { map_setup = map_setup_random }
+		tag = HYC
+	}
+	has_country_shield = yes
+
+	one_v_one_mission_hyc_objective_2 = {
+		icon = mission_colonial
+		required_missions = { }
+		position = 3
+		trigger = {
+			navy_size = 100
+			num_of_light_ship = 60
+			is_year = 1500
+		}
+		effect = {
+			add_country_modifier = { name = one_v_one_mission_hyc_objective_2_modifier duration = -1 }
+		}
+	}
+}
+one_v_one_mission_hyc_3_objectives = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		NOT = { map_setup = map_setup_random }
+		tag = HYC
+	}
+	has_country_shield = yes
+
+	one_v_one_mission_hyc_objective_3 = {
+		icon = mission_colonial
+		required_missions = { }
+		position = 3
+		trigger = {
+			calc_true_if = {
+				all_owned_province = {
+					has_courthouse_building_trigger = yes
+				}
+				amount = 40
+			}
+			calc_true_if = {
+				all_owned_province = {
+					has_tax_building_trigger = yes
+				}
+				amount = 40
+			}
+			calc_true_if = {
+				all_owned_province = {
+					has_fort_building_trigger = yes
+				}
+				amount = 7
+			}
+		}
+		effect = {
+			add_country_modifier = { name = one_v_one_mission_hyc_objective_1_modifier duration = 2555 }
+		}
+	}
+}

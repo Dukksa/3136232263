@@ -73,8 +73,8 @@ declarewar = {
 		every_ally = { join_all_defensive_wars_of = ROOT }
 		if = {
 			limit = { started_in = 1685.1.1 NOT = { started_in = 1685.1.2 } }
-			re_diplo_war = { re_tag = REW }
-			re_diplo_war = { re_tag = REE }
+			REW = { re_diplo_war = { re_tag = REW } }
+			REE = { re_diplo_war = { re_tag = REE } }
 		}
 		if = {
 			limit = { started_in = 1685.1.2 NOT = { started_in = 1685.1.3 } }

@@ -2,7 +2,7 @@ on_startup = {
 	if = {
 		limit = { MWG = { NOT = { has_country_flag = one_v_one_setup_flag } } }
 		every_province = {
-			limit = { OR = { is_neighbor_of = IGE is_neighbor_of = IVE is_neighbor_of = MTU is_neighbor_of = MMM is_neighbor_of = IMU is_neighbor_of = IDC is_neighbor_of = WFR is_neighbor_of = WSP is_neighbor_of = JNO is_neighbor_of = JSO is_neighbor_of = WAU is_neighbor_of = WGB is_neighbor_of = NFR is_neighbor_of = NSP is_neighbor_of = NRH is_neighbor_of = NIT is_neighbor_of = NTU is_neighbor_of = NRU is_neighbor_of = NAU is_neighbor_of = NPR is_neighbor_of = NGB is_neighbor_of = NSW is_neighbor_of = TFR is_neighbor_of = TSW is_neighbor_of = TGB is_neighbor_of = TPG is_neighbor_of = TDN is_neighbor_of = TPL is_neighbor_of = TAS is_neighbor_of = TSP is_neighbor_of = TCG is_neighbor_of = TIT is_neighbor_of = GTO is_neighbor_of = GEC is_neighbor_of = GEB is_neighbor_of = GEA is_neighbor_of = GFR is_neighbor_of = GAU is_neighbor_of = GPL is_neighbor_of = GIT is_neighbor_of = GSP is_neighbor_of = GRU  is_neighbor_of = AAU is_neighbor_of = AGB is_neighbor_of = ANE is_neighbor_of = ARU is_neighbor_of = AIT is_neighbor_of = AHA is_neighbor_of = APR is_neighbor_of = AFR is_neighbor_of = ASP is_neighbor_of = ASW is_neighbor_of = APL is_neighbor_of = ABA is_neighbor_of = SPR is_neighbor_of = SGB is_neighbor_of = SUA is_neighbor_of = SCN is_neighbor_of = SPO is_neighbor_of = SBR is_neighbor_of = SAU is_neighbor_of = SFR is_neighbor_of = SQU is_neighbor_of = SLU is_neighbor_of = SSP is_neighbor_of = SNS is_neighbor_of = WWG is_neighbor_of = WWA is_neighbor_of = WWO is_neighbor_of = WWL is_neighbor_of = WWN is_neighbor_of = TYN is_neighbor_of = TYM is_neighbor_of = WWF is_neighbor_of = WWB is_neighbor_of = WWR is_neighbor_of = WWI is_neighbor_of = REW is_neighbor_of = RWN is_neighbor_of = RWS is_neighbor_of = REE is_neighbor_of = REN is_neighbor_of = RES } is_empty = yes }
+			limit = { OR = { is_neighbor_of = IGE is_neighbor_of = IVE is_neighbor_of = MTU is_neighbor_of = MMM is_neighbor_of = IMU is_neighbor_of = IDC is_neighbor_of = WFR is_neighbor_of = WSP is_neighbor_of = JNO is_neighbor_of = JSO is_neighbor_of = WAU is_neighbor_of = WGB is_neighbor_of = NFR is_neighbor_of = NSP is_neighbor_of = NRH is_neighbor_of = NIT is_neighbor_of = NTU is_neighbor_of = NRU is_neighbor_of = NAU is_neighbor_of = NPR is_neighbor_of = NGB is_neighbor_of = NSW is_neighbor_of = TFR is_neighbor_of = TSW is_neighbor_of = TGB is_neighbor_of = TPG is_neighbor_of = TDN is_neighbor_of = TPL is_neighbor_of = TAS is_neighbor_of = TSP is_neighbor_of = TCG is_neighbor_of = TIT is_neighbor_of = GTO is_neighbor_of = GEC is_neighbor_of = GEB is_neighbor_of = GEA is_neighbor_of = GFR is_neighbor_of = GAU is_neighbor_of = GPL is_neighbor_of = GIT is_neighbor_of = GSP is_neighbor_of = GRU  is_neighbor_of = AAU is_neighbor_of = AGB is_neighbor_of = ANE is_neighbor_of = ARU is_neighbor_of = AIT is_neighbor_of = AHA is_neighbor_of = APR is_neighbor_of = AFR is_neighbor_of = ASP is_neighbor_of = ASW is_neighbor_of = APL is_neighbor_of = ABA is_neighbor_of = SPR is_neighbor_of = SGB is_neighbor_of = SUA is_neighbor_of = SCN is_neighbor_of = SPO is_neighbor_of = SBR is_neighbor_of = SAU is_neighbor_of = SFR is_neighbor_of = SQU is_neighbor_of = SLU is_neighbor_of = SSP is_neighbor_of = SNS is_neighbor_of = WWG is_neighbor_of = WWA is_neighbor_of = WWO is_neighbor_of = WWL is_neighbor_of = WWN is_neighbor_of = TYN is_neighbor_of = TYM is_neighbor_of = WWF is_neighbor_of = WWB is_neighbor_of = WWR is_neighbor_of = WWI is_neighbor_of = REW is_neighbor_of = RWN is_neighbor_of = RWS is_neighbor_of = REE is_neighbor_of = REN is_neighbor_of = RES is_neighbor_of = HYF is_neighbor_of = HYC is_neighbor_of = HYS is_neighbor_of = HYE is_neighbor_of = HYB is_neighbor_of = HYP is_neighbor_of = NIR is_neighbor_of = NKA is_neighbor_of = NMA is_neighbor_of = NRA is_neighbor_of = NBC is_neighbor_of = NMU is_neighbor_of = NBU is_neighbor_of = NHY is_neighbor_of = NMY is_neighbor_of = NFC } is_empty = yes }
 			add_core = MWG
 			cede_province = MWG
 		}
@@ -13,10 +13,12 @@ on_startup = {
 		if = {
 			limit = {
 				OR = {
+					AND = { started_in = 1485.1.1 NOT = { started_in = 1485.1.3 } }
 					AND = { started_in = 1611.1.1 NOT = { started_in = 1611.1.3 } }
 					AND = { started_in = 1676.1.1 NOT = { started_in = 1676.1.3 } }
 					AND = { started_in = 1685.1.1 NOT = { started_in = 1685.1.3 } }
 					AND = { started_in = 1694.1.1 NOT = { started_in = 1694.1.3 } }
+					AND = { started_in = 1733.1.1 NOT = { started_in = 1733.1.3 } }
 					AND = { started_in = 1734.1.1 NOT = { started_in = 1734.1.3 } }
 					AND = { started_in = 1749.1.1 NOT = { started_in = 1749.1.3 } }
 					AND = { started_in = 1799.1.1 NOT = { started_in = 1799.1.3 } }
@@ -105,6 +107,18 @@ on_battle_won_country = {
 	if = {
 		limit = { tag = MME NOT = { check_variable = { which = one_v_one_mission_s1_3_mme_bonus_2_var value = 8 } } }
 		change_variable = { which = one_v_one_mission_s1_3_mme_bonus_2_var value = 1 }
+	}
+	if = {
+		limit = { tag = HYF NOT = { check_variable = { which = one_v_one_mission_hyf_objective_3_var value = 15 } } }
+		change_variable = { which = one_v_one_mission_hyf_objective_3_var value = 1 }
+	}
+	if = {
+		limit = { tag = HYS NOT = { check_variable = { which = one_v_one_mission_hys_objective_3_var value = 10 } } }
+		change_variable = { which = one_v_one_mission_hys_objective_3_var value = 1 }
+	}
+	if = {
+		limit = { tag = HYB NOT = { check_variable = { which = one_v_one_mission_hyb_objective_3_var value = 10 } } }
+		change_variable = { which = one_v_one_mission_hyb_objective_1_var value = 1 }
 	}
 }
 on_siege_won_country = {
@@ -305,6 +319,19 @@ on_province_religion_converted = {
 		add_papal_influence = 5
 	}
 }
+on_battle_lost_unit = {
+	on_battle_lost_unit_effect = yes
+	if = {
+		limit = {
+			unit_owner = { tag = HYF }
+            general_with_name = "Jeanne d'Arc"
+        }
+        HYF = {
+			set_country_flag = one_v_one_mission_hyw_nation_select_1_hyf_flag
+			country_event = { id = one_v_one_mod.543 }
+		}
+    }
+}
 on_streltsy_raised = {
 	owner = { add_manpower = -1 }
 }
@@ -338,7 +365,7 @@ on_barrage = {
 		FROM = { change_siege = 2 }
 	}
 	if = {
-		limit = { ROOT = { has_country_modifier = one_v_one_mission_re_war_2_modifier } }
+		limit = { ROOT = { OR = { has_country_modifier = one_v_one_mission_re_war_2_modifier mission_completed = one_v_one_mission_hyw_nation_select_3_hye } } }
 		FROM = { change_siege = 1 }
 	}
 	if = {
@@ -359,7 +386,7 @@ on_naval_barrage = {
 		FROM = { change_siege = 2 }
 	}
 	if = {
-		limit = { ROOT = { has_country_modifier = one_v_one_mission_re_war_2_modifier } }
+		limit = { ROOT = { OR = { has_country_modifier = one_v_one_mission_re_war_2_modifier mission_completed = one_v_one_mission_hyw_nation_select_3_hye } } }
 		FROM = { change_siege = 1 }
 	}
 	if = {
@@ -411,7 +438,7 @@ on_center_of_trade_downgrade = {
 on_centralized_state = {
 	if = {
 		limit = {
-			owner = { has_idea = one_v_one_gfr_1 }
+			owner = { OR = { has_idea = one_v_one_gfr_1 ruler_has_personality = one_v_one_nbc_stringer_personality has_country_modifier = one_v_one_mission_re_adm_buf_2_modifier } }
 		}
 		area = {
 			limit = { owned_by = ROOT }
@@ -437,6 +464,12 @@ on_mil_exploited = {
 	if = {
 		limit = { owner = { ruler_has_personality = one_v_one_gru_vasily_personality } }
 		add_base_manpower = 1
+	}
+	owner = {
+		if = {
+			limit = { tag = HYF }
+			subtract_variable = { which = one_v_one_manpower_dev value = 1 }
+		}
 	}
 }
 on_tech_taken = { #ROOT - Country

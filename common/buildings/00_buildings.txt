@@ -196,6 +196,10 @@ temple = {
 				hidden = yes
 			}
 		}
+		if = {
+			limit = { FROM = { has_idea = one_v_one_hys_2 } }
+			add_province_modifier = { name = one_v_one_temple_building_modifier duration = -1 hidden = yes }
+		}
 	}
 	on_destroyed = {
 		on_province_tax_building_destroyed_estate_privileges_effect = yes
@@ -252,6 +256,10 @@ temple = {
 				has_province_modifier = azt_religious_classes
 			}
 			remove_province_modifier = azt_religious_classes
+		}
+		if = {
+			limit = { has_province_modifier = one_v_one_temple_building_modifier }
+			remove_province_modifier = one_v_one_temple_building_modifier
 		}
 	}
 	on_obsolete = {
@@ -317,6 +325,10 @@ barracks = {
 			limit = { FROM = { has_country_modifier = one_v_one_mission_re_mil_buf_1_modifier } }
 			add_province_modifier = { name = one_v_one_mission_re_mil_buf_1_barracks duration = -1 hidden = yes }
 		}
+		if = {
+			limit = { FROM = { has_idea = one_v_one_hys_2 } }
+			add_province_modifier = { name = one_v_one_barracks_double_bonus_modifier duration = -1 hidden = yes }
+		}
 	}
 	on_destroyed = {
 		if = {
@@ -361,6 +373,10 @@ barracks = {
 		if = {
 			limit = { has_province_modifier = one_v_one_mission_re_mil_buf_1_barracks }
 			remove_province_modifier = one_v_one_mission_re_mil_buf_1_barracks
+		}
+		if = {
+			limit = { has_province_modifier = one_v_one_barracks_double_bonus_modifier }
+			remove_province_modifier = one_v_one_barracks_double_bonus_modifier
 		}
 	}
 	on_obsolete = {
@@ -420,7 +436,17 @@ shipyard = {
 			add_province_modifier = { name = one_v_one_navy_building_modifier duration = -1 hidden = yes }
 		}
 		if = {
-			limit = { FROM = { tag = GIT NOT = { ruler_has_personality = one_v_one_git_corner_personality } } }
+			limit = {
+				FROM = {
+					OR = {
+						tag = NBC
+						AND = {
+							tag = GIT
+							NOT = { ruler_has_personality = one_v_one_git_corner_personality }
+						}
+					}
+				}
+			}
 			add_province_modifier = { name = one_v_one_navy_building_s_modifier duration = -1 hidden = yes }
 		}
 		if = {
@@ -828,7 +854,17 @@ dock = {
 			add_province_modifier = { name = one_v_one_sailors_building_modifier duration = -1 hidden = yes }
 		}
 		if = {
-			limit = { FROM = { tag = GIT NOT = { ruler_has_personality = one_v_one_git_corner_personality } } }
+			limit = {
+				FROM = {
+					OR = {
+						tag = NBC
+						AND = {
+							tag = GIT
+							NOT = { ruler_has_personality = one_v_one_git_corner_personality }
+						}
+					}
+				}
+			}
 			add_province_modifier = { name = one_v_one_sailors_building_s_modifier duration = -1 hidden = yes }
 		}
 		if = {
@@ -1000,6 +1036,10 @@ regimental_camp = {
 			limit = { FROM = { has_country_modifier = one_v_one_mission_re_mil_buf_1_modifier } }
 			add_province_modifier = { name = one_v_one_mission_re_mil_buf_1_regimental_camp duration = -1 hidden = yes }
 		}
+		if = {
+			limit = { FROM = { has_idea = one_v_one_hys_2 } }
+			add_province_modifier = { name = one_v_one_conscription_center_double_bonus_modifier duration = -1 hidden = yes }
+		}
 	}
 	on_destroyed = {
 		remove_development_from_building = {
@@ -1042,6 +1082,10 @@ regimental_camp = {
 		if = {
 			limit = { has_province_modifier = one_v_one_mission_re_mil_buf_1_regimental_camp }
 			remove_province_modifier = one_v_one_mission_re_mil_buf_1_regimental_camp
+		}
+		if = {
+			limit = { has_province_modifier = one_v_one_regimental_camp_double_bonus_modifier }
+			remove_province_modifier = one_v_one_regimental_camp_double_bonus_modifier
 		}
 	}
 	on_obsolete = {
@@ -1577,7 +1621,17 @@ grand_shipyard = {
 			add_province_modifier = { name = one_v_one_navy_building_modifier duration = -1 hidden = yes }
 		}
 		if = {
-			limit = { FROM = { tag = GIT NOT = { ruler_has_personality = one_v_one_git_corner_personality } } }
+			limit = {
+				FROM = {
+					OR = {
+						tag = NBC
+						AND = {
+							tag = GIT
+							NOT = { ruler_has_personality = one_v_one_git_corner_personality }
+						}
+					}
+				}
+			}
 			add_province_modifier = { name = one_v_one_navy_building_s_modifier duration = -1 hidden = yes }
 		}
 		if = {
@@ -1709,6 +1763,14 @@ training_fields = {
 			limit = { FROM = { has_country_modifier = one_v_one_mission_re_mil_buf_1_modifier } }
 			add_province_modifier = { name = one_v_one_mission_re_mil_buf_1_training_fields duration = -1 hidden = yes }
 		}
+		if = {
+			limit = { FROM = { has_idea = one_v_one_hys_2 } }
+			add_province_modifier = { name = one_v_one_training_fields_double_bonus_modifier duration = -1 hidden = yes }
+		}
+		if = {
+			limit = { has_province_modifier = one_v_one_barracks_double_bonus_modifier }
+			remove_province_modifier = one_v_one_barracks_double_bonus_modifier
+		}
 	}
 	on_destroyed = {
 		if = {
@@ -1753,6 +1815,10 @@ training_fields = {
 		if = {
 			limit = { has_province_modifier = one_v_one_mission_re_mil_buf_1_training_fields }
 			remove_province_modifier = one_v_one_mission_re_mil_buf_1_training_fields
+		}
+		if = {
+			limit = { has_province_modifier = one_v_one_training_fields_double_bonus_modifier }
+			remove_province_modifier = one_v_one_training_fields_double_bonus_modifier
 		}
 	}
 	on_obsolete = {
@@ -2081,6 +2147,10 @@ town_hall = {
 				duration = -1 
 			}
 		}
+		if = {
+			limit = { FROM = { ruler_has_personality = one_v_one_nmu_mirza_personality } }
+			add_province_modifier = { name = one_v_one_nmu_mirza_personality_modifier duration = -1 hidden = yes }
+		}
 	}
 	on_destroyed = {
 		remove_development_from_building = {
@@ -2089,6 +2159,10 @@ town_hall = {
 			value = 2
 		}
 		remove_province_modifier = fra_improved_court_houses_modifier 
+		if = {
+			limit = { has_province_modifier = one_v_one_nmu_mirza_personality_modifier }
+			remove_province_modifier = one_v_one_nmu_mirza_personality_modifier
+		}
 	}
 	on_obsolete = {
 	}
@@ -2202,7 +2276,17 @@ drydock = {
 			add_province_modifier = { name = one_v_one_sailors_building_modifier duration = -1 hidden = yes }
 		}
 		if = {
-			limit = { FROM = { tag = GIT NOT = { ruler_has_personality = one_v_one_git_corner_personality } } }
+			limit = {
+				FROM = {
+					OR = {
+						tag = NBC
+						AND = {
+							tag = GIT
+							NOT = { ruler_has_personality = one_v_one_git_corner_personality }
+						}
+					}
+				}
+			}
 			add_province_modifier = { name = one_v_one_sailors_building_s_modifier duration = -1 hidden = yes }
 		}
 		if = {
@@ -2345,6 +2429,14 @@ conscription_center = {
 			limit = { FROM = { has_country_modifier = one_v_one_mission_re_mil_buf_1_modifier } }
 			add_province_modifier = { name = one_v_one_mission_re_mil_buf_1_conscription_center duration = -1 hidden = yes }
 		}
+		if = {
+			limit = { FROM = { has_idea = one_v_one_hys_2 } }
+			add_province_modifier = { name = one_v_one_conscription_center_double_bonus_modifier duration = -1 hidden = yes }
+		}
+		if = {
+			limit = { has_province_modifier = one_v_one_regimental_camp_double_bonus_modifier }
+			remove_province_modifier = one_v_one_regimental_camp_double_bonus_modifier
+		}
 	}
 	on_destroyed = {
 		remove_development_from_building = {
@@ -2387,6 +2479,10 @@ conscription_center = {
 		if = {
 			limit = { has_province_modifier = one_v_one_mission_re_mil_buf_1_conscription_center }
 			remove_province_modifier = one_v_one_mission_re_mil_buf_1_conscription_center
+		}
+		if = {
+			limit = { has_province_modifier = one_v_one_conscription_center_double_bonus_modifier }
+			remove_province_modifier = one_v_one_conscription_center_double_bonus_modifier
 		}
 	}
 	on_obsolete = {

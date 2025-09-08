@@ -8,6 +8,10 @@ country_decisions = {
 					limit = { started_in = 1479.1.1 NOT = { started_in = 1479.1.3 } }
 					country_event = { id = one_v_one_mod.41 }
 				}
+				if = { # Hundred Years War
+					limit = { started_in = 1485.1.1 NOT = { started_in = 1485.1.3 } }
+					country_event = { id = one_v_one_mod.54 }
+				}
 				if = { # Ottoman and Ottoman Alt
 					limit = { OR = { started_in = 1516.1.1 started_in = 1516.1.2 } NOT = { started_in = 1516.1.3 } }
 					country_event = { id = one_v_one_mod.42 }
@@ -44,6 +48,10 @@ country_decisions = {
 					limit = { OR = { started_in = 1685.1.1 started_in = 1685.1.2 } NOT = { started_in = 1685.1.3 } }
 					country_event = { id = one_v_one_mod.52 }
 				}
+				if = { # Nader Shah Invasion
+					limit = { OR = { started_in = 1733.1.1 started_in = 1733.1.2 } NOT = { started_in = 1733.1.3 } }
+					country_event = { id = one_v_one_mod.53 }
+				}
 				if = { # Austrian Succession
 					limit = { OR = { started_in = 1734.1.1 started_in = 1734.1.2 } NOT = { started_in = 1734.1.3 } }
 					country_event = { id = one_v_one_mod.50 }
@@ -78,7 +86,7 @@ country_decisions = {
 			religion = catholic
 			papacy_active = yes
 			is_papal_controller = no
-			OR = { tag = WFR tag = WSP tag = WAU tag = NFR tag = NSP tag = NIT tag = NAU tag = TFR tag = TPL tag = TAS tag = TSP tag = TCG tag = TIT tag = GSP tag = GFR tag = GIT tag = GAU tag = GPL tag = AFR tag = ASP tag = AIT tag = AAU tag = APL tag = ABA tag = SAU tag = SFR tag = SSP tag = SPO tag = WWF tag = WWI tag = WWA one_v_one_re_nations = yes }
+			OR = { tag = WFR tag = WSP tag = WAU tag = NFR tag = NSP tag = NIT tag = NAU tag = TFR tag = TPL tag = TAS tag = TSP tag = TCG tag = TIT tag = GSP tag = GFR tag = GIT tag = GAU tag = GPL tag = AFR tag = ASP tag = AIT tag = AAU tag = APL tag = ABA tag = SAU tag = SFR tag = SSP tag = SPO tag = WWF tag = WWI tag = WWA tag = NFC one_v_one_hyw_nations = yes one_v_one_re_nations = yes }
 			PAP = {
 				OR = {
 					had_ruler_flag = { flag = papal_controller_flag days = 1825 }
@@ -1454,6 +1462,978 @@ country_decisions = {
 		ai_will_do = { factor = 0 }
 	}
 	#################################
+	# Hundred Years War:
+	one_v_one_hyw_revive_general_hyf_decision = {
+		color = { 0 150 200 }
+		potential = {
+			one_v_one_starting_nation = no
+			tag = HYF
+			if = {
+				limit = { mission_completed = one_v_one_mission_hyw_nation_select_1_hyf }
+				NOT = { has_country_flag = one_v_one_mission_hyw_nation_select_1_hyf_flag_fired }
+			}
+		}
+		allow = {
+			custom_trigger_tooltip = {
+				tooltip = one_v_one_hyw_revive_general_decision_tt
+				OR = {
+					AND = {
+						has_country_flag = one_v_one_hyf_joan_personality_flag_fired
+						mission_completed = one_v_one_mission_hyw_nation_select_1_hyf
+						NOT = { has_leader = "Jeanne d'Arc" }
+					}
+					AND = {
+						mission_completed = one_v_one_mission_hyw_nation_select_3_hyf
+						NOT = { has_leader = "Jean Bureau" }
+					}
+					AND = {
+						mission_completed = one_v_one_mission_hyw_nation_select_5_hyf
+						NOT = { has_leader = "Bertrand du Guesclin" }
+					}
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = one_v_one_hyw_revive_general_decision_ttt
+			if = {
+				limit = {
+					mission_completed = one_v_one_mission_hyw_nation_select_1_hyf
+					NOT = { has_leader = "Jeanne d'Arc" }
+				}
+				define_general = {
+					fire = 8
+					shock = 8
+					manuever = 6
+					siege = 1
+					female = yes
+					name = "Jeanne d'Arc"
+					trait = one_v_one_hyf_joan_personality
+				}
+			}
+			if = {
+				limit = {
+					mission_completed = one_v_one_mission_hyw_nation_select_3_hyf
+					NOT = { has_leader = "Jean Bureau" }
+				}
+				define_general = {
+					fire = 3
+					shock = 3
+					manuever = 1
+					siege = 6
+					name = "Jean Bureau"
+					trait = one_v_one_hyf_bureau_personality
+				}
+			}
+			if = {
+				limit = {
+					mission_completed = one_v_one_mission_hyw_nation_select_5_hyf
+					NOT = { has_leader = "Bertrand du Guesclin" }
+				}
+				define_general = {
+					fire = 4
+					shock = 6
+					manuever = 7
+					siege = 2
+					name = "Bertrand du Guesclin"
+					trait = one_v_one_hyf_guesclin_personality
+				}
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
+	one_v_one_hyw_revive_general_hyc_decision = {
+		color = { 0 150 200 }
+		potential = {
+			one_v_one_starting_nation = no
+			tag = HYC
+		}
+		allow = {
+			custom_trigger_tooltip = {
+				tooltip = one_v_one_hyw_revive_general_decision_tt
+				OR = {
+					AND = {
+						mission_completed = one_v_one_mission_hyw_nation_select_1_hyc
+						NOT = { has_leader = "Henry II" }
+					}
+					AND = {
+						mission_completed = one_v_one_mission_hyw_nation_select_3_hyc
+						NOT = { has_leader = "Pero Nino" }
+					}
+					AND = {
+						mission_completed = one_v_one_mission_hyw_nation_select_3_hyc
+						NOT = { has_leader = "Pero Niño" }
+					}
+					AND = {
+						mission_completed = one_v_one_mission_hyw_nation_select_5_hyc
+						NOT = { has_leader = "Fernando Sanchez de Tovar" }
+					}
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = one_v_one_hyw_revive_general_decision_ttt
+			if = {
+				limit = {
+					mission_completed = one_v_one_mission_hyw_nation_select_1_hyc
+					NOT = { has_leader = "Henry II" }
+				}
+				define_general = {
+					fire = 5
+					shock = 5
+					manuever = 2
+					siege = 2
+					name = "Henry II"
+					trait = one_v_one_hyc_trastamara_personality
+				}
+			}
+			if = {
+				limit = {
+					mission_completed = one_v_one_mission_hyw_nation_select_3_hyc
+					NOT = { has_leader = "Pero Nino" }
+				}
+				define_general = {
+					fire = 6
+					shock = 5
+					manuever = 5
+					siege = 2
+					name = "Pero Nino"
+					trait = one_v_one_hyc_elcidg_personality
+				}
+			}
+			if = {
+				limit = {
+					mission_completed = one_v_one_mission_hyw_nation_select_3_hyc
+					NOT = { has_leader = "Pero Niño" }
+				}
+				define_admiral = {
+					fire = 5
+					shock = 4
+					manuever = 6
+					siege = 1
+					name = "Pero Niño"
+					trait = one_v_one_hyc_elcida_personality
+				}
+			}
+			if = {
+				limit = {
+					mission_completed = one_v_one_mission_hyw_nation_select_5_hyc
+					NOT = { has_leader = "Fernando Sanchez de Tovar" }
+				}
+				define_admiral = {
+					fire = 6
+					shock = 6
+					manuever = 6
+					siege = 6
+					name = "Fernando Sanchez de Tovar"
+					trait = one_v_one_hyc_fernando_personality
+				}
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
+	one_v_one_hyw_revive_general_hys_decision = {
+		color = { 0 150 200 }
+		potential = {
+			one_v_one_starting_nation = no
+			tag = HYS
+		}
+		allow = {
+			custom_trigger_tooltip = {
+				tooltip = one_v_one_hyw_revive_general_decision_tt
+				OR = {
+					AND = {
+						mission_completed = one_v_one_mission_hyw_nation_select_1_hys
+						NOT = { has_leader = "William Douglas" }
+					}
+					AND = {
+						mission_completed = one_v_one_mission_hyw_nation_select_3_hys
+						NOT = { has_leader = "John Stewart" }
+					}
+					AND = {
+						mission_completed = one_v_one_mission_hyw_nation_select_5_hys
+						NOT = { has_leader = "Thomas Stewart" }
+					}
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = one_v_one_hyw_revive_general_decision_ttt
+			if = {
+				limit = {
+					mission_completed = one_v_one_mission_hyw_nation_select_1_hys
+					NOT = { has_leader = "William Douglas" }
+				}
+				define_general = {
+					fire = 4
+					shock = 4
+					manuever = 7
+					siege = 4
+					name = "William Douglas"
+					trait = one_v_one_hys_william_personality
+				}
+			}
+			if = {
+				limit = {
+					mission_completed = one_v_one_mission_hyw_nation_select_3_hys
+					NOT = { has_leader = "John Stewart" }
+				}
+				define_general = {
+					fire = 6
+					shock = 6
+					manuever = 6
+					siege = 1
+					name = "John Stewart"
+					trait = one_v_one_hys_stewart_personality
+				}
+			}
+			if = {
+				limit = {
+					mission_completed = one_v_one_mission_hyw_nation_select_5_hys
+					NOT = { has_leader = "Thomas Stewart" }
+				}
+				define_general = {
+					fire = 3
+					shock = 6
+					manuever = 2
+					siege = 2
+					name = "Thomas Stewart"
+					trait = one_v_one_hys_thomas_personality
+				}
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
+	one_v_one_hyw_revive_general_hye_decision = {
+		color = { 0 150 200 }
+		potential = {
+			one_v_one_starting_nation = no
+			tag = HYE
+			if = {
+				limit = { mission_completed = one_v_one_mission_hyw_nation_select_5_hye }
+				NOT = { has_country_flag = one_v_one_hye_henry_personality_flag_fired }
+			}
+		}
+		allow = {
+			custom_trigger_tooltip = {
+				tooltip = one_v_one_hyw_revive_general_decision_tt
+				OR = {
+					AND = {
+						mission_completed = one_v_one_mission_hyw_nation_select_1_hye
+						NOT = { has_leader = "Edward of Woodstock" }
+					}
+					AND = {
+						mission_completed = one_v_one_mission_hyw_nation_select_3_hye
+						NOT = { has_leader = "Edward III" }
+					}
+					AND = {
+						mission_completed = one_v_one_mission_hyw_nation_select_5_hye
+						NOT = { has_leader = "Henry V" }
+					}
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = one_v_one_hyw_revive_general_decision_ttt
+			if = {
+				limit = {
+					mission_completed = one_v_one_mission_hyw_nation_select_1_hye
+					NOT = { has_leader = "Edward of Woodstock" }
+				}
+				define_general = {
+					fire = 6
+					shock = 6
+					manuever = 6
+					siege = 1
+					name = "Edward of Woodstock"
+					trait = one_v_one_hye_woodstock_personality
+				}
+			}
+			if = {
+				limit = {
+					mission_completed = one_v_one_mission_hyw_nation_select_3_hye
+					NOT = { has_leader = "Edward III" }
+				}
+				define_general = {
+					fire = 5
+					shock = 4
+					manuever = 4
+					siege = 3
+					name = "Edward III"
+					trait = one_v_one_hye_edward_personality
+				}
+			}
+			if = {
+				limit = {
+					mission_completed = one_v_one_mission_hyw_nation_select_5_hye
+					NOT = { has_leader = "Henry V" }
+				}
+				define_general = {
+					fire = 8
+					shock = 4
+					manuever = 6
+					siege = 1
+					name = "Henry V"
+				}
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
+	one_v_one_hyw_revive_general_hyb_decision = {
+		color = { 0 150 200 }
+		potential = {
+			one_v_one_starting_nation = no
+			tag = HYB
+		}
+		allow = {
+			custom_trigger_tooltip = {
+				tooltip = one_v_one_hyw_revive_general_decision_tt
+				OR = {
+					AND = {
+						mission_completed = one_v_one_mission_hyw_nation_select_1_hyb
+						NOT = { has_leader = "John I" }
+					}
+					AND = {
+						mission_completed = one_v_one_mission_hyw_nation_select_3_hyb
+						NOT = { has_leader = "Philip II" }
+					}
+					AND = {
+						mission_completed = one_v_one_mission_hyw_nation_select_5_hyb
+						NOT = { has_leader = "Philip III" }
+					}
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = one_v_one_hyw_revive_general_decision_ttt
+			if = {
+				limit = {
+					mission_completed = one_v_one_mission_hyw_nation_select_1_hyb
+					NOT = { has_leader = "John I" }
+				}
+				define_general = {
+					fire = 4
+					shock = 4
+					manuever = 4
+					siege = 4
+					name = "John I"
+					trait = one_v_one_hyb_john_personality
+				}
+			}
+			if = {
+				limit = {
+					mission_completed = one_v_one_mission_hyw_nation_select_3_hyb
+					NOT = { has_leader = "Philip II" }
+				}
+				define_general = {
+					fire = 6
+					shock = 4
+					manuever = 3
+					siege = 1
+					name = "Philip II"
+					trait = one_v_one_hyb_philipb_personality
+				}
+			}
+			if = {
+				limit = {
+					mission_completed = one_v_one_mission_hyw_nation_select_5_hyb
+					NOT = { has_leader = "Philip III" }
+				}
+				define_general = {
+					fire = 3
+					shock = 6
+					manuever = 6
+					siege = 2
+					name = "Philip III"
+					trait = one_v_one_hyb_philipg_personality
+				}
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
+	one_v_one_hyw_revive_general_hyp_decision = {
+		color = { 0 150 200 }
+		potential = {
+			one_v_one_starting_nation = no
+			tag = HYP
+		}
+		allow = {
+			custom_trigger_tooltip = {
+				tooltip = one_v_one_hyw_revive_general_decision_tt
+				OR = {
+					AND = {
+						mission_completed = one_v_one_mission_hyw_nation_select_1_hyp
+						NOT = { has_leader = "Nuno Álvares Pereira" }
+					}
+					AND = {
+						mission_completed = one_v_one_mission_hyw_nation_select_3_hyp
+						NOT = { has_leader = "Pedro" }
+					}
+					AND = {
+						mission_completed = one_v_one_mission_hyw_nation_select_5_hyp
+						NOT = { has_leader = "Henry" }
+					}
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = one_v_one_hyw_revive_general_decision_ttt
+			if = {
+				limit = {
+					mission_completed = one_v_one_mission_hyw_nation_select_1_hyp
+					NOT = { has_leader = "Nuno Álvares Pereira" }
+				}
+				define_general = {
+					fire = 6
+					shock = 4
+					manuever = 6
+					siege = 2
+					name = "Nuno Álvares Pereira"
+					trait = one_v_one_hyp_periera_personality
+				}
+			}
+			if = {
+				limit = {
+					mission_completed = one_v_one_mission_hyw_nation_select_3_hyp
+					NOT = { has_leader = "Pedro" }
+				}
+				define_general = {
+					fire = 5
+					shock = 5
+					manuever = 6
+					siege = 1
+					name = "Pedro"
+					trait = one_v_one_hyp_pedro_personality
+				}
+			}
+			if = {
+				limit = {
+					mission_completed = one_v_one_mission_hyw_nation_select_5_hyp
+					NOT = { has_leader = "Henry" }
+				}
+				define_admiral = {
+					fire = 6
+					shock = 6
+					manuever = 6
+					siege = 6
+					name = "Henry"
+					trait = one_v_one_hyp_navigator_personality
+				}
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
+	one_v_one_hyw_coastal_raid_decision = {
+		color = { 150 50 50 }
+		provinces_to_highlight = {
+			one_v_one_hyw_raid_prov = yes
+			NOT = { owned_by = ROOT }
+		}
+		potential = {
+			one_v_one_starting_nation = no
+			mission_completed = one_v_one_mission_hyp_objective_3
+			tag = HYP
+			one_v_one_hyw_nations = yes
+		}
+		allow = {
+			custom_trigger_tooltip = {
+				tooltip = one_v_one_hyw_coastal_raid_decision_tt
+				always = no
+			}
+		}
+		effect = { custom_tooltip = one_v_one_hyw_coastal_raid_decision_tt }
+		ai_will_do = { factor = 0 }
+	}
+	one_v_one_hyw_stabhit_decision = {
+		color = { 150 50 50 }
+		provinces_to_highlight = {
+			OR = {
+				area = ile_de_france_area
+				area = orleans_area
+				province_id = 186
+				province_id = 4390
+				province_id = 191
+				province_id = 4389
+				province_id = 178
+				#
+				area = brittany_area
+				area = normandy_area
+				area = picardy_area
+				province_id = 177
+			}
+		}
+		potential = {
+			one_v_one_starting_nation = no
+			started_in = 1485.1.1
+			NOT = { started_in = 1485.1.3 }
+			one_v_one_hyw_nations = yes
+		}
+		allow = { always = no }
+		effect = {}
+		ai_will_do = { factor = 0 }
+	}
+	one_v_one_hyw_scotland_decision = {
+		color = { 150 50 50 }
+		provinces_to_highlight = {
+			OR = {
+				area = highlands_area
+				area = lowlands_area
+			}
+		}
+		potential = {
+			one_v_one_starting_nation = no
+			started_in = 1485.1.1
+			NOT = { started_in = 1485.1.3 }
+			one_v_one_hyw_nations = yes
+		}
+		allow = { always = no }
+		effect = {}
+		ai_will_do = { factor = 0 }
+	}
+	one_v_one_hyw_wales_decision = {
+		color = { 150 50 50 }
+		provinces_to_highlight = {
+			OR = {
+				area = scottish_marches_area
+				area = wales_area
+				province_id = 4365
+				province_id = 240
+			}
+		}
+		potential = {
+			one_v_one_starting_nation = no
+			started_in = 1485.1.1
+			NOT = { started_in = 1485.1.3 }
+			one_v_one_hyw_nations = yes
+		}
+		allow = { always = no }
+		effect = {}
+		ai_will_do = { factor = 0 }
+	}
+	one_v_one_hyw_burgundy_decision = {
+		color = { 150 50 50 }
+		provinces_to_highlight = {
+			OR = {
+				area = lorraine_area
+				area = alsace_area
+				area = bourgogne_area
+				area = romandie_area
+				province_id = 4392
+				province_id = 1877
+			}
+		}
+		potential = {
+			one_v_one_starting_nation = no
+			started_in = 1485.1.1
+			NOT = { started_in = 1485.1.3 }
+			one_v_one_hyw_nations = yes
+		}
+		allow = { always = no }
+		effect = {}
+		ai_will_do = { factor = 0 }
+	}
+	one_v_one_hyw_savoy_decision = {
+		color = { 150 50 50 }
+		provinces_to_highlight = {
+			OR = {
+				area = savoy_dauphine_area
+				area = provence_area
+				province_id = 4777
+				province_id = 4391
+				province_id = 200
+			}
+		}
+		potential = {
+			one_v_one_starting_nation = no
+			started_in = 1485.1.1
+			NOT = { started_in = 1485.1.3 }
+			one_v_one_hyw_nations = yes
+		}
+		allow = { always = no }
+		effect = {}
+		ai_will_do = { factor = 0 }
+	}
+	one_v_one_hyw_leon_decision = {
+		color = { 150 50 50 }
+		provinces_to_highlight = {
+			OR = {
+				area = galicia_area
+				area = leon_area
+				area = extremadura_area
+				province_id = 4548
+			}
+		}
+		potential = {
+			one_v_one_starting_nation = no
+			started_in = 1485.1.1
+			NOT = { started_in = 1485.1.3 }
+			one_v_one_hyw_nations = yes
+		}
+		allow = { always = no }
+		effect = {}
+		ai_will_do = { factor = 0 }
+	}
+	one_v_one_hyw_andalucia_decision = {
+		color = { 150 50 50 }
+		provinces_to_highlight = {
+			OR = {
+				area = upper_andalucia_area
+				province_id = 2754
+				province_id = 4547
+				province_id = 221
+				province_id = 1748
+				province_id = 225
+				province_id = 224
+				province_id = 1749
+			}
+		}
+		potential = {
+			one_v_one_starting_nation = no
+			started_in = 1485.1.1
+			NOT = { started_in = 1485.1.3 }
+			one_v_one_hyw_nations = yes
+		}
+		allow = { always = no }
+		effect = {}
+		ai_will_do = { factor = 0 }
+	}
+	#################################
+	# Nader Shah Invasion:
+	one_v_one_nbc_overlord_decision = {
+		color = { 0 150 200 }
+		potential = {
+			one_v_one_starting_nation = no
+			started_in = 1733.1.1
+			NOT = { started_in = 1733.1.3 }
+			tag = NBC
+		}
+		allow = {
+			adm_power = 100
+			dip_power = 100
+			mil_power = 100
+			splendor = 200
+			capital_scope = { controlled_by = NBC }
+		}
+		effect = {
+			custom_tooltip = one_v_one_nbc_overlord_decision_tt
+			add_adm_power = -100
+			add_dip_power = -100
+			add_mil_power = -100
+			add_splendor = -200
+			hidden_effect = {
+				capital_scope = {
+					streltsy_infantry = ROOT
+					streltsy_infantry = ROOT
+					streltsy_infantry = ROOT
+					streltsy_infantry = ROOT
+					streltsy_infantry = ROOT
+					streltsy_infantry = ROOT
+					streltsy_infantry = ROOT
+					streltsy_infantry = ROOT
+					streltsy_infantry = ROOT
+					streltsy_infantry = ROOT
+					streltsy_infantry = ROOT
+					streltsy_infantry = ROOT
+					streltsy_infantry = ROOT
+					streltsy_infantry = ROOT
+					streltsy_infantry = ROOT
+					streltsy_infantry = ROOT
+					streltsy_infantry = ROOT
+					streltsy_infantry = ROOT
+					streltsy_infantry = ROOT
+					streltsy_infantry = ROOT
+					streltsy_infantry = ROOT
+					streltsy_infantry = ROOT
+					streltsy_infantry = ROOT
+					streltsy_infantry = ROOT
+					streltsy_infantry = ROOT
+					streltsy_infantry = ROOT
+					streltsy_infantry = ROOT
+					streltsy_infantry = ROOT
+					streltsy_infantry = ROOT
+					streltsy_infantry = ROOT
+					streltsy_infantry = ROOT
+					streltsy_infantry = ROOT
+					streltsy_infantry = ROOT
+					streltsy_infantry = ROOT
+					streltsy_infantry = ROOT
+					streltsy_infantry = ROOT
+					streltsy_infantry = ROOT
+					streltsy_infantry = ROOT
+					streltsy_infantry = ROOT
+					streltsy_infantry = ROOT
+				}
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
+	one_v_one_nfc_overlord_decision = {
+		color = { 0 150 200 }
+		potential = {
+			one_v_one_starting_nation = no
+			started_in = 1733.1.1
+			NOT = { started_in = 1733.1.3 }
+			tag = NFC
+		}
+		allow = {
+			adm_power = 100
+			dip_power = 100
+			mil_power = 100
+			splendor = 200
+			capital_scope = { controlled_by = NFC }
+		}
+		effect = {
+			custom_tooltip = one_v_one_nfc_overlord_decision_tt
+			add_adm_power = -100
+			add_dip_power = -100
+			add_mil_power = -100
+			add_splendor = -200
+			hidden_effect = {
+				capital_scope = {
+					musketeer_infantry = ROOT
+					musketeer_infantry = ROOT
+					musketeer_infantry = ROOT
+					musketeer_infantry = ROOT
+					musketeer_infantry = ROOT
+					musketeer_infantry = ROOT
+					musketeer_infantry = ROOT
+					musketeer_infantry = ROOT
+					musketeer_infantry = ROOT
+					musketeer_infantry = ROOT
+					musketeer_infantry = ROOT
+					musketeer_infantry = ROOT
+					musketeer_infantry = ROOT
+					musketeer_infantry = ROOT
+					musketeer_infantry = ROOT
+					musketeer_infantry = ROOT
+					musketeer_infantry = ROOT
+					musketeer_infantry = ROOT
+					musketeer_infantry = ROOT
+					musketeer_infantry = ROOT
+					musketeer_infantry = ROOT
+					musketeer_infantry = ROOT
+					musketeer_infantry = ROOT
+					musketeer_infantry = ROOT
+					musketeer_infantry = ROOT
+					musketeer_infantry = ROOT
+					musketeer_infantry = ROOT
+					musketeer_infantry = ROOT
+					musketeer_infantry = ROOT
+					musketeer_infantry = ROOT
+					musketeer_infantry = ROOT
+					musketeer_infantry = ROOT
+					musketeer_infantry = ROOT
+					musketeer_infantry = ROOT
+					musketeer_infantry = ROOT
+					musketeer_infantry = ROOT
+					musketeer_infantry = ROOT
+					musketeer_infantry = ROOT
+					musketeer_infantry = ROOT
+					musketeer_infantry = ROOT
+				}
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
+	one_v_one_nsi_astrakhanloot_decision = {
+		color = { 150 50 50 }
+		provinces_to_highlight = {
+			OR = {
+				area = astrakhan_area
+				area = dagestan_area
+			}
+		}
+		potential = {
+			one_v_one_starting_nation = no
+			started_in = 1733.1.1
+			NOT = { started_in = 1733.1.3 }
+			one_v_one_nsi_nations = yes
+		}
+		allow = { always = no }
+		effect = {}
+		ai_will_do = { factor = 0 }
+	}
+	one_v_one_nsi_samarkand_decision = {
+		color = { 150 50 50 }
+		provinces_to_highlight = {
+			OR = {
+				area = transcaspia_area
+				area = khiva_area
+				area = merv_area
+				area = transoxiana_area
+				area = termez_area
+				area = ferghana_area
+				area = kashgaria_area
+				area = kyzylkum_area
+				area = syr_darya_area
+				area = arys_area
+				area = jetysuu_area
+				area = kazakhstan_area
+				area = balchasj_area
+			}
+		}
+		potential = {
+			one_v_one_starting_nation = no
+			started_in = 1733.1.1
+			NOT = { started_in = 1733.1.3 }
+			one_v_one_nsi_nations = yes
+		}
+		allow = { always = no }
+		effect = {}
+		ai_will_do = { factor = 0 }
+	}
+	one_v_one_nsi_kabul_decision = {
+		color = { 150 50 50 }
+		provinces_to_highlight = {
+			OR = {
+				area = balkh_area
+				area = ghor_area
+				area = kabulistan_area
+				province_id = 577
+				province_id = 2068
+			}
+		}
+		potential = {
+			one_v_one_starting_nation = no
+			started_in = 1733.1.1
+			NOT = { started_in = 1733.1.3 }
+			one_v_one_nsi_nations = yes
+		}
+		allow = { always = no }
+		effect = {}
+		ai_will_do = { factor = 0 }
+	}
+	one_v_one_nsi_lahore_decision = {
+		color = { 150 50 50 }
+		provinces_to_highlight = {
+			OR = {
+				area = kashmir_area
+				area = sind_sagar_area
+				area = multan_area
+				area = lahore_area
+				area = sirhind_area
+			}
+		}
+		potential = {
+			one_v_one_starting_nation = no
+			started_in = 1733.1.1
+			NOT = { started_in = 1733.1.3 }
+			one_v_one_nsi_nations = yes
+		}
+		allow = { always = no }
+		effect = {}
+		ai_will_do = { factor = 0 }
+	}
+	one_v_one_nsi_delhi_decision = {
+		color = { 150 50 50 }
+		provinces_to_highlight = {
+			area = upper_doab_area
+		}
+		potential = {
+			one_v_one_starting_nation = no
+			started_in = 1733.1.1
+			NOT = { started_in = 1733.1.3 }
+			one_v_one_nsi_nations = yes
+		}
+		allow = { always = no }
+		effect = {}
+		ai_will_do = { factor = 0 }
+	}
+	one_v_one_nsi_surat_decision = {
+		color = { 150 50 50 }
+		provinces_to_highlight = {
+			OR = {
+				area = malwa_area
+				area = khandesh_area
+				province_id = 4460
+				province_id = 2092
+				province_id = 548
+				province_id = 4442
+				province_id = 545
+			}
+		}
+		potential = {
+			one_v_one_starting_nation = no
+			started_in = 1733.1.1
+			NOT = { started_in = 1733.1.3 }
+			one_v_one_nsi_nations = yes
+		}
+		allow = { always = no }
+		effect = {}
+		ai_will_do = { factor = 0 }
+	}
+	one_v_one_nsi_deccan_decision = {
+		color = { 150 50 50 }
+		provinces_to_highlight = {
+			OR = {
+				province_id = 550
+				province_id = 4458
+				province_id = 551
+				province_id = 546
+				province_id = 4443
+				province_id = 2050
+				province_id = 4437
+				province_id = 544
+				area = telingana_area
+				area = maidan_area
+				area = golconda_area
+				area = raichur_doab_area
+			}
+		}
+		potential = {
+			one_v_one_starting_nation = no
+			started_in = 1733.1.1
+			NOT = { started_in = 1733.1.3 }
+			one_v_one_nsi_nations = yes
+		}
+		allow = { always = no }
+		effect = {}
+		ai_will_do = { factor = 0 }
+	}
+	one_v_one_nsi_orissa_decision = {
+		color = { 150 50 50 }
+		provinces_to_highlight = {
+			OR = {
+				area = orissa_area
+				province_id = 4450
+				province_id = 4448
+				province_id = 2048
+			}
+		}
+		potential = {
+			one_v_one_starting_nation = no
+			started_in = 1733.1.1
+			NOT = { started_in = 1733.1.3 }
+			one_v_one_nsi_nations = yes
+		}
+		allow = { always = no }
+		effect = {}
+		ai_will_do = { factor = 0 }
+	}
+	one_v_one_nsi_bengal_decision = {
+		color = { 150 50 50 }
+		provinces_to_highlight = {
+			OR = {
+				area = mithila_area
+				area = bihar_area
+				province_id = 560
+				province_id = 4470
+				province_id = 4450
+				area = orissa_area
+				area = upper_mahanadi_area
+				area = garjat_area
+			}
+		}
+		potential = {
+			one_v_one_starting_nation = no
+			started_in = 1733.1.1
+			NOT = { started_in = 1733.1.3 }
+			one_v_one_nsi_nations = yes
+		}
+		allow = { always = no }
+		effect = {}
+		ai_will_do = { factor = 0 }
+	}
+	#################################
 	# Roman Wars:
 	one_v_one_re_second_golden_era_decision = {
 		color = { 0 150 200 }
@@ -1511,12 +2491,24 @@ country_decisions = {
 		potential = {
 			NOT = { has_country_flag = re_hire_general_2_time }
 			one_v_one_starting_nation = no
-			started_in = 1685.1.1
-			NOT = { started_in = 1685.1.3 }
-			one_v_one_re_nations = yes
+			OR = {
+				AND = {
+					started_in = 1685.1.1
+					NOT = { started_in = 1685.1.3 }
+					one_v_one_re_nations = yes
+				}
+				AND = {
+					tag = HYC
+					mission_completed = one_v_one_mission_hyw_nation_select_1_hyc
+				}
+			}
 		}
 		allow = {
-			mil_power = 200
+			if = {
+				limit = { tag = HYC }
+				mil_power = 100
+			}
+			else = { mil_power = 200 }
 			custom_trigger_tooltip = {
 				tooltip = one_v_one_re_hire_general_3_tt
 				NOT = { has_country_flag = re_hire_general_2_time }
@@ -1525,12 +2517,24 @@ country_decisions = {
 		effect = {
 			custom_tooltip = one_v_one_re_hire_general_3_ttt
 			if = {
-				limit = { has_country_flag = re_hire_general_1_time }
-				set_country_flag = re_hire_general_2_time
+				limit = {
+					OR = {
+						has_country_flag = re_hire_general_1_time
+						mission_completed = one_v_one_mission_hyw_nation_select_1_hyc
+					}
+					set_country_flag = re_hire_general_2_time
+				}
 			}
 			set_country_flag = re_hire_general_1_time
-			add_mil_power = -200
-			define_general = { shock = 6 fire = 6 manuever = 4 siege = 0 }
+			if = {
+				limit = { tag = HYC }
+				add_mil_power = -100
+				define_general = { shock = 6 fire = 6 manuever = 6 siege = 1 }
+			}
+			else = {
+				add_mil_power = -200
+				define_general = { shock = 6 fire = 6 manuever = 4 siege = 0 }
+			}
 		}
 		ai_will_do = { factor = 0 }
 	}

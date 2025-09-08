@@ -1132,6 +1132,7 @@ defensive_ideas = {
 	trigger = {
 		one_v_one_starting_nation = no
 		one_v_one_idea_groups = yes
+		one_v_one_hyw_nations = no
 	}
 	bonus = {
 		military_tactics = 0.1
@@ -1398,6 +1399,7 @@ mercenary_ideas = {
 	trigger = {
 		one_v_one_starting_nation = no
 		one_v_one_idea_groups = yes
+		one_v_one_hyw_nations = no
 	}
 	bonus = {
 		allow_mercenary_drill = yes

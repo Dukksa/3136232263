@@ -1,0 +1,88 @@
+### Customizable Special Units [csu] ###
+country_decisions = {
+    allow_custom_infantry_units = {
+		color = { 216 178 80 }
+        potential = {
+			one_v_one_starting_nation = no
+			started_in = 1685.1.1
+			NOT = { started_in = 1685.1.3 }
+			one_v_one_re_nations = yes
+            NOT = { has_country_modifier = allow_custom_special_units_modifier_country }
+        }
+
+        effect = {
+            add_country_modifier = {
+                name = "allow_custom_special_units_modifier_country"
+                duration = -1
+            }
+			add_country_modifier = {
+                name = "allow_special_infantry_modifier"
+                duration = -1
+            }
+			hidden_effect = {
+				add_country_modifier = {
+					name = "custom_infantry_tier1_N"
+					duration = -1
+				}
+				add_country_modifier = {
+					name = "custom_infantry_tier2_N"
+					duration = -1
+				}
+				add_country_modifier = {
+					name = "custom_infantry_tier3_N"
+					duration = -1
+				}
+				add_country_modifier = {
+					name = "custom_infantry_tier4_N"
+					duration = -1
+				}
+			}
+        }
+        ai_will_do = {
+            factor = 0
+        }
+    }
+    
+    allow_custom_cavalry_units = {
+		color = { 216 178 80 }
+        potential = {
+			one_v_one_starting_nation = no
+			started_in = 1685.1.1
+			NOT = { started_in = 1685.1.3 }
+			one_v_one_re_nations = yes
+            NOT = { has_country_modifier = allow_custom_special_units_modifier_country }
+        }
+
+        effect = {
+            add_country_modifier = {
+                name = "allow_custom_special_units_modifier_country"
+                duration = -1
+            }
+			add_country_modifier = {
+                name = "allow_special_cavalry_modifier"
+                duration = -1
+            }
+			hidden_effect = {
+				add_country_modifier = {
+					name = "custom_cavalry_tier1_N"
+					duration = -1
+				}
+				add_country_modifier = {
+					name = "custom_cavalry_tier2_N"
+					duration = -1
+				}
+				add_country_modifier = {
+					name = "custom_cavalry_tier3_N"
+					duration = -1
+				}
+				add_country_modifier = {
+					name = "custom_cavalry_tier4_N"
+					duration = -1
+				}
+			}
+        }
+        ai_will_do = {
+            factor = 0
+        }
+    }
+}

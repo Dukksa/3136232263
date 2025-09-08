@@ -4621,17 +4621,23 @@ enforce_privileges_reform = {
 	}
 	effect = {
 		hidden_effect = {
-			every_subject_country = {
-				set_country_flag = re_enforce_privileges_reform_flag
-				add_government_reform = enforce_privileges_reform
+			if = {
+				limit = { OR = { tag = REW tag = REE } }
+				every_subject_country = {
+					set_country_flag = enforce_privileges_reform_flag
+					add_government_reform = enforce_privileges_reform
+				}
 			}
 		}
 	}
 	removed_effect = {
 		hidden_effect = {
-			every_subject_country = {
-				clr_country_flag = re_enforce_privileges_reform_flag
-				remove_government_reform = enforce_privileges_reform
+			if = {
+				limit = { OR = { tag = REW tag = REE } }
+				every_subject_country = {
+					clr_country_flag = re_enforce_privileges_reform_flag
+					remove_government_reform = enforce_privileges_reform
+				}
 			}
 		}
 	}
@@ -4670,17 +4676,23 @@ quash_noble_power_reform = {
 	}
 	effect = {
 		hidden_effect = {
-			every_subject_country = {
-				set_country_flag = re_quash_noble_power_reform_flag
-				add_government_reform = quash_noble_power_reform
+			if = {
+				limit = { OR = { tag = REW tag = REE } }
+				every_subject_country = {
+					set_country_flag = re_quash_noble_power_reform_flag
+					add_government_reform = quash_noble_power_reform
+				}
 			}
 		}
 	}
 	removed_effect = {
 		hidden_effect = {
-			every_subject_country = {
-				clr_country_flag = re_quash_noble_power_reform_flag
-				remove_government_reform = quash_noble_power_reform
+			if = {
+				limit = { OR = { tag = REW tag = REE } }
+				every_subject_country = {
+					clr_country_flag = re_quash_noble_power_reform_flag
+					remove_government_reform = quash_noble_power_reform
+				}
 			}
 		}
 	}
@@ -4720,17 +4732,23 @@ grant_noble_castle_rights_reform = {
 	}
 	effect = {
 		hidden_effect = {
-			every_subject_country = {
-				set_country_flag = re_grant_noble_castle_rights_reform_flag
-				add_government_reform = grant_noble_castle_rights_reform
+			if = {
+				limit = { OR = { tag = REW tag = REE } }
+				every_subject_country = {
+					set_country_flag = re_grant_noble_castle_rights_reform_flag
+					add_government_reform = grant_noble_castle_rights_reform
+				}
 			}
 		}
 	}
 	removed_effect = {
 		hidden_effect = {
-			every_subject_country = {
-				clr_country_flag = re_grant_noble_castle_rights_reform_flag
-				remove_government_reform = grant_noble_castle_rights_reform
+			if = {
+				limit = { OR = { tag = REW tag = REE } }
+				every_subject_country = {
+					clr_country_flag = re_grant_noble_castle_rights_reform_flag
+					remove_government_reform = grant_noble_castle_rights_reform
+				}
 			}
 		}
 	}
@@ -4780,17 +4798,23 @@ maintain_nobles_status_quo_reform = {
 	}
 	effect = {
 		hidden_effect = {
-			every_subject_country = {
-				set_country_flag = re_maintain_nobles_status_quo_reform_flag
-				add_government_reform = maintain_nobles_status_quo_reform
+			if = {
+				limit = { OR = { tag = REW tag = REE } }
+				every_subject_country = {
+					set_country_flag = re_maintain_nobles_status_quo_reform_flag
+					add_government_reform = maintain_nobles_status_quo_reform
+				}
 			}
 		}
 	}
 	removed_effect = {
 		hidden_effect = {
-			every_subject_country = {
-				clr_country_flag = re_maintain_nobles_status_quo_reform_flag
-				remove_government_reform = maintain_nobles_status_quo_reform
+			if = {
+				limit = { OR = { tag = REW tag = REE } }
+				every_subject_country = {
+					clr_country_flag = re_maintain_nobles_status_quo_reform_flag
+					remove_government_reform = maintain_nobles_status_quo_reform
+				}
 			}
 		}
 	}
@@ -4831,17 +4855,23 @@ grant_military_command_reform = {
 	}
 	effect = {
 		hidden_effect = {
-			every_subject_country = {
-				set_country_flag = re_grant_military_command_reform_flag
-				add_government_reform = grant_military_command_reform
+			if = {
+				limit = { OR = { tag = REW tag = REE } }
+				every_subject_country = {
+					set_country_flag = re_grant_military_command_reform_flag
+					add_government_reform = grant_military_command_reform
+				}
 			}
 		}
 	}
 	removed_effect = {
 		hidden_effect = {
-			every_subject_country = {
-				clr_country_flag = re_grant_military_command_reform_flag
-				remove_government_reform = grant_military_command_reform
+			if = {
+				limit = { OR = { tag = REW tag = REE } }
+				every_subject_country = {
+					clr_country_flag = re_grant_military_command_reform_flag
+					remove_government_reform = grant_military_command_reform
+				}
 			}
 		}
 	}
@@ -4907,18 +4937,24 @@ grant_nobles_electorate_reform = {
 					duration = -1
 				}
 			}
-			every_subject_country = {
-				set_country_flag = re_grant_nobles_electorate_reform_flag
-				add_government_reform = grant_nobles_electorate_reform
+			if = {
+				limit = { OR = { tag = REW tag = REE } }
+				every_subject_country = {
+					set_country_flag = re_grant_nobles_electorate_reform_flag
+					add_government_reform = grant_nobles_electorate_reform
+				}
 			}
 		}
 	}
 	removed_effect = {
 		hidden_effect = {
 			remove_country_modifier = empowered_regency_modifier
-			every_subject_country = {
-				clr_country_flag = re_grant_nobles_electorate_reform_flag
-				remove_government_reform = grant_nobles_electorate_reform
+			if = {
+				limit = { OR = { tag = REW tag = REE } }
+				every_subject_country = {
+					clr_country_flag = re_grant_nobles_electorate_reform_flag
+					remove_government_reform = grant_nobles_electorate_reform
+				}
 			}
 		}
 	}
@@ -4965,17 +5001,23 @@ blackmail_nobility_reform = {
 	}
 	effect = {
 		hidden_effect = {
-			every_subject_country = {
-				set_country_flag = re_blackmail_nobility_reform_flag
-				add_government_reform = blackmail_nobility_reform
+			if = {
+				limit = { OR = { tag = REW tag = REE } }
+				every_subject_country = {
+					set_country_flag = re_blackmail_nobility_reform_flag
+					add_government_reform = blackmail_nobility_reform
+				}
 			}
 		}
 	}
 	removed_effect = {
 		hidden_effect = {
-			every_subject_country = {
-				clr_country_flag = re_blackmail_nobility_reform_flag
-				remove_government_reform = blackmail_nobility_reform
+			if = {
+				limit = { OR = { tag = REW tag = REE } }
+				every_subject_country = {
+					clr_country_flag = re_blackmail_nobility_reform_flag
+					remove_government_reform = blackmail_nobility_reform
+				}
 			}
 		}
 	}
@@ -5308,17 +5350,23 @@ reform_the_pronoiars_reform = {
 	}
 	effect = {
 		hidden_effect = {
-			every_subject_country = {
-				set_country_flag = re_reform_the_pronoiars_reform_flag
-				add_government_reform = reform_the_pronoiars_reform
+			if = {
+				limit = { OR = { tag = REW tag = REE } }
+				every_subject_country = {
+					set_country_flag = re_reform_the_pronoiars_reform_flag
+					add_government_reform = reform_the_pronoiars_reform
+				}
 			}
 		}
 	}
 	removed_effect = {
 		hidden_effect = {
-			every_subject_country = {
-				clr_country_flag = re_reform_the_pronoiars_reform_flag
-				remove_government_reform = reform_the_pronoiars_reform
+			if = {
+				limit = { OR = { tag = REW tag = REE } }
+				every_subject_country = {
+					clr_country_flag = re_reform_the_pronoiars_reform_flag
+					remove_government_reform = reform_the_pronoiars_reform
+				}
 			}
 		}
 	}
@@ -5540,17 +5588,23 @@ centralize_reform = {
 	}
 	effect = {
 		hidden_effect = {
-			every_subject_country = {
-				set_country_flag = re_centralize_reform_flag
-				add_government_reform = centralize_reform
+			if = {
+				limit = { OR = { tag = REW tag = REE } }
+				every_subject_country = {
+					set_country_flag = re_centralize_reform_flag
+					add_government_reform = centralize_reform
+				}
 			}
 		}
 	}
 	removed_effect = {
 		hidden_effect = {
-			every_subject_country = {
-				clr_country_flag = re_centralize_reform_flag
-				remove_government_reform = centralize_reform
+			if = {
+				limit = { OR = { tag = REW tag = REE } }
+				every_subject_country = {
+					clr_country_flag = re_centralize_reform_flag
+					remove_government_reform = centralize_reform
+				}
 			}
 		}
 	}
@@ -5664,17 +5718,23 @@ centralize_empire_reform = {
 	}
 	effect = {
 		hidden_effect = {
-			every_subject_country = {
-				set_country_flag = re_centralize_empire_reform_flag
-				add_government_reform = centralize_empire_reform
+			if = {
+				limit = { OR = { tag = REW tag = REE } }
+				every_subject_country = {
+					set_country_flag = re_centralize_empire_reform_flag
+					add_government_reform = centralize_empire_reform
+				}
 			}
 		}
 	}
 	removed_effect = {
 		hidden_effect = {
-			every_subject_country = {
-				clr_country_flag = re_centralize_empire_reform_flag
-				remove_government_reform = centralize_empire_reform
+			if = {
+				limit = { OR = { tag = REW tag = REE } }
+				every_subject_country = {
+					clr_country_flag = re_centralize_empire_reform_flag
+					remove_government_reform = centralize_empire_reform
+				}
 			}
 		}
 	}
@@ -5709,17 +5769,23 @@ decentralize_reform = {
 	}
 	effect = {
 		hidden_effect = {
-			every_subject_country = {
-				set_country_flag = re_decentralize_reform_flag
-				add_government_reform = decentralize_reform
+			if = {
+				limit = { OR = { tag = REW tag = REE } }
+				every_subject_country = {
+					set_country_flag = re_decentralize_reform_flag
+					add_government_reform = decentralize_reform
+				}
 			}
 		}
 	}
 	removed_effect = {
 		hidden_effect = {
-			every_subject_country = {
-				clr_country_flag = re_decentralize_reform_flag
-				remove_government_reform = decentralize_reform
+			if = {
+				limit = { OR = { tag = REW tag = REE } }
+				every_subject_country = {
+					clr_country_flag = re_decentralize_reform_flag
+					remove_government_reform = decentralize_reform
+				}
 			}
 		}
 	}
@@ -5756,17 +5822,23 @@ expand_imperial_court_reform = {
 	}
 	effect = {
 		hidden_effect = {
-			every_subject_country = {
-				set_country_flag = re_expand_imperial_court_reform_flag
-				add_government_reform = expand_imperial_court_reform
+			if = {
+				limit = { OR = { tag = REW tag = REE } }
+				every_subject_country = {
+					set_country_flag = re_expand_imperial_court_reform_flag
+					add_government_reform = expand_imperial_court_reform
+				}
 			}
 		}
 	}
 	removed_effect = {
 		hidden_effect = {
-			every_subject_country = {
-				clr_country_flag = re_expand_imperial_court_reform_flag
-				remove_government_reform = expand_imperial_court_reform
+			if = {
+				limit = { OR = { tag = REW tag = REE } }
+				every_subject_country = {
+					clr_country_flag = re_expand_imperial_court_reform_flag
+					remove_government_reform = expand_imperial_court_reform
+				}
 			}
 		}
 	}
@@ -5800,17 +5872,23 @@ limit_imperial_court_reform = {
 	}
 	effect = {
 		hidden_effect = {
-			every_subject_country = {
-				set_country_flag = re_limit_imperial_court_reform_flag
-				add_government_reform = limit_imperial_court_reform
+			if = {
+				limit = { OR = { tag = REW tag = REE } }
+				every_subject_country = {
+					set_country_flag = re_limit_imperial_court_reform_flag
+					add_government_reform = limit_imperial_court_reform
+				}
 			}
 		}
 	}
 	removed_effect = {
 		hidden_effect = {
-			every_subject_country = {
-				clr_country_flag = re_limit_imperial_court_reform_flag
-				remove_government_reform = limit_imperial_court_reform
+			if = {
+				limit = { OR = { tag = REW tag = REE } }
+				every_subject_country = {
+					clr_country_flag = re_limit_imperial_court_reform_flag
+					remove_government_reform = limit_imperial_court_reform
+				}
 			}
 		}
 	}
@@ -5848,17 +5926,23 @@ regional_council_reform = {
 	}
 	effect = {
 		hidden_effect = {
-			every_subject_country = {
-				set_country_flag = re_regional_council_reform_flag
-				add_government_reform = regional_council_reform
+			if = {
+				limit = { OR = { tag = REW tag = REE } }
+				every_subject_country = {
+					set_country_flag = re_regional_council_reform_flag
+					add_government_reform = regional_council_reform
+				}
 			}
 		}
 	}
 	removed_effect = {
 		hidden_effect = {
-			every_subject_country = {
-				clr_country_flag = re_regional_council_reform_flag
-				remove_government_reform = regional_council_reform
+			if = {
+				limit = { OR = { tag = REW tag = REE } }
+				every_subject_country = {
+					clr_country_flag = re_regional_council_reform_flag
+					remove_government_reform = regional_council_reform
+				}
 			}
 		}
 	}
@@ -5896,17 +5980,23 @@ representation_of_the_crown_reform = {
 	}
 	effect = {
 		hidden_effect = {
-			every_subject_country = {
-				set_country_flag = re_representation_of_the_crown_reform_flag
-				add_government_reform = representation_of_the_crown_reform
+			if = {
+				limit = { OR = { tag = REW tag = REE } }
+				every_subject_country = {
+					set_country_flag = re_representation_of_the_crown_reform_flag
+					add_government_reform = representation_of_the_crown_reform
+				}
 			}
 		}
 	}
 	removed_effect = {
 		hidden_effect = {
-			every_subject_country = {
-				clr_country_flag = re_representation_of_the_crown_reform_flag
-				remove_government_reform = representation_of_the_crown_reform
+			if = {
+				limit = { OR = { tag = REW tag = REE } }
+				every_subject_country = {
+					clr_country_flag = re_representation_of_the_crown_reform_flag
+					remove_government_reform = representation_of_the_crown_reform
+				}
 			}
 		}
 	}
