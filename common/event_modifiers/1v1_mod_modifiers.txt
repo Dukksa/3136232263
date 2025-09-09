@@ -967,6 +967,9 @@ one_v_one_hyf_bureau_personality_modifier = {
 }
 # Castille:
 one_v_one_mission_hyc_objective_1_modifier = {
+	global_trade_power = 0.1
+}
+one_v_one_mission_hyc_objective_3_modifier = {
 	global_tax_modifier = 0.25
 	development_cost = -0.05
 }

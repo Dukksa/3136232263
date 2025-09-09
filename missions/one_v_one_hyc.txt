@@ -327,13 +327,7 @@ one_v_one_mission_hyc_1_objectives = {
 			}
 		}
 		effect = {
-			one_v_one_hyc_north_africa = {
-				add_core = ROOT
-				remove_core = HYP
-				cede_province = ROOT
-				change_culture = ROOT
-				change_religion = ROOT
-			}
+			add_country_modifier = { name = one_v_one_mission_hyc_objective_1_modifier duration = 1 }
 		}
 	}
 }
@@ -354,7 +348,6 @@ one_v_one_mission_hyc_2_objectives = {
 		trigger = {
 			navy_size = 100
 			num_of_light_ship = 60
-			is_year = 1500
 		}
 		effect = {
 			add_country_modifier = { name = one_v_one_mission_hyc_objective_2_modifier duration = -1 }
@@ -396,7 +389,7 @@ one_v_one_mission_hyc_3_objectives = {
 			}
 		}
 		effect = {
-			add_country_modifier = { name = one_v_one_mission_hyc_objective_1_modifier duration = 2555 }
+			add_country_modifier = { name = one_v_one_mission_hyc_objective_3_modifier duration = 2555 }
 		}
 	}
 }

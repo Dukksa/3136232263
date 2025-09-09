@@ -113,7 +113,7 @@ on_battle_won_country = {
 		change_variable = { which = one_v_one_mission_hyf_objective_3_var value = 1 }
 	}
 	if = {
-		limit = { tag = HYS NOT = { check_variable = { which = one_v_one_mission_hys_objective_3_var value = 10 } } }
+		limit = { tag = HYS NOT = { check_variable = { which = one_v_one_mission_hys_objective_3_var value = 5 } } }
 		change_variable = { which = one_v_one_mission_hys_objective_3_var value = 1 }
 	}
 	if = {

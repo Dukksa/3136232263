@@ -362,7 +362,7 @@ one_v_one_mission_hys_3_objectives = {
 		trigger = {
 			custom_trigger_tooltip = {
 				tooltip = one_v_one_mission_hys_objective_3_tt
-				check_variable = { which = one_v_one_mission_hys_objective_3_var value = 10 }
+				check_variable = { which = one_v_one_mission_hys_objective_3_var value = 5 }
 			}
 		}
 		effect = {
