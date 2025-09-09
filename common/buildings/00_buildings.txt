@@ -1038,7 +1038,7 @@ regimental_camp = {
 		}
 		if = {
 			limit = { FROM = { has_idea = one_v_one_hys_2 } }
-			add_province_modifier = { name = one_v_one_conscription_center_double_bonus_modifier duration = -1 hidden = yes }
+			add_province_modifier = { name = one_v_one_regimental_camp_double_bonus_modifier duration = -1 hidden = yes }
 		}
 	}
 	on_destroyed = {

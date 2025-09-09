@@ -316,7 +316,7 @@ one_v_one_mission_hyf_1_objectives = {
 		required_missions = { }
 		position = 3
 		trigger = {
-			army_professionalism = 0.45
+			army_professionalism = 0.4
 		}
 		effect = {
 			add_army_professionalism = 0.1

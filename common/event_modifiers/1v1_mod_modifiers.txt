@@ -975,7 +975,7 @@ one_v_one_mission_hys_objective_1_modifier = {
 	development_cost = -0.15
 }
 one_v_one_mission_hys_objective_3_modifier = {
-	fire_damage_received = -0.1
+	own_territory_dice_roll_bonus = 1
 }
 one_v_one_hys_william_personality_modifier1 = {
 	loot_amount = 5
@@ -1002,7 +1002,7 @@ one_v_one_mission_hye_objective_3_modifier = {
 }
 # Burgundy:
 one_v_one_mission_hyb_objective_1_modifier = {
-	own_territory_dice_roll_bonus = 1
+	fire_damage_received = -0.1
 }
 one_v_one_mission_hyb_objective_2_modifier = {
 	artillery_power = 0.15

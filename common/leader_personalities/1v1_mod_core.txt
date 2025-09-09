@@ -24,7 +24,6 @@ one_v_one_hyc_trastamara_personality = {
 }
 one_v_one_hyc_elcidg_personality = {
 	allow = { always = no }
-	reinforce_speed = 0.33
 	recover_army_morale_speed = 0.33
 }
 one_v_one_hyc_elcida_personality = {
@@ -74,13 +73,15 @@ one_v_one_hye_henry_personality = {
 # Burgundy:
 one_v_one_hyb_john_personality = {
 	allow = { always = no }
-	land_morale = 0.1
+	land_morale = 0.15
+	morale_damage = 0.15
+	morale_damage_received = -0.1
 }
 one_v_one_hyb_philipb_personality = {
 	allow = { always = no }
 	artillery_fire = 0.2
 	shock_damage_received = -0.1
-	backrow_artillery_damage = -0.1
+	backrow_artillery_damage = 0.1
 }
 one_v_one_hyb_philipg_personality = {
 	allow = { always = no }

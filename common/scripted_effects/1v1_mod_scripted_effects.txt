@@ -3696,16 +3696,16 @@ one_v_one_hyc_mission_select_elcid_tag = {
 	}
 	define_general = {
 		fire = 6
-		shock = 5
-		manuever = 5
-		siege = 2
+		shock = 6
+		manuever = 6
+		siege = 1
 		name = "Pero Nino"
 		trait = one_v_one_hyc_elcidg_personality
 	}
 	custom_tooltip = one_v_one_hyc_elcidg_personality_tt
 	define_admiral = {
-		fire = 5
-		shock = 4
+		fire = 6
+		shock = 6
 		manuever = 6
 		siege = 1
 		name = "Pero Niño"
@@ -3842,9 +3842,9 @@ one_v_one_hyb_mission_select_john_tag = {
 	}
 	define_general = {
 		fire = 4
-		shock = 4
+		shock = 5
 		manuever = 4
-		siege = 4
+		siege = 3
 		name = "John I"
 		trait = one_v_one_hyb_john_personality
 	}
