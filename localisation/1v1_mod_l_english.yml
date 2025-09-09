@@ -4266,6 +4266,7 @@
       one_v_one_manpower_fl_gtw: "Additional Bonus"
       one_v_one_manpower_fl_ww: "Additional Bonus"
       one_v_one_manpower_points_ww: "Additional Bonus"
+      one_v_one_fort_debuff: ""
       one_v_one_mercenary_morale: "Mercenary Morale"
       one_v_one_hyb_2_modifier: "Mercenary Morale"
       one_v_one_mission_hyw_no_claim_modifier: ""

@@ -1466,6 +1466,7 @@ country_decisions = {
 	one_v_one_hyw_revive_general_hyf_decision = {
 		color = { 0 150 200 }
 		potential = {
+			has_country_flag = one_v_one_commanders_chosen_flag
 			one_v_one_starting_nation = no
 			tag = HYF
 			if = {
@@ -1474,6 +1475,7 @@ country_decisions = {
 			}
 		}
 		allow = {
+			mission_completed = one_v_one_mission_hyw_nation_select_1_hyf
 			custom_trigger_tooltip = {
 				tooltip = one_v_one_hyw_revive_general_decision_tt
 				OR = {
@@ -1544,6 +1546,7 @@ country_decisions = {
 	one_v_one_hyw_revive_general_hyc_decision = {
 		color = { 0 150 200 }
 		potential = {
+			has_country_flag = one_v_one_commanders_chosen_flag
 			one_v_one_starting_nation = no
 			tag = HYC
 		}
@@ -1634,6 +1637,7 @@ country_decisions = {
 	one_v_one_hyw_revive_general_hys_decision = {
 		color = { 0 150 200 }
 		potential = {
+			has_country_flag = one_v_one_commanders_chosen_flag
 			one_v_one_starting_nation = no
 			tag = HYS
 		}
@@ -1706,6 +1710,7 @@ country_decisions = {
 	one_v_one_hyw_revive_general_hye_decision = {
 		color = { 0 150 200 }
 		potential = {
+			has_country_flag = one_v_one_commanders_chosen_flag
 			one_v_one_starting_nation = no
 			tag = HYE
 			if = {
@@ -1781,6 +1786,7 @@ country_decisions = {
 	one_v_one_hyw_revive_general_hyb_decision = {
 		color = { 0 150 200 }
 		potential = {
+			has_country_flag = one_v_one_commanders_chosen_flag
 			one_v_one_starting_nation = no
 			tag = HYB
 		}
@@ -1853,6 +1859,7 @@ country_decisions = {
 	one_v_one_hyw_revive_general_hyp_decision = {
 		color = { 0 150 200 }
 		potential = {
+			has_country_flag = one_v_one_commanders_chosen_flag
 			one_v_one_starting_nation = no
 			tag = HYP
 		}
@@ -2522,8 +2529,8 @@ country_decisions = {
 						has_country_flag = re_hire_general_1_time
 						mission_completed = one_v_one_mission_hyw_nation_select_1_hyc
 					}
-					set_country_flag = re_hire_general_2_time
 				}
+				set_country_flag = re_hire_general_2_time
 			}
 			set_country_flag = re_hire_general_1_time
 			if = {

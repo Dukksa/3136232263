@@ -3573,6 +3573,7 @@ ordennancas_reform = {
 	icon = "ordenancas"
 	allow_normal_conversion = yes
 	potential = {
+		always = no
 		has_dlc = "Domination"
 		NOT = { religion_group = muslim }
 		OR = {

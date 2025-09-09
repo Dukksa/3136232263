@@ -346,15 +346,15 @@ one_v_one_mission_hye_2_objectives = {
 				province_id = 235
 				province_id = 234
 			}
-			NOT = { num_of_times_improved = 25 }
+			NOT = { num_of_times_improved = 15 }
 		}
 		trigger = {
-			244 = { num_of_times_improved = 25 }
-			245 = { num_of_times_improved = 25 }
-			238 = { num_of_times_improved = 25 }
-			236 = { num_of_times_improved = 25 }
-			235 = { num_of_times_improved = 25 }
-			234 = { num_of_times_improved = 25 }
+			244 = { num_of_times_improved = 15 }
+			245 = { num_of_times_improved = 15 }
+			238 = { num_of_times_improved = 15 }
+			236 = { num_of_times_improved = 15 }
+			235 = { num_of_times_improved = 15 }
+			234 = { num_of_times_improved = 15 }
 		}
 		effect = {
 			add_years_of_income = 2

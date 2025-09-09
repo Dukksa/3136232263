@@ -594,6 +594,11 @@ one_v_one_jsp_por_55_decision_modifier = {
 	land_morale = 0.1
 }
 # Napoleonic scenario:
+# Forts debuff:
+one_v_one_fort_debuff = {
+	local_defensiveness = -0.25
+	local_garrison_damage =  0.2
+}
 # France:
 one_v_one_manpower_fl_nfr = {
 	global_manpower = 330 # -- old: 430 # 432 # 600k manpower
@@ -686,7 +691,6 @@ one_v_one_manpower_fl_npr = {
 one_v_one_manpower_fl_ngb = {
 	global_manpower = 120 # 200k manpower
 	land_forcelimit = 90 # 150 FL
-	global_attacker_dice_roll_bonus = 1
 	assault_fort_ability = -0.3
 	garrison_damage = -0.2
 }
@@ -1002,7 +1006,7 @@ one_v_one_mission_hye_objective_3_modifier = {
 }
 # Burgundy:
 one_v_one_mission_hyb_objective_1_modifier = {
-	fire_damage_received = -0.1
+	shock_damage_received = -0.1
 }
 one_v_one_mission_hyb_objective_2_modifier = {
 	artillery_power = 0.15
