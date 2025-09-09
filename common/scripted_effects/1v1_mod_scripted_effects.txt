@@ -247,7 +247,6 @@ discover_hundred_years_provinces = {
 	every_owned_province = { limit = { units_in_province = 1 } kill_units = { who = owner } }
 	define_explorer = { shock = 1 fire = 1 manuever = 1 siege = 1 }
 	hidden_effect = { 4378 = { center_of_trade = 1 } 373 = { center_of_trade = 1 } 4121 = { center_of_trade = 1 } 248 = { center_of_trade = 1 } 243 = { center_of_trade = 1 } 239 = { center_of_trade = 1 } 236 = { center_of_trade = 1 } 100 = { center_of_trade = 1 } 96 = { center_of_trade = 1 } 168 = { center_of_trade = 1 } 183 = { center_of_trade = 1 } 186 = { center_of_trade = 1 } 4766 = { center_of_trade = 1 } 192 = { center_of_trade = 1 } 172 = { center_of_trade = 1 } 195 = { center_of_trade = 1 } 174 = { center_of_trade = 1 } 2753 = { center_of_trade = 1 } 213 = { center_of_trade = 1 } 220 = { center_of_trade = 1 } 4552 = { center_of_trade = 1 } 217 = { center_of_trade = 1 } 219 = { center_of_trade = 1 } 231 = { center_of_trade = 1 } 216 = { center_of_trade = 1 } 227 = { center_of_trade = 1 } 224 = { center_of_trade = 1 } 1751 = { center_of_trade = 1 } }
-	HYF = { set_variable = { which = one_v_one_manpower_dev value = 225 } }
 	183 = { add_permanent_claim = HYE }
 	177 = { add_permanent_claim = HYF }
 }

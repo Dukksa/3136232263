@@ -41,16 +41,16 @@ estate_burghers_re_merchant_privilege = {
 		one_v_one_re_nations = yes
 	}
 	can_select = {
-		re_subject_can_select_privilege = { privilege = estate_church_re_merchant_privilege }
+		re_subject_can_select_privilege = { privilege = estate_burghers_re_merchant_privilege }
 	}
 	can_revoke = {
 		re_subject_can_revoke_privilege = yes
 	}
 	on_granted = {
-		re_subject_grant_privilege = { privilege = estate_church_re_merchant_privilege }
+		re_subject_grant_privilege = { privilege = estate_burghers_re_merchant_privilege }
 	}
 	on_revoked = {
-		re_subject_revoke_privilege = { privilege = estate_church_re_merchant_privilege }
+		re_subject_revoke_privilege = { privilege = estate_burghers_re_merchant_privilege }
 	}
 	benefits = {
 		merchants = 2

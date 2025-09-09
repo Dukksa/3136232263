@@ -4101,7 +4101,13 @@ country_event = { # Hundred Years War
 	picture = one_v_one_ita_rules_event_pic
 	is_triggered_only = yes
 	trigger = { OR = { NOT = { has_country_flag = one_v_one_startup_event } has_country_flag = check_scenario_rules } }
-	immediate = { set_country_flag = one_v_one_startup_event }
+	immediate = {
+		set_country_flag = one_v_one_startup_event
+		if = {
+			limit = { tag = HYF }
+			set_variable = { which = one_v_one_manpower_dev value = 225 }
+		}
+	}
 	option = {
 		name = one_v_one_mod.41.a highlight = yes
 		if = {
