@@ -117,6 +117,12 @@ age_of_discovery = {
 			ai_will_do = { factor = 10 }
 		}
 		ab_may_perform_slave_raid_on_same_religion = {
+			allow = {
+				custom_trigger_tooltip = {
+					tooltip = ww_ab_cavalry_armies_tt
+					NOT = { one_v_one_hyw_nations = yes }
+				}
+			}
 			effect = {  on_age_ability_taken = { age = age_of_discovery } }
 			modifier = {
 				may_perform_slave_raid_on_same_religion = yes

@@ -356,54 +356,7 @@ one_v_one_mission_hyf_2_objectives = {
 		effect = {
 			custom_tooltip = one_v_one_mission_hyf_objective_2_ttt
 			hidden_effect = {
-				random_owned_province = {
-					limit = { NOT = { has_building = soldier_households } }
-					add_building = soldier_households
-				}
-				random_owned_province = {
-					limit = { NOT = { has_building = soldier_households } }
-					add_building = soldier_households
-				}
-				random_owned_province = {
-					limit = { NOT = { has_building = soldier_households } }
-					add_building = soldier_households
-				}
-				random_owned_province = {
-					limit = { NOT = { has_building = soldier_households } }
-					add_building = soldier_households
-				}
-				random_owned_province = {
-					limit = { NOT = { has_building = soldier_households } }
-					add_building = soldier_households
-				}
-				random_owned_province = {
-					limit = { NOT = { has_building = soldier_households } }
-					add_building = soldier_households
-				}
-				random_owned_province = {
-					limit = { NOT = { has_building = soldier_households } }
-					add_building = soldier_households
-				}
-				random_owned_province = {
-					limit = { NOT = { has_building = soldier_households } }
-					add_building = soldier_households
-				}
-				random_owned_province = {
-					limit = { NOT = { has_building = soldier_households } }
-					add_building = soldier_households
-				}
-				random_owned_province = {
-					limit = { NOT = { has_building = soldier_households } }
-					add_building = soldier_households
-				}
-				random_owned_province = {
-					limit = { NOT = { has_building = soldier_households } }
-					add_building = soldier_households
-				}
-				random_owned_province = {
-					limit = { NOT = { has_building = soldier_households } }
-					add_building = soldier_households
-				}
+				one_v_one_soldier_add = yes
 			}
 		}
 	}
@@ -426,10 +379,11 @@ one_v_one_mission_hyf_3_objectives = {
 			controls = 183
 			custom_trigger_tooltip = {
 				tooltip = one_v_one_mission_hyf_objective_3_tt
-				check_variable = { which = one_v_one_mission_hyf_objective_3_var value = 15 }
+				check_variable = { which = one_v_one_mission_hyf_objective_3_var value = 10 }
 			}
 		}
 		effect = {
+			add_manpower = 25
 			custom_tooltip = one_v_one_mission_hyf_objective_3_ttt
 			hidden_effect = {
 				capital_scope = {

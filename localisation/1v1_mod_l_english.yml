@@ -3799,7 +3799,7 @@
         one_v_one_mission_hyf_objective_2_ttt: "§YSoldier's Households§! will be built in §Y12§! random provinces."
         one_v_one_mission_hyf_objective_3_title: "Lettre de Retenue"
         one_v_one_mission_hyf_objective_3_desc: ""
-        one_v_one_mission_hyf_objective_3_tt: "Win §Y15§! battles."
+        one_v_one_mission_hyf_objective_3_tt: "Win §Y10§! battles."
         one_v_one_mission_hyf_objective_3_ttt: "§Y[Root.GetName]§! Gets §Y25 Heavy Cavalry§! in §Y[Root.Capital.GetCapitalName]§!."
       # Castille:
         one_v_one_mission_hyw_nation_select_1_hyc_title: "Henry II (General)"
@@ -4765,7 +4765,7 @@
 		one_v_one_hyb_john_personality_tt: "Leader Trait: §YJohn the Fearless§!\nMorale of Armies: §G+10.0%§!"
         one_v_one_hyb_philipb_personality: "Philip the Bold"
         one_v_one_hyb_philipb_personality_die_desc: ""
-		one_v_one_hyb_philipb_personality_tt: "Leader Trait: §YPhilip the Bold§!\nShock Damage Received: §G-10.0%§!\nArtillery Damage from Back Row: §R+10.0%§!\nArtillery Fire: §G+0.35§!"
+		one_v_one_hyb_philipb_personality_tt: "Leader Trait: §YPhilip the Bold§!\nShock Damage Received: §G-10.0%§!\nArtillery Damage from Back Row: §R+10.0%§!\nArtillery Fire: §G+0.20§!"
         one_v_one_hyb_philipg_personality: "Philip the Good"
         one_v_one_hyb_philipg_personality_die_desc: ""
         one_v_one_hyb_philipg_personality_tt: "Leader Trait: §YPhilip the Good§!\nCavalry Combat Ability: §G+15.0%§!\nCavalry to Infantry Ratio: §G+50.0%§!\nCavalry Shock: §G+0.20§!\nUnlocks §YOrder of the Golden Fleece§! Holy Order, giving the following effects:\nLocal Manpower Modifier: §G+33.0%§!"

@@ -197,7 +197,7 @@ temple = {
 			}
 		}
 		if = {
-			limit = { FROM = { has_idea = one_v_one_hys_2 } }
+			limit = { FROM = { has_idea = one_v_one_hyc_2 } }
 			add_province_modifier = { name = one_v_one_temple_building_modifier duration = -1 hidden = yes }
 		}
 	}

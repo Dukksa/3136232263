@@ -122,6 +122,10 @@ one_v_one_fort_per_area_trigger = {
 		if = {
 			limit = {
 				FROM = { tag = HYS }
+				OR = {
+					province_id = 4361
+					province_id = 4362
+				}
 			}
 			NOT = {
 				area_for_scope_province = {

@@ -2019,7 +2019,7 @@ military_engineering_reform = {
 	icon = "military_engineers"
 	allow_normal_conversion = yes
 	potential = {
-		NOT = { OR = { one_v_one_succ_nations = yes one_v_one_nap_nations = yes one_v_one_tyw_nations = yes one_v_one_gtw_nations = yes one_v_one_as_nations = yes one_v_one_syw_nations = yes one_v_one_nsi_nations = yes one_v_one_ww_nations = yes } }
+		NOT = { OR = { one_v_one_hyw_nations = yes one_v_one_succ_nations = yes one_v_one_nap_nations = yes one_v_one_tyw_nations = yes one_v_one_gtw_nations = yes one_v_one_as_nations = yes one_v_one_syw_nations = yes one_v_one_nsi_nations = yes one_v_one_ww_nations = yes } }
 	}
 	modifiers = {
 		artillery_barrage_cost = -0.5
@@ -2084,7 +2084,7 @@ military_engineering_reform_1 = {
 	icon = "military_engineers"
 	allow_normal_conversion = yes
 	potential = {
-		OR = { one_v_one_succ_nations = yes one_v_one_nap_nations = yes one_v_one_tyw_nations = yes one_v_one_gtw_nations = yes one_v_one_as_nations = yes one_v_one_syw_nations = yes one_v_one_nsi_nations = yes one_v_one_ww_nations = yes }
+		OR = { one_v_one_hyw_nations = yes one_v_one_succ_nations = yes one_v_one_nap_nations = yes one_v_one_tyw_nations = yes one_v_one_gtw_nations = yes one_v_one_as_nations = yes one_v_one_syw_nations = yes one_v_one_nsi_nations = yes one_v_one_ww_nations = yes }
 	}
 	modifiers = {
 		artillery_barrage_cost = -0.5

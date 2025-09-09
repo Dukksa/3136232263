@@ -78,7 +78,7 @@ one_v_one_hyb_john_personality = {
 }
 one_v_one_hyb_philipb_personality = {
 	allow = { always = no }
-	artillery_fire = 0.35
+	artillery_fire = 0.2
 	shock_damage_received = -0.1
 	backrow_artillery_damage = -0.1
 }

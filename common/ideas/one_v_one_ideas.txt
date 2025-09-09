@@ -3697,7 +3697,7 @@ hys_ideas = {
 # England:
 hye_ideas = {
 	start = {
-		discipline = 0.1
+		discipline = 0.05
 		movement_speed = 0.15
 	}
 	bonus = {
