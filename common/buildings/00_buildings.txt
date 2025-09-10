@@ -438,16 +438,15 @@ shipyard = {
 		if = {
 			limit = {
 				FROM = {
-					OR = {
-						tag = NBC
-						AND = {
-							tag = GIT
-							NOT = { ruler_has_personality = one_v_one_git_corner_personality }
-						}
-					}
+					tag = GIT
+					NOT = { ruler_has_personality = one_v_one_git_corner_personality }
 				}
 			}
 			add_province_modifier = { name = one_v_one_navy_building_s_modifier duration = -1 hidden = yes }
+		}
+		if = {
+			limit = { FROM = { tag = NBC } }
+			add_province_modifier = { name = one_v_one_sailors_building_nbc_modifier duration = -1 hidden = yes }
 		}
 		if = {
 			limit = { FROM = { has_country_modifier = one_v_one_mission_re_nav_buf_3_modifier } }
@@ -475,6 +474,10 @@ shipyard = {
 		if = {
 			limit = { has_province_modifier = one_v_one_mission_re_nav_buf_3_shipyard }
 			remove_province_modifier = one_v_one_mission_re_nav_buf_3_shipyard
+		}
+		if = {
+			limit = { has_province_modifier = one_v_one_sailors_building_nbc_modifier }
+			remove_province_modifier = one_v_one_sailors_building_nbc_modifier
 		}
 	}
 	on_obsolete = {
@@ -856,16 +859,15 @@ dock = {
 		if = {
 			limit = {
 				FROM = {
-					OR = {
-						tag = NBC
-						AND = {
-							tag = GIT
-							NOT = { ruler_has_personality = one_v_one_git_corner_personality }
-						}
-					}
+					tag = GIT
+					NOT = { ruler_has_personality = one_v_one_git_corner_personality }
 				}
 			}
 			add_province_modifier = { name = one_v_one_sailors_building_s_modifier duration = -1 hidden = yes }
+		}
+		if = {
+			limit = { FROM = { tag = NBC } }
+			add_province_modifier = { name = one_v_one_sailors_building_nbc_modifier duration = -1 hidden = yes }
 		}
 		if = {
 			limit = { FROM = { has_country_modifier = one_v_one_mission_re_nav_buf_3_modifier } }
@@ -904,6 +906,10 @@ dock = {
 		if = {
 			limit = { has_province_modifier = one_v_one_mission_re_nav_buf_3_dock }
 			remove_province_modifier = one_v_one_mission_re_nav_buf_3_dock
+		}
+		if = {
+			limit = { has_province_modifier = one_v_one_sailors_building_nbc_modifier }
+			remove_province_modifier = one_v_one_sailors_building_nbc_modifier
 		}
 	}
 	on_obsolete = {
@@ -1623,16 +1629,15 @@ grand_shipyard = {
 		if = {
 			limit = {
 				FROM = {
-					OR = {
-						tag = NBC
-						AND = {
-							tag = GIT
-							NOT = { ruler_has_personality = one_v_one_git_corner_personality }
-						}
-					}
+					tag = GIT
+					NOT = { ruler_has_personality = one_v_one_git_corner_personality }
 				}
 			}
 			add_province_modifier = { name = one_v_one_navy_building_s_modifier duration = -1 hidden = yes }
+		}
+		if = {
+			limit = { FROM = { tag = NBC } }
+			add_province_modifier = { name = one_v_one_sailors_building_nbc_modifier duration = -1 hidden = yes }
 		}
 		if = {
 			limit = { FROM = { has_country_modifier = one_v_one_mission_re_nav_buf_3_modifier } }
@@ -1660,6 +1665,10 @@ grand_shipyard = {
 		if = {
 			limit = { has_province_modifier = one_v_one_mission_re_nav_buf_3_grand_shipyard }
 			remove_province_modifier = one_v_one_mission_re_nav_buf_3_grand_shipyard
+		}
+		if = {
+			limit = { has_province_modifier = one_v_one_sailors_building_nbc_modifier }
+			remove_province_modifier = one_v_one_sailors_building_nbc_modifier
 		}
 	}
 	on_obsolete = {
@@ -2278,16 +2287,15 @@ drydock = {
 		if = {
 			limit = {
 				FROM = {
-					OR = {
-						tag = NBC
-						AND = {
-							tag = GIT
-							NOT = { ruler_has_personality = one_v_one_git_corner_personality }
-						}
-					}
+					tag = GIT
+					NOT = { ruler_has_personality = one_v_one_git_corner_personality }
 				}
 			}
 			add_province_modifier = { name = one_v_one_sailors_building_s_modifier duration = -1 hidden = yes }
+		}
+		if = {
+			limit = { FROM = { tag = NBC } }
+			add_province_modifier = { name = one_v_one_sailors_building_nbc_modifier duration = -1 hidden = yes }
 		}
 		if = {
 			limit = { FROM = { ruler_has_personality = one_v_one_gea_mezzo_personality } }
@@ -2334,6 +2342,10 @@ drydock = {
 		if = {
 			limit = { has_province_modifier = one_v_one_mission_re_nav_buf_3_drydock }
 			remove_province_modifier = one_v_one_mission_re_nav_buf_3_drydock
+		}
+		if = {
+			limit = { has_province_modifier = one_v_one_sailors_building_nbc_modifier }
+			remove_province_modifier = one_v_one_sailors_building_nbc_modifier
 		}
 	}
 	on_obsolete = {

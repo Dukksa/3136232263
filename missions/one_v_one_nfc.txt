@@ -9,7 +9,7 @@ one_v_one_mission_nsi_1_nfc = {
 	has_country_shield = yes
 
 	one_v_one_mission_nsi_nation_select_1_nfc = {
-		icon = mission_janissaries
+		icon = fra_refine_bombards
 		required_missions = { }
 		trigger = {
 			if = {
@@ -81,7 +81,7 @@ one_v_one_mission_nsi_3_nfc = {
 	has_country_shield = yes
 
 	one_v_one_mission_nsi_nation_select_3_nfc = {
-		icon = mission_janissaries
+		icon = indonesian_trade
 		required_missions = { }
 		trigger = {
 			if = {
@@ -178,7 +178,7 @@ one_v_one_mission_nsi_5_nfc = {
 	has_country_shield = yes
 
 	one_v_one_mission_nsi_nation_select_5_nfc = {
-		icon = mission_janissaries
+		icon = indian_dominance
 		required_missions = { }
 		trigger = {
 			if = {

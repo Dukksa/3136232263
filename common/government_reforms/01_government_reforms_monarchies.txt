@@ -5113,6 +5113,7 @@ poligar_reform = {
 			primary_culture = oriya
 			primary_culture = sinhala
 		}
+		one_v_one_nsi_nations = no
 	}
 	modifiers = {
 		infantry_power = 0.1

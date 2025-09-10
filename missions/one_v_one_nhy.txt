@@ -9,7 +9,7 @@ one_v_one_mission_nsi_1_nhy = {
 	has_country_shield = yes
 
 	one_v_one_mission_nsi_nation_select_1_nhy = {
-		icon = mission_janissaries
+		icon = mission_unite_the_deccan
 		required_missions = { }
 		trigger = {
 			if = {
@@ -81,7 +81,7 @@ one_v_one_mission_nsi_3_nhy = {
 	has_country_shield = yes
 
 	one_v_one_mission_nsi_nation_select_3_nhy = {
-		icon = mission_janissaries
+		icon = mission_viceroyalty_of_the_deccan
 		required_missions = { }
 		trigger = {
 			if = {
@@ -178,7 +178,7 @@ one_v_one_mission_nsi_5_nhy = {
 	has_country_shield = yes
 
 	one_v_one_mission_nsi_nation_select_5_nhy = {
-		icon = mission_janissaries
+		icon = mission_growth_of_golcond
 		required_missions = { }
 		trigger = {
 			if = {

@@ -3675,7 +3675,7 @@ on_alliance_broken_effect = {
 
 on_adm_development_effect = {
 	if = {	# Arena
-		limit = { owner = { OR = { has_idea = one_v_one_wfr_1 has_idea = one_v_one_jss_5 has_idea = one_v_one_afr_2 ruler_has_personality = one_v_one_gea_damat_personality } } }
+		limit = { owner = { OR = { has_idea = one_v_one_wfr_1 has_idea = one_v_one_jss_5 has_idea = one_v_one_afr_2 has_idea = one_v_one_nbc_3 ruler_has_personality = one_v_one_gea_damat_personality } } }
 		add_base_tax = 1 
 	}
 	if = {
@@ -3727,7 +3727,7 @@ on_adm_development_effect = {
 }
 on_dip_development_effect = {
 	if = {	# Arena
-		limit = { owner = { OR = { has_idea = one_v_one_jsm_1 has_idea = one_v_one_gea_1 has_idea = one_v_one_nbc_3 has_idea = one_v_one_nhy_2 has_country_modifier = one_v_one_mission_re_adm_buf_2_modifier } NOT = { ruler_has_personality = one_v_one_gea_damat_personality } } }
+		limit = { owner = { OR = { has_idea = one_v_one_jsm_1 has_idea = one_v_one_gea_1 has_idea = one_v_one_nhy_2 has_country_modifier = one_v_one_mission_re_adm_buf_2_modifier } NOT = { ruler_has_personality = one_v_one_gea_damat_personality } } }
 		add_base_production = 1 
 	}
 	if = {

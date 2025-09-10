@@ -9,7 +9,7 @@ one_v_one_mission_nsi_1_nma = {
 	has_country_shield = yes
 
 	one_v_one_mission_nsi_nation_select_1_nma = {
-		icon = mission_janissaries
+		icon = mission_marathi_fiefs
 		required_missions = { }
 		trigger = {
 			if = {
@@ -81,7 +81,7 @@ one_v_one_mission_nsi_3_nma = {
 	has_country_shield = yes
 
 	one_v_one_mission_nsi_nation_select_3_nma = {
-		icon = mission_janissaries
+		icon = mission_conquer_mewar
 		required_missions = { }
 		trigger = {
 			if = {
@@ -178,7 +178,7 @@ one_v_one_mission_nsi_5_nma = {
 	has_country_shield = yes
 
 	one_v_one_mission_nsi_nation_select_5_nma = {
-		icon = mission_janissaries
+		icon = mission_invade_the_deccan_ori
 		required_missions = { }
 		trigger = {
 			if = {

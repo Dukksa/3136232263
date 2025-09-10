@@ -3995,14 +3995,14 @@ nbc_ideas = {
 	}
 	free = yes
 	one_v_one_nbc_1 = {
-		one_v_one_sailors_building_s_modifier = 2 # sailors 200%
-		one_v_one_navy_building_s_modifier = 3 # navy FL +3
+		naval_forcelimit_modifier = 1
+		one_v_one_sailors_building_nbc_modifier = 2 # sailors 200%
 	}
 	one_v_one_nbc_2 = {
 		artillery_power = 0.15
 	}
 	one_v_one_nbc_3 = {
-		one_v_one_dev_dip_modifier = 1 #production development chance 100%
+		one_v_one_dev_adm_modifier = 1 #tax development chance 100%
 	}
 	one_v_one_nbc_4 = {
 		manpower_recovery_speed = 0.15
@@ -4082,7 +4082,7 @@ nbu_ideas = {
 		cavalry_fire = -0.25
 	}
 	one_v_one_nbu_2 = {
-		monthly_piety = 0.02
+		monthly_piety_accelerator = 0.02
 	}
 	one_v_one_nbu_3 = {
 		global_tax_modifier = 0.25
@@ -4176,7 +4176,7 @@ nmy_ideas = {
 	}
 	one_v_one_nmy_5 = {
 		all_estate_influence_modifier = 0.1
-		prestige_decay = 0.02
+		prestige_decay = -0.02
 	}
 	one_v_one_nmy_6 = {
 		free_dip_policy = 1

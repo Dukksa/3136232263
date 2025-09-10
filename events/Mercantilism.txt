@@ -8,6 +8,7 @@ country_event = {
 	picture = MERCHANTS_TALKING_eventPicture
 
 	trigger = {
+		one_v_one_re_nations = no
 		NOT = { mercantilism = 100 }
 		advisor = trader
 		advisor = master_of_mint

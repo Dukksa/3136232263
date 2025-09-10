@@ -9,7 +9,7 @@ one_v_one_mission_nsi_1_nbc = {
 	has_country_shield = yes
 
 	one_v_one_mission_nsi_nation_select_1_nbc = {
-		icon = mission_janissaries
+		icon = mission_rb_conquer_bengal
 		required_missions = { }
 		trigger = {
 			if = {
@@ -81,7 +81,7 @@ one_v_one_mission_nsi_3_nbc = {
 	has_country_shield = yes
 
 	one_v_one_mission_nsi_nation_select_3_nbc = {
-		icon = mission_janissaries
+		icon = ven_navy_mission_2
 		required_missions = { }
 		trigger = {
 			if = {
@@ -178,7 +178,7 @@ one_v_one_mission_nsi_5_nbc = {
 	has_country_shield = yes
 
 	one_v_one_mission_nsi_nation_select_5_nbc = {
-		icon = mission_janissaries
+		icon = mission_rb_renovate_oxbridge
 		required_missions = { }
 		trigger = {
 			if = {

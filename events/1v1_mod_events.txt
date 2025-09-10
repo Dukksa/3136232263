@@ -1088,14 +1088,14 @@ country_event = {
 		if = {
 			limit = { one_v_one_hyw_nations = yes }
 			discover_hundred_years_provinces = yes
-			while = { limit = { NOT = { treasury = 10000 } } add_treasury = 10000 }
-			while = { limit = { treasury = 10001 } add_treasury = -1 }
+			while = { limit = { NOT = { treasury = 7000 } } add_treasury = 7000 }
+			while = { limit = { treasury = 7001 } add_treasury = -1 }
 			while = { limit = { NOT = { prestige = 50 } } add_prestige = 1 }
 			while = { limit = { prestige = 51 } add_prestige = -1 }
-			while = { limit = { NOT = { army_tradition = 50 } } add_army_tradition = 1 }
-			while = { limit = { army_tradition = 51 } add_army_tradition = -1 }
-			while = { limit = { NOT = { manpower = 100 } } add_manpower = 100 }
-			while = { limit = { manpower = 101 } add_manpower = -1 }
+			while = { limit = { NOT = { army_tradition = 40 } } add_army_tradition = 1 }
+			while = { limit = { army_tradition = 41 } add_army_tradition = -1 }
+			while = { limit = { NOT = { manpower = 80 } } add_manpower = 80 }
+			while = { limit = { manpower = 81 } add_manpower = -1 }
 			while = { limit = { NOT = { sailors = 15000 } } add_sailors = 10000 }
 			while = { limit = { sailors = 15100 } add_sailors = -100 }
 			add_adm_power = 174
@@ -4103,10 +4103,6 @@ country_event = { # Hundred Years War
 	trigger = { OR = { NOT = { has_country_flag = one_v_one_startup_event } has_country_flag = check_scenario_rules } }
 	immediate = {
 		set_country_flag = one_v_one_startup_event
-		if = {
-			limit = { tag = HYF }
-			set_variable = { which = one_v_one_manpower_dev value = 225 }
-		}
 	}
 	option = {
 		name = one_v_one_mod.41.a highlight = yes

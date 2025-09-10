@@ -9,7 +9,7 @@ one_v_one_mission_nsi_1_nra = {
 	has_country_shield = yes
 
 	one_v_one_mission_nsi_nation_select_1_nra = {
-		icon = mission_janissaries
+		icon = mission_conquer_rajputana
 		required_missions = { }
 		trigger = {
 			if = {
@@ -81,7 +81,7 @@ one_v_one_mission_nsi_3_nra = {
 	has_country_shield = yes
 
 	one_v_one_mission_nsi_nation_select_3_nra = {
-		icon = mission_janissaries
+		icon = mission_accomodate_the_rajputs
 		required_missions = { }
 		trigger = {
 			if = {
@@ -178,7 +178,7 @@ one_v_one_mission_nsi_5_nra = {
 	has_country_shield = yes
 
 	one_v_one_mission_nsi_nation_select_5_nra = {
-		icon = mission_janissaries
+		icon = mission_new_army
 		required_missions = { }
 		trigger = {
 			if = {

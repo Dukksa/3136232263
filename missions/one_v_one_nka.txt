@@ -9,7 +9,7 @@ one_v_one_mission_nsi_1_nka = {
 	has_country_shield = yes
 
 	one_v_one_mission_nsi_nation_select_1_nka = {
-		icon = mission_janissaries
+		icon = mission_crusade_for_varna
 		required_missions = { }
 		trigger = {
 			if = {
@@ -81,7 +81,7 @@ one_v_one_mission_nsi_3_nka = {
 	has_country_shield = yes
 
 	one_v_one_mission_nsi_nation_select_3_nka = {
-		icon = mission_janissaries
+		icon = per_establish_western_defenses
 		required_missions = { }
 		trigger = {
 			if = {
@@ -178,7 +178,7 @@ one_v_one_mission_nsi_5_nka = {
 	has_country_shield = yes
 
 	one_v_one_mission_nsi_nation_select_5_nka = {
-		icon = mission_janissaries
+		icon = mission_guns_of_urban
 		required_missions = { }
 		trigger = {
 			if = {

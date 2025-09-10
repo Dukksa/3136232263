@@ -3188,6 +3188,7 @@ rajput_military_leadership_reform = {
 	potential = {
 		has_dlc = "Dharma"
 		culture = rajput
+		one_v_one_nsi_nations = no
 	}
 	trigger = {
 		if = {
@@ -3255,6 +3256,7 @@ subutais_strategies_reform = {
 			culture_group = tartar
 			primary_culture = altaic_new
 		}
+		one_v_one_nsi_nations = no
 	}
 	trigger = {
 		if = {
@@ -3295,6 +3297,7 @@ qollar_aghasi_regiments_reform = {
 	potential = {
 		has_dlc = "Domination"
 		culture_group = iranian
+		one_v_one_nsi_nations = no
 	}
 	trigger = {
 		if = {
@@ -4334,6 +4337,7 @@ sygnakhs_system_reform = {
 			culture_group = caucasian
 			primary_culture = georgian_new
 		}
+		one_v_one_nsi_nations = no
 	}
 	trigger = {
 		if = {

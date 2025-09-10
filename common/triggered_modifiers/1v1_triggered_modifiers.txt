@@ -1038,7 +1038,7 @@ one_v_one_nsi_region_lahore_occupier = {
 			amount = 8
 		}
 	}
-	interest = 0.75
+	interest = -0.75
 	war_exhaustion = -0.3
 }
 one_v_one_nsi_region_delhi_occupier = {

@@ -9,7 +9,7 @@ one_v_one_mission_nsi_1_nmy = {
 	has_country_shield = yes
 
 	one_v_one_mission_nsi_nation_select_1_nmy = {
-		icon = mission_janissaries
+		icon = mission_fortify_mandu
 		required_missions = { }
 		trigger = {
 			if = {
@@ -81,7 +81,7 @@ one_v_one_mission_nsi_3_nmy = {
 	has_country_shield = yes
 
 	one_v_one_mission_nsi_nation_select_3_nmy = {
-		icon = mission_janissaries
+		icon = mission_rajendras_ambition
 		required_missions = { }
 		trigger = {
 			if = {
@@ -178,7 +178,7 @@ one_v_one_mission_nsi_5_nmy = {
 	has_country_shield = yes
 
 	one_v_one_mission_nsi_nation_select_5_nmy = {
-		icon = mission_janissaries
+		icon = mission_patronize_local_gods
 		required_missions = { }
 		trigger = {
 			if = {

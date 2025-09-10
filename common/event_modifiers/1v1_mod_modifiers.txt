@@ -654,6 +654,9 @@ one_v_one_navy_building_s_modifier = {
 	naval_forcelimit = 3
 	local_sailors_modifier = 2
 }
+one_v_one_sailors_building_nbc_modifier = {
+	local_sailors_modifier = 2
+}
 one_v_one_temple_building_modifier = {
 	local_tax_modifier = 0.6
 	local_development_cost = -0.05
@@ -1104,6 +1107,8 @@ one_v_one_nbu_ilbars_personality_modifier = {
 # Mysore:
 one_v_one_nmy_nanja_personality_modifier = {
 	infantry_power = 0.1
+	cavalry_power = 0.1
+	artillery_power = 0.1
 	fire_damage_received = -0.1
 	is_mercenary_modifier = yes
 }

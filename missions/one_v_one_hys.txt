@@ -9,7 +9,7 @@ one_v_one_mission_hyw_1_hys = {
 	has_country_shield = yes
 
 	one_v_one_mission_hyw_nation_select_1_hys = {
-		icon = mission_janissaries
+		icon = mission_unknown_mission
 		required_missions = { }
 		trigger = {
 			if = {
@@ -77,7 +77,7 @@ one_v_one_mission_hyw_3_hys = {
 	has_country_shield = yes
 
 	one_v_one_mission_hyw_nation_select_3_hys = {
-		icon = mission_janissaries
+		icon = mission_unknown_mission
 		required_missions = { }
 		trigger = {
 			if = {
@@ -170,7 +170,7 @@ one_v_one_mission_hyw_5_hys = {
 	has_country_shield = yes
 
 	one_v_one_mission_hyw_nation_select_5_hys = {
-		icon = mission_janissaries
+		icon = mission_unknown_mission
 		required_missions = { }
 		trigger = {
 			if = {
@@ -312,7 +312,7 @@ one_v_one_mission_hys_1_objectives = {
 	has_country_shield = yes
 
 	one_v_one_mission_hys_objective_1 = {
-		icon = mission_colonial
+		icon = mission_unknown_mission
 		required_missions = { }
 		position = 3
 		trigger = {
@@ -334,7 +334,7 @@ one_v_one_mission_hys_2_objectives = {
 	has_country_shield = yes
 
 	one_v_one_mission_hys_objective_2 = {
-		icon = mission_colonial
+		icon = mission_unknown_mission
 		required_missions = { }
 		position = 3
 		trigger = {
@@ -356,7 +356,7 @@ one_v_one_mission_hys_3_objectives = {
 	has_country_shield = yes
 
 	one_v_one_mission_hys_objective_3 = {
-		icon = mission_colonial
+		icon = mission_unknown_mission
 		required_missions = { }
 		position = 3
 		trigger = {

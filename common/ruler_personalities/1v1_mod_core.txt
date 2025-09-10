@@ -534,7 +534,7 @@ one_v_one_nir_afshar_personality = {
 	allow = { always = no }
 	infantry_power = 0.2
 	war_exhaustion = -0.05
-	infantry_fire = 0.33
+	infantry_fire = 0.3
 	infantry_cost = -0.1
 	leader_land_fire = 1
 	shock_damage_received = -0.075
@@ -851,7 +851,7 @@ one_v_one_nfc_bertrand_personality = {
 	global_ship_cost = -0.1
 	global_sailors_modifier = 1
 	dip_tech_cost_modifier = -0.1
-	coast_raid_range = 1
+	coast_raid_range = 4
 	backrow_artillery_damage = 0.1
 	nation_designer_cost = 999
 }

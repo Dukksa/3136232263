@@ -252,4 +252,8 @@ estate_special = {
 		key = one_v_one_nbu_ilbars_personality_modifier_tt
 		trigger = { always = yes }
 	}
+	modifier_definition = {
+		key = one_v_one_sailors_building_nbc_modifier
+		trigger = { always = yes }
+	}
 }

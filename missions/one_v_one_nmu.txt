@@ -9,7 +9,7 @@ one_v_one_mission_nsi_1_nmu = {
 	has_country_shield = yes
 
 	one_v_one_mission_nsi_nation_select_1_nmu = {
-		icon = mission_janissaries
+		icon = mission_abu_saids_dream
 		required_missions = { }
 		trigger = {
 			if = {
@@ -81,7 +81,7 @@ one_v_one_mission_nsi_3_nmu = {
 	has_country_shield = yes
 
 	one_v_one_mission_nsi_nation_select_3_nmu = {
-		icon = mission_janissaries
+		icon = mission_subah_of_ayuddhya
 		required_missions = { }
 		trigger = {
 			if = {
@@ -178,7 +178,7 @@ one_v_one_mission_nsi_5_nmu = {
 	has_country_shield = yes
 
 	one_v_one_mission_nsi_nation_select_5_nmu = {
-		icon = mission_janissaries
+		icon = mission_embassy_to_the_west
 		required_missions = { }
 		trigger = {
 			if = {
