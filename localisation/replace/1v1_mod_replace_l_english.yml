@@ -18,6 +18,8 @@
       mams_disc_tt: "Our §YMamluk§! special units will gain §G+5%§! Discipline"
       tribal_federation_gec: "Tribal Federation"
       tribal_federation_gec_desc: "A governmental form where a confederation of tribes rule with a certain degree of internal autonomy but are nationally governed by a central authority."
+      mechanic_reduce_new_deity_decision_cd_yes: "The decision from '§YChoice of Personal Deity§!' can be taken every §G3§! years"
+      decision_once_every_five_years:0 "This decision can only be taken once every §Y3§! years."
     # Ideas:
       smithian_economics_desc: "By opposing mercantilism and restricting the state's influence in economic matters, we shall support a free market that will increase our overall production efficiency."
       efficient_mining_desc: "Issue a decree to refine every aspect of metal mining within our domain, in an effort to regulate its presence in our markets."

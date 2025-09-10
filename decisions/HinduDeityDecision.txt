@@ -1,0 +1,46 @@
+country_decisions = {
+	brahmin_hindu_deity_decision = {
+		potential = {
+			religion = hinduism
+			OR = {
+				has_personal_deity = buddha
+				has_personal_deity = ganesha
+				has_personal_deity = ganga
+				has_personal_deity = shakti
+				has_personal_deity = shiva
+				has_personal_deity = surya
+				has_personal_deity = vishnu
+			}
+		}
+		allow = {
+			has_reform = public_hindu_practices_reform
+			custom_trigger_tooltip = {
+				tooltip = decision_once_every_five_years
+				OR = {
+					has_personal_deity = buddha
+					has_personal_deity = ganesha
+					has_personal_deity = ganga
+					has_personal_deity = shakti
+					has_personal_deity = shiva
+					has_personal_deity = surya
+					has_personal_deity = vishnu
+				}
+				OR = {
+					NOT = { has_country_flag = brahmin_hindu_deity_decision }
+					had_country_flag = {
+						flag = brahmin_hindu_deity_decision
+						days = 1095
+					}
+				}
+			}
+		}
+		effect = {
+			reduce_legitimacy_large_effect = yes
+			set_country_flag = brahmin_deity_interaction
+			clr_country_flag = brahmin_hindu_deity_decision
+			set_country_flag = brahmin_hindu_deity_decision
+			country_event = { id = hindu_events.1 }
+		}
+		ai_will_do = { factor = 0 }
+	}
+}

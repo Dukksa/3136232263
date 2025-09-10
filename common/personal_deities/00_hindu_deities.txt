@@ -29,7 +29,7 @@ buddha = {
 }
 shiva = {
 	# (Diplomatic - War)
-	discipline = 0.05
+	discipline = 0.03
 	war_exhaustion = -0.1
 	
 	potential = { religion = hinduism }
@@ -52,7 +52,7 @@ shiva = {
 }
 ganesha = {
 	#(Diplomatic - Peace)
-	advisor_cost = -0.25
+	advisor_cost = -0.1
 	technology_cost -0.1
 	
 	potential = { religion = hinduism }
@@ -75,8 +75,8 @@ ganesha = {
 }
 surya = {
 	#(Economic - Income)
-	global_tax_modifier = 0.66
-	trade_efficiency = 0.33
+	global_tax_modifier = 0.25
+	trade_efficiency = 0.1
 	
 	potential = { religion = hinduism }
 	trigger = {}
@@ -98,7 +98,7 @@ surya = {
 }
 ganga = {
 	#(Economic - Savings)
-	interest = -0.25
+	interest = -0.1
 	development_cost = -0.1
 	
 	potential = { religion = hinduism }
@@ -121,7 +121,7 @@ ganga = {
 }
 shakti = { 
 	#(Military - Offensive) 
-	siege_ability = 0.25
+	siege_ability = 0.15
 	movement_speed = 0.1
 	
 	potential = { religion = hinduism }
@@ -144,8 +144,8 @@ shakti = {
 }
 vishnu = {
 	# (Military - Defensive)
-	defensiveness = 0.33
-	garrison_damage = 0.33
+	defensiveness = 0.2
+	garrison_damage = 0.2
 	
 	potential = { religion = hinduism }
 	trigger = {}

@@ -627,7 +627,7 @@ one_v_one_nma_ranoji_personality = {
 # Rajputana:
 one_v_one_nra_jagat_personality = {
 	allow = { always = no }
-	allowed_rajput_fraction = -0.15
+	one_v_one_nra_jagat_personality_modifier_tt = 0.1
 	war_exhaustion = -0.05
 	# Rajputs give:
 	# land_morale = 0.15
@@ -641,7 +641,7 @@ one_v_one_nra_jagat_personality = {
 }
 one_v_one_nra_sawai_personality = {
 	allow = { always = no }
-	allowed_rajput_fraction = 0.15
+	allowed_rajput_fraction = 0.25
 	war_exhaustion = -0.05
 	# Rajputs give:
 	# reinforce_cost_modifier = -0.25
@@ -667,9 +667,8 @@ one_v_one_nbc_stringer_personality = {
 	one_v_one_centralize_state_all_dev_modifier = 1 # centralizing gives 1/1/1 dev in state
 	war_exhaustion = -0.05
 	centralize_state_cost = -0.1
-	global_tax_modifier = 0.5
+	global_tax_modifier = 0.15
 	recover_army_morale_speed = 0.15
-	production_efficiency = -0.25
 	nation_designer_cost = 999
 }
 one_v_one_nbc_edward_personality = {

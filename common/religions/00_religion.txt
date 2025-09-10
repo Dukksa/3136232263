@@ -656,7 +656,7 @@ christian = {
 		color = { 178 127 0 }
 		icon = 4
 		country = {
-			#stability_cost_modifier = -0.1
+			global_tax_modifier = 0.1
 			tolerance_own = 1
 		}
 		country_as_secondary = {
@@ -702,8 +702,8 @@ christian = {
 			}
 
 			icon_eleusa = {
-				global_unrest = -3
-				harsh_treatment_cost = -0.25
+				defensiveness = 0.25
+				war_exhaustion = -0.1
 				
 				allow = {
 					always = yes
@@ -756,8 +756,8 @@ christian = {
 			}
 	
 			icon_nicholas = {
-				improve_relation_modifier = 0.25
-				ae_impact = -0.1
+				technology_cost = -0.05
+				idea_cost = -0.05
 				
 				visible = {
 					always = yes
@@ -772,8 +772,8 @@ christian = {
 			}
 
 			icon_climacus = {
-				global_institution_spread = 0.25
-				embracement_cost = -0.2
+				global_institution_spread = 0.5
+				embracement_cost = -0.33
 
 				visible = {
 					always = yes
@@ -1430,7 +1430,7 @@ muslim = {
 		#	ibadi
 		#}
 		country = {
-			heir_chance = 1.0
+			trade_efficiency = 0.25
 			land_morale = 0.05
 			build_cost = -0.075
 		}

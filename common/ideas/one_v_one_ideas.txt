@@ -3799,10 +3799,10 @@ hyp_ideas = {
 		global_sailors_modifier = 0.6
 	}
 	one_v_one_hyp_5 = {
-		build_cost = -0.5
+		idea_cost = -0.5
 	}
 	one_v_one_hyp_6 = {
-		one_v_one_marines_disc = 0.05
+		one_v_one_marines_disc = 0.1
 		effect = {
 			add_country_modifier = { name = one_v_one_hyp_6_modifier duration = -1 hidden = yes }
 		}
@@ -3983,7 +3983,7 @@ nra_ideas = {
 # Bri Comp:
 nbc_ideas = {
 	start = {
-		global_tax_modifier = 0.5
+		global_tax_modifier = 1
 		admiral_cost = -0.2
 	}
 	bonus = {
@@ -4000,6 +4000,7 @@ nbc_ideas = {
 	}
 	one_v_one_nbc_2 = {
 		artillery_power = 0.15
+		global_manpower_modifier = 0.2
 	}
 	one_v_one_nbc_3 = {
 		one_v_one_dev_adm_modifier = 1 #tax development chance 100%
@@ -4009,7 +4010,7 @@ nbc_ideas = {
 		reinforce_cost_modifier = -0.2
 	}
 	one_v_one_nbc_5 = {
-		production_efficiency = -0.25
+		production_efficiency = -0.15
 		global_trade_power = 0.2
 	}
 	one_v_one_nbc_6 = {

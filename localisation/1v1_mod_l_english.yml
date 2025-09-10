@@ -3070,14 +3070,14 @@
       one_v_one_mod.3.nhy.c.tt: "§YRanoji Scindia Commander bonuses:§!\nLeader Siege: §G+1.00§!\nRecover Army Morale Speed: §G+30.0%§!\nSiege Ability: §G+15.0%§!\nGeneral Cost: §G-10.0%§!\nMorale Damage: §G+10.0%§!"
       # Mysore:
       one_v_one_mod.3.nmy.a: "§RBan @NRA §YJagat Singh II Sisodiya§! as the Commander.§!"
-      one_v_one_mod.3.nmy.a.tt: "§YJagat Singh II Sisodiya Commander bonuses:§!\nRajput Force Limit Fraction: §R-15.0%§!\nRajput Morale of Armies: §G+15.0%§!\nRajput Combat Ability: §G+15.0%§!\nRajput Reinforce Cost: §R+150.0%§!\nRajput Drill Loss: §G-50.0%§!\nRajput Fire Damage: §G+10.0%§!"
+      one_v_one_mod.3.nmy.a.tt: "§YJagat Singh II Sisodiya Commander bonuses:§!\nRajput Morale of Armies: §G+15.0%§!\nRajput Combat Ability: §G+15.0%§!\nRajput Reinforce Cost: §R+150.0%§!\nRajput Drill Loss: §G-50.0%§!\nRajput Fire Damage: §G+10.0%§!"
       one_v_one_mod.3.nmy.b: "§RBan @NRA §YSawai Jai Singh II Kachhwaha§! as the Commander.§!"
-      one_v_one_mod.3.nmy.b.tt: "§YSawai Jai Singh II Kachhwaha Commander bonuses:§!\nRajput Force Limit Fraction: §G+15.0%§!\nKshatriyas Max Privileges: §G+1.00§!\nRajput Reinforce Cost: §G-25.0%§!\nRajput Manpower Usage: §G-10.0%§!\nRajput Combat Ability: §G+10.0%§!"
+      one_v_one_mod.3.nmy.b.tt: "§YSawai Jai Singh II Kachhwaha Commander bonuses:§!\nRajput Force Limit Fraction: §G+25.0%§!\nKshatriyas Max Privileges: §G+1.00§!\nRajput Reinforce Cost: §G-25.0%§!\nRajput Manpower Usage: §G-10.0%§!\nRajput Combat Ability: §G+10.0%§!"
       one_v_one_mod.3.nmy.c: "§RBan @NRA §YMaharana Pratap Sisodia§! as the Commander.§!"
       one_v_one_mod.3.nmy.c.tt: "§YMaharana Pratap Sisodia Commander bonuses:§!\nDomestic Trade Power: §G+25.0%§!\nFort Maintenance: §G-75.0%§!\nRecruitment Time: §G-20.0%§!\nArmy Drill Gain Modifier: §G+33.0%§!\nRegiment Drill Loss: §G-33.0%§!"
       # Fra Comp:
       one_v_one_mod.3.nfc.a: "§RBan @NBC §YStringer Lawrence§! as the Commander.§!"
-      one_v_one_mod.3.nfc.a.tt: "§YStringer Lawrence Commander bonuses:§!\nProduction Efficiency: §R-25.0%§!\nNational Tax Modifier: §G+50.0%§!\nRecover Army Morale Speed: §G+15.0%§!\nCentralize State Cost: §G-10.0%§!\nCentralizing States gives Tax, Production and Manpower Development: §G+1.00§!"
+      one_v_one_mod.3.nfc.a.tt: "§YStringer Lawrence Commander bonuses:§!\nNational Tax Modifier: §G+15.0%§!\nRecover Army Morale Speed: §G+15.0%§!\nCentralize State Cost: §G-10.0%§!\nCentralizing States gives Tax, Production and Manpower Development: §G+1.00§!"
       one_v_one_mod.3.nfc.b: "§RBan @NBC §YEdward Boscawen§! as the Commander.§!"
       one_v_one_mod.3.nfc.b.tt: "§YEdward Boscawen Commander bonuses:§!\nSailor Increase: §G+40000§!\nNational Sailors Modifier: §G+100.0%§!\nNaval Maintenance Modifier: §G-25.0%§!\nBlockade Efficiency: §G+100.0%§!\nBlockade Impact on Siege: §G+2.00§!\nMarines Force Limit: §G+100.0%§!\nCombat Penalty when landing: §G-2.00§!\nNaval Barrage cost: §G-90.0%§!\nMarines Discipline: §G+5.0%§!"
       one_v_one_mod.3.nfc.c: "§RBan @NBC §YRobert Clive§! as the Commander.§!"
@@ -3976,9 +3976,9 @@
         one_v_one_mission_nsi_construct_ranoji_desc: ""
       # Rajputana:
         one_v_one_mission_nsi_nation_select_1_nra_title: "Jagat Singh II (Commander)"
-        one_v_one_mission_nsi_nation_select_1_nra_desc: "\n§YJagat Singh II Sisodiya:§!\nRajput Force Limit Fraction: §R-15.0%§!\nRajput Morale of Armies: §G+15.0%§!\nRajput Combat Ability: §G+15.0%§!\nRajput Reinforce Cost: §R+150.0%§!\nRajput Drill Loss: §G-50.0%§!\nRajput Fire Damage: §G+10.0%§!"
+        one_v_one_mission_nsi_nation_select_1_nra_desc: "\n§YJagat Singh II Sisodiya:§!\nRajput Morale of Armies: §G+15.0%§!\nRajput Combat Ability: §G+15.0%§!\nRajput Reinforce Cost: §R+150.0%§!\nRajput Drill Loss: §G-50.0%§!\nRajput Fire Damage: §G+10.0%§!"
         one_v_one_mission_nsi_nation_select_3_nra_title: "Sawai Jai (Commander)"
-        one_v_one_mission_nsi_nation_select_3_nra_desc: "\n§YSawai Jai Singh II Kachhwaha:§!\nRajput Force Limit Fraction: §G+15.0%§!\nKshatriyas Max Privileges: §G+1.00§!\nRajput Reinforce Cost: §G-25.0%§!\nRajput Manpower Usage: §G-10.0%§!\nRajput Combat Ability: §G+10.0%§!"
+        one_v_one_mission_nsi_nation_select_3_nra_desc: "\n§YSawai Jai Singh II Kachhwaha:§!\nRajput Force Limit Fraction: §G+25.0%§!\nKshatriyas Max Privileges: §G+1.00§!\nRajput Reinforce Cost: §G-25.0%§!\nRajput Manpower Usage: §G-10.0%§!\nRajput Combat Ability: §G+10.0%§!"
         one_v_one_mission_nsi_nation_select_5_nra_title: "Maharana (Commander)"
         one_v_one_mission_nsi_nation_select_5_nra_desc: "\n§YMaharana Pratap Sisodia:§!\nDomestic Trade Power: §G+25.0%§!\nFort Maintenance: §G-75.0%§!\nRecruitment Time: §G-20.0%§!\nArmy Drill Gain Modifier: §G+33.0%§!\nRegiment Drill Loss: §G-33.0%§!"
         one_v_one_mission_nsi_construct_nra_title: "Build up Phase"
@@ -3991,7 +3991,7 @@
         one_v_one_mission_nsi_construct_maharana_desc: ""
       # Bri Comp:
         one_v_one_mission_nsi_nation_select_1_nbc_title: "Stringer (Commander)"
-        one_v_one_mission_nsi_nation_select_1_nbc_desc: "\n§YStringer Lawrence:§!\nProduction Efficiency: §R-25.0%§!\nNational Tax Modifier: §G+50.0%§!\nRecover Army Morale Speed: §G+15.0%§!\nCentralize State Cost: §G-10.0%§!\nCentralizing States gives Tax, Production and Manpower Development: §G+1.00§!"
+        one_v_one_mission_nsi_nation_select_1_nbc_desc: "\n§YStringer Lawrence:§!\nNational Tax Modifier: §G+50.0%§!\nRecover Army Morale Speed: §G+15.0%§!\nCentralize State Cost: §G-10.0%§!\nCentralizing States gives Tax, Production and Manpower Development: §G+1.00§!"
         one_v_one_mission_nsi_nation_select_3_nbc_title: "Edward (Commander)"
         one_v_one_mission_nsi_nation_select_3_nbc_desc: "\n§YEdward Boscawen:§!\nSailor Increase: §G+40000§!\nNational Sailors Modifier: §G+100.0%§!\nNaval Maintenance Modifier: §G-25.0%§!\nBlockade Efficiency: §G+100.0%§!\nBlockade Impact on Siege: §G+2.00§!\nMarines Force Limit: §G+100.0%§!\nCombat Penalty when landing: §G-2.00§!\nNaval Barrage cost: §G-90.0%§!\nMarines Discipline: §G+5.0%§!"
         one_v_one_mission_nsi_nation_select_5_nbc_title: "Robert (Commander)"

@@ -2181,17 +2181,13 @@ country_decisions = {
 			tag = NFC
 		}
 		allow = {
-			adm_power = 100
-			dip_power = 100
-			mil_power = 100
+			treasury = 1000
 			splendor = 200
 			capital_scope = { controlled_by = NFC }
 		}
 		effect = {
 			custom_tooltip = one_v_one_nfc_overlord_decision_tt
-			add_adm_power = -100
-			add_dip_power = -100
-			add_mil_power = -100
+			add_treasury = -1000
 			add_splendor = -200
 			hidden_effect = {
 				capital_scope = {
