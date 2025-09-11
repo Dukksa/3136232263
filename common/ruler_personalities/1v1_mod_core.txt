@@ -580,12 +580,12 @@ one_v_one_nka_erekle_personality = {
 }
 one_v_one_nka_bagrationi_personality = {
 	allow = { always = no }
-	assault_fort_ability = 0.15
+	assault_fort_ability = 0.1
 	war_exhaustion = -0.05
-	artillery_levels_available_vs_fort = 1
 	siege_ability = 0.15
-	artillery_barrage_cost = -0.5
 	land_maintenance_modifier = -0.1
+	discipline = 0.025
+	spy_action_cost_modifier = -0.1
 	nation_designer_cost = 999
 }
 # Marathas:
@@ -604,7 +604,7 @@ one_v_one_nma_chimaji_personality = {
 	global_garrison_growth = 0.2
 	war_exhaustion = -0.05
 	# Forts give:
-	# province_trade_power_value = 10
+	# province_trade_power_value = 5
 	# local_tax_modifier = 1
 	# local_defensiveness = 0.2
 	# local_garrison_damage = 0.2
@@ -636,6 +636,7 @@ one_v_one_nra_jagat_personality = {
 	# discipline = 0.1
 	# fire_damage = 0.1
 	# infantry_power = 0.15
+	allowed_rajput_fraction = 0.1
 	one_v_one_nra_jagat_personality_modifier_tt = 0.1
 	nation_designer_cost = 999
 }
@@ -667,7 +668,6 @@ one_v_one_nbc_stringer_personality = {
 	one_v_one_centralize_state_all_dev_modifier = 1 # centralizing gives 1/1/1 dev in state
 	war_exhaustion = -0.05
 	centralize_state_cost = -0.1
-	global_tax_modifier = 0.15
 	recover_army_morale_speed = 0.15
 	nation_designer_cost = 999
 }
@@ -740,10 +740,10 @@ one_v_one_nbu_abu_personality = {
 }
 one_v_one_nbu_hakim_personality = {
 	allow = { always = no }
-	infantry_shock = 0.35
+	infantry_shock = 0.33
 	war_exhaustion = -0.05
 	infantry_power = 0.15
-	assault_fort_ability = 0.15
+	assault_fort_ability = 0.1
 	siege_ability = 0.15
 	leader_siege = 1
 	infantry_fire = -0.25
@@ -777,7 +777,7 @@ one_v_one_nhy_asaf_personality = {
 }
 one_v_one_nhy_nasir_personality = {
 	allow = { always = no }
-	development_cost_modifier = -0.05
+	development_cost = -0.1
 	war_exhaustion = -0.05
 	one_v_one_dev_from_manu = 2
 	interest = -0.5
@@ -811,7 +811,7 @@ one_v_one_nmy_hyder_personality = {
 	allow = { always = no }
 	privateer_efficiency = 0.2
 	war_exhaustion = -0.05
-	mercantilism_cost = -0.5
+	merchants = 1
 	idea_cost = -0.15
 	land_maintenance_modifier = -0.1
 	infantry_fire = 0.25
@@ -819,16 +819,15 @@ one_v_one_nmy_hyder_personality = {
 }
 one_v_one_nmy_nanja_personality = {
 	allow = { always = no }
-	mercenary_discipline = 0.05
+	merc_maintenance_modifier = -0.25
 	war_exhaustion = -0.05
 	# Mercs get:
-	# infantry_power = 0.1
 	# fire_damage_received = -0.1
 	one_v_one_nmy_nanja_personality_modifier_tt = 0.1
-	mercenary_manpower = 0.5
-	merc_maintenance_modifier = -0.25
 	mercenary_cost = -0.25
 	free_mil_policy = 1
+	naval_forcelimit_modifier = 0.2
+	sailor_maintenance_modifer = -0.2
 	nation_designer_cost = 999
 }
 # Fra Comp:
@@ -858,7 +857,7 @@ one_v_one_nfc_philibert_personality = {
 	allow = { always = no }
 	free_adm_policy = 1
 	war_exhaustion = -0.05
-	one_v_one_nfc_philibert_personality_tt = 0.2
+	movement_speed = 0.2
 	burghers_loyalty_modifier = 0.1
 	global_tax_income = 600
 	national_focus_years = -10

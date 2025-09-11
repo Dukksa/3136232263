@@ -53,7 +53,7 @@ shiva = {
 ganesha = {
 	#(Diplomatic - Peace)
 	advisor_cost = -0.1
-	technology_cost -0.1
+	technology_cost = -0.1
 	
 	potential = { religion = hinduism }
 	trigger = {}

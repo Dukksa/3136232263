@@ -1,5 +1,5 @@
 one_v_one_warchest = {
-	potential = { NOT = { OR = { one_v_one_syw_nations = yes one_v_one_nap_nations = yes one_v_one_ww_nations = yes } } }
+	potential = { NOT = { OR = { one_v_one_syw_nations = yes one_v_one_nap_nations = yes one_v_one_ww_nations = yes one_v_one_hyw_nations = yes } } }
 	trigger = { years_of_income = 2 NOT = { num_of_loans = 1 } }
 	land_morale = 0.15
 	discipline = 0.05
@@ -8,13 +8,22 @@ one_v_one_warchest = {
 	land_forcelimit_modifier = 0.1
 }
 one_v_one_warchest_1 = {
-	potential = { OR = { one_v_one_syw_nations = yes one_v_one_nap_nations = yes one_v_one_ww_nations = yes } }
+	potential = {
+		OR = { one_v_one_syw_nations = yes one_v_one_nap_nations = yes one_v_one_ww_nations = yes }
+		NOT = { one_v_one_hyw_nations = yes }
+	}
 	trigger = { years_of_income = 2 NOT = { num_of_loans = 1 } }
 	land_morale = 0.1
 	discipline = 0.05
 	global_manpower_modifier = 0.1
 	manpower_recovery_speed = 0.15
 	land_forcelimit_modifier = 0.1
+}
+one_v_one_warchest_2 = {
+	potential = { one_v_one_hyw_nations = yes }
+	trigger = { years_of_income = 2 NOT = { num_of_loans = 1 } }
+	land_morale = 0.1
+	discipline = 0.025
 }
 ####################
 ####################

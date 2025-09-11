@@ -26,3 +26,5 @@ add_mil_tech = 1
 	add_ruler_personality = just_personality
 	add_ruler_personality = kind_hearted_personality
 }
+1733.1.1 = { add_country_modifier = { name = one_v_one_manpower_fl_tswas duration = -1 hidden = yes } }
+1733.1.3 = { remove_country_modifier = one_v_one_manpower_fl_tswas }

@@ -22,15 +22,17 @@ one_v_one_hyc_trastamara_personality = {
 	allow = { always = no }
 	discipline = 0.05
 }
-one_v_one_hyc_elcidg_personality = {
+one_v_one_hyc_elcid_personality = {
+	allow = { always = no }
+	fire_damage = 0.2
+	artillery_power = 0.15
+	land_attrition = -0.2
+}
+one_v_one_hyc_fernandog_personality = {
 	allow = { always = no }
 	recover_army_morale_speed = 0.33
 }
-one_v_one_hyc_elcida_personality = {
-	allow = { always = no }
-	movement_speed_in_fleet_modifier = 1
-}
-one_v_one_hyc_fernando_personality = {
+one_v_one_hyc_fernandoa_personality = {
 	allow = { always = no }
 	heavy_ship_power = 0.1
 	naval_morale_damage = 0.15
@@ -39,6 +41,7 @@ one_v_one_hyc_fernando_personality = {
 one_v_one_hys_william_personality = {
 	allow = { always = no }
 	land_attrition = -0.5
+	assault_fort_ability = 0.1
 }
 one_v_one_hys_stewart_personality = {
 	allow = { always = no }
@@ -101,8 +104,11 @@ one_v_one_hyp_pedro_personality = {
 	shock_damage_received = -0.1
 	fire_damage_received = -0.1
 }
-one_v_one_hyp_navigator_personality = {
+one_v_one_hyp_navigatorg_personality = {
 	allow = { always = no }
-	hull_size_modifier = 0.1
-	sunk_ship_morale_hit_recieved = -0.5
+	movement_speed = 0.1
+}
+one_v_one_hyp_navigatora_personality = {
+	allow = { always = no }
+	naval_morale = 0.05
 }

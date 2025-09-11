@@ -3799,7 +3799,7 @@ hyp_ideas = {
 		global_sailors_modifier = 0.6
 	}
 	one_v_one_hyp_5 = {
-		idea_cost = -0.5
+		idea_cost = -0.1
 	}
 	one_v_one_hyp_6 = {
 		one_v_one_marines_disc = 0.1
@@ -3901,12 +3901,12 @@ nka_ideas = {
 # Marathas:
 nma_ideas = {
 	start = {
-		cavalry_power = 0.2
+		cavalry_power = 0.25
 		cavalry_cost = -0.15
 	}
 	bonus = {
 		loot_amount = 0.5
-		global_trade_goods_size_modifier = 0.1
+		global_trade_goods_size_modifier = 0.2
 	}
 	trigger = {
 		tag = NMA
@@ -3967,7 +3967,7 @@ nra_ideas = {
 	}
 	one_v_one_nra_4 = {
 		army_tradition_from_battle = 0.5
-		prestige = 1
+		naval_forcelimit_modifier = 0.3
 	}
 	one_v_one_nra_5 = {
 		production_efficiency = 0.2
@@ -3977,7 +3977,7 @@ nra_ideas = {
 		dip_advisor_cost = -0.25
 	}
 	one_v_one_nra_7 = {
-		global_manpower_modifier = 0.2
+		global_manpower_modifier = 0.33
 	}
 }
 # Bri Comp:
@@ -4007,7 +4007,7 @@ nbc_ideas = {
 	}
 	one_v_one_nbc_4 = {
 		manpower_recovery_speed = 0.15
-		reinforce_cost_modifier = -0.2
+		build_cost = -0.1
 	}
 	one_v_one_nbc_5 = {
 		production_efficiency = -0.15
@@ -4015,6 +4015,7 @@ nbc_ideas = {
 	}
 	one_v_one_nbc_6 = {
 		garrison_damage = 0.5
+		defensiveness = 0.2
 	}
 	one_v_one_nbc_7 = {
 		max_hostile_attrition = 1
@@ -4046,7 +4047,7 @@ nmu_ideas = {
 	}
 	one_v_one_nmu_3 = {
 		shock_damage = 0.15
-		cavalry_cost = -0.1
+		cavalry_cost = -0.15
 	}
 	one_v_one_nmu_4 = {
 		technology_cost = 0.1
@@ -4225,7 +4226,6 @@ nfc_ideas = {
 		idea_cost = -0.15
 	}
 	one_v_one_nfc_7 = {
-		artillery_levels_available_vs_fort = 1
 		siege_ability = 0.15
 	}
 }

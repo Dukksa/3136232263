@@ -1559,11 +1559,11 @@ country_decisions = {
 					}
 					AND = {
 						mission_completed = one_v_one_mission_hyw_nation_select_3_hyc
-						NOT = { has_leader = "Pero Nino" }
+						NOT = { has_leader = "Pero Niño" }
 					}
 					AND = {
-						mission_completed = one_v_one_mission_hyw_nation_select_3_hyc
-						NOT = { has_leader = "Pero Niño" }
+						mission_completed = one_v_one_mission_hyw_nation_select_5_hyc
+						NOT = { has_leader = "Fernando Sánchez de Tovar" }
 					}
 					AND = {
 						mission_completed = one_v_one_mission_hyw_nation_select_5_hyc
@@ -1591,29 +1591,29 @@ country_decisions = {
 			if = {
 				limit = {
 					mission_completed = one_v_one_mission_hyw_nation_select_3_hyc
-					NOT = { has_leader = "Pero Nino" }
+					NOT = { has_leader = "Pero Niño" }
 				}
 				define_general = {
 					fire = 6
-					shock = 5
-					manuever = 5
-					siege = 2
-					name = "Pero Nino"
-					trait = one_v_one_hyc_elcidg_personality
+					shock = 3
+					manuever = 6
+					siege = 1
+					name = "Pero Niño"
+					trait = one_v_one_hyc_elcid_personality
 				}
 			}
 			if = {
 				limit = {
-					mission_completed = one_v_one_mission_hyw_nation_select_3_hyc
-					NOT = { has_leader = "Pero Niño" }
+					mission_completed = one_v_one_mission_hyw_nation_select_5_hyc
+					NOT = { has_leader = "Fernando Sánchez de Tovar" }
 				}
 				define_admiral = {
-					fire = 5
-					shock = 4
+					fire = 6
+					shock = 6
 					manuever = 6
 					siege = 1
-					name = "Pero Niño"
-					trait = one_v_one_hyc_elcida_personality
+					name = "Fernando Sánchez de Tovar"
+					trait = one_v_one_hyc_fernandog_personality
 				}
 			}
 			if = {
@@ -1627,7 +1627,7 @@ country_decisions = {
 					manuever = 6
 					siege = 6
 					name = "Fernando Sanchez de Tovar"
-					trait = one_v_one_hyc_fernando_personality
+					trait = one_v_one_hyc_fernandoa_personality
 				}
 			}
 		}
@@ -1696,7 +1696,7 @@ country_decisions = {
 				}
 				define_general = {
 					fire = 3
-					shock = 6
+					shock = 7
 					manuever = 2
 					siege = 2
 					name = "Thomas Stewart"
@@ -1816,10 +1816,10 @@ country_decisions = {
 					NOT = { has_leader = "John I" }
 				}
 				define_general = {
-					fire = 4
-					shock = 4
+					fire = 5
+					shock = 5
 					manuever = 4
-					siege = 4
+					siege = 3
 					name = "John I"
 					trait = one_v_one_hyb_john_personality
 				}
@@ -1876,6 +1876,10 @@ country_decisions = {
 					}
 					AND = {
 						mission_completed = one_v_one_mission_hyw_nation_select_5_hyp
+						NOT = { has_leader = "Henrique" }
+					}
+					AND = {
+						mission_completed = one_v_one_mission_hyw_nation_select_5_hyp
 						NOT = { has_leader = "Henry" }
 					}
 				}
@@ -1889,7 +1893,7 @@ country_decisions = {
 					NOT = { has_leader = "Nuno Álvares Pereira" }
 				}
 				define_general = {
-					fire = 6
+					fire = 7
 					shock = 4
 					manuever = 6
 					siege = 2
@@ -1914,15 +1918,29 @@ country_decisions = {
 			if = {
 				limit = {
 					mission_completed = one_v_one_mission_hyw_nation_select_5_hyp
+					NOT = { has_leader = "Henrique" }
+				}
+				define_general = {
+					fire = 6
+					shock = 6
+					manuever = 6
+					siege = 1
+					name = "Henrique"
+					trait = one_v_one_hyp_navigatorg_personality
+				}
+			}
+			if = {
+				limit = {
+					mission_completed = one_v_one_mission_hyw_nation_select_5_hyp
 					NOT = { has_leader = "Henry" }
 				}
 				define_admiral = {
 					fire = 6
-					shock = 6
+					shock = 7
 					manuever = 6
 					siege = 6
 					name = "Henry"
-					trait = one_v_one_hyp_navigator_personality
+					trait = one_v_one_hyp_navigatora_personality
 				}
 			}
 		}
@@ -2113,17 +2131,13 @@ country_decisions = {
 			tag = NBC
 		}
 		allow = {
-			adm_power = 100
-			dip_power = 100
-			mil_power = 100
+			treasury = 1000
 			splendor = 200
 			capital_scope = { controlled_by = NBC }
 		}
 		effect = {
 			custom_tooltip = one_v_one_nbc_overlord_decision_tt
-			add_adm_power = -100
-			add_dip_power = -100
-			add_mil_power = -100
+			add_treasury = -1000
 			add_splendor = -200
 			hidden_effect = {
 				capital_scope = {
@@ -2470,14 +2484,10 @@ country_decisions = {
 		allow = {
 			is_year = 1686
 			treasury = 2000
-			advisor = trader
-			advisor = master_of_mint
 		}
 		effect = {
 			set_country_flag = radical_mercantilist_reforms
 			add_treasury = -2000
-			remove_advisor = master_of_mint
-			remove_advisor = trader
 			add_adm_power = 200
 			add_dip_power = 200
 		}

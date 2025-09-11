@@ -241,10 +241,6 @@ estate_special = {
 		trigger = { always = yes }
 	}
 	modifier_definition = {
-		key = one_v_one_nfc_philibert_personality_tt
-		trigger = { always = yes }
-	}
-	modifier_definition = {
 		key = one_v_one_nmy_nanja_personality_modifier_tt
 		trigger = { always = yes }
 	}
