@@ -24,6 +24,9 @@ one_v_one_warchest_2 = {
 	trigger = { years_of_income = 2 NOT = { num_of_loans = 1 } }
 	land_morale = 0.1
 	discipline = 0.025
+	global_manpower_modifier = 0.1
+	manpower_recovery_speed = 0.15
+	land_forcelimit_modifier = 0.1
 }
 ####################
 ####################

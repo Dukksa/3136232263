@@ -584,7 +584,7 @@ one_v_one_nka_bagrationi_personality = {
 	war_exhaustion = -0.05
 	siege_ability = 0.15
 	land_maintenance_modifier = -0.1
-	discipline = 0.025
+	artillery_power = 0.1
 	spy_action_cost_modifier = -0.1
 	nation_designer_cost = 999
 }
@@ -686,7 +686,7 @@ one_v_one_nbc_edward_personality = {
 }
 one_v_one_nbc_robert_personality = {
 	allow = { always = no }
-	yearly_innovativeness = 5
+	yearly_innovativeness = 7.5
 	war_exhaustion = -0.05
 	technology_cost = -0.05
 	idea_cost = -0.15
@@ -746,7 +746,6 @@ one_v_one_nbu_hakim_personality = {
 	assault_fort_ability = 0.1
 	siege_ability = 0.15
 	leader_siege = 1
-	infantry_fire = -0.25
 	nation_designer_cost = 999
 }
 one_v_one_nbu_ilbars_personality = {
@@ -781,7 +780,6 @@ one_v_one_nhy_nasir_personality = {
 	war_exhaustion = -0.05
 	one_v_one_dev_from_manu = 2
 	interest = -0.5
-	expand_infrastructure_cost_modifier = -0.25
 	land_forcelimit_modifier = 0.1
 	nation_designer_cost = 999
 }
@@ -811,7 +809,7 @@ one_v_one_nmy_hyder_personality = {
 	allow = { always = no }
 	privateer_efficiency = 0.2
 	war_exhaustion = -0.05
-	merchants = 1
+	build_cost = -0.1
 	idea_cost = -0.15
 	land_maintenance_modifier = -0.1
 	infantry_fire = 0.25
@@ -858,7 +856,7 @@ one_v_one_nfc_philibert_personality = {
 	free_adm_policy = 1
 	war_exhaustion = -0.05
 	movement_speed = 0.2
-	burghers_loyalty_modifier = 0.1
+	global_foreign_trade_power = 0.1
 	global_tax_income = 600
 	national_focus_years = -10
 	nation_designer_cost = 999

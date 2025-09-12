@@ -3894,7 +3894,7 @@ nka_ideas = {
 		interest = -0.25
 	}
 	one_v_one_nka_7 = {
-		morale_damage_received = -0.1
+		discipline = 0.05
 		global_tax_modifier = 0.25
 	}
 }
@@ -4099,7 +4099,7 @@ nbu_ideas = {
 	}
 	one_v_one_nbu_6 = {
 		caravan_power = 0.2
-		embargo_efficiency = 1
+		embargo_efficiency = 0.5
 	}
 	one_v_one_nbu_7 = {
 		global_manpower_modifier = 0.2

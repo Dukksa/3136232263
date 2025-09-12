@@ -522,6 +522,7 @@ discover_nader_shah_provinces = {
 		NFC = { random_owned_province = { add_cardinal = yes } }
 	}
 	if = { limit = { OR = { tag = NBU tag = NMU tag = NHY } } 965 = { discover_country = ROOT } }
+	if = { limit = { tag = NKA } 1324 = { discover_country = ROOT } }
 }
 #################
 #################
@@ -3724,7 +3725,7 @@ one_v_one_hyc_mission_select_fernando_tag = {
 		fire = 6
 		shock = 6
 		manuever = 6
-		siege = 6
+		siege = 1
 		name = "Fernando Sanchez de Tovar"
 		trait = one_v_one_hyc_fernandoa_personality
 	}
@@ -3934,9 +3935,9 @@ one_v_one_hyp_mission_select_navigator_tag = {
 	custom_tooltip = one_v_one_hyp_navigatorg_personality_tt
 	define_admiral = {
 		fire = 6
-		shock = 7
+		shock = 6
 		manuever = 6
-		siege = 6
+		siege = 1
 		name = "Henry"
 		trait = one_v_one_hyp_navigatora_personality
 	}

@@ -2371,9 +2371,9 @@ country_event = {
 				custom_tooltip = one_v_one_hyp_navigatorg_personality_tt
 				define_admiral = {
 					fire = 6
-					shock = 7
+					shock = 6
 					manuever = 6
-					siege = 6
+					siege = 1
 					name = "Henry"
 					trait = one_v_one_hyp_navigatora_personality
 				}
@@ -2509,7 +2509,7 @@ country_event = {
 					fire = 6
 					shock = 6
 					manuever = 6
-					siege = 6
+					siege = 1
 					name = "Fernando Sanchez de Tovar"
 					trait = one_v_one_hyc_fernandoa_personality
 				}

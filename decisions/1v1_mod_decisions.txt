@@ -1625,7 +1625,7 @@ country_decisions = {
 					fire = 6
 					shock = 6
 					manuever = 6
-					siege = 6
+					siege = 1
 					name = "Fernando Sanchez de Tovar"
 					trait = one_v_one_hyc_fernandoa_personality
 				}
@@ -1936,9 +1936,9 @@ country_decisions = {
 				}
 				define_admiral = {
 					fire = 6
-					shock = 7
+					shock = 6
 					manuever = 6
-					siege = 6
+					siege = 1
 					name = "Henry"
 					trait = one_v_one_hyp_navigatora_personality
 				}
