@@ -3959,7 +3959,7 @@ nra_ideas = {
 	}
 	one_v_one_nra_2 = {
 		development_cost = -0.1
-		inflation_action_cost = -0.25
+		leader_land_shock = 1
 	}
 	one_v_one_nra_3 = {
 		can_recruit_rajputs = yes

@@ -134,7 +134,6 @@ estate_special = {
 		trigger = { always = yes }
 	}
 	modifier_definition = {
-		type = privileges
 		key = one_v_one_gec_murad_personality_modifier_tt
 		trigger = { always = yes }
 	}

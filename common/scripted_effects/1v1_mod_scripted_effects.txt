@@ -522,6 +522,7 @@ discover_nader_shah_provinces = {
 		NFC = { random_owned_province = { add_cardinal = yes } }
 	}
 	if = { limit = { OR = { tag = NBU tag = NMU tag = NHY } } 965 = { discover_country = ROOT } }
+	if = { limit = { OR = { tag = NMU tag = NBC } } 677 = { discover_country = ROOT } }
 	if = { limit = { tag = NKA } 1324 = { discover_country = ROOT } }
 }
 #################

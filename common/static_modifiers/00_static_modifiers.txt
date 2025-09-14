@@ -120,7 +120,6 @@ in_capital_state = {
 	local_institution_spread = 0.05
 	local_state_maintenance_modifier = -0.5
 	local_governing_cost = -1.0
-	local_has_qizilbash = yes
 }
 
 coastal = {
@@ -183,6 +182,7 @@ land_province = {
 	local_has_musketeers = yes
 	local_has_streltsy = yes
 	local_has_mamluks = yes
+	local_has_qizilbash = yes
 }
 
 mild_winter = {

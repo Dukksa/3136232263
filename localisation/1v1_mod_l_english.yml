@@ -3014,7 +3014,7 @@
       # NADER SHAH INVASION.
       # Iran:
       one_v_one_mod.3.nir.a: "§RBan @NMU §YMuhammad Shâh Timurid§! as the Commander.§!"
-      one_v_one_mod.3.nir.a.tt: "§YMuhammad Shâh Timurid Commander bonuses:§!\nNational Manpower Modifier: §G+30.0%§!\nManpower Recovery Speed: §G+20.0%§!\nLand Force Limit Modifier: §G+30.0%§!\nDiscipline: §R-2.5%§!\nReinfoce Speed: §G+20.0%§!\nFire Damage Received: §R+10.0%§!"
+      one_v_one_mod.3.nir.a.tt: "§YMuhammad Shâh Timurid Commander bonuses:§!\nNational Manpower Modifier: §G+15.0%§!\nManpower Recovery Speed: §G+10.0%§!\nLand Force Limit Modifier: §G+30.0%§!\nDiscipline: §R-2.5%§!\nReinfoce Speed: §G+20.0%§!\nFire Damage Received: §R+10.0%§!"
       one_v_one_mod.3.nir.b: "§RBan @NMU §YRoshan Akhtar Babur§! as the Commander.§!"
       one_v_one_mod.3.nir.b.tt: "§YRoshan Akhtar Babur Commander bonuses:§!\nNational Manpower Modifier: §R-20.0%§!\nManpower Recovery Speed: §R-20.0%§!\nLand Force Limit Modifier: §R-20.0%§!\nCavalry Combat Ability: §G+10.0%§!\nLand Leader Shock: §G+1.00§!\nDiscipline: §G+5.0%§!\nReduced Morale Damage Taken By Reserves: §G+25.0%§!"
       one_v_one_mod.3.nir.c: "§RBan @NMU §YMirza Nasir Mughal§! as the Commander.§!"
@@ -3032,7 +3032,7 @@
       one_v_one_mod.3.nma.b: "§RBan @NHY §YNasir Jung Asaf Jahi§! as the Commander.§!"
       one_v_one_mod.3.nma.b.tt: "§YNasir Jung Asaf Jahi Commander bonuses:§!\nDevelopment Cost: §G-10.0%§!\nInterest Per Annum: §G-0.50§!\nLand Force Limit Modifier: §G+10.0%§!\nDevelopment from Manufactories: §G+2.00§!"
       one_v_one_mod.3.nma.c: "§RBan @NHY §YMir-Qamar Nizam Asaf Jahi§! as the Commander.§!"
-      one_v_one_mod.3.nma.c.tt: "§YMir-Qamar Nizam Asaf Jahi Commander bonuses:§!\nYearly Absolutism: §G+6.00§!\nMaximum Absolutism: §G+30.00§!\nAll Estates' Loyalty Equilibrium: §G+10.0%§!\nEstate Loyalty Change on Privilege revoked: §G+5.0%§!\nEstate Interaction Cooldown Modifier: §G-5.0%§!\nMax effect of Absolutism: §G+30.0%§!"
+      one_v_one_mod.3.nma.c.tt: "§YMir-Qamar Nizam Asaf Jahi Commander bonuses:§!\nYearly Absolutism: §G+6.00§!\nMaximum Absolutism: §G+60.00§!\nAll Estates' Loyalty Equilibrium: §G+10.0%§!\nEstate Loyalty Change on Privilege revoked: §G+5.0%§!\nEstate Interaction Cooldown Modifier: §G-5.0%§!\nMax effect of Absolutism: §G+40.0%§!"
       # Rajputana:
       one_v_one_mod.3.nra.a: "§RBan @NMY §YKrishna Râja II Wodeyar§! as the Commander.§!"
       one_v_one_mod.3.nra.a.tt: "§YKrishna Râja II Wodeyar Commander bonuses:§!\nManpower Recovery Speed: §G+15.0%§!\nArtillery Cost: §G-5.0%§!\nLand Fire Damage: §G+5.0%§!\nArtillery Damage from Back Row: §G+5.0%§!\nArtillery Shock: §G+0.55§!"
@@ -3042,7 +3042,7 @@
       one_v_one_mod.3.nra.c.tt: "§YNanja Raja Wodeyar Commander bonuses:§!\nNaval Force Limit Modifier: §G+20.0%§!\nMercenary Maintenance: §G-25.0%§!\nMercenary Cost: §G-25.0%§!\nSailor Maintenance: §G-20.0%§!\nMilitary Free Policies: §G+1§!\nMercenary Fire Damage Received: §G-10.0%§!\nMercenary Combat Ability: §G+10.0%§!"
       # Bri Comp:
       one_v_one_mod.3.nbc.a: "§RBan @NFC §YJoseph François Dupleix§! as the Commander.§!"
-      one_v_one_mod.3.nbc.a.tt: "§YJoseph François Dupleix Commander bonuses:§!\nLeader Siege: §G+1.00§!\nMonthly Splendor: §G+2.00§!\nYearly Army Professionalism: §G+2.0%§!\nGeneral Cost: §R+25.0%§!\nMax General Maneuver: §G+1.00§!\nMax General Siege: §G+1.00§!"
+      one_v_one_mod.3.nbc.a.tt: "§YJoseph François Dupleix Commander bonuses:§!\nLeader Siege: §G+1.00§!\nMonthly Splendor: §G+2.00§!\nYearly Army Professionalism: §G+2.0%§!\nGeneral Cost: §R+10.0%§!\nMax General Maneuver: §G+1.00§!\nMax General Siege: §G+1.00§!"
       one_v_one_mod.3.nbc.b: "§RBan @NFC §YBertrand de La Bourdonnais§! as the Commander.§!"
       one_v_one_mod.3.nbc.b.tt: "§YBertrand de La Bourdonnais Commander bonuses:§!\nNational Sailors Modifier: §G+100.0%§!\nShip Costs: §G-10.0%§!\nMay Raid Coasts, including coasts of countries with same religion.\nArtillery Damage from Back Row: §G+10.0%§!\nCoastal Raiding Range: §G+4.00§!\nDiplomatic Technology Cost: §G-10.0%§!"
       one_v_one_mod.3.nbc.c: "§RBan @NFC §YPhilibert Orry§! as the Commander.§!"
@@ -3056,7 +3056,7 @@
       one_v_one_mod.3.nmu.c.tt: "§YNadir Khorasan Afsharid Commander bonuses:§!\nCavalry Cost: §G-10.0%§!\nCavalry Combat Ability: §G+20.0%§!\nLand Leader Shock: §G+1.00§!\nFire Damage Received: §G-7.5%§!\nCavalry to Infantry Ratio: §G+25.0%§!\nCavalry Fire: §G+0.35§!"
       # Bukhara:
       one_v_one_mod.3.nbu.a: "§RBan @NKA §YHeraclius II Bagrationi§! as the Commander.§!"
-      one_v_one_mod.3.nbu.a.tt: "§YHeraclius II Bagrationi Commander bonuses:§!\nLeader Siege: §G+1.00§!\nLand Leader Maneuver: §G+1.00§!\nMonthly Splendor: §G+2.00§!\nYearly Army Professionalism: §G+2.0%§!\nGeneral Cost: §R+25.0%§!\nMax General Siege: §G+1.00§!"
+      one_v_one_mod.3.nbu.a.tt: "§YHeraclius II Bagrationi Commander bonuses:§!\nLeader Siege: §G+1.00§!\nLand Leader Maneuver: §G+1.00§!\nMonthly Splendor: §G+2.00§!\nYearly Army Professionalism: §G+2.0%§!\nGeneral Cost: §R+10.0%§!\nLand Leader(s) without Upkeep: §G+2.00§!\nMax General Siege: §G+1.00§!"
       one_v_one_mod.3.nbu.b: "§RBan @NKA §YErekle Kakheti Bagrationi§! as the Commander.§!"
       one_v_one_mod.3.nbu.b.tt: "§YErekle Kakheti Bagrationi Commander bonuses:§!\nState Maintenance: §G-25.0%§!\nShock Damage Received: §G-5.0%§!\nReinfoce Cost: §G-25.0%§!\nEvery owned §YMountain§! and §YHighlands§! province gets following effects:\nLocal Developing Cost: §G-25.0%§!\nLocal Goods Produced Modifier: §G+100.0%§!\nLocal Manpower Modifier: §G+50.0%§!\nPossible Number of Buildings: §G+1§!\nLocal Defensiveness: §G+0.20§!"
       one_v_one_mod.3.nbu.c: "§RBan @NKA §YErekle Bagrationi§! as the Commander.§!"
@@ -3074,7 +3074,7 @@
       one_v_one_mod.3.nmy.b: "§RBan @NRA §YSawai Jai Singh II Kachhwaha§! as the Commander.§!"
       one_v_one_mod.3.nmy.b.tt: "§YSawai Jai Singh II Kachhwaha Commander bonuses:§!\nRajput Force Limit Fraction: §G+25.0%§!\nKshatriyas Max Privileges: §G+1.00§!\nRajput Reinforce Cost: §G-25.0%§!\nRajput Manpower Usage: §G-10.0%§!\nRajput Combat Ability: §G+10.0%§!"
       one_v_one_mod.3.nmy.c: "§RBan @NRA §YMaharana Pratap Sisodia§! as the Commander.§!"
-      one_v_one_mod.3.nmy.c.tt: "§YMaharana Pratap Sisodia Commander bonuses:§!\nDomestic Trade Power: §G+25.0%§!\nFort Maintenance: §G-75.0%§!\nRecruitment Time: §G-20.0%§!\nArmy Drill Gain Modifier: §G+33.0%§!\nRegiment Drill Loss: §G-33.0%§!"
+      one_v_one_mod.3.nmy.c.tt: "§YMaharana Pratap Sisodia Commander bonuses:§!\nDomestic Trade Power: §G+25.0%§!\nRecruitment Time: §G-20.0%§!\nArmy Drill Gain Modifier: §G+33.0%§!\nRegiment Drill Loss: §G-33.0%§!\nDevelopment Cost Modifier: §G-5.0%§!"
       # Fra Comp:
       one_v_one_mod.3.nfc.a: "§RBan @NBC §YStringer Lawrence§! as the Commander.§!"
       one_v_one_mod.3.nfc.a.tt: "§YStringer Lawrence Commander bonuses:§!\nRecover Army Morale Speed: §G+15.0%§!\nCentralize State Cost: §G-10.0%§!\nCentralizing States gives Tax, Production and Manpower Development: §G+1.00§!"
@@ -3946,7 +3946,7 @@
         one_v_one_mission_nsi_construct_khorasan_desc: ""
       # Kakheti:
         one_v_one_mission_nsi_nation_select_1_nka_title: "Heraclius II (Commander)"
-        one_v_one_mission_nsi_nation_select_1_nka_desc: "\n§YHeraclius II Bagrationi:§!\nLeader Siege: §G+1.00§!\nLand Leader Maneuver: §G+1.00§!\nMonthly Splendor: §G+2.00§!\nYearly Army Professionalism: §G+2.0%§!\nGeneral Cost: §R+25.0%§!\nMax General Siege: §G+1.00§!"
+        one_v_one_mission_nsi_nation_select_1_nka_desc: "\n§YHeraclius II Bagrationi:§!\nLeader Siege: §G+1.00§!\nLand Leader Maneuver: §G+1.00§!\nMonthly Splendor: §G+2.00§!\nYearly Army Professionalism: §G+2.0%§!\nGeneral Cost: §R+10.0%§!\nLand Leader(s) without Upkeep: §G+2.00§!\nMax General Siege: §G+1.00§!"
         one_v_one_mission_nsi_nation_select_3_nka_title: "Erekle Kakheti (Commander)"
         one_v_one_mission_nsi_nation_select_3_nka_desc: "\n§YErekle Kakheti Bagrationi:§!\nState Maintenance: §G-25.0%§!\nShock Damage Received: §G-5.0%§!\nReinfoce Cost: §G-25.0%§!\nEvery owned §YMountain§! and §YHighlands§! province gets following effects:\nLocal Developing Cost: §G-25.0%§!\nLocal Goods Produced Modifier: §G+100.0%§!\nLocal Manpower Modifier: §G+50.0%§!\nPossible Number of Buildings: §G+1§!\nLocal Defensiveness: §G+0.20§!"
         one_v_one_mission_nsi_nation_select_5_nka_title: "Erekle (Commander)"
@@ -3980,7 +3980,7 @@
         one_v_one_mission_nsi_nation_select_3_nra_title: "Sawai Jai (Commander)"
         one_v_one_mission_nsi_nation_select_3_nra_desc: "\n§YSawai Jai Singh II Kachhwaha:§!\nRajput Force Limit Fraction: §G+25.0%§!\nKshatriyas Max Privileges: §G+1.00§!\nRajput Reinforce Cost: §G-25.0%§!\nRajput Manpower Usage: §G-10.0%§!\nRajput Combat Ability: §G+10.0%§!"
         one_v_one_mission_nsi_nation_select_5_nra_title: "Maharana (Commander)"
-        one_v_one_mission_nsi_nation_select_5_nra_desc: "\n§YMaharana Pratap Sisodia:§!\nDomestic Trade Power: §G+25.0%§!\nFort Maintenance: §G-75.0%§!\nRecruitment Time: §G-20.0%§!\nArmy Drill Gain Modifier: §G+33.0%§!\nRegiment Drill Loss: §G-33.0%§!"
+        one_v_one_mission_nsi_nation_select_5_nra_desc: "\n§YMaharana Pratap Sisodia:§!\nDomestic Trade Power: §G+25.0%§!\nRecruitment Time: §G-20.0%§!\nArmy Drill Gain Modifier: §G+33.0%§!\nRegiment Drill Loss: §G-33.0%§!\nDevelopment Cost Modifier: §G-5.0%§!"
         one_v_one_mission_nsi_construct_nra_title: "Build up Phase"
         one_v_one_mission_nsi_construct_nra_desc: ""
         one_v_one_mission_nsi_construct_jagat_title: "Build up Phase"
@@ -4006,7 +4006,7 @@
         one_v_one_mission_nsi_construct_robert_desc: ""
       # Mughals:
         one_v_one_mission_nsi_nation_select_1_nmu_title: "Muhammad (Commander)"
-        one_v_one_mission_nsi_nation_select_1_nmu_desc: "\n§YMuhammad Shâh Timurid:§!\nNational Manpower Modifier: §G+30.0%§!\nManpower Recovery Speed: §G+20.0%§!\nLand Force Limit Modifier: §G+30.0%§!\nDiscipline: §R-2.5%§!\nReinfoce Speed: §G+20.0%§!\nFire Damage Received: §R+10.0%§!"
+        one_v_one_mission_nsi_nation_select_1_nmu_desc: "\n§YMuhammad Shâh Timurid:§!\nNational Manpower Modifier: §G+15.0%§!\nManpower Recovery Speed: §G+10.0%§!\nLand Force Limit Modifier: §G+30.0%§!\nDiscipline: §R-2.5%§!\nReinfoce Speed: §G+20.0%§!\nFire Damage Received: §R+10.0%§!"
         one_v_one_mission_nsi_nation_select_3_nmu_title: "Roshan Akhtar (Commander)"
         one_v_one_mission_nsi_nation_select_3_nmu_desc: "\n§YRoshan Akhtar Babur:§!\nNational Manpower Modifier: §R-20.0%§!\nManpower Recovery Speed: §R-20.0%§!\nLand Force Limit Modifier: §R-20.0%§!\nCavalry Combat Ability: §G+10.0%§!\nLand Leader Shock: §G+1.00§!\nDiscipline: §G+5.0%§!\nReduced Morale Damage Taken By Reserves: §G+25.0%§!"
         one_v_one_mission_nsi_nation_select_5_nmu_title: "Mirza Nasir (Commander)"
@@ -4040,7 +4040,7 @@
         one_v_one_mission_nsi_nation_select_3_nhy_title: "Nasir Jung (Commander)"
         one_v_one_mission_nsi_nation_select_3_nhy_desc: "\n§YNasir Jung Asaf Jahi:§!\nDevelopment Cost: §G-10.0%§!\nInterest Per Annum: §G-0.50§!\nLand Force Limit Modifier: §G+10.0%§!\nDevelopment from Manufactories: §G+2.00§!"
         one_v_one_mission_nsi_nation_select_5_nhy_title: "Mir-Qamar (Commander)"
-        one_v_one_mission_nsi_nation_select_5_nhy_desc: "\n§YMir-Qamar Nizam Asaf Jahi:§!\nYearly Absolutism: §G+6.00§!\nMaximum Absolutism: §G+30.00§!\nAll Estates' Loyalty Equilibrium: §G+10.0%§!\nEstate Loyalty Change on Privilege revoked: §G+5.0%§!\nEstate Interaction Cooldown Modifier: §G-5.0%§!\nMax effect of Absolutism: §G+30.0%§!"
+        one_v_one_mission_nsi_nation_select_5_nhy_desc: "\n§YMir-Qamar Nizam Asaf Jahi:§!\nYearly Absolutism: §G+6.00§!\nMaximum Absolutism: §G+60.00§!\nAll Estates' Loyalty Equilibrium: §G+10.0%§!\nEstate Loyalty Change on Privilege revoked: §G+5.0%§!\nEstate Interaction Cooldown Modifier: §G-5.0%§!\nMax effect of Absolutism: §G+40.0%§!"
         one_v_one_mission_nsi_construct_nhy_title: "Build up Phase"
         one_v_one_mission_nsi_construct_nhy_desc: ""
         one_v_one_mission_nsi_construct_asaf_title: "Build up Phase"
@@ -4066,7 +4066,7 @@
         one_v_one_mission_nsi_construct_nanja_desc: ""
       # Fra Comp:
         one_v_one_mission_nsi_nation_select_1_nfc_title: "Joseph (Commander)"
-        one_v_one_mission_nsi_nation_select_1_nfc_desc: "\n§YJoseph François Dupleix:§!\nLeader Siege: §G+1.00§!\nMonthly Splendor: §G+2.00§!\nYearly Army Professionalism: §G+2.0%§!\nGeneral Cost: §R+25.0%§!\nMax General Maneuver: §G+1.00§!\nMax General Siege: §G+1.00§!"
+        one_v_one_mission_nsi_nation_select_1_nfc_desc: "\n§YJoseph François Dupleix:§!\nLeader Siege: §G+1.00§!\nMonthly Splendor: §G+2.00§!\nYearly Army Professionalism: §G+2.0%§!\nGeneral Cost: §R+10.0%§!\nMax General Maneuver: §G+1.00§!\nMax General Siege: §G+1.00§!"
         one_v_one_mission_nsi_nation_select_3_nfc_title: "Bertrand (Commander)"
         one_v_one_mission_nsi_nation_select_3_nfc_desc: "\n§YBertrand de La Bourdonnais:§!\nNational Sailors Modifier: §G+100.0%§!\nShip Costs: §G-10.0%§!\nMay Raid Coasts, including coasts of countries with same religion.\nArtillery Damage from Back Row: §G+10.0%§!\nCoastal Raiding Range: §G+4.00§!\nDiplomatic Technology Cost: §G-10.0%§!"
         one_v_one_mission_nsi_nation_select_5_nfc_title: "Philibert (Commander)"
