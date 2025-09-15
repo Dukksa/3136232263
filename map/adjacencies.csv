@@ -85,6 +85,9 @@ From;To;Type;Through;start_x;start_y;stop_x;stop_y;Comment
 130;4753;sea;1308;-1;-1;-1;-1;Istria-Zara
 36;35;sea;1926;3171;1709;3165;1709;Estland-Ösel
 35;39;sea;1256;3157;1684;3158;1694;Ösel-Kurland
+431;2999;sea;1334;3693;1091;3689;1089;Mogostan-Hormuz
+398;2999;sea;1334;3686;1080;3684;1084;Qawasim-Hormuz
+536;2100;sea;1340;4044;796;4050;793;Madurai-Vanni
 656;4350;sea;1395;-1;-1;-1;-1;Manila-Mindoro
 4350;4356;sea;1395;-1;-1;-1;-1;Mindoro-Taytay
 4350;2700;sea;1397;-1;-1;-1;-1;Mindoro-Panay

@@ -35,7 +35,7 @@ marketplace = {
 		province_trade_power_modifier = 0.5
 	}
 	on_built = {
-		add_development_from_building = {
+		one_v_one_add_development_from_building = {
 			building = marketplace
 			type = production
 			value = 1
@@ -51,7 +51,7 @@ marketplace = {
 		}
 	}
 	on_destroyed = {
-		remove_development_from_building = {
+		one_v_one_remove_development_from_building = {
 			building = marketplace
 			type = production
 			value = 1
@@ -86,7 +86,7 @@ workshop = {
 		local_production_efficiency = 0.5
 	}
 	on_built = {
-		add_development_from_building = {
+		one_v_one_add_development_from_building = {
 			building = workshop
 			type = production
 			value = 1
@@ -97,7 +97,7 @@ workshop = {
 		}
 	}
 	on_destroyed = {
-		remove_development_from_building = {
+		one_v_one_remove_development_from_building = {
 			building = workshop
 			type = production
 			value = 1
@@ -126,7 +126,7 @@ temple = {
 	on_built = {
 		on_built_tax_building_effect = yes
 		on_province_tax_building_built_estate_privileges_effect = yes
-		add_development_from_building = {
+		one_v_one_add_development_from_building = {
 			building = temple
 			type = tax
 			value = 1
@@ -203,7 +203,7 @@ temple = {
 	}
 	on_destroyed = {
 		on_province_tax_building_destroyed_estate_privileges_effect = yes
-		remove_development_from_building = {
+		one_v_one_remove_development_from_building = {
 			building = temple
 			type = tax
 			value = 1
@@ -297,7 +297,7 @@ barracks = {
 				add_army_professionalism = 0.001
 			}
 		}
-		add_development_from_building = {
+		one_v_one_add_development_from_building = {
 			building = barracks
 			type = manpower
 			value = 1
@@ -352,7 +352,7 @@ barracks = {
 				add_army_professionalism = -0.001
 			}
 		}
-		remove_development_from_building = {
+		one_v_one_remove_development_from_building = {
 			building = barracks
 			type = manpower
 			value = 1
@@ -426,7 +426,7 @@ shipyard = {
 		allowed_num_of_buildings = 1
 	}
 	on_built = {
-		add_development_from_building = {
+		one_v_one_add_development_from_building = {
 			building = shipyard
 			type = production
 			value = 1
@@ -454,7 +454,7 @@ shipyard = {
 		}
 	}
 	on_destroyed = {
-		remove_development_from_building = {
+		one_v_one_remove_development_from_building = {
 			building = shipyard
 			type = production
 			value = 1
@@ -732,7 +732,7 @@ courthouse = {
 		allowed_num_of_buildings = 1
 	}
 	on_built = {
-		add_development_from_building = {
+		one_v_one_add_development_from_building = {
 			building = courthouse
 			type = tax
 			value = 1
@@ -748,7 +748,7 @@ courthouse = {
 		}
 	}
 	on_destroyed = {
-		remove_development_from_building = {
+		one_v_one_remove_development_from_building = {
 			building = courthouse
 			type = tax
 			value = 1
@@ -843,7 +843,7 @@ dock = {
 				add_sailors = 200
 			}
 		}
-		add_development_from_building = {
+		one_v_one_add_development_from_building = {
 			building = dock
 			type = production
 			value = 1
@@ -886,7 +886,7 @@ dock = {
 				add_sailors = -200
 			}
 		}
-		remove_development_from_building = {
+		one_v_one_remove_development_from_building = {
 			building = dock
 			type = production
 			value = 1
@@ -995,7 +995,7 @@ regimental_camp = {
 #		}
 #	}
 	on_built = {
-		add_development_from_building = {
+		one_v_one_add_development_from_building = {
 			building = regimental_camp
 			type = manpower
 			value = 1
@@ -1048,7 +1048,7 @@ regimental_camp = {
 		}
 	}
 	on_destroyed = {
-		remove_development_from_building = {
+		one_v_one_remove_development_from_building = {
 			building = regimental_camp
 			type = manpower
 			value = 1
@@ -1317,7 +1317,7 @@ cathedral = {
 	on_built = {
 		on_built_tax_building_effect = yes
 		on_province_tax_building_built_estate_privileges_effect = yes
-		add_development_from_upgrading_or_building = {
+		one_v_one_add_development_from_upgrading_or_building = {
 			building = cathedral
 			obsolete_building = temple
 			type = tax
@@ -1387,7 +1387,7 @@ cathedral = {
 	}
 	on_destroyed = {
 		on_province_tax_building_destroyed_estate_privileges_effect = yes
-		remove_development_from_building = {
+		one_v_one_remove_development_from_building = {
 			building = cathedral
 			type = tax
 			value = 2
@@ -1460,14 +1460,14 @@ university = {
 	}
 
 	on_built = {
-		add_development_from_building = {
+		one_v_one_add_development_from_building = {
 			building = university
 			type = tax
 			value = 2
 		}
 	}
 	on_destroyed = {
-		remove_development_from_building = {
+		one_v_one_remove_development_from_building = {
 			building = university
 			type = tax
 			value = 2
@@ -1554,7 +1554,7 @@ trade_depot = {
 	}
 
 	on_built = {
-		add_development_from_upgrading_or_building = {
+		one_v_one_add_development_from_upgrading_or_building = {
 			building = trade_depot
 			obsolete_building = marketplace
 			type = production
@@ -1571,7 +1571,7 @@ trade_depot = {
 		}
 	}
 	on_destroyed = {
-		remove_development_from_building = {
+		one_v_one_remove_development_from_building = {
 			building = trade_depot
 			type = production
 			value = 2
@@ -1615,7 +1615,7 @@ grand_shipyard = {
 	}
 
 	on_built = {
-		add_development_from_upgrading_or_building = {
+		one_v_one_add_development_from_upgrading_or_building = {
 			building = grand_shipyard
 			obsolete_building = shipyard
 			type = production
@@ -1645,7 +1645,7 @@ grand_shipyard = {
 		}
 	}
 	on_destroyed = {
-		remove_development_from_building = {
+		one_v_one_remove_development_from_building = {
 			building = grand_shipyard
 			type = production
 			value = 2
@@ -1731,7 +1731,7 @@ training_fields = {
 				add_manpower = 1
 			}
 		}
-		add_development_from_upgrading_or_building = {
+		one_v_one_add_development_from_upgrading_or_building = {
 			building = training_fields
 			obsolete_building = barracks
 			type = manpower
@@ -1806,7 +1806,7 @@ training_fields = {
 				add_army_professionalism = -0.001
 			}
 		}
-		remove_development_from_building = {
+		one_v_one_remove_development_from_building = {
 			building = training_fields
 			type = manpower
 			value = 2
@@ -2012,7 +2012,7 @@ stock_exchange = {
 			limit = {
 				has_province_flag = built_dev_trade_depot
 			}
-			add_development_from_upgrading_or_building = {
+			one_v_one_add_development_from_upgrading_or_building = {
 				building = stock_exchange
 				obsolete_building = trade_depot
 				type = production
@@ -2024,7 +2024,7 @@ stock_exchange = {
 			limit = {
 				has_province_flag = built_dev_marketplace
 			}
-			add_development_from_upgrading_or_building = {
+			one_v_one_add_development_from_upgrading_or_building = {
 				building = stock_exchange
 				obsolete_building = marketplace
 				type = production
@@ -2033,7 +2033,7 @@ stock_exchange = {
 			}
 		}
 		else = {
-			add_development_from_building = {
+			one_v_one_add_development_from_building = {
 				building = stock_exchange
 				type = production
 				value = 3
@@ -2049,7 +2049,7 @@ stock_exchange = {
 		}
 	}
 	on_destroyed = {
-		remove_development_from_building = {
+		one_v_one_remove_development_from_building = {
 			building = stock_exchange
 			type = production
 			value = 3
@@ -2081,7 +2081,7 @@ counting_house = {
 	}
 
 	on_built = {
-		add_development_from_upgrading_or_building = {
+		one_v_one_add_development_from_upgrading_or_building = {
 			building = counting_house
 			obsolete_building = workshop
 			type = production
@@ -2098,7 +2098,7 @@ counting_house = {
 		}
 	}
 	on_destroyed = {
-		remove_development_from_building = {
+		one_v_one_remove_development_from_building = {
 			building = counting_house
 			type = production
 			value = 2
@@ -2139,7 +2139,7 @@ town_hall = {
 	}
 
 	on_built = {
-		add_development_from_upgrading_or_building = {
+		one_v_one_add_development_from_upgrading_or_building = {
 			building = town_hall
 			obsolete_building = courthouse
 			type = tax
@@ -2162,7 +2162,7 @@ town_hall = {
 		}
 	}
 	on_destroyed = {
-		remove_development_from_building = {
+		one_v_one_remove_development_from_building = {
 			building = town_hall
 			type = tax
 			value = 2
@@ -2269,7 +2269,7 @@ drydock = {
 				add_sailors = 200
 			}
 		}
-		add_development_from_upgrading_or_building = {
+		one_v_one_add_development_from_upgrading_or_building = {
 			building = drydock
 			obsolete_building = dock
 			type = production
@@ -2318,7 +2318,7 @@ drydock = {
 				add_sailors = -200
 			}
 		}
-		remove_development_from_building = {
+		one_v_one_remove_development_from_building = {
 			building = drydock
 			type = production
 			value = 2
@@ -2392,7 +2392,7 @@ conscription_center = {
 		local_amount_of_carolean = 0.5
 	}
 	on_built = {
-		add_development_from_upgrading_or_building = {
+		one_v_one_add_development_from_upgrading_or_building = {
 			building = conscription_center
 			obsolete_building = regimental_camp
 			type = manpower
@@ -2451,7 +2451,7 @@ conscription_center = {
 		}
 	}
 	on_destroyed = {
-		remove_development_from_building = {
+		one_v_one_remove_development_from_building = {
 			building = conscription_center
 			type = manpower
 			value = 2
@@ -2691,12 +2691,12 @@ wharf = {
 	}
 	onmap = yes
 	on_built = {
-		add_development_from_building = {
+		one_v_one_add_development_from_building = {
 			building = manufactory
 			type = production
 			value = 2
 		}
-		add_dev_from_building = {
+		one_v_one_add_dev_from_building = {
 			building = manufactory 
 			type = production 
 			value = 1 
@@ -2705,12 +2705,12 @@ wharf = {
 		
 	}
 	on_destroyed = {
-		remove_development_from_building = {
+		one_v_one_remove_development_from_building = {
 			building = manufactory
 			type = production
 			value = 2
 		}
-		remove_dev_from_building = {
+		one_v_one_remove_dev_from_building = {
 			building = manufactory 
 			type = production 
 			value = 1
@@ -2757,12 +2757,12 @@ weapons = {
 	}
 	onmap = yes
 	on_built = {
-		add_development_from_building = {
+		one_v_one_add_development_from_building = {
 			building = manufactory
 			type = production
 			value = 2
 		}
-		add_dev_from_building = {
+		one_v_one_add_dev_from_building = {
 			building = manufactory 
 			type = manpower 
 			value = 1 
@@ -2770,12 +2770,12 @@ weapons = {
 		one_v_one_manu_build = { type = manpower }
 	}
 	on_destroyed = {
-		remove_development_from_building = {
+		one_v_one_remove_development_from_building = {
 			building = manufactory
 			type = production
 			value = 2
 		}
-		remove_dev_from_building = {
+		one_v_one_remove_dev_from_building = {
 			building = manufactory 
 			type = manpower 
 			value = 1
@@ -2799,12 +2799,12 @@ textile = {
 	}
 	onmap = yes
 	on_built = {
-		add_development_from_building = {
+		one_v_one_add_development_from_building = {
 			building = manufactory
 			type = production
 			value = 2
 		}
-		add_dev_from_building = {
+		one_v_one_add_dev_from_building = {
 			building = manufactory 
 			type = production 
 			value = 1 
@@ -2812,12 +2812,12 @@ textile = {
 		one_v_one_manu_build = { type = production }
 	}
 	on_destroyed = {
-		remove_development_from_building = {
+		one_v_one_remove_development_from_building = {
 			building = manufactory
 			type = production
 			value = 2
 		}
-		remove_dev_from_building = {
+		one_v_one_remove_dev_from_building = {
 			building = manufactory 
 			type = production 
 			value = 1
@@ -2843,12 +2843,12 @@ plantations = {
 	}
 	onmap = yes
 	on_built = {
-		add_development_from_building = {
+		one_v_one_add_development_from_building = {
 			building = manufactory
 			type = production
 			value = 2
 		}
-		add_dev_from_building = {
+		one_v_one_add_dev_from_building = {
 			building = manufactory 
 			type = production 
 			value = 1 
@@ -2856,12 +2856,12 @@ plantations = {
 		one_v_one_manu_build = { type = production }
 	}
 	on_destroyed = {
-		remove_development_from_building = {
+		one_v_one_remove_development_from_building = {
 			building = manufactory
 			type = production
 			value = 2
 		}
-		remove_dev_from_building = {
+		one_v_one_remove_dev_from_building = {
 			building = manufactory 
 			type = production 
 			value = 1
@@ -2887,12 +2887,12 @@ tradecompany = {
 	}
 	onmap = yes
 	on_built = {
-		add_development_from_building = {
+		one_v_one_add_development_from_building = {
 			building = manufactory
 			type = production
 			value = 2
 		}
-		add_dev_from_building = {
+		one_v_one_add_dev_from_building = {
 			building = manufactory 
 			type = production 
 			value = 1 
@@ -2900,12 +2900,12 @@ tradecompany = {
 		one_v_one_manu_build = { type = production }
 	}
 	on_destroyed = {
-		remove_development_from_building = {
+		one_v_one_remove_development_from_building = {
 			building = manufactory
 			type = production
 			value = 2
 		}
-		remove_dev_from_building = {
+		one_v_one_remove_dev_from_building = {
 			building = manufactory 
 			type = production 
 			value = 1
@@ -2928,12 +2928,12 @@ farm_estate = {
 	}
 	onmap = yes
 	on_built = {
-		add_development_from_building = {
+		one_v_one_add_development_from_building = {
 			building = manufactory
 			type = production
 			value = 2
 		}
-		add_dev_from_building = {
+		one_v_one_add_dev_from_building = {
 			building = manufactory 
 			type = production 
 			value = 1
@@ -2949,12 +2949,12 @@ farm_estate = {
 		one_v_one_manu_build = { type = production }
 	}
 	on_destroyed = {
-		remove_development_from_building = {
+		one_v_one_remove_development_from_building = {
 			building = manufactory 
 			type = production 
 			value = 2 
 		}
-		remove_dev_from_building = {
+		one_v_one_remove_dev_from_building = {
 			building = manufactory 
 			type = production 
 			value = 1
@@ -2987,12 +2987,12 @@ mills = {
 	}
 	onmap = yes
 	on_built = {
-		add_development_from_building = {
+		one_v_one_add_development_from_building = {
 			building = manufactory
 			type = production
 			value = 2
 		}
-		add_dev_from_building = {
+		one_v_one_add_dev_from_building = {
 			building = manufactory 
 			type = production 
 			value = 1 
@@ -3000,12 +3000,12 @@ mills = {
 		one_v_one_manu_build = { type = production }
 	}
 	on_destroyed = {
-		remove_development_from_building = {
+		one_v_one_remove_development_from_building = {
 			building = manufactory
 			type = production
 			value = 2
 		}
-		remove_dev_from_building = {
+		one_v_one_remove_dev_from_building = {
 			building = manufactory 
 			type = production 
 			value = 1
@@ -3035,14 +3035,14 @@ furnace = {
 	onmap = yes
 	show_separate = yes # Means as a manufactory it will be shown according to the old way
 	on_built = {
-		add_development_from_building = {
+		one_v_one_add_development_from_building = {
 			building = manufactory
 			type = production
 			value = 2
 		}
 	}
 	on_destroyed = {
-		remove_development_from_building = {
+		one_v_one_remove_development_from_building = {
 			building = manufactory
 			type = production
 			value = 2
@@ -3148,12 +3148,12 @@ soldier_households = {
 	onmap = no
 	show_separate = yes # Means as a manufactory it will be shown according to the old way
 	on_built = {
-		add_development_from_building = {
+		one_v_one_add_development_from_building = {
 			building = manufactory
 			type = production
 			value = 2
 		}
-		add_dev_from_building = {
+		one_v_one_add_dev_from_building = {
 			building = manufactory 
 			type = manpower 
 			value = 1 
@@ -3172,12 +3172,12 @@ soldier_households = {
 		one_v_one_manu_build = { type = manpower }
 	}
 	on_destroyed = {
-		remove_development_from_building = {
+		one_v_one_remove_development_from_building = {
 			building = manufactory
 			type = production
 			value = 2
 		}
-		remove_dev_from_building = {
+		one_v_one_remove_dev_from_building = {
 			building = manufactory 
 			type = manpower 
 			value = 1
@@ -3227,12 +3227,12 @@ impressment_offices = {
 	onmap = no
 	show_separate = yes # Means as a manufactory it will be shown according to the old way
 	on_built = {
-		add_development_from_building = {
+		one_v_one_add_development_from_building = {
 			building = impressment_offices
 			type = manpower
 			value = 2
 		}
-		add_dev_from_building = {
+		one_v_one_add_dev_from_building = {
 			building = impressment_offices 
 			type = manpower 
 			value = 1 
@@ -3240,12 +3240,12 @@ impressment_offices = {
 		one_v_one_manu_build = { type = manpower }
 	}
 	on_destroyed = {
-		remove_development_from_building = {
+		one_v_one_remove_development_from_building = {
 			building = impressment_offices
 			type = manpower
 			value = 2
 		}
-		remove_dev_from_building = {
+		one_v_one_remove_dev_from_building = {
 			building = impressment_offices 
 			type = manpower 
 			value = 1 
@@ -3317,14 +3317,14 @@ state_house = {
 	onmap = no
 	show_separate = yes # Means as a manufactory it will be shown according to the old way
 	on_built = {
-		add_development_from_building = {
+		one_v_one_add_development_from_building = {
 			building = state_house
 			type = tax
 			value = 2
 		}
 	}
 	on_destroyed = {
-		remove_development_from_building = {
+		one_v_one_remove_development_from_building = {
 			building = state_house
 			type = tax
 			value = 2

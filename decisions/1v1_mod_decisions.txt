@@ -2132,13 +2132,13 @@ country_decisions = {
 		}
 		allow = {
 			treasury = 1000
-			splendor = 200
+			splendor = 100
 			capital_scope = { controlled_by = NBC }
 		}
 		effect = {
 			custom_tooltip = one_v_one_nbc_overlord_decision_tt
 			add_treasury = -1000
-			add_splendor = -200
+			add_splendor = -100
 			hidden_effect = {
 				capital_scope = {
 					streltsy_infantry = ROOT
@@ -2196,13 +2196,13 @@ country_decisions = {
 		}
 		allow = {
 			treasury = 1000
-			splendor = 200
+			splendor = 100
 			capital_scope = { controlled_by = NFC }
 		}
 		effect = {
 			custom_tooltip = one_v_one_nfc_overlord_decision_tt
 			add_treasury = -1000
-			add_splendor = -200
+			add_splendor = -100
 			hidden_effect = {
 				capital_scope = {
 					musketeer_infantry = ROOT

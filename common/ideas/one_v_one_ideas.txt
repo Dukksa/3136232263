@@ -4185,7 +4185,7 @@ nmy_ideas = {
 		global_monthly_devastation = -0.25
 	}
 	one_v_one_nmy_7 = {
-		leader_land_fire = 1
+		manpower_recovery_speed = 0.15
 	}
 }
 # Fra Comp:

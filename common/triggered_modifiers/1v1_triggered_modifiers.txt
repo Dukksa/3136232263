@@ -980,7 +980,7 @@ one_v_one_nsi_region_astraloot_occupier = {
 		}
 	}
 	cavalry_cost = -0.1
-	cavalry_fire = 0.5
+	cavalry_fire = 0.75
 }
 one_v_one_nsi_region_samarkand_occupier = {
 	potential = { one_v_one_nsi_nations = yes }
@@ -1005,7 +1005,7 @@ one_v_one_nsi_region_samarkand_occupier = {
 				}
 				controlled_by = NIR
 			}
-			amount = 12
+			amount = 10
 		}
 	}
 	land_attrition = -0.3
@@ -1155,9 +1155,9 @@ one_v_one_nsi_region_bengal_occupier = {
 				}
 				controlled_by = NBC
 			}
-			amount = 10
+			amount = 8
 		}
 	}
-	global_tax_income = 720
+	leader_land_fire = 1
 	max_general_siege = 1
 }
