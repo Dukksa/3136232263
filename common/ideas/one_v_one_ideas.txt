@@ -4081,7 +4081,7 @@ nbu_ideas = {
 	free = yes
 	one_v_one_nbu_1 = {
 		cavalry_power = 0.15
-		cavalry_fire = -0.25
+		manpower_recovery_speed = -0.1
 	}
 	one_v_one_nbu_2 = {
 		monthly_piety_accelerator = 0.02
