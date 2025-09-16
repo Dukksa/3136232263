@@ -1158,6 +1158,6 @@ one_v_one_nsi_region_bengal_occupier = {
 			amount = 8
 		}
 	}
-	leader_land_fire = 1
+	backrow_artillery_damage = 0.1
 	max_general_siege = 1
 }

@@ -3906,7 +3906,7 @@ nma_ideas = {
 	}
 	bonus = {
 		loot_amount = 0.5
-		global_trade_goods_size_modifier = 0.2
+		global_trade_goods_size_modifier = 0.1
 	}
 	trigger = {
 		tag = NMA
@@ -3971,6 +3971,7 @@ nra_ideas = {
 	}
 	one_v_one_nra_5 = {
 		production_efficiency = 0.2
+		gold_depletion_chance_modifier = -1
 	}
 	one_v_one_nra_6 = {
 		trade_efficiency = 0.25
@@ -4053,11 +4054,12 @@ nmu_ideas = {
 		technology_cost = 0.1
 	}
 	one_v_one_nmu_5 = {
-		artillery_power = 0.15
+		fire_damage_received = -0.1
 		reserves_organisation = -0.25
 	}
 	one_v_one_nmu_6 = {
-		defensiveness = 0.25
+		leader_land_shock = 1
+		land_attrition = -0.2
 	}
 	one_v_one_nmu_7 = {
 		reinforce_speed = 0.2
@@ -4207,7 +4209,7 @@ nfc_ideas = {
 		movement_speed_in_fleet_modifier = 1
 	}
 	one_v_one_nfc_2 = {
-		development_cost = -0.1
+		development_cost_modifier = -0.1
 		global_trade_goods_size = 0.4
 	}
 	one_v_one_nfc_3 = {
